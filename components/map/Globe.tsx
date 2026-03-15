@@ -1,0 +1,155 @@
+import { Coordinates } from '@/types/game';
+import React, { useCallback, useState } from 'react';
+import { Platform, StyleSheet, View } from 'react-native';
+import MapView, { Marker, Polyline, PROVIDER_GOOGLE } from 'react-native-maps';
+
+// Custom map style to hide all labels
+const mapStyle = [
+  {
+    featureType: 'all',
+    elementType: 'labels',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'administrative',
+    elementType: 'labels',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'poi',
+    elementType: 'labels',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'road',
+    elementType: 'labels',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'transit',
+    elementType: 'labels',
+    stylers: [{ visibility: 'off' }],
+  },
+  {
+    featureType: 'water',
+    elementType: 'labels',
+    stylers: [{ visibility: 'off' }],
+  },
+];
+
+interface GlobeProps {
+  onLocationSelect: (coords: Coordinates) => void;
+  guessMarker?: Coordinates | null;
+  targetMarker?: Coordinates | null;
+  showArc?: boolean;
+  disabled?: boolean;
+}
+
+export default function Globe({
+  onLocationSelect,
+  guessMarker,
+  targetMarker,
+  showArc = false,
+  disabled = false,
+}: GlobeProps) {
+  const [region, setRegion] = useState({
+    latitude: 20,
+    longitude: 0,
+    latitudeDelta: 100,
+    longitudeDelta: 100,
+  });
+
+  const handleMapPress = useCallback(
+    (event: { nativeEvent: { coordinate: { latitude: number; longitude: number } } }) => {
+      if (disabled) return;
+      const { latitude, longitude } = event.nativeEvent.coordinate;
+      onLocationSelect({ lat: latitude, lng: longitude });
+    },
+    [onLocationSelect, disabled]
+  );
+
+  const arcCoordinates = React.useMemo(() => {
+    if (!showArc || !guessMarker || !targetMarker) return [];
+
+    // Create an arc path between guess and target
+    const points: Array<{ latitude: number; longitude: number }> = [];
+    const numPoints = 50;
+
+    for (let i = 0; i <= numPoints; i++) {
+      const t = i / numPoints;
+      const lat = guessMarker.lat + (targetMarker.lat - guessMarker.lat) * t;
+      const lng = guessMarker.lng + (targetMarker.lng - guessMarker.lng) * t;
+      // Add some arc height
+      const arcHeight = Math.sin(t * Math.PI) * 10;
+      points.push({
+        latitude: lat + arcHeight * 0.1,
+        longitude: lng,
+      });
+    }
+    return points;
+  }, [showArc, guessMarker, targetMarker]);
+
+  return (
+    <View style={styles.container}>
+      <MapView
+        style={styles.map}
+        provider={Platform.OS === 'android' ? PROVIDER_GOOGLE : undefined}
+        initialRegion={region}
+        onRegionChangeComplete={setRegion}
+        onPress={handleMapPress}
+        mapType="satellite"
+        customMapStyle={mapStyle}
+        showsUserLocation={false}
+        showsCompass={true}
+        showsPointsOfInterest={false}
+        showsBuildings={false}
+        showsTraffic={false}
+        showsIndoors={false}
+        rotateEnabled={true}
+        pitchEnabled={true}
+      >
+        {guessMarker && (
+          <Marker
+            coordinate={{
+              latitude: guessMarker.lat,
+              longitude: guessMarker.lng,
+            }}
+            pinColor="#FF6B6B"
+            title="Your Guess"
+          />
+        )}
+
+        {targetMarker && (
+          <Marker
+            coordinate={{
+              latitude: targetMarker.lat,
+              longitude: targetMarker.lng,
+            }}
+            pinColor="#4ECDC4"
+            title="Target"
+          />
+        )}
+
+        {showArc && arcCoordinates.length > 0 && (
+          <Polyline
+            coordinates={arcCoordinates}
+            strokeColor="#FFE66D"
+            strokeWidth={3}
+            lineDashPattern={[10, 5]}
+          />
+        )}
+      </MapView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    overflow: 'hidden',
+  },
+  map: {
+    width: '100%',
+    height: '100%',
+  },
+});

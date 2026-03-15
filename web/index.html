@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>GeoTap</title>
+    <style>
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #1A202C;
+      }
+    </style>
+    <!-- Polyfill for import.meta -->
+    <script>
+      if (typeof import.meta === 'undefined') {
+        Object.defineProperty(window, 'import', {
+          value: { meta: { env: { MODE: 'development' } } }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

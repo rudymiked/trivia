@@ -1,0 +1,242 @@
+{
+  "locations": [
+    {
+      "clue": "Eiffel Tower",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 48.8584, "lng": 2.2945 },
+      "country": "France"
+    },
+    {
+      "clue": "Statue of Liberty",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 40.6892, "lng": -74.0445 },
+      "country": "United States"
+    },
+    {
+      "clue": "Big Ben",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 51.5007, "lng": -0.1246 },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Colosseum",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 41.8902, "lng": 12.4922 },
+      "country": "Italy"
+    },
+    {
+      "clue": "Sydney Opera House",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": -33.8568, "lng": 151.2153 },
+      "country": "Australia"
+    },
+    {
+      "clue": "Machu Picchu",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": -13.1631, "lng": -72.545 },
+      "country": "Peru"
+    },
+    {
+      "clue": "Taj Mahal",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 27.1751, "lng": 78.0421 },
+      "country": "India"
+    },
+    {
+      "clue": "Christ the Redeemer",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": -22.9519, "lng": -43.2105 },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Pyramids of Giza",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 29.9792, "lng": 31.1342 },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Mount Fuji",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 35.3606, "lng": 138.7274 },
+      "country": "Japan"
+    },
+    {
+      "clue": "Angkor Wat",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 13.4125, "lng": 103.867 },
+      "country": "Cambodia"
+    },
+    {
+      "clue": "Sagrada Familia",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 41.4036, "lng": 2.1744 },
+      "country": "Spain"
+    },
+    {
+      "clue": "Petra",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": 30.3285, "lng": 35.4444 },
+      "country": "Jordan"
+    },
+    {
+      "clue": "Stonehenge",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 51.1789, "lng": -1.8262 },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Burj Khalifa",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 25.1972, "lng": 55.2744 },
+      "country": "United Arab Emirates"
+    },
+    {
+      "clue": "Santorini",
+      "type": "city",
+      "difficulty": "medium",
+      "target": { "lat": 36.3932, "lng": 25.4615 },
+      "country": "Greece"
+    },
+    {
+      "clue": "Victoria Falls",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": -17.9243, "lng": 25.8572 },
+      "country": "Zimbabwe"
+    },
+    {
+      "clue": "Golden Gate Bridge",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 37.8199, "lng": -122.4783 },
+      "country": "United States"
+    },
+    {
+      "clue": "Niagara Falls",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 43.0962, "lng": -79.0377 },
+      "country": "Canada"
+    },
+    {
+      "clue": "Acropolis",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 37.9715, "lng": 23.7267 },
+      "country": "Greece"
+    },
+    {
+      "clue": "Chichen Itza",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": 20.6843, "lng": -88.5678 },
+      "country": "Mexico"
+    },
+    {
+      "clue": "Tokyo Tower",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 35.6586, "lng": 139.7454 },
+      "country": "Japan"
+    },
+    {
+      "clue": "Brandenburg Gate",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 52.5163, "lng": 13.3777 },
+      "country": "Germany"
+    },
+    {
+      "clue": "Kremlin",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 55.752, "lng": 37.6175 },
+      "country": "Russia"
+    },
+    {
+      "clue": "Table Mountain",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": -33.9628, "lng": 18.4098 },
+      "country": "South Africa"
+    },
+    {
+      "clue": "Uluru (Ayers Rock)",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": -25.3444, "lng": 131.0369 },
+      "country": "Australia"
+    },
+    {
+      "clue": "Neuschwanstein Castle",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": 47.5576, "lng": 10.7498 },
+      "country": "Germany"
+    },
+    {
+      "clue": "Times Square",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 40.758, "lng": -73.9855 },
+      "country": "United States"
+    },
+    {
+      "clue": "Louvre Museum",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 48.8606, "lng": 2.3376 },
+      "country": "France"
+    },
+    {
+      "clue": "Hagia Sophia",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": 41.0086, "lng": 28.9802 },
+      "country": "Turkey"
+    },
+    {
+      "clue": "Merlion",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": { "lat": 1.2868, "lng": 103.8545 },
+      "country": "Singapore"
+    },
+    {
+      "clue": "CN Tower",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 43.6426, "lng": -79.3871 },
+      "country": "Canada"
+    },
+    {
+      "clue": "Leaning Tower of Pisa",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": { "lat": 43.723, "lng": 10.3966 },
+      "country": "Italy"
+    },
+    {
+      "clue": "Grand Canyon",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 36.0544, "lng": -112.1401 },
+      "country": "United States"
+    }
+  ]
+}

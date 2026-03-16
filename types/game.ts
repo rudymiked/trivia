@@ -3,14 +3,19 @@ export interface Coordinates {
   lng: number;
 }
 
+export type Category = 'places' | 'questions';
+
 export interface Round {
   id: number;
   clue: string;
-  type: 'landmark' | 'city' | 'country' | 'region';
+  category: Category;
+  type: 'landmark' | 'city' | 'country' | 'region' | 'trivia';
   difficulty: 'easy' | 'medium' | 'hard';
   target: Coordinates;
   country: string;
+  answer?: string; // For trivia questions, the name of the place
   acceptRadius?: number; // km - for country/region type clues
+  multiplier?: number; // Difficulty multiplier from API
 }
 
 export interface Puzzle {

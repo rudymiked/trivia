@@ -1,5 +1,5 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
-import { getContainer } from '../cosmos.js';
+import { generatePuzzleForDate, getTableClient } from '../storage.js';
 
 interface ScoreSubmission {
   date: string;
@@ -9,7 +9,7 @@ interface ScoreSubmission {
   rounds: number[];
 }
 
-// Get daily puzzle
+// Get daily puzzle - dynamically generated from locations
 app.http('getPuzzle', {
   methods: ['GET'],
   authLevel: 'anonymous',
@@ -18,24 +18,25 @@ app.http('getPuzzle', {
     const date = request.params.date || new Date().toISOString().split('T')[0];
 
     try {
-      const container = getContainer('puzzles');
-      const { resource } = await container.item(date, date).read();
+      // Generate puzzle dynamically from locations table
+      const puzzle = await generatePuzzleForDate(date);
 
-      if (!resource) {
+      return {
+        jsonBody: puzzle,
+      };
+    } catch (error: any) {
+      context.error('Error generating puzzle:', error);
+
+      if (error.message === 'Not enough locations to generate puzzle') {
         return {
-          status: 404,
-          jsonBody: { error: 'Puzzle not found for this date' },
+          status: 503,
+          jsonBody: { error: 'Not enough locations in database. Run seed first.' },
         };
       }
 
       return {
-        jsonBody: resource,
-      };
-    } catch (error) {
-      context.error('Error fetching puzzle:', error);
-      return {
         status: 500,
-        jsonBody: { error: 'Failed to fetch puzzle' },
+        jsonBody: { error: 'Failed to generate puzzle' },
       };
     }
   },
@@ -58,25 +59,24 @@ app.http('submitScore', {
         };
       }
 
-      const container = getContainer('scores');
-      const scoreDoc = {
-        id: `${userId}_${date}`,
-        date,
-        userId,
+      const client = getTableClient('scores');
+      const scoreEntity = {
+        partitionKey: date,
+        rowKey: userId,
         displayName: displayName || 'Anonymous',
         totalScore,
-        rounds,
+        rounds: JSON.stringify(rounds),
         completedAt: new Date().toISOString(),
       };
 
-      await container.items.upsert(scoreDoc);
+      await client.upsertEntity(scoreEntity);
 
       // Update user stats
       await updateUserStats(userId, displayName, totalScore, date);
 
       return {
         status: 201,
-        jsonBody: { success: true, score: scoreDoc },
+        jsonBody: { success: true, score: scoreEntity },
       };
     } catch (error) {
       context.error('Error submitting score:', error);
@@ -98,22 +98,29 @@ app.http('getLeaderboard', {
     const limit = parseInt(request.query.get('limit') || '10', 10);
 
     try {
-      const container = getContainer('scores');
-      const { resources } = await container.items
-        .query({
-          query: 'SELECT * FROM c WHERE c.date = @date ORDER BY c.totalScore DESC OFFSET 0 LIMIT @limit',
-          parameters: [
-            { name: '@date', value: date },
-            { name: '@limit', value: limit },
-          ],
-        })
-        .fetchAll();
+      const client = getTableClient('scores');
+      const scores: Array<{ userId: string; displayName: string; score: number }> = [];
 
-      const leaderboard = resources.map((score, index) => ({
-        rank: index + 1,
-        userId: score.userId,
-        displayName: score.displayName,
-        score: score.totalScore,
+      // Query scores for this date
+      const entities = client.listEntities({
+        queryOptions: { filter: `PartitionKey eq '${date}'` },
+      });
+
+      for await (const entity of entities) {
+        scores.push({
+          userId: entity.rowKey as string,
+          displayName: entity.displayName as string,
+          score: entity.totalScore as number,
+        });
+      }
+
+      // Sort by score descending and assign ranks
+      scores.sort((a, b) => b.score - a.score);
+      const leaderboard = scores.slice(0, limit).map((s, i) => ({
+        rank: i + 1,
+        userId: s.userId,
+        displayName: s.displayName,
+        score: s.score,
       }));
 
       return {
@@ -136,46 +143,36 @@ async function updateUserStats(
   score: number,
   date: string
 ): Promise<void> {
-  const container = getContainer('users');
+  const client = getTableClient('users');
 
   try {
-    const { resource: existingUser } = await container.item(userId, userId).read();
+    // Try to get existing user
+    const existingUser = await client.getEntity('user', userId);
 
-    if (existingUser) {
-      // Calculate new streak
-      const lastPlayed = existingUser.lastPlayedDate;
-      const yesterday = new Date();
-      yesterday.setDate(yesterday.getDate() - 1);
-      const yesterdayStr = yesterday.toISOString().split('T')[0];
+    // Calculate new streak
+    const lastPlayed = existingUser.lastPlayedDate as string;
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const yesterdayStr = yesterday.toISOString().split('T')[0];
 
-      const newStreak = lastPlayed === yesterdayStr ? existingUser.streak + 1 : 1;
+    const currentStreak = (existingUser.streak as number) || 0;
+    const newStreak = lastPlayed === yesterdayStr ? currentStreak + 1 : 1;
 
-      await container.items.upsert({
-        ...existingUser,
-        displayName,
-        streak: newStreak,
-        totalScore: existingUser.totalScore + score,
-        gamesPlayed: existingUser.gamesPlayed + 1,
-        highScore: Math.max(existingUser.highScore || 0, score),
-        lastPlayedDate: date,
-      });
-    } else {
-      // Create new user
-      await container.items.create({
-        id: userId,
-        displayName,
-        streak: 1,
-        totalScore: score,
-        gamesPlayed: 1,
-        highScore: score,
-        lastPlayedDate: date,
-        createdAt: new Date().toISOString(),
-      });
-    }
+    await client.upsertEntity({
+      partitionKey: 'user',
+      rowKey: userId,
+      displayName,
+      streak: newStreak,
+      totalScore: ((existingUser.totalScore as number) || 0) + score,
+      gamesPlayed: ((existingUser.gamesPlayed as number) || 0) + 1,
+      highScore: Math.max((existingUser.highScore as number) || 0, score),
+      lastPlayedDate: date,
+    });
   } catch {
     // User doesn't exist, create new one
-    await container.items.create({
-      id: userId,
+    await client.upsertEntity({
+      partitionKey: 'user',
+      rowKey: userId,
       displayName,
       streak: 1,
       totalScore: score,

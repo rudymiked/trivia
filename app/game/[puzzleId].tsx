@@ -31,8 +31,8 @@ export default function GameScreen() {
 
   // Load puzzle on mount
   useEffect(() => {
-    const loadPuzzle = () => {
-      const dailyPuzzle = generateDailyPuzzle(puzzleId);
+    const loadPuzzle = async () => {
+      const dailyPuzzle = await generateDailyPuzzle(puzzleId);
       startGame(dailyPuzzle);
       setIsLoading(false);
     };
@@ -117,8 +117,15 @@ export default function GameScreen() {
       )}
 
       {/* Score display */}
-      {phase === 'result' && currentResult && (
+      {phase === 'result' && currentResult && currentRoundData && (
         <View style={styles.resultContainer}>
+          {currentRoundData.category === 'questions' && currentRoundData.answer && (
+            <View style={styles.answerReveal}>
+              <Text style={styles.answerLabel}>The answer was:</Text>
+              <Text style={styles.answerText}>{currentRoundData.answer}</Text>
+              <Text style={styles.countryText}>{currentRoundData.country}</Text>
+            </View>
+          )}
           <ScoreDisplay result={currentResult} />
           <Pressable style={styles.nextButton} onPress={handleNextRound}>
             <Text style={styles.nextButtonText}>
@@ -189,6 +196,30 @@ const styles = StyleSheet.create({
     right: 0,
     alignItems: 'center',
     paddingBottom: 32,
+  },
+  answerReveal: {
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    borderRadius: 12,
+    padding: 16,
+    marginHorizontal: 16,
+    marginBottom: 8,
+    alignItems: 'center',
+    width: '90%',
+  },
+  answerLabel: {
+    color: '#A0AEC0',
+    fontSize: 12,
+    marginBottom: 4,
+  },
+  answerText: {
+    color: '#4ECDC4',
+    fontSize: 22,
+    fontWeight: '700',
+  },
+  countryText: {
+    color: '#718096',
+    fontSize: 14,
+    marginTop: 4,
   },
   nextButton: {
     backgroundColor: '#4ECDC4',

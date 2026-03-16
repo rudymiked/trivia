@@ -1,8 +1,9 @@
 {
   "name": "geotap-api",
   "version": "1.0.0",
+  "type": "module",
   "description": "GeoTap Azure Functions API",
-  "main": "dist/src/functions/*.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -12,7 +13,7 @@
     "test": "echo \"No tests yet\""
   },
   "dependencies": {
-    "@azure/cosmos": "^4.0.0",
+    "@azure/data-tables": "^13.2.2",
     "@azure/functions": "^4.6.0"
   },
   "devDependencies": {

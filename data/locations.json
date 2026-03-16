@@ -2,6 +2,7 @@
   "locations": [
     {
       "clue": "Eiffel Tower",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 48.8584, "lng": 2.2945 },
@@ -9,6 +10,7 @@
     },
     {
       "clue": "Statue of Liberty",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 40.6892, "lng": -74.0445 },
@@ -16,6 +18,7 @@
     },
     {
       "clue": "Big Ben",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 51.5007, "lng": -0.1246 },
@@ -23,6 +26,7 @@
     },
     {
       "clue": "Colosseum",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 41.8902, "lng": 12.4922 },
@@ -30,6 +34,7 @@
     },
     {
       "clue": "Sydney Opera House",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": -33.8568, "lng": 151.2153 },
@@ -37,6 +42,7 @@
     },
     {
       "clue": "Machu Picchu",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": -13.1631, "lng": -72.545 },
@@ -44,6 +50,7 @@
     },
     {
       "clue": "Taj Mahal",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 27.1751, "lng": 78.0421 },
@@ -51,6 +58,7 @@
     },
     {
       "clue": "Christ the Redeemer",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": -22.9519, "lng": -43.2105 },
@@ -58,6 +66,7 @@
     },
     {
       "clue": "Pyramids of Giza",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 29.9792, "lng": 31.1342 },
@@ -65,6 +74,7 @@
     },
     {
       "clue": "Mount Fuji",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 35.3606, "lng": 138.7274 },
@@ -72,6 +82,7 @@
     },
     {
       "clue": "Angkor Wat",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 13.4125, "lng": 103.867 },
@@ -79,6 +90,7 @@
     },
     {
       "clue": "Sagrada Familia",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 41.4036, "lng": 2.1744 },
@@ -86,6 +98,7 @@
     },
     {
       "clue": "Petra",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": 30.3285, "lng": 35.4444 },
@@ -93,6 +106,7 @@
     },
     {
       "clue": "Stonehenge",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 51.1789, "lng": -1.8262 },
@@ -100,6 +114,7 @@
     },
     {
       "clue": "Burj Khalifa",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 25.1972, "lng": 55.2744 },
@@ -107,6 +122,7 @@
     },
     {
       "clue": "Santorini",
+      "category": "places",
       "type": "city",
       "difficulty": "medium",
       "target": { "lat": 36.3932, "lng": 25.4615 },
@@ -114,6 +130,7 @@
     },
     {
       "clue": "Victoria Falls",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": -17.9243, "lng": 25.8572 },
@@ -121,6 +138,7 @@
     },
     {
       "clue": "Golden Gate Bridge",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 37.8199, "lng": -122.4783 },
@@ -128,6 +146,7 @@
     },
     {
       "clue": "Niagara Falls",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 43.0962, "lng": -79.0377 },
@@ -135,6 +154,7 @@
     },
     {
       "clue": "Acropolis",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 37.9715, "lng": 23.7267 },
@@ -142,6 +162,7 @@
     },
     {
       "clue": "Chichen Itza",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": 20.6843, "lng": -88.5678 },
@@ -149,6 +170,7 @@
     },
     {
       "clue": "Tokyo Tower",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 35.6586, "lng": 139.7454 },
@@ -156,6 +178,7 @@
     },
     {
       "clue": "Brandenburg Gate",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 52.5163, "lng": 13.3777 },
@@ -163,6 +186,7 @@
     },
     {
       "clue": "Kremlin",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 55.752, "lng": 37.6175 },
@@ -170,6 +194,7 @@
     },
     {
       "clue": "Table Mountain",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": -33.9628, "lng": 18.4098 },
@@ -177,6 +202,7 @@
     },
     {
       "clue": "Uluru (Ayers Rock)",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": -25.3444, "lng": 131.0369 },
@@ -184,6 +210,7 @@
     },
     {
       "clue": "Neuschwanstein Castle",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": 47.5576, "lng": 10.7498 },
@@ -191,6 +218,7 @@
     },
     {
       "clue": "Times Square",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 40.758, "lng": -73.9855 },
@@ -198,6 +226,7 @@
     },
     {
       "clue": "Louvre Museum",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 48.8606, "lng": 2.3376 },
@@ -205,6 +234,7 @@
     },
     {
       "clue": "Hagia Sophia",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": 41.0086, "lng": 28.9802 },
@@ -212,6 +242,7 @@
     },
     {
       "clue": "Merlion",
+      "category": "places",
       "type": "landmark",
       "difficulty": "hard",
       "target": { "lat": 1.2868, "lng": 103.8545 },
@@ -219,6 +250,7 @@
     },
     {
       "clue": "CN Tower",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 43.6426, "lng": -79.3871 },
@@ -226,6 +258,7 @@
     },
     {
       "clue": "Leaning Tower of Pisa",
+      "category": "places",
       "type": "landmark",
       "difficulty": "easy",
       "target": { "lat": 43.723, "lng": 10.3966 },
@@ -233,10 +266,289 @@
     },
     {
       "clue": "Grand Canyon",
+      "category": "places",
       "type": "landmark",
       "difficulty": "medium",
       "target": { "lat": 36.0544, "lng": -112.1401 },
       "country": "United States"
+    },
+    {
+      "clue": "Great Wall of China",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": { "lat": 40.4319, "lng": 116.5704 },
+      "country": "China"
+    },
+    {
+      "clue": "Where did the Titanic depart from on its maiden voyage?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 50.8998, "lng": -1.4044 },
+      "country": "United Kingdom",
+      "answer": "Southampton"
+    },
+    {
+      "clue": "In which city was the first atomic bomb dropped during WWII?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 34.3853, "lng": 132.4553 },
+      "country": "Japan",
+      "answer": "Hiroshima"
+    },
+    {
+      "clue": "Where is the headquarters of the United Nations located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 40.7489, "lng": -73.9680 },
+      "country": "United States",
+      "answer": "New York City"
+    },
+    {
+      "clue": "Which city hosted the first modern Olympic Games in 1896?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 37.9838, "lng": 23.7275 },
+      "country": "Greece",
+      "answer": "Athens"
+    },
+    {
+      "clue": "Where was Leonardo da Vinci born?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": 43.7833, "lng": 10.9167 },
+      "country": "Italy",
+      "answer": "Vinci"
+    },
+    {
+      "clue": "In which city did the Boston Tea Party take place?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 42.3601, "lng": -71.0589 },
+      "country": "United States",
+      "answer": "Boston"
+    },
+    {
+      "clue": "Where is the Rosetta Stone currently displayed?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 51.5194, "lng": -0.1270 },
+      "country": "United Kingdom",
+      "answer": "British Museum, London"
+    },
+    {
+      "clue": "Which city is home to the world's oldest university still in operation (founded 859 AD)?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": 34.0619, "lng": -4.9785 },
+      "country": "Morocco",
+      "answer": "Fez (University of al-Qarawiyyin)"
+    },
+    {
+      "clue": "Where did the D-Day landings begin on June 6, 1944?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 49.3680, "lng": -0.8731 },
+      "country": "France",
+      "answer": "Normandy"
+    },
+    {
+      "clue": "In which city was the Declaration of Independence signed?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 39.9526, "lng": -75.1652 },
+      "country": "United States",
+      "answer": "Philadelphia"
+    },
+    {
+      "clue": "Where was Napoleon Bonaparte exiled after his final defeat?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": -15.9650, "lng": -5.7089 },
+      "country": "Saint Helena",
+      "answer": "Saint Helena"
+    },
+    {
+      "clue": "Which city hosts the annual Running of the Bulls festival?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 42.8125, "lng": -1.6458 },
+      "country": "Spain",
+      "answer": "Pamplona"
+    },
+    {
+      "clue": "Where was the first FIFA World Cup held in 1930?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": -34.8941, "lng": -56.1522 },
+      "country": "Uruguay",
+      "answer": "Montevideo"
+    },
+    {
+      "clue": "In which city is the Anne Frank House museum located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 52.3752, "lng": 4.8840 },
+      "country": "Netherlands",
+      "answer": "Amsterdam"
+    },
+    {
+      "clue": "Where did the Chernobyl nuclear disaster occur in 1986?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 51.3890, "lng": 30.0979 },
+      "country": "Ukraine",
+      "answer": "Pripyat/Chernobyl"
+    },
+    {
+      "clue": "Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 27.9881, "lng": 86.9250 },
+      "country": "Nepal",
+      "answer": "Mount Everest"
+    },
+    {
+      "clue": "Where was the Magna Carta signed in 1215?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": 51.4316, "lng": -0.5632 },
+      "country": "United Kingdom",
+      "answer": "Runnymede"
+    },
+    {
+      "clue": "In which city did Martin Luther King Jr. deliver his 'I Have a Dream' speech?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 38.8893, "lng": -77.0502 },
+      "country": "United States",
+      "answer": "Washington D.C. (Lincoln Memorial)"
+    },
+    {
+      "clue": "Where is the oldest known cave painting located (over 45,000 years old)?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": -4.9833, "lng": 119.9500 },
+      "country": "Indonesia",
+      "answer": "Sulawesi"
+    },
+    {
+      "clue": "Which city is the birthplace of the Renaissance?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 43.7696, "lng": 11.2558 },
+      "country": "Italy",
+      "answer": "Florence"
+    },
+    {
+      "clue": "Where was the Berlin Wall located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": { "lat": 52.5200, "lng": 13.4050 },
+      "country": "Germany",
+      "answer": "Berlin"
+    },
+    {
+      "clue": "In which city was the first Starbucks opened in 1971?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 47.6097, "lng": -122.3425 },
+      "country": "United States",
+      "answer": "Seattle"
+    },
+    {
+      "clue": "Where did the Wright Brothers make their first powered flight?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": 36.0176, "lng": -75.6674 },
+      "country": "United States",
+      "answer": "Kitty Hawk, North Carolina"
+    },
+    {
+      "clue": "Which city was the capital of the Byzantine Empire?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 41.0082, "lng": 28.9784 },
+      "country": "Turkey",
+      "answer": "Constantinople (Istanbul)"
+    },
+    {
+      "clue": "Where is the headquarters of the International Court of Justice?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": 52.0867, "lng": 4.3146 },
+      "country": "Netherlands",
+      "answer": "The Hague"
+    },
+    {
+      "clue": "In which city was the first iPhone unveiled in 2007?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 37.7849, "lng": -122.4094 },
+      "country": "United States",
+      "answer": "San Francisco"
+    },
+    {
+      "clue": "Where was cleopatra's palace located before it sank into the sea?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": 31.2001, "lng": 29.9187 },
+      "country": "Egypt",
+      "answer": "Alexandria"
+    },
+    {
+      "clue": "Which volcano destroyed Pompeii in 79 AD?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 40.8218, "lng": 14.4260 },
+      "country": "Italy",
+      "answer": "Mount Vesuvius"
+    },
+    {
+      "clue": "Where was the world's first underground railway opened in 1863?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": { "lat": 51.5074, "lng": -0.1278 },
+      "country": "United Kingdom",
+      "answer": "London"
+    },
+    {
+      "clue": "In which city is the Nobel Peace Prize ceremony held?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": { "lat": 59.9139, "lng": 10.7522 },
+      "country": "Norway",
+      "answer": "Oslo"
     }
   ]
 }

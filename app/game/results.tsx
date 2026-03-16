@@ -1,4 +1,6 @@
+import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
+import { submitScore } from '@/services/api';
 import { getUserProgress, saveGameResult, type UserProgress } from '@/services/storage';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
@@ -7,22 +9,36 @@ import { Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native
 
 export default function ResultsScreen() {
   const router = useRouter();
+  const { user } = useAuth();
   const { puzzle, results, totalScore, resetGame } = useGameStore();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [copied, setCopied] = useState(false);
+  const [synced, setSynced] = useState(false);
 
   useEffect(() => {
     const saveAndLoadProgress = async () => {
       const currentProgress = await getUserProgress();
       if (puzzle) {
+        // Save locally
         await saveGameResult(puzzle.date, totalScore, currentProgress.lastPlayedDate);
+
+        // Sync to backend if logged in
+        if (user) {
+          try {
+            const roundScores = results.map(r => Math.round(r.score));
+            await submitScore(puzzle.date, user.id, user.name, totalScore, roundScores);
+            setSynced(true);
+          } catch (error) {
+            console.error('Failed to sync score:', error);
+          }
+        }
       }
       const updatedProgress = await getUserProgress();
       setProgress(updatedProgress);
     };
 
     saveAndLoadProgress();
-  }, []);
+  }, [puzzle, totalScore, results, user]);
 
   const getScoreEmoji = (score: number, multiplier: number) => {
     const baseScore = score / multiplier;

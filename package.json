@@ -6,15 +6,18 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "seed": "node scripts/seed-locations.js"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
     "@react-native-async-storage/async-storage": "1.23.1",
     "@react-navigation/native": "^6.1.9",
     "expo": "~52.0.0",
+    "expo-auth-session": "^55.0.8",
     "expo-clipboard": "~6.0.3",
     "expo-constants": "~17.0.3",
+    "expo-crypto": "^55.0.9",
     "expo-font": "~13.0.1",
     "expo-linking": "~7.0.3",
     "expo-router": "~4.0.0",

@@ -4,6 +4,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { AuthProvider } from '@/hooks/useAuth';
 
 export {
     // Catch any errors thrown by the Layout component.
@@ -43,18 +44,20 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <ThemeProvider value={DarkTheme}>
-      <Stack
-        screenOptions={{
-          headerStyle: { backgroundColor: '#1A202C' },
-          headerTintColor: '#FFFFFF',
-          contentStyle: { backgroundColor: '#1A202C' },
-        }}
-      >
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="game" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider value={DarkTheme}>
+        <Stack
+          screenOptions={{
+            headerStyle: { backgroundColor: '#1A202C' },
+            headerTintColor: '#FFFFFF',
+            contentStyle: { backgroundColor: '#1A202C' },
+          }}
+        >
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="game" options={{ headerShown: false }} />
+          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+        </Stack>
+      </ThemeProvider>
+    </AuthProvider>
   );
 }

@@ -1,5 +1,6 @@
 import locationsData from '@/data/locations.json';
 import { Puzzle, Round } from '@/types/game';
+import { fetchPuzzle } from './api';
 
 // Generate a seeded random number based on date
 function seededRandom(seed: number): () => number {
@@ -34,24 +35,33 @@ function shuffleArray<T>(array: T[], random: () => number): T[] {
   return shuffled;
 }
 
-// Generate daily puzzle based on date
-export function generateDailyPuzzle(date: string = getTodayDate()): Puzzle {
+// Generate puzzle locally from bundled data (fallback)
+function generateLocalPuzzle(date: string = getTodayDate()): Puzzle {
   const seed = dateToSeed(date);
   const random = seededRandom(seed);
 
-  const locations = locationsData.locations as Array<Omit<Round, 'id'>>;
+  const locations = locationsData.locations as Array<Omit<Round, 'id'> & { answer?: string }>;
   const shuffled = shuffleArray(locations, random);
 
   // Select 5 locations for today's puzzle
   const selectedLocations = shuffled.slice(0, 5);
 
+  const difficultyMultiplier: Record<string, number> = {
+    easy: 1,
+    medium: 1.5,
+    hard: 2,
+  };
+
   const rounds: Round[] = selectedLocations.map((loc, index) => ({
     id: index + 1,
     clue: loc.clue,
+    category: (loc.category || 'places') as Round['category'],
     type: loc.type as Round['type'],
     difficulty: loc.difficulty as Round['difficulty'],
     target: loc.target,
     country: loc.country,
+    answer: loc.answer,
+    multiplier: difficultyMultiplier[loc.difficulty] || 1,
   }));
 
   return {
@@ -59,6 +69,27 @@ export function generateDailyPuzzle(date: string = getTodayDate()): Puzzle {
     date,
     rounds,
   };
+}
+
+// Generate daily puzzle - tries API first, falls back to local
+export async function generateDailyPuzzle(date: string = getTodayDate()): Promise<Puzzle> {
+  try {
+    // Try to fetch from API first
+    const response = await fetchPuzzle(date);
+    if (response.data) {
+      return response.data;
+    }
+  } catch (error) {
+    console.log('API unavailable, using local puzzle generation');
+  }
+
+  // Fall back to local generation
+  return generateLocalPuzzle(date);
+}
+
+// Synchronous version for backwards compatibility
+export function generateDailyPuzzleSync(date: string = getTodayDate()): Puzzle {
+  return generateLocalPuzzle(date);
 }
 
 // Check if user has already played today

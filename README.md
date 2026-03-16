@@ -5,6 +5,7 @@ A daily geography guessing game inspired by MapTap.gg. Built with React Native (
 ## Features
 
 - **Daily Puzzles**: 5 rounds per day with curated world locations
+- **Two Categories**: Places (landmarks) and Trivia Questions
 - **Cross-Platform**: Works on iOS, Android, and Web
 - **Scoring System**: Distance-based scoring with difficulty multipliers
 - **Social Sharing**: Share your results like Wordle
@@ -16,9 +17,14 @@ A daily geography guessing game inspired by MapTap.gg. Built with React Native (
 - **Frontend**: React Native with Expo
 - **Navigation**: Expo Router
 - **State Management**: Zustand
-- **Maps**: react-native-maps (mobile) / @react-google-maps/api (web)
+- **Maps**: react-native-maps (mobile) / Google Maps (web)
 - **Backend**: Azure Functions
-- **Database**: Azure Cosmos DB
+- **Database**: Azure Table Storage
+
+## Live Demo
+
+- **Frontend**: https://thankful-moss-0a124ba0f.2.azurestaticapps.net
+- **API**: https://geotap-api.azurewebsites.net/api
 
 ## Getting Started
 
@@ -26,7 +32,6 @@ A daily geography guessing game inspired by MapTap.gg. Built with React Native (
 
 - Node.js 18+
 - npm or yarn
-- Expo CLI (`npm install -g expo-cli`)
 - Google Maps API Key (for maps)
 - Azure account (for backend)
 
@@ -46,12 +51,10 @@ A daily geography guessing game inspired by MapTap.gg. Built with React Native (
    Edit `.env` and add your Google Maps API key:
    ```
    EXPO_PUBLIC_GOOGLE_MAPS_API_KEY=your_key_here
+   EXPO_PUBLIC_API_URL=https://geotap-api.azurewebsites.net/api
    ```
 
-3. **Update app.json:**
-   Replace the Google Maps API keys in `app.json` for iOS and Android.
-
-4. **Run the app:**
+3. **Run the app:**
    ```bash
    # Web
    npm run web
@@ -76,22 +79,17 @@ A daily geography guessing game inspired by MapTap.gg. Built with React Native (
    npm install -g azure-functions-core-tools@4
    ```
 
-3. **Set up Cosmos DB:**
-   - Option A: Use the [Azure Cosmos DB Emulator](https://learn.microsoft.com/en-us/azure/cosmos-db/local-emulator) for local development
-   - Option B: Create an Azure Cosmos DB account in the Azure Portal
-
-4. **Configure local settings:**
-   Update `api/local.settings.json` with your Cosmos DB connection string:
+3. **Configure local settings:**
+   Update `api/local.settings.json` with your Azure Storage connection string:
    ```json
    {
      "Values": {
-       "COSMOS_CONNECTION_STRING": "your_connection_string",
-       "COSMOS_DATABASE_NAME": "geotap"
+       "AZURE_STORAGE_CONNECTION_STRING": "your_storage_connection_string"
      }
    }
    ```
 
-5. **Run the API:**
+4. **Run the API:**
    ```bash
    npm start
    ```
@@ -117,6 +115,7 @@ geotap/
 ├── types/                 # TypeScript types
 └── api/                   # Azure Functions backend
     └── src/
+        ├── storage.ts     # Table Storage client
         └── functions/     # API endpoints
 ```
 
@@ -130,28 +129,20 @@ geotap/
 
 ## Deployment
 
-### Frontend (Expo)
+### Frontend (Azure Static Web Apps)
 
 ```bash
-# Build for web
 npx expo export --platform web
-
-# Build for mobile
-eas build --platform all
+npx @azure/static-web-apps-cli deploy ./dist --deployment-token <token>
 ```
 
 ### Backend (Azure Functions)
 
 ```bash
 cd api
-func azure functionapp publish <your-function-app-name>
+npm run build
+func azure functionapp publish geotap-api
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
 
 ## License
 

@@ -6,6 +6,7 @@ interface ClueCardProps {
   round: Round;
   roundNumber: number;
   totalRounds: number;
+  showAnswer?: boolean;
 }
 
 const difficultyColors = {
@@ -14,22 +15,48 @@ const difficultyColors = {
   hard: '#FF6B6B',
 };
 
-export default function ClueCard({ round, roundNumber, totalRounds }: ClueCardProps) {
+const categoryColors = {
+  places: '#9F7AEA',
+  questions: '#ED8936',
+};
+
+export default function ClueCard({ round, roundNumber, totalRounds, showAnswer = false }: ClueCardProps) {
+  const isTrivia = round.category === 'questions';
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.roundText}>
           Round {roundNumber}/{totalRounds}
         </Text>
-        <View style={[styles.difficultyBadge, { backgroundColor: difficultyColors[round.difficulty] }]}>
-          <Text style={styles.difficultyText}>{round.difficulty.toUpperCase()}</Text>
+        <View style={styles.badges}>
+          <View style={[styles.categoryBadge, { backgroundColor: categoryColors[round.category] }]}>
+            <Text style={styles.badgeText}>
+              {isTrivia ? 'TRIVIA' : 'PLACES'}
+            </Text>
+          </View>
+          <View style={[styles.difficultyBadge, { backgroundColor: difficultyColors[round.difficulty] }]}>
+            <Text style={styles.badgeText}>{round.difficulty.toUpperCase()}</Text>
+          </View>
         </View>
       </View>
-      <Text style={styles.clueText}>{round.clue}</Text>
+
+      <Text style={[styles.clueText, isTrivia && styles.triviaClueText]}>
+        {round.clue}
+      </Text>
+
+      {showAnswer && round.answer && (
+        <View style={styles.answerContainer}>
+          <Text style={styles.answerLabel}>Answer:</Text>
+          <Text style={styles.answerText}>{round.answer}</Text>
+        </View>
+      )}
+
       <Text style={styles.hintText}>
-        {round.type === 'landmark' && 'Tap the location of this landmark'}
-        {round.type === 'city' && 'Tap the location of this city'}
-        {round.type === 'country' && `Tap anywhere in ${round.country}`}
+        {isTrivia && 'Tap where you think the answer is located'}
+        {!isTrivia && round.type === 'landmark' && 'Tap the location of this landmark'}
+        {!isTrivia && round.type === 'city' && 'Tap the location of this city'}
+        {!isTrivia && round.type === 'country' && `Tap anywhere in ${round.country}`}
       </Text>
     </View>
   );
@@ -58,12 +85,21 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
   },
+  badges: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  categoryBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
+  },
   difficultyBadge: {
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
   },
-  difficultyText: {
+  badgeText: {
     color: '#1A202C',
     fontSize: 12,
     fontWeight: '700',
@@ -74,6 +110,28 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     marginBottom: 8,
     textAlign: 'center',
+  },
+  triviaClueText: {
+    fontSize: 20,
+    fontWeight: '600',
+    lineHeight: 28,
+  },
+  answerContainer: {
+    backgroundColor: 'rgba(78, 205, 196, 0.2)',
+    borderRadius: 8,
+    padding: 12,
+    marginVertical: 8,
+    alignItems: 'center',
+  },
+  answerLabel: {
+    color: '#A0AEC0',
+    fontSize: 12,
+    marginBottom: 4,
+  },
+  answerText: {
+    color: '#4ECDC4',
+    fontSize: 18,
+    fontWeight: '700',
   },
   hintText: {
     color: '#718096',

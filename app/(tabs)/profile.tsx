@@ -1,8 +1,10 @@
+import { useAuth } from '@/hooks/useAuth';
 import { getUserProgress, type UserProgress } from '@/services/storage';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function ProfileScreen() {
+  const { user, isLoading: authLoading, signIn, signOut } = useAuth();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -16,7 +18,7 @@ export default function ProfileScreen() {
     loadProgress();
   }, []);
 
-  if (isLoading) {
+  if (isLoading || authLoading) {
     return (
       <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color="#4ECDC4" />
@@ -25,14 +27,27 @@ export default function ProfileScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      {/* Avatar placeholder */}
+    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      {/* User profile */}
       <View style={styles.avatarContainer}>
-        <View style={styles.avatar}>
-          <Text style={styles.avatarText}>G</Text>
-        </View>
-        <Text style={styles.guestText}>Guest Player</Text>
-        <Text style={styles.signInHint}>Sign in to sync your progress</Text>
+        {user?.picture ? (
+          <Image source={{ uri: user.picture }} style={styles.avatarImage} />
+        ) : (
+          <View style={styles.avatar}>
+            <Text style={styles.avatarText}>
+              {user?.name?.charAt(0).toUpperCase() || 'G'}
+            </Text>
+          </View>
+        )}
+        <Text style={styles.nameText}>
+          {user?.name || 'Guest Player'}
+        </Text>
+        {user?.email && (
+          <Text style={styles.emailText}>{user.email}</Text>
+        )}
+        {!user && (
+          <Text style={styles.signInHint}>Sign in to sync your progress across devices</Text>
+        )}
       </View>
 
       {/* Stats */}
@@ -68,7 +83,7 @@ export default function ProfileScreen() {
         )}
       </View>
 
-      {/* Achievements placeholder */}
+      {/* Achievements */}
       <View style={styles.achievementsCard}>
         <Text style={styles.achievementsTitle}>Achievements</Text>
         <View style={styles.achievementsList}>
@@ -91,11 +106,23 @@ export default function ProfileScreen() {
         </View>
       </View>
 
-      {/* Sign in button */}
-      <Pressable style={styles.signInButton}>
-        <Text style={styles.signInButtonText}>Sign In with Microsoft</Text>
-      </Pressable>
-    </View>
+      {/* Sign in/out button */}
+      {user ? (
+        <Pressable style={styles.signOutButton} onPress={signOut}>
+          <Text style={styles.signOutButtonText}>Sign Out</Text>
+        </Pressable>
+      ) : (
+        <Pressable style={styles.signInButton} onPress={signIn}>
+          <Text style={styles.signInButtonText}>Sign In with Google</Text>
+        </Pressable>
+      )}
+
+      {user && (
+        <Text style={styles.syncInfo}>
+          Your progress is synced to your account
+        </Text>
+      )}
+    </ScrollView>
   );
 }
 
@@ -103,6 +130,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1A202C',
+  },
+  contentContainer: {
     padding: 20,
   },
   loadingContainer: {
@@ -124,20 +153,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 12,
   },
+  avatarImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    marginBottom: 12,
+  },
   avatarText: {
     color: '#1A202C',
     fontSize: 36,
     fontWeight: '700',
   },
-  guestText: {
+  nameText: {
     color: '#FFFFFF',
     fontSize: 20,
     fontWeight: '600',
   },
-  signInHint: {
+  emailText: {
     color: '#718096',
     fontSize: 14,
     marginTop: 4,
+  },
+  signInHint: {
+    color: '#718096',
+    fontSize: 14,
+    marginTop: 8,
+    textAlign: 'center',
   },
   statsCard: {
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
@@ -227,14 +268,35 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   signInButton: {
-    backgroundColor: '#0078D4',
+    backgroundColor: '#4285F4',
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   signInButtonText: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '600',
+  },
+  signOutButton: {
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: '#718096',
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  signOutButtonText: {
+    color: '#718096',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  syncInfo: {
+    color: '#4ECDC4',
+    fontSize: 12,
+    textAlign: 'center',
+    marginTop: 12,
   },
 });

@@ -1,0 +1,19 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/*.js", "/*.css", "/*.json", "/*.svg", "/*.png", "/*.ico"]
+  },
+  "globalHeaders": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".woff2": "font/woff2"
+  },
+  "routes": [
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous"]
+    }
+  ]
+}

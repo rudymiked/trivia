@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "GeoTap",
-    "slug": "geotap",
+    "name": "PinPoint",
+    "slug": "pinpoint",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "geotap",
+    "scheme": "pinpoint",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "splash": {
@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.geotap.app",
+      "bundleIdentifier": "com.pinpoint.app",
       "config": {
         "googleMapsApiKey": "YOUR_IOS_GOOGLE_MAPS_API_KEY"
       }
@@ -25,7 +25,7 @@
         "backgroundColor": "#1A202C",
         "foregroundImage": "./assets/images/adaptive-icon.png"
       },
-      "package": "com.geotap.app",
+      "package": "com.pinpoint.app",
       "config": {
         "googleMaps": {
           "apiKey": "YOUR_ANDROID_GOOGLE_MAPS_API_KEY"

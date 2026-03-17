@@ -126,7 +126,7 @@ export const useGameStore = create<GameStore>()(
       },
     }),
     {
-      name: 'geotap-game-storage',
+      name: 'pinpoint-game-storage',
       storage: createJSONStorage(() => AsyncStorage),
     }
   )

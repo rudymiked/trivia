@@ -1,8 +1,8 @@
 {
-  "name": "geotap-api",
+  "name": "pinpoint-api",
   "version": "1.0.0",
   "type": "module",
-  "description": "GeoTap Azure Functions API",
+  "description": "PinPoint Azure Functions API",
   "main": "dist/src/index.js",
   "scripts": {
     "build": "tsc",

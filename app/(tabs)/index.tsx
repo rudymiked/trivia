@@ -47,7 +47,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       {/* Logo */}
       <View style={styles.logoContainer}>
-        <Text style={styles.logoText}>GeoTap</Text>
+        <Text style={styles.logoText}>PinPoint</Text>
         <Text style={styles.tagline}>Daily Geography Challenge</Text>
       </View>
 

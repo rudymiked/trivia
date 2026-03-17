@@ -2,11 +2,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 
 const STORAGE_KEYS = {
-  LAST_PLAYED_DATE: 'geotap_last_played_date',
-  STREAK: 'geotap_streak',
-  TOTAL_SCORE: 'geotap_total_score',
-  GAMES_PLAYED: 'geotap_games_played',
-  HIGH_SCORE: 'geotap_high_score',
+  LAST_PLAYED_DATE: 'pinpoint_last_played_date',
+  STREAK: 'pinpoint_streak',
+  TOTAL_SCORE: 'pinpoint_total_score',
+  GAMES_PLAYED: 'pinpoint_games_played',
+  HIGH_SCORE: 'pinpoint_high_score',
 } as const;
 
 export interface UserProgress {

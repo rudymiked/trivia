@@ -1,4 +1,4 @@
-# GeoTap
+# PinPoint
 
 A daily geography guessing game inspired by MapTap.gg. Built with React Native (Expo) for web and mobile, with Azure Functions backend.
 
@@ -40,7 +40,7 @@ A daily geography guessing game inspired by MapTap.gg. Built with React Native (
 1. **Clone and install dependencies:**
    ```bash
    git clone <repo-url>
-   cd geotap
+   cd pinpoint
    npm install
    ```
 
@@ -97,7 +97,7 @@ A daily geography guessing game inspired by MapTap.gg. Built with React Native (
 ## Project Structure
 
 ```
-geotap/
+pinpoint/
 ├── app/                    # Expo Router screens
 │   ├── (tabs)/            # Tab navigation
 │   │   ├── index.tsx      # Home/Play screen

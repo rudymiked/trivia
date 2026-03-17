@@ -57,11 +57,11 @@ export default function ResultsScreen() {
       day: 'numeric',
     });
 
-    return `GeoTap ${date}
+    return `PinPoint ${date}
 
 ${emojiGrid} ${totalScore}/500
 
-Play at: geotap.app`;
+Play at: pinpoint.app`;
   };
 
   const handleShare = async () => {

@@ -549,6 +549,238 @@
       "target": { "lat": 59.9139, "lng": 10.7522 },
       "country": "Norway",
       "answer": "Oslo"
+    },
+    {
+      "clue": "Amazon River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": { "lat": -3.1190, "lng": -60.0217 },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Nile River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": { "lat": 30.0444, "lng": 31.2357 },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Mississippi River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": { "lat": 29.1511, "lng": -89.2495 },
+      "country": "United States"
+    },
+    {
+      "clue": "Danube River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": { "lat": 48.2082, "lng": 16.3738 },
+      "country": "Austria"
+    },
+    {
+      "clue": "Yangtze River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "hard",
+      "target": { "lat": 30.5728, "lng": 117.2700 },
+      "country": "China"
+    },
+    {
+      "clue": "Mount Kilimanjaro",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": { "lat": -3.0674, "lng": 37.3556 },
+      "country": "Tanzania"
+    },
+    {
+      "clue": "Mount Everest",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "easy",
+      "target": { "lat": 27.9881, "lng": 86.9250 },
+      "country": "Nepal"
+    },
+    {
+      "clue": "Matterhorn",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": { "lat": 45.9763, "lng": 7.6586 },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Mount McKinley (Denali)",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": { "lat": 63.0695, "lng": -151.0074 },
+      "country": "United States"
+    },
+    {
+      "clue": "K2",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": { "lat": 35.8808, "lng": 76.5155 },
+      "country": "Pakistan"
+    },
+    {
+      "clue": "Lake Baikal",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": { "lat": 53.5587, "lng": 108.1650 },
+      "country": "Russia"
+    },
+    {
+      "clue": "Lake Victoria",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "medium",
+      "target": { "lat": -1.2921, "lng": 32.8561 },
+      "country": "Uganda"
+    },
+    {
+      "clue": "Lake Titicaca",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "medium",
+      "target": { "lat": -15.9254, "lng": -69.3354 },
+      "country": "Peru"
+    },
+    {
+      "clue": "Great Lakes - Lake Superior",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "medium",
+      "target": { "lat": 47.7000, "lng": -87.5000 },
+      "country": "United States"
+    },
+    {
+      "clue": "Dead Sea",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "easy",
+      "target": { "lat": 31.5000, "lng": 35.5000 },
+      "country": "Israel"
+    },
+    {
+      "clue": "Sahara Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "easy",
+      "target": { "lat": 23.4162, "lng": 25.6628 },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Gobi Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "medium",
+      "target": { "lat": 42.5944, "lng": 103.4314 },
+      "country": "Mongolia"
+    },
+    {
+      "clue": "Atacama Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": { "lat": -24.5000, "lng": -69.2500 },
+      "country": "Chile"
+    },
+    {
+      "clue": "Mojave Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "medium",
+      "target": { "lat": 35.0110, "lng": -115.4734 },
+      "country": "United States"
+    },
+    {
+      "clue": "Madagascar",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "easy",
+      "target": { "lat": -18.7669, "lng": 46.8691 },
+      "country": "Madagascar"
+    },
+    {
+      "clue": "Galápagos Islands",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "medium",
+      "target": { "lat": -0.9538, "lng": -90.9656 },
+      "country": "Ecuador"
+    },
+    {
+      "clue": "Hawaii (Big Island)",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "easy",
+      "target": { "lat": 19.8968, "lng": -155.5828 },
+      "country": "United States"
+    },
+    {
+      "clue": "Greenland",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "easy",
+      "target": { "lat": 71.7069, "lng": -42.6043 },
+      "country": "Greenland"
+    },
+    {
+      "clue": "Bora Bora",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "hard",
+      "target": { "lat": -16.5004, "lng": -151.7415 },
+      "country": "French Polynesia"
+    },
+    {
+      "clue": "Great Barrier Reef",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": { "lat": -18.2871, "lng": 147.6992 },
+      "country": "Australia"
+    },
+    {
+      "clue": "Mariana Trench",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "hard",
+      "target": { "lat": 11.3493, "lng": 142.1996 },
+      "country": "Pacific Ocean"
+    },
+    {
+      "clue": "Strait of Gibraltar",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": { "lat": 35.9745, "lng": -5.5000 },
+      "country": "Spain"
+    },
+    {
+      "clue": "Panama Canal",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "easy",
+      "target": { "lat": 9.0800, "lng": -79.6800 },
+      "country": "Panama"
+    },
+    {
+      "clue": "Suez Canal",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": { "lat": 30.4550, "lng": 32.3500 },
+      "country": "Egypt"
     }
   ]
 }

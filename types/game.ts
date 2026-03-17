@@ -3,13 +3,13 @@ export interface Coordinates {
   lng: number;
 }
 
-export type Category = 'places' | 'questions';
+export type Category = 'places' | 'questions' | 'geography';
 
 export interface Round {
   id: number;
   clue: string;
   category: Category;
-  type: 'landmark' | 'city' | 'country' | 'region' | 'trivia';
+  type: 'landmark' | 'city' | 'country' | 'region' | 'trivia' | 'mountain' | 'river' | 'lake' | 'desert' | 'island' | 'ocean';
   difficulty: 'easy' | 'medium' | 'hard';
   target: Coordinates;
   country: string;

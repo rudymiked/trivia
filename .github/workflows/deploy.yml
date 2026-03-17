@@ -4,6 +4,17 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      deploy_frontend:
+        description: 'Deploy Frontend'
+        required: true
+        default: true
+        type: boolean
+      deploy_api:
+        description: 'Deploy API'
+        required: true
+        default: true
+        type: boolean
 
 env:
   AZURE_FUNCTIONAPP_NAME: geotap-api
@@ -13,6 +24,8 @@ jobs:
   build-and-deploy-frontend:
     runs-on: ubuntu-latest
     name: Build and Deploy Frontend
+    environment: Production
+    if: ${{ github.event_name == 'push' || inputs.deploy_frontend }}
     steps:
       - uses: actions/checkout@v4
 
@@ -43,6 +56,8 @@ jobs:
   build-and-deploy-api:
     runs-on: ubuntu-latest
     name: Build and Deploy API
+    environment: Production
+    if: ${{ github.event_name == 'push' || inputs.deploy_api }}
     steps:
       - uses: actions/checkout@v4
 

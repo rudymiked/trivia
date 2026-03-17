@@ -150,6 +150,19 @@ app.http('submitScore', {
 
       await client.upsertEntity(scoreEntity);
 
+      // Also save to games table (partitioned by userId for user queries)
+      const gamesClient = getTableClient('games');
+      await gamesClient.upsertEntity({
+        partitionKey: verifiedUserId,
+        rowKey: date,
+        displayName: verifiedDisplayName,
+        totalScore,
+        rounds: JSON.stringify(rounds),
+        completedAt: new Date().toISOString(),
+        isVerified,
+        puzzleType: 'daily',
+      });
+
       // Update user stats
       await updateUserStats(verifiedUserId, verifiedDisplayName, totalScore, date);
 
@@ -272,3 +285,165 @@ async function updateUserStats(
     });
   }
 }
+
+// Get user's game history
+app.http('getUserGames', {
+  methods: ['GET'],
+  authLevel: 'anonymous',
+  route: 'users/{userId}/games',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.params.userId;
+
+    if (!userId || userId.length > 128) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    const limitParam = request.query.get('limit') || '30';
+    const limit = Math.min(Math.max(parseInt(limitParam, 10) || 30, 1), 100);
+
+    try {
+      const client = getTableClient('games');
+      const games: Array<{
+        date: string;
+        totalScore: number;
+        rounds: number[];
+        completedAt: string;
+        puzzleType: string;
+      }> = [];
+
+      const entities = client.listEntities({
+        queryOptions: { filter: `PartitionKey eq '${userId}'` },
+      });
+
+      for await (const entity of entities) {
+        games.push({
+          date: entity.rowKey as string,
+          totalScore: entity.totalScore as number,
+          rounds: JSON.parse(entity.rounds as string),
+          completedAt: entity.completedAt as string,
+          puzzleType: (entity.puzzleType as string) || 'daily',
+        });
+      }
+
+      // Sort by date descending (most recent first)
+      games.sort((a, b) => b.date.localeCompare(a.date));
+
+      return {
+        jsonBody: { userId, games: games.slice(0, limit), total: games.length },
+      };
+    } catch (error) {
+      context.error('Error fetching user games:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to fetch user games' },
+      };
+    }
+  },
+});
+
+// Check if user completed a specific date's puzzle
+app.http('getUserGame', {
+  methods: ['GET'],
+  authLevel: 'anonymous',
+  route: 'users/{userId}/games/{date}',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.params.userId;
+    const date = request.params.date;
+
+    if (!userId || userId.length > 128) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    if (!date || !isValidDate(date)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid date format. Use YYYY-MM-DD.' },
+      };
+    }
+
+    try {
+      const client = getTableClient('games');
+      const entity = await client.getEntity(userId, date);
+
+      return {
+        jsonBody: {
+          completed: true,
+          date: entity.rowKey as string,
+          totalScore: entity.totalScore as number,
+          rounds: JSON.parse(entity.rounds as string),
+          completedAt: entity.completedAt as string,
+        },
+      };
+    } catch (error: any) {
+      if (error.statusCode === 404) {
+        return {
+          jsonBody: { completed: false, date },
+        };
+      }
+      context.error('Error checking user game:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to check user game' },
+      };
+    }
+  },
+});
+
+// Get user stats
+app.http('getUserStats', {
+  methods: ['GET'],
+  authLevel: 'anonymous',
+  route: 'users/{userId}/stats',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.params.userId;
+
+    if (!userId || userId.length > 128) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    try {
+      const client = getTableClient('users');
+      const entity = await client.getEntity('user', userId);
+
+      return {
+        jsonBody: {
+          userId,
+          displayName: entity.displayName as string,
+          streak: entity.streak as number,
+          totalScore: entity.totalScore as number,
+          gamesPlayed: entity.gamesPlayed as number,
+          highScore: entity.highScore as number,
+          lastPlayedDate: entity.lastPlayedDate as string,
+        },
+      };
+    } catch (error: any) {
+      if (error.statusCode === 404) {
+        return {
+          jsonBody: {
+            userId,
+            displayName: 'Anonymous',
+            streak: 0,
+            totalScore: 0,
+            gamesPlayed: 0,
+            highScore: 0,
+            lastPlayedDate: null,
+          },
+        };
+      }
+      context.error('Error fetching user stats:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to fetch user stats' },
+      };
+    }
+  },
+});

@@ -89,3 +89,53 @@ export async function checkApiHealth(): Promise<boolean> {
     return false;
   }
 }
+
+// User game data types
+export interface UserGame {
+  date: string;
+  totalScore: number;
+  rounds: number[];
+  completedAt: string;
+  puzzleType: string;
+}
+
+export interface UserStats {
+  userId: string;
+  displayName: string;
+  streak: number;
+  totalScore: number;
+  gamesPlayed: number;
+  highScore: number;
+  lastPlayedDate: string | null;
+}
+
+export interface UserGameCheck {
+  completed: boolean;
+  date: string;
+  totalScore?: number;
+  rounds?: number[];
+  completedAt?: string;
+}
+
+// Get user's game history
+export async function fetchUserGames(
+  userId: string,
+  limit = 30
+): Promise<ApiResponse<{ userId: string; games: UserGame[]; total: number }>> {
+  return fetchApi(`/users/${encodeURIComponent(userId)}/games?limit=${limit}`);
+}
+
+// Check if user completed a specific date's puzzle
+export async function checkUserGame(
+  userId: string,
+  date: string
+): Promise<ApiResponse<UserGameCheck>> {
+  return fetchApi(`/users/${encodeURIComponent(userId)}/games/${date}`);
+}
+
+// Get user stats
+export async function fetchUserStats(
+  userId: string
+): Promise<ApiResponse<UserStats>> {
+  return fetchApi(`/users/${encodeURIComponent(userId)}/stats`);
+}

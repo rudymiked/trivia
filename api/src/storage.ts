@@ -43,7 +43,7 @@ export function getTableClient(tableName: string): TableClient {
 
 // Initialize tables
 export async function initializeTables(): Promise<void> {
-  const tables = ['puzzles', 'scores', 'users', 'locations'];
+  const tables = ['puzzles', 'scores', 'users', 'locations', 'games'];
 
   for (const tableName of tables) {
     const client = getTableClient(tableName);

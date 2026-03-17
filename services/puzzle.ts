@@ -92,6 +92,60 @@ export function generateDailyPuzzleSync(date: string = getTodayDate()): Puzzle {
   return generateLocalPuzzle(date);
 }
 
+// Get all available categories from the data
+export function getCategories(): string[] {
+  const locations = locationsData.locations as Array<{ category: string }>;
+  const categories = [...new Set(locations.map((loc) => loc.category))];
+  return categories;
+}
+
+// Generate a puzzle filtered by category
+export function generatePuzzleByCategory(category: string | 'all' | 'random'): Puzzle {
+  const locations = locationsData.locations as Array<Omit<Round, 'id'> & { answer?: string }>;
+  const random = () => Math.random();
+
+  let filteredLocations = locations;
+
+  if (category === 'random') {
+    // Pick a random category
+    const categories = getCategories();
+    const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+    filteredLocations = locations.filter((loc) => loc.category === randomCategory);
+  } else if (category !== 'all') {
+    // Filter by specific category
+    filteredLocations = locations.filter((loc) => loc.category === category);
+  }
+
+  const shuffled = shuffleArray(filteredLocations, random);
+  const selectedLocations = shuffled.slice(0, 5);
+
+  const difficultyMultiplier: Record<string, number> = {
+    easy: 1,
+    medium: 1.5,
+    hard: 2,
+  };
+
+  const rounds: Round[] = selectedLocations.map((loc, index) => ({
+    id: index + 1,
+    clue: loc.clue,
+    category: (loc.category || 'places') as Round['category'],
+    type: loc.type as Round['type'],
+    difficulty: loc.difficulty as Round['difficulty'],
+    target: loc.target,
+    country: loc.country,
+    answer: loc.answer,
+    multiplier: difficultyMultiplier[loc.difficulty] || 1,
+  }));
+
+  const puzzleId = `${category}-${Date.now()}`;
+
+  return {
+    id: puzzleId,
+    date: getTodayDate(),
+    rounds,
+  };
+}
+
 // Check if user has already played today
 export function hasPlayedToday(lastPlayedDate: string | null): boolean {
   if (!lastPlayedDate) return false;

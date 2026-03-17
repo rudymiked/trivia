@@ -1,6 +1,6 @@
 import { getTimeUntilNextPuzzle, getTodayDate, hasPlayedToday } from '@/services/puzzle';
 import { getUserProgress, type UserProgress } from '@/services/storage';
-import { useRouter } from 'expo-router';
+import { Href, useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 
@@ -31,6 +31,10 @@ export default function HomeScreen() {
   const handlePlay = () => {
     const today = getTodayDate();
     router.push(`/game/${today}`);
+  };
+
+  const handlePlayModes = () => {
+    router.push('/play-modes' as Href);
   };
 
   const alreadyPlayed = progress && hasPlayedToday(progress.lastPlayedDate);
@@ -79,14 +83,22 @@ export default function HomeScreen() {
             {String(countdown.minutes).padStart(2, '0')}:
             {String(countdown.seconds).padStart(2, '0')}
           </Text>
-          <Pressable style={styles.replayButton} onPress={handlePlay}>
-            <Text style={styles.replayButtonText}>Play Again</Text>
-          </Pressable>
+          <View style={styles.buttonRow}>
+            <Pressable style={styles.replayButton} onPress={handlePlay}>
+              <Text style={styles.replayButtonText}>Play Again</Text>
+            </Pressable>
+            <Pressable style={styles.replayButton} onPress={handlePlayModes}>
+              <Text style={styles.replayButtonText}>Play Modes</Text>
+            </Pressable>
+          </View>
         </View>
       ) : (
         <View style={styles.playContainer}>
           <Pressable style={styles.playButton} onPress={handlePlay}>
             <Text style={styles.playButtonText}>Play Today's Puzzle</Text>
+          </Pressable>
+          <Pressable style={styles.modesButton} onPress={handlePlayModes}>
+            <Text style={styles.modesButtonText}>Play Modes</Text>
           </Pressable>
           <Text style={styles.dateText}>
             {new Date().toLocaleDateString('en-US', {
@@ -220,9 +232,27 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     paddingVertical: 12,
     borderRadius: 12,
-    marginTop: 24,
   },
   replayButtonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    gap: 12,
+    marginTop: 24,
+  },
+  modesButton: {
+    backgroundColor: 'transparent',
+    borderWidth: 2,
+    borderColor: '#4A5568',
+    paddingHorizontal: 32,
+    paddingVertical: 12,
+    borderRadius: 12,
+    marginTop: 16,
+  },
+  modesButtonText: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '600',

@@ -29,16 +29,28 @@ export default function GameScreen() {
   const [currentResult, setCurrentResult] = useState<RoundResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Check if puzzleId looks like a date (YYYY-MM-DD)
+  const isDateBasedPuzzle = /^\d{4}-\d{2}-\d{2}$/.test(puzzleId || '');
+
   // Load puzzle on mount
   useEffect(() => {
     const loadPuzzle = async () => {
-      const dailyPuzzle = await generateDailyPuzzle(puzzleId);
-      startGame(dailyPuzzle);
+      // If puzzle is already loaded with matching ID (from play-modes), skip loading
+      if (puzzle && puzzle.id === puzzleId) {
+        setIsLoading(false);
+        return;
+      }
+
+      // Only fetch from API for date-based puzzles
+      if (isDateBasedPuzzle) {
+        const dailyPuzzle = await generateDailyPuzzle(puzzleId);
+        startGame(dailyPuzzle);
+      }
       setIsLoading(false);
     };
 
     loadPuzzle();
-  }, [puzzleId]);
+  }, [puzzleId, puzzle?.id, isDateBasedPuzzle]);
 
   const handleLocationSelect = useCallback((coords: Coordinates) => {
     if (phase !== 'playing') return;

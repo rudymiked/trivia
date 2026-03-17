@@ -1,15 +1,25 @@
+import { DefaultAzureCredential } from '@azure/identity';
 import { TableClient, TableServiceClient } from '@azure/data-tables';
 
 let serviceClient: TableServiceClient | null = null;
 const tableClients: Record<string, TableClient> = {};
 
+// Storage account name for Managed Identity auth
+const STORAGE_ACCOUNT_NAME = process.env.AZURE_STORAGE_ACCOUNT_NAME || 'geotapstorage';
+
 export function getTableServiceClient(): TableServiceClient {
   if (!serviceClient) {
     const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
-    if (!connectionString) {
-      throw new Error('AZURE_STORAGE_CONNECTION_STRING is not set');
+
+    if (connectionString) {
+      // Use connection string (local development)
+      serviceClient = TableServiceClient.fromConnectionString(connectionString);
+    } else {
+      // Use Managed Identity (production)
+      const credential = new DefaultAzureCredential();
+      const url = `https://${STORAGE_ACCOUNT_NAME}.table.core.windows.net`;
+      serviceClient = new TableServiceClient(url, credential);
     }
-    serviceClient = TableServiceClient.fromConnectionString(connectionString);
   }
   return serviceClient;
 }
@@ -17,10 +27,16 @@ export function getTableServiceClient(): TableServiceClient {
 export function getTableClient(tableName: string): TableClient {
   if (!tableClients[tableName]) {
     const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
-    if (!connectionString) {
-      throw new Error('AZURE_STORAGE_CONNECTION_STRING is not set');
+
+    if (connectionString) {
+      // Use connection string (local development)
+      tableClients[tableName] = TableClient.fromConnectionString(connectionString, tableName);
+    } else {
+      // Use Managed Identity (production)
+      const credential = new DefaultAzureCredential();
+      const url = `https://${STORAGE_ACCOUNT_NAME}.table.core.windows.net`;
+      tableClients[tableName] = new TableClient(url, tableName, credential);
     }
-    tableClients[tableName] = TableClient.fromConnectionString(connectionString, tableName);
   }
   return tableClients[tableName];
 }

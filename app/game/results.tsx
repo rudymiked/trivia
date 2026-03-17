@@ -9,7 +9,7 @@ import { Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native
 
 export default function ResultsScreen() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, idToken } = useAuth();
   const { puzzle, results, totalScore, resetGame } = useGameStore();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [copied, setCopied] = useState(false);
@@ -26,7 +26,7 @@ export default function ResultsScreen() {
         if (user) {
           try {
             const roundScores = results.map(r => Math.round(r.score));
-            await submitScore(puzzle.date, user.id, user.name, totalScore, roundScores);
+            await submitScore(puzzle.date, user.id, user.name, totalScore, roundScores, idToken || undefined);
             setSynced(true);
           } catch (error) {
             console.error('Failed to sync score:', error);
@@ -38,7 +38,7 @@ export default function ResultsScreen() {
     };
 
     saveAndLoadProgress();
-  }, [puzzle, totalScore, results, user]);
+  }, [puzzle, totalScore, results, user, idToken]);
 
   const getScoreEmoji = (score: number, multiplier: number) => {
     const baseScore = score / multiplier;

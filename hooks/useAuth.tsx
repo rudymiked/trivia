@@ -14,6 +14,7 @@ export interface User {
 
 interface AuthContextType {
   user: User | null;
+  idToken: string | null;
   isLoading: boolean;
   signIn: () => Promise<void>;
   signOut: () => Promise<void>;
@@ -22,6 +23,7 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const STORAGE_KEY = 'pinpoint_user';
+const TOKEN_STORAGE_KEY = 'pinpoint_id_token';
 
 // You'll need to create these in Google Cloud Console
 const GOOGLE_CLIENT_ID_WEB = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_WEB || '';
@@ -30,6 +32,7 @@ const GOOGLE_CLIENT_ID_ANDROID = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_ANDROI
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
+  const [idToken, setIdToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const [request, response, promptAsync] = Google.useAuthRequest({
@@ -48,6 +51,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (response?.type === 'success') {
       const { authentication } = response;
       if (authentication?.accessToken) {
+        // Store the ID token for API authentication
+        if (authentication.idToken) {
+          setIdToken(authentication.idToken);
+          AsyncStorage.setItem(TOKEN_STORAGE_KEY, authentication.idToken);
+        }
         fetchUserInfo(authentication.accessToken);
       }
     }
@@ -56,8 +64,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const loadUser = async () => {
     try {
       const savedUser = await AsyncStorage.getItem(STORAGE_KEY);
+      const savedToken = await AsyncStorage.getItem(TOKEN_STORAGE_KEY);
       if (savedUser) {
         setUser(JSON.parse(savedUser));
+      }
+      if (savedToken) {
+        setIdToken(savedToken);
       }
     } catch (error) {
       console.error('Error loading user:', error);
@@ -98,14 +110,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signOut = async () => {
     try {
       setUser(null);
+      setIdToken(null);
       await AsyncStorage.removeItem(STORAGE_KEY);
+      await AsyncStorage.removeItem(TOKEN_STORAGE_KEY);
     } catch (error) {
       console.error('Error signing out:', error);
     }
   };
 
   return (
-    <AuthContext.Provider value={{ user, isLoading, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, idToken, isLoading, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );

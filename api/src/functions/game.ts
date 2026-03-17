@@ -1,4 +1,5 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
+import { extractBearerToken, verifyGoogleToken } from '../auth.js';
 import { generatePuzzleForDate, getTableClient } from '../storage.js';
 
 interface ScoreSubmission {
@@ -9,6 +10,27 @@ interface ScoreSubmission {
   rounds: number[];
 }
 
+// Validation helpers
+const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
+const MAX_DISPLAY_NAME_LENGTH = 50;
+const MAX_SCORE = 25000; // 5 rounds * 5000 max per round
+
+function isValidDate(date: string): boolean {
+  if (!DATE_REGEX.test(date)) return false;
+  const parsed = new Date(date);
+  return !isNaN(parsed.getTime());
+}
+
+function sanitizeDisplayName(name: string | undefined): string {
+  if (!name) return 'Anonymous';
+  // Remove any HTML/script tags and trim
+  return name
+    .replace(/<[^>]*>/g, '')
+    .replace(/[<>"'&]/g, '')
+    .trim()
+    .slice(0, MAX_DISPLAY_NAME_LENGTH) || 'Anonymous';
+}
+
 // Get daily puzzle - dynamically generated from locations
 app.http('getPuzzle', {
   methods: ['GET'],
@@ -16,6 +38,14 @@ app.http('getPuzzle', {
   route: 'puzzle/{date?}',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const date = request.params.date || new Date().toISOString().split('T')[0];
+
+    // Validate date format
+    if (!isValidDate(date)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid date format. Use YYYY-MM-DD.' },
+      };
+    }
 
     try {
       // Generate puzzle dynamically from locations table
@@ -52,6 +82,7 @@ app.http('submitScore', {
       const body = (await request.json()) as ScoreSubmission;
       const { date, userId, displayName, totalScore, rounds } = body;
 
+      // Validate required fields
       if (!date || !userId || totalScore === undefined) {
         return {
           status: 400,
@@ -59,20 +90,68 @@ app.http('submitScore', {
         };
       }
 
+      // Validate date format
+      if (!isValidDate(date)) {
+        return {
+          status: 400,
+          jsonBody: { error: 'Invalid date format. Use YYYY-MM-DD.' },
+        };
+      }
+
+      // Validate score is reasonable
+      if (typeof totalScore !== 'number' || totalScore < 0 || totalScore > MAX_SCORE) {
+        return {
+          status: 400,
+          jsonBody: { error: 'Invalid score' },
+        };
+      }
+
+      // Check for auth token and validate if present
+      const authHeader = request.headers.get('authorization');
+      const token = extractBearerToken(authHeader);
+      let verifiedUserId = userId;
+      let verifiedDisplayName = sanitizeDisplayName(displayName);
+      let isVerified = false;
+
+      if (token) {
+        const verifiedUser = await verifyGoogleToken(token);
+        if (verifiedUser) {
+          // Use the verified user's ID instead of the client-provided one
+          verifiedUserId = verifiedUser.userId;
+          verifiedDisplayName = sanitizeDisplayName(verifiedUser.name);
+          isVerified = true;
+        } else {
+          // Token was provided but invalid
+          return {
+            status: 401,
+            jsonBody: { error: 'Invalid authentication token' },
+          };
+        }
+      }
+
+      // Validate userId format
+      if (typeof verifiedUserId !== 'string' || verifiedUserId.length < 1 || verifiedUserId.length > 128) {
+        return {
+          status: 400,
+          jsonBody: { error: 'Invalid userId' },
+        };
+      }
+
       const client = getTableClient('scores');
       const scoreEntity = {
         partitionKey: date,
-        rowKey: userId,
-        displayName: displayName || 'Anonymous',
+        rowKey: verifiedUserId,
+        displayName: verifiedDisplayName,
         totalScore,
         rounds: JSON.stringify(rounds),
         completedAt: new Date().toISOString(),
+        isVerified,
       };
 
       await client.upsertEntity(scoreEntity);
 
       // Update user stats
-      await updateUserStats(userId, displayName, totalScore, date);
+      await updateUserStats(verifiedUserId, verifiedDisplayName, totalScore, date);
 
       return {
         status: 201,
@@ -95,13 +174,23 @@ app.http('getLeaderboard', {
   route: 'leaderboard/{date?}',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const date = request.params.date || new Date().toISOString().split('T')[0];
-    const limit = parseInt(request.query.get('limit') || '10', 10);
+
+    // Validate date format to prevent OData injection
+    if (!isValidDate(date)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid date format. Use YYYY-MM-DD.' },
+      };
+    }
+
+    const limitParam = request.query.get('limit') || '10';
+    const limit = Math.min(Math.max(parseInt(limitParam, 10) || 10, 1), 100);
 
     try {
       const client = getTableClient('scores');
       const scores: Array<{ userId: string; displayName: string; score: number }> = [];
 
-      // Query scores for this date
+      // Query scores for this date (date is now validated)
       const entities = client.listEntities({
         queryOptions: { filter: `PartitionKey eq '${date}'` },
       });

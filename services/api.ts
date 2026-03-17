@@ -46,10 +46,17 @@ export async function submitScore(
   userId: string,
   displayName: string,
   totalScore: number,
-  rounds: number[]
+  rounds: number[],
+  authToken?: string
 ): Promise<ApiResponse<{ success: boolean }>> {
+  const headers: Record<string, string> = {};
+  if (authToken) {
+    headers['Authorization'] = `Bearer ${authToken}`;
+  }
+
   return fetchApi('/scores', {
     method: 'POST',
+    headers,
     body: JSON.stringify({
       date,
       userId,

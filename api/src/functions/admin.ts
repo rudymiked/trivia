@@ -5,7 +5,7 @@ import { getTableClient, initializeTables, Location } from '../storage.js';
 // Seed locations from JSON data
 app.http('seedLocations', {
   methods: ['POST'],
-  authLevel: 'anonymous',
+  authLevel: 'function',
   route: 'manage/seed',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     try {
@@ -55,7 +55,7 @@ app.http('seedLocations', {
 // Get all locations (admin view)
 app.http('getLocations', {
   methods: ['GET'],
-  authLevel: 'anonymous',
+  authLevel: 'function',
   route: 'manage/locations',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     try {
@@ -98,7 +98,7 @@ app.http('getLocations', {
 // Add a single location
 app.http('addLocation', {
   methods: ['POST'],
-  authLevel: 'anonymous',
+  authLevel: 'function',
   route: 'manage/locations',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     try {
@@ -144,7 +144,7 @@ app.http('addLocation', {
 // Update a location
 app.http('updateLocation', {
   methods: ['PUT'],
-  authLevel: 'anonymous',
+  authLevel: 'function',
   route: 'manage/locations/{id}',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const id = request.params.id;
@@ -197,7 +197,7 @@ app.http('updateLocation', {
 // Delete a location
 app.http('deleteLocation', {
   methods: ['DELETE'],
-  authLevel: 'anonymous',
+  authLevel: 'function',
   route: 'manage/locations/{id}',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const id = request.params.id;
@@ -234,7 +234,7 @@ app.http('deleteLocation', {
 // Toggle location enabled status
 app.http('toggleLocation', {
   methods: ['PATCH'],
-  authLevel: 'anonymous',
+  authLevel: 'function',
   route: 'manage/locations/{id}/toggle',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const id = request.params.id;

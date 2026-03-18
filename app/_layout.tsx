@@ -1,6 +1,6 @@
 import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
@@ -43,6 +43,23 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+  const router = useRouter();
+  const segments = useSegments();
+
+  // On initial app load, ensure we start at the home screen
+  // This handles cases where the app resumes from a game screen
+  useEffect(() => {
+    // Only redirect if we're on a game route on initial mount
+    const isOnGameRoute = segments[0] === 'game';
+
+    // Check if this is a fresh app start (no intentional navigation yet)
+    // We use a small delay to let the navigation state settle
+    if (isOnGameRoute) {
+      // Use replace to avoid adding to history stack
+      router.replace('/');
+    }
+  }, []); // Empty deps - only run once on mount
+
   return (
     <AuthProvider>
       <ThemeProvider value={DarkTheme}>
@@ -55,6 +72,7 @@ function RootLayoutNav() {
         >
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="game" options={{ headerShown: false }} />
+          <Stack.Screen name="play-modes" options={{ headerShown: false }} />
           <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
         </Stack>
       </ThemeProvider>

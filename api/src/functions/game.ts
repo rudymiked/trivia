@@ -14,11 +14,24 @@ interface ScoreSubmission {
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_DISPLAY_NAME_LENGTH = 50;
 const MAX_SCORE = 25000; // 5 rounds * 5000 max per round
+// Allow alphanumeric, hyphens, underscores, and periods (covers Google IDs and other OAuth providers)
+const SAFE_USERID_REGEX = /^[a-zA-Z0-9._-]+$/;
 
 function isValidDate(date: string): boolean {
   if (!DATE_REGEX.test(date)) return false;
   const parsed = new Date(date);
   return !isNaN(parsed.getTime());
+}
+
+function isValidUserId(userId: string): boolean {
+  if (!userId || userId.length < 1 || userId.length > 128) return false;
+  // Only allow safe characters to prevent OData injection
+  return SAFE_USERID_REGEX.test(userId);
+}
+
+// Escape single quotes for OData filter strings (double single quotes)
+function escapeODataString(value: string): string {
+  return value.replace(/'/g, "''");
 }
 
 function sanitizeDisplayName(name: string | undefined): string {
@@ -130,7 +143,7 @@ app.http('submitScore', {
       }
 
       // Validate userId format
-      if (typeof verifiedUserId !== 'string' || verifiedUserId.length < 1 || verifiedUserId.length > 128) {
+      if (!isValidUserId(verifiedUserId)) {
         return {
           status: 400,
           jsonBody: { error: 'Invalid userId' },
@@ -294,7 +307,7 @@ app.http('getUserGames', {
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const userId = request.params.userId;
 
-    if (!userId || userId.length > 128) {
+    if (!isValidUserId(userId)) {
       return {
         status: 400,
         jsonBody: { error: 'Invalid userId' },
@@ -314,8 +327,9 @@ app.http('getUserGames', {
         puzzleType: string;
       }> = [];
 
+      // Use escaped userId in OData filter for extra safety
       const entities = client.listEntities({
-        queryOptions: { filter: `PartitionKey eq '${userId}'` },
+        queryOptions: { filter: `PartitionKey eq '${escapeODataString(userId)}'` },
       });
 
       for await (const entity of entities) {
@@ -353,7 +367,7 @@ app.http('getUserGame', {
     const userId = request.params.userId;
     const date = request.params.date;
 
-    if (!userId || userId.length > 128) {
+    if (!isValidUserId(userId)) {
       return {
         status: 400,
         jsonBody: { error: 'Invalid userId' },
@@ -403,7 +417,7 @@ app.http('getUserStats', {
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const userId = request.params.userId;
 
-    if (!userId || userId.length > 128) {
+    if (!isValidUserId(userId)) {
       return {
         status: 400,
         jsonBody: { error: 'Invalid userId' },

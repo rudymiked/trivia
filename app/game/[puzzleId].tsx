@@ -3,9 +3,10 @@ import Globe from '@/components/map';
 import { useGameStore } from '@/hooks/useGame';
 import { generateDailyPuzzle } from '@/services/puzzle';
 import { Coordinates, RoundResult } from '@/types/game';
+import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 
 type GamePhase = 'playing' | 'result' | 'complete';
 
@@ -22,6 +23,7 @@ export default function GameScreen() {
     startGame,
     submitGuess,
     nextRound,
+    resetGame,
   } = useGameStore();
 
   const [phase, setPhase] = useState<GamePhase>('playing');
@@ -31,6 +33,28 @@ export default function GameScreen() {
 
   // Check if puzzleId looks like a date (YYYY-MM-DD)
   const isDateBasedPuzzle = /^\d{4}-\d{2}-\d{2}$/.test(puzzleId || '');
+
+  const handleExitGame = useCallback(() => {
+    const confirmExit = () => {
+      resetGame();
+      router.replace('/');
+    };
+
+    if (Platform.OS === 'web') {
+      if (window.confirm('Are you sure you want to exit? Your progress will be lost.')) {
+        confirmExit();
+      }
+    } else {
+      Alert.alert(
+        'Exit Game',
+        'Are you sure you want to exit? Your progress will be lost.',
+        [
+          { text: 'Cancel', style: 'cancel' },
+          { text: 'Exit', style: 'destructive', onPress: confirmExit },
+        ]
+      );
+    }
+  }, [resetGame, router]);
 
   // Load puzzle on mount
   useEffect(() => {
@@ -90,14 +114,17 @@ export default function GameScreen() {
 
   return (
     <View style={styles.container}>
-      {/* Progress indicator */}
-      <View style={styles.progressContainer}>
+      {/* Header with exit button and progress */}
+      <View style={styles.headerContainer}>
+        <Pressable style={styles.exitButton} onPress={handleExitGame}>
+          <Ionicons name="close" size={24} color="#FFFFFF" />
+        </Pressable>
         <RoundProgress
           totalRounds={puzzle.rounds.length}
           currentRound={currentRound}
           results={results}
         />
-        <Text style={styles.scoreText}>Score: {totalScore}</Text>
+        <Text style={styles.scoreText}>{totalScore}</Text>
       </View>
 
       {/* Map */}
@@ -166,18 +193,29 @@ const styles = StyleSheet.create({
     marginTop: 16,
     fontSize: 16,
   },
-  progressContainer: {
+  headerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingTop: 8,
+    paddingTop: Platform.OS === 'ios' ? 50 : 16,
+    paddingBottom: 8,
     backgroundColor: '#1A202C',
+  },
+  exitButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   scoreText: {
     color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: '600',
+    fontSize: 18,
+    fontWeight: '700',
+    minWidth: 40,
+    textAlign: 'right',
   },
   mapContainer: {
     flex: 1,

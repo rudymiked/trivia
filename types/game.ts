@@ -59,12 +59,12 @@ export interface LeaderboardEntry {
 
 export type DifficultyMultiplier = {
   easy: 1;
-  medium: 2;
-  hard: 3;
+  medium: 1.5;
+  hard: 2;
 };
 
-export const DIFFICULTY_MULTIPLIERS: DifficultyMultiplier = {
+export const DIFFICULTY_MULTIPLIERS: Record<string, number> = {
   easy: 1,
-  medium: 2,
-  hard: 3,
+  medium: 1.5,
+  hard: 2,
 };

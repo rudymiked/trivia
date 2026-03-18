@@ -15,13 +15,21 @@ const difficultyColors = {
   hard: '#FF6B6B',
 };
 
-const categoryColors = {
+const categoryColors: Record<string, string> = {
   places: '#9F7AEA',
   questions: '#ED8936',
+  geography: '#48BB78',
 };
 
 export default function ClueCard({ round, roundNumber, totalRounds, showAnswer = false }: ClueCardProps) {
   const isTrivia = round.category === 'questions';
+  const isGeography = round.category === 'geography';
+
+  const getCategoryLabel = () => {
+    if (isTrivia) return 'TRIVIA';
+    if (isGeography) return 'GEOGRAPHY';
+    return 'PLACES';
+  };
 
   return (
     <View style={styles.container}>
@@ -30,9 +38,9 @@ export default function ClueCard({ round, roundNumber, totalRounds, showAnswer =
           Round {roundNumber}/{totalRounds}
         </Text>
         <View style={styles.badges}>
-          <View style={[styles.categoryBadge, { backgroundColor: categoryColors[round.category] }]}>
+          <View style={[styles.categoryBadge, { backgroundColor: categoryColors[round.category] || '#9F7AEA' }]}>
             <Text style={styles.badgeText}>
-              {isTrivia ? 'TRIVIA' : 'PLACES'}
+              {getCategoryLabel()}
             </Text>
           </View>
           <View style={[styles.difficultyBadge, { backgroundColor: difficultyColors[round.difficulty] }]}>
@@ -54,9 +62,10 @@ export default function ClueCard({ round, roundNumber, totalRounds, showAnswer =
 
       <Text style={styles.hintText}>
         {isTrivia && 'Tap where you think the answer is located'}
-        {!isTrivia && round.type === 'landmark' && 'Tap the location of this landmark'}
-        {!isTrivia && round.type === 'city' && 'Tap the location of this city'}
-        {!isTrivia && round.type === 'country' && `Tap anywhere in ${round.country}`}
+        {isGeography && 'Tap the location of this feature'}
+        {!isTrivia && !isGeography && round.type === 'landmark' && 'Tap the location of this landmark'}
+        {!isTrivia && !isGeography && round.type === 'city' && 'Tap the location of this city'}
+        {!isTrivia && !isGeography && round.type === 'country' && `Tap anywhere in ${round.country}`}
       </Text>
     </View>
   );

@@ -9,7 +9,7 @@ import { Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native
 
 export default function ResultsScreen() {
   const router = useRouter();
-  const { user, idToken } = useAuth();
+  const { user, getValidIdToken } = useAuth();
   const { puzzle, results, totalScore, resetGame } = useGameStore();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [copied, setCopied] = useState(false);
@@ -22,11 +22,12 @@ export default function ResultsScreen() {
         // Save locally
         await saveGameResult(puzzle.date, totalScore, currentProgress.lastPlayedDate);
 
-        // Sync to backend if logged in
+        // Sync to backend if logged in with valid token
         if (user) {
           try {
             const roundScores = results.map(r => Math.round(r.score));
-            await submitScore(puzzle.date, user.id, user.name, totalScore, roundScores, idToken || undefined);
+            const validToken = getValidIdToken();
+            await submitScore(puzzle.date, user.id, user.name, totalScore, roundScores, validToken || undefined);
             setSynced(true);
           } catch (error) {
             console.error('Failed to sync score:', error);
@@ -38,7 +39,7 @@ export default function ResultsScreen() {
     };
 
     saveAndLoadProgress();
-  }, [puzzle, totalScore, results, user, idToken]);
+  }, [puzzle, totalScore, results, user, getValidIdToken]);
 
   const getScoreEmoji = (score: number, multiplier: number) => {
     const baseScore = score / multiplier;
@@ -57,11 +58,13 @@ export default function ResultsScreen() {
       day: 'numeric',
     });
 
+    const appUrl = process.env.EXPO_PUBLIC_APP_URL || 'https://pinpoint.app';
+
     return `PinPoint ${date}
 
 ${emojiGrid} ${totalScore}/500
 
-Play at: pinpoint.app`;
+Play at: ${appUrl}`;
   };
 
   const handleShare = async () => {

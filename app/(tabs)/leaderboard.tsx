@@ -1,44 +1,50 @@
+import { useAuth } from '@/hooks/useAuth';
+import { fetchLeaderboard } from '@/services/api';
 import { getTodayDate } from '@/services/puzzle';
+import { LeaderboardEntry } from '@/types/game';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
-interface LeaderboardEntry {
-  rank: number;
-  displayName: string;
-  score: number;
+interface LeaderboardEntryWithUser extends LeaderboardEntry {
   isCurrentUser?: boolean;
 }
 
-// Mock leaderboard data - will be replaced with Azure backend
-const mockLeaderboard: LeaderboardEntry[] = [
-  { rank: 1, displayName: 'GeoMaster', score: 485 },
-  { rank: 2, displayName: 'WorldExplorer', score: 472 },
-  { rank: 3, displayName: 'MapPro', score: 468 },
-  { rank: 4, displayName: 'TravelGuru', score: 455 },
-  { rank: 5, displayName: 'Navigator', score: 442 },
-  { rank: 6, displayName: 'GlobeTrotter', score: 438 },
-  { rank: 7, displayName: 'AtlasFan', score: 425 },
-  { rank: 8, displayName: 'Cartographer', score: 412 },
-  { rank: 9, displayName: 'Wanderer', score: 398 },
-  { rank: 10, displayName: 'PathFinder', score: 385 },
-];
-
 export default function LeaderboardScreen() {
-  const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
+  const { user } = useAuth();
+  const [leaderboard, setLeaderboard] = useState<LeaderboardEntryWithUser[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const loadLeaderboard = async () => {
+    setIsLoading(true);
+    setError(null);
+
+    const today = getTodayDate();
+    const { data, error: apiError } = await fetchLeaderboard(today, 50);
+
+    if (apiError) {
+      setError(apiError);
+      setIsLoading(false);
+      return;
+    }
+
+    if (data) {
+      // Mark the current user's entry
+      const entries = data.leaderboard.map((entry) => ({
+        ...entry,
+        isCurrentUser: user?.id === entry.userId,
+      }));
+      setLeaderboard(entries);
+    }
+
+    setIsLoading(false);
+  };
 
   useEffect(() => {
-    // Simulate API call - will be replaced with Azure backend
-    const loadLeaderboard = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      setLeaderboard(mockLeaderboard);
-      setIsLoading(false);
-    };
-
     loadLeaderboard();
-  }, []);
+  }, [user?.id]);
 
-  const renderItem = ({ item }: { item: LeaderboardEntry }) => (
+  const renderItem = ({ item }: { item: LeaderboardEntryWithUser }) => (
     <View
       style={[
         styles.row,
@@ -67,6 +73,17 @@ export default function LeaderboardScreen() {
     );
   }
 
+  if (error) {
+    return (
+      <View style={styles.loadingContainer}>
+        <Text style={styles.errorText}>Failed to load leaderboard</Text>
+        <Pressable style={styles.retryButton} onPress={loadLeaderboard}>
+          <Text style={styles.retryButtonText}>Retry</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -86,16 +103,23 @@ export default function LeaderboardScreen() {
         <Text style={styles.headerScore}>Score</Text>
       </View>
 
-      <FlatList
-        data={leaderboard}
-        keyExtractor={(item) => String(item.rank)}
-        renderItem={renderItem}
-        contentContainerStyle={styles.list}
-      />
+      {leaderboard.length === 0 ? (
+        <View style={styles.emptyContainer}>
+          <Text style={styles.emptyText}>No scores yet today</Text>
+          <Text style={styles.emptySubtext}>Be the first to play!</Text>
+        </View>
+      ) : (
+        <FlatList
+          data={leaderboard}
+          keyExtractor={(item) => item.userId}
+          renderItem={renderItem}
+          contentContainerStyle={styles.list}
+        />
+      )}
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          Sign in to appear on the leaderboard
+          {user ? `Playing as ${user.name}` : 'Sign in to appear on the leaderboard'}
         </Text>
       </View>
     </View>
@@ -112,6 +136,38 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#1A202C',
+  },
+  errorText: {
+    color: '#FF6B6B',
+    fontSize: 16,
+    marginBottom: 16,
+  },
+  retryButton: {
+    backgroundColor: '#4ECDC4',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+  },
+  retryButtonText: {
+    color: '#1A202C',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 40,
+  },
+  emptyText: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  emptySubtext: {
+    color: '#718096',
+    fontSize: 14,
+    marginTop: 8,
   },
   header: {
     padding: 20,

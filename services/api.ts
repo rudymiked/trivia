@@ -40,6 +40,12 @@ export async function fetchPuzzle(date?: string): Promise<ApiResponse<Puzzle>> {
   return fetchApi<Puzzle>(endpoint);
 }
 
+// Get personalized puzzle for Play Modes (excludes locations user has seen)
+export async function fetchPersonalizedPuzzle(userId?: string): Promise<ApiResponse<Puzzle>> {
+  const params = userId ? `?userId=${encodeURIComponent(userId)}` : '';
+  return fetchApi<Puzzle>(`/puzzle/practice${params}`);
+}
+
 // Submit score to API
 export async function submitScore(
   date: string,
@@ -47,7 +53,8 @@ export async function submitScore(
   displayName: string,
   totalScore: number,
   rounds: number[],
-  authToken?: string
+  authToken?: string,
+  locationIds?: string[]
 ): Promise<ApiResponse<{ success: boolean }>> {
   const headers: Record<string, string> = {};
   if (authToken) {
@@ -63,6 +70,7 @@ export async function submitScore(
       displayName,
       totalScore,
       rounds,
+      locationIds,
     }),
   });
 }

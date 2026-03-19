@@ -43,7 +43,7 @@ export function getTableClient(tableName: string): TableClient {
 
 // Initialize tables
 export async function initializeTables(): Promise<void> {
-  const tables = ['puzzles', 'scores', 'users', 'locations', 'games'];
+  const tables = ['puzzles', 'scores', 'users', 'locations', 'games', 'seenLocations'];
 
   for (const tableName of tables) {
     const client = getTableClient(tableName);
@@ -115,6 +115,7 @@ export async function generatePuzzleForDate(date: string): Promise<{
   date: string;
   rounds: Array<{
     id: number;
+    locationId: string; // Actual location ID for tracking
     clue: string;
     category: string;
     type: string;
@@ -166,6 +167,7 @@ export async function generatePuzzleForDate(date: string): Promise<{
 
   const rounds = selected.map((loc, index) => ({
     id: index + 1,
+    locationId: loc.id, // Include actual location ID
     clue: loc.clue,
     category: loc.category,
     type: loc.type,
@@ -177,4 +179,146 @@ export async function generatePuzzleForDate(date: string): Promise<{
   }));
 
   return { id: date, date, rounds };
+}
+
+// Track locations that a user has seen
+// Table structure: PartitionKey = userId, RowKey = locationId
+export async function trackSeenLocations(userId: string, locationIds: string[]): Promise<void> {
+  const client = getTableClient('seenLocations');
+  const seenAt = new Date().toISOString();
+
+  // Batch insert seen locations
+  for (const locationId of locationIds) {
+    try {
+      await client.upsertEntity({
+        partitionKey: userId,
+        rowKey: locationId,
+        seenAt,
+      });
+    } catch (error) {
+      // Ignore individual insert errors, continue with others
+      console.error(`Failed to track location ${locationId} for user ${userId}:`, error);
+    }
+  }
+}
+
+// Get all location IDs a user has seen
+export async function getSeenLocationIds(userId: string): Promise<Set<string>> {
+  const client = getTableClient('seenLocations');
+  const seenIds = new Set<string>();
+
+  try {
+    const entities = client.listEntities({
+      queryOptions: { filter: `PartitionKey eq '${userId}'` },
+    });
+
+    for await (const entity of entities) {
+      seenIds.add(entity.rowKey as string);
+    }
+  } catch (error) {
+    console.error(`Failed to get seen locations for user ${userId}:`, error);
+  }
+
+  return seenIds;
+}
+
+// Generate personalized puzzle excluding seen locations
+export async function generatePersonalizedPuzzleForDate(
+  date: string,
+  userId?: string
+): Promise<{
+  id: string;
+  date: string;
+  rounds: Array<{
+    id: number;
+    locationId: string;
+    clue: string;
+    category: string;
+    type: string;
+    difficulty: string;
+    target: { lat: number; lng: number };
+    country: string;
+    answer?: string;
+    multiplier: number;
+  }>;
+}> {
+  let locations = await getLocations();
+
+  // If userId provided, exclude locations they've seen
+  if (userId) {
+    const seenIds = await getSeenLocationIds(userId);
+    if (seenIds.size > 0) {
+      const unseenLocations = locations.filter((loc) => !seenIds.has(loc.id));
+      // Only use unseen if we have enough, otherwise fall back to all
+      if (unseenLocations.length >= 5) {
+        locations = unseenLocations;
+      }
+      // If not enough unseen locations, use all locations (they've seen everything)
+    }
+  }
+
+  if (locations.length < 5) {
+    throw new Error('Not enough locations to generate puzzle');
+  }
+
+  // Create seed from date (and optionally userId for variety)
+  const dateParts = date.split('-').map(Number);
+  let seed = dateParts[0] * 10000 + dateParts[1] * 100 + dateParts[2];
+
+  // Add userId hash to seed for personalized randomization
+  if (userId) {
+    let userHash = 0;
+    for (let i = 0; i < userId.length; i++) {
+      userHash = (userHash * 31 + userId.charCodeAt(i)) & 0x7fffffff;
+    }
+    seed = (seed + userHash) & 0x7fffffff;
+  }
+
+  const random = seededRandom(seed);
+
+  // Shuffle locations
+  const shuffled = [...locations].sort(() => random() - 0.5);
+
+  // Pick 5 locations with variety
+  const selected: Location[] = [];
+  const usedCountries = new Set<string>();
+
+  for (const loc of shuffled) {
+    if (selected.length >= 5) break;
+    // Try to avoid repeating countries
+    if (usedCountries.has(loc.country) && selected.length < 4) continue;
+    selected.push(loc);
+    usedCountries.add(loc.country);
+  }
+
+  // Fill remaining if needed
+  while (selected.length < 5) {
+    const remaining = shuffled.find((l) => !selected.includes(l));
+    if (remaining) selected.push(remaining);
+    else break;
+  }
+
+  const difficultyMultiplier: Record<string, number> = {
+    easy: 1,
+    medium: 1.5,
+    hard: 2,
+  };
+
+  const rounds = selected.map((loc, index) => ({
+    id: index + 1,
+    locationId: loc.id, // Include actual location ID
+    clue: loc.clue,
+    category: loc.category,
+    type: loc.type,
+    difficulty: loc.difficulty,
+    target: loc.target,
+    country: loc.country,
+    answer: loc.answer,
+    multiplier: difficultyMultiplier[loc.difficulty] || 1,
+  }));
+
+  // Generate a unique puzzle ID for personalized puzzles
+  const puzzleId = userId ? `${date}-${userId.substring(0, 8)}` : date;
+
+  return { id: puzzleId, date, rounds };
 }

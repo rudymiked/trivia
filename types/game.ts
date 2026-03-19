@@ -7,6 +7,7 @@ export type Category = 'places' | 'questions' | 'geography';
 
 export interface Round {
   id: number;
+  locationId?: string; // Actual location ID for tracking seen locations
   clue: string;
   category: Category;
   type: 'landmark' | 'city' | 'country' | 'region' | 'trivia' | 'mountain' | 'river' | 'lake' | 'desert' | 'island' | 'ocean';

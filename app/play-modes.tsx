@@ -1,8 +1,10 @@
+import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
+import { fetchPersonalizedPuzzle } from '@/services/api';
 import { generatePuzzleByCategory, getCategories } from '@/services/puzzle';
 import { Href, useRouter } from 'expo-router';
-import React from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const CATEGORY_DISPLAY_NAMES: Record<string, string> = {
   places: 'Famous Places',
@@ -24,20 +26,57 @@ const CATEGORY_ICONS: Record<string, string> = {
 
 export default function PlayModesScreen() {
   const router = useRouter();
+  const { user } = useAuth();
   const { startGame } = useGameStore();
   const categories = getCategories();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSelectMode = (category: string) => {
-    const puzzle = generatePuzzleByCategory(category);
-    startGame(puzzle);
-    router.push(`/game/${puzzle.id}` as Href);
+  const handleSelectMode = async (category: string) => {
+    setIsLoading(true);
+
+    try {
+      // For logged-in users with "all" or "random", use server personalization
+      if (user && (category === 'all' || category === 'random')) {
+        const response = await fetchPersonalizedPuzzle(user.id);
+        if (response.data) {
+          startGame(response.data);
+          router.push(`/game/${response.data.id}` as Href);
+          return;
+        }
+        // Fall through to local generation if server fails
+      }
+
+      // Local generation for anonymous users or category-specific modes
+      const puzzle = generatePuzzleByCategory(category);
+      startGame(puzzle);
+      router.push(`/game/${puzzle.id}` as Href);
+    } catch (error) {
+      console.error('Error generating puzzle:', error);
+      // Fallback to local generation
+      const puzzle = generatePuzzleByCategory(category);
+      startGame(puzzle);
+      router.push(`/game/${puzzle.id}` as Href);
+    } finally {
+      setIsLoading(false);
+    }
   };
+
+  if (isLoading) {
+    return (
+      <View style={[styles.container, styles.loadingContainer]}>
+        <ActivityIndicator size="large" color="#4ECDC4" />
+        <Text style={styles.loadingText}>Generating puzzle...</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Play Modes</Text>
-        <Text style={styles.subtitle}>Choose a category to practice</Text>
+        <Text style={styles.subtitle}>
+          {user ? 'Personalized puzzles just for you' : 'Choose a category to practice'}
+        </Text>
       </View>
 
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.content}>
@@ -100,6 +139,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1A202C',
+  },
+  loadingContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingText: {
+    color: '#FFFFFF',
+    marginTop: 16,
+    fontSize: 16,
   },
   header: {
     paddingHorizontal: 20,

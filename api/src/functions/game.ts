@@ -1,6 +1,6 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
 import { extractBearerToken, verifyGoogleToken } from '../auth.js';
-import { generatePuzzleForDate, getTableClient } from '../storage.js';
+import { generatePersonalizedPuzzleForDate, generatePuzzleForDate, getTableClient, trackSeenLocations } from '../storage.js';
 
 interface ScoreSubmission {
   date: string;
@@ -8,6 +8,7 @@ interface ScoreSubmission {
   displayName: string;
   totalScore: number;
   rounds: number[];
+  locationIds?: string[]; // Optional: track which locations were played
 }
 
 // Validation helpers
@@ -62,6 +63,7 @@ app.http('getPuzzle', {
 
     try {
       // Generate puzzle dynamically from locations table
+      // Daily puzzles are the same for everyone (no userId personalization)
       const puzzle = await generatePuzzleForDate(date);
 
       return {
@@ -69,6 +71,52 @@ app.http('getPuzzle', {
       };
     } catch (error: any) {
       context.error('Error generating puzzle:', error);
+
+      if (error.message === 'Not enough locations to generate puzzle') {
+        return {
+          status: 503,
+          jsonBody: { error: 'Not enough locations in database. Run seed first.' },
+        };
+      }
+
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to generate puzzle' },
+      };
+    }
+  },
+});
+
+// Get personalized puzzle for Play Modes - excludes locations the user has seen
+app.http('getPersonalizedPuzzle', {
+  methods: ['GET'],
+  authLevel: 'anonymous',
+  route: 'puzzle/practice',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.query.get('userId');
+    const category = request.query.get('category'); // Optional: filter by category
+
+    // Validate userId if provided
+    if (userId && !isValidUserId(userId)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    try {
+      // Generate a unique date-like seed for this practice puzzle
+      const now = new Date();
+      const seed = `${now.toISOString()}-${Math.random().toString(36).substring(7)}`;
+
+      // Generate personalized puzzle excluding seen locations
+      const puzzle = await generatePersonalizedPuzzleForDate(seed, userId || undefined);
+
+      return {
+        jsonBody: puzzle,
+      };
+    } catch (error: any) {
+      context.error('Error generating personalized puzzle:', error);
 
       if (error.message === 'Not enough locations to generate puzzle') {
         return {
@@ -178,6 +226,11 @@ app.http('submitScore', {
 
       // Update user stats
       await updateUserStats(verifiedUserId, verifiedDisplayName, totalScore, date);
+
+      // Track seen locations for personalized puzzles (if locationIds provided)
+      if (body.locationIds && body.locationIds.length > 0 && isVerified) {
+        await trackSeenLocations(verifiedUserId, body.locationIds);
+      }
 
       return {
         status: 201,

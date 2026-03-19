@@ -35,7 +35,19 @@ export default function ResultsScreen() {
           try {
             const roundScores = results.map(r => Math.round(r.score));
             const validToken = getValidIdToken();
-            await submitScore(puzzle.date, user.id, user.name, totalScore, roundScores, validToken || undefined);
+            // Extract location IDs from puzzle rounds for tracking
+            const locationIds = puzzle.rounds
+              .map(r => r.locationId)
+              .filter((id): id is string => id !== undefined);
+            await submitScore(
+              puzzle.date,
+              user.id,
+              user.name,
+              totalScore,
+              roundScores,
+              validToken || undefined,
+              locationIds.length > 0 ? locationIds : undefined
+            );
             setSynced(true);
           } catch (error) {
             console.error('Failed to sync score:', error);

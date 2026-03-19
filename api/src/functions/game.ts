@@ -367,6 +367,31 @@ app.http('getUserGames', {
       };
     }
 
+    // Verify authentication - users can only access their own data
+    const authHeader = request.headers.get('authorization');
+    const token = extractBearerToken(authHeader);
+    if (!token) {
+      return {
+        status: 401,
+        jsonBody: { error: 'Authentication required' },
+      };
+    }
+
+    const verifiedUser = await verifyGoogleToken(token);
+    if (!verifiedUser) {
+      return {
+        status: 401,
+        jsonBody: { error: 'Invalid authentication token' },
+      };
+    }
+
+    if (verifiedUser.userId !== userId) {
+      return {
+        status: 403,
+        jsonBody: { error: 'Access denied' },
+      };
+    }
+
     const limitParam = request.query.get('limit') || '30';
     const limit = Math.min(Math.max(parseInt(limitParam, 10) || 30, 1), 100);
 
@@ -434,6 +459,31 @@ app.http('getUserGame', {
       };
     }
 
+    // Verify authentication - users can only access their own data
+    const authHeader = request.headers.get('authorization');
+    const token = extractBearerToken(authHeader);
+    if (!token) {
+      return {
+        status: 401,
+        jsonBody: { error: 'Authentication required' },
+      };
+    }
+
+    const verifiedUser = await verifyGoogleToken(token);
+    if (!verifiedUser) {
+      return {
+        status: 401,
+        jsonBody: { error: 'Invalid authentication token' },
+      };
+    }
+
+    if (verifiedUser.userId !== userId) {
+      return {
+        status: 403,
+        jsonBody: { error: 'Access denied' },
+      };
+    }
+
     try {
       const client = getTableClient('games');
       const entity = await client.getEntity(userId, date);
@@ -474,6 +524,31 @@ app.http('getUserStats', {
       return {
         status: 400,
         jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    // Verify authentication - users can only access their own data
+    const authHeader = request.headers.get('authorization');
+    const token = extractBearerToken(authHeader);
+    if (!token) {
+      return {
+        status: 401,
+        jsonBody: { error: 'Authentication required' },
+      };
+    }
+
+    const verifiedUser = await verifyGoogleToken(token);
+    if (!verifiedUser) {
+      return {
+        status: 401,
+        jsonBody: { error: 'Invalid authentication token' },
+      };
+    }
+
+    if (verifiedUser.userId !== userId) {
+      return {
+        status: 403,
+        jsonBody: { error: 'Access denied' },
       };
     }
 

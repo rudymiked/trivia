@@ -25,7 +25,7 @@ interface ServerGameResult {
 export default function GameScreen() {
   const router = useRouter();
   const { puzzleId } = useLocalSearchParams<{ puzzleId: string }>();
-  const { user } = useAuth();
+  const { user, getValidIdToken } = useAuth();
 
   const {
     puzzle,
@@ -90,16 +90,19 @@ export default function GameScreen() {
       if (isDateBasedPuzzle) {
         // Server-side check for logged-in users
         if (user) {
-          try {
-            const response = await checkUserGame(user.id, puzzleId!);
-            if (response.data?.completed) {
-              setServerCompleted(response.data);
-              setIsLoading(false);
-              return;
+          const token = getValidIdToken();
+          if (token) {
+            try {
+              const response = await checkUserGame(user.id, puzzleId!, token);
+              if (response.data?.completed) {
+                setServerCompleted(response.data);
+                setIsLoading(false);
+                return;
+              }
+            } catch (error) {
+              console.error('Failed to check server game status:', error);
+              // Fall through to local check
             }
-          } catch (error) {
-            console.error('Failed to check server game status:', error);
-            // Fall through to local check
           }
         }
 
@@ -118,7 +121,7 @@ export default function GameScreen() {
     };
 
     loadPuzzle();
-  }, [puzzleId, puzzle?.id, isDateBasedPuzzle, user]);
+  }, [puzzleId, puzzle?.id, isDateBasedPuzzle, user, getValidIdToken]);
 
   const handleLocationSelect = useCallback((coords: Coordinates) => {
     if (phase !== 'playing') return;

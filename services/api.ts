@@ -128,22 +128,37 @@ export interface UserGameCheck {
 // Get user's game history
 export async function fetchUserGames(
   userId: string,
+  authToken: string,
   limit = 30
 ): Promise<ApiResponse<{ userId: string; games: UserGame[]; total: number }>> {
-  return fetchApi(`/users/${encodeURIComponent(userId)}/games?limit=${limit}`);
+  return fetchApi(`/users/${encodeURIComponent(userId)}/games?limit=${limit}`, {
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
 }
 
 // Check if user completed a specific date's puzzle
 export async function checkUserGame(
   userId: string,
-  date: string
+  date: string,
+  authToken: string
 ): Promise<ApiResponse<UserGameCheck>> {
-  return fetchApi(`/users/${encodeURIComponent(userId)}/games/${date}`);
+  return fetchApi(`/users/${encodeURIComponent(userId)}/games/${date}`, {
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
 }
 
 // Get user stats
 export async function fetchUserStats(
-  userId: string
+  userId: string,
+  authToken: string
 ): Promise<ApiResponse<UserStats>> {
-  return fetchApi(`/users/${encodeURIComponent(userId)}/stats`);
+  return fetchApi(`/users/${encodeURIComponent(userId)}/stats`, {
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
 }

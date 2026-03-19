@@ -83,14 +83,9 @@ export default function HomeScreen() {
             {String(countdown.minutes).padStart(2, '0')}:
             {String(countdown.seconds).padStart(2, '0')}
           </Text>
-          <View style={styles.buttonRow}>
-            <Pressable style={styles.replayButton} onPress={handlePlay}>
-              <Text style={styles.replayButtonText}>Play Again</Text>
-            </Pressable>
-            <Pressable style={styles.replayButton} onPress={handlePlayModes}>
-              <Text style={styles.replayButtonText}>Play Modes</Text>
-            </Pressable>
-          </View>
+          <Pressable style={styles.modesButton} onPress={handlePlayModes}>
+            <Text style={styles.modesButtonText}>Play Modes</Text>
+          </Pressable>
         </View>
       ) : (
         <View style={styles.playContainer}>

@@ -1,5 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
+import { RoundResult } from '@/types/game';
 
 const STORAGE_KEYS = {
   LAST_PLAYED_DATE: 'pinpoint_last_played_date',
@@ -7,7 +8,15 @@ const STORAGE_KEYS = {
   TOTAL_SCORE: 'pinpoint_total_score',
   GAMES_PLAYED: 'pinpoint_games_played',
   HIGH_SCORE: 'pinpoint_high_score',
+  DAILY_RESULTS: 'pinpoint_daily_results', // Stores results keyed by date
 } as const;
+
+export interface DailyResult {
+  date: string;
+  totalScore: number;
+  results: RoundResult[];
+  completedAt: string;
+}
 
 export interface UserProgress {
   lastPlayedDate: string | null;
@@ -88,4 +97,57 @@ export async function saveGameResult(
     storage.setItem(STORAGE_KEYS.GAMES_PLAYED, String(progress.gamesPlayed + 1)),
     storage.setItem(STORAGE_KEYS.HIGH_SCORE, String(newHighScore)),
   ]);
+}
+
+// Save daily puzzle results for later retrieval
+export async function saveDailyResult(
+  date: string,
+  totalScore: number,
+  results: RoundResult[]
+): Promise<void> {
+  try {
+    const existingData = await storage.getItem(STORAGE_KEYS.DAILY_RESULTS);
+    const dailyResults: Record<string, DailyResult> = existingData
+      ? JSON.parse(existingData)
+      : {};
+
+    dailyResults[date] = {
+      date,
+      totalScore,
+      results,
+      completedAt: new Date().toISOString(),
+    };
+
+    // Keep only last 30 days of results to avoid storage bloat
+    const dates = Object.keys(dailyResults).sort().reverse();
+    if (dates.length > 30) {
+      for (const oldDate of dates.slice(30)) {
+        delete dailyResults[oldDate];
+      }
+    }
+
+    await storage.setItem(STORAGE_KEYS.DAILY_RESULTS, JSON.stringify(dailyResults));
+  } catch (error) {
+    console.error('Error saving daily result:', error);
+  }
+}
+
+// Get daily result for a specific date
+export async function getDailyResult(date: string): Promise<DailyResult | null> {
+  try {
+    const existingData = await storage.getItem(STORAGE_KEYS.DAILY_RESULTS);
+    if (!existingData) return null;
+
+    const dailyResults: Record<string, DailyResult> = JSON.parse(existingData);
+    return dailyResults[date] || null;
+  } catch (error) {
+    console.error('Error getting daily result:', error);
+    return null;
+  }
+}
+
+// Check if user has completed a specific date's puzzle
+export async function hasCompletedPuzzle(date: string): Promise<boolean> {
+  const result = await getDailyResult(date);
+  return result !== null;
 }

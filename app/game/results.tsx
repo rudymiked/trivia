@@ -1,7 +1,8 @@
 import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
 import { submitScore } from '@/services/api';
-import { getUserProgress, saveGameResult, type UserProgress } from '@/services/storage';
+import { getTodayDate } from '@/services/puzzle';
+import { getUserProgress, saveDailyResult, saveGameResult, type UserProgress } from '@/services/storage';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
@@ -15,15 +16,22 @@ export default function ResultsScreen() {
   const [copied, setCopied] = useState(false);
   const [synced, setSynced] = useState(false);
 
+  // Check if this is a daily puzzle (date-based ID)
+  const isDailyPuzzle = puzzle && /^\d{4}-\d{2}-\d{2}$/.test(puzzle.id);
+
   useEffect(() => {
     const saveAndLoadProgress = async () => {
       const currentProgress = await getUserProgress();
       if (puzzle) {
-        // Save locally
-        await saveGameResult(puzzle.date, totalScore, currentProgress.lastPlayedDate);
+        // Only save to progress/stats for daily puzzles
+        if (isDailyPuzzle) {
+          await saveGameResult(puzzle.date, totalScore, currentProgress.lastPlayedDate);
+          // Save the full results for this daily puzzle
+          await saveDailyResult(puzzle.date, totalScore, results);
+        }
 
-        // Sync to backend if logged in with valid token
-        if (user) {
+        // Sync to backend if logged in with valid token (daily puzzles only)
+        if (user && isDailyPuzzle) {
           try {
             const roundScores = results.map(r => Math.round(r.score));
             const validToken = getValidIdToken();
@@ -39,7 +47,7 @@ export default function ResultsScreen() {
     };
 
     saveAndLoadProgress();
-  }, [puzzle, totalScore, results, user, getValidIdToken]);
+  }, [puzzle, totalScore, results, user, isDailyPuzzle, getValidIdToken]);
 
   const getScoreEmoji = (score: number, multiplier: number) => {
     const baseScore = score / multiplier;

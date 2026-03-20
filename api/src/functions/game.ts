@@ -253,12 +253,13 @@ app.http('getLeaderboard', {
   route: 'leaderboard/{date?}',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const date = request.params.date || new Date().toISOString().split('T')[0];
+    const isAllTime = date === 'alltime';
 
     // Validate date format to prevent OData injection
-    if (!isValidDate(date)) {
+    if (!isAllTime && !isValidDate(date)) {
       return {
         status: 400,
-        jsonBody: { error: 'Invalid date format. Use YYYY-MM-DD.' },
+        jsonBody: { error: 'Invalid date format. Use YYYY-MM-DD or alltime.' },
       };
     }
 
@@ -267,32 +268,52 @@ app.http('getLeaderboard', {
 
     try {
       const client = getTableClient('scores');
-      const scores: Array<{ userId: string; displayName: string; score: number }> = [];
+      const scoresMap = new Map<string, { userId: string; displayName: string; totalScore: number }>();
 
-      // Query scores for this date (date is now validated)
-      const entities = client.listEntities({
-        queryOptions: { filter: `PartitionKey eq '${date}'` },
-      });
+      if (isAllTime) {
+        // Query all scores and aggregate by userId
+        const entities = client.listEntities();
 
-      for await (const entity of entities) {
-        scores.push({
-          userId: entity.rowKey as string,
-          displayName: entity.displayName as string,
-          score: entity.totalScore as number,
+        for await (const entity of entities) {
+          const userId = entity.rowKey as string;
+          const displayName = entity.displayName as string;
+          const score = entity.totalScore as number;
+
+          const existing = scoresMap.get(userId);
+          if (existing) {
+            existing.totalScore += score;
+          } else {
+            scoresMap.set(userId, { userId, displayName, totalScore: score });
+          }
+        }
+      } else {
+        // Query scores for specific date
+        const entities = client.listEntities({
+          queryOptions: { filter: `PartitionKey eq '${date}'` },
         });
+
+        for await (const entity of entities) {
+          const userId = entity.rowKey as string;
+          scoresMap.set(userId, {
+            userId,
+            displayName: entity.displayName as string,
+            totalScore: entity.totalScore as number,
+          });
+        }
       }
 
       // Sort by score descending and assign ranks
-      scores.sort((a, b) => b.score - a.score);
+      const scores = Array.from(scoresMap.values());
+      scores.sort((a, b) => b.totalScore - a.totalScore);
       const leaderboard = scores.slice(0, limit).map((s, i) => ({
         rank: i + 1,
         userId: s.userId,
         displayName: s.displayName,
-        score: s.score,
+        score: s.totalScore,
       }));
 
       return {
-        jsonBody: { date, leaderboard },
+        jsonBody: { date: isAllTime ? 'alltime' : date, leaderboard },
       };
     } catch (error) {
       context.error('Error fetching leaderboard:', error);

@@ -1,5 +1,5 @@
 import { useAuth } from '@/hooks/useAuth';
-import { fetchLeaderboard } from '@/services/api';
+import { fetchAllTimeLeaderboard, fetchLeaderboard } from '@/services/api';
 import { getTodayDate } from '@/services/puzzle';
 import { LeaderboardEntry } from '@/types/game';
 import React, { useEffect, useState } from 'react';
@@ -9,39 +9,60 @@ interface LeaderboardEntryWithUser extends LeaderboardEntry {
   isCurrentUser?: boolean;
 }
 
+type LeaderboardTab = 'today' | 'alltime';
+
 export default function LeaderboardScreen() {
   const { user } = useAuth();
   const [leaderboard, setLeaderboard] = useState<LeaderboardEntryWithUser[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<LeaderboardTab>('today');
 
-  const loadLeaderboard = async () => {
+  const loadLeaderboard = async (tab: LeaderboardTab) => {
     setIsLoading(true);
     setError(null);
 
-    const today = getTodayDate();
-    const { data, error: apiError } = await fetchLeaderboard(today, 50);
+    try {
+      let data;
+      let apiError;
 
-    if (apiError) {
-      setError(apiError);
+      if (tab === 'today') {
+        const today = getTodayDate();
+        const result = await fetchLeaderboard(today, 50);
+        data = result.data;
+        apiError = result.error;
+      } else {
+        const result = await fetchAllTimeLeaderboard(50);
+        data = result.data;
+        apiError = result.error;
+      }
+
+      if (apiError) {
+        setError(apiError);
+        setIsLoading(false);
+        return;
+      }
+
+      if (data) {
+        // Mark the current user's entry
+        const entries = data.leaderboard.map((entry) => ({
+          ...entry,
+          isCurrentUser: user?.id === entry.userId,
+        }));
+        setLeaderboard(entries);
+      }
+    } finally {
       setIsLoading(false);
-      return;
     }
+  };
 
-    if (data) {
-      // Mark the current user's entry
-      const entries = data.leaderboard.map((entry) => ({
-        ...entry,
-        isCurrentUser: user?.id === entry.userId,
-      }));
-      setLeaderboard(entries);
-    }
-
-    setIsLoading(false);
+  const handleTabChange = (tab: LeaderboardTab) => {
+    setActiveTab(tab);
+    loadLeaderboard(tab);
   };
 
   useEffect(() => {
-    loadLeaderboard();
+    loadLeaderboard(activeTab);
   }, [user?.id]);
 
   const renderItem = ({ item }: { item: LeaderboardEntryWithUser }) => (
@@ -77,24 +98,53 @@ export default function LeaderboardScreen() {
     return (
       <View style={styles.loadingContainer}>
         <Text style={styles.errorText}>Failed to load leaderboard</Text>
-        <Pressable style={styles.retryButton} onPress={loadLeaderboard}>
+        <Pressable style={styles.retryButton} onPress={() => loadLeaderboard(activeTab)}>
           <Text style={styles.retryButtonText}>Retry</Text>
         </Pressable>
       </View>
     );
   }
 
+  const titleText = activeTab === 'today' ? "Today's Leaderboard" : 'All Time Leaderboard';
+  const subtitleText = activeTab === 'today' 
+    ? new Date(getTodayDate()).toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+      })
+    : 'All time high scores';
+  const emptyText = activeTab === 'today'
+    ? 'No scores yet today'
+    : 'No scores recorded';
+  const emptySubtext = activeTab === 'today'
+    ? 'Be the first to play!'
+    : 'Play your first game to appear!';
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Today's Leaderboard</Text>
-        <Text style={styles.date}>
-          {new Date(getTodayDate()).toLocaleDateString('en-US', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric',
-          })}
-        </Text>
+        <Text style={styles.title}>{titleText}</Text>
+        <Text style={styles.date}>{subtitleText}</Text>
+      </View>
+
+      {/* Tab buttons */}
+      <View style={styles.tabs}>
+        <Pressable 
+          style={[styles.tab, activeTab === 'today' && styles.activeTab]}
+          onPress={() => handleTabChange('today')}
+        >
+          <Text style={[styles.tabText, activeTab === 'today' && styles.activeTabText]}>
+            Today
+          </Text>
+        </Pressable>
+        <Pressable 
+          style={[styles.tab, activeTab === 'alltime' && styles.activeTab]}
+          onPress={() => handleTabChange('alltime')}
+        >
+          <Text style={[styles.tabText, activeTab === 'alltime' && styles.activeTabText]}>
+            All Time
+          </Text>
+        </Pressable>
       </View>
 
       <View style={styles.tableHeader}>
@@ -105,8 +155,8 @@ export default function LeaderboardScreen() {
 
       {leaderboard.length === 0 ? (
         <View style={styles.emptyContainer}>
-          <Text style={styles.emptyText}>No scores yet today</Text>
-          <Text style={styles.emptySubtext}>Be the first to play!</Text>
+          <Text style={styles.emptyText}>{emptyText}</Text>
+          <Text style={styles.emptySubtext}>{emptySubtext}</Text>
         </View>
       ) : (
         <FlatList
@@ -184,6 +234,31 @@ const styles = StyleSheet.create({
     color: '#718096',
     fontSize: 14,
     marginTop: 4,
+  },
+  tabs: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderBottomColor: '#2D3748',
+    backgroundColor: '#0F1419',
+  },
+  tab: {
+    flex: 1,
+    paddingVertical: 16,
+    alignItems: 'center',
+    borderBottomWidth: 3,
+    borderBottomColor: 'transparent',
+  },
+  activeTab: {
+    borderBottomColor: '#4ECDC4',
+  },
+  tabText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#718096',
+    textTransform: 'uppercase',
+  },
+  activeTabText: {
+    color: '#4ECDC4',
   },
   tableHeader: {
     flexDirection: 'row',

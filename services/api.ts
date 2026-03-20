@@ -86,6 +86,13 @@ export async function fetchLeaderboard(
   return fetchApi(endpoint);
 }
 
+// Get all-time leaderboard from API
+export async function fetchAllTimeLeaderboard(
+  limit = 10
+): Promise<ApiResponse<{ date: string; leaderboard: LeaderboardEntry[] }>> {
+  return fetchApi(`/leaderboard/alltime?limit=${limit}`);
+}
+
 // Check if API is available
 export async function checkApiHealth(): Promise<boolean> {
   try {

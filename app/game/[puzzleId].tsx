@@ -3,7 +3,7 @@ import Globe from '@/components/map';
 import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
 import { checkUserGame } from '@/services/api';
-import { generateDailyPuzzle } from '@/services/puzzle';
+import { generateDailyPuzzle, generateDailyPuzzleSync } from '@/services/puzzle';
 import { getDailyResult, type DailyResult } from '@/services/storage';
 import { Coordinates, RoundResult } from '@/types/game';
 import { Ionicons } from '@expo/vector-icons';
@@ -80,48 +80,72 @@ export default function GameScreen() {
   // Load puzzle on mount
   useEffect(() => {
     const loadPuzzle = async () => {
-      // If puzzle is already loaded with matching ID (from play-modes), skip loading
-      if (puzzle && puzzle.id === puzzleId) {
-        setIsLoading(false);
-        return;
-      }
-
-      // Only fetch from API for date-based puzzles
-      if (isDateBasedPuzzle) {
-        // Server-side check for logged-in users
-        if (user) {
-          const token = getValidIdToken();
-          if (token) {
-            try {
-              const response = await checkUserGame(user.id, puzzleId!, token);
-              if (response.data?.completed) {
-                setServerCompleted(response.data);
-                setIsLoading(false);
-                return;
-              }
-            } catch (error) {
-              console.error('Failed to check server game status:', error);
-              // Fall through to local check
-            }
-          }
-        }
-
-        // Local check for all users (fallback for logged-in, primary for anonymous)
-        const previousResult = await getDailyResult(puzzleId!);
-        if (previousResult) {
-          setAlreadyCompleted(previousResult);
+      try {
+        // If puzzle is already loaded with matching ID (from play-modes), skip loading
+        if (puzzle && puzzle.id === puzzleId) {
           setIsLoading(false);
           return;
         }
 
-        const dailyPuzzle = await generateDailyPuzzle(puzzleId);
-        startGame(dailyPuzzle);
+        // Guard against missing puzzleId
+        if (!puzzleId) {
+          console.error('No puzzle ID provided');
+          setIsLoading(false);
+          return;
+        }
+
+        // Only fetch from API for date-based puzzles
+        if (isDateBasedPuzzle) {
+          // Server-side check for logged-in users
+          if (user) {
+            const token = getValidIdToken();
+            if (token) {
+              try {
+                const response = await checkUserGame(user.id, puzzleId, token);
+                if (response.data?.completed) {
+                  setServerCompleted(response.data);
+                  setIsLoading(false);
+                  return;
+                }
+              } catch (error) {
+                console.error('Failed to check server game status:', error);
+                // Fall through to local check
+              }
+            }
+          }
+
+          // Local check for all users (fallback for logged-in, primary for anonymous)
+          try {
+            const previousResult = await getDailyResult(puzzleId);
+            if (previousResult) {
+              setAlreadyCompleted(previousResult);
+              setIsLoading(false);
+              return;
+            }
+          } catch (error) {
+            console.error('Failed to get daily result:', error);
+          }
+
+          // Generate daily puzzle - works for all users (anonymous or logged in)
+          try {
+            const dailyPuzzle = await generateDailyPuzzle(puzzleId);
+            startGame(dailyPuzzle);
+          } catch (error) {
+            console.error('Failed to generate daily puzzle:', error);
+            // Fallback: generate with synchronous method
+            const dailyPuzzle = generateDailyPuzzleSync(puzzleId);
+            startGame(dailyPuzzle);
+          }
+        }
+      } catch (error) {
+        console.error('Unexpected error loading puzzle:', error);
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
 
     loadPuzzle();
-  }, [puzzleId, puzzle?.id, isDateBasedPuzzle, user, getValidIdToken]);
+  }, [puzzleId, puzzle?.id, isDateBasedPuzzle, user, getValidIdToken, startGame]);
 
   const handleLocationSelect = useCallback((coords: Coordinates) => {
     if (phase !== 'playing') return;

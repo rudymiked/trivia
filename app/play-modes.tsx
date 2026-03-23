@@ -4,7 +4,7 @@ import { fetchPersonalizedPuzzle } from '@/services/api';
 import { generatePuzzleByCategory, getCategories } from '@/services/puzzle';
 import { Href, useRouter } from 'expo-router';
 import React, { useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const CATEGORY_DISPLAY_NAMES: Record<string, string> = {
   places: 'Famous Places',
@@ -26,12 +26,25 @@ const CATEGORY_ICONS: Record<string, string> = {
 
 export default function PlayModesScreen() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, signIn } = useAuth();
   const { startGame } = useGameStore();
   const categories = getCategories();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSelectMode = async (category: string) => {
+    // Require login for all play modes
+    if (!user) {
+      Alert.alert(
+        'Sign In Required',
+        'Play Modes are only available for signed-in users. You can play the daily puzzle on the home screen without signing in.',
+        [
+          { text: 'Cancel', style: 'cancel' },
+          { text: 'Sign In', onPress: () => signIn() },
+        ]
+      );
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -75,7 +88,7 @@ export default function PlayModesScreen() {
       <View style={styles.header}>
         <Text style={styles.title}>Play Modes</Text>
         <Text style={styles.subtitle}>
-          {user ? 'Personalized puzzles just for you' : 'Choose a category to practice'}
+          {user ? 'Personalized puzzles just for you' : 'Sign in to unlock play modes'}
         </Text>
       </View>
 

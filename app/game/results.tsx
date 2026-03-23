@@ -1,7 +1,6 @@
 import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
 import { submitScore } from '@/services/api';
-import { getTodayDate } from '@/services/puzzle';
 import { getUserProgress, saveDailyResult, saveGameResult, type UserProgress } from '@/services/storage';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
@@ -10,7 +9,7 @@ import { Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native
 
 export default function ResultsScreen() {
   const router = useRouter();
-  const { user, getValidIdToken } = useAuth();
+  const { user, getValidIdToken, signIn } = useAuth();
   const { puzzle, results, totalScore, resetGame } = useGameStore();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [copied, setCopied] = useState(false);
@@ -110,6 +109,10 @@ Play at: ${appUrl}`;
     router.replace('/');
   };
 
+  const handleSignIn = () => {
+    signIn();
+  };
+
   if (!puzzle) {
     return (
       <View style={styles.container}>
@@ -137,6 +140,19 @@ Play at: ${appUrl}`;
 
         <Text style={styles.totalScore}>{totalScore}</Text>
         <Text style={styles.maxScore}>out of 500</Text>
+
+        {/* Login prompt for anonymous users */}
+        {!user && (
+          <View style={styles.loginPrompt}>
+            <Text style={styles.loginPromptTitle}>Save Your Score!</Text>
+            <Text style={styles.loginPromptText}>
+              Sign in to see your scores on the leaderboard and track your progress across devices.
+            </Text>
+            <Pressable style={styles.loginButton} onPress={handleSignIn}>
+              <Text style={styles.loginButtonText}>Sign In with Google</Text>
+            </Pressable>
+          </View>
+        )}
 
         {/* Round breakdown */}
         <View style={styles.roundsContainer}>
@@ -332,6 +348,41 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#1A202C',
     fontSize: 18,
+    fontWeight: '700',
+  },
+  loginPrompt: {
+    backgroundColor: 'rgba(78, 205, 196, 0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(78, 205, 196, 0.3)',
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 24,
+    alignItems: 'center',
+  },
+  loginPromptTitle: {
+    color: '#4ECDC4',
+    fontSize: 18,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  loginPromptText: {
+    color: '#A0AEC0',
+    fontSize: 14,
+    marginBottom: 16,
+    textAlign: 'center',
+    lineHeight: 20,
+  },
+  loginButton: {
+    backgroundColor: '#4ECDC4',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: 'center',
+    width: '100%',
+  },
+  loginButtonText: {
+    color: '#1A202C',
+    fontSize: 16,
     fontWeight: '700',
   },
 });

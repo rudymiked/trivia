@@ -2,11 +2,14 @@
  * Seed script to populate locations in Azure Table Storage
  * Run this after setting up your Azure Table Storage to import locations from JSON
  *
- * Usage:
- *   node scripts/seed-locations.js
+ * Usage (local):
+ *   npm run seed
+ *
+ * Usage (production with function key):
+ *   API_URL=https://your-api.azurewebsites.net/api FUNCTION_KEY=your-key npm run seed
  *
  * Or via API:
- *   POST /api/admin/seed with the locations JSON
+ *   POST /api/manage/seed with the locations JSON and x-functions-key header
  */
 
 const fs = require('fs');
@@ -19,15 +22,25 @@ async function seedLocations() {
 
   // API URL - use environment variable or default to localhost
   const apiUrl = process.env.API_URL || 'http://localhost:7071/api';
+  const functionKey = process.env.FUNCTION_KEY;
 
   console.log(`Seeding ${data.locations.length} locations to ${apiUrl}...`);
 
   try {
-    const response = await fetch(`${apiUrl}/manage/seed`, {
+    const headers = {
+      'Content-Type': 'application/json',
+    };
+
+    // Add function key if provided (for production Azure Functions)
+    if (functionKey) {
+      headers['x-functions-key'] = functionKey;
+    }
+
+    const url = functionKey ? `${apiUrl}/manage/seed` : `${apiUrl}/manage/seed`;
+    
+    const response = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers,
       body: JSON.stringify(data),
     });
 
@@ -37,12 +50,16 @@ async function seedLocations() {
 
     if (response.ok && text) {
       const result = JSON.parse(text);
-      console.log(`Successfully seeded ${result.added} locations!`);
+      console.log(`✓ Successfully seeded ${result.added} locations!`);
+      process.exit(0);
     } else {
-      console.error('Failed to seed locations');
+      console.error('✗ Failed to seed locations');
+      console.error('Make sure the API is running and FUNCTION_KEY is set for production');
+      process.exit(1);
     }
   } catch (error) {
-    console.error('Error seeding locations:', error);
+    console.error('✗ Error seeding locations:', error.message);
+    process.exit(1);
   }
 }
 

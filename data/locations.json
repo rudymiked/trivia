@@ -5,7 +5,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 48.8584, "lng": 2.2945 },
+      "target": {
+        "lat": 48.8584,
+        "lng": 2.2945
+      },
       "country": "France"
     },
     {
@@ -13,7 +16,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 40.6892, "lng": -74.0445 },
+      "target": {
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
       "country": "United States"
     },
     {
@@ -21,7 +27,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 51.5007, "lng": -0.1246 },
+      "target": {
+        "lat": 51.5007,
+        "lng": -0.1246
+      },
       "country": "United Kingdom"
     },
     {
@@ -29,7 +38,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 41.8902, "lng": 12.4922 },
+      "target": {
+        "lat": 41.8902,
+        "lng": 12.4922
+      },
       "country": "Italy"
     },
     {
@@ -37,7 +49,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": -33.8568, "lng": 151.2153 },
+      "target": {
+        "lat": -33.8568,
+        "lng": 151.2153
+      },
       "country": "Australia"
     },
     {
@@ -45,7 +60,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": -13.1631, "lng": -72.545 },
+      "target": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
       "country": "Peru"
     },
     {
@@ -53,7 +71,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 27.1751, "lng": 78.0421 },
+      "target": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
       "country": "India"
     },
     {
@@ -61,7 +82,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": -22.9519, "lng": -43.2105 },
+      "target": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
       "country": "Brazil"
     },
     {
@@ -69,7 +93,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 29.9792, "lng": 31.1342 },
+      "target": {
+        "lat": 29.9792,
+        "lng": 31.1342
+      },
       "country": "Egypt"
     },
     {
@@ -77,15 +104,21 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 35.3606, "lng": 138.7274 },
+      "target": {
+        "lat": 35.3606,
+        "lng": 138.7274
+      },
       "country": "Japan"
     },
     {
       "clue": "Angkor Wat",
       "category": "places",
       "type": "landmark",
-      "difficulty": "medium",
-      "target": { "lat": 13.4125, "lng": 103.867 },
+      "difficulty": "hard",
+      "target": {
+        "lat": 13.4125,
+        "lng": 103.867
+      },
       "country": "Cambodia"
     },
     {
@@ -93,7 +126,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 41.4036, "lng": 2.1744 },
+      "target": {
+        "lat": 41.4036,
+        "lng": 2.1744
+      },
       "country": "Spain"
     },
     {
@@ -101,7 +137,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": 30.3285, "lng": 35.4444 },
+      "target": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
       "country": "Jordan"
     },
     {
@@ -109,7 +148,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 51.1789, "lng": -1.8262 },
+      "target": {
+        "lat": 51.1789,
+        "lng": -1.8262
+      },
       "country": "United Kingdom"
     },
     {
@@ -117,7 +159,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 25.1972, "lng": 55.2744 },
+      "target": {
+        "lat": 25.1972,
+        "lng": 55.2744
+      },
       "country": "United Arab Emirates"
     },
     {
@@ -125,7 +170,10 @@
       "category": "places",
       "type": "city",
       "difficulty": "medium",
-      "target": { "lat": 36.3932, "lng": 25.4615 },
+      "target": {
+        "lat": 36.3932,
+        "lng": 25.4615
+      },
       "country": "Greece"
     },
     {
@@ -133,7 +181,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": -17.9243, "lng": 25.8572 },
+      "target": {
+        "lat": -17.9243,
+        "lng": 25.8572
+      },
       "country": "Zimbabwe"
     },
     {
@@ -141,7 +192,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 37.8199, "lng": -122.4783 },
+      "target": {
+        "lat": 37.8199,
+        "lng": -122.4783
+      },
       "country": "United States"
     },
     {
@@ -149,7 +203,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 43.0962, "lng": -79.0377 },
+      "target": {
+        "lat": 43.0962,
+        "lng": -79.0377
+      },
       "country": "Canada"
     },
     {
@@ -157,7 +214,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 37.9715, "lng": 23.7267 },
+      "target": {
+        "lat": 37.9715,
+        "lng": 23.7267
+      },
       "country": "Greece"
     },
     {
@@ -165,7 +225,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": 20.6843, "lng": -88.5678 },
+      "target": {
+        "lat": 20.6843,
+        "lng": -88.5678
+      },
       "country": "Mexico"
     },
     {
@@ -173,7 +236,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 35.6586, "lng": 139.7454 },
+      "target": {
+        "lat": 35.6586,
+        "lng": 139.7454
+      },
       "country": "Japan"
     },
     {
@@ -181,15 +247,21 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 52.5163, "lng": 13.3777 },
+      "target": {
+        "lat": 52.5163,
+        "lng": 13.3777
+      },
       "country": "Germany"
     },
     {
       "clue": "Kremlin",
       "category": "places",
       "type": "landmark",
-      "difficulty": "medium",
-      "target": { "lat": 55.752, "lng": 37.6175 },
+      "difficulty": "hard",
+      "target": {
+        "lat": 55.752,
+        "lng": 37.6175
+      },
       "country": "Russia"
     },
     {
@@ -197,7 +269,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": -33.9628, "lng": 18.4098 },
+      "target": {
+        "lat": -33.9628,
+        "lng": 18.4098
+      },
       "country": "South Africa"
     },
     {
@@ -205,7 +280,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": -25.3444, "lng": 131.0369 },
+      "target": {
+        "lat": -25.3444,
+        "lng": 131.0369
+      },
       "country": "Australia"
     },
     {
@@ -213,7 +291,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": 47.5576, "lng": 10.7498 },
+      "target": {
+        "lat": 47.5576,
+        "lng": 10.7498
+      },
       "country": "Germany"
     },
     {
@@ -221,7 +302,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 40.758, "lng": -73.9855 },
+      "target": {
+        "lat": 40.758,
+        "lng": -73.9855
+      },
       "country": "United States"
     },
     {
@@ -229,7 +313,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 48.8606, "lng": 2.3376 },
+      "target": {
+        "lat": 48.8606,
+        "lng": 2.3376
+      },
       "country": "France"
     },
     {
@@ -237,7 +324,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": 41.0086, "lng": 28.9802 },
+      "target": {
+        "lat": 41.0086,
+        "lng": 28.9802
+      },
       "country": "Turkey"
     },
     {
@@ -245,15 +335,21 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "hard",
-      "target": { "lat": 1.2868, "lng": 103.8545 },
+      "target": {
+        "lat": 1.2868,
+        "lng": 103.8545
+      },
       "country": "Singapore"
     },
     {
       "clue": "CN Tower",
       "category": "places",
       "type": "landmark",
-      "difficulty": "medium",
-      "target": { "lat": 43.6426, "lng": -79.3871 },
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.6426,
+        "lng": -79.3871
+      },
       "country": "Canada"
     },
     {
@@ -261,7 +357,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "easy",
-      "target": { "lat": 43.723, "lng": 10.3966 },
+      "target": {
+        "lat": 43.723,
+        "lng": 10.3966
+      },
       "country": "Italy"
     },
     {
@@ -269,7 +368,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 36.0544, "lng": -112.1401 },
+      "target": {
+        "lat": 36.0544,
+        "lng": -112.1401
+      },
       "country": "United States"
     },
     {
@@ -277,7 +379,10 @@
       "category": "places",
       "type": "landmark",
       "difficulty": "medium",
-      "target": { "lat": 40.4319, "lng": 116.5704 },
+      "target": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
       "country": "China"
     },
     {
@@ -285,7 +390,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 50.8998, "lng": -1.4044 },
+      "target": {
+        "lat": 50.8998,
+        "lng": -1.4044
+      },
       "country": "United Kingdom",
       "answer": "Southampton"
     },
@@ -294,7 +402,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 34.3853, "lng": 132.4553 },
+      "target": {
+        "lat": 34.3853,
+        "lng": 132.4553
+      },
       "country": "Japan",
       "answer": "Hiroshima"
     },
@@ -303,7 +414,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 40.7489, "lng": -73.9680 },
+      "target": {
+        "lat": 40.7489,
+        "lng": -73.968
+      },
       "country": "United States",
       "answer": "New York City"
     },
@@ -312,7 +426,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 37.9838, "lng": 23.7275 },
+      "target": {
+        "lat": 37.9838,
+        "lng": 23.7275
+      },
       "country": "Greece",
       "answer": "Athens"
     },
@@ -321,7 +438,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": 43.7833, "lng": 10.9167 },
+      "target": {
+        "lat": 43.7833,
+        "lng": 10.9167
+      },
       "country": "Italy",
       "answer": "Vinci"
     },
@@ -330,7 +450,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 42.3601, "lng": -71.0589 },
+      "target": {
+        "lat": 42.3601,
+        "lng": -71.0589
+      },
       "country": "United States",
       "answer": "Boston"
     },
@@ -339,7 +462,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 51.5194, "lng": -0.1270 },
+      "target": {
+        "lat": 51.5194,
+        "lng": -0.127
+      },
       "country": "United Kingdom",
       "answer": "British Museum, London"
     },
@@ -348,7 +474,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": 34.0619, "lng": -4.9785 },
+      "target": {
+        "lat": 34.0619,
+        "lng": -4.9785
+      },
       "country": "Morocco",
       "answer": "Fez (University of al-Qarawiyyin)"
     },
@@ -357,7 +486,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 49.3680, "lng": -0.8731 },
+      "target": {
+        "lat": 49.368,
+        "lng": -0.8731
+      },
       "country": "France",
       "answer": "Normandy"
     },
@@ -366,7 +498,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 39.9526, "lng": -75.1652 },
+      "target": {
+        "lat": 39.9526,
+        "lng": -75.1652
+      },
       "country": "United States",
       "answer": "Philadelphia"
     },
@@ -375,7 +510,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": -15.9650, "lng": -5.7089 },
+      "target": {
+        "lat": -15.965,
+        "lng": -5.7089
+      },
       "country": "Saint Helena",
       "answer": "Saint Helena"
     },
@@ -384,7 +522,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 42.8125, "lng": -1.6458 },
+      "target": {
+        "lat": 42.8125,
+        "lng": -1.6458
+      },
       "country": "Spain",
       "answer": "Pamplona"
     },
@@ -393,7 +534,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": -34.8941, "lng": -56.1522 },
+      "target": {
+        "lat": -34.8941,
+        "lng": -56.1522
+      },
       "country": "Uruguay",
       "answer": "Montevideo"
     },
@@ -402,7 +546,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 52.3752, "lng": 4.8840 },
+      "target": {
+        "lat": 52.3752,
+        "lng": 4.884
+      },
       "country": "Netherlands",
       "answer": "Amsterdam"
     },
@@ -411,7 +558,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 51.3890, "lng": 30.0979 },
+      "target": {
+        "lat": 51.389,
+        "lng": 30.0979
+      },
       "country": "Ukraine",
       "answer": "Pripyat/Chernobyl"
     },
@@ -420,7 +570,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 27.9881, "lng": 86.9250 },
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
       "country": "Nepal",
       "answer": "Mount Everest"
     },
@@ -429,7 +582,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": 51.4316, "lng": -0.5632 },
+      "target": {
+        "lat": 51.4316,
+        "lng": -0.5632
+      },
       "country": "United Kingdom",
       "answer": "Runnymede"
     },
@@ -438,7 +594,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 38.8893, "lng": -77.0502 },
+      "target": {
+        "lat": 38.8893,
+        "lng": -77.0502
+      },
       "country": "United States",
       "answer": "Washington D.C. (Lincoln Memorial)"
     },
@@ -447,7 +606,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": -4.9833, "lng": 119.9500 },
+      "target": {
+        "lat": -4.9833,
+        "lng": 119.95
+      },
       "country": "Indonesia",
       "answer": "Sulawesi"
     },
@@ -456,7 +618,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 43.7696, "lng": 11.2558 },
+      "target": {
+        "lat": 43.7696,
+        "lng": 11.2558
+      },
       "country": "Italy",
       "answer": "Florence"
     },
@@ -465,7 +630,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "easy",
-      "target": { "lat": 52.5200, "lng": 13.4050 },
+      "target": {
+        "lat": 52.52,
+        "lng": 13.405
+      },
       "country": "Germany",
       "answer": "Berlin"
     },
@@ -473,8 +641,11 @@
       "clue": "In which city was the first Starbucks opened in 1971?",
       "category": "questions",
       "type": "trivia",
-      "difficulty": "medium",
-      "target": { "lat": 47.6097, "lng": -122.3425 },
+      "difficulty": "easy",
+      "target": {
+        "lat": 47.6097,
+        "lng": -122.3425
+      },
       "country": "United States",
       "answer": "Seattle"
     },
@@ -483,7 +654,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": 36.0176, "lng": -75.6674 },
+      "target": {
+        "lat": 36.0176,
+        "lng": -75.6674
+      },
       "country": "United States",
       "answer": "Kitty Hawk, North Carolina"
     },
@@ -492,7 +666,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 41.0082, "lng": 28.9784 },
+      "target": {
+        "lat": 41.0082,
+        "lng": 28.9784
+      },
       "country": "Turkey",
       "answer": "Constantinople (Istanbul)"
     },
@@ -501,7 +678,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": 52.0867, "lng": 4.3146 },
+      "target": {
+        "lat": 52.0867,
+        "lng": 4.3146
+      },
       "country": "Netherlands",
       "answer": "The Hague"
     },
@@ -509,8 +689,11 @@
       "clue": "In which city was the first iPhone unveiled in 2007?",
       "category": "questions",
       "type": "trivia",
-      "difficulty": "medium",
-      "target": { "lat": 37.7849, "lng": -122.4094 },
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.7849,
+        "lng": -122.4094
+      },
       "country": "United States",
       "answer": "San Francisco"
     },
@@ -519,7 +702,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": 31.2001, "lng": 29.9187 },
+      "target": {
+        "lat": 31.2001,
+        "lng": 29.9187
+      },
       "country": "Egypt",
       "answer": "Alexandria"
     },
@@ -528,7 +714,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 40.8218, "lng": 14.4260 },
+      "target": {
+        "lat": 40.8218,
+        "lng": 14.426
+      },
       "country": "Italy",
       "answer": "Mount Vesuvius"
     },
@@ -537,7 +726,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "medium",
-      "target": { "lat": 51.5074, "lng": -0.1278 },
+      "target": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
       "country": "United Kingdom",
       "answer": "London"
     },
@@ -546,7 +738,10 @@
       "category": "questions",
       "type": "trivia",
       "difficulty": "hard",
-      "target": { "lat": 59.9139, "lng": 10.7522 },
+      "target": {
+        "lat": 59.9139,
+        "lng": 10.7522
+      },
       "country": "Norway",
       "answer": "Oslo"
     },
@@ -554,8 +749,11 @@
       "clue": "Amazon River",
       "category": "geography",
       "type": "river",
-      "difficulty": "medium",
-      "target": { "lat": -3.1190, "lng": -60.0217 },
+      "difficulty": "easy",
+      "target": {
+        "lat": -3.119,
+        "lng": -60.0217
+      },
       "country": "Brazil"
     },
     {
@@ -563,7 +761,10 @@
       "category": "geography",
       "type": "river",
       "difficulty": "easy",
-      "target": { "lat": 30.0444, "lng": 31.2357 },
+      "target": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
       "country": "Egypt"
     },
     {
@@ -571,7 +772,10 @@
       "category": "geography",
       "type": "river",
       "difficulty": "easy",
-      "target": { "lat": 29.1511, "lng": -89.2495 },
+      "target": {
+        "lat": 29.1511,
+        "lng": -89.2495
+      },
       "country": "United States"
     },
     {
@@ -579,7 +783,10 @@
       "category": "geography",
       "type": "river",
       "difficulty": "medium",
-      "target": { "lat": 48.2082, "lng": 16.3738 },
+      "target": {
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
       "country": "Austria"
     },
     {
@@ -587,7 +794,10 @@
       "category": "geography",
       "type": "river",
       "difficulty": "hard",
-      "target": { "lat": 30.5728, "lng": 117.2700 },
+      "target": {
+        "lat": 30.5728,
+        "lng": 117.27
+      },
       "country": "China"
     },
     {
@@ -595,7 +805,10 @@
       "category": "geography",
       "type": "mountain",
       "difficulty": "medium",
-      "target": { "lat": -3.0674, "lng": 37.3556 },
+      "target": {
+        "lat": -3.0674,
+        "lng": 37.3556
+      },
       "country": "Tanzania"
     },
     {
@@ -603,7 +816,10 @@
       "category": "geography",
       "type": "mountain",
       "difficulty": "easy",
-      "target": { "lat": 27.9881, "lng": 86.9250 },
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
       "country": "Nepal"
     },
     {
@@ -611,7 +827,10 @@
       "category": "geography",
       "type": "mountain",
       "difficulty": "medium",
-      "target": { "lat": 45.9763, "lng": 7.6586 },
+      "target": {
+        "lat": 45.9763,
+        "lng": 7.6586
+      },
       "country": "Switzerland"
     },
     {
@@ -619,7 +838,10 @@
       "category": "geography",
       "type": "mountain",
       "difficulty": "hard",
-      "target": { "lat": 63.0695, "lng": -151.0074 },
+      "target": {
+        "lat": 63.0695,
+        "lng": -151.0074
+      },
       "country": "United States"
     },
     {
@@ -627,7 +849,10 @@
       "category": "geography",
       "type": "mountain",
       "difficulty": "hard",
-      "target": { "lat": 35.8808, "lng": 76.5155 },
+      "target": {
+        "lat": 35.8808,
+        "lng": 76.5155
+      },
       "country": "Pakistan"
     },
     {
@@ -635,7 +860,10 @@
       "category": "geography",
       "type": "lake",
       "difficulty": "hard",
-      "target": { "lat": 53.5587, "lng": 108.1650 },
+      "target": {
+        "lat": 53.5587,
+        "lng": 108.165
+      },
       "country": "Russia"
     },
     {
@@ -643,7 +871,10 @@
       "category": "geography",
       "type": "lake",
       "difficulty": "medium",
-      "target": { "lat": -1.2921, "lng": 32.8561 },
+      "target": {
+        "lat": -1.2921,
+        "lng": 32.8561
+      },
       "country": "Uganda"
     },
     {
@@ -651,7 +882,10 @@
       "category": "geography",
       "type": "lake",
       "difficulty": "medium",
-      "target": { "lat": -15.9254, "lng": -69.3354 },
+      "target": {
+        "lat": -15.9254,
+        "lng": -69.3354
+      },
       "country": "Peru"
     },
     {
@@ -659,7 +893,10 @@
       "category": "geography",
       "type": "lake",
       "difficulty": "medium",
-      "target": { "lat": 47.7000, "lng": -87.5000 },
+      "target": {
+        "lat": 47.7,
+        "lng": -87.5
+      },
       "country": "United States"
     },
     {
@@ -667,7 +904,10 @@
       "category": "geography",
       "type": "lake",
       "difficulty": "easy",
-      "target": { "lat": 31.5000, "lng": 35.5000 },
+      "target": {
+        "lat": 31.5,
+        "lng": 35.5
+      },
       "country": "Israel"
     },
     {
@@ -675,7 +915,10 @@
       "category": "geography",
       "type": "desert",
       "difficulty": "easy",
-      "target": { "lat": 23.4162, "lng": 25.6628 },
+      "target": {
+        "lat": 23.4162,
+        "lng": 25.6628
+      },
       "country": "Egypt"
     },
     {
@@ -683,7 +926,10 @@
       "category": "geography",
       "type": "desert",
       "difficulty": "medium",
-      "target": { "lat": 42.5944, "lng": 103.4314 },
+      "target": {
+        "lat": 42.5944,
+        "lng": 103.4314
+      },
       "country": "Mongolia"
     },
     {
@@ -691,7 +937,10 @@
       "category": "geography",
       "type": "desert",
       "difficulty": "hard",
-      "target": { "lat": -24.5000, "lng": -69.2500 },
+      "target": {
+        "lat": -24.5,
+        "lng": -69.25
+      },
       "country": "Chile"
     },
     {
@@ -699,7 +948,10 @@
       "category": "geography",
       "type": "desert",
       "difficulty": "medium",
-      "target": { "lat": 35.0110, "lng": -115.4734 },
+      "target": {
+        "lat": 35.011,
+        "lng": -115.4734
+      },
       "country": "United States"
     },
     {
@@ -707,7 +959,10 @@
       "category": "geography",
       "type": "island",
       "difficulty": "easy",
-      "target": { "lat": -18.7669, "lng": 46.8691 },
+      "target": {
+        "lat": -18.7669,
+        "lng": 46.8691
+      },
       "country": "Madagascar"
     },
     {
@@ -715,7 +970,10 @@
       "category": "geography",
       "type": "island",
       "difficulty": "medium",
-      "target": { "lat": -0.9538, "lng": -90.9656 },
+      "target": {
+        "lat": -0.9538,
+        "lng": -90.9656
+      },
       "country": "Ecuador"
     },
     {
@@ -723,7 +981,10 @@
       "category": "geography",
       "type": "island",
       "difficulty": "easy",
-      "target": { "lat": 19.8968, "lng": -155.5828 },
+      "target": {
+        "lat": 19.8968,
+        "lng": -155.5828
+      },
       "country": "United States"
     },
     {
@@ -731,7 +992,10 @@
       "category": "geography",
       "type": "island",
       "difficulty": "easy",
-      "target": { "lat": 71.7069, "lng": -42.6043 },
+      "target": {
+        "lat": 71.7069,
+        "lng": -42.6043
+      },
       "country": "Greenland"
     },
     {
@@ -739,15 +1003,21 @@
       "category": "geography",
       "type": "island",
       "difficulty": "hard",
-      "target": { "lat": -16.5004, "lng": -151.7415 },
+      "target": {
+        "lat": -16.5004,
+        "lng": -151.7415
+      },
       "country": "French Polynesia"
     },
     {
       "clue": "Great Barrier Reef",
       "category": "geography",
       "type": "ocean",
-      "difficulty": "medium",
-      "target": { "lat": -18.2871, "lng": 147.6992 },
+      "difficulty": "easy",
+      "target": {
+        "lat": -18.2871,
+        "lng": 147.6992
+      },
       "country": "Australia"
     },
     {
@@ -755,7 +1025,10 @@
       "category": "geography",
       "type": "ocean",
       "difficulty": "hard",
-      "target": { "lat": 11.3493, "lng": 142.1996 },
+      "target": {
+        "lat": 11.3493,
+        "lng": 142.1996
+      },
       "country": "Pacific Ocean"
     },
     {
@@ -763,7 +1036,10 @@
       "category": "geography",
       "type": "ocean",
       "difficulty": "medium",
-      "target": { "lat": 35.9745, "lng": -5.5000 },
+      "target": {
+        "lat": 35.9745,
+        "lng": -5.5
+      },
       "country": "Spain"
     },
     {
@@ -771,16 +1047,3716 @@
       "category": "geography",
       "type": "ocean",
       "difficulty": "easy",
-      "target": { "lat": 9.0800, "lng": -79.6800 },
+      "target": {
+        "lat": 9.08,
+        "lng": -79.68
+      },
       "country": "Panama"
     },
     {
       "clue": "Suez Canal",
       "category": "geography",
       "type": "ocean",
-      "difficulty": "medium",
-      "target": { "lat": 30.4550, "lng": 32.3500 },
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.455,
+        "lng": 32.35
+      },
       "country": "Egypt"
+    },
+    {
+      "clue": "Mont Saint-Michel",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 48.6361,
+        "lng": -1.5115
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Alhambra",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.1761,
+        "lng": -3.5881
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Mount Rushmore",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.8791,
+        "lng": -103.4591
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Moai of Easter Island",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -27.1212,
+        "lng": -109.3664
+      },
+      "country": "Chile"
+    },
+    {
+      "clue": "Shwedagon Pagoda",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 16.7983,
+        "lng": 96.1496
+      },
+      "country": "Myanmar"
+    },
+    {
+      "clue": "Buda Castle",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.4967,
+        "lng": 19.0399
+      },
+      "country": "Hungary"
+    },
+    {
+      "clue": "In which city is the Forbidden City located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 39.9163,
+        "lng": 116.3972
+      },
+      "country": "China",
+      "answer": "Beijing"
+    },
+    {
+      "clue": "Where did Apollo 11 launch from in 1969?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 28.5729,
+        "lng": -80.649
+      },
+      "country": "United States",
+      "answer": "Cape Canaveral (Kennedy Space Center)"
+    },
+    {
+      "clue": "In which city were the 2016 Summer Olympics held?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -22.9068,
+        "lng": -43.1729
+      },
+      "country": "Brazil",
+      "answer": "Rio de Janeiro"
+    },
+    {
+      "clue": "Where is the Acropolis Museum located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.9681,
+        "lng": 23.7286
+      },
+      "country": "Greece",
+      "answer": "Athens"
+    },
+    {
+      "clue": "In which city was the first United Nations General Assembly held in 1946?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.5072,
+        "lng": -0.1276
+      },
+      "country": "United Kingdom",
+      "answer": "London"
+    },
+    {
+      "clue": "Where is the historic district of Machu Picchu's gateway city located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -13.5319,
+        "lng": -71.9675
+      },
+      "country": "Peru",
+      "answer": "Cusco"
+    },
+    {
+      "clue": "In which city is the Burj Al Arab located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 25.1412,
+        "lng": 55.1852
+      },
+      "country": "United Arab Emirates",
+      "answer": "Dubai"
+    },
+    {
+      "clue": "Where did the 1986 Chernobyl disaster occur?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 51.2766,
+        "lng": 30.2219
+      },
+      "country": "Ukraine",
+      "answer": "Chernobyl"
+    },
+    {
+      "clue": "Congo River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": {
+        "lat": -4.3217,
+        "lng": 15.3126
+      },
+      "country": "Democratic Republic of the Congo"
+    },
+    {
+      "clue": "Mekong River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "hard",
+      "target": {
+        "lat": 10.0452,
+        "lng": 105.7469
+      },
+      "country": "Vietnam"
+    },
+    {
+      "clue": "Aconcagua",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": {
+        "lat": -32.6532,
+        "lng": -70.0109
+      },
+      "country": "Argentina"
+    },
+    {
+      "clue": "Mount Elbrus",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.3499,
+        "lng": 42.4453
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Lake Tanganyika",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": {
+        "lat": -6.316,
+        "lng": 29.51
+      },
+      "country": "Tanzania"
+    },
+    {
+      "clue": "Caspian Sea",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": {
+        "lat": 41.92,
+        "lng": 50.53
+      },
+      "country": "Azerbaijan"
+    },
+    {
+      "clue": "Kalahari Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "medium",
+      "target": {
+        "lat": -23.5,
+        "lng": 22
+      },
+      "country": "Botswana"
+    },
+    {
+      "clue": "Namib Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": {
+        "lat": -24.5,
+        "lng": 15
+      },
+      "country": "Namibia"
+    },
+    {
+      "clue": "Sicily",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.5999,
+        "lng": 14.0154
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Iceland",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "easy",
+      "target": {
+        "lat": 64.9631,
+        "lng": -19.0208
+      },
+      "country": "Iceland"
+    },
+    {
+      "clue": "Bering Strait",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "hard",
+      "target": {
+        "lat": 65.9,
+        "lng": -168.9
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Bay of Bengal",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": {
+        "lat": 15.5,
+        "lng": 88
+      },
+      "country": "India"
+    },
+    {
+      "clue": "Explorer Spot: Eiffel Tower",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 48.8584,
+        "lng": 2.2945
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Which country is associated with \"Eiffel Tower\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 48.8584,
+        "lng": 2.2945
+      },
+      "country": "France",
+      "answer": "France"
+    },
+    {
+      "clue": "Regional Focus: Eiffel Tower",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 48.8584,
+        "lng": 2.2945
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Explorer Spot: Statue of Liberty",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Statue of Liberty\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Statue of Liberty",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Big Ben",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.5007,
+        "lng": -0.1246
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Which country is associated with \"Big Ben\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5007,
+        "lng": -0.1246
+      },
+      "country": "United Kingdom",
+      "answer": "United Kingdom"
+    },
+    {
+      "clue": "Regional Focus: Big Ben",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 51.5007,
+        "lng": -0.1246
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Explorer Spot: Colosseum",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.8902,
+        "lng": 12.4922
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Which country is associated with \"Colosseum\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 41.8902,
+        "lng": 12.4922
+      },
+      "country": "Italy",
+      "answer": "Italy"
+    },
+    {
+      "clue": "Regional Focus: Colosseum",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 41.8902,
+        "lng": 12.4922
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Explorer Spot: Sydney Opera House",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -33.8568,
+        "lng": 151.2153
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Which country is associated with \"Sydney Opera House\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -33.8568,
+        "lng": 151.2153
+      },
+      "country": "Australia",
+      "answer": "Australia"
+    },
+    {
+      "clue": "Regional Focus: Sydney Opera House",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -33.8568,
+        "lng": 151.2153
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Explorer Spot: Machu Picchu",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
+      "country": "Peru"
+    },
+    {
+      "clue": "Which country is associated with \"Machu Picchu\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
+      "country": "Peru",
+      "answer": "Peru"
+    },
+    {
+      "clue": "Regional Focus: Machu Picchu",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
+      "country": "Peru"
+    },
+    {
+      "clue": "Explorer Spot: Taj Mahal",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
+      "country": "India"
+    },
+    {
+      "clue": "Which country is associated with \"Taj Mahal\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
+      "country": "India",
+      "answer": "India"
+    },
+    {
+      "clue": "Regional Focus: Taj Mahal",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
+      "country": "India"
+    },
+    {
+      "clue": "Explorer Spot: Christ the Redeemer",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Which country is associated with \"Christ the Redeemer\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "country": "Brazil",
+      "answer": "Brazil"
+    },
+    {
+      "clue": "Regional Focus: Christ the Redeemer",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Explorer Spot: Pyramids of Giza",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 29.9792,
+        "lng": 31.1342
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Which country is associated with \"Pyramids of Giza\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 29.9792,
+        "lng": 31.1342
+      },
+      "country": "Egypt",
+      "answer": "Egypt"
+    },
+    {
+      "clue": "Regional Focus: Pyramids of Giza",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 29.9792,
+        "lng": 31.1342
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Explorer Spot: Mount Fuji",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 35.3606,
+        "lng": 138.7274
+      },
+      "country": "Japan"
+    },
+    {
+      "clue": "Which country is associated with \"Mount Fuji\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 35.3606,
+        "lng": 138.7274
+      },
+      "country": "Japan",
+      "answer": "Japan"
+    },
+    {
+      "clue": "Regional Focus: Mount Fuji",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 35.3606,
+        "lng": 138.7274
+      },
+      "country": "Japan"
+    },
+    {
+      "clue": "Explorer Spot: Angkor Wat",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 13.4125,
+        "lng": 103.867
+      },
+      "country": "Cambodia"
+    },
+    {
+      "clue": "Which country is associated with \"Angkor Wat\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 13.4125,
+        "lng": 103.867
+      },
+      "country": "Cambodia",
+      "answer": "Cambodia"
+    },
+    {
+      "clue": "Regional Focus: Angkor Wat",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 13.4125,
+        "lng": 103.867
+      },
+      "country": "Cambodia"
+    },
+    {
+      "clue": "Explorer Spot: Sagrada Familia",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 41.4036,
+        "lng": 2.1744
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Which country is associated with \"Sagrada Familia\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.4036,
+        "lng": 2.1744
+      },
+      "country": "Spain",
+      "answer": "Spain"
+    },
+    {
+      "clue": "Regional Focus: Sagrada Familia",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 41.4036,
+        "lng": 2.1744
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Explorer Spot: Petra",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "country": "Jordan"
+    },
+    {
+      "clue": "Which country is associated with \"Petra\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "country": "Jordan",
+      "answer": "Jordan"
+    },
+    {
+      "clue": "Regional Focus: Petra",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "country": "Jordan"
+    },
+    {
+      "clue": "Explorer Spot: Stonehenge",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 51.1789,
+        "lng": -1.8262
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Which country is associated with \"Stonehenge\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.1789,
+        "lng": -1.8262
+      },
+      "country": "United Kingdom",
+      "answer": "United Kingdom"
+    },
+    {
+      "clue": "Regional Focus: Stonehenge",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.1789,
+        "lng": -1.8262
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Explorer Spot: Burj Khalifa",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 25.1972,
+        "lng": 55.2744
+      },
+      "country": "United Arab Emirates"
+    },
+    {
+      "clue": "Which country is associated with \"Burj Khalifa\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 25.1972,
+        "lng": 55.2744
+      },
+      "country": "United Arab Emirates",
+      "answer": "United Arab Emirates"
+    },
+    {
+      "clue": "Regional Focus: Burj Khalifa",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 25.1972,
+        "lng": 55.2744
+      },
+      "country": "United Arab Emirates"
+    },
+    {
+      "clue": "Explorer Spot: Santorini",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 36.3932,
+        "lng": 25.4615
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Which country is associated with \"Santorini\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 36.3932,
+        "lng": 25.4615
+      },
+      "country": "Greece",
+      "answer": "Greece"
+    },
+    {
+      "clue": "Regional Focus: Santorini",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 36.3932,
+        "lng": 25.4615
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Explorer Spot: Victoria Falls",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -17.9243,
+        "lng": 25.8572
+      },
+      "country": "Zimbabwe"
+    },
+    {
+      "clue": "Which country is associated with \"Victoria Falls\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -17.9243,
+        "lng": 25.8572
+      },
+      "country": "Zimbabwe",
+      "answer": "Zimbabwe"
+    },
+    {
+      "clue": "Regional Focus: Victoria Falls",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -17.9243,
+        "lng": 25.8572
+      },
+      "country": "Zimbabwe"
+    },
+    {
+      "clue": "Explorer Spot: Golden Gate Bridge",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 37.8199,
+        "lng": -122.4783
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Golden Gate Bridge\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.8199,
+        "lng": -122.4783
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Golden Gate Bridge",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.8199,
+        "lng": -122.4783
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Niagara Falls",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.0962,
+        "lng": -79.0377
+      },
+      "country": "Canada"
+    },
+    {
+      "clue": "Which country is associated with \"Niagara Falls\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 43.0962,
+        "lng": -79.0377
+      },
+      "country": "Canada",
+      "answer": "Canada"
+    },
+    {
+      "clue": "Regional Focus: Niagara Falls",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.0962,
+        "lng": -79.0377
+      },
+      "country": "Canada"
+    },
+    {
+      "clue": "Explorer Spot: Acropolis",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.9715,
+        "lng": 23.7267
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Which country is associated with \"Acropolis\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 37.9715,
+        "lng": 23.7267
+      },
+      "country": "Greece",
+      "answer": "Greece"
+    },
+    {
+      "clue": "Regional Focus: Acropolis",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.9715,
+        "lng": 23.7267
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Explorer Spot: Chichen Itza",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 20.6843,
+        "lng": -88.5678
+      },
+      "country": "Mexico"
+    },
+    {
+      "clue": "Which country is associated with \"Chichen Itza\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 20.6843,
+        "lng": -88.5678
+      },
+      "country": "Mexico",
+      "answer": "Mexico"
+    },
+    {
+      "clue": "Regional Focus: Chichen Itza",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 20.6843,
+        "lng": -88.5678
+      },
+      "country": "Mexico"
+    },
+    {
+      "clue": "Explorer Spot: Tokyo Tower",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 35.6586,
+        "lng": 139.7454
+      },
+      "country": "Japan"
+    },
+    {
+      "clue": "Which country is associated with \"Tokyo Tower\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 35.6586,
+        "lng": 139.7454
+      },
+      "country": "Japan",
+      "answer": "Japan"
+    },
+    {
+      "clue": "Regional Focus: Tokyo Tower",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 35.6586,
+        "lng": 139.7454
+      },
+      "country": "Japan"
+    },
+    {
+      "clue": "Explorer Spot: Brandenburg Gate",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 52.5163,
+        "lng": 13.3777
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Which country is associated with \"Brandenburg Gate\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 52.5163,
+        "lng": 13.3777
+      },
+      "country": "Germany",
+      "answer": "Germany"
+    },
+    {
+      "clue": "Regional Focus: Brandenburg Gate",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 52.5163,
+        "lng": 13.3777
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Explorer Spot: Kremlin",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 55.752,
+        "lng": 37.6175
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Which country is associated with \"Kremlin\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 55.752,
+        "lng": 37.6175
+      },
+      "country": "Russia",
+      "answer": "Russia"
+    },
+    {
+      "clue": "Regional Focus: Kremlin",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 55.752,
+        "lng": 37.6175
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Explorer Spot: Table Mountain",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": -33.9628,
+        "lng": 18.4098
+      },
+      "country": "South Africa"
+    },
+    {
+      "clue": "Which country is associated with \"Table Mountain\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": -33.9628,
+        "lng": 18.4098
+      },
+      "country": "South Africa",
+      "answer": "South Africa"
+    },
+    {
+      "clue": "Regional Focus: Table Mountain",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": -33.9628,
+        "lng": 18.4098
+      },
+      "country": "South Africa"
+    },
+    {
+      "clue": "Explorer Spot: Uluru (Ayers Rock)",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -25.3444,
+        "lng": 131.0369
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Which country is associated with \"Uluru (Ayers Rock)\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -25.3444,
+        "lng": 131.0369
+      },
+      "country": "Australia",
+      "answer": "Australia"
+    },
+    {
+      "clue": "Regional Focus: Uluru (Ayers Rock)",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -25.3444,
+        "lng": 131.0369
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Explorer Spot: Neuschwanstein Castle",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 47.5576,
+        "lng": 10.7498
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Which country is associated with \"Neuschwanstein Castle\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 47.5576,
+        "lng": 10.7498
+      },
+      "country": "Germany",
+      "answer": "Germany"
+    },
+    {
+      "clue": "Regional Focus: Neuschwanstein Castle",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.5576,
+        "lng": 10.7498
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Explorer Spot: Times Square",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.758,
+        "lng": -73.9855
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Times Square\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 40.758,
+        "lng": -73.9855
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Times Square",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 40.758,
+        "lng": -73.9855
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Louvre Museum",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 48.8606,
+        "lng": 2.3376
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Which country is associated with \"Louvre Museum\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 48.8606,
+        "lng": 2.3376
+      },
+      "country": "France",
+      "answer": "France"
+    },
+    {
+      "clue": "Regional Focus: Louvre Museum",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 48.8606,
+        "lng": 2.3376
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Explorer Spot: Hagia Sophia",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 41.0086,
+        "lng": 28.9802
+      },
+      "country": "Turkey"
+    },
+    {
+      "clue": "Which country is associated with \"Hagia Sophia\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.0086,
+        "lng": 28.9802
+      },
+      "country": "Turkey",
+      "answer": "Turkey"
+    },
+    {
+      "clue": "Regional Focus: Hagia Sophia",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 41.0086,
+        "lng": 28.9802
+      },
+      "country": "Turkey"
+    },
+    {
+      "clue": "Explorer Spot: Merlion",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 1.2868,
+        "lng": 103.8545
+      },
+      "country": "Singapore"
+    },
+    {
+      "clue": "Which country is associated with \"Merlion\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 1.2868,
+        "lng": 103.8545
+      },
+      "country": "Singapore",
+      "answer": "Singapore"
+    },
+    {
+      "clue": "Regional Focus: Merlion",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 1.2868,
+        "lng": 103.8545
+      },
+      "country": "Singapore"
+    },
+    {
+      "clue": "Explorer Spot: CN Tower",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 43.6426,
+        "lng": -79.3871
+      },
+      "country": "Canada"
+    },
+    {
+      "clue": "Which country is associated with \"CN Tower\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.6426,
+        "lng": -79.3871
+      },
+      "country": "Canada",
+      "answer": "Canada"
+    },
+    {
+      "clue": "Regional Focus: CN Tower",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.6426,
+        "lng": -79.3871
+      },
+      "country": "Canada"
+    },
+    {
+      "clue": "Explorer Spot: Leaning Tower of Pisa",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.723,
+        "lng": 10.3966
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Which country is associated with \"Leaning Tower of Pisa\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.723,
+        "lng": 10.3966
+      },
+      "country": "Italy",
+      "answer": "Italy"
+    },
+    {
+      "clue": "Regional Focus: Leaning Tower of Pisa",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 43.723,
+        "lng": 10.3966
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Explorer Spot: Grand Canyon",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 36.0544,
+        "lng": -112.1401
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Grand Canyon\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 36.0544,
+        "lng": -112.1401
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Grand Canyon",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 36.0544,
+        "lng": -112.1401
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Great Wall of China",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Which country is associated with \"Great Wall of China\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "country": "China",
+      "answer": "China"
+    },
+    {
+      "clue": "Regional Focus: Great Wall of China",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Explorer Spot: Where did the Titanic depart from on its maiden voyage",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 50.8998,
+        "lng": -1.4044
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Which country is associated with \"Where did the Titanic depart from on its maiden voyage\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 50.8998,
+        "lng": -1.4044
+      },
+      "country": "United Kingdom",
+      "answer": "United Kingdom"
+    },
+    {
+      "clue": "Regional Focus: Where did the Titanic depart from on its maiden voyage",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 50.8998,
+        "lng": -1.4044
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Explorer Spot: In which city was the first atomic bomb dropped during WWII",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 34.3853,
+        "lng": 132.4553
+      },
+      "country": "Japan"
+    },
+    {
+      "clue": "Which country is associated with \"In which city was the first atomic bomb dropped during WWII\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 34.3853,
+        "lng": 132.4553
+      },
+      "country": "Japan",
+      "answer": "Japan"
+    },
+    {
+      "clue": "Regional Focus: In which city was the first atomic bomb dropped during WWII",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 34.3853,
+        "lng": 132.4553
+      },
+      "country": "Japan"
+    },
+    {
+      "clue": "Explorer Spot: Where is the headquarters of the United Nations located",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 40.7489,
+        "lng": -73.968
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Where is the headquarters of the United Nations located\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 40.7489,
+        "lng": -73.968
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Where is the headquarters of the United Nations located",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.7489,
+        "lng": -73.968
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Which city hosted the first modern Olympic Games in 1896",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 37.9838,
+        "lng": 23.7275
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Which country is associated with \"Which city hosted the first modern Olympic Games in 1896\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.9838,
+        "lng": 23.7275
+      },
+      "country": "Greece",
+      "answer": "Greece"
+    },
+    {
+      "clue": "Regional Focus: Which city hosted the first modern Olympic Games in 1896",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.9838,
+        "lng": 23.7275
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Explorer Spot: Where was Leonardo da Vinci born",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.7833,
+        "lng": 10.9167
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Which country is associated with \"Where was Leonardo da Vinci born\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 43.7833,
+        "lng": 10.9167
+      },
+      "country": "Italy",
+      "answer": "Italy"
+    },
+    {
+      "clue": "Regional Focus: Where was Leonardo da Vinci born",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.7833,
+        "lng": 10.9167
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Explorer Spot: In which city did the Boston Tea Party take place",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 42.3601,
+        "lng": -71.0589
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"In which city did the Boston Tea Party take place\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.3601,
+        "lng": -71.0589
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: In which city did the Boston Tea Party take place",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 42.3601,
+        "lng": -71.0589
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Where is the Rosetta Stone currently displayed",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.5194,
+        "lng": -0.127
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Which country is associated with \"Where is the Rosetta Stone currently displayed\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5194,
+        "lng": -0.127
+      },
+      "country": "United Kingdom",
+      "answer": "United Kingdom"
+    },
+    {
+      "clue": "Regional Focus: Where is the Rosetta Stone currently displayed",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 51.5194,
+        "lng": -0.127
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Explorer Spot: Which city is home to the world's oldest university still in operation (founded 859 AD)",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 34.0619,
+        "lng": -4.9785
+      },
+      "country": "Morocco"
+    },
+    {
+      "clue": "Which country is associated with \"Which city is home to the world's oldest university still in operation (founded 859 AD)\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 34.0619,
+        "lng": -4.9785
+      },
+      "country": "Morocco",
+      "answer": "Morocco"
+    },
+    {
+      "clue": "Regional Focus: Which city is home to the world's oldest university still in operation (founded 859 AD)",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 34.0619,
+        "lng": -4.9785
+      },
+      "country": "Morocco"
+    },
+    {
+      "clue": "Explorer Spot: Where did the D-Day landings begin on June 6, 1944",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 49.368,
+        "lng": -0.8731
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Which country is associated with \"Where did the D-Day landings begin on June 6, 1944\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 49.368,
+        "lng": -0.8731
+      },
+      "country": "France",
+      "answer": "France"
+    },
+    {
+      "clue": "Regional Focus: Where did the D-Day landings begin on June 6, 1944",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 49.368,
+        "lng": -0.8731
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Explorer Spot: In which city was the Declaration of Independence signed",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 39.9526,
+        "lng": -75.1652
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"In which city was the Declaration of Independence signed\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 39.9526,
+        "lng": -75.1652
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: In which city was the Declaration of Independence signed",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 39.9526,
+        "lng": -75.1652
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Where was Napoleon Bonaparte exiled after his final defeat",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": -15.965,
+        "lng": -5.7089
+      },
+      "country": "Saint Helena"
+    },
+    {
+      "clue": "Which country is associated with \"Where was Napoleon Bonaparte exiled after his final defeat\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": -15.965,
+        "lng": -5.7089
+      },
+      "country": "Saint Helena",
+      "answer": "Saint Helena"
+    },
+    {
+      "clue": "Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": -15.965,
+        "lng": -5.7089
+      },
+      "country": "Saint Helena"
+    },
+    {
+      "clue": "Explorer Spot: Which city hosts the annual Running of the Bulls festival",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 42.8125,
+        "lng": -1.6458
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Which country is associated with \"Which city hosts the annual Running of the Bulls festival\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.8125,
+        "lng": -1.6458
+      },
+      "country": "Spain",
+      "answer": "Spain"
+    },
+    {
+      "clue": "Regional Focus: Which city hosts the annual Running of the Bulls festival",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 42.8125,
+        "lng": -1.6458
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Explorer Spot: Where was the first FIFA World Cup held in 1930",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -34.8941,
+        "lng": -56.1522
+      },
+      "country": "Uruguay"
+    },
+    {
+      "clue": "Which country is associated with \"Where was the first FIFA World Cup held in 1930\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -34.8941,
+        "lng": -56.1522
+      },
+      "country": "Uruguay",
+      "answer": "Uruguay"
+    },
+    {
+      "clue": "Regional Focus: Where was the first FIFA World Cup held in 1930",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": -34.8941,
+        "lng": -56.1522
+      },
+      "country": "Uruguay"
+    },
+    {
+      "clue": "Explorer Spot: In which city is the Anne Frank House museum located",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 52.3752,
+        "lng": 4.884
+      },
+      "country": "Netherlands"
+    },
+    {
+      "clue": "Which country is associated with \"In which city is the Anne Frank House museum located\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 52.3752,
+        "lng": 4.884
+      },
+      "country": "Netherlands",
+      "answer": "Netherlands"
+    },
+    {
+      "clue": "Regional Focus: In which city is the Anne Frank House museum located",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 52.3752,
+        "lng": 4.884
+      },
+      "country": "Netherlands"
+    },
+    {
+      "clue": "Explorer Spot: Where did the Chernobyl nuclear disaster occur in 1986",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 51.389,
+        "lng": 30.0979
+      },
+      "country": "Ukraine"
+    },
+    {
+      "clue": "Which country is associated with \"Where did the Chernobyl nuclear disaster occur in 1986\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.389,
+        "lng": 30.0979
+      },
+      "country": "Ukraine",
+      "answer": "Ukraine"
+    },
+    {
+      "clue": "Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.389,
+        "lng": 30.0979
+      },
+      "country": "Ukraine"
+    },
+    {
+      "clue": "Explorer Spot: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
+      "country": "Nepal"
+    },
+    {
+      "clue": "Which country is associated with \"Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
+      "country": "Nepal",
+      "answer": "Nepal"
+    },
+    {
+      "clue": "Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
+      "country": "Nepal"
+    },
+    {
+      "clue": "Explorer Spot: Where was the Magna Carta signed in 1215",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.4316,
+        "lng": -0.5632
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Which country is associated with \"Where was the Magna Carta signed in 1215\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 51.4316,
+        "lng": -0.5632
+      },
+      "country": "United Kingdom",
+      "answer": "United Kingdom"
+    },
+    {
+      "clue": "Regional Focus: Where was the Magna Carta signed in 1215",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.4316,
+        "lng": -0.5632
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Explorer Spot: In which city did Martin Luther King Jr. deliver his 'I Have a Dream' speech",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 38.8893,
+        "lng": -77.0502
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"In which city did Martin Luther King Jr. deliver his 'I Have a Dream' speech\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 38.8893,
+        "lng": -77.0502
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: In which city did Martin Luther King Jr. deliver his 'I Have a Dream' speech",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 38.8893,
+        "lng": -77.0502
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Where is the oldest known cave painting located (over 45,000 years old)",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -4.9833,
+        "lng": 119.95
+      },
+      "country": "Indonesia"
+    },
+    {
+      "clue": "Which country is associated with \"Where is the oldest known cave painting located (over 45,000 years old)\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -4.9833,
+        "lng": 119.95
+      },
+      "country": "Indonesia",
+      "answer": "Indonesia"
+    },
+    {
+      "clue": "Regional Focus: Where is the oldest known cave painting located (over 45,000 years old)",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": -4.9833,
+        "lng": 119.95
+      },
+      "country": "Indonesia"
+    },
+    {
+      "clue": "Explorer Spot: Which city is the birthplace of the Renaissance",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.7696,
+        "lng": 11.2558
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Which country is associated with \"Which city is the birthplace of the Renaissance\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 43.7696,
+        "lng": 11.2558
+      },
+      "country": "Italy",
+      "answer": "Italy"
+    },
+    {
+      "clue": "Regional Focus: Which city is the birthplace of the Renaissance",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.7696,
+        "lng": 11.2558
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Explorer Spot: Where was the Berlin Wall located",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 52.52,
+        "lng": 13.405
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Which country is associated with \"Where was the Berlin Wall located\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 52.52,
+        "lng": 13.405
+      },
+      "country": "Germany",
+      "answer": "Germany"
+    },
+    {
+      "clue": "Regional Focus: Where was the Berlin Wall located",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 52.52,
+        "lng": 13.405
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Explorer Spot: In which city was the first Starbucks opened in 1971",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 47.6097,
+        "lng": -122.3425
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"In which city was the first Starbucks opened in 1971\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 47.6097,
+        "lng": -122.3425
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: In which city was the first Starbucks opened in 1971",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.6097,
+        "lng": -122.3425
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Where did the Wright Brothers make their first powered flight",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 36.0176,
+        "lng": -75.6674
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Where did the Wright Brothers make their first powered flight\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 36.0176,
+        "lng": -75.6674
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Where did the Wright Brothers make their first powered flight",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 36.0176,
+        "lng": -75.6674
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Which city was the capital of the Byzantine Empire",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 41.0082,
+        "lng": 28.9784
+      },
+      "country": "Turkey"
+    },
+    {
+      "clue": "Which country is associated with \"Which city was the capital of the Byzantine Empire\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 41.0082,
+        "lng": 28.9784
+      },
+      "country": "Turkey",
+      "answer": "Turkey"
+    },
+    {
+      "clue": "Regional Focus: Which city was the capital of the Byzantine Empire",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.0082,
+        "lng": 28.9784
+      },
+      "country": "Turkey"
+    },
+    {
+      "clue": "Explorer Spot: Where is the headquarters of the International Court of Justice",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 52.0867,
+        "lng": 4.3146
+      },
+      "country": "Netherlands"
+    },
+    {
+      "clue": "Which country is associated with \"Where is the headquarters of the International Court of Justice\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 52.0867,
+        "lng": 4.3146
+      },
+      "country": "Netherlands",
+      "answer": "Netherlands"
+    },
+    {
+      "clue": "Regional Focus: Where is the headquarters of the International Court of Justice",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 52.0867,
+        "lng": 4.3146
+      },
+      "country": "Netherlands"
+    },
+    {
+      "clue": "Explorer Spot: In which city was the first iPhone unveiled in 2007",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.7849,
+        "lng": -122.4094
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"In which city was the first iPhone unveiled in 2007\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.7849,
+        "lng": -122.4094
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: In which city was the first iPhone unveiled in 2007",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 37.7849,
+        "lng": -122.4094
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Where was cleopatra's palace located before it sank into the sea",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 31.2001,
+        "lng": 29.9187
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Which country is associated with \"Where was cleopatra's palace located before it sank into the sea\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 31.2001,
+        "lng": 29.9187
+      },
+      "country": "Egypt",
+      "answer": "Egypt"
+    },
+    {
+      "clue": "Regional Focus: Where was cleopatra's palace located before it sank into the sea",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 31.2001,
+        "lng": 29.9187
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Explorer Spot: Which volcano destroyed Pompeii in 79 AD",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 40.8218,
+        "lng": 14.426
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Which country is associated with \"Which volcano destroyed Pompeii in 79 AD\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.8218,
+        "lng": 14.426
+      },
+      "country": "Italy",
+      "answer": "Italy"
+    },
+    {
+      "clue": "Regional Focus: Which volcano destroyed Pompeii in 79 AD",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 40.8218,
+        "lng": 14.426
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Explorer Spot: Where was the world's first underground railway opened in 1863",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Which country is associated with \"Where was the world's first underground railway opened in 1863\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "country": "United Kingdom",
+      "answer": "United Kingdom"
+    },
+    {
+      "clue": "Regional Focus: Where was the world's first underground railway opened in 1863",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Explorer Spot: In which city is the Nobel Peace Prize ceremony held",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 59.9139,
+        "lng": 10.7522
+      },
+      "country": "Norway"
+    },
+    {
+      "clue": "Which country is associated with \"In which city is the Nobel Peace Prize ceremony held\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 59.9139,
+        "lng": 10.7522
+      },
+      "country": "Norway",
+      "answer": "Norway"
+    },
+    {
+      "clue": "Regional Focus: In which city is the Nobel Peace Prize ceremony held",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 59.9139,
+        "lng": 10.7522
+      },
+      "country": "Norway"
+    },
+    {
+      "clue": "Explorer Spot: Amazon River",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -3.119,
+        "lng": -60.0217
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Which country is associated with \"Amazon River\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -3.119,
+        "lng": -60.0217
+      },
+      "country": "Brazil",
+      "answer": "Brazil"
+    },
+    {
+      "clue": "Regional Focus: Amazon River",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": -3.119,
+        "lng": -60.0217
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Explorer Spot: Nile River",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Which country is associated with \"Nile River\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
+      "country": "Egypt",
+      "answer": "Egypt"
+    },
+    {
+      "clue": "Regional Focus: Nile River",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Explorer Spot: Mississippi River",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 29.1511,
+        "lng": -89.2495
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Mississippi River\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 29.1511,
+        "lng": -89.2495
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Mississippi River",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 29.1511,
+        "lng": -89.2495
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Danube River",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
+      "country": "Austria"
+    },
+    {
+      "clue": "Which country is associated with \"Danube River\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
+      "country": "Austria",
+      "answer": "Austria"
+    },
+    {
+      "clue": "Regional Focus: Danube River",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
+      "country": "Austria"
+    },
+    {
+      "clue": "Explorer Spot: Yangtze River",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.5728,
+        "lng": 117.27
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Which country is associated with \"Yangtze River\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 30.5728,
+        "lng": 117.27
+      },
+      "country": "China",
+      "answer": "China"
+    },
+    {
+      "clue": "Regional Focus: Yangtze River",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 30.5728,
+        "lng": 117.27
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Explorer Spot: Mount Kilimanjaro",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -3.0674,
+        "lng": 37.3556
+      },
+      "country": "Tanzania"
+    },
+    {
+      "clue": "Which country is associated with \"Mount Kilimanjaro\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -3.0674,
+        "lng": 37.3556
+      },
+      "country": "Tanzania",
+      "answer": "Tanzania"
+    },
+    {
+      "clue": "Regional Focus: Mount Kilimanjaro",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -3.0674,
+        "lng": 37.3556
+      },
+      "country": "Tanzania"
+    },
+    {
+      "clue": "Explorer Spot: Mount Everest",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
+      "country": "Nepal"
+    },
+    {
+      "clue": "Which country is associated with \"Mount Everest\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
+      "country": "Nepal",
+      "answer": "Nepal"
+    },
+    {
+      "clue": "Regional Focus: Mount Everest",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 27.9881,
+        "lng": 86.925
+      },
+      "country": "Nepal"
+    },
+    {
+      "clue": "Explorer Spot: Matterhorn",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.9763,
+        "lng": 7.6586
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Which country is associated with \"Matterhorn\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 45.9763,
+        "lng": 7.6586
+      },
+      "country": "Switzerland",
+      "answer": "Switzerland"
+    },
+    {
+      "clue": "Regional Focus: Matterhorn",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 45.9763,
+        "lng": 7.6586
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Explorer Spot: Mount McKinley (Denali)",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 63.0695,
+        "lng": -151.0074
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Mount McKinley (Denali)\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 63.0695,
+        "lng": -151.0074
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Mount McKinley (Denali)",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 63.0695,
+        "lng": -151.0074
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: K2",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 35.8808,
+        "lng": 76.5155
+      },
+      "country": "Pakistan"
+    },
+    {
+      "clue": "Which country is associated with \"K2\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 35.8808,
+        "lng": 76.5155
+      },
+      "country": "Pakistan",
+      "answer": "Pakistan"
+    },
+    {
+      "clue": "Regional Focus: K2",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 35.8808,
+        "lng": 76.5155
+      },
+      "country": "Pakistan"
+    },
+    {
+      "clue": "Explorer Spot: Lake Baikal",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 53.5587,
+        "lng": 108.165
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Which country is associated with \"Lake Baikal\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 53.5587,
+        "lng": 108.165
+      },
+      "country": "Russia",
+      "answer": "Russia"
+    },
+    {
+      "clue": "Regional Focus: Lake Baikal",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 53.5587,
+        "lng": 108.165
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Explorer Spot: Lake Victoria",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -1.2921,
+        "lng": 32.8561
+      },
+      "country": "Uganda"
+    },
+    {
+      "clue": "Which country is associated with \"Lake Victoria\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -1.2921,
+        "lng": 32.8561
+      },
+      "country": "Uganda",
+      "answer": "Uganda"
+    },
+    {
+      "clue": "Regional Focus: Lake Victoria",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -1.2921,
+        "lng": 32.8561
+      },
+      "country": "Uganda"
+    },
+    {
+      "clue": "Explorer Spot: Lake Titicaca",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -15.9254,
+        "lng": -69.3354
+      },
+      "country": "Peru"
+    },
+    {
+      "clue": "Which country is associated with \"Lake Titicaca\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -15.9254,
+        "lng": -69.3354
+      },
+      "country": "Peru",
+      "answer": "Peru"
+    },
+    {
+      "clue": "Regional Focus: Lake Titicaca",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": -15.9254,
+        "lng": -69.3354
+      },
+      "country": "Peru"
+    },
+    {
+      "clue": "Explorer Spot: Great Lakes - Lake Superior",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 47.7,
+        "lng": -87.5
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Great Lakes - Lake Superior\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.7,
+        "lng": -87.5
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Great Lakes - Lake Superior",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 47.7,
+        "lng": -87.5
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Dead Sea",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 31.5,
+        "lng": 35.5
+      },
+      "country": "Israel"
+    },
+    {
+      "clue": "Which country is associated with \"Dead Sea\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 31.5,
+        "lng": 35.5
+      },
+      "country": "Israel",
+      "answer": "Israel"
+    },
+    {
+      "clue": "Regional Focus: Dead Sea",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 31.5,
+        "lng": 35.5
+      },
+      "country": "Israel"
+    },
+    {
+      "clue": "Explorer Spot: Sahara Desert",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 23.4162,
+        "lng": 25.6628
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Which country is associated with \"Sahara Desert\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 23.4162,
+        "lng": 25.6628
+      },
+      "country": "Egypt",
+      "answer": "Egypt"
+    },
+    {
+      "clue": "Regional Focus: Sahara Desert",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 23.4162,
+        "lng": 25.6628
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Explorer Spot: Gobi Desert",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 42.5944,
+        "lng": 103.4314
+      },
+      "country": "Mongolia"
+    },
+    {
+      "clue": "Which country is associated with \"Gobi Desert\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 42.5944,
+        "lng": 103.4314
+      },
+      "country": "Mongolia",
+      "answer": "Mongolia"
+    },
+    {
+      "clue": "Regional Focus: Gobi Desert",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.5944,
+        "lng": 103.4314
+      },
+      "country": "Mongolia"
+    },
+    {
+      "clue": "Explorer Spot: Atacama Desert",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -24.5,
+        "lng": -69.25
+      },
+      "country": "Chile"
+    },
+    {
+      "clue": "Which country is associated with \"Atacama Desert\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -24.5,
+        "lng": -69.25
+      },
+      "country": "Chile",
+      "answer": "Chile"
+    },
+    {
+      "clue": "Regional Focus: Atacama Desert",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -24.5,
+        "lng": -69.25
+      },
+      "country": "Chile"
+    },
+    {
+      "clue": "Explorer Spot: Mojave Desert",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 35.011,
+        "lng": -115.4734
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Mojave Desert\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 35.011,
+        "lng": -115.4734
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Mojave Desert",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 35.011,
+        "lng": -115.4734
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Madagascar",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": -18.7669,
+        "lng": 46.8691
+      },
+      "country": "Madagascar"
+    },
+    {
+      "clue": "Which country is associated with \"Madagascar\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": -18.7669,
+        "lng": 46.8691
+      },
+      "country": "Madagascar",
+      "answer": "Madagascar"
+    },
+    {
+      "clue": "Regional Focus: Madagascar",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": -18.7669,
+        "lng": 46.8691
+      },
+      "country": "Madagascar"
+    },
+    {
+      "clue": "Explorer Spot: Galápagos Islands",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -0.9538,
+        "lng": -90.9656
+      },
+      "country": "Ecuador"
+    },
+    {
+      "clue": "Which country is associated with \"Galápagos Islands\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -0.9538,
+        "lng": -90.9656
+      },
+      "country": "Ecuador",
+      "answer": "Ecuador"
+    },
+    {
+      "clue": "Regional Focus: Galápagos Islands",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -0.9538,
+        "lng": -90.9656
+      },
+      "country": "Ecuador"
+    },
+    {
+      "clue": "Explorer Spot: Hawaii (Big Island)",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 19.8968,
+        "lng": -155.5828
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Hawaii (Big Island)\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 19.8968,
+        "lng": -155.5828
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Hawaii (Big Island)",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 19.8968,
+        "lng": -155.5828
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Greenland",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 71.7069,
+        "lng": -42.6043
+      },
+      "country": "Greenland"
+    },
+    {
+      "clue": "Which country is associated with \"Greenland\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 71.7069,
+        "lng": -42.6043
+      },
+      "country": "Greenland",
+      "answer": "Greenland"
+    },
+    {
+      "clue": "Regional Focus: Greenland",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 71.7069,
+        "lng": -42.6043
+      },
+      "country": "Greenland"
+    },
+    {
+      "clue": "Explorer Spot: Bora Bora",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -16.5004,
+        "lng": -151.7415
+      },
+      "country": "French Polynesia"
+    },
+    {
+      "clue": "Which country is associated with \"Bora Bora\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -16.5004,
+        "lng": -151.7415
+      },
+      "country": "French Polynesia",
+      "answer": "French Polynesia"
+    },
+    {
+      "clue": "Regional Focus: Bora Bora",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -16.5004,
+        "lng": -151.7415
+      },
+      "country": "French Polynesia"
+    },
+    {
+      "clue": "Explorer Spot: Great Barrier Reef",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -18.2871,
+        "lng": 147.6992
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Which country is associated with \"Great Barrier Reef\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -18.2871,
+        "lng": 147.6992
+      },
+      "country": "Australia",
+      "answer": "Australia"
+    },
+    {
+      "clue": "Regional Focus: Great Barrier Reef",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": -18.2871,
+        "lng": 147.6992
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Explorer Spot: Mariana Trench",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 11.3493,
+        "lng": 142.1996
+      },
+      "country": "Pacific Ocean"
+    },
+    {
+      "clue": "Which country is associated with \"Mariana Trench\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 11.3493,
+        "lng": 142.1996
+      },
+      "country": "Pacific Ocean",
+      "answer": "Pacific Ocean"
+    },
+    {
+      "clue": "Regional Focus: Mariana Trench",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 11.3493,
+        "lng": 142.1996
+      },
+      "country": "Pacific Ocean"
+    },
+    {
+      "clue": "Explorer Spot: Strait of Gibraltar",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 35.9745,
+        "lng": -5.5
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Which country is associated with \"Strait of Gibraltar\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 35.9745,
+        "lng": -5.5
+      },
+      "country": "Spain",
+      "answer": "Spain"
+    },
+    {
+      "clue": "Regional Focus: Strait of Gibraltar",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 35.9745,
+        "lng": -5.5
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Explorer Spot: Panama Canal",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 9.08,
+        "lng": -79.68
+      },
+      "country": "Panama"
+    },
+    {
+      "clue": "Which country is associated with \"Panama Canal\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 9.08,
+        "lng": -79.68
+      },
+      "country": "Panama",
+      "answer": "Panama"
+    },
+    {
+      "clue": "Regional Focus: Panama Canal",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 9.08,
+        "lng": -79.68
+      },
+      "country": "Panama"
+    },
+    {
+      "clue": "Explorer Spot: Suez Canal",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.455,
+        "lng": 32.35
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Which country is associated with \"Suez Canal\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 30.455,
+        "lng": 32.35
+      },
+      "country": "Egypt",
+      "answer": "Egypt"
+    },
+    {
+      "clue": "Regional Focus: Suez Canal",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 30.455,
+        "lng": 32.35
+      },
+      "country": "Egypt"
+    },
+    {
+      "clue": "Explorer Spot: Mont Saint-Michel",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 48.6361,
+        "lng": -1.5115
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Which country is associated with \"Mont Saint-Michel\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 48.6361,
+        "lng": -1.5115
+      },
+      "country": "France",
+      "answer": "France"
+    },
+    {
+      "clue": "Regional Focus: Mont Saint-Michel",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": 48.6361,
+        "lng": -1.5115
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Explorer Spot: Alhambra",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 37.1761,
+        "lng": -3.5881
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Which country is associated with \"Alhambra\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.1761,
+        "lng": -3.5881
+      },
+      "country": "Spain",
+      "answer": "Spain"
+    },
+    {
+      "clue": "Regional Focus: Alhambra",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.1761,
+        "lng": -3.5881
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Explorer Spot: Mount Rushmore",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.8791,
+        "lng": -103.4591
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Which country is associated with \"Mount Rushmore\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 43.8791,
+        "lng": -103.4591
+      },
+      "country": "United States",
+      "answer": "United States"
+    },
+    {
+      "clue": "Regional Focus: Mount Rushmore",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.8791,
+        "lng": -103.4591
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Explorer Spot: Moai of Easter Island",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -27.1212,
+        "lng": -109.3664
+      },
+      "country": "Chile"
+    },
+    {
+      "clue": "Which country is associated with \"Moai of Easter Island\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -27.1212,
+        "lng": -109.3664
+      },
+      "country": "Chile",
+      "answer": "Chile"
+    },
+    {
+      "clue": "Regional Focus: Moai of Easter Island",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "easy",
+      "target": {
+        "lat": -27.1212,
+        "lng": -109.3664
+      },
+      "country": "Chile"
+    },
+    {
+      "clue": "Explorer Spot: Shwedagon Pagoda",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 16.7983,
+        "lng": 96.1496
+      },
+      "country": "Myanmar"
+    },
+    {
+      "clue": "Which country is associated with \"Shwedagon Pagoda\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 16.7983,
+        "lng": 96.1496
+      },
+      "country": "Myanmar",
+      "answer": "Myanmar"
+    },
+    {
+      "clue": "Regional Focus: Shwedagon Pagoda",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 16.7983,
+        "lng": 96.1496
+      },
+      "country": "Myanmar"
+    },
+    {
+      "clue": "Explorer Spot: Buda Castle",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 47.4967,
+        "lng": 19.0399
+      },
+      "country": "Hungary"
+    },
+    {
+      "clue": "Which country is associated with \"Buda Castle\"?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.4967,
+        "lng": 19.0399
+      },
+      "country": "Hungary",
+      "answer": "Hungary"
+    },
+    {
+      "clue": "Regional Focus: Buda Castle",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 47.4967,
+        "lng": 19.0399
+      },
+      "country": "Hungary"
     }
   ]
 }

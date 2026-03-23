@@ -1,0 +1,63 @@
+name: Seed Database
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to seed'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+  schedule:
+    # Optionally seed weekly (commented out by default)
+    # - cron: '0 2 * * 0'  # Every Sunday at 2 AM UTC
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment || 'production' }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify locations data
+        run: |
+          node -e "
+            const data = require('./data/locations.json');
+            console.log('Total locations:', data.locations.length);
+            const byCat = {};
+            data.locations.forEach(l => {
+              byCat[l.category] = (byCat[l.category] || 0) + 1;
+            });
+            console.log('By category:', byCat);
+          "
+
+      - name: Seed database
+        run: npm run seed
+        env:
+          API_URL: ${{ vars.API_URL }}
+          FUNCTION_KEY: ${{ secrets.AZURE_FUNCTION_KEY }}
+
+      - name: Notify on success
+        if: success()
+        run: echo "✓ Database seeding completed successfully"
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "✗ Database seeding failed"
+          echo "Check that your API_URL and FUNCTION_KEY secrets are set correctly"
+          exit 1

@@ -7,7 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "seed": "node scripts/seed-locations.js"
+    "seed": "node scripts/seed-locations.js",
+    "add-location": "node scripts/add-location.js"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

@@ -26,6 +26,16 @@ export default function ProfileScreen() {
     );
   }
 
+  if (!user) {
+    return (
+      <View style={styles.guestContainer}>
+        <Pressable style={styles.signInButton} onPress={signIn}>
+          <Text style={styles.signInButtonText}>Sign In with Google</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
       {/* User profile */}
@@ -44,9 +54,6 @@ export default function ProfileScreen() {
         </Text>
         {user?.email && (
           <Text style={styles.emailText}>{user.email}</Text>
-        )}
-        {!user && (
-          <Text style={styles.signInHint}>Sign in to sync your progress across devices</Text>
         )}
       </View>
 
@@ -106,22 +113,14 @@ export default function ProfileScreen() {
         </View>
       </View>
 
-      {/* Sign in/out button */}
-      {user ? (
-        <Pressable style={styles.signOutButton} onPress={signOut}>
-          <Text style={styles.signOutButtonText}>Sign Out</Text>
-        </Pressable>
-      ) : (
-        <Pressable style={styles.signInButton} onPress={signIn}>
-          <Text style={styles.signInButtonText}>Sign In with Google</Text>
-        </Pressable>
-      )}
+      {/* Sign out button */}
+      <Pressable style={styles.signOutButton} onPress={signOut}>
+        <Text style={styles.signOutButtonText}>Sign Out</Text>
+      </Pressable>
 
-      {user && (
-        <Text style={styles.syncInfo}>
-          Your progress is synced to your account
-        </Text>
-      )}
+      <Text style={styles.syncInfo}>
+        Your progress is synced to your account
+      </Text>
     </ScrollView>
   );
 }
@@ -138,6 +137,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#1A202C',
+  },
+  guestContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
     backgroundColor: '#1A202C',
   },
   avatarContainer: {
@@ -173,12 +178,6 @@ const styles = StyleSheet.create({
     color: '#718096',
     fontSize: 14,
     marginTop: 4,
-  },
-  signInHint: {
-    color: '#718096',
-    fontSize: 14,
-    marginTop: 8,
-    textAlign: 'center',
   },
   statsCard: {
     backgroundColor: 'rgba(255, 255, 255, 0.05)',

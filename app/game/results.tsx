@@ -14,6 +14,7 @@ export default function ResultsScreen() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [copied, setCopied] = useState(false);
   const [synced, setSynced] = useState(false);
+  const [syncError, setSyncError] = useState<string | null>(null);
 
   // Check if this is a daily puzzle (date-based ID)
   const isDailyPuzzle = puzzle && /^\d{4}-\d{2}-\d{2}$/.test(puzzle.id);
@@ -38,7 +39,7 @@ export default function ResultsScreen() {
             const locationIds = puzzle.rounds
               .map(r => r.locationId)
               .filter((id): id is string => id !== undefined);
-            await submitScore(
+            const submitResponse = await submitScore(
               puzzle.date,
               user.id,
               user.name,
@@ -47,9 +48,23 @@ export default function ResultsScreen() {
               validToken || undefined,
               locationIds.length > 0 ? locationIds : undefined
             );
-            setSynced(true);
+
+            if (submitResponse.error) {
+              if (submitResponse.errorCode === 'DUPLICATE_SUBMISSION') {
+                setSynced(true);
+                setSyncError(null);
+              } else {
+                setSynced(false);
+                setSyncError(submitResponse.error);
+              }
+            } else {
+              setSynced(true);
+              setSyncError(null);
+            }
           } catch (error) {
             console.error('Failed to sync score:', error);
+            setSynced(false);
+            setSyncError('Network error while syncing score.');
           }
         }
       }
@@ -198,6 +213,13 @@ Play at: ${appUrl}`;
 
       {/* Actions */}
       <View style={styles.actionsContainer}>
+        {user && isDailyPuzzle && synced && (
+          <Text style={styles.syncSuccessText}>Score synced to leaderboard</Text>
+        )}
+        {user && isDailyPuzzle && syncError && (
+          <Text style={styles.syncErrorText}>{syncError}</Text>
+        )}
+
         <Pressable style={styles.shareButton} onPress={handleShare}>
           <Text style={styles.shareButtonText}>
             {copied ? 'Copied!' : Platform.OS === 'web' ? 'Copy Results' : 'Share Results'}
@@ -314,6 +336,16 @@ const styles = StyleSheet.create({
   actionsContainer: {
     marginTop: 32,
     gap: 12,
+  },
+  syncSuccessText: {
+    color: '#4ECDC4',
+    fontSize: 13,
+    textAlign: 'center',
+  },
+  syncErrorText: {
+    color: '#FFB86B',
+    fontSize: 13,
+    textAlign: 'center',
   },
   shareButton: {
     backgroundColor: '#4ECDC4',

@@ -6,6 +6,28 @@ const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:7071/a
 interface ApiResponse<T> {
   data?: T;
   error?: string;
+  errorCode?: string;
+  status?: number;
+}
+
+function mapApiErrorMessage(status: number, code?: string, fallback?: string): string {
+  if (code === 'DUPLICATE_SUBMISSION') {
+    return 'Score already submitted for today.';
+  }
+
+  if (code === 'AUTH_REQUIRED' || code === 'INVALID_AUTH_TOKEN') {
+    return 'Please sign in again to sync your score.';
+  }
+
+  if (code === 'DATE_SCORE_MISMATCH' || code === 'INVALID_TOTAL_SCORE' || code === 'INVALID_ROUND_SCORE') {
+    return 'Invalid score payload. Please try again.';
+  }
+
+  if (status >= 500) {
+    return 'Server error. Please try again shortly.';
+  }
+
+  return fallback || `HTTP ${status}`;
 }
 
 async function fetchApi<T>(
@@ -23,14 +45,21 @@ async function fetchApi<T>(
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      return { error: errorData.error || `HTTP ${response.status}` };
+      const errorCode = typeof errorData.code === 'string' ? errorData.code : undefined;
+      const rawError = typeof errorData.error === 'string' ? errorData.error : undefined;
+
+      return {
+        error: mapApiErrorMessage(response.status, errorCode, rawError),
+        errorCode,
+        status: response.status,
+      };
     }
 
     const data = await response.json();
-    return { data };
+    return { data, status: response.status };
   } catch (error) {
     console.error('API Error:', error);
-    return { error: 'Network error' };
+    return { error: 'Network error', errorCode: 'NETWORK_ERROR' };
   }
 }
 

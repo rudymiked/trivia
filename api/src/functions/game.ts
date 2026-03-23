@@ -14,7 +14,9 @@ interface ScoreSubmission {
 // Validation helpers
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_DISPLAY_NAME_LENGTH = 50;
-const MAX_SCORE = 25000; // 5 rounds * 5000 max per round
+const EXPECTED_DAILY_ROUNDS = 5;
+const MAX_ROUND_SCORE = 5000;
+const MAX_TOTAL_SCORE = EXPECTED_DAILY_ROUNDS * MAX_ROUND_SCORE;
 // Allow alphanumeric, hyphens, underscores, and periods (covers Google IDs and other OAuth providers)
 const SAFE_USERID_REGEX = /^[a-zA-Z0-9._-]+$/;
 
@@ -43,6 +45,16 @@ function sanitizeDisplayName(name: string | undefined): string {
     .replace(/[<>"'&]/g, '')
     .trim()
     .slice(0, MAX_DISPLAY_NAME_LENGTH) || 'Anonymous';
+}
+
+function rejectionResponse(status: number, code: string, message: string): HttpResponseInit {
+  return {
+    status,
+    jsonBody: {
+      code,
+      error: message,
+    },
+  };
 }
 
 // Get daily puzzle - dynamically generated from locations
@@ -145,81 +157,150 @@ app.http('submitScore', {
 
       // Validate required fields
       if (!date || !userId || totalScore === undefined) {
-        return {
-          status: 400,
-          jsonBody: { error: 'Missing required fields: date, userId, totalScore' },
-        };
+        context.log('[submitScore] rejected: missing required fields');
+        return rejectionResponse(400, 'MISSING_REQUIRED_FIELDS', 'Missing required fields: date, userId, totalScore');
       }
 
       // Validate date format
       if (!isValidDate(date)) {
-        return {
-          status: 400,
-          jsonBody: { error: 'Invalid date format. Use YYYY-MM-DD.' },
-        };
+        context.log(`[submitScore] rejected: invalid date format (${date})`);
+        return rejectionResponse(400, 'INVALID_DATE_FORMAT', 'Invalid date format. Use YYYY-MM-DD.');
       }
 
-      // Validate score is reasonable
-      if (typeof totalScore !== 'number' || totalScore < 0 || totalScore > MAX_SCORE) {
-        return {
-          status: 400,
-          jsonBody: { error: 'Invalid score' },
-        };
+      // Validate rounds payload and bounds
+      if (!Array.isArray(rounds) || rounds.length !== EXPECTED_DAILY_ROUNDS) {
+        context.log(`[submitScore] rejected: invalid rounds length (${Array.isArray(rounds) ? rounds.length : 'not-array'})`);
+        return rejectionResponse(
+          400,
+          'INVALID_ROUNDS_COUNT',
+          `Invalid rounds payload: expected ${EXPECTED_DAILY_ROUNDS} round scores.`
+        );
+      }
+
+      const hasInvalidRoundScore = rounds.some(
+        (roundScore) =>
+          typeof roundScore !== 'number' ||
+          !Number.isFinite(roundScore) ||
+          roundScore < 0 ||
+          roundScore > MAX_ROUND_SCORE
+      );
+
+      if (hasInvalidRoundScore) {
+        context.log('[submitScore] rejected: one or more round scores are out of bounds');
+        return rejectionResponse(
+          400,
+          'INVALID_ROUND_SCORE',
+          `Each round score must be a number between 0 and ${MAX_ROUND_SCORE}.`
+        );
+      }
+
+      // Validate total score bounds
+      if (
+        typeof totalScore !== 'number' ||
+        !Number.isFinite(totalScore) ||
+        totalScore < 0 ||
+        totalScore > MAX_TOTAL_SCORE
+      ) {
+        context.log(`[submitScore] rejected: total score out of bounds (${totalScore})`);
+        return rejectionResponse(
+          400,
+          'INVALID_TOTAL_SCORE',
+          `Total score must be a number between 0 and ${MAX_TOTAL_SCORE}.`
+        );
+      }
+
+      // Validate date/score payload consistency (date present and total roughly matches rounds)
+      const roundsSum = rounds.reduce((sum, score) => sum + score, 0);
+      if (Math.abs(roundsSum - totalScore) > EXPECTED_DAILY_ROUNDS) {
+        context.log(
+          `[submitScore] rejected: payload mismatch (totalScore=${totalScore}, roundsSum=${roundsSum}, date=${date})`
+        );
+        return rejectionResponse(
+          400,
+          'DATE_SCORE_MISMATCH',
+          'Payload mismatch: totalScore does not match round scores for the submitted date.'
+        );
       }
 
       // Check for auth token and validate if present
       const authHeader = request.headers.get('authorization');
       const token = extractBearerToken(authHeader);
+      if (!token) {
+        context.log(`[submitScore] rejected: missing auth token for userId=${userId}, date=${date}`);
+        return rejectionResponse(401, 'AUTH_REQUIRED', 'Authentication is required to submit scores.');
+      }
+
       let verifiedUserId = userId;
       let verifiedDisplayName = sanitizeDisplayName(displayName);
       let isVerified = false;
 
-      if (token) {
-        const verifiedUser = await verifyGoogleToken(token);
-        if (verifiedUser) {
-          // Use the verified user's ID instead of the client-provided one
-          verifiedUserId = verifiedUser.userId;
-          verifiedDisplayName = sanitizeDisplayName(verifiedUser.name);
-          isVerified = true;
-        } else {
-          // Token was provided but invalid
-          return {
-            status: 401,
-            jsonBody: { error: 'Invalid authentication token' },
-          };
+      const verifiedUser = await verifyGoogleToken(token);
+      if (verifiedUser) {
+        // Reject submissions where payload userId doesn't match authenticated user
+        if (verifiedUser.userId !== userId) {
+          context.log(
+            `[submitScore] rejected: user mismatch payload=${userId} token=${verifiedUser.userId} date=${date}`
+          );
+          return rejectionResponse(
+            403,
+            'USER_ID_MISMATCH',
+            'Authenticated user does not match payload userId.'
+          );
         }
+
+        verifiedUserId = verifiedUser.userId;
+        verifiedDisplayName = sanitizeDisplayName(verifiedUser.name);
+        isVerified = true;
+      } else {
+        context.log(`[submitScore] rejected: invalid authentication token for userId=${userId}, date=${date}`);
+        return rejectionResponse(401, 'INVALID_AUTH_TOKEN', 'Invalid authentication token');
       }
 
       // Validate userId format
       if (!isValidUserId(verifiedUserId)) {
-        return {
-          status: 400,
-          jsonBody: { error: 'Invalid userId' },
-        };
+        context.log(`[submitScore] rejected: invalid userId format (${verifiedUserId})`);
+        return rejectionResponse(400, 'INVALID_USER_ID', 'Invalid userId');
       }
 
       const client = getTableClient('scores');
+      const gamesClient = getTableClient('games');
+
+      // Enforce one daily submission per user/date
+      try {
+        await gamesClient.getEntity(verifiedUserId, date);
+        context.log(`[submitScore] rejected: duplicate submission userId=${verifiedUserId}, date=${date}`);
+        return rejectionResponse(
+          409,
+          'DUPLICATE_SUBMISSION',
+          'A score for this user and date already exists.'
+        );
+      } catch (error: any) {
+        if (error.statusCode !== 404) {
+          throw error;
+        }
+      }
+
+      const completedAt = new Date().toISOString();
       const scoreEntity = {
         partitionKey: date,
         rowKey: verifiedUserId,
         displayName: verifiedDisplayName,
         totalScore,
         rounds: JSON.stringify(rounds),
-        completedAt: new Date().toISOString(),
+        completedAt,
         isVerified,
       };
 
       await client.upsertEntity(scoreEntity);
 
       // Also save to games table (partitioned by userId for user queries)
-      const gamesClient = getTableClient('games');
       await gamesClient.upsertEntity({
         partitionKey: verifiedUserId,
         rowKey: date,
         displayName: verifiedDisplayName,
         totalScore,
         rounds: JSON.stringify(rounds),
-        completedAt: new Date().toISOString(),
+        completedAt,
         isVerified,
         puzzleType: 'daily',
       });

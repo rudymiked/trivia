@@ -1,3 +1,4 @@
+import { useAuth } from '@/hooks/useAuth';
 import { getTimeUntilNextPuzzle, getTodayDate, hasPlayedToday } from '@/services/puzzle';
 import { getUserProgress, type UserProgress } from '@/services/storage';
 import { Href, useRouter } from 'expo-router';
@@ -6,6 +7,7 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-nati
 
 export default function HomeScreen() {
   const router = useRouter();
+  const { user } = useAuth();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +38,20 @@ export default function HomeScreen() {
   const handlePlayModes = () => {
     router.push('/play-modes' as Href);
   };
+
+  const handleGoToProfile = () => {
+    router.push('/profile' as Href);
+  };
+
+  const renderGuestLoginCta = () => (
+    <Pressable style={styles.loginCard} onPress={handleGoToProfile}>
+      <Text style={styles.loginCardTitle}>Want more ways to play?</Text>
+      <Text style={styles.loginCardBody}>
+        Sign in to unlock Play Modes and leaderboard placement.
+      </Text>
+      <Text style={styles.loginCardLink}>Go to Profile to log in</Text>
+    </Pressable>
+  );
 
   const alreadyPlayed = progress && hasPlayedToday(progress.lastPlayedDate);
 
@@ -83,18 +99,26 @@ export default function HomeScreen() {
             {String(countdown.minutes).padStart(2, '0')}:
             {String(countdown.seconds).padStart(2, '0')}
           </Text>
-          <Pressable style={styles.modesButton} onPress={handlePlayModes}>
-            <Text style={styles.modesButtonText}>Play Modes</Text>
-          </Pressable>
+          {user ? (
+            <Pressable style={styles.modesButton} onPress={handlePlayModes}>
+              <Text style={styles.modesButtonText}>Play Modes</Text>
+            </Pressable>
+          ) : (
+            renderGuestLoginCta()
+          )}
         </View>
       ) : (
         <View style={styles.playContainer}>
           <Pressable style={styles.playButton} onPress={handlePlay}>
             <Text style={styles.playButtonText}>Play Today's Puzzle</Text>
           </Pressable>
-          <Pressable style={styles.modesButton} onPress={handlePlayModes}>
-            <Text style={styles.modesButtonText}>Play Modes</Text>
-          </Pressable>
+          {user ? (
+            <Pressable style={styles.modesButton} onPress={handlePlayModes}>
+              <Text style={styles.modesButtonText}>Play Modes</Text>
+            </Pressable>
+          ) : (
+            renderGuestLoginCta()
+          )}
           <Text style={styles.dateText}>
             {new Date().toLocaleDateString('en-US', {
               weekday: 'long',
@@ -251,6 +275,36 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '600',
+  },
+  loginCard: {
+    width: '100%',
+    marginTop: 16,
+    paddingHorizontal: 18,
+    paddingVertical: 16,
+    borderRadius: 16,
+    backgroundColor: 'rgba(78, 205, 196, 0.1)',
+    borderWidth: 1,
+    borderColor: 'rgba(78, 205, 196, 0.28)',
+  },
+  loginCardTitle: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginBottom: 6,
+  },
+  loginCardBody: {
+    color: '#A0AEC0',
+    fontSize: 14,
+    textAlign: 'center',
+    lineHeight: 20,
+    marginBottom: 10,
+  },
+  loginCardLink: {
+    color: '#4ECDC4',
+    fontSize: 14,
+    fontWeight: '700',
+    textAlign: 'center',
   },
   instructionsContainer: {
     backgroundColor: 'rgba(255, 255, 255, 0.05)',

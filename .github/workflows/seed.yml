@@ -11,9 +11,6 @@ on:
         options:
           - production
           - staging
-  schedule:
-    # Optionally seed weekly (commented out by default)
-    # - cron: '0 2 * * 0'  # Every Sunday at 2 AM UTC
 
 jobs:
   seed:

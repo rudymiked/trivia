@@ -14,7 +14,7 @@ describe('PinPoint Core Journey Smoke Tests', () => {
   const TEST_DATE = new Date().toISOString().split('T')[0];
   const TEST_USER_ID = 'test-smoke-user-' + Date.now();
   const TEST_AUTH_TOKEN = process.env.TEST_AUTH_TOKEN?.trim();
-  const HAS_AUTH_TOKEN = Boolean(TEST_AUTH_TOKEN);
+  const HAS_AUTH_TOKEN = Boolean(TEST_AUTH_TOKEN && TEST_AUTH_TOKEN !== 'test-token');
   const describeAuth = HAS_AUTH_TOKEN ? describe : describe.skip;
 
   // Helper: Make API request

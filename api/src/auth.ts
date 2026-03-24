@@ -11,6 +11,13 @@ export interface VerifiedUser {
   picture?: string;
 }
 
+function getAdminEmails(): string[] {
+  return (process.env.ADMIN_EMAILS || '')
+    .split(',')
+    .map((email) => email.trim().toLowerCase())
+    .filter(Boolean);
+}
+
 export async function verifyGoogleToken(token: string): Promise<VerifiedUser | null> {
   if (!GOOGLE_CLIENT_ID) {
     console.warn('GOOGLE_CLIENT_ID_WEB not configured, skipping token validation');
@@ -46,4 +53,9 @@ export function extractBearerToken(authHeader: string | null): string | null {
     return null;
   }
   return authHeader.slice(7);
+}
+
+export function isAdminEmail(email: string | undefined | null): boolean {
+  if (!email) return false;
+  return getAdminEmails().includes(email.trim().toLowerCase());
 }

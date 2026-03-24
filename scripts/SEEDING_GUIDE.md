@@ -17,7 +17,7 @@ If your API is deployed to Azure Functions:
 az functionapp keys list --name your-api-name --resource-group your-resource-group --query "functionKeys.default" -o tsv
 
 # Or manually in Azure Portal:
-# 1. Go to Azure Portal → Function Apps → your-api-name
+# 1. Go to Azure Portal -> Function Apps -> your-api-name
 # 2. Navigate to App Keys (under Settings)
 # 3. Copy the default function key
 ```

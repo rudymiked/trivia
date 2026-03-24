@@ -1,7 +1,9 @@
 import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
-import { submitScore } from '@/services/api';
+import { submitClueFeedback, submitScore } from '@/services/api';
 import { getUserProgress, saveDailyResult, saveGameResult, type UserProgress } from '@/services/storage';
+import { trackTelemetryEvent } from '@/services/telemetry';
+import { ClueFeedbackRating } from '@/types/game';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
@@ -15,6 +17,9 @@ export default function ResultsScreen() {
   const [copied, setCopied] = useState(false);
   const [synced, setSynced] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [feedbackByLocationId, setFeedbackByLocationId] = useState<Record<string, ClueFeedbackRating>>({});
+  const [feedbackErrorByLocationId, setFeedbackErrorByLocationId] = useState<Record<string, string | null>>({});
+  const [submittingFeedback, setSubmittingFeedback] = useState<Record<string, boolean>>({});
 
   // Check if this is a daily puzzle (date-based ID)
   const isDailyPuzzle = puzzle && /^\d{4}-\d{2}-\d{2}$/.test(puzzle.id);
@@ -128,6 +133,51 @@ Play at: ${appUrl}`;
     signIn();
   };
 
+  const handleClueFeedback = async (roundIndex: number, feedback: ClueFeedbackRating) => {
+    if (!puzzle) return;
+
+    const round = puzzle.rounds[roundIndex];
+    const locationId = round?.locationId;
+    if (!locationId || feedbackByLocationId[locationId]) return;
+
+    setSubmittingFeedback((current) => ({ ...current, [locationId]: true }));
+    setFeedbackErrorByLocationId((current) => ({ ...current, [locationId]: null }));
+
+    try {
+      const response = await submitClueFeedback({
+        puzzleDate: puzzle.date,
+        locationId,
+        feedback,
+        clue: round.clue,
+        country: round.country,
+        answer: round.answer,
+      });
+
+      if (response.error) {
+        setFeedbackErrorByLocationId((current) => ({
+          ...current,
+          [locationId]: response.error || 'Failed to save feedback.',
+        }));
+        return;
+      }
+
+      setFeedbackByLocationId((current) => ({ ...current, [locationId]: feedback }));
+      void trackTelemetryEvent('clue_feedback_submitted', {
+        puzzleDate: puzzle.date,
+        locationId,
+        feedback,
+      });
+    } catch (error) {
+      console.error('Failed to submit clue feedback:', error);
+      setFeedbackErrorByLocationId((current) => ({
+        ...current,
+        [locationId]: 'Failed to save feedback.',
+      }));
+    } finally {
+      setSubmittingFeedback((current) => ({ ...current, [locationId]: false }));
+    }
+  };
+
   if (!puzzle) {
     return (
       <View style={styles.container}>
@@ -172,22 +222,66 @@ Play at: ${appUrl}`;
         {/* Round breakdown */}
         <View style={styles.roundsContainer}>
           {results.map((result, index) => (
-            <View key={index} style={styles.roundRow}>
-              <Text style={styles.roundLabel}>Round {index + 1}</Text>
-              <View style={styles.roundScoreContainer}>
-                <Text style={styles.roundEmoji}>
-                  {getScoreEmoji(result.score, result.multiplier)}
-                </Text>
-                <Text style={styles.roundScore}>
-                  {Math.round(result.score / result.multiplier)}
-                  {result.multiplier > 1 && (
-                    <Text style={styles.multiplier}> x{result.multiplier}</Text>
-                  )}
-                </Text>
-                <Text style={styles.roundDistance}>
-                  {Math.round(result.distanceKm)} km
-                </Text>
+            <View key={index} style={styles.roundBlock}>
+              <View style={styles.roundRow}>
+                <Text style={styles.roundLabel}>Round {index + 1}</Text>
+                <View style={styles.roundScoreContainer}>
+                  <Text style={styles.roundEmoji}>
+                    {getScoreEmoji(result.score, result.multiplier)}
+                  </Text>
+                  <Text style={styles.roundScore}>
+                    {Math.round(result.score / result.multiplier)}
+                    {result.multiplier > 1 && (
+                      <Text style={styles.multiplier}> x{result.multiplier}</Text>
+                    )}
+                  </Text>
+                  <Text style={styles.roundDistance}>
+                    {Math.round(result.distanceKm)} km
+                  </Text>
+                </View>
               </View>
+
+              {puzzle.rounds[index]?.locationId && (
+                <View style={styles.feedbackCard}>
+                  <Text style={styles.feedbackPrompt}>How was this clue?</Text>
+                  <View style={styles.feedbackButtonRow}>
+                    {(['easy', 'hard', 'unclear'] as ClueFeedbackRating[]).map((option) => {
+                      const locationId = puzzle.rounds[index].locationId as string;
+                      const isSelected = feedbackByLocationId[locationId] === option;
+                      const isDisabled = !!feedbackByLocationId[locationId] || !!submittingFeedback[locationId];
+
+                      return (
+                        <Pressable
+                          key={option}
+                          style={[
+                            styles.feedbackButton,
+                            isSelected && styles.feedbackButtonSelected,
+                          ]}
+                          onPress={() => handleClueFeedback(index, option)}
+                          disabled={isDisabled}
+                        >
+                          <Text
+                            style={[
+                              styles.feedbackButtonText,
+                              isSelected && styles.feedbackButtonTextSelected,
+                            ]}
+                          >
+                            {option === 'easy' ? 'Easy' : option === 'hard' ? 'Hard' : 'Unclear'}
+                          </Text>
+                        </Pressable>
+                      );
+                    })}
+                  </View>
+                  {feedbackByLocationId[puzzle.rounds[index].locationId as string] && (
+                    <Text style={styles.feedbackThanksText}>Thanks for rating this clue.</Text>
+                  )}
+                  {feedbackErrorByLocationId[puzzle.rounds[index].locationId as string] && (
+                    <Text style={styles.feedbackErrorText}>
+                      {feedbackErrorByLocationId[puzzle.rounds[index].locationId as string]}
+                    </Text>
+                  )}
+                </View>
+              )}
             </View>
           ))}
         </View>
@@ -278,13 +372,15 @@ const styles = StyleSheet.create({
   roundsContainer: {
     width: '100%',
   },
+  roundBlock: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
+    paddingVertical: 8,
+  },
   roundRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
   },
   roundLabel: {
     color: '#A0AEC0',
@@ -313,6 +409,51 @@ const styles = StyleSheet.create({
     fontSize: 12,
     minWidth: 60,
     textAlign: 'right',
+  },
+  feedbackCard: {
+    marginTop: 10,
+    padding: 12,
+    borderRadius: 12,
+    backgroundColor: 'rgba(255, 255, 255, 0.04)',
+  },
+  feedbackPrompt: {
+    color: '#A0AEC0',
+    fontSize: 13,
+    marginBottom: 10,
+  },
+  feedbackButtonRow: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  feedbackButton: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#4A5568',
+    alignItems: 'center',
+  },
+  feedbackButtonSelected: {
+    backgroundColor: '#4ECDC4',
+    borderColor: '#4ECDC4',
+  },
+  feedbackButtonText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  feedbackButtonTextSelected: {
+    color: '#1A202C',
+  },
+  feedbackThanksText: {
+    color: '#4ECDC4',
+    fontSize: 12,
+    marginTop: 8,
+  },
+  feedbackErrorText: {
+    color: '#FFB86B',
+    fontSize: 12,
+    marginTop: 8,
   },
   statsContainer: {
     flexDirection: 'row',

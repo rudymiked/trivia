@@ -1,4 +1,4 @@
-import { LeaderboardEntry, Puzzle } from '@/types/game';
+import { ClueFeedbackRating, LeaderboardEntry, Puzzle } from '@/types/game';
 
 // API base URL - update this for production
 const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:7071/api';
@@ -17,6 +17,10 @@ function mapApiErrorMessage(status: number, code?: string, fallback?: string): s
 
   if (code === 'AUTH_REQUIRED' || code === 'INVALID_AUTH_TOKEN') {
     return 'Please sign in again to sync your score.';
+  }
+
+  if (code === 'ADMIN_ACCESS_DENIED') {
+    return 'Your account is not allowed to access this admin report.';
   }
 
   if (code === 'DATE_SCORE_MISMATCH' || code === 'INVALID_TOTAL_SCORE' || code === 'INVALID_ROUND_SCORE') {
@@ -205,11 +209,54 @@ export interface TelemetryEventPayload {
   payload: Record<string, string | number | boolean | null>;
 }
 
+export interface ClueFeedbackSubmission {
+  puzzleDate: string;
+  locationId: string;
+  feedback: ClueFeedbackRating;
+  clue: string;
+  country: string;
+  answer?: string;
+}
+
+export interface LowRatedClueSummary {
+  locationId: string;
+  clue: string;
+  country: string;
+  answer?: string;
+  easyCount: number;
+  hardCount: number;
+  unclearCount: number;
+  lowRatingCount: number;
+  lastPuzzleDate?: string;
+  lastSubmittedAt?: string;
+}
+
 export async function sendTelemetryEvent(
   event: TelemetryEventPayload
 ): Promise<ApiResponse<{ success: boolean; accepted: boolean }>> {
   return fetchApi('/telemetry', {
     method: 'POST',
     body: JSON.stringify(event),
+  });
+}
+
+export async function submitClueFeedback(
+  feedback: ClueFeedbackSubmission
+): Promise<ApiResponse<{ success: boolean }>> {
+  return fetchApi('/feedback/clues', {
+    method: 'POST',
+    body: JSON.stringify(feedback),
+  });
+}
+
+export async function fetchLowRatedClues(
+  authToken: string,
+  limit = 25,
+  minCount = 1
+): Promise<ApiResponse<{ clues: LowRatedClueSummary[]; count: number }>> {
+  return fetchApi(`/manage/clue-feedback/low?limit=${limit}&minCount=${minCount}`, {
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
   });
 }

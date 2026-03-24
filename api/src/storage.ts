@@ -1,5 +1,5 @@
-import { DefaultAzureCredential } from '@azure/identity';
 import { TableClient, TableServiceClient } from '@azure/data-tables';
+import { DefaultAzureCredential } from '@azure/identity';
 
 let serviceClient: TableServiceClient | null = null;
 const tableClients: Record<string, TableClient> = {};
@@ -43,7 +43,16 @@ export function getTableClient(tableName: string): TableClient {
 
 // Initialize tables
 export async function initializeTables(): Promise<void> {
-  const tables = ['puzzles', 'scores', 'users', 'locations', 'games', 'seenLocations'];
+  const tables = [
+    'puzzles',
+    'scores',
+    'users',
+    'locations',
+    'games',
+    'seenLocations',
+    'clueFeedback',
+    'clueFeedbackSummary',
+  ];
 
   for (const tableName of tables) {
     const client = getTableClient(tableName);

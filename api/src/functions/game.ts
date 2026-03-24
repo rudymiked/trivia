@@ -1,7 +1,14 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
+import { randomUUID } from 'crypto';
 import { getTelemetryClient } from '../appInsights.js';
 import { extractBearerToken, verifyGoogleToken } from '../auth.js';
-import { generatePersonalizedPuzzleForDate, generatePuzzleForDate, getTableClient, trackSeenLocations } from '../storage.js';
+import {
+  generatePersonalizedPuzzleForDate,
+  generatePuzzleForDate,
+  getTableClient,
+  initializeTables,
+  trackSeenLocations,
+} from '../storage.js';
 
 interface ScoreSubmission {
   date: string;
@@ -12,12 +19,24 @@ interface ScoreSubmission {
   locationIds?: string[]; // Optional: track which locations were played
 }
 
+type ClueFeedbackRating = 'easy' | 'hard' | 'unclear';
+
+interface ClueFeedbackSubmission {
+  puzzleDate: string;
+  locationId: string;
+  feedback: ClueFeedbackRating;
+  clue?: string;
+  country?: string;
+  answer?: string;
+}
+
 // Validation helpers
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_DISPLAY_NAME_LENGTH = 50;
 const EXPECTED_DAILY_ROUNDS = 5;
 const MAX_ROUND_SCORE = 5000;
 const MAX_TOTAL_SCORE = EXPECTED_DAILY_ROUNDS * MAX_ROUND_SCORE;
+const MAX_METADATA_LENGTH = 500;
 // Allow alphanumeric, hyphens, underscores, and periods (covers Google IDs and other OAuth providers)
 const SAFE_USERID_REGEX = /^[a-zA-Z0-9._-]+$/;
 
@@ -56,6 +75,14 @@ function rejectionResponse(status: number, code: string, message: string): HttpR
       error: message,
     },
   };
+}
+
+function isValidFeedbackRating(value: unknown): value is ClueFeedbackRating {
+  return value === 'easy' || value === 'hard' || value === 'unclear';
+}
+
+function sanitizeMetadata(value: string | undefined): string {
+  return typeof value === 'string' ? value.trim().slice(0, MAX_METADATA_LENGTH) : '';
 }
 
 // Get daily puzzle - dynamically generated from locations
@@ -175,9 +202,14 @@ app.http('submitScore', {
   authLevel: 'anonymous',
   route: 'scores',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    let submittedDate = 'unknown';
+    let submittedUserId = 'unknown';
+
     try {
       const body = (await request.json()) as ScoreSubmission;
       const { date, userId, displayName, totalScore, rounds } = body;
+      submittedDate = date || 'unknown';
+      submittedUserId = userId || 'unknown';
 
       // Validate required fields
       if (!date || !userId || totalScore === undefined) {
@@ -383,8 +415,8 @@ app.http('submitScore', {
           name: 'submit_failure',
           properties: {
             reason: error instanceof Error ? error.message : 'unknown',
-            userId: userId,
-            date: date,
+            userId: submittedUserId,
+            date: submittedDate,
           },
         });
       }
@@ -392,6 +424,97 @@ app.http('submitScore', {
         status: 500,
         jsonBody: { error: 'Failed to submit score' },
       };
+    }
+  },
+});
+
+app.http('submitClueFeedback', {
+  methods: ['POST'],
+  authLevel: 'anonymous',
+  route: 'feedback/clues',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    try {
+      await initializeTables();
+
+      const body = (await request.json()) as ClueFeedbackSubmission;
+      const puzzleDate = sanitizeMetadata(body.puzzleDate);
+      const locationId = sanitizeMetadata(body.locationId);
+      const feedback = body.feedback;
+
+      if (!puzzleDate || !locationId || !isValidFeedbackRating(feedback)) {
+        return rejectionResponse(
+          400,
+          'INVALID_CLUE_FEEDBACK',
+          'puzzleDate, locationId, and feedback are required.'
+        );
+      }
+
+      const clue = sanitizeMetadata(body.clue);
+      const country = sanitizeMetadata(body.country);
+      const answer = sanitizeMetadata(body.answer);
+      const submittedAt = new Date().toISOString();
+
+      const feedbackClient = getTableClient('clueFeedback');
+      const summaryClient = getTableClient('clueFeedbackSummary');
+
+      await feedbackClient.upsertEntity({
+        partitionKey: puzzleDate,
+        rowKey: `${locationId}_${submittedAt}_${randomUUID()}`,
+        locationId,
+        feedback,
+        clue,
+        country,
+        answer,
+        submittedAt,
+      });
+
+      let easyCount = 0;
+      let hardCount = 0;
+      let unclearCount = 0;
+      let existingClue = clue;
+      let existingCountry = country;
+      let existingAnswer = answer;
+
+      try {
+        const existing = await summaryClient.getEntity('location', locationId);
+        easyCount = Number(existing.easyCount || 0);
+        hardCount = Number(existing.hardCount || 0);
+        unclearCount = Number(existing.unclearCount || 0);
+        existingClue = clue || String(existing.clue || '');
+        existingCountry = country || String(existing.country || '');
+        existingAnswer = answer || String(existing.answer || '');
+      } catch (error: any) {
+        if (error.statusCode !== 404) {
+          throw error;
+        }
+      }
+
+      if (feedback === 'easy') easyCount += 1;
+      if (feedback === 'hard') hardCount += 1;
+      if (feedback === 'unclear') unclearCount += 1;
+
+      await summaryClient.upsertEntity({
+        partitionKey: 'location',
+        rowKey: locationId,
+        clue: existingClue,
+        country: existingCountry,
+        answer: existingAnswer,
+        easyCount,
+        hardCount,
+        unclearCount,
+        lowRatingCount: hardCount + unclearCount,
+        lastFeedback: feedback,
+        lastPuzzleDate: puzzleDate,
+        lastSubmittedAt: submittedAt,
+      });
+
+      return {
+        status: 201,
+        jsonBody: { success: true },
+      };
+    } catch (error) {
+      context.error('Error submitting clue feedback:', error);
+      return rejectionResponse(500, 'CLUE_FEEDBACK_FAILED', 'Failed to store clue feedback.');
     }
   },
 });

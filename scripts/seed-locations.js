@@ -36,7 +36,7 @@ async function seedLocations() {
       headers['x-functions-key'] = functionKey;
     }
 
-    const url = functionKey ? `${apiUrl}/manage/seed` : `${apiUrl}/manage/seed`;
+    const url = `${apiUrl}/manage/seed`;
     
     const response = await fetch(url, {
       method: 'POST',

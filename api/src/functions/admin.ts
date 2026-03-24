@@ -1,6 +1,35 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
 import { randomUUID } from 'crypto';
+import { extractBearerToken, isAdminEmail, verifyGoogleToken } from '../auth.js';
 import { getTableClient, initializeTables, Location } from '../storage.js';
+
+function adminRejectionResponse(status: number, code: string, message: string): HttpResponseInit {
+  return {
+    status,
+    jsonBody: {
+      code,
+      error: message,
+    },
+  };
+}
+
+async function requireAdminUser(request: HttpRequest): Promise<HttpResponseInit | null> {
+  const token = extractBearerToken(request.headers.get('authorization'));
+  if (!token) {
+    return adminRejectionResponse(401, 'AUTH_REQUIRED', 'Authentication is required.');
+  }
+
+  const verifiedUser = await verifyGoogleToken(token);
+  if (!verifiedUser) {
+    return adminRejectionResponse(401, 'INVALID_AUTH_TOKEN', 'Invalid authentication token.');
+  }
+
+  if (!isAdminEmail(verifiedUser.email)) {
+    return adminRejectionResponse(403, 'ADMIN_ACCESS_DENIED', 'Admin access denied.');
+  }
+
+  return null;
+}
 
 // Seed locations from JSON data
 app.http('seedLocations', {
@@ -55,10 +84,15 @@ app.http('seedLocations', {
 // Get all locations (admin view)
 app.http('getLocations', {
   methods: ['GET'],
-  authLevel: 'function',
+  authLevel: 'anonymous',
   route: 'manage/locations',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     try {
+      const authFailure = await requireAdminUser(request);
+      if (authFailure) {
+        return authFailure;
+      }
+
       const client = getTableClient('locations');
       const locations: Array<Location & { partitionKey: string; rowKey: string }> = [];
 
@@ -98,10 +132,15 @@ app.http('getLocations', {
 // Add a single location
 app.http('addLocation', {
   methods: ['POST'],
-  authLevel: 'function',
+  authLevel: 'anonymous',
   route: 'manage/locations',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     try {
+      const authFailure = await requireAdminUser(request);
+      if (authFailure) {
+        return authFailure;
+      }
+
       const body = (await request.json()) as Omit<Location, 'id' | 'enabled'>;
 
       if (!body.clue || !body.category || !body.target) {
@@ -144,7 +183,7 @@ app.http('addLocation', {
 // Update a location
 app.http('updateLocation', {
   methods: ['PUT'],
-  authLevel: 'function',
+  authLevel: 'anonymous',
   route: 'manage/locations/{id}',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const id = request.params.id;
@@ -156,6 +195,11 @@ app.http('updateLocation', {
     }
 
     try {
+      const authFailure = await requireAdminUser(request);
+      if (authFailure) {
+        return authFailure;
+      }
+
       const body = (await request.json()) as Partial<Location>;
       const client = getTableClient('locations');
 
@@ -197,7 +241,7 @@ app.http('updateLocation', {
 // Delete a location
 app.http('deleteLocation', {
   methods: ['DELETE'],
-  authLevel: 'function',
+  authLevel: 'anonymous',
   route: 'manage/locations/{id}',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const id = request.params.id;
@@ -209,6 +253,11 @@ app.http('deleteLocation', {
     }
 
     try {
+      const authFailure = await requireAdminUser(request);
+      if (authFailure) {
+        return authFailure;
+      }
+
       const client = getTableClient('locations');
       await client.deleteEntity('location', id);
 
@@ -234,7 +283,7 @@ app.http('deleteLocation', {
 // Toggle location enabled status
 app.http('toggleLocation', {
   methods: ['PATCH'],
-  authLevel: 'function',
+  authLevel: 'anonymous',
   route: 'manage/locations/{id}/toggle',
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const id = request.params.id;
@@ -246,6 +295,11 @@ app.http('toggleLocation', {
     }
 
     try {
+      const authFailure = await requireAdminUser(request);
+      if (authFailure) {
+        return authFailure;
+      }
+
       const client = getTableClient('locations');
       const existing = await client.getEntity('location', id);
       const newEnabled = !(existing.enabled as boolean);
@@ -277,6 +331,83 @@ app.http('toggleLocation', {
       return {
         status: 500,
         jsonBody: { error: 'Failed to toggle location' },
+      };
+    }
+  },
+});
+
+app.http('getLowRatedClues', {
+  methods: ['GET'],
+  authLevel: 'anonymous',
+  route: 'manage/clue-feedback/low',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    try {
+      const authFailure = await requireAdminUser(request);
+      if (authFailure) {
+        return authFailure;
+      }
+
+      await initializeTables();
+
+      const limit = Math.min(Math.max(parseInt(request.query.get('limit') || '25', 10) || 25, 1), 100);
+      const minCount = Math.min(Math.max(parseInt(request.query.get('minCount') || '1', 10) || 1, 0), 1000);
+
+      const client = getTableClient('clueFeedbackSummary');
+      const clues: Array<{
+        locationId: string;
+        clue: string;
+        country: string;
+        answer?: string;
+        easyCount: number;
+        hardCount: number;
+        unclearCount: number;
+        lowRatingCount: number;
+        lastPuzzleDate?: string;
+        lastSubmittedAt?: string;
+      }> = [];
+
+      const entities = client.listEntities({
+        queryOptions: { filter: `PartitionKey eq 'location' and lowRatingCount ge ${minCount}` },
+      });
+
+      for await (const entity of entities) {
+        clues.push({
+          locationId: entity.rowKey as string,
+          clue: (entity.clue as string) || '',
+          country: (entity.country as string) || '',
+          answer: entity.answer as string | undefined,
+          easyCount: Number(entity.easyCount || 0),
+          hardCount: Number(entity.hardCount || 0),
+          unclearCount: Number(entity.unclearCount || 0),
+          lowRatingCount: Number(entity.lowRatingCount || 0),
+          lastPuzzleDate: entity.lastPuzzleDate as string | undefined,
+          lastSubmittedAt: entity.lastSubmittedAt as string | undefined,
+        });
+      }
+
+      clues.sort((left, right) => {
+        if (right.lowRatingCount !== left.lowRatingCount) {
+          return right.lowRatingCount - left.lowRatingCount;
+        }
+
+        if (right.unclearCount !== left.unclearCount) {
+          return right.unclearCount - left.unclearCount;
+        }
+
+        return right.hardCount - left.hardCount;
+      });
+
+      return {
+        jsonBody: {
+          clues: clues.slice(0, limit),
+          count: clues.length,
+        },
+      };
+    } catch (error) {
+      context.error('Error fetching low-rated clues:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to fetch low-rated clues' },
       };
     }
   },

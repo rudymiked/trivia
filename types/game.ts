@@ -3,6 +3,8 @@ export interface Coordinates {
   lng: number;
 }
 
+export type ClueFeedbackRating = 'easy' | 'hard' | 'unclear';
+
 export type Category = 'places' | 'questions' | 'geography';
 
 export interface Round {

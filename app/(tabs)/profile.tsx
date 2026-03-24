@@ -1,12 +1,16 @@
 import { useAuth } from '@/hooks/useAuth';
+import { isAllowedAdminEmail } from '@/services/admin';
 import { getUserProgress, type UserProgress } from '@/services/storage';
+import { Href, useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function ProfileScreen() {
+  const router = useRouter();
   const { user, isLoading: authLoading, signIn, signOut } = useAuth();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const canAccessAdminTools = isAllowedAdminEmail(user?.email);
 
   useEffect(() => {
     const loadProgress = async () => {
@@ -17,6 +21,10 @@ export default function ProfileScreen() {
 
     loadProgress();
   }, []);
+
+  const handleOpenClueFeedbackAdmin = () => {
+    router.push('/admin/clue-feedback' as Href);
+  };
 
   if (isLoading || authLoading) {
     return (
@@ -114,6 +122,18 @@ export default function ProfileScreen() {
       </View>
 
       {/* Sign out button */}
+      {canAccessAdminTools && (
+        <View style={styles.adminCard}>
+          <Text style={styles.adminTitle}>Admin Tools</Text>
+          <Text style={styles.adminBody}>
+            Review low-rated clues and spot repeat offenders quickly.
+          </Text>
+          <Pressable style={styles.adminButton} onPress={handleOpenClueFeedbackAdmin}>
+            <Text style={styles.adminButtonText}>Open Clue Feedback Report</Text>
+          </Pressable>
+        </View>
+      )}
+
       <Pressable style={styles.signOutButton} onPress={signOut}>
         <Text style={styles.signOutButtonText}>Sign Out</Text>
       </Pressable>
@@ -265,6 +285,38 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 12,
     fontWeight: '500',
+  },
+  adminCard: {
+    backgroundColor: 'rgba(78, 205, 196, 0.08)',
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(78, 205, 196, 0.2)',
+    padding: 20,
+    marginBottom: 20,
+  },
+  adminTitle: {
+    color: '#4ECDC4',
+    fontSize: 18,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  adminBody: {
+    color: '#A0AEC0',
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 14,
+  },
+  adminButton: {
+    backgroundColor: '#4ECDC4',
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  adminButtonText: {
+    color: '#1A202C',
+    fontSize: 15,
+    fontWeight: '700',
   },
   signInButton: {
     backgroundColor: '#4285F4',

@@ -1,6 +1,6 @@
 import { OAuth2Client } from 'google-auth-library';
 
-const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID_WEB || '';
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID_WEB || process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_WEB || '';
 
 const client = new OAuth2Client(GOOGLE_CLIENT_ID);
 

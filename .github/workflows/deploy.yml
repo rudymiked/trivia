@@ -45,7 +45,7 @@ jobs:
           EXPO_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
           EXPO_PUBLIC_API_URL: ${{ secrets.API_URL }}
           EXPO_PUBLIC_GOOGLE_CLIENT_ID_WEB: ${{ secrets.GOOGLE_CLIENT_ID_WEB }}
-          EXPO_PUBLIC_APP_URL: ${{ env.APP_URL }}
+          EXPO_PUBLIC_APP_URL: ${{ secrets.APP_URL }}
           EXPO_PUBLIC_ADMIN_EMAILS: ${{ secrets.ADMIN_EMAILS }}
 
       - name: Deploy to Azure Static Web Apps

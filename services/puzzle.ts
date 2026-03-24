@@ -9,6 +9,27 @@ export interface DailyPuzzleWithSource {
   source: DailyPuzzleSource;
 }
 
+function createLocalLocationId(location: {
+  clue: string;
+  category?: string;
+  country?: string;
+  target: { lat: number; lng: number };
+}): string {
+  const raw = [
+    location.category || 'unknown',
+    location.country || 'unknown',
+    location.clue,
+    location.target.lat,
+    location.target.lng,
+  ].join('|');
+
+  return raw
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 120);
+}
+
 // Generate a seeded random number based on date
 function seededRandom(seed: number): () => number {
   return function () {
@@ -61,6 +82,7 @@ function generateLocalPuzzle(date: string = getTodayDate()): Puzzle {
 
   const rounds: Round[] = selectedLocations.map((loc, index) => ({
     id: index + 1,
+    locationId: loc.locationId || createLocalLocationId(loc),
     clue: loc.clue,
     category: (loc.category || 'places') as Round['category'],
     type: loc.type as Round['type'],
@@ -148,6 +170,7 @@ export function generatePuzzleByCategory(category: string | 'all' | 'random'): P
 
   const rounds: Round[] = selectedLocations.map((loc, index) => ({
     id: index + 1,
+    locationId: loc.locationId || createLocalLocationId(loc),
     clue: loc.clue,
     category: (loc.category || 'places') as Round['category'],
     type: loc.type as Round['type'],

@@ -198,3 +198,18 @@ export async function fetchUserStats(
     },
   });
 }
+
+export interface TelemetryEventPayload {
+  name: string;
+  timestamp: string;
+  payload: Record<string, string | number | boolean | null>;
+}
+
+export async function sendTelemetryEvent(
+  event: TelemetryEventPayload
+): Promise<ApiResponse<{ success: boolean; accepted: boolean }>> {
+  return fetchApi('/telemetry', {
+    method: 'POST',
+    body: JSON.stringify(event),
+  });
+}

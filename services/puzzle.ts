@@ -2,6 +2,13 @@ import locationsData from '@/data/locations.json';
 import { Puzzle, Round } from '@/types/game';
 import { fetchPuzzle } from './api';
 
+export type DailyPuzzleSource = 'api' | 'local';
+
+export interface DailyPuzzleWithSource {
+  puzzle: Puzzle;
+  source: DailyPuzzleSource;
+}
+
 // Generate a seeded random number based on date
 function seededRandom(seed: number): () => number {
   return function () {
@@ -73,18 +80,32 @@ function generateLocalPuzzle(date: string = getTodayDate()): Puzzle {
 
 // Generate daily puzzle - tries API first, falls back to local
 export async function generateDailyPuzzle(date: string = getTodayDate()): Promise<Puzzle> {
+  const result = await generateDailyPuzzleWithSource(date);
+  return result.puzzle;
+}
+
+// Source-aware variant used by UI to show fallback state
+export async function generateDailyPuzzleWithSource(
+  date: string = getTodayDate()
+): Promise<DailyPuzzleWithSource> {
   try {
     // Try to fetch from API first
     const response = await fetchPuzzle(date);
     if (response.data) {
-      return response.data;
+      return {
+        puzzle: response.data,
+        source: 'api',
+      };
     }
   } catch (error) {
-    console.log('API unavailable, using local puzzle generation');
+    console.log('API unavailable, using local puzzle generation', error);
   }
 
   // Fall back to local generation
-  return generateLocalPuzzle(date);
+  return {
+    puzzle: generateLocalPuzzle(date),
+    source: 'local',
+  };
 }
 
 // Synchronous version for backwards compatibility

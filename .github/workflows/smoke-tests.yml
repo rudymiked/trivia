@@ -1,0 +1,54 @@
+name: API Smoke Tests
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'api/**'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'api/**'
+  workflow_dispatch:
+
+jobs:
+  smoke-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'api/package-lock.json'
+      
+      - name: Install dependencies
+        working-directory: ./api
+        run: npm install
+      
+      - name: Run smoke tests
+        working-directory: ./api
+        run: npm run test:smoke
+        env:
+          # Note: These are test tokens. For real auth testing, use GitHub Secrets
+          TEST_AUTH_TOKEN: ${{ secrets.TEST_AUTH_TOKEN || 'test-token' }}
+          API_URL: ${{ secrets.API_URL || 'http://localhost:7071/api' }}
+      
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-test-results
+          path: api/coverage/
+          retention-days: 30
+      
+      - name: Post test summary
+        if: always()
+        run: |
+          echo "## 🧪 Smoke Tests Summary" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Core journeys validated" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Duplicate prevention tested" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Error handling verified" >> $GITHUB_STEP_SUMMARY

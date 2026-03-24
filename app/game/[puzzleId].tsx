@@ -3,8 +3,9 @@ import Globe from '@/components/map';
 import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
 import { checkUserGame } from '@/services/api';
-import { generateDailyPuzzle, generateDailyPuzzleSync } from '@/services/puzzle';
+import { generateDailyPuzzleWithSource } from '@/services/puzzle';
 import { getDailyResult, type DailyResult } from '@/services/storage';
+import { trackTelemetryEvent } from '@/services/telemetry';
 import { Coordinates, RoundResult } from '@/types/game';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -45,6 +46,7 @@ export default function GameScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [alreadyCompleted, setAlreadyCompleted] = useState<DailyResult | null>(null);
   const [serverCompleted, setServerCompleted] = useState<ServerGameResult | null>(null);
+  const [fallbackNotice, setFallbackNotice] = useState<string | null>(null);
 
   // Check if puzzleId looks like a date (YYYY-MM-DD)
   const isDateBasedPuzzle = /^\d{4}-\d{2}-\d{2}$/.test(puzzleId || '');
@@ -127,14 +129,17 @@ export default function GameScreen() {
           }
 
           // Generate daily puzzle - works for all users (anonymous or logged in)
-          try {
-            const dailyPuzzle = await generateDailyPuzzle(puzzleId);
-            startGame(dailyPuzzle);
-          } catch (error) {
-            console.error('Failed to generate daily puzzle:', error);
-            // Fallback: generate with synchronous method
-            const dailyPuzzle = generateDailyPuzzleSync(puzzleId);
-            startGame(dailyPuzzle);
+          const dailyPuzzleResult = await generateDailyPuzzleWithSource(puzzleId);
+          startGame(dailyPuzzleResult.puzzle);
+
+          if (dailyPuzzleResult.source === 'local') {
+            void trackTelemetryEvent('daily_puzzle_fallback_used', {
+              date: puzzleId,
+              hasUser: !!user,
+            });
+            setFallbackNotice('Offline fallback active. Puzzle loaded from local data.');
+          } else {
+            setFallbackNotice(null);
           }
         }
       } catch (error) {
@@ -146,6 +151,40 @@ export default function GameScreen() {
 
     loadPuzzle();
   }, [puzzleId, puzzle?.id, isDateBasedPuzzle, user, getValidIdToken, startGame]);
+
+  const retryOnlinePuzzle = useCallback(async () => {
+    if (!puzzleId || !isDateBasedPuzzle) return;
+
+    setIsLoading(true);
+    try {
+      const dailyPuzzleResult = await generateDailyPuzzleWithSource(puzzleId);
+      startGame(dailyPuzzleResult.puzzle);
+
+      if (dailyPuzzleResult.source === 'api') {
+        void trackTelemetryEvent('daily_puzzle_retry_online_success', {
+          date: puzzleId,
+          hasUser: !!user,
+        });
+        setFallbackNotice(null);
+      } else {
+        void trackTelemetryEvent('daily_puzzle_retry_still_offline', {
+          date: puzzleId,
+          hasUser: !!user,
+        });
+        setFallbackNotice('Still offline. Using local puzzle data.');
+      }
+    } catch (error) {
+      console.error('Retry failed:', error);
+      void trackTelemetryEvent('daily_puzzle_retry_error', {
+        date: puzzleId,
+        hasUser: !!user,
+        errorMessage: error instanceof Error ? error.message : 'unknown',
+      });
+      setFallbackNotice('Retry failed. Using local puzzle data.');
+    } finally {
+      setIsLoading(false);
+    }
+  }, [puzzleId, isDateBasedPuzzle, startGame, user]);
 
   const handleLocationSelect = useCallback((coords: Coordinates) => {
     if (phase !== 'playing') return;
@@ -305,6 +344,7 @@ export default function GameScreen() {
   }
 
   const currentRoundData = puzzle.rounds[currentRound];
+  const canRetryBeforeProgress = phase === 'playing' && currentRound === 0 && results.length === 0;
 
   return (
     <View style={styles.container}>
@@ -320,6 +360,17 @@ export default function GameScreen() {
         />
         <Text style={styles.scoreText}>{totalScore}</Text>
       </View>
+
+      {fallbackNotice && (
+        <View style={styles.fallbackBanner}>
+          <Text style={styles.fallbackBannerText}>{fallbackNotice}</Text>
+          {canRetryBeforeProgress && (
+            <Pressable style={styles.fallbackRetryButton} onPress={retryOnlinePuzzle}>
+              <Text style={styles.fallbackRetryButtonText}>Retry Online</Text>
+            </Pressable>
+          )}
+        </View>
+      )}
 
       {/* Map */}
       <View style={styles.mapContainer}>
@@ -410,6 +461,36 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     minWidth: 40,
     textAlign: 'right',
+  },
+  fallbackBanner: {
+    marginHorizontal: 16,
+    marginBottom: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderRadius: 10,
+    backgroundColor: 'rgba(237, 137, 54, 0.2)',
+    borderWidth: 1,
+    borderColor: 'rgba(237, 137, 54, 0.7)',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
+  fallbackBannerText: {
+    color: '#FBD38D',
+    fontSize: 13,
+    flex: 1,
+  },
+  fallbackRetryButton: {
+    backgroundColor: '#ED8936',
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 8,
+  },
+  fallbackRetryButtonText: {
+    color: '#1A202C',
+    fontSize: 12,
+    fontWeight: '700',
   },
   mapContainer: {
     flex: 1,

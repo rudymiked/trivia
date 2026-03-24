@@ -3,4 +3,5 @@
 
 import './functions/admin.js';
 import './functions/game.js';
+import './functions/telemetry.js';
 

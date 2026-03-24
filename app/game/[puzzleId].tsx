@@ -4,7 +4,12 @@ import { useAuth } from '@/hooks/useAuth';
 import { useGameStore } from '@/hooks/useGame';
 import { checkUserGame } from '@/services/api';
 import { generateDailyPuzzleWithSource } from '@/services/puzzle';
-import { getDailyResult, type DailyResult } from '@/services/storage';
+import {
+    getDailyResult,
+    hasCompletedMapWalkthrough,
+    markMapWalkthroughCompleted,
+    type DailyResult,
+} from '@/services/storage';
 import { trackTelemetryEvent } from '@/services/telemetry';
 import { Coordinates, RoundResult } from '@/types/game';
 import { Ionicons } from '@expo/vector-icons';
@@ -13,6 +18,26 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { ActivityIndicator, Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 
 type GamePhase = 'playing' | 'result' | 'complete';
+
+interface WalkthroughStep {
+  title: string;
+  body: string;
+}
+
+const MAP_WALKTHROUGH_STEPS: WalkthroughStep[] = [
+  {
+    title: 'Step 1: Tap the map',
+    body: 'Drop your guess anywhere on the globe. You can move it until you confirm.',
+  },
+  {
+    title: 'Step 2: Confirm your guess',
+    body: 'Use Confirm Guess to lock in and see distance + score instantly.',
+  },
+  {
+    title: 'Step 3: Keep momentum',
+    body: 'Finish 5 rounds. New players usually make their first guess in under 30 seconds.',
+  },
+];
 
 // Server result type (different from local DailyResult)
 interface ServerGameResult {
@@ -47,6 +72,10 @@ export default function GameScreen() {
   const [alreadyCompleted, setAlreadyCompleted] = useState<DailyResult | null>(null);
   const [serverCompleted, setServerCompleted] = useState<ServerGameResult | null>(null);
   const [fallbackNotice, setFallbackNotice] = useState<string | null>(null);
+  const [showWalkthrough, setShowWalkthrough] = useState(false);
+  const [walkthroughStepIndex, setWalkthroughStepIndex] = useState(0);
+  const [walkthroughStartMs, setWalkthroughStartMs] = useState<number | null>(null);
+  const [walkthroughChecked, setWalkthroughChecked] = useState(false);
 
   // Check if puzzleId looks like a date (YYYY-MM-DD)
   const isDateBasedPuzzle = /^\d{4}-\d{2}-\d{2}$/.test(puzzleId || '');
@@ -78,6 +107,29 @@ export default function GameScreen() {
       );
     }
   }, [resetGame, router, alreadyCompleted, serverCompleted]);
+
+  const dismissWalkthrough = useCallback((reason: 'skip' | 'complete') => {
+    if (!showWalkthrough) return;
+
+    const elapsedMs = walkthroughStartMs ? Date.now() - walkthroughStartMs : 0;
+    setShowWalkthrough(false);
+    setWalkthroughChecked(true);
+
+    void markMapWalkthroughCompleted();
+    void trackTelemetryEvent('map_walkthrough_dismissed', {
+      reason,
+      stepIndex: walkthroughStepIndex,
+      elapsedMs,
+    });
+  }, [showWalkthrough, walkthroughStartMs, walkthroughStepIndex]);
+
+  const handleWalkthroughNext = useCallback(() => {
+    if (walkthroughStepIndex >= MAP_WALKTHROUGH_STEPS.length - 1) {
+      dismissWalkthrough('complete');
+      return;
+    }
+    setWalkthroughStepIndex((prev) => prev + 1);
+  }, [dismissWalkthrough, walkthroughStepIndex]);
 
   // Load puzzle on mount
   useEffect(() => {
@@ -152,6 +204,52 @@ export default function GameScreen() {
     loadPuzzle();
   }, [puzzleId, puzzle?.id, isDateBasedPuzzle, user, getValidIdToken, startGame]);
 
+  useEffect(() => {
+    setShowWalkthrough(false);
+    setWalkthroughStepIndex(0);
+    setWalkthroughStartMs(null);
+    setWalkthroughChecked(false);
+  }, [puzzleId]);
+
+  useEffect(() => {
+    if (walkthroughChecked || isLoading || !puzzle) return;
+    if (alreadyCompleted || serverCompleted) {
+      setWalkthroughChecked(true);
+      return;
+    }
+    if (phase !== 'playing' || currentRound !== 0 || results.length > 0) {
+      setWalkthroughChecked(true);
+      return;
+    }
+
+    const loadWalkthroughState = async () => {
+      const completed = await hasCompletedMapWalkthrough();
+      if (!completed) {
+        setShowWalkthrough(true);
+        setWalkthroughStepIndex(0);
+        setWalkthroughStartMs(Date.now());
+        void trackTelemetryEvent('map_walkthrough_shown', {
+          puzzleId,
+          isDateBasedPuzzle,
+        });
+      }
+      setWalkthroughChecked(true);
+    };
+
+    void loadWalkthroughState();
+  }, [
+    alreadyCompleted,
+    currentRound,
+    isDateBasedPuzzle,
+    isLoading,
+    phase,
+    puzzle,
+    puzzleId,
+    results.length,
+    serverCompleted,
+    walkthroughChecked,
+  ]);
+
   const retryOnlinePuzzle = useCallback(async () => {
     if (!puzzleId || !isDateBasedPuzzle) return;
 
@@ -188,8 +286,19 @@ export default function GameScreen() {
 
   const handleLocationSelect = useCallback((coords: Coordinates) => {
     if (phase !== 'playing') return;
+
+    if (showWalkthrough && walkthroughStartMs) {
+      const elapsedMs = Date.now() - walkthroughStartMs;
+      void trackTelemetryEvent('new_user_time_to_first_guess', {
+        elapsedMs,
+        within30Seconds: elapsedMs <= 30000,
+        puzzleId,
+      });
+      dismissWalkthrough('complete');
+    }
+
     setCurrentGuess(coords);
-  }, [phase]);
+  }, [dismissWalkthrough, phase, puzzleId, showWalkthrough, walkthroughStartMs]);
 
   const handleConfirmGuess = useCallback(() => {
     if (!currentGuess || phase !== 'playing') return;
@@ -381,6 +490,35 @@ export default function GameScreen() {
           showArc={phase === 'result'}
           disabled={phase !== 'playing'}
         />
+
+        {showWalkthrough && phase === 'playing' && (
+          <View style={styles.walkthroughOverlay}>
+            <View style={styles.walkthroughCard}>
+              <Pressable
+                style={styles.walkthroughSkipButton}
+                onPress={() => dismissWalkthrough('skip')}
+              >
+                <Text style={styles.walkthroughSkipText}>Skip</Text>
+              </Pressable>
+              <Text style={styles.walkthroughTitle}>
+                {MAP_WALKTHROUGH_STEPS[walkthroughStepIndex].title}
+              </Text>
+              <Text style={styles.walkthroughBody}>
+                {MAP_WALKTHROUGH_STEPS[walkthroughStepIndex].body}
+              </Text>
+              <View style={styles.walkthroughFooter}>
+                <Text style={styles.walkthroughProgressText}>
+                  {walkthroughStepIndex + 1} / {MAP_WALKTHROUGH_STEPS.length}
+                </Text>
+                <Pressable style={styles.walkthroughNextButton} onPress={handleWalkthroughNext}>
+                  <Text style={styles.walkthroughNextButtonText}>
+                    {walkthroughStepIndex === MAP_WALKTHROUGH_STEPS.length - 1 ? 'Done' : 'Next'}
+                  </Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        )}
       </View>
 
       {/* Clue card */}
@@ -494,6 +632,62 @@ const styles = StyleSheet.create({
   },
   mapContainer: {
     flex: 1,
+  },
+  walkthroughOverlay: {
+    position: 'absolute',
+    top: 14,
+    left: 14,
+    right: 14,
+  },
+  walkthroughCard: {
+    borderRadius: 16,
+    padding: 14,
+    backgroundColor: 'rgba(26, 32, 44, 0.93)',
+    borderWidth: 1,
+    borderColor: 'rgba(78, 205, 196, 0.5)',
+  },
+  walkthroughSkipButton: {
+    alignSelf: 'flex-end',
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+  },
+  walkthroughSkipText: {
+    color: '#A0AEC0',
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  walkthroughTitle: {
+    color: '#4ECDC4',
+    fontSize: 16,
+    fontWeight: '700',
+    marginBottom: 6,
+  },
+  walkthroughBody: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    lineHeight: 20,
+  },
+  walkthroughFooter: {
+    marginTop: 12,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  walkthroughProgressText: {
+    color: '#A0AEC0',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  walkthroughNextButton: {
+    backgroundColor: '#4ECDC4',
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 10,
+  },
+  walkthroughNextButtonText: {
+    color: '#1A202C',
+    fontSize: 14,
+    fontWeight: '700',
   },
   clueContainer: {
     position: 'absolute',

@@ -35,7 +35,8 @@ export async function verifyGoogleToken(token: string): Promise<VerifiedUser | n
       picture: payload.picture,
     };
   } catch (error) {
-    console.error('Token verification failed:', error);
+    const authError = error instanceof Error ? error.message : 'unknown error';
+    console.error('Token verification failed:', authError);
     return null;
   }
 }

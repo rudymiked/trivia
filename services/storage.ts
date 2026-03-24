@@ -1,6 +1,6 @@
+import { RoundResult } from '@/types/game';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
-import { RoundResult } from '@/types/game';
 
 const STORAGE_KEYS = {
   LAST_PLAYED_DATE: 'pinpoint_last_played_date',
@@ -9,6 +9,7 @@ const STORAGE_KEYS = {
   GAMES_PLAYED: 'pinpoint_games_played',
   HIGH_SCORE: 'pinpoint_high_score',
   DAILY_RESULTS: 'pinpoint_daily_results', // Stores results keyed by date
+  MAP_WALKTHROUGH_DONE: 'pinpoint_map_walkthrough_done',
 } as const;
 
 export interface DailyResult {
@@ -150,4 +151,21 @@ export async function getDailyResult(date: string): Promise<DailyResult | null> 
 export async function hasCompletedPuzzle(date: string): Promise<boolean> {
   const result = await getDailyResult(date);
   return result !== null;
+}
+
+export async function hasCompletedMapWalkthrough(): Promise<boolean> {
+  try {
+    const value = await storage.getItem(STORAGE_KEYS.MAP_WALKTHROUGH_DONE);
+    return value === 'true';
+  } catch {
+    return false;
+  }
+}
+
+export async function markMapWalkthroughCompleted(): Promise<void> {
+  try {
+    await storage.setItem(STORAGE_KEYS.MAP_WALKTHROUGH_DONE, 'true');
+  } catch (error) {
+    console.error('Error persisting map walkthrough completion:', error);
+  }
 }

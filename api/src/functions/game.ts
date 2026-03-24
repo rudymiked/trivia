@@ -1,4 +1,5 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from '@azure/functions';
+import { getTelemetryClient } from '../appInsights.js';
 import { extractBearerToken, verifyGoogleToken } from '../auth.js';
 import { generatePersonalizedPuzzleForDate, generatePuzzleForDate, getTableClient, trackSeenLocations } from '../storage.js';
 
@@ -83,6 +84,17 @@ app.http('getPuzzle', {
       };
     } catch (error: any) {
       context.error('Error generating puzzle:', error);
+      
+      const telemetryClient = getTelemetryClient();
+      if (telemetryClient) {
+        telemetryClient.trackEvent({
+          name: 'puzzle_load_failure',
+          properties: {
+            reason: error.message || 'unknown',
+            date: date,
+          },
+        });
+      }
 
       if (error.message === 'Not enough locations to generate puzzle') {
         return {
@@ -129,6 +141,18 @@ app.http('getPersonalizedPuzzle', {
       };
     } catch (error: any) {
       context.error('Error generating personalized puzzle:', error);
+      
+      const telemetryClient = getTelemetryClient();
+      if (telemetryClient) {
+        telemetryClient.trackEvent({
+          name: 'puzzle_load_failure',
+          properties: {
+            reason: error.message || 'unknown',
+            type: 'personalized',
+            userId: userId || 'anonymous',
+          },
+        });
+      }
 
       if (error.message === 'Not enough locations to generate puzzle') {
         return {
@@ -227,6 +251,17 @@ app.http('submitScore', {
       const token = extractBearerToken(authHeader);
       if (!token) {
         context.log(`[submitScore] rejected: missing auth token for userId=${userId}, date=${date}`);
+        const telemetryClient = getTelemetryClient();
+        if (telemetryClient) {
+          telemetryClient.trackEvent({
+            name: 'auth_failure',
+            properties: {
+              reason: 'missing_token',
+              userId: userId,
+              date: date,
+            },
+          });
+        }
         return rejectionResponse(401, 'AUTH_REQUIRED', 'Authentication is required to submit scores.');
       }
 
@@ -241,6 +276,18 @@ app.http('submitScore', {
           context.log(
             `[submitScore] rejected: user mismatch payload=${userId} token=${verifiedUser.userId} date=${date}`
           );
+          const telemetryClient = getTelemetryClient();
+          if (telemetryClient) {
+            telemetryClient.trackEvent({
+              name: 'auth_failure',
+              properties: {
+                reason: 'user_id_mismatch',
+                payloadUserId: userId,
+                tokenUserId: verifiedUser.userId,
+                date: date,
+              },
+            });
+          }
           return rejectionResponse(
             403,
             'USER_ID_MISMATCH',
@@ -253,6 +300,17 @@ app.http('submitScore', {
         isVerified = true;
       } else {
         context.log(`[submitScore] rejected: invalid authentication token for userId=${userId}, date=${date}`);
+        const telemetryClient = getTelemetryClient();
+        if (telemetryClient) {
+          telemetryClient.trackEvent({
+            name: 'auth_failure',
+            properties: {
+              reason: 'invalid_token',
+              userId: userId,
+              date: date,
+            },
+          });
+        }
         return rejectionResponse(401, 'INVALID_AUTH_TOKEN', 'Invalid authentication token');
       }
 
@@ -319,6 +377,17 @@ app.http('submitScore', {
       };
     } catch (error) {
       context.error('Error submitting score:', error);
+      const telemetryClient = getTelemetryClient();
+      if (telemetryClient) {
+        telemetryClient.trackEvent({
+          name: 'submit_failure',
+          properties: {
+            reason: error instanceof Error ? error.message : 'unknown',
+            userId: userId,
+            date: date,
+          },
+        });
+      }
       return {
         status: 500,
         jsonBody: { error: 'Failed to submit score' },

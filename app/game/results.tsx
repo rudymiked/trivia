@@ -7,7 +7,7 @@ import { ClueFeedbackRating } from '@/types/game';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native';
+import { Modal, Platform, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
 
 export default function ResultsScreen() {
   const router = useRouter();
@@ -20,9 +20,17 @@ export default function ResultsScreen() {
   const [feedbackByLocationId, setFeedbackByLocationId] = useState<Record<string, ClueFeedbackRating>>({});
   const [feedbackErrorByLocationId, setFeedbackErrorByLocationId] = useState<Record<string, string | null>>({});
   const [submittingFeedback, setSubmittingFeedback] = useState<Record<string, boolean>>({});
+  const [showFeedbackPrompt, setShowFeedbackPrompt] = useState(false);
+  const [isFeedbackModalVisible, setIsFeedbackModalVisible] = useState(false);
 
   // Check if this is a daily puzzle (date-based ID)
   const isDailyPuzzle = puzzle && /^\d{4}-\d{2}-\d{2}$/.test(puzzle.id);
+  const feedbackRoundEntries = puzzle
+    ? puzzle.rounds
+        .map((round, index) => ({ round, index }))
+        .filter(({ round }) => round.locationId && round.category === 'questions')
+    : [];
+  const displayTotalScore = Number.isFinite(totalScore) ? Math.round(totalScore) : 0;
 
   useEffect(() => {
     const saveAndLoadProgress = async () => {
@@ -80,6 +88,11 @@ export default function ResultsScreen() {
     saveAndLoadProgress();
   }, [puzzle, totalScore, results, user, isDailyPuzzle, getValidIdToken]);
 
+  useEffect(() => {
+    setIsFeedbackModalVisible(false);
+    setShowFeedbackPrompt(feedbackRoundEntries.length > 0);
+  }, [puzzle?.id, feedbackRoundEntries.length]);
+
   const getScoreEmoji = (score: number, multiplier: number) => {
     const baseScore = score / multiplier;
     if (baseScore >= 90) return '🟢';
@@ -131,6 +144,15 @@ Play at: ${appUrl}`;
 
   const handleSignIn = () => {
     signIn();
+  };
+
+  const handleOpenFeedbackModal = () => {
+    setShowFeedbackPrompt(false);
+    setIsFeedbackModalVisible(true);
+  };
+
+  const handleSkipFeedbackPrompt = () => {
+    setShowFeedbackPrompt(false);
   };
 
   const handleClueFeedback = async (roundIndex: number, feedback: ClueFeedbackRating) => {
@@ -191,139 +213,191 @@ Play at: ${appUrl}`;
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Game Complete!</Text>
+      <View style={styles.topBar}>
+        <Pressable style={styles.topLeaveButton} onPress={handlePlayAgain}>
+          <Text style={styles.topLeaveButtonText}>Back to Home</Text>
+        </Pressable>
+      </View>
 
-      {/* Score summary */}
-      <View style={styles.scoreCard}>
-        <Text style={styles.dateText}>
-          {new Date(puzzle.date).toLocaleDateString('en-US', {
-            weekday: 'long',
-            month: 'long',
-            day: 'numeric',
-          })}
-        </Text>
+      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
+        <Text style={styles.title}>Game Complete!</Text>
 
-        <Text style={styles.totalScore}>{totalScore}</Text>
-        <Text style={styles.maxScore}>out of 500</Text>
+        {/* Score summary */}
+        <View style={styles.scoreCard}>
+          <Text style={styles.dateText}>
+            {new Date(puzzle.date).toLocaleDateString('en-US', {
+              weekday: 'long',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </Text>
 
-        {/* Login prompt for anonymous users */}
-        {!user && (
-          <View style={styles.loginPrompt}>
-            <Text style={styles.loginPromptTitle}>Save Your Score!</Text>
-            <Text style={styles.loginPromptText}>
-              Sign in to see your scores on the leaderboard and track your progress across devices.
-            </Text>
-            <Pressable style={styles.loginButton} onPress={handleSignIn}>
-              <Text style={styles.loginButtonText}>Sign In with Google</Text>
-            </Pressable>
-          </View>
-        )}
+          <Text style={styles.totalScore}>{displayTotalScore}</Text>
+          <Text style={styles.maxScore}>out of 500</Text>
 
-        {/* Round breakdown */}
-        <View style={styles.roundsContainer}>
-          {results.map((result, index) => (
-            <View key={index} style={styles.roundBlock}>
-              <View style={styles.roundRow}>
-                <Text style={styles.roundLabel}>Round {index + 1}</Text>
-                <View style={styles.roundScoreContainer}>
-                  <Text style={styles.roundEmoji}>
-                    {getScoreEmoji(result.score, result.multiplier)}
-                  </Text>
-                  <Text style={styles.roundScore}>
-                    {Math.round(result.score / result.multiplier)}
-                    {result.multiplier > 1 && (
-                      <Text style={styles.multiplier}> x{result.multiplier}</Text>
-                    )}
-                  </Text>
-                  <Text style={styles.roundDistance}>
-                    {Math.round(result.distanceKm)} km
-                  </Text>
+          {/* Login prompt for anonymous users */}
+          {!user && (
+            <View style={styles.loginPrompt}>
+              <Text style={styles.loginPromptTitle}>Save Your Score!</Text>
+              <Text style={styles.loginPromptText}>
+                Sign in to see your scores on the leaderboard and track your progress across devices.
+              </Text>
+              <Pressable style={styles.loginButton} onPress={handleSignIn}>
+                <Text style={styles.loginButtonText}>Sign In with Google</Text>
+              </Pressable>
+            </View>
+          )}
+
+          {/* Round breakdown */}
+          <View style={styles.roundsContainer}>
+            {results.map((result, index) => (
+              <View key={index} style={styles.roundBlock}>
+                <View style={styles.roundRow}>
+                  <Text style={styles.roundLabel}>Round {index + 1}</Text>
+                  <View style={styles.roundScoreContainer}>
+                    <Text style={styles.roundEmoji}>
+                      {getScoreEmoji(result.score, result.multiplier)}
+                    </Text>
+                    <Text style={styles.roundScore}>
+                      {Math.round(result.score / result.multiplier)}
+                      {result.multiplier > 1 && (
+                        <Text style={styles.multiplier}> x{result.multiplier}</Text>
+                      )}
+                    </Text>
+                    <Text style={styles.roundDistance}>
+                      {Math.round(result.distanceKm)} km
+                    </Text>
+                  </View>
                 </View>
               </View>
+            ))}
+          </View>
+        </View>
 
-              {puzzle.rounds[index]?.locationId && (
-                <View style={styles.feedbackCard}>
-                  <Text style={styles.feedbackPrompt}>How was this clue?</Text>
-                  <View style={styles.feedbackButtonRow}>
-                    {(['easy', 'hard', 'unclear'] as ClueFeedbackRating[]).map((option) => {
-                      const locationId = puzzle.rounds[index].locationId as string;
-                      const isSelected = feedbackByLocationId[locationId] === option;
-                      const isDisabled = !!feedbackByLocationId[locationId] || !!submittingFeedback[locationId];
-
-                      return (
-                        <Pressable
-                          key={option}
-                          style={[
-                            styles.feedbackButton,
-                            isSelected && styles.feedbackButtonSelected,
-                          ]}
-                          onPress={() => handleClueFeedback(index, option)}
-                          disabled={isDisabled}
-                        >
-                          <Text
-                            style={[
-                              styles.feedbackButtonText,
-                              isSelected && styles.feedbackButtonTextSelected,
-                            ]}
-                          >
-                            {option === 'easy' ? 'Easy' : option === 'hard' ? 'Hard' : 'Unclear'}
-                          </Text>
-                        </Pressable>
-                      );
-                    })}
-                  </View>
-                  {feedbackByLocationId[puzzle.rounds[index].locationId as string] && (
-                    <Text style={styles.feedbackThanksText}>Thanks for rating this clue.</Text>
-                  )}
-                  {feedbackErrorByLocationId[puzzle.rounds[index].locationId as string] && (
-                    <Text style={styles.feedbackErrorText}>
-                      {feedbackErrorByLocationId[puzzle.rounds[index].locationId as string]}
-                    </Text>
-                  )}
-                </View>
-              )}
+        {/* Stats */}
+        {progress && (
+          <View style={styles.statsContainer}>
+            <View style={styles.statItem}>
+              <Text style={styles.statValue}>{progress.streak}</Text>
+              <Text style={styles.statLabel}>Streak</Text>
             </View>
-          ))}
-        </View>
-      </View>
-
-      {/* Stats */}
-      {progress && (
-        <View style={styles.statsContainer}>
-          <View style={styles.statItem}>
-            <Text style={styles.statValue}>{progress.streak}</Text>
-            <Text style={styles.statLabel}>Streak</Text>
+            <View style={styles.statItem}>
+              <Text style={styles.statValue}>{progress.gamesPlayed}</Text>
+              <Text style={styles.statLabel}>Played</Text>
+            </View>
+            <View style={styles.statItem}>
+              <Text style={styles.statValue}>{progress.highScore}</Text>
+              <Text style={styles.statLabel}>Best</Text>
+            </View>
           </View>
-          <View style={styles.statItem}>
-            <Text style={styles.statValue}>{progress.gamesPlayed}</Text>
-            <Text style={styles.statLabel}>Played</Text>
-          </View>
-          <View style={styles.statItem}>
-            <Text style={styles.statValue}>{progress.highScore}</Text>
-            <Text style={styles.statLabel}>Best</Text>
-          </View>
-        </View>
-      )}
-
-      {/* Actions */}
-      <View style={styles.actionsContainer}>
-        {user && isDailyPuzzle && synced && (
-          <Text style={styles.syncSuccessText}>Score synced to leaderboard</Text>
-        )}
-        {user && isDailyPuzzle && syncError && (
-          <Text style={styles.syncErrorText}>{syncError}</Text>
         )}
 
-        <Pressable style={styles.shareButton} onPress={handleShare}>
-          <Text style={styles.shareButtonText}>
-            {copied ? 'Copied!' : Platform.OS === 'web' ? 'Copy Results' : 'Share Results'}
-          </Text>
-        </Pressable>
+        {/* Actions */}
+        <View style={styles.actionsContainer}>
+          {user && isDailyPuzzle && synced && (
+            <Text style={styles.syncSuccessText}>Score synced to leaderboard</Text>
+          )}
+          {user && isDailyPuzzle && syncError && (
+            <Text style={styles.syncErrorText}>{syncError}</Text>
+          )}
 
-        <Pressable style={styles.homeButton} onPress={handlePlayAgain}>
-          <Text style={styles.homeButtonText}>Back to Home</Text>
-        </Pressable>
-      </View>
+          <Pressable style={styles.shareButton} onPress={handleShare}>
+            <Text style={styles.shareButtonText}>
+              {copied ? 'Copied!' : Platform.OS === 'web' ? 'Copy Results' : 'Share Results'}
+            </Text>
+          </Pressable>
+
+          <Pressable style={styles.homeButton} onPress={handlePlayAgain}>
+            <Text style={styles.homeButtonText}>Back to Home</Text>
+          </Pressable>
+        </View>
+      </ScrollView>
+
+      <Modal
+        transparent
+        animationType="fade"
+        visible={showFeedbackPrompt}
+        onRequestClose={handleSkipFeedbackPrompt}
+      >
+        <View style={styles.modalBackdrop}>
+          <View style={styles.modalCard}>
+            <Text style={styles.modalTitle}>Optional Feedback</Text>
+            <Text style={styles.modalBody}>
+              Want to help improve question clues?
+            </Text>
+            <Pressable style={styles.modalPrimaryButton} onPress={handleOpenFeedbackModal}>
+              <Text style={styles.modalPrimaryButtonText}>Give feedback on questions</Text>
+            </Pressable>
+            <Pressable style={styles.modalSecondaryButton} onPress={handleSkipFeedbackPrompt}>
+              <Text style={styles.modalSecondaryButtonText}>Skip for now</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+
+      <Modal
+        transparent
+        animationType="slide"
+        visible={isFeedbackModalVisible}
+        onRequestClose={() => setIsFeedbackModalVisible(false)}
+      >
+        <View style={styles.modalBackdrop}>
+          <View style={styles.feedbackModalCard}>
+            <View style={styles.feedbackModalHeader}>
+              <Text style={styles.feedbackModalTitle}>Question Feedback</Text>
+              <Pressable onPress={() => setIsFeedbackModalVisible(false)}>
+                <Text style={styles.feedbackModalClose}>Done</Text>
+              </Pressable>
+            </View>
+            <ScrollView style={styles.feedbackModalScroll}>
+              {feedbackRoundEntries.map(({ round, index }) => {
+                const locationId = round.locationId as string;
+
+                return (
+                  <View key={locationId} style={styles.feedbackCard}>
+                    <Text style={styles.feedbackPrompt}>Round {index + 1}: {round.clue}</Text>
+                    <View style={styles.feedbackButtonRow}>
+                      {(['easy', 'hard', 'unclear'] as ClueFeedbackRating[]).map((option) => {
+                        const isSelected = feedbackByLocationId[locationId] === option;
+                        const isDisabled = !!feedbackByLocationId[locationId] || !!submittingFeedback[locationId];
+
+                        return (
+                          <Pressable
+                            key={option}
+                            style={[
+                              styles.feedbackButton,
+                              isSelected && styles.feedbackButtonSelected,
+                            ]}
+                            onPress={() => handleClueFeedback(index, option)}
+                            disabled={isDisabled}
+                          >
+                            <Text
+                              style={[
+                                styles.feedbackButtonText,
+                                isSelected && styles.feedbackButtonTextSelected,
+                              ]}
+                            >
+                              {option === 'easy' ? 'Easy' : option === 'hard' ? 'Hard' : 'Unclear'}
+                            </Text>
+                          </Pressable>
+                        );
+                      })}
+                    </View>
+                    {feedbackByLocationId[locationId] && (
+                      <Text style={styles.feedbackThanksText}>Thanks for rating this clue.</Text>
+                    )}
+                    {feedbackErrorByLocationId[locationId] && (
+                      <Text style={styles.feedbackErrorText}>
+                        {feedbackErrorByLocationId[locationId]}
+                      </Text>
+                    )}
+                  </View>
+                );
+              })}
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -332,8 +406,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1A202C',
+  },
+  scrollView: {
+    flex: 1,
+  },
+  scrollContent: {
     padding: 20,
-    justifyContent: 'center',
+    paddingTop: 4,
+    paddingBottom: 28,
+  },
+  topBar: {
+    paddingHorizontal: 20,
+    paddingTop: 16,
+    paddingBottom: 6,
+    alignItems: 'flex-end',
+  },
+  topLeaveButton: {
+    borderWidth: 1,
+    borderColor: '#4A5568',
+    borderRadius: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+  },
+  topLeaveButtonText: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    fontWeight: '600',
   },
   errorText: {
     color: '#FF6B6B',
@@ -557,5 +655,81 @@ const styles = StyleSheet.create({
     color: '#1A202C',
     fontSize: 16,
     fontWeight: '700',
+  },
+  modalBackdrop: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.58)',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  modalCard: {
+    backgroundColor: '#1A202C',
+    borderRadius: 18,
+    padding: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(78, 205, 196, 0.4)',
+  },
+  modalTitle: {
+    color: '#FFFFFF',
+    fontSize: 22,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  modalBody: {
+    color: '#A0AEC0',
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 16,
+  },
+  modalPrimaryButton: {
+    backgroundColor: '#4ECDC4',
+    borderRadius: 12,
+    paddingVertical: 12,
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  modalPrimaryButtonText: {
+    color: '#1A202C',
+    fontSize: 15,
+    fontWeight: '700',
+  },
+  modalSecondaryButton: {
+    borderWidth: 1,
+    borderColor: '#4A5568',
+    borderRadius: 12,
+    paddingVertical: 12,
+    alignItems: 'center',
+  },
+  modalSecondaryButtonText: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '600',
+  },
+  feedbackModalCard: {
+    backgroundColor: '#1A202C',
+    borderRadius: 18,
+    maxHeight: '78%',
+    padding: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(78, 205, 196, 0.35)',
+  },
+  feedbackModalHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  feedbackModalTitle: {
+    color: '#FFFFFF',
+    fontSize: 20,
+    fontWeight: '700',
+  },
+  feedbackModalClose: {
+    color: '#4ECDC4',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  feedbackModalScroll: {
+    maxHeight: 440,
   },
 });

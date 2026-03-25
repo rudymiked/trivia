@@ -26,6 +26,14 @@ export default function ProfileScreen() {
     router.push('/admin/clue-feedback' as Href);
   };
 
+  const handleOpenPrivacyPolicy = () => {
+    router.push('/privacy-policy' as Href);
+  };
+
+  const handleOpenTerms = () => {
+    router.push('/terms' as Href);
+  };
+
   if (isLoading || authLoading) {
     return (
       <View style={styles.loadingContainer}>
@@ -40,6 +48,16 @@ export default function ProfileScreen() {
         <Pressable style={styles.signInButton} onPress={signIn}>
           <Text style={styles.signInButtonText}>Sign In with Google</Text>
         </Pressable>
+
+        <View style={styles.legalLinksRow}>
+          <Pressable onPress={handleOpenPrivacyPolicy} hitSlop={8}>
+            <Text style={styles.legalLink}>Privacy Policy</Text>
+          </Pressable>
+          <Text style={styles.legalDivider}>•</Text>
+          <Pressable onPress={handleOpenTerms} hitSlop={8}>
+            <Text style={styles.legalLink}>Terms of Use</Text>
+          </Pressable>
+        </View>
       </View>
     );
   }
@@ -141,6 +159,16 @@ export default function ProfileScreen() {
       <Text style={styles.syncInfo}>
         Your progress is synced to your account
       </Text>
+
+      <View style={styles.legalLinksRow}>
+        <Pressable onPress={handleOpenPrivacyPolicy} hitSlop={8}>
+          <Text style={styles.legalLink}>Privacy Policy</Text>
+        </Pressable>
+        <Text style={styles.legalDivider}>•</Text>
+        <Pressable onPress={handleOpenTerms} hitSlop={8}>
+          <Text style={styles.legalLink}>Terms of Use</Text>
+        </Pressable>
+      </View>
     </ScrollView>
   );
 }
@@ -343,6 +371,22 @@ const styles = StyleSheet.create({
     color: '#718096',
     fontSize: 16,
     fontWeight: '600',
+  },
+  legalLinksRow: {
+    marginTop: 16,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 10,
+  },
+  legalLink: {
+    color: '#A0AEC0',
+    fontSize: 13,
+    textDecorationLine: 'underline',
+  },
+  legalDivider: {
+    color: '#718096',
+    fontSize: 13,
   },
   syncInfo: {
     color: '#4ECDC4',

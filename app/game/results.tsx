@@ -4,6 +4,7 @@ import { submitClueFeedback, submitScore } from '@/services/api';
 import { getUserProgress, saveDailyResult, saveGameResult, type UserProgress } from '@/services/storage';
 import { trackTelemetryEvent } from '@/services/telemetry';
 import { ClueFeedbackRating } from '@/types/game';
+import { Ionicons } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
@@ -20,8 +21,8 @@ export default function ResultsScreen() {
   const [feedbackByLocationId, setFeedbackByLocationId] = useState<Record<string, ClueFeedbackRating>>({});
   const [feedbackErrorByLocationId, setFeedbackErrorByLocationId] = useState<Record<string, string | null>>({});
   const [submittingFeedback, setSubmittingFeedback] = useState<Record<string, boolean>>({});
-  const [showFeedbackPrompt, setShowFeedbackPrompt] = useState(false);
   const [isFeedbackModalVisible, setIsFeedbackModalVisible] = useState(false);
+  const [selectedFeedbackRoundIndex, setSelectedFeedbackRoundIndex] = useState<number | null>(null);
 
   // Check if this is a daily puzzle (date-based ID)
   const isDailyPuzzle = puzzle && /^\d{4}-\d{2}-\d{2}$/.test(puzzle.id);
@@ -88,11 +89,6 @@ export default function ResultsScreen() {
     saveAndLoadProgress();
   }, [puzzle, totalScore, results, user, isDailyPuzzle, getValidIdToken]);
 
-  useEffect(() => {
-    setIsFeedbackModalVisible(false);
-    setShowFeedbackPrompt(feedbackRoundEntries.length > 0);
-  }, [puzzle?.id, feedbackRoundEntries.length]);
-
   const getScoreEmoji = (score: number, multiplier: number) => {
     const baseScore = score / multiplier;
     if (baseScore >= 90) return '🟢';
@@ -146,13 +142,14 @@ Play at: ${appUrl}`;
     signIn();
   };
 
-  const handleOpenFeedbackModal = () => {
-    setShowFeedbackPrompt(false);
+  const handleOpenFeedbackModal = (roundIndex: number) => {
+    setSelectedFeedbackRoundIndex(roundIndex);
     setIsFeedbackModalVisible(true);
   };
 
-  const handleSkipFeedbackPrompt = () => {
-    setShowFeedbackPrompt(false);
+  const handleCloseFeedbackModal = () => {
+    setIsFeedbackModalVisible(false);
+    setSelectedFeedbackRoundIndex(null);
   };
 
   const handleClueFeedback = async (roundIndex: number, feedback: ClueFeedbackRating) => {
@@ -250,27 +247,46 @@ Play at: ${appUrl}`;
 
           {/* Round breakdown */}
           <View style={styles.roundsContainer}>
-            {results.map((result, index) => (
-              <View key={index} style={styles.roundBlock}>
-                <View style={styles.roundRow}>
-                  <Text style={styles.roundLabel}>Round {index + 1}</Text>
-                  <View style={styles.roundScoreContainer}>
-                    <Text style={styles.roundEmoji}>
-                      {getScoreEmoji(result.score, result.multiplier)}
-                    </Text>
-                    <Text style={styles.roundScore}>
-                      {Math.round(result.score / result.multiplier)}
-                      {result.multiplier > 1 && (
-                        <Text style={styles.multiplier}> x{result.multiplier}</Text>
+            {results.map((result, index) => {
+              const round = puzzle.rounds[index];
+              const locationId = round?.locationId;
+              const hasLocationId = !!locationId;
+              
+              return (
+                <View key={index} style={styles.roundBlock}>
+                  <View style={styles.roundRow}>
+                    <View style={styles.roundLabelContainer}>
+                      <Text style={styles.roundLabel} numberOfLines={2}>
+                        {round?.clue || `Round ${index + 1}`}
+                      </Text>
+                      {hasLocationId && (
+                        <Pressable
+                          style={styles.feedbackIconButton}
+                          onPress={() => handleOpenFeedbackModal(index)}
+                          hitSlop={8}
+                        >
+                          <Ionicons name="help-circle-outline" size={16} color="#A0AEC0" />
+                        </Pressable>
                       )}
-                    </Text>
-                    <Text style={styles.roundDistance}>
-                      {Math.round(result.distanceKm)} km
-                    </Text>
+                    </View>
+                    <View style={styles.roundScoreContainer}>
+                      <Text style={styles.roundEmoji}>
+                        {getScoreEmoji(result.score, result.multiplier)}
+                      </Text>
+                      <Text style={styles.roundScore}>
+                        {Math.round(result.score / result.multiplier)}
+                        {result.multiplier > 1 && (
+                          <Text style={styles.multiplier}> x{result.multiplier}</Text>
+                        )}
+                      </Text>
+                      <Text style={styles.roundDistance}>
+                        {Math.round(result.distanceKm)} km
+                      </Text>
+                    </View>
                   </View>
                 </View>
-              </View>
-            ))}
+              );
+            })}
           </View>
         </View>
 
@@ -315,85 +331,66 @@ Play at: ${appUrl}`;
 
       <Modal
         transparent
-        animationType="fade"
-        visible={showFeedbackPrompt}
-        onRequestClose={handleSkipFeedbackPrompt}
-      >
-        <View style={styles.modalBackdrop}>
-          <View style={styles.modalCard}>
-            <Text style={styles.modalTitle}>Optional Feedback</Text>
-            <Text style={styles.modalBody}>
-              Want to help improve question clues?
-            </Text>
-            <Pressable style={styles.modalPrimaryButton} onPress={handleOpenFeedbackModal}>
-              <Text style={styles.modalPrimaryButtonText}>Give feedback on questions</Text>
-            </Pressable>
-            <Pressable style={styles.modalSecondaryButton} onPress={handleSkipFeedbackPrompt}>
-              <Text style={styles.modalSecondaryButtonText}>Skip for now</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
-
-      <Modal
-        transparent
         animationType="slide"
         visible={isFeedbackModalVisible}
-        onRequestClose={() => setIsFeedbackModalVisible(false)}
+        onRequestClose={handleCloseFeedbackModal}
       >
         <View style={styles.modalBackdrop}>
           <View style={styles.feedbackModalCard}>
             <View style={styles.feedbackModalHeader}>
               <Text style={styles.feedbackModalTitle}>Question Feedback</Text>
-              <Pressable onPress={() => setIsFeedbackModalVisible(false)}>
+              <Pressable onPress={handleCloseFeedbackModal}>
                 <Text style={styles.feedbackModalClose}>Done</Text>
               </Pressable>
             </View>
             <ScrollView style={styles.feedbackModalScroll}>
-              {feedbackRoundEntries.map(({ round, index }) => {
-                const locationId = round.locationId as string;
+              {selectedFeedbackRoundIndex !== null && puzzle.rounds[selectedFeedbackRoundIndex] && (
+                (() => {
+                  const round = puzzle.rounds[selectedFeedbackRoundIndex];
+                  const locationId = round.locationId as string;
 
-                return (
-                  <View key={locationId} style={styles.feedbackCard}>
-                    <Text style={styles.feedbackPrompt}>Round {index + 1}: {round.clue}</Text>
-                    <View style={styles.feedbackButtonRow}>
-                      {(['easy', 'hard', 'unclear'] as ClueFeedbackRating[]).map((option) => {
-                        const isSelected = feedbackByLocationId[locationId] === option;
-                        const isDisabled = !!feedbackByLocationId[locationId] || !!submittingFeedback[locationId];
+                  return (
+                    <View style={styles.feedbackCard}>
+                      <Text style={styles.feedbackPrompt}>{round.clue}</Text>
+                      <View style={styles.feedbackButtonRow}>
+                        {(['easy', 'hard', 'unclear'] as ClueFeedbackRating[]).map((option) => {
+                          const isSelected = feedbackByLocationId[locationId] === option;
+                          const isDisabled = !!feedbackByLocationId[locationId] || !!submittingFeedback[locationId];
 
-                        return (
-                          <Pressable
-                            key={option}
-                            style={[
-                              styles.feedbackButton,
-                              isSelected && styles.feedbackButtonSelected,
-                            ]}
-                            onPress={() => handleClueFeedback(index, option)}
-                            disabled={isDisabled}
-                          >
-                            <Text
+                          return (
+                            <Pressable
+                              key={option}
                               style={[
-                                styles.feedbackButtonText,
-                                isSelected && styles.feedbackButtonTextSelected,
+                                styles.feedbackButton,
+                                isSelected && styles.feedbackButtonSelected,
                               ]}
+                              onPress={() => handleClueFeedback(selectedFeedbackRoundIndex, option)}
+                              disabled={isDisabled}
                             >
-                              {option === 'easy' ? 'Easy' : option === 'hard' ? 'Hard' : 'Unclear'}
-                            </Text>
-                          </Pressable>
-                        );
-                      })}
+                              <Text
+                                style={[
+                                  styles.feedbackButtonText,
+                                  isSelected && styles.feedbackButtonTextSelected,
+                                ]}
+                              >
+                                {option === 'easy' ? 'Easy' : option === 'hard' ? 'Hard' : 'Unclear'}
+                              </Text>
+                            </Pressable>
+                          );
+                        })}
+                      </View>
+                      {feedbackByLocationId[locationId] && (
+                        <Text style={styles.feedbackThanksText}>Thanks for rating this clue.</Text>
+                      )}
+                      {feedbackErrorByLocationId[locationId] && (
+                        <Text style={styles.feedbackErrorText}>
+                          {feedbackErrorByLocationId[locationId]}
+                        </Text>
+                      )}
                     </View>
-                    {feedbackByLocationId[locationId] && (
-                      <Text style={styles.feedbackThanksText}>Thanks for rating this clue.</Text>
-                    )}
-                    {feedbackErrorByLocationId[locationId] && (
-                      <Text style={styles.feedbackErrorText}>
-                        {feedbackErrorByLocationId[locationId]}
-                      </Text>
-                    )}
-                  </View>
-                );
-              })}
+                  );
+                })()
+              )}
             </ScrollView>
           </View>
         </View>
@@ -480,9 +477,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  roundLabelContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 12,
+    gap: 8,
+  },
   roundLabel: {
+    flex: 1,
     color: '#A0AEC0',
     fontSize: 14,
+    lineHeight: 18,
+  },
+  feedbackIconButton: {
+    padding: 4,
   },
   roundScoreContainer: {
     flexDirection: 'row',

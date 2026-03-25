@@ -75,10 +75,18 @@ export default function Globe({
     const points: Array<{ latitude: number; longitude: number }> = [];
     const numPoints = 50;
 
+    // Normalize longitude difference to shortest arc across date line
+    let lngDiff = targetMarker.lng - guessMarker.lng;
+    if (lngDiff > 180) {
+      lngDiff -= 360;
+    } else if (lngDiff < -180) {
+      lngDiff += 360;
+    }
+
     for (let i = 0; i <= numPoints; i++) {
       const t = i / numPoints;
       const lat = guessMarker.lat + (targetMarker.lat - guessMarker.lat) * t;
-      const lng = guessMarker.lng + (targetMarker.lng - guessMarker.lng) * t;
+      const lng = guessMarker.lng + lngDiff * t;
       // Add some arc height
       const arcHeight = Math.sin(t * Math.PI) * 10;
       points.push({

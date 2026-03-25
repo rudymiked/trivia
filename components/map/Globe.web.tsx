@@ -1,5 +1,5 @@
 import { Coordinates } from '@/types/game';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface GlobeProps {
   onLocationSelect: (coords: Coordinates) => void;
@@ -210,11 +210,19 @@ export default function Globe({
       const path: Array<{ lat: number; lng: number }> = [];
       const numPoints = 50;
 
+      // Normalize longitude difference to shortest arc across date line
+      let lngDiff = targetMarker.lng - guessMarker.lng;
+      if (lngDiff > 180) {
+        lngDiff -= 360;
+      } else if (lngDiff < -180) {
+        lngDiff += 360;
+      }
+
       for (let i = 0; i <= numPoints; i++) {
         const t = i / numPoints;
         path.push({
           lat: guessMarker.lat + (targetMarker.lat - guessMarker.lat) * t,
-          lng: guessMarker.lng + (targetMarker.lng - guessMarker.lng) * t,
+          lng: guessMarker.lng + lngDiff * t,
         });
       }
 

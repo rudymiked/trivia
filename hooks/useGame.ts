@@ -10,13 +10,23 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
 // Haversine formula to calculate distance between two coordinates
+// Handles date line wrapping by normalizing longitude difference to shortest arc
 export function calculateDistance(
   coord1: Coordinates,
   coord2: Coordinates
 ): number {
   const R = 6371; // Earth's radius in km
   const dLat = toRad(coord2.lat - coord1.lat);
-  const dLng = toRad(coord2.lng - coord1.lng);
+  
+  // Normalize longitude difference to shortest arc across date line
+  let dLngDeg = coord2.lng - coord1.lng;
+  if (dLngDeg > 180) {
+    dLngDeg -= 360;
+  } else if (dLngDeg < -180) {
+    dLngDeg += 360;
+  }
+  const dLng = toRad(dLngDeg);
+  
   const a =
     Math.sin(dLat / 2) * Math.sin(dLat / 2) +
     Math.cos(toRad(coord1.lat)) *

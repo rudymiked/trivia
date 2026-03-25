@@ -27,21 +27,25 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 const STORAGE_KEY = 'pinpoint_user';
 const TOKEN_STORAGE_KEY = 'pinpoint_id_token';
 
+function parseJwtPayload(token: string): Record<string, unknown> | null {
+  try {
+    const parts = token.split('.');
+    if (parts.length !== 3) return null;
+
+    const payload = parts[1];
+    const base64 = payload.replace(/-/g, '+').replace(/_/g, '/');
+    const decoded = atob(base64);
+    return JSON.parse(decoded) as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+}
+
 // Check if a JWT token is expired (with 5 minute buffer)
 function isTokenExpired(token: string): boolean {
   try {
-    // JWT structure: header.payload.signature
-    const parts = token.split('.');
-    if (parts.length !== 3) return true;
-
-    // Decode the payload (base64url)
-    const payload = parts[1];
-    // Handle base64url encoding (replace - with +, _ with /)
-    const base64 = payload.replace(/-/g, '+').replace(/_/g, '/');
-    const decoded = atob(base64);
-    const parsed = JSON.parse(decoded);
-
-    if (!parsed.exp) return true;
+    const parsed = parseJwtPayload(token);
+    if (!parsed || typeof parsed.exp !== 'number') return true;
 
     // Check if expired (with 5 minute buffer for clock skew)
     const expirationTime = parsed.exp * 1000; // Convert to milliseconds
@@ -63,7 +67,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [idToken, setIdToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const [request, response, promptAsync] = Google.useAuthRequest({
+  const [, response, promptAsync] = Google.useIdTokenAuthRequest({
     webClientId: GOOGLE_CLIENT_ID_WEB,
     iosClientId: GOOGLE_CLIENT_ID_IOS,
     androidClientId: GOOGLE_CLIENT_ID_ANDROID,
@@ -74,19 +78,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     loadUser();
   }, []);
 
-  // Handle auth response
+  // Handle auth response that arrives via state (e.g. redirect-based flows)
   useEffect(() => {
     if (response?.type === 'success') {
-      const { authentication } = response;
-      if (authentication?.accessToken) {
-        // Store the ID token for API authentication
-        if (authentication.idToken) {
-          setIdToken(authentication.idToken);
-          AsyncStorage.setItem(TOKEN_STORAGE_KEY, authentication.idToken);
-        }
-        fetchUserInfo(authentication.accessToken);
-      }
+      void processAuthResult(response.authentication, response.params);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [response]);
 
   const loadUser = async () => {
@@ -134,9 +131,53 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const processAuthResult = async (
+    authentication: { accessToken: string; idToken?: string | null } | null,
+    params?: Record<string, string>
+  ) => {
+    const tokenFromAuth = authentication?.idToken ?? null;
+    const tokenFromParams = params?.id_token ?? null;
+    const resolvedIdToken = tokenFromAuth || tokenFromParams;
+
+    if (!resolvedIdToken) {
+      console.warn('Google auth succeeded but no idToken was returned.');
+      return;
+    }
+
+    setIdToken(resolvedIdToken);
+    await AsyncStorage.setItem(TOKEN_STORAGE_KEY, resolvedIdToken);
+
+    const accessToken = authentication?.accessToken ?? params?.access_token ?? null;
+    if (accessToken) {
+      await fetchUserInfo(accessToken);
+      return;
+    }
+
+    // In id_token flow, an access token may be absent on web. Build user from JWT claims.
+    const claims = parseJwtPayload(resolvedIdToken);
+    if (!claims) return;
+
+    const sub = typeof claims.sub === 'string' ? claims.sub : null;
+    const email = typeof claims.email === 'string' ? claims.email : null;
+    if (!sub || !email) return;
+
+    const newUser: User = {
+      id: sub,
+      email,
+      name: typeof claims.name === 'string' ? claims.name : email,
+      picture: typeof claims.picture === 'string' ? claims.picture : undefined,
+    };
+
+    setUser(newUser);
+    await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
+  };
+
   const signIn = async () => {
     try {
-      await promptAsync();
+      const result = await promptAsync();
+      if (result.type === 'success') {
+        await processAuthResult(result.authentication, result.params);
+      }
     } catch (error) {
       console.error('Error signing in:', error);
     }
@@ -157,17 +198,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const isTokenValid = idToken !== null && !isTokenExpired(idToken);
 
   // Get token only if it's valid, otherwise return null
-  const getValidIdToken = (): string | null => {
+  // Memoised so consumers can safely use it as a useCallback dep.
+  const getValidIdToken = React.useCallback((): string | null => {
     if (idToken && !isTokenExpired(idToken)) {
       return idToken;
     }
-    // Token is expired, clear it
     if (idToken) {
       setIdToken(null);
-      AsyncStorage.removeItem(TOKEN_STORAGE_KEY);
+      void AsyncStorage.removeItem(TOKEN_STORAGE_KEY);
     }
     return null;
-  };
+  }, [idToken]);
 
   return (
     <AuthContext.Provider value={{ user, idToken, isLoading, isTokenValid, signIn, signOut, getValidIdToken }}>

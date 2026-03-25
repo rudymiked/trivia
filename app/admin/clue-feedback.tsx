@@ -18,7 +18,7 @@ const DEFAULT_MIN_COUNT = 2;
 
 export default function ClueFeedbackAdminScreen() {
   const router = useRouter();
-  const { user, getValidIdToken, isLoading: authLoading, signIn } = useAuth();
+  const { user, getValidIdToken, isLoading: authLoading, isTokenValid, signIn } = useAuth();
   const [clues, setClues] = useState<LowRatedClueSummary[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
@@ -26,6 +26,8 @@ export default function ClueFeedbackAdminScreen() {
   const canAccessAdminTools = isAllowedAdminEmail(user?.email);
 
   const loadClues = useCallback(async (refresh = false) => {
+    if (authLoading) return;
+
     if (!user) {
       setError('Sign in with your admin account to view this report.');
       setClues([]);
@@ -44,8 +46,7 @@ export default function ClueFeedbackAdminScreen() {
 
     const authToken = getValidIdToken();
     if (!authToken) {
-      setError('Your session expired. Sign in again to continue.');
-      setClues([]);
+      // Token is expired — the render will show the session-expired screen.
       setIsLoading(false);
       setIsRefreshing(false);
       return;
@@ -80,7 +81,7 @@ export default function ClueFeedbackAdminScreen() {
       setIsLoading(false);
       setIsRefreshing(false);
     }
-  }, [canAccessAdminTools, getValidIdToken, user]);
+  }, [authLoading, canAccessAdminTools, getValidIdToken, isTokenValid, user]);
 
   useEffect(() => {
     void loadClues();
@@ -122,6 +123,20 @@ export default function ClueFeedbackAdminScreen() {
         </Text>
         <Pressable style={styles.secondaryButton} onPress={handleGoToProfile}>
           <Text style={styles.secondaryButtonText}>Back to Profile</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
+  if (!isTokenValid) {
+    return (
+      <View style={styles.centeredContainer}>
+        <Text style={styles.accessTitle}>Session Expired</Text>
+        <Text style={styles.accessBody}>
+          Your session has expired. Sign in again to continue.
+        </Text>
+        <Pressable style={styles.primaryButton} onPress={signIn}>
+          <Text style={styles.primaryButtonText}>Sign In with Google</Text>
         </Pressable>
       </View>
     );

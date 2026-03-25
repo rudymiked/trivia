@@ -3,7 +3,7 @@ import { getTimeUntilNextPuzzle, getTodayDate, hasPlayedToday } from '@/services
 import { getUserProgress, type UserProgress } from '@/services/storage';
 import { Href, useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -64,7 +64,11 @@ export default function HomeScreen() {
   }
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
+      showsVerticalScrollIndicator={false}
+    >
       {/* Logo */}
       <View style={styles.logoContainer}>
         <Text style={styles.logoText}>PinPoint</Text>
@@ -149,7 +153,7 @@ export default function HomeScreen() {
           <Text style={styles.instructionText}>Complete 5 rounds to finish</Text>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -157,7 +161,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1A202C',
+  },
+  contentContainer: {
     padding: 20,
+    flexGrow: 1,
     justifyContent: 'center',
   },
   logoContainer: {

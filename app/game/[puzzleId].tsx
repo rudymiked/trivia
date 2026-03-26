@@ -5,16 +5,16 @@ import { useGameStore } from '@/hooks/useGame';
 import { checkUserGame } from '@/services/api';
 import { generateDailyPuzzleWithSource } from '@/services/puzzle';
 import {
-    getDailyResult,
-    hasCompletedMapWalkthrough,
-    markMapWalkthroughCompleted,
-    type DailyResult,
+  getDailyResult,
+  hasCompletedMapWalkthrough,
+  markMapWalkthroughCompleted,
+  type DailyResult,
 } from '@/services/storage';
 import { trackTelemetryEvent } from '@/services/telemetry';
 import { Coordinates, RoundResult } from '@/types/game';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 
 type GamePhase = 'playing' | 'result' | 'complete';
@@ -26,16 +26,16 @@ interface WalkthroughStep {
 
 const MAP_WALKTHROUGH_STEPS: WalkthroughStep[] = [
   {
-    title: 'Step 1: Tap the map',
-    body: 'Drop your guess anywhere on the globe. You can move it until you confirm.',
+    title: 'Step 1: Read the clue',
+    body: 'Start by reading the clue card at the bottom. It tells you where to search on the map.',
   },
   {
-    title: 'Step 2: Confirm your guess',
-    body: 'Use Confirm Guess to lock in and see distance + score instantly.',
+    title: 'Step 2: Tap the map',
+    body: 'Drop your guess anywhere on the globe. You can move it until you are happy with the spot.',
   },
   {
-    title: 'Step 3: Keep momentum',
-    body: 'Finish 5 rounds. New players usually make their first guess in under 30 seconds.',
+    title: 'Step 3: Submit guess',
+    body: 'Tap Confirm Guess to lock it in and see your distance and score for the round.',
   },
 ];
 
@@ -72,10 +72,13 @@ export default function GameScreen() {
   const [alreadyCompleted, setAlreadyCompleted] = useState<DailyResult | null>(null);
   const [serverCompleted, setServerCompleted] = useState<ServerGameResult | null>(null);
   const [fallbackNotice, setFallbackNotice] = useState<string | null>(null);
+  const [mapError, setMapError] = useState<string | null>(null);
+  const [mapRetryCount, setMapRetryCount] = useState(0);
   const [showWalkthrough, setShowWalkthrough] = useState(false);
   const [walkthroughStepIndex, setWalkthroughStepIndex] = useState(0);
   const [walkthroughStartMs, setWalkthroughStartMs] = useState<number | null>(null);
   const [walkthroughChecked, setWalkthroughChecked] = useState(false);
+  const firstGuessTrackedRef = useRef(false);
 
   // Check if puzzleId looks like a date (YYYY-MM-DD)
   const isDateBasedPuzzle = /^\d{4}-\d{2}-\d{2}$/.test(puzzleId || '');
@@ -209,6 +212,7 @@ export default function GameScreen() {
     setWalkthroughStepIndex(0);
     setWalkthroughStartMs(null);
     setWalkthroughChecked(false);
+    firstGuessTrackedRef.current = false;
   }, [puzzleId]);
 
   useEffect(() => {
@@ -284,21 +288,37 @@ export default function GameScreen() {
     }
   }, [puzzleId, isDateBasedPuzzle, startGame, user]);
 
+  const handleMapErrorChange = useCallback((message: string | null) => {
+    setMapError(message);
+  }, []);
+
+  const handleRetryMap = useCallback(() => {
+    setMapError(null);
+    setMapRetryCount((count) => count + 1);
+  }, []);
+
+  const handleCheckConnection = useCallback(() => {
+    Alert.alert(
+      'Check Connection',
+      'Make sure you are online. If the map still fails, confirm your Google Maps configuration is valid and then tap Retry.'
+    );
+  }, []);
+
   const handleLocationSelect = useCallback((coords: Coordinates) => {
     if (phase !== 'playing') return;
 
-    if (showWalkthrough && walkthroughStartMs) {
+    if (showWalkthrough && walkthroughStartMs && !firstGuessTrackedRef.current) {
+      firstGuessTrackedRef.current = true;
       const elapsedMs = Date.now() - walkthroughStartMs;
       void trackTelemetryEvent('new_user_time_to_first_guess', {
         elapsedMs,
         within30Seconds: elapsedMs <= 30000,
         puzzleId,
       });
-      dismissWalkthrough('complete');
     }
 
     setCurrentGuess(coords);
-  }, [dismissWalkthrough, phase, puzzleId, showWalkthrough, walkthroughStartMs]);
+  }, [phase, puzzleId, showWalkthrough, walkthroughStartMs]);
 
   const handleConfirmGuess = useCallback(() => {
     if (!currentGuess || phase !== 'playing') return;
@@ -454,6 +474,10 @@ export default function GameScreen() {
 
   const currentRoundData = puzzle.rounds[currentRound];
   const canRetryBeforeProgress = phase === 'playing' && currentRound === 0 && results.length === 0;
+  const walkthroughActive = showWalkthrough && phase === 'playing';
+  const highlightClue = walkthroughActive && walkthroughStepIndex === 0;
+  const highlightMap = walkthroughActive && walkthroughStepIndex === 1;
+  const highlightConfirm = walkthroughActive && walkthroughStepIndex === 2;
 
   return (
     <View style={styles.container}>
@@ -473,26 +497,61 @@ export default function GameScreen() {
       {fallbackNotice && (
         <View style={styles.fallbackBanner}>
           <Text style={styles.fallbackBannerText}>{fallbackNotice}</Text>
-          {canRetryBeforeProgress && (
-            <Pressable style={styles.fallbackRetryButton} onPress={retryOnlinePuzzle}>
-              <Text style={styles.fallbackRetryButtonText}>Retry Online</Text>
+          <View style={styles.fallbackActions}>
+            {canRetryBeforeProgress && (
+              <Pressable style={styles.fallbackRetryButton} onPress={retryOnlinePuzzle}>
+                <Text style={styles.fallbackRetryButtonText}>Retry</Text>
+              </Pressable>
+            )}
+            <Pressable style={styles.fallbackCheckButton} onPress={handleCheckConnection}>
+              <Text style={styles.fallbackCheckButtonText}>Check connection</Text>
             </Pressable>
-          )}
+          </View>
         </View>
       )}
 
       {/* Map */}
-      <View style={styles.mapContainer}>
+      <View style={[
+        styles.mapContainer,
+        walkthroughActive && !highlightMap && styles.dimmedSurface,
+        highlightMap && styles.highlightSurface,
+      ]}>
         <Globe
+          key={mapRetryCount}
           onLocationSelect={handleLocationSelect}
           guessMarker={currentGuess}
           targetMarker={phase === 'result' ? currentResult?.target : null}
           showArc={phase === 'result'}
           disabled={phase !== 'playing'}
+          onErrorChange={handleMapErrorChange}
         />
 
-        {showWalkthrough && phase === 'playing' && (
-          <View style={styles.walkthroughOverlay}>
+        {walkthroughActive && !highlightMap && <View pointerEvents="none" style={styles.surfaceScrim} />}
+
+        {mapError && phase === 'playing' && (
+          <View style={styles.mapRecoveryOverlay}>
+            <View style={styles.mapRecoveryCard}>
+              <Text style={styles.mapRecoveryTitle}>Map unavailable</Text>
+              <Text style={styles.mapRecoveryBody}>{mapError}</Text>
+              <View style={styles.mapRecoveryActions}>
+                <Pressable style={styles.fallbackRetryButton} onPress={handleRetryMap}>
+                  <Text style={styles.fallbackRetryButtonText}>Retry</Text>
+                </Pressable>
+                <Pressable style={styles.fallbackCheckButton} onPress={handleCheckConnection}>
+                  <Text style={styles.fallbackCheckButtonText}>Check connection</Text>
+                </Pressable>
+              </View>
+            </View>
+          </View>
+        )}
+
+        {walkthroughActive && (
+          <View style={[
+            styles.walkthroughOverlay,
+            walkthroughStepIndex === 0
+              ? styles.walkthroughOverlayBottom
+              : styles.walkthroughOverlayTop,
+          ]}>
             <View style={styles.walkthroughCard}>
               <Pressable
                 style={styles.walkthroughSkipButton}
@@ -523,17 +582,40 @@ export default function GameScreen() {
 
       {/* Clue card */}
       {phase === 'playing' && currentRoundData && (
-        <View style={styles.clueContainer}>
-          <ClueCard
-            round={currentRoundData}
-            roundNumber={currentRound + 1}
-            totalRounds={puzzle.rounds.length}
-          />
+        <View style={[
+          styles.clueContainer,
+          walkthroughActive && !highlightClue && !highlightConfirm && styles.dimmedSurface,
+        ]}>
+          <View style={[
+            styles.clueCardFrame,
+            highlightClue && styles.highlightSurface,
+            walkthroughActive && !highlightClue && !highlightConfirm && styles.dimmedCard,
+          ]}>
+            <ClueCard
+              round={currentRoundData}
+              roundNumber={currentRound + 1}
+              totalRounds={puzzle.rounds.length}
+            />
+          </View>
 
           {currentGuess && (
-            <Pressable style={styles.confirmButton} onPress={handleConfirmGuess}>
+            <Pressable
+              style={[
+                styles.confirmButton,
+                highlightConfirm && styles.highlightSurface,
+              ]}
+              onPress={handleConfirmGuess}
+            >
               <Text style={styles.confirmButtonText}>Confirm Guess</Text>
             </Pressable>
+          )}
+
+          {highlightConfirm && !currentGuess && (
+            <View style={[styles.confirmHintCard, styles.highlightSurface]}>
+              <Text style={styles.confirmHintText}>
+                Confirm Guess appears here after you place a pin on the map.
+              </Text>
+            </View>
           )}
         </View>
       )}
@@ -619,6 +701,10 @@ const styles = StyleSheet.create({
     fontSize: 13,
     flex: 1,
   },
+  fallbackActions: {
+    flexDirection: 'row',
+    gap: 8,
+  },
   fallbackRetryButton: {
     backgroundColor: '#ED8936',
     paddingHorizontal: 10,
@@ -630,19 +716,89 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '700',
   },
+  fallbackCheckButton: {
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.22)',
+  },
+  fallbackCheckButtonText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    fontWeight: '700',
+  },
   mapContainer: {
     flex: 1,
   },
+  mapRecoveryOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    backgroundColor: 'rgba(7, 10, 18, 0.35)',
+    zIndex: 4,
+  },
+  mapRecoveryCard: {
+    width: '100%',
+    maxWidth: 360,
+    padding: 18,
+    borderRadius: 18,
+    backgroundColor: 'rgba(26, 32, 44, 0.96)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 101, 101, 0.35)',
+  },
+  mapRecoveryTitle: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  mapRecoveryBody: {
+    color: '#E2E8F0',
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 14,
+  },
+  mapRecoveryActions: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  surfaceScrim: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(7, 10, 18, 0.28)',
+  },
+  dimmedSurface: {
+    opacity: 0.72,
+  },
+  dimmedCard: {
+    opacity: 0.86,
+  },
+  highlightSurface: {
+    borderWidth: 2,
+    borderColor: 'rgba(78, 205, 196, 0.9)',
+    shadowColor: '#4ECDC4',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.28,
+    shadowRadius: 14,
+    elevation: 10,
+  },
   walkthroughOverlay: {
     position: 'absolute',
-    top: 14,
     left: 14,
     right: 14,
+    zIndex: 5,
+  },
+  walkthroughOverlayTop: {
+    top: 14,
+  },
+  walkthroughOverlayBottom: {
+    bottom: 210,
   },
   walkthroughCard: {
     borderRadius: 16,
     padding: 14,
-    backgroundColor: 'rgba(26, 32, 44, 0.93)',
+    backgroundColor: 'rgba(26, 32, 44, 0.95)',
     borderWidth: 1,
     borderColor: 'rgba(78, 205, 196, 0.5)',
   },
@@ -695,6 +851,10 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
   },
+  clueCardFrame: {
+    borderRadius: 20,
+    marginHorizontal: 10,
+  },
   confirmButton: {
     backgroundColor: '#4ECDC4',
     marginHorizontal: 16,
@@ -707,6 +867,20 @@ const styles = StyleSheet.create({
     color: '#1A202C',
     fontSize: 18,
     fontWeight: '700',
+  },
+  confirmHintCard: {
+    marginHorizontal: 16,
+    marginBottom: 32,
+    paddingHorizontal: 16,
+    paddingVertical: 14,
+    borderRadius: 12,
+    backgroundColor: 'rgba(78, 205, 196, 0.18)',
+  },
+  confirmHintText: {
+    color: '#E6FFFA',
+    fontSize: 14,
+    fontWeight: '600',
+    textAlign: 'center',
   },
   resultContainer: {
     position: 'absolute',

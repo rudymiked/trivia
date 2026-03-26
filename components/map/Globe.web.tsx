@@ -7,21 +7,24 @@ interface GlobeProps {
   targetMarker?: Coordinates | null;
   showArc?: boolean;
   disabled?: boolean;
+  onErrorChange?: (message: string | null) => void;
 }
 
 // Track if Google Maps script is loading/loaded
 let isScriptLoading = false;
 let isScriptLoaded = false;
 const loadCallbacks: Array<() => void> = [];
+const loadErrorCallbacks: Array<(error: Error) => void> = [];
 
 function loadGoogleMapsScript(apiKey: string): Promise<void> {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     if (isScriptLoaded) {
       resolve();
       return;
     }
 
     loadCallbacks.push(resolve);
+    loadErrorCallbacks.push(reject);
 
     if (isScriptLoading) {
       return;
@@ -38,6 +41,14 @@ function loadGoogleMapsScript(apiKey: string): Promise<void> {
       isScriptLoading = false;
       loadCallbacks.forEach((cb) => cb());
       loadCallbacks.length = 0;
+      loadErrorCallbacks.length = 0;
+    };
+    script.onerror = () => {
+      const error = new Error('google_maps_script_failed');
+      isScriptLoading = false;
+      loadErrorCallbacks.forEach((cb) => cb(error));
+      loadCallbacks.length = 0;
+      loadErrorCallbacks.length = 0;
     };
     document.head.appendChild(script);
   });
@@ -49,6 +60,7 @@ export default function Globe({
   targetMarker,
   showArc = false,
   disabled = false,
+  onErrorChange,
 }: GlobeProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<google.maps.Map | null>(null);
@@ -66,6 +78,9 @@ export default function Globe({
       setError('Google Maps API key not configured. Add EXPO_PUBLIC_GOOGLE_MAPS_API_KEY to your .env file.');
       return;
     }
+
+    setError(null);
+    setIsReady(false);
 
     loadGoogleMapsScript(apiKey)
       .then(() => {
@@ -117,9 +132,10 @@ export default function Globe({
 
         mapRef.current = map;
         setIsReady(true);
+        setError(null);
       })
       .catch((err) => {
-        setError('Failed to load Google Maps');
+        setError('Failed to load Google Maps. Check your connection and try again.');
         console.error(err);
       });
 
@@ -130,6 +146,10 @@ export default function Globe({
       polylineRef.current?.setMap(null);
     };
   }, [apiKey]);
+
+  useEffect(() => {
+    onErrorChange?.(error);
+  }, [error, onErrorChange]);
 
   // Handle map clicks
   useEffect(() => {

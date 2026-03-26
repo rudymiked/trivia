@@ -18,9 +18,11 @@ interface AuthContextType {
   idToken: string | null;
   isLoading: boolean;
   isTokenValid: boolean;
+  authError: string | null;
   signIn: () => Promise<void>;
   signOut: () => Promise<void>;
   getValidIdToken: () => string | null;
+  clearAuthError: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -67,6 +69,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [idToken, setIdToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [authError, setAuthError] = useState<string | null>(null);
 
   const [, response, promptAsync] = Google.useIdTokenAuthRequest({
     webClientId: GOOGLE_CLIENT_ID_WEB,
@@ -116,6 +119,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const response = await fetch('https://www.googleapis.com/userinfo/v2/me', {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
+
+      if (!response.ok) {
+        throw new Error(`userinfo_http_${response.status}`);
+      }
+
       const userInfo = await response.json();
 
       const newUser: User = {
@@ -127,8 +135,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
       setUser(newUser);
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
+      setAuthError(null);
     } catch (error) {
       console.error('Error fetching user info:', error);
+      setAuthError('Sign-in succeeded, but we could not finish loading your account. Check your connection and try again.');
     }
   };
 
@@ -142,11 +152,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     if (!resolvedIdToken) {
       console.warn('Google auth succeeded but no idToken was returned.');
+      setAuthError('Sign-in did not return account details. Try again or continue as a guest.');
       return;
     }
 
     setIdToken(resolvedIdToken);
     await AsyncStorage.setItem(TOKEN_STORAGE_KEY, resolvedIdToken);
+    setAuthError(null);
 
     const accessToken = authentication?.accessToken ?? params?.access_token ?? null;
     if (accessToken) {
@@ -171,20 +183,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     setUser(newUser);
     await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
+    setAuthError(null);
   };
 
   const signIn = async () => {
     try {
+      setAuthError(null);
       void trackTelemetryEvent('sign_in_started');
       const result = await promptAsync();
       if (result.type === 'success') {
         await processAuthResult(result.authentication, result.params);
         void trackTelemetryEvent('sign_in_succeeded');
       } else if (result.type !== 'dismiss') {
+        setAuthError('Google sign-in failed. Check your connection and try again, or continue as a guest.');
         void trackTelemetryEvent('sign_in_failed', { reason: result.type });
       }
     } catch (error) {
       console.error('Error signing in:', error);
+      setAuthError('We could not reach Google sign-in. Check your connection and try again, or continue as a guest.');
       void trackTelemetryEvent('sign_in_failed', { reason: 'exception' });
     }
   };
@@ -216,8 +232,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return null;
   }, [idToken]);
 
+  const clearAuthError = React.useCallback(() => {
+    setAuthError(null);
+  }, []);
+
   return (
-    <AuthContext.Provider value={{ user, idToken, isLoading, isTokenValid, signIn, signOut, getValidIdToken }}>
+    <AuthContext.Provider value={{ user, idToken, isLoading, isTokenValid, authError, signIn, signOut, getValidIdToken, clearAuthError }}>
       {children}
     </AuthContext.Provider>
   );

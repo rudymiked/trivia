@@ -3,11 +3,11 @@ import { isAllowedAdminEmail } from '@/services/admin';
 import { getUserProgress, type UserProgress } from '@/services/storage';
 import { Href, useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function ProfileScreen() {
   const router = useRouter();
-  const { user, isLoading: authLoading, signIn, signOut } = useAuth();
+  const { user, isLoading: authLoading, authError, clearAuthError, signIn, signOut } = useAuth();
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const canAccessAdminTools = isAllowedAdminEmail(user?.email);
@@ -34,6 +34,23 @@ export default function ProfileScreen() {
     router.push('/terms' as Href);
   };
 
+  const handleRetrySignIn = async () => {
+    clearAuthError();
+    await signIn();
+  };
+
+  const handlePlayAsGuest = () => {
+    clearAuthError();
+    router.push('/' as Href);
+  };
+
+  const handleCheckConnection = () => {
+    Alert.alert(
+      'Check Connection',
+      'Make sure you are online and that Google sign-in popups are not blocked, then tap Retry.'
+    );
+  };
+
   if (isLoading || authLoading) {
     return (
       <View style={styles.loadingContainer}>
@@ -45,6 +62,24 @@ export default function ProfileScreen() {
   if (!user) {
     return (
       <View style={styles.guestContainer}>
+        {authError && (
+          <View style={styles.recoveryCard}>
+            <Text style={styles.recoveryTitle}>Sign-in is unavailable right now</Text>
+            <Text style={styles.recoveryBody}>{authError}</Text>
+            <View style={styles.recoveryActionsRow}>
+              <Pressable style={styles.secondaryRecoveryButton} onPress={handleRetrySignIn}>
+                <Text style={styles.secondaryRecoveryButtonText}>Retry</Text>
+              </Pressable>
+              <Pressable style={styles.secondaryRecoveryButton} onPress={handleCheckConnection}>
+                <Text style={styles.secondaryRecoveryButtonText}>Check connection</Text>
+              </Pressable>
+            </View>
+            <Pressable style={styles.primaryRecoveryButton} onPress={handlePlayAsGuest}>
+              <Text style={styles.primaryRecoveryButtonText}>Play as guest</Text>
+            </Pressable>
+          </View>
+        )}
+
         <Pressable style={styles.signInButton} onPress={signIn}>
           <Text style={styles.signInButtonText}>Sign In with Google</Text>
         </Pressable>
@@ -192,6 +227,55 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     backgroundColor: '#1A202C',
+  },
+  recoveryCard: {
+    marginBottom: 20,
+    padding: 18,
+    borderRadius: 16,
+    backgroundColor: 'rgba(245, 101, 101, 0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 101, 101, 0.4)',
+  },
+  recoveryTitle: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  recoveryBody: {
+    color: '#FEB2B2',
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 14,
+  },
+  recoveryActionsRow: {
+    flexDirection: 'row',
+    gap: 10,
+    marginBottom: 10,
+  },
+  secondaryRecoveryButton: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+    alignItems: 'center',
+  },
+  secondaryRecoveryButtonText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  primaryRecoveryButton: {
+    backgroundColor: '#4ECDC4',
+    borderRadius: 12,
+    paddingVertical: 13,
+    alignItems: 'center',
+  },
+  primaryRecoveryButtonText: {
+    color: '#1A202C',
+    fontSize: 15,
+    fontWeight: '700',
   },
   avatarContainer: {
     alignItems: 'center',

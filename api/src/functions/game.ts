@@ -3,11 +3,11 @@ import { randomUUID } from 'crypto';
 import { getTelemetryClient } from '../appInsights.js';
 import { extractBearerToken, verifyGoogleToken } from '../auth.js';
 import {
-  generatePersonalizedPuzzleForDate,
-  generatePuzzleForDate,
-  getTableClient,
-  initializeTables,
-  trackSeenLocations,
+    generatePersonalizedPuzzleForDate,
+    generatePuzzleForDate,
+    getTableClient,
+    initializeTables,
+    trackSeenLocations,
 } from '../storage.js';
 
 interface ScoreSubmission {
@@ -381,26 +381,39 @@ app.http('submitScore', {
         isVerified,
       };
 
+      // Primary write — score must be saved before we respond
       await client.upsertEntity(scoreEntity);
 
-      // Also save to games table (partitioned by userId for user queries)
-      await gamesClient.upsertEntity({
-        partitionKey: verifiedUserId,
-        rowKey: date,
-        displayName: verifiedDisplayName,
-        totalScore,
-        rounds: JSON.stringify(rounds),
-        completedAt,
-        isVerified,
-        puzzleType: 'daily',
-      });
+      // Secondary writes — wrap individually so a failure here doesn't
+      // return 500 after the score is already committed to the scores table.
+      try {
+        await gamesClient.upsertEntity({
+          partitionKey: verifiedUserId,
+          rowKey: date,
+          displayName: verifiedDisplayName,
+          totalScore,
+          rounds: JSON.stringify(rounds),
+          completedAt,
+          isVerified,
+          puzzleType: 'daily',
+        });
+      } catch (e) {
+        context.log('[submitScore] non-critical: failed to write games table:', e);
+      }
 
-      // Update user stats
-      await updateUserStats(verifiedUserId, verifiedDisplayName, totalScore, date);
+      try {
+        await updateUserStats(verifiedUserId, verifiedDisplayName, totalScore, date);
+      } catch (e) {
+        context.log('[submitScore] non-critical: failed to update user stats:', e);
+      }
 
       // Track seen locations for personalized puzzles (if locationIds provided)
       if (body.locationIds && body.locationIds.length > 0 && isVerified) {
-        await trackSeenLocations(verifiedUserId, body.locationIds);
+        try {
+          await trackSeenLocations(verifiedUserId, body.locationIds);
+        } catch (e) {
+          context.log('[submitScore] non-critical: failed to track seen locations:', e);
+        }
       }
 
       return {

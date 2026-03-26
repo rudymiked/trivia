@@ -43,6 +43,7 @@ interface GlobeProps {
   targetMarker?: Coordinates | null;
   showArc?: boolean;
   disabled?: boolean;
+  onErrorChange?: (message: string | null) => void;
 }
 
 export default function Globe({
@@ -51,6 +52,7 @@ export default function Globe({
   targetMarker,
   showArc = false,
   disabled = false,
+  onErrorChange,
 }: GlobeProps) {
   const [region, setRegion] = useState({
     latitude: 20,
@@ -96,6 +98,10 @@ export default function Globe({
     }
     return points;
   }, [showArc, guessMarker, targetMarker]);
+
+  React.useEffect(() => {
+    onErrorChange?.(null);
+  }, [onErrorChange]);
 
   return (
     <View style={styles.container}>

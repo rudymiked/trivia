@@ -2,8 +2,9 @@ import { useAuth } from '@/hooks/useAuth';
 import { fetchAllTimeLeaderboard, fetchLeaderboard } from '@/services/api';
 import { getTodayDate } from '@/services/puzzle';
 import { LeaderboardEntry } from '@/types/game';
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useFocusEffect } from 'expo-router';
+import React, { useCallback, useState } from 'react';
+import { ActivityIndicator, Alert, FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
 interface LeaderboardEntryWithUser extends LeaderboardEntry {
   isCurrentUser?: boolean;
@@ -58,12 +59,16 @@ export default function LeaderboardScreen() {
 
   const handleTabChange = (tab: LeaderboardTab) => {
     setActiveTab(tab);
-    loadLeaderboard(tab);
   };
 
-  useEffect(() => {
-    loadLeaderboard(activeTab);
-  }, [user?.id]);
+  // Reload whenever the tab gains focus (navigating back after a game) or when the
+  // active sub-tab / user changes. useFocusEffect fires on mount, focus, AND when
+  // deps change while the screen is focused, so it handles all three cases.
+  useFocusEffect(
+    useCallback(() => {
+      loadLeaderboard(activeTab);
+    }, [user?.id, activeTab])
+  );
 
   const renderItem = ({ item }: { item: LeaderboardEntryWithUser }) => (
     <View
@@ -94,13 +99,28 @@ export default function LeaderboardScreen() {
     );
   }
 
+  const handleCheckConnection = () => {
+    Alert.alert(
+      'Check Connection',
+      'Make sure you are online and then tap Retry to reload the leaderboard.'
+    );
+  };
+
   if (error) {
     return (
       <View style={styles.loadingContainer}>
-        <Text style={styles.errorText}>Failed to load leaderboard</Text>
-        <Pressable style={styles.retryButton} onPress={() => loadLeaderboard(activeTab)}>
-          <Text style={styles.retryButtonText}>Retry</Text>
-        </Pressable>
+        <View style={styles.recoveryCard}>
+          <Text style={styles.recoveryTitle}>Leaderboard unavailable</Text>
+          <Text style={styles.recoveryBody}>{error}</Text>
+          <View style={styles.recoveryActionsRow}>
+            <Pressable style={styles.primaryRecoveryButton} onPress={() => loadLeaderboard(activeTab)}>
+              <Text style={styles.primaryRecoveryButtonText}>Retry</Text>
+            </Pressable>
+            <Pressable style={styles.secondaryRecoveryButton} onPress={handleCheckConnection}>
+              <Text style={styles.secondaryRecoveryButtonText}>Check connection</Text>
+            </Pressable>
+          </View>
+        </View>
       </View>
     );
   }
@@ -187,20 +207,53 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#1A202C',
   },
-  errorText: {
-    color: '#FF6B6B',
-    fontSize: 16,
-    marginBottom: 16,
+  recoveryCard: {
+    width: '88%',
+    padding: 18,
+    borderRadius: 16,
+    backgroundColor: 'rgba(245, 101, 101, 0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 101, 101, 0.4)',
   },
-  retryButton: {
+  recoveryTitle: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  recoveryBody: {
+    color: '#FEB2B2',
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 14,
+  },
+  recoveryActionsRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  primaryRecoveryButton: {
+    flex: 1,
     backgroundColor: '#4ECDC4',
-    paddingHorizontal: 24,
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 12,
+    alignItems: 'center',
   },
-  retryButtonText: {
+  primaryRecoveryButtonText: {
     color: '#1A202C',
-    fontSize: 16,
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  secondaryRecoveryButton: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+    alignItems: 'center',
+  },
+  secondaryRecoveryButtonText: {
+    color: '#FFFFFF',
+    fontSize: 14,
     fontWeight: '600',
   },
   emptyContainer: {

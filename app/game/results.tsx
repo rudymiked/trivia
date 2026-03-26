@@ -49,38 +49,64 @@ export default function ResultsScreen() {
         // Sync to backend if logged in with valid token (daily puzzles only)
         if (user && isDailyPuzzle) {
           try {
-            const roundScores = results.map(r => Math.round(r.score));
             const validToken = getValidIdToken();
-            // Extract location IDs from puzzle rounds for tracking
-            const locationIds = puzzle.rounds
-              .map(r => r.locationId)
-              .filter((id): id is string => id !== undefined);
-            const submitResponse = await submitScore(
-              puzzle.date,
-              user.id,
-              user.name,
-              totalScore,
-              roundScores,
-              validToken || undefined,
-              locationIds.length > 0 ? locationIds : undefined
-            );
 
-            if (submitResponse.error) {
-              if (submitResponse.errorCode === 'DUPLICATE_SUBMISSION') {
+            // Token is expired — skip the API call and prompt re-auth immediately
+            if (!validToken) {
+              setSynced(false);
+              setSyncError('SESSION_EXPIRED');
+              void trackTelemetryEvent('score_submission_failed', {
+                puzzleDate: puzzle.date,
+                errorCode: 'TOKEN_EXPIRED',
+                errorMessage: 'Token expired before submission',
+              });
+            } else {
+              const roundScores = results.map(r => Math.round(r.score));
+              const totalRounded = roundScores.reduce((sum, score) => sum + score, 0);
+              // Extract location IDs from puzzle rounds for tracking
+              const locationIds = puzzle.rounds
+                .map(r => r.locationId)
+                .filter((id): id is string => id !== undefined);
+              const submitResponse = await submitScore(
+                puzzle.date,
+                user.id,
+                user.name,
+                totalRounded,
+                roundScores,
+                validToken,
+                locationIds.length > 0 ? locationIds : undefined
+              );
+
+              if (submitResponse.error) {
+                if (submitResponse.errorCode === 'DUPLICATE_SUBMISSION') {
+                  setSynced(true);
+                  setSyncError(null);
+                } else if (
+                  submitResponse.errorCode === 'AUTH_REQUIRED' ||
+                  submitResponse.errorCode === 'INVALID_AUTH_TOKEN'
+                ) {
+                  // Token was rejected server-side — treat like an expired session
+                  // so the prominent re-auth card is shown instead of small text.
+                  setSynced(false);
+                  setSyncError('SESSION_EXPIRED');
+                  void trackTelemetryEvent('score_submission_failed', {
+                    puzzleDate: puzzle.date,
+                    errorCode: submitResponse.errorCode ?? null,
+                    errorMessage: submitResponse.error,
+                  });
+                } else {
+                  setSynced(false);
+                  setSyncError(submitResponse.error);
+                  void trackTelemetryEvent('score_submission_failed', {
+                    puzzleDate: puzzle.date,
+                    errorCode: submitResponse.errorCode ?? null,
+                    errorMessage: submitResponse.error,
+                  });
+                }
+              } else {
                 setSynced(true);
                 setSyncError(null);
-              } else {
-                setSynced(false);
-                setSyncError(submitResponse.error);
-                void trackTelemetryEvent('score_submission_failed', {
-                  puzzleDate: puzzle.date,
-                  errorCode: submitResponse.errorCode ?? null,
-                  errorMessage: submitResponse.error,
-                });
               }
-            } else {
-              setSynced(true);
-              setSyncError(null);
             }
           } catch (error) {
             console.error('Failed to sync score:', error);
@@ -153,14 +179,22 @@ Play at: ${appUrl}`;
     const shareText = generateShareText();
 
     if (Platform.OS === 'web') {
+      // Use native share sheet when available (mobile browsers, Chrome desktop)
+      if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+        try {
+          await navigator.share({ text: shareText });
+          return;
+        } catch {
+          // User cancelled or share failed — fall through to clipboard
+        }
+      }
+      // Fallback: clipboard copy
       await Clipboard.setStringAsync(shareText);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } else {
       try {
-        await Share.share({
-          message: shareText,
-        });
+        await Share.share({ message: shareText });
       } catch {
         // User cancelled
       }
@@ -270,6 +304,28 @@ Play at: ${appUrl}`;
           <Text style={styles.totalScore}>{displayTotalScore}</Text>
           <Text style={styles.maxScore}>out of 500</Text>
 
+          {/* Emoji strip preview */}
+          <View style={styles.emojiStripRow}>
+            {results.map((r, i) => (
+              <Text key={i} style={styles.emojiStripItem}>
+                {getScoreEmoji(r.score, r.multiplier)}
+              </Text>
+            ))}
+          </View>
+
+          {/* One-tap share — primary CTA, always visible */}
+          <Pressable style={styles.shareButtonPrimary} onPress={handleShare}>
+            <Text style={styles.shareButtonPrimaryText}>
+              {copied
+                ? 'Copied!'
+                : Platform.OS === 'web' && typeof navigator !== 'undefined' && typeof navigator.share === 'function'
+                  ? 'Share Results'
+                  : Platform.OS === 'web'
+                    ? 'Copy Results'
+                    : 'Share Results'}
+            </Text>
+          </Pressable>
+
           {/* Login prompt for anonymous users */}
           {!user && (
             <View style={styles.loginPrompt}>
@@ -349,17 +405,21 @@ Play at: ${appUrl}`;
         {/* Actions */}
         <View style={styles.actionsContainer}>
           {user && isDailyPuzzle && synced && (
-            <Text style={styles.syncSuccessText}>Score synced to leaderboard</Text>
+            <Text style={styles.syncSuccessText}>Score synced to leaderboard ✓</Text>
           )}
-          {user && isDailyPuzzle && syncError && (
+          {user && isDailyPuzzle && syncError === 'SESSION_EXPIRED' && (
+            <View style={styles.syncErrorCard}>
+              <Text style={styles.syncErrorCardText}>
+                Your session expired. Sign in again to sync your score to the leaderboard.
+              </Text>
+              <Pressable style={styles.syncReauthButton} onPress={handleSignIn}>
+                <Text style={styles.syncReauthButtonText}>Sign in again</Text>
+              </Pressable>
+            </View>
+          )}
+          {user && isDailyPuzzle && syncError && syncError !== 'SESSION_EXPIRED' && (
             <Text style={styles.syncErrorText}>{syncError}</Text>
           )}
-
-          <Pressable style={styles.shareButton} onPress={handleShare}>
-            <Text style={styles.shareButtonText}>
-              {copied ? 'Copied!' : Platform.OS === 'web' ? 'Copy Results' : 'Share Results'}
-            </Text>
-          </Pressable>
 
           <Pressable style={styles.homeButton} onPress={handlePlayAgain}>
             <Text style={styles.homeButtonText}>Back to Home</Text>
@@ -632,6 +692,63 @@ const styles = StyleSheet.create({
     color: '#FFB86B',
     fontSize: 13,
     textAlign: 'center',
+  },
+  syncErrorCard: {
+    width: '100%',
+    padding: 14,
+    borderRadius: 12,
+    backgroundColor: 'rgba(237, 137, 54, 0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(237, 137, 54, 0.4)',
+    alignItems: 'center',
+    gap: 10,
+  },
+  syncErrorCardText: {
+    color: '#FBD38D',
+    fontSize: 13,
+    textAlign: 'center',
+    lineHeight: 19,
+  },
+  syncReauthButton: {
+    backgroundColor: '#4ECDC4',
+    paddingHorizontal: 24,
+    paddingVertical: 10,
+    borderRadius: 10,
+  },
+  syncReauthButtonText: {
+    color: '#1A202C',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  emojiStripRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 6,
+    marginTop: 12,
+    marginBottom: 16,
+  },
+  emojiStripItem: {
+    fontSize: 28,
+  },
+  shareButtonPrimary: {
+    backgroundColor: '#4ECDC4',
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 14,
+    alignItems: 'center',
+    alignSelf: 'stretch',
+    shadowColor: '#4ECDC4',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 6,
+    marginBottom: 4,
+  },
+  shareButtonPrimaryText: {
+    color: '#1A202C',
+    fontSize: 17,
+    fontWeight: '800',
+    letterSpacing: 0.3,
   },
   shareButton: {
     backgroundColor: '#4ECDC4',

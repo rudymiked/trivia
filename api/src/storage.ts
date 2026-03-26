@@ -75,6 +75,7 @@ export interface Location {
   type: string;
   difficulty: 'easy' | 'medium' | 'hard';
   target: { lat: number; lng: number };
+  bounds?: { nw: { lat: number; lng: number }; se: { lat: number; lng: number } }; // Optional area bounds
   country: string;
   answer?: string;
   enabled: boolean;
@@ -182,6 +183,7 @@ export async function generatePuzzleForDate(date: string): Promise<{
     type: loc.type,
     difficulty: loc.difficulty,
     target: loc.target,
+    ...(loc.bounds && { bounds: loc.bounds }), // Include bounds if present
     country: loc.country,
     answer: loc.answer,
     multiplier: difficultyMultiplier[loc.difficulty] || 1,
@@ -321,6 +323,7 @@ export async function generatePersonalizedPuzzleForDate(
     type: loc.type,
     difficulty: loc.difficulty,
     target: loc.target,
+    ...(loc.bounds && { bounds: loc.bounds }), // Include bounds if present
     country: loc.country,
     answer: loc.answer,
     multiplier: difficultyMultiplier[loc.difficulty] || 1,

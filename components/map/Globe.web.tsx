@@ -1,10 +1,11 @@
-import { Coordinates } from '@/types/game';
+import { BoundingBox, Coordinates } from '@/types/game';
 import React, { useEffect, useRef, useState } from 'react';
 
 interface GlobeProps {
   onLocationSelect: (coords: Coordinates) => void;
   guessMarker?: Coordinates | null;
   targetMarker?: Coordinates | null;
+  targetBounds?: BoundingBox | null;
   showArc?: boolean;
   disabled?: boolean;
   onErrorChange?: (message: string | null) => void;
@@ -58,6 +59,7 @@ export default function Globe({
   onLocationSelect,
   guessMarker,
   targetMarker,
+  targetBounds,
   showArc = false,
   disabled = false,
   onErrorChange,
@@ -67,6 +69,7 @@ export default function Globe({
   const guessMarkerRef = useRef<google.maps.Marker | null>(null);
   const targetMarkerRef = useRef<google.maps.Marker | null>(null);
   const polylineRef = useRef<google.maps.Polyline | null>(null);
+  const boundsRectRef = useRef<google.maps.Rectangle | null>(null);
   const [isReady, setIsReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -221,6 +224,40 @@ export default function Globe({
       targetMarkerRef.current?.setMap(null);
     }
   }, [targetMarker, isReady]);
+
+  // Update target bounds rectangle
+  useEffect(() => {
+    if (!mapRef.current || !isReady) return;
+
+    if (targetBounds) {
+      if (!boundsRectRef.current) {
+        boundsRectRef.current = new google.maps.Rectangle({
+          map: mapRef.current,
+          bounds: {
+            north: targetBounds.nw.lat,
+            south: targetBounds.se.lat,
+            east: targetBounds.se.lng,
+            west: targetBounds.nw.lng,
+          },
+          strokeColor: '#4ECDC4',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: '#4ECDC4',
+          fillOpacity: 0.15,
+        });
+      } else {
+        boundsRectRef.current.setBounds({
+          north: targetBounds.nw.lat,
+          south: targetBounds.se.lat,
+          east: targetBounds.se.lng,
+          west: targetBounds.nw.lng,
+        });
+        boundsRectRef.current.setMap(mapRef.current);
+      }
+    } else {
+      boundsRectRef.current?.setMap(null);
+    }
+  }, [targetBounds, isReady]);
 
   // Update arc polyline
   useEffect(() => {

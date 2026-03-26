@@ -1,4 +1,5 @@
 import {
+    BoundingBox,
     Coordinates,
     DIFFICULTY_MULTIPLIERS,
     GameState,
@@ -11,7 +12,7 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 
 // Haversine formula to calculate distance between two coordinates
 // Handles date line wrapping by normalizing longitude difference to shortest arc
-export function calculateDistance(
+function calculateDistanceBetweenPoints(
   coord1: Coordinates,
   coord2: Coordinates
 ): number {
@@ -35,6 +36,43 @@ export function calculateDistance(
       Math.sin(dLng / 2);
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   return R * c;
+}
+
+// Check if a coordinate is inside a bounding box
+function isPointInBounds(coord: Coordinates, bounds: BoundingBox): boolean {
+  const { nw, se } = bounds;
+  // NW has higher lat and lower lng; SE has lower lat and higher lng
+  const inLat = coord.lat <= nw.lat && coord.lat >= se.lat;
+  const inLng = coord.lng >= nw.lng && coord.lng <= se.lng;
+  return inLat && inLng;
+}
+
+// Calculate distance from a point to the nearest edge of a bounding box
+// Returns 0 if point is inside the box
+function calculateDistanceToBounds(coord: Coordinates, bounds: BoundingBox): number {
+  if (isPointInBounds(coord, bounds)) {
+    return 0;
+  }
+
+  const { nw, se } = bounds;
+  // Clamp the coordinate to the box bounds
+  const clampedLat = Math.max(se.lat, Math.min(coord.lat, nw.lat));
+  const clampedLng = Math.max(nw.lng, Math.min(coord.lng, se.lng));
+  const clampedCoord = { lat: clampedLat, lng: clampedLng };
+
+  return calculateDistanceBetweenPoints(coord, clampedCoord);
+}
+
+// Calculate distance to target (point or area)
+export function calculateDistance(
+  guess: Coordinates,
+  target: Coordinates,
+  targetBounds?: BoundingBox
+): number {
+  if (targetBounds) {
+    return calculateDistanceToBounds(guess, targetBounds);
+  }
+  return calculateDistanceBetweenPoints(guess, target);
 }
 
 function toRad(deg: number): number {
@@ -86,7 +124,7 @@ export const useGameStore = create<GameStore>()(
           throw new Error('No active round');
         }
 
-        const distanceKm = calculateDistance(guess, round.target);
+        const distanceKm = calculateDistance(guess, round.target, round.bounds);
         const baseScore = calculateScore(distanceKm);
         const multiplier = DIFFICULTY_MULTIPLIERS[round.difficulty];
         const score = baseScore * multiplier;

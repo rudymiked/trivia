@@ -3,6 +3,11 @@ export interface Coordinates {
   lng: number;
 }
 
+export interface BoundingBox {
+  nw: Coordinates; // Northwest corner
+  se: Coordinates; // Southeast corner
+}
+
 export type ClueFeedbackRating = 'easy' | 'hard' | 'unclear';
 
 export type Category = 'places' | 'questions' | 'geography';
@@ -14,10 +19,11 @@ export interface Round {
   category: Category;
   type: 'landmark' | 'city' | 'country' | 'region' | 'trivia' | 'mountain' | 'river' | 'lake' | 'desert' | 'island' | 'ocean';
   difficulty: 'easy' | 'medium' | 'hard';
-  target: Coordinates;
+  target: Coordinates; // Center point or primary marker
+  bounds?: BoundingBox; // Optional area bounds (for large geographic features like Great Barrier Reef, Amazon River)
   country: string;
   answer?: string; // For trivia questions, the name of the place
-  acceptRadius?: number; // km - for country/region type clues
+  acceptRadius?: number; // km - for country/region type clues (deprecated: use bounds instead)
   multiplier?: number; // Difficulty multiplier from API
 }
 

@@ -1,7 +1,7 @@
-import { Coordinates } from '@/types/game';
+import { BoundingBox, Coordinates } from '@/types/game';
 import React, { useCallback, useState } from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
-import MapView, { Marker, Polyline, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Marker, Polygon, Polyline, PROVIDER_GOOGLE } from 'react-native-maps';
 
 // Custom map style to hide all labels
 const mapStyle = [
@@ -41,6 +41,7 @@ interface GlobeProps {
   onLocationSelect: (coords: Coordinates) => void;
   guessMarker?: Coordinates | null;
   targetMarker?: Coordinates | null;
+  targetBounds?: BoundingBox | null;
   showArc?: boolean;
   disabled?: boolean;
   onErrorChange?: (message: string | null) => void;
@@ -50,6 +51,7 @@ export default function Globe({
   onLocationSelect,
   guessMarker,
   targetMarker,
+  targetBounds,
   showArc = false,
   disabled = false,
   onErrorChange,
@@ -122,6 +124,20 @@ export default function Globe({
         rotateEnabled={true}
         pitchEnabled={true}
       >
+        {targetBounds && (
+          <Polygon
+            coordinates={[
+              { latitude: targetBounds.nw.lat, longitude: targetBounds.nw.lng },
+              { latitude: targetBounds.nw.lat, longitude: targetBounds.se.lng },
+              { latitude: targetBounds.se.lat, longitude: targetBounds.se.lng },
+              { latitude: targetBounds.se.lat, longitude: targetBounds.nw.lng },
+            ]}
+            strokeColor="#4ECDC4"
+            fillColor="rgba(78, 205, 196, 0.15)"
+            strokeWidth={2}
+          />
+        )}
+
         {guessMarker && (
           <Marker
             coordinate={{

@@ -754,6 +754,16 @@
         "lat": -3.119,
         "lng": -60.0217
       },
+      "bounds": {
+        "nw": {
+          "lat": 5.5,
+          "lng": -73.0
+        },
+        "se": {
+          "lat": -11.0,
+          "lng": -49.0
+        }
+      },
       "country": "Brazil"
     },
     {
@@ -764,6 +774,16 @@
       "target": {
         "lat": 30.0444,
         "lng": 31.2357
+      },
+      "bounds": {
+        "nw": {
+          "lat": 31.6,
+          "lng": 23.0
+        },
+        "se": {
+          "lat": -2.0,
+          "lng": 35.0
+        }
       },
       "country": "Egypt"
     },
@@ -776,6 +796,16 @@
         "lat": 29.1511,
         "lng": -89.2495
       },
+      "bounds": {
+        "nw": {
+          "lat": 49.5,
+          "lng": -96.5
+        },
+        "se": {
+          "lat": 28.9,
+          "lng": -88.8
+        }
+      },
       "country": "United States"
     },
     {
@@ -787,6 +817,16 @@
         "lat": 48.2082,
         "lng": 16.3738
       },
+      "bounds": {
+        "nw": {
+          "lat": 48.8,
+          "lng": 8.0
+        },
+        "se": {
+          "lat": 43.2,
+          "lng": 29.8
+        }
+      },
       "country": "Austria"
     },
     {
@@ -797,6 +837,16 @@
       "target": {
         "lat": 30.5728,
         "lng": 117.27
+      },
+      "bounds": {
+        "nw": {
+          "lat": 34.5,
+          "lng": 100.0
+        },
+        "se": {
+          "lat": 29.0,
+          "lng": 122.0
+        }
       },
       "country": "China"
     },
@@ -875,6 +925,16 @@
         "lat": -1.2921,
         "lng": 32.8561
       },
+      "bounds": {
+        "nw": {
+          "lat": -0.5,
+          "lng": 31.1
+        },
+        "se": {
+          "lat": -3.5,
+          "lng": 34.9
+        }
+      },
       "country": "Uganda"
     },
     {
@@ -885,6 +945,16 @@
       "target": {
         "lat": -15.9254,
         "lng": -69.3354
+      },
+      "bounds": {
+        "nw": {
+          "lat": -15.0,
+          "lng": -70.3
+        },
+        "se": {
+          "lat": -16.7,
+          "lng": -68.6
+        }
       },
       "country": "Peru"
     },
@@ -897,6 +967,16 @@
         "lat": 47.7,
         "lng": -87.5
       },
+      "bounds": {
+        "nw": {
+          "lat": 48.8,
+          "lng": -90.0
+        },
+        "se": {
+          "lat": 46.2,
+          "lng": -83.7
+        }
+      },
       "country": "United States"
     },
     {
@@ -907,6 +987,16 @@
       "target": {
         "lat": 31.5,
         "lng": 35.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": 32.4,
+          "lng": 35.2
+        },
+        "se": {
+          "lat": 31.0,
+          "lng": 35.6
+        }
       },
       "country": "Israel"
     },
@@ -930,6 +1020,16 @@
         "lat": 42.5944,
         "lng": 103.4314
       },
+      "bounds": {
+        "nw": {
+          "lat": 48.0,
+          "lng": 97.0
+        },
+        "se": {
+          "lat": 37.0,
+          "lng": 113.0
+        }
+      },
       "country": "Mongolia"
     },
     {
@@ -940,6 +1040,16 @@
       "target": {
         "lat": -24.5,
         "lng": -69.25
+      },
+      "bounds": {
+        "nw": {
+          "lat": -18.0,
+          "lng": -73.5
+        },
+        "se": {
+          "lat": -27.0,
+          "lng": -68.0
+        }
       },
       "country": "Chile"
     },
@@ -952,6 +1062,16 @@
         "lat": 35.011,
         "lng": -115.4734
       },
+      "bounds": {
+        "nw": {
+          "lat": 37.0,
+          "lng": -117.5
+        },
+        "se": {
+          "lat": 33.5,
+          "lng": -114.2
+        }
+      },
       "country": "United States"
     },
     {
@@ -962,6 +1082,16 @@
       "target": {
         "lat": -18.7669,
         "lng": 46.8691
+      },
+      "bounds": {
+        "nw": {
+          "lat": -11.9,
+          "lng": 43.2
+        },
+        "se": {
+          "lat": -25.5,
+          "lng": 50.5
+        }
       },
       "country": "Madagascar"
     },
@@ -974,6 +1104,16 @@
         "lat": -0.9538,
         "lng": -90.9656
       },
+      "bounds": {
+        "nw": {
+          "lat": 1.5,
+          "lng": -92.0
+        },
+        "se": {
+          "lat": -2.2,
+          "lng": -88.9
+        }
+      },
       "country": "Ecuador"
     },
     {
@@ -984,6 +1124,16 @@
       "target": {
         "lat": 19.8968,
         "lng": -155.5828
+      },
+      "bounds": {
+        "nw": {
+          "lat": 20.3,
+          "lng": -156.2
+        },
+        "se": {
+          "lat": 19.0,
+          "lng": -154.8
+        }
       },
       "country": "United States"
     },
@@ -996,6 +1146,16 @@
         "lat": 71.7069,
         "lng": -42.6043
       },
+      "bounds": {
+        "nw": {
+          "lat": 83.6,
+          "lng": -73.3
+        },
+        "se": {
+          "lat": 59.7,
+          "lng": -11.3
+        }
+      },
       "country": "Greenland"
     },
     {
@@ -1007,6 +1167,16 @@
         "lat": -16.5004,
         "lng": -151.7415
       },
+      "bounds": {
+        "nw": {
+          "lat": -16.3,
+          "lng": -151.95
+        },
+        "se": {
+          "lat": -16.7,
+          "lng": -151.5
+        }
+      },
       "country": "French Polynesia"
     },
     {
@@ -1017,6 +1187,16 @@
       "target": {
         "lat": -18.2871,
         "lng": 147.6992
+      },
+      "bounds": {
+        "nw": {
+          "lat": -9.4,
+          "lng": 142.6
+        },
+        "se": {
+          "lat": -24.8,
+          "lng": 154.1
+        }
       },
       "country": "Australia"
     },
@@ -1235,6 +1415,16 @@
         "lat": -4.3217,
         "lng": 15.3126
       },
+      "bounds": {
+        "nw": {
+          "lat": 3.5,
+          "lng": 11.0
+        },
+        "se": {
+          "lat": -13.0,
+          "lng": 25.0
+        }
+      },
       "country": "Democratic Republic of the Congo"
     },
     {
@@ -1245,6 +1435,16 @@
       "target": {
         "lat": 10.0452,
         "lng": 105.7469
+      },
+      "bounds": {
+        "nw": {
+          "lat": 33.7,
+          "lng": 100.0
+        },
+        "se": {
+          "lat": 8.5,
+          "lng": 107.0
+        }
       },
       "country": "Vietnam"
     },
@@ -1279,6 +1479,16 @@
         "lat": -6.316,
         "lng": 29.51
       },
+      "bounds": {
+        "nw": {
+          "lat": -3.5,
+          "lng": 29.0
+        },
+        "se": {
+          "lat": -9.4,
+          "lng": 31.0
+        }
+      },
       "country": "Tanzania"
     },
     {
@@ -1289,6 +1499,16 @@
       "target": {
         "lat": 41.92,
         "lng": 50.53
+      },
+      "bounds": {
+        "nw": {
+          "lat": 47.0,
+          "lng": 47.0
+        },
+        "se": {
+          "lat": 37.0,
+          "lng": 54.0
+        }
       },
       "country": "Azerbaijan"
     },
@@ -1301,6 +1521,16 @@
         "lat": -23.5,
         "lng": 22
       },
+      "bounds": {
+        "nw": {
+          "lat": -18.0,
+          "lng": 16.0
+        },
+        "se": {
+          "lat": -28.0,
+          "lng": 28.0
+        }
+      },
       "country": "Botswana"
     },
     {
@@ -1311,6 +1541,16 @@
       "target": {
         "lat": -24.5,
         "lng": 15
+      },
+      "bounds": {
+        "nw": {
+          "lat": -16.5,
+          "lng": 12.0
+        },
+        "se": {
+          "lat": -28.0,
+          "lng": 18.0
+        }
       },
       "country": "Namibia"
     },
@@ -1323,6 +1563,16 @@
         "lat": 37.5999,
         "lng": 14.0154
       },
+      "bounds": {
+        "nw": {
+          "lat": 38.3,
+          "lng": 12.0
+        },
+        "se": {
+          "lat": 36.6,
+          "lng": 15.7
+        }
+      },
       "country": "Italy"
     },
     {
@@ -1333,6 +1583,16 @@
       "target": {
         "lat": 64.9631,
         "lng": -19.0208
+      },
+      "bounds": {
+        "nw": {
+          "lat": 66.5,
+          "lng": -24.5
+        },
+        "se": {
+          "lat": 63.4,
+          "lng": -13.5
+        }
       },
       "country": "Iceland"
     },
@@ -1355,6 +1615,16 @@
       "target": {
         "lat": 15.5,
         "lng": 88
+      },
+      "bounds": {
+        "nw": {
+          "lat": 23.0,
+          "lng": 80.0
+        },
+        "se": {
+          "lat": 5.0,
+          "lng": 100.0
+        }
       },
       "country": "India"
     },
@@ -4757,6 +5027,111 @@
         "lng": 19.0399
       },
       "country": "Hungary"
+    },
+    {
+      "clue": "Great Barrier Reef",
+      "category": "places",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": -18.2871,
+        "lng": 147.6992
+      },
+      "bounds": {
+        "nw": {
+          "lat": -9.4,
+          "lng": 142.6
+        },
+        "se": {
+          "lat": -24.8,
+          "lng": 154.1
+        }
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Amazon River",
+      "category": "places",
+      "type": "river",
+      "difficulty": "hard",
+      "target": {
+        "lat": -3.0,
+        "lng": -60.0
+      },
+      "bounds": {
+        "nw": {
+          "lat": 5.5,
+          "lng": -73.0
+        },
+        "se": {
+          "lat": -11.0,
+          "lng": -49.0
+        }
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Sahara Desert",
+      "category": "places",
+      "type": "desert",
+      "difficulty": "medium",
+      "target": {
+        "lat": 23.0,
+        "lng": 3.0
+      },
+      "bounds": {
+        "nw": {
+          "lat": 31.0,
+          "lng": -15.0
+        },
+        "se": {
+          "lat": 15.0,
+          "lng": 51.0
+        }
+      },
+      "country": "Various"
+    },
+    {
+      "clue": "Grand Canyon",
+      "category": "places",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 36.2288,
+        "lng": -112.4695
+      },
+      "bounds": {
+        "nw": {
+          "lat": 36.5,
+          "lng": -113.7
+        },
+        "se": {
+          "lat": 35.9,
+          "lng": -111.3
+        }
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Lake Baikal",
+      "category": "places",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": {
+        "lat": 54.86,
+        "lng": 104.12
+      },
+      "bounds": {
+        "nw": {
+          "lat": 55.96,
+          "lng": 103.43
+        },
+        "se": {
+          "lat": 51.46,
+          "lng": 108.99
+        }
+      },
+      "country": "Russia"
     }
   ]
 }

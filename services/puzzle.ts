@@ -88,6 +88,7 @@ function generateLocalPuzzle(date: string = getTodayDate()): Puzzle {
     type: loc.type as Round['type'],
     difficulty: loc.difficulty as Round['difficulty'],
     target: loc.target,
+    ...(loc.bounds && { bounds: loc.bounds }), // Include bounds if present
     country: loc.country,
     answer: loc.answer,
     multiplier: difficultyMultiplier[loc.difficulty] || 1,

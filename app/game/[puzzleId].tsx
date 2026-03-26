@@ -521,6 +521,7 @@ export default function GameScreen() {
           onLocationSelect={handleLocationSelect}
           guessMarker={currentGuess}
           targetMarker={phase === 'result' ? currentResult?.target : null}
+          targetBounds={phase === 'result' && puzzle?.rounds[currentRound] ? puzzle.rounds[currentRound].bounds : null}
           showArc={phase === 'result'}
           disabled={phase !== 'playing'}
           onErrorChange={handleMapErrorChange}

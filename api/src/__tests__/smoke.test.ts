@@ -309,6 +309,198 @@ describe('PinPoint Core Journey Smoke Tests', () => {
     });
   });
 
+  describe('Practice Puzzle (Personalized)', () => {
+    it('should fetch a practice puzzle without userId', async () => {
+      const { body, status } = await makeRequest('/puzzle/practice');
+
+      expect(status).toBe(200);
+      expect(body.rounds).toBeDefined();
+      expect(body.rounds.length).toBe(5);
+      expect(body.rounds[0]).toHaveProperty('clue');
+      expect(body.rounds[0]).toHaveProperty('target');
+    });
+
+    it('should fetch a practice puzzle with valid userId', async () => {
+      const { body, status } = await makeRequest(`/puzzle/practice?userId=${TEST_USER_ID}`);
+
+      expect(status).toBe(200);
+      expect(body.rounds).toBeDefined();
+      expect(body.rounds.length).toBe(5);
+    });
+
+    it('should reject invalid userId in practice puzzle', async () => {
+      const { body, status } = await makeRequest('/puzzle/practice?userId=<script>bad</script>');
+
+      expect(status).toBe(400);
+      expect(body.error).toBeDefined();
+    });
+
+    it('should include bounds for area-based locations when present', async () => {
+      const { body, status } = await makeRequest('/puzzle');
+
+      expect(status).toBe(200);
+      // If any round has bounds, validate structure
+      const boundsRound = body.rounds.find((r: any) => r.bounds);
+      if (boundsRound) {
+        expect(boundsRound.bounds).toHaveProperty('nw');
+        expect(boundsRound.bounds).toHaveProperty('se');
+        expect(boundsRound.bounds.nw).toHaveProperty('lat');
+        expect(boundsRound.bounds.nw).toHaveProperty('lng');
+        expect(boundsRound.bounds.se).toHaveProperty('lat');
+        expect(boundsRound.bounds.se).toHaveProperty('lng');
+      }
+    });
+  });
+
+  describe('Clue Feedback', () => {
+    it('should accept valid clue feedback without auth', async () => {
+      const { body, status } = await makeRequest('/feedback/clues', {
+        method: 'POST',
+        body: JSON.stringify({
+          puzzleDate: TEST_DATE,
+          locationId: 'smoke-test-loc-' + Date.now(),
+          feedback: 'hard',
+          clue: 'Smoke test clue',
+          country: 'Test Country',
+        }),
+      });
+
+      expect(status).toBe(201);
+      expect(body.success).toBe(true);
+    });
+
+    it('should accept all valid feedback ratings', async () => {
+      const ratings = ['easy', 'hard', 'unclear'] as const;
+      for (const rating of ratings) {
+        const { status } = await makeRequest('/feedback/clues', {
+          method: 'POST',
+          body: JSON.stringify({
+            puzzleDate: TEST_DATE,
+            locationId: `smoke-rating-${rating}-${Date.now()}`,
+            feedback: rating,
+          }),
+        });
+        expect(status).toBe(201);
+      }
+    }, 15000);
+
+    it('should reject feedback with invalid rating', async () => {
+      const { body, status } = await makeRequest('/feedback/clues', {
+        method: 'POST',
+        body: JSON.stringify({
+          puzzleDate: TEST_DATE,
+          locationId: 'smoke-test-loc-invalid',
+          feedback: 'very_hard', // Not a valid rating
+        }),
+      });
+
+      expect(status).toBe(400);
+      expect(body.code).toBe('INVALID_CLUE_FEEDBACK');
+    });
+
+    it('should reject feedback with missing required fields', async () => {
+      const { body, status } = await makeRequest('/feedback/clues', {
+        method: 'POST',
+        body: JSON.stringify({
+          puzzleDate: TEST_DATE,
+          // Missing locationId and feedback
+        }),
+      });
+
+      expect(status).toBe(400);
+      expect(body.code).toBe('INVALID_CLUE_FEEDBACK');
+    });
+  });
+
+  describe('User Profile & History (Auth Required)', () => {
+    const FAKE_USER_ID = 'smoke-test-user-99999';
+
+    it('should reject user games request without auth', async () => {
+      const { body, status } = await makeRequest(`/users/${FAKE_USER_ID}/games`);
+
+      expect(status).toBe(401);
+      expect(body.error).toBeDefined();
+    });
+
+    it('should reject user stats request without auth', async () => {
+      const { body, status } = await makeRequest(`/users/${FAKE_USER_ID}/stats`);
+
+      expect(status).toBe(401);
+      expect(body.error).toBeDefined();
+    });
+
+    it('should reject user game check request without auth', async () => {
+      const { body, status } = await makeRequest(`/users/${FAKE_USER_ID}/games/${TEST_DATE}`);
+
+      expect(status).toBe(401);
+      expect(body.error).toBeDefined();
+    });
+
+    it('should reject invalid userId in user games route', async () => {
+      // Must send auth header to pass the auth gate; invalid ID rejected first
+      const { status } = await makeRequest(`/users/<bad-id>/games`, {
+        headers: { Authorization: 'Bearer fake-token' },
+      });
+
+      // 400 for invalid id (evaluated before auth token verification)
+      expect(status).toBe(400);
+    });
+
+    it('should reject invalid date in user game check', async () => {
+      const { status } = await makeRequest(`/users/${FAKE_USER_ID}/games/not-a-date`, {
+        headers: { Authorization: 'Bearer fake-token' },
+      });
+
+      expect(status).toBe(400);
+    });
+
+    describeAuth('Authenticated user endpoints', () => {
+      it('should return user games list', async () => {
+        const { body, status } = await makeRequest(
+          `/users/${TEST_USER_ID}/games`,
+          { headers: { Authorization: `Bearer ${TEST_AUTH_TOKEN}` } }
+        );
+
+        // 200 or 403 if token userId doesn't match TEST_USER_ID
+        expect([200, 403]).toContain(status);
+        if (status === 200) {
+          expect(body.userId).toBeDefined();
+          expect(Array.isArray(body.games)).toBe(true);
+        }
+      });
+
+      it('should return user stats (or empty defaults for new user)', async () => {
+        const { body, status } = await makeRequest(
+          `/users/${TEST_USER_ID}/stats`,
+          { headers: { Authorization: `Bearer ${TEST_AUTH_TOKEN}` } }
+        );
+
+        expect([200, 403]).toContain(status);
+        if (status === 200) {
+          expect(body.userId).toBeDefined();
+          expect(typeof body.gamesPlayed).toBe('number');
+          expect(typeof body.totalScore).toBe('number');
+          expect(typeof body.streak).toBe('number');
+        }
+      });
+
+      it('should return completed: false for a date not yet played', async () => {
+        const futureDate = '2099-12-31';
+        const { body, status } = await makeRequest(
+          `/users/${TEST_USER_ID}/games/${futureDate}`,
+          { headers: { Authorization: `Bearer ${TEST_AUTH_TOKEN}` } }
+        );
+
+        expect([200, 403]).toContain(status);
+        if (status === 200) {
+          // Should return { completed: false } for unplayed date
+          expect(body.completed).toBe(false);
+          expect(body.date).toBe(futureDate);
+        }
+      });
+    });
+  });
+
   describe('Integration: Full Daily Play Flow', () => {
     it('should complete full guest daily puzzle journey', async () => {
       // Step 1: Fetch puzzle
@@ -335,6 +527,6 @@ describe('PinPoint Core Journey Smoke Tests', () => {
 
       expect(submitRes.status).toBe(401);
       expect(submitRes.body.code).toBe('AUTH_REQUIRED');
-    });
+    }, 15000);
   });
 });

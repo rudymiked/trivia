@@ -9,6 +9,12 @@ Automated tests for core user journeys and API resilience.
 - Fetch puzzle for specific date
 - Reject invalid date formats
 
+### ✅ Practice Puzzle (Personalized)
+- Fetch practice puzzle with no userId
+- Fetch practice puzzle with valid userId
+- Reject invalid userId
+- Validate `bounds` field structure when area-based locations appear
+
 ### ✅ Score Submission & Duplicate Prevention
 - Accept valid score with auth token
 - Reject submission without auth
@@ -18,12 +24,26 @@ Automated tests for core user journeys and API resilience.
 - Enforce payload consistency (rounds sum ≈ total score)
 - Reject invalid date formats
 
+### ✅ Clue Feedback
+- Accept valid feedback without auth (easy/hard/unclear)
+- Validate all three rating values are accepted
+- Reject invalid feedback rating
+- Reject missing required fields
+
 ### ✅ Leaderboard Retrieval
 - Fetch daily leaderboard
 - Fetch by specific date
 - Fetch all-time leaderboard
 - Respect limit parameter
 - Reject invalid dates
+
+### ✅ User Profile & History
+- Reject unauthenticated requests to `/users/{id}/games`, `/users/{id}/stats`, `/users/{id}/games/{date}`
+- Reject invalid userId (400)
+- Reject invalid date in game check (400)
+- Authenticated: fetch games list, verify shape
+- Authenticated: fetch stats with numeric fields (or empty defaults for new user)
+- Authenticated: check unplayed date returns `completed: false`
 
 ### ✅ Error Handling
 - Missing required fields (400 + error code)

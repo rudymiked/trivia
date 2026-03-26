@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "subscriptionId": {
+      "value": "fe437567-a747-43fd-b720-718e7417d4d9"
+    },
+    "budgetName": {
+      "value": "Trivia-Monthly-20"
+    },
+    "monthlyLimit": {
+      "value": 20
+    },
+    "notificationEmail": {
+      "value": "rudymiked@gmail.com"
+    },
+    "startDate": {
+      "value": "2026-03-01"
+    }
+  }
+}

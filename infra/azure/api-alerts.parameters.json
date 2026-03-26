@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "namePrefix": {
+      "value": "pinpoint-api"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "monitorScopeResourceId": {
+      "value": "/subscriptions/fe437567-a747-43fd-b720-718e7417d4d9/resourceGroups/Trivia/providers/Microsoft.Insights/components/geotap-api"
+    },
+    "monitorScopeType": {
+      "value": "microsoft.insights/components"
+    },
+    "actionGroupResourceId": {
+      "value": "/subscriptions/fe437567-a747-43fd-b720-718e7417d4d9/resourceGroups/azureapp-auto-alerts-83c7f8-rudymiked_gmail_com/providers/microsoft.insights/actionGroups/azureapp-auto"
+    },
+    "roleName": {
+      "value": "geotap-api"
+    },
+    "errorRateThresholdPct": {
+      "value": 5
+    },
+    "minRequestsForRate": {
+      "value": 20
+    },
+    "p95LatencyMs": {
+      "value": 1200
+    },
+    "minRequestsForLatency": {
+      "value": 20
+    },
+    "minCrashCount": {
+      "value": 10
+    },
+    "crashSpikeMultiplier": {
+      "value": 3
+    }
+  }
+}

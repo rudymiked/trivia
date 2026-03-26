@@ -1,0 +1,244 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.41.2.15936",
+      "templateHash": "6909092920624847410"
+    }
+  },
+  "parameters": {
+    "namePrefix": {
+      "type": "string",
+      "defaultValue": "pinpoint-api",
+      "metadata": {
+        "description": "Name prefix used for alert rule resources"
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Azure region for alert resources"
+      }
+    },
+    "monitorScopeResourceId": {
+      "type": "string",
+      "metadata": {
+        "description": "Resource ID used as alert scope (App Insights component or Log Analytics workspace)"
+      }
+    },
+    "monitorScopeType": {
+      "type": "string",
+      "defaultValue": "microsoft.insights/components",
+      "metadata": {
+        "description": "Target resource type for scope (microsoft.insights/components or microsoft.operationalinsights/workspaces)"
+      }
+    },
+    "actionGroupResourceId": {
+      "type": "string",
+      "metadata": {
+        "description": "Resource ID of the action group used for alert notifications"
+      }
+    },
+    "roleName": {
+      "type": "string",
+      "defaultValue": "pinpoint-api",
+      "metadata": {
+        "description": "cloud_RoleName value emitted by the API telemetry"
+      }
+    },
+    "errorRateThresholdPct": {
+      "type": "int",
+      "defaultValue": 5,
+      "metadata": {
+        "description": "Error-rate alert threshold in percent over the evaluation window"
+      }
+    },
+    "minRequestsForRate": {
+      "type": "int",
+      "defaultValue": 20,
+      "metadata": {
+        "description": "Minimum request count required before evaluating error-rate alert"
+      }
+    },
+    "p95LatencyMs": {
+      "type": "int",
+      "defaultValue": 1200,
+      "metadata": {
+        "description": "p95 latency threshold in milliseconds over the evaluation window"
+      }
+    },
+    "minRequestsForLatency": {
+      "type": "int",
+      "defaultValue": 20,
+      "metadata": {
+        "description": "Minimum request count required before evaluating p95 latency alert"
+      }
+    },
+    "minCrashCount": {
+      "type": "int",
+      "defaultValue": 10,
+      "metadata": {
+        "description": "Minimum exception count in recent window before evaluating crash-spike alert"
+      }
+    },
+    "crashSpikeMultiplier": {
+      "type": "int",
+      "defaultValue": 3,
+      "metadata": {
+        "description": "Multiplier over baseline exceptions per window to trigger crash-spike alert"
+      }
+    },
+    "tags": {
+      "type": "object",
+      "defaultValue": {},
+      "metadata": {
+        "description": "Optional tags applied to all alert resources"
+      }
+    }
+  },
+  "variables": {
+    "errorRateQuery": "[concat('let timeframe = 5m;\n', 'let minRequests = ', string(parameters('minRequestsForRate')), ';\n', 'let thresholdPct = ', string(parameters('errorRateThresholdPct')), ';\n', 'requests\n', '| where timestamp > ago(timeframe)\n', '| where cloud_RoleName =~ ', ''', roleName, ''', '\n', '| summarize total = count(), failures = countif(success == false)\n', '| extend errorRatePct = iff(total == 0, 0.0, todouble(failures) * 100.0 / todouble(total))\n', '| where total >= minRequests and errorRatePct >= thresholdPct\n')]",
+    "latencyP95Query": "[concat('let timeframe = 5m;\n', 'let minRequests = ', string(parameters('minRequestsForLatency')), ';\n', 'let thresholdMs = ', string(parameters('p95LatencyMs')), ';\n', 'requests\n', '| where timestamp > ago(timeframe)\n', '| where cloud_RoleName =~ ', ''', roleName, ''', '\n', '| summarize total = count(), p95Ms = percentile(duration, 95)\n', '| where total >= minRequests and p95Ms >= thresholdMs\n')]",
+    "crashSpikeQuery": "[concat('let recentWindow = 5m;\n', 'let baselineWindow = 30m;\n', 'let minCrashes = ', string(parameters('minCrashCount')), ';\n', 'let spikeMultiplier = ', string(parameters('crashSpikeMultiplier')), ';\n', 'let recent = toscalar(\n', '  exceptions\n', '  | where timestamp > ago(recentWindow)\n', '  | where cloud_RoleName =~ ', ''', roleName, ''', '\n', '  | summarize c = count()\n', ');\n', 'let baseline = toscalar(\n', '  exceptions\n', '  | where timestamp between (ago(recentWindow + baselineWindow) .. ago(recentWindow))\n', '  | where cloud_RoleName =~ ', ''', roleName, ''', '\n', '  | summarize c = count()\n', ');\n', 'let baselinePerWindow = iif(baseline == 0, 0.0, todouble(baseline) / 6.0);\n', 'print recent = recent, baselinePerWindow = baselinePerWindow\n', '| where recent >= minCrashes and (baselinePerWindow == 0.0 or todouble(recent) >= baselinePerWindow * spikeMultiplier)\n')]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Insights/scheduledQueryRules",
+      "apiVersion": "2022-06-15",
+      "name": "[format('{0}-error-rate', parameters('namePrefix'))]",
+      "location": "[parameters('location')]",
+      "kind": "LogAlert",
+      "tags": "[parameters('tags')]",
+      "properties": {
+        "description": "API error rate exceeded threshold",
+        "displayName": "[format('{0} API Error Rate', parameters('namePrefix'))]",
+        "enabled": true,
+        "severity": 2,
+        "evaluationFrequency": "PT5M",
+        "windowSize": "PT5M",
+        "scopes": [
+          "[parameters('monitorScopeResourceId')]"
+        ],
+        "targetResourceTypes": [
+          "[parameters('monitorScopeType')]"
+        ],
+        "criteria": {
+          "allOf": [
+            {
+              "query": "[variables('errorRateQuery')]",
+              "timeAggregation": "Count",
+              "operator": "GreaterThan",
+              "threshold": 0,
+              "failingPeriods": {
+                "numberOfEvaluationPeriods": 1,
+                "minFailingPeriodsToAlert": 1
+              }
+            }
+          ]
+        },
+        "autoMitigate": true,
+        "actions": {
+          "actionGroups": [
+            "[parameters('actionGroupResourceId')]"
+          ],
+          "customProperties": {
+            "signal": "api_error_rate"
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Insights/scheduledQueryRules",
+      "apiVersion": "2022-06-15",
+      "name": "[format('{0}-latency-p95', parameters('namePrefix'))]",
+      "location": "[parameters('location')]",
+      "kind": "LogAlert",
+      "tags": "[parameters('tags')]",
+      "properties": {
+        "description": "API p95 latency exceeded threshold",
+        "displayName": "[format('{0} API p95 Latency', parameters('namePrefix'))]",
+        "enabled": true,
+        "severity": 2,
+        "evaluationFrequency": "PT5M",
+        "windowSize": "PT5M",
+        "scopes": [
+          "[parameters('monitorScopeResourceId')]"
+        ],
+        "targetResourceTypes": [
+          "[parameters('monitorScopeType')]"
+        ],
+        "criteria": {
+          "allOf": [
+            {
+              "query": "[variables('latencyP95Query')]",
+              "timeAggregation": "Count",
+              "operator": "GreaterThan",
+              "threshold": 0,
+              "failingPeriods": {
+                "numberOfEvaluationPeriods": 1,
+                "minFailingPeriodsToAlert": 1
+              }
+            }
+          ]
+        },
+        "autoMitigate": true,
+        "actions": {
+          "actionGroups": [
+            "[parameters('actionGroupResourceId')]"
+          ],
+          "customProperties": {
+            "signal": "api_latency_p95"
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Insights/scheduledQueryRules",
+      "apiVersion": "2022-06-15",
+      "name": "[format('{0}-crash-spike', parameters('namePrefix'))]",
+      "location": "[parameters('location')]",
+      "kind": "LogAlert",
+      "tags": "[parameters('tags')]",
+      "properties": {
+        "description": "API exception count spiked vs baseline",
+        "displayName": "[format('{0} API Crash Spike', parameters('namePrefix'))]",
+        "enabled": true,
+        "severity": 1,
+        "evaluationFrequency": "PT5M",
+        "windowSize": "PT45M",
+        "scopes": [
+          "[parameters('monitorScopeResourceId')]"
+        ],
+        "targetResourceTypes": [
+          "[parameters('monitorScopeType')]"
+        ],
+        "criteria": {
+          "allOf": [
+            {
+              "query": "[variables('crashSpikeQuery')]",
+              "timeAggregation": "Count",
+              "operator": "GreaterThan",
+              "threshold": 0,
+              "failingPeriods": {
+                "numberOfEvaluationPeriods": 1,
+                "minFailingPeriodsToAlert": 1
+              }
+            }
+          ]
+        },
+        "autoMitigate": true,
+        "actions": {
+          "actionGroups": [
+            "[parameters('actionGroupResourceId')]"
+          ],
+          "customProperties": {
+            "signal": "api_crash_spike"
+          }
+        }
+      }
+    }
+  ]
+}

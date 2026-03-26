@@ -29,16 +29,48 @@ jobs:
       - name: Install dependencies
         working-directory: ./api
         run: npm install
-      
+
+      - name: Build API
+        working-directory: ./api
+        run: npm run build
+
+      - name: Install Azure Functions Core Tools
+        run: npm install -g azure-functions-core-tools@4 --unsafe-perm true
+
+      - name: Start Functions Host
+        working-directory: ./api
+        run: func start > /tmp/func.log 2>&1 &
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          GOOGLE_CLIENT_ID_WEB: ${{ secrets.GOOGLE_CLIENT_ID_WEB }}
+          SMOKE_TEST_SECRET: ${{ secrets.SMOKE_TEST_SECRET }}
+
+      - name: Wait for Functions Host
+        run: |
+          echo "Waiting for Functions host on port 7071..."
+          for i in $(seq 1 20); do
+            if curl -sf http://localhost:7071/api/puzzle > /dev/null 2>&1; then
+              echo "Functions host is ready"
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "Functions host failed to start. Log:"
+          cat /tmp/func.log
+          exit 1
+
+      - name: Seed locations
+        working-directory: .
+        run: npm run seed
+        env:
+          API_URL: http://localhost:7071/api
+
       - name: Run smoke tests
         working-directory: ./api
         run: npm run test:smoke
         env:
-          # Optional real token for full auth path against non-smoke environments.
-          TEST_AUTH_TOKEN: ${{ secrets.TEST_AUTH_TOKEN }}
-          # Preferred auth path for smoke tests with fake user bypass.
           SMOKE_TEST_SECRET: ${{ secrets.SMOKE_TEST_SECRET }}
-          API_URL: ${{ secrets.API_URL || 'http://localhost:7071/api' }}
+          API_URL: http://localhost:7071/api
       
       - name: Upload test results
         if: always()

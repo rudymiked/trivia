@@ -7,7 +7,7 @@ import { ClueFeedbackRating } from '@/types/game';
 import { Ionicons } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Modal, Platform, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
 
 export default function ResultsScreen() {
@@ -23,6 +23,8 @@ export default function ResultsScreen() {
   const [submittingFeedback, setSubmittingFeedback] = useState<Record<string, boolean>>({});
   const [isFeedbackModalVisible, setIsFeedbackModalVisible] = useState(false);
   const [selectedFeedbackRoundIndex, setSelectedFeedbackRoundIndex] = useState<number | null>(null);
+  const trackedCompletionRef = useRef(false);
+  const trackedSignInPromptRef = useRef(false);
 
   // Check if this is a daily puzzle (date-based ID)
   const isDailyPuzzle = puzzle && /^\d{4}-\d{2}-\d{2}$/.test(puzzle.id);
@@ -70,6 +72,11 @@ export default function ResultsScreen() {
               } else {
                 setSynced(false);
                 setSyncError(submitResponse.error);
+                void trackTelemetryEvent('score_submission_failed', {
+                  puzzleDate: puzzle.date,
+                  errorCode: submitResponse.errorCode ?? null,
+                  errorMessage: submitResponse.error,
+                });
               }
             } else {
               setSynced(true);
@@ -79,6 +86,11 @@ export default function ResultsScreen() {
             console.error('Failed to sync score:', error);
             setSynced(false);
             setSyncError('Network error while syncing score.');
+            void trackTelemetryEvent('score_submission_failed', {
+              puzzleDate: puzzle.date,
+              errorCode: 'NETWORK_ERROR',
+              errorMessage: 'Network error while syncing score.',
+            });
           }
         }
       }
@@ -88,6 +100,28 @@ export default function ResultsScreen() {
 
     saveAndLoadProgress();
   }, [puzzle, totalScore, results, user, isDailyPuzzle, getValidIdToken]);
+
+  useEffect(() => {
+    if (!puzzle || !isDailyPuzzle || trackedCompletionRef.current) return;
+
+    trackedCompletionRef.current = true;
+    void trackTelemetryEvent('daily_puzzle_completed', {
+      puzzleDate: puzzle.date,
+      totalScore: Math.round(totalScore),
+      roundsCompleted: results.length,
+      isAuthenticated: !!user,
+    });
+  }, [puzzle, isDailyPuzzle, results.length, totalScore, user]);
+
+  useEffect(() => {
+    if (!puzzle || user || !isDailyPuzzle || trackedSignInPromptRef.current) return;
+
+    trackedSignInPromptRef.current = true;
+    void trackTelemetryEvent('sign_in_prompt_viewed', {
+      source: 'results_screen',
+      puzzleDate: puzzle.date,
+    });
+  }, [puzzle, user, isDailyPuzzle]);
 
   const getScoreEmoji = (score: number, multiplier: number) => {
     const baseScore = score / multiplier;
@@ -139,6 +173,10 @@ Play at: ${appUrl}`;
   };
 
   const handleSignIn = () => {
+    void trackTelemetryEvent('sign_in_prompt_clicked', {
+      source: 'results_screen',
+      puzzleDate: puzzle?.date ?? null,
+    });
     signIn();
   };
 

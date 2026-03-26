@@ -1,8 +1,9 @@
 import { useAuth } from '@/hooks/useAuth';
 import { getTimeUntilNextPuzzle, getTodayDate, hasPlayedToday } from '@/services/puzzle';
 import { getUserProgress, type UserProgress } from '@/services/storage';
+import { trackTelemetryEvent } from '@/services/telemetry';
 import { Href, useRouter } from 'expo-router';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
@@ -11,16 +12,27 @@ export default function HomeScreen() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const [isLoading, setIsLoading] = useState(true);
+  const trackedDauRef = useRef(false);
 
   useEffect(() => {
     const loadProgress = async () => {
       const userProgress = await getUserProgress();
       setProgress(userProgress);
       setIsLoading(false);
+
+      if (!trackedDauRef.current) {
+        trackedDauRef.current = true;
+        const today = getTodayDate();
+        void trackTelemetryEvent('daily_active_user', {
+          date: today,
+          isAuthenticated: !!user,
+          hasPlayedToday: hasPlayedToday(userProgress.lastPlayedDate),
+        });
+      }
     };
 
     loadProgress();
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     const timer = setInterval(() => {

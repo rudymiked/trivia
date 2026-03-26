@@ -1,3 +1,4 @@
+import { trackTelemetryEvent } from '@/services/telemetry';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
@@ -174,12 +175,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signIn = async () => {
     try {
+      void trackTelemetryEvent('sign_in_started');
       const result = await promptAsync();
       if (result.type === 'success') {
         await processAuthResult(result.authentication, result.params);
+        void trackTelemetryEvent('sign_in_succeeded');
+      } else if (result.type !== 'dismiss') {
+        void trackTelemetryEvent('sign_in_failed', { reason: result.type });
       }
     } catch (error) {
       console.error('Error signing in:', error);
+      void trackTelemetryEvent('sign_in_failed', { reason: 'exception' });
     }
   };
 

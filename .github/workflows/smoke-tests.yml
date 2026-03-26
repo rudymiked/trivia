@@ -34,8 +34,10 @@ jobs:
         working-directory: ./api
         run: npm run test:smoke
         env:
-          # Note: These are test tokens. For real auth testing, use GitHub Secrets
-          TEST_AUTH_TOKEN: ${{ secrets.TEST_AUTH_TOKEN || 'test-token' }}
+          # Optional real token for full auth path against non-smoke environments.
+          TEST_AUTH_TOKEN: ${{ secrets.TEST_AUTH_TOKEN }}
+          # Preferred auth path for smoke tests with fake user bypass.
+          SMOKE_TEST_SECRET: ${{ secrets.SMOKE_TEST_SECRET }}
           API_URL: ${{ secrets.API_URL || 'http://localhost:7071/api' }}
       
       - name: Upload test results

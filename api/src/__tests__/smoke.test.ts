@@ -13,12 +13,16 @@ describe('PinPoint Core Journey Smoke Tests', () => {
   const API_BASE = process.env.API_URL || 'http://localhost:7071/api';
   const TEST_DATE = new Date().toISOString().split('T')[0];
   const TEST_USER_ID = 'smoke-test-user'; // matches the userId returned by the smoke bypass
-  // Use a real Google token if provided, otherwise fall back to the local smoke secret.
-  // The smoke secret is set in local.settings.json and only honoured when SMOKE_TEST_SECRET
-  // is configured on the Functions host — it is never set in production.
-  const TEST_AUTH_TOKEN = (process.env.TEST_AUTH_TOKEN?.trim()) ||
-    (process.env.SMOKE_TEST_SECRET?.trim()) ||
-    'smoke-test-secret-local';
+  // Treat test-token as a placeholder (not a real auth token) so CI can skip auth-only tests
+  // unless a real TEST_AUTH_TOKEN or SMOKE_TEST_SECRET is configured.
+  const rawTestAuthToken = process.env.TEST_AUTH_TOKEN?.trim();
+  const explicitToken = rawTestAuthToken && rawTestAuthToken !== 'test-token'
+    ? rawTestAuthToken
+    : undefined;
+  const localSmokeFallback = API_BASE.includes('localhost')
+    ? 'smoke-test-secret-local'
+    : undefined;
+  const TEST_AUTH_TOKEN = explicitToken || process.env.SMOKE_TEST_SECRET?.trim() || localSmokeFallback;
   const HAS_AUTH_TOKEN = Boolean(TEST_AUTH_TOKEN);
   const describeAuth = HAS_AUTH_TOKEN ? describe : describe.skip;
 

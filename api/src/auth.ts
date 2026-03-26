@@ -19,6 +19,17 @@ function getAdminEmails(): string[] {
 }
 
 export async function verifyGoogleToken(token: string): Promise<VerifiedUser | null> {
+  // Dev-only bypass: SMOKE_TEST_SECRET lets smoke tests run without a real Google token.
+  // Never set this variable in production.
+  const smokeSecret = process.env.SMOKE_TEST_SECRET;
+  if (smokeSecret && token === smokeSecret) {
+    return {
+      userId: 'smoke-test-user',
+      email: 'smoke@test.local',
+      name: 'Smoke Test User',
+    };
+  }
+
   if (!GOOGLE_CLIENT_ID) {
     console.warn('GOOGLE_CLIENT_ID_WEB not configured, skipping token validation');
     return null;

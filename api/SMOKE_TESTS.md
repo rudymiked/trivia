@@ -3,7 +3,6 @@
 Automated tests for core user journeys and API resilience.
 
 ## Tests Included
-
 ### ✅ Daily Puzzle Access (Guest)
 - Fetch today's puzzle without auth
 - Fetch puzzle for specific date

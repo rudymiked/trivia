@@ -48,7 +48,7 @@ jobs:
       - name: Seed database
         run: npm run seed
         env:
-          API_URL: ${{ vars.API_URL }}
+          API_URL: ${{ secrets.API_URL }}
           FUNCTION_KEY: ${{ secrets.AZURE_FUNCTION_KEY }}
 
       - name: Notify on success

@@ -136,7 +136,7 @@ export async function generatePuzzleForDate(date: string): Promise<{
     multiplier: number;
   }>;
 }> {
-  const locations = await getLocations();
+  const locations = (await getLocations()).filter((l) => l.difficulty === 'easy');
 
   if (locations.length < 5) {
     throw new Error('Not enough locations to generate puzzle');

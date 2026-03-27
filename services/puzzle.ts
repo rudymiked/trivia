@@ -68,7 +68,8 @@ function generateLocalPuzzle(date: string = getTodayDate()): Puzzle {
   const seed = dateToSeed(date);
   const random = seededRandom(seed);
 
-  const locations = locationsData.locations as Array<Omit<Round, 'id'> & { answer?: string }>;
+  const allLocations = locationsData.locations as Array<Omit<Round, 'id'> & { answer?: string }>;
+  const locations = allLocations.filter((l) => l.difficulty === 'easy');
   const shuffled = shuffleArray(locations, random);
 
   // Select 5 locations for today's puzzle

@@ -5132,6 +5132,504 @@
         }
       },
       "country": "Russia"
+    },
+    {
+      "clue": "Petra",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "country": "Jordan"
+    },
+    {
+      "clue": "Burj Khalifa",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 25.1972,
+        "lng": 55.2744
+      },
+      "country": "United Arab Emirates"
+    },
+    {
+      "clue": "Angkor Wat",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 13.4125,
+        "lng": 103.867
+      },
+      "country": "Cambodia"
+    },
+    {
+      "clue": "Alhambra",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.1761,
+        "lng": -3.5881
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Moai Statues",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -27.1212,
+        "lng": -109.3664
+      },
+      "country": "Chile"
+    },
+    {
+      "clue": "Sigiriya",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 7.957,
+        "lng": 80.7603
+      },
+      "country": "Sri Lanka"
+    },
+    {
+      "clue": "Which city is known as the City of Canals?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.4408,
+        "lng": 12.3155
+      },
+      "country": "Italy",
+      "answer": "Venice"
+    },
+    {
+      "clue": "What is the capital city of Canada?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.4215,
+        "lng": -75.6972
+      },
+      "country": "Canada",
+      "answer": "Ottawa"
+    },
+    {
+      "clue": "In which country is the ancient city of Timbuktu located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 16.7666,
+        "lng": -3.0026
+      },
+      "country": "Mali",
+      "answer": "Mali"
+    },
+    {
+      "clue": "Which city hosted the 2016 Summer Olympics?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": -22.9068,
+        "lng": -43.1729
+      },
+      "country": "Brazil",
+      "answer": "Rio de Janeiro"
+    },
+    {
+      "clue": "In which country would you find Mount Elbrus?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.3499,
+        "lng": 42.4453
+      },
+      "country": "Russia",
+      "answer": "Russia"
+    },
+    {
+      "clue": "What is the southernmost capital city in the world?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -41.2865,
+        "lng": 174.7762
+      },
+      "country": "New Zealand",
+      "answer": "Wellington"
+    },
+    {
+      "clue": "Danube River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.257,
+        "lng": 29.652
+      },
+      "bounds": {
+        "nw": {
+          "lat": 48.2,
+          "lng": 8.2
+        },
+        "se": {
+          "lat": 44.2,
+          "lng": 29.9
+        }
+      },
+      "country": "Romania"
+    },
+    {
+      "clue": "Tasman Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "easy",
+      "target": {
+        "lat": -40.0,
+        "lng": 160.0
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Atlas Mountains",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": {
+        "lat": 31.1,
+        "lng": -7.9
+      },
+      "bounds": {
+        "nw": {
+          "lat": 37.0,
+          "lng": -10.0
+        },
+        "se": {
+          "lat": 28.0,
+          "lng": 8.0
+        }
+      },
+      "country": "Morocco"
+    },
+    {
+      "clue": "Borneo",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "medium",
+      "target": {
+        "lat": 0.9619,
+        "lng": 114.5548
+      },
+      "bounds": {
+        "nw": {
+          "lat": 7.3,
+          "lng": 108.8
+        },
+        "se": {
+          "lat": -4.5,
+          "lng": 119.3
+        }
+      },
+      "country": "Indonesia"
+    },
+    {
+      "clue": "Atacama Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": {
+        "lat": -24.5,
+        "lng": -69.25
+      },
+      "bounds": {
+        "nw": {
+          "lat": -18.2,
+          "lng": -70.6
+        },
+        "se": {
+          "lat": -29.2,
+          "lng": -67.2
+        }
+      },
+      "country": "Chile"
+    },
+    {
+      "clue": "Patagonia",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": -46.5,
+        "lng": -71.0
+      },
+      "bounds": {
+        "nw": {
+          "lat": -39.0,
+          "lng": -76.0
+        },
+        "se": {
+          "lat": -55.0,
+          "lng": -63.0
+        }
+      },
+      "country": "Argentina"
+    },
+    {
+      "clue": "Golden Gate Bridge",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.8199,
+        "lng": -122.4783
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Acropolis of Athens",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.9715,
+        "lng": 23.7257
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Old City of Jerusalem",
+      "category": "places",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 31.778,
+        "lng": 35.235
+      },
+      "country": "Israel"
+    },
+    {
+      "clue": "Forbidden City",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 39.9163,
+        "lng": 116.3972
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Ait Benhaddou",
+      "category": "places",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 31.047,
+        "lng": -7.131
+      },
+      "country": "Morocco"
+    },
+    {
+      "clue": "Svalbard",
+      "category": "places",
+      "type": "island",
+      "difficulty": "hard",
+      "target": {
+        "lat": 78.2232,
+        "lng": 15.6469
+      },
+      "country": "Norway"
+    },
+    {
+      "clue": "Which city is famous for the Sagrada Familia?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.3851,
+        "lng": 2.1734
+      },
+      "country": "Spain",
+      "answer": "Barcelona"
+    },
+    {
+      "clue": "What is the capital of Argentina?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -34.6037,
+        "lng": -58.3816
+      },
+      "country": "Argentina",
+      "answer": "Buenos Aires"
+    },
+    {
+      "clue": "In which city is the Blue Mosque located?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 41.0082,
+        "lng": 28.9784
+      },
+      "country": "Turkey",
+      "answer": "Istanbul"
+    },
+    {
+      "clue": "Which country has the city of Ulaanbaatar as its capital?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.8864,
+        "lng": 106.9057
+      },
+      "country": "Mongolia",
+      "answer": "Mongolia"
+    },
+    {
+      "clue": "What is the highest capital city in Europe by elevation?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.6977,
+        "lng": 23.3219
+      },
+      "country": "Bulgaria",
+      "answer": "Sofia"
+    },
+    {
+      "clue": "Which city sits at the confluence of the White and Blue Nile?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 15.5007,
+        "lng": 32.5599
+      },
+      "country": "Sudan",
+      "answer": "Khartoum"
+    },
+    {
+      "clue": "Lake Geneva",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "easy",
+      "target": {
+        "lat": 46.454,
+        "lng": 6.548
+      },
+      "bounds": {
+        "nw": {
+          "lat": 46.58,
+          "lng": 6.1
+        },
+        "se": {
+          "lat": 46.2,
+          "lng": 7.1
+        }
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Pyrenees",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "easy",
+      "target": {
+        "lat": 42.65,
+        "lng": 0.7
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Yucatan Peninsula",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "medium",
+      "target": {
+        "lat": 20.6,
+        "lng": -89.0
+      },
+      "bounds": {
+        "nw": {
+          "lat": 22.8,
+          "lng": -91.8
+        },
+        "se": {
+          "lat": 17.8,
+          "lng": -86.7
+        }
+      },
+      "country": "Mexico"
+    },
+    {
+      "clue": "Aegean Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": {
+        "lat": 38.5,
+        "lng": 25.0
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Kamchatka Peninsula",
+      "category": "geography",
+      "type": "region",
+      "difficulty": "hard",
+      "target": {
+        "lat": 56.2,
+        "lng": 160.0
+      },
+      "bounds": {
+        "nw": {
+          "lat": 62.0,
+          "lng": 155.0
+        },
+        "se": {
+          "lat": 51.0,
+          "lng": 164.5
+        }
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Karakum Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": {
+        "lat": 39.0,
+        "lng": 59.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": 42.6,
+          "lng": 54.0
+        },
+        "se": {
+          "lat": 36.2,
+          "lng": 63.5
+        }
+      },
+      "country": "Turkmenistan"
     }
   ]
 }

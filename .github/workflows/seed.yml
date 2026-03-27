@@ -1,6 +1,9 @@
 name: Seed Database
 
 on:
+  push:
+    paths:
+      - 'data/locations.json'
   workflow_dispatch:
     inputs:
       environment:

@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 const DEFAULT_LIMIT = 50;
-const DEFAULT_MIN_COUNT = 2;
+const DEFAULT_MIN_COUNT = 1;
 
 export default function ClueFeedbackAdminScreen() {
   const router = useRouter();
@@ -153,7 +153,7 @@ export default function ClueFeedbackAdminScreen() {
       <View style={styles.headerCard}>
         <Text style={styles.title}>Low-Rated Clues</Text>
         <Text style={styles.subtitle}>
-          Fast review of clues with repeated hard or unclear ratings.
+          Fast review of clues with hard or unclear ratings.
         </Text>
       </View>
 
@@ -170,7 +170,7 @@ export default function ClueFeedbackAdminScreen() {
         <View style={styles.emptyCard}>
           <Text style={styles.emptyTitle}>No low-rated clues found</Text>
           <Text style={styles.emptyBody}>
-            Clues need at least {DEFAULT_MIN_COUNT} hard or unclear ratings to appear here.
+            Clues need at least {DEFAULT_MIN_COUNT} hard or unclear rating to appear here.
           </Text>
         </View>
       )}

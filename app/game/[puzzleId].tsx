@@ -351,6 +351,10 @@ export default function GameScreen() {
 
   // Show completed state for server-verified games (logged-in users)
   if (serverCompleted && serverCompleted.completed) {
+    const serverMaxScore = serverCompleted.rounds
+      ? serverCompleted.rounds.length * (serverCompleted.rounds.some((score) => score > 100) ? 200 : 100)
+      : 500;
+
     const getScoreEmojiFromRoundScore = (score: number) => {
       // Assume no multiplier info from server, use raw score thresholds
       if (score >= 90) return '🟢';
@@ -379,7 +383,7 @@ export default function GameScreen() {
           <View style={styles.completedScoreCard}>
             <Text style={styles.completedScoreLabel}>Your Score</Text>
             <Text style={styles.completedScore}>{serverCompleted.totalScore}</Text>
-            <Text style={styles.completedMaxScore}>out of 500</Text>
+            <Text style={styles.completedMaxScore}>out of {serverMaxScore}</Text>
 
             {serverCompleted.rounds && (
               <View style={styles.completedRounds}>
@@ -410,6 +414,11 @@ export default function GameScreen() {
 
   // Show completed state for daily puzzles that were already played (local storage)
   if (alreadyCompleted) {
+    const completedMaxScore = alreadyCompleted.results.reduce(
+      (sum, result) => sum + 100 * (result.multiplier > 0 ? result.multiplier : 1),
+      0
+    );
+
     const getScoreEmoji = (score: number, multiplier: number) => {
       const baseScore = score / multiplier;
       if (baseScore >= 90) return '🟢';
@@ -436,7 +445,7 @@ export default function GameScreen() {
           <View style={styles.completedScoreCard}>
             <Text style={styles.completedScoreLabel}>Your Score</Text>
             <Text style={styles.completedScore}>{alreadyCompleted.totalScore}</Text>
-            <Text style={styles.completedMaxScore}>out of 500</Text>
+            <Text style={styles.completedMaxScore}>out of {completedMaxScore}</Text>
 
             <View style={styles.completedRounds}>
               {alreadyCompleted.results.map((result, index) => (

@@ -34,6 +34,15 @@ export default function ResultsScreen() {
         .filter(({ round }) => round.locationId && round.category === 'questions')
     : [];
   const displayTotalScore = Number.isFinite(totalScore) ? Math.round(totalScore) : 0;
+  const maxPossibleScore =
+    results.length > 0
+      ? Math.round(
+          results.reduce(
+            (sum, r) => sum + 100 * (Number.isFinite(r.multiplier) && r.multiplier > 0 ? r.multiplier : 1),
+            0
+          )
+        )
+      : 500;
 
   useEffect(() => {
     const saveAndLoadProgress = async () => {
@@ -170,7 +179,7 @@ export default function ResultsScreen() {
 
     return `PinPoint ${date}
 
-${emojiGrid} ${totalScore}/500
+  ${emojiGrid} ${displayTotalScore}/${maxPossibleScore}
 
 Play at: ${appUrl}`;
   };
@@ -302,7 +311,7 @@ Play at: ${appUrl}`;
           </Text>
 
           <Text style={styles.totalScore}>{displayTotalScore}</Text>
-          <Text style={styles.maxScore}>out of 500</Text>
+          <Text style={styles.maxScore}>out of {maxPossibleScore}</Text>
 
           {/* Emoji strip preview */}
           <View style={styles.emojiStripRow}>

@@ -39,6 +39,7 @@ const MAX_TOTAL_SCORE = EXPECTED_DAILY_ROUNDS * MAX_ROUND_SCORE;
 const MAX_METADATA_LENGTH = 500;
 // Allow alphanumeric, hyphens, underscores, and periods (covers Google IDs and other OAuth providers)
 const SAFE_USERID_REGEX = /^[a-zA-Z0-9._-]+$/;
+const SMOKE_TEST_USER_ID = 'smoke-test-user';
 
 function isValidDate(date: string): boolean {
   if (!DATE_REGEX.test(date)) return false;
@@ -562,6 +563,10 @@ app.http('getLeaderboard', {
 
         for await (const entity of entities) {
           const userId = entity.rowKey as string;
+          if (userId === SMOKE_TEST_USER_ID) {
+            continue;
+          }
+
           const displayName = entity.displayName as string;
           const score = entity.totalScore as number;
 
@@ -580,6 +585,10 @@ app.http('getLeaderboard', {
 
         for await (const entity of entities) {
           const userId = entity.rowKey as string;
+          if (userId === SMOKE_TEST_USER_ID) {
+            continue;
+          }
+
           scoresMap.set(userId, {
             userId,
             displayName: entity.displayName as string,

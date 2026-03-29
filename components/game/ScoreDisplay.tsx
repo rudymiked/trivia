@@ -34,8 +34,9 @@ export default function ScoreDisplay({ result, onAnimationComplete }: ScoreDispl
   }, []);
 
   const getScoreColor = () => {
-    if (result.score >= 80) return '#4ECDC4';
-    if (result.score >= 50) return '#FFE66D';
+    const baseScore = result.score / result.multiplier;
+    if (baseScore >= 80) return '#4ECDC4';
+    if (baseScore >= 50) return '#FFE66D';
     return '#FF6B6B';
   };
 

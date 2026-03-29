@@ -10,6 +10,12 @@ import { useRouter } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import { Modal, Platform, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
 
+// Parse a YYYY-MM-DD date string as local time to avoid UTC offset shifting the day
+function parsePuzzleDate(dateStr: string): Date {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  return new Date(y, m - 1, d);
+}
+
 export default function ResultsScreen() {
   const router = useRouter();
   const { user, getValidIdToken, signIn } = useAuth();
@@ -170,18 +176,14 @@ export default function ResultsScreen() {
     if (!puzzle) return '';
 
     const emojiGrid = results.map((r) => getScoreEmoji(r.score, r.multiplier)).join('');
-    const date = new Date(puzzle.date).toLocaleDateString('en-US', {
+    const date = parsePuzzleDate(puzzle.date).toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
     });
 
     const appUrl = process.env.EXPO_PUBLIC_APP_URL || 'https://pinpoint.app';
 
-    return `PinPoint ${date}
-
-  ${emojiGrid} ${displayTotalScore}/${maxPossibleScore}
-
-Play at: ${appUrl}`;
+    return `PinPoint ${date}\n\n${emojiGrid} ${displayTotalScore}/${maxPossibleScore}\n\nPlay at: ${appUrl}`;
   };
 
   const handleShare = async () => {
@@ -303,7 +305,7 @@ Play at: ${appUrl}`;
         {/* Score summary */}
         <View style={styles.scoreCard}>
           <Text style={styles.dateText}>
-            {new Date(puzzle.date).toLocaleDateString('en-US', {
+            {parsePuzzleDate(puzzle.date).toLocaleDateString('en-US', {
               weekday: 'long',
               month: 'long',
               day: 'numeric',

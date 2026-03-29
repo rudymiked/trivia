@@ -500,7 +500,7 @@ export default function GameScreen() {
           currentRound={currentRound}
           results={results}
         />
-        <Text style={styles.scoreText}>{totalScore}</Text>
+        <Text style={styles.scoreText}>{Math.round(totalScore)}</Text>
       </View>
 
       {fallbackNotice && (

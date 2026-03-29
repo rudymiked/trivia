@@ -750,7 +750,7 @@ const styles = StyleSheet.create({
     zIndex: 4,
   },
   mapRecoveryCard: {
-    width: '100%',
+    alignSelf: 'center',
     maxWidth: 360,
     padding: 18,
     borderRadius: 18,
@@ -965,11 +965,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   completedScoreCard: {
+    alignSelf: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderRadius: 20,
     padding: 24,
     alignItems: 'center',
-    width: '100%',
     maxWidth: 350,
   },
   completedScoreLabel: {
@@ -988,7 +988,9 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   completedRounds: {
-    width: '100%',
+    alignSelf: 'center',
+    minWidth: 260,
+    maxWidth: 320,
   },
   completedRoundRow: {
     flexDirection: 'row',

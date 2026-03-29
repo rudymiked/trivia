@@ -572,7 +572,9 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   roundsContainer: {
-    width: '100%',
+    alignSelf: 'center',
+    minWidth: 280,
+    maxWidth: 520,
   },
   roundBlock: {
     borderBottomWidth: 1,
@@ -703,7 +705,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   syncErrorCard: {
-    width: '100%',
+    alignSelf: 'center',
+    maxWidth: 460,
     padding: 14,
     borderRadius: 12,
     backgroundColor: 'rgba(237, 137, 54, 0.12)',
@@ -745,7 +748,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     borderRadius: 14,
     alignItems: 'center',
-    alignSelf: 'stretch',
+    alignSelf: 'center',
+    minWidth: 220,
     shadowColor: '#4ECDC4',
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.25,
@@ -822,7 +826,6 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 12,
     alignItems: 'center',
-    width: '100%',
   },
   loginButtonText: {
     color: '#1A202C',

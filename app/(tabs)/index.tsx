@@ -296,7 +296,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   loginCard: {
-    width: '100%',
+    alignSelf: 'center',
+    maxWidth: 420,
     marginTop: 16,
     paddingHorizontal: 18,
     paddingVertical: 16,
@@ -326,6 +327,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   instructionsContainer: {
+    alignSelf: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderRadius: 16,
     padding: 20,
@@ -357,6 +359,5 @@ const styles = StyleSheet.create({
   instructionText: {
     color: '#A0AEC0',
     fontSize: 14,
-    flex: 1,
   },
 });

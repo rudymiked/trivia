@@ -3,21 +3,35 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import { Brand } from '@/constants/Colors';
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#4ECDC4',
-        tabBarInactiveTintColor: '#718096',
+        tabBarActiveTintColor: Brand.aqua,
+        tabBarInactiveTintColor: Brand.slate,
         tabBarStyle: {
-          backgroundColor: '#1A202C',
-          borderTopColor: '#2D3748',
+          backgroundColor: '#081C29',
+          borderTopColor: 'rgba(180, 199, 206, 0.12)',
+          height: 72,
+          paddingTop: 8,
+          paddingBottom: 10,
+        },
+        tabBarLabelStyle: {
+          fontSize: 11,
+          letterSpacing: 0.5,
+          fontWeight: '700',
         },
         headerStyle: {
-          backgroundColor: '#1A202C',
+          backgroundColor: Brand.midnight,
         },
-        headerTintColor: '#FFFFFF',
+        headerTintColor: Brand.white,
+        headerTitleStyle: {
+          fontFamily: 'SpaceMono',
+          fontSize: 15,
+        },
+        headerShadowVisible: false,
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen

@@ -4,7 +4,7 @@
     "slug": "pinpoint",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/app_icon.png",
     "scheme": "pinpoint",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
@@ -23,7 +23,8 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#1A202C",
-        "foregroundImage": "./assets/images/adaptive-icon.png"
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "package": "com.pinpoint.app",
       "config": {

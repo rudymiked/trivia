@@ -1,15 +1,16 @@
+import { Brand } from '@/constants/Colors';
 import { AuthProvider } from '@/hooks/useAuth';
 import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Link, Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, View } from 'react-native';
 import 'react-native-reanimated';
 
 export {
-    // Catch any errors thrown by the Layout component.
-    ErrorBoundary
+  // Catch any errors thrown by the Layout component.
+  ErrorBoundary
 } from 'expo-router';
 
 export const unstable_settings = {
@@ -63,15 +64,33 @@ function RootLayoutNav() {
     }
   }, []); // Empty deps - only run once on mount
 
+  const brandedDarkTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      background: Brand.midnight,
+      card: Brand.ocean,
+      primary: Brand.aqua,
+      text: Brand.white,
+      border: 'rgba(180, 199, 206, 0.16)',
+      notification: Brand.gold,
+    },
+  };
+
   return (
     <AuthProvider>
-      <ThemeProvider value={DarkTheme}>
+      <ThemeProvider value={brandedDarkTheme}>
         <View style={styles.appShell}>
           <Stack
             screenOptions={{
-              headerStyle: { backgroundColor: '#1A202C' },
-              headerTintColor: '#FFFFFF',
-              contentStyle: { backgroundColor: '#1A202C' },
+              headerStyle: { backgroundColor: Brand.midnight },
+              headerTintColor: Brand.white,
+              headerTitleStyle: {
+                fontFamily: 'SpaceMono',
+                fontSize: 15,
+              },
+              headerShadowVisible: false,
+              contentStyle: { backgroundColor: Brand.midnight },
             }}
           >
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -84,6 +103,15 @@ function RootLayoutNav() {
 
           {showWebFooter && (
             <View style={styles.footer}>
+              <View style={styles.footerBrandRow}>
+                <View style={styles.footerBrandMark}>
+                  <Image source={require('../assets/images/logo.png')} style={styles.footerBrandImage} resizeMode="contain" />
+                </View>
+                <View>
+                  <Text style={styles.footerBrandName}>PinPoint</Text>
+                  <Text style={styles.footerBrandTagline}>One clue. One map. One shot.</Text>
+                </View>
+              </View>
               <View style={styles.footerLinksRow}>
                 <Link href="/privacy-policy" asChild>
                   <Text style={styles.footerLink}>Privacy Policy</Text>
@@ -93,7 +121,7 @@ function RootLayoutNav() {
                   <Text style={styles.footerLink}>Terms of Use</Text>
                 </Link>
               </View>
-              <Text style={styles.footerMeta}>© {new Date().getFullYear()} PinPoint</Text>
+              <Text style={styles.footerMeta}>© {new Date().getFullYear()} PinPoint. Built for daily globe instincts.</Text>
             </View>
           )}
         </View>
@@ -105,15 +133,43 @@ function RootLayoutNav() {
 const styles = StyleSheet.create({
   appShell: {
     flex: 1,
-    backgroundColor: '#1A202C',
+    backgroundColor: Brand.midnight,
   },
   footer: {
     borderTopWidth: 1,
-    borderTopColor: '#2D3748',
-    paddingVertical: 10,
-    paddingHorizontal: 16,
-    gap: 6,
-    backgroundColor: '#1A202C',
+    borderTopColor: 'rgba(180, 199, 206, 0.16)',
+    paddingVertical: 14,
+    paddingHorizontal: 20,
+    gap: 10,
+    backgroundColor: '#081C29',
+  },
+  footerBrandRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 12,
+  },
+  footerBrandMark: {
+    width: 42,
+    height: 42,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  footerBrandImage: {
+    width: 40,
+    height: 40,
+  },
+  footerBrandName: {
+    color: Brand.white,
+    fontFamily: 'SpaceMono',
+    fontSize: 13,
+    letterSpacing: 0.7,
+    textAlign: 'center',
+  },
+  footerBrandTagline: {
+    color: Brand.slate,
+    fontSize: 11,
+    textAlign: 'center',
   },
   footerLinksRow: {
     flexDirection: 'row',
@@ -122,16 +178,16 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   footerLink: {
-    color: '#A0AEC0',
+    color: Brand.mist,
     fontSize: 13,
     textDecorationLine: 'underline',
   },
   footerDivider: {
-    color: '#718096',
+    color: Brand.slate,
     fontSize: 13,
   },
   footerMeta: {
-    color: '#718096',
+    color: Brand.slate,
     fontSize: 12,
     textAlign: 'center',
   },

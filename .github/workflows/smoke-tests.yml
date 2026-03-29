@@ -55,6 +55,11 @@ jobs:
 
       - name: Start Functions Host
         working-directory: ./api
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          AzureWebJobsStorage: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          GOOGLE_CLIENT_ID_WEB: ${{ secrets.GOOGLE_CLIENT_ID_WEB }}
+          SMOKE_TEST_SECRET: ${{ secrets.SMOKE_TEST_SECRET }}
         run: func start > /tmp/func.log 2>&1 &
 
       - name: Wait for Functions Host

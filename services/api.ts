@@ -74,8 +74,23 @@ export async function fetchPuzzle(date?: string): Promise<ApiResponse<Puzzle>> {
 }
 
 // Get personalized puzzle for Play Modes (excludes locations user has seen)
-export async function fetchPersonalizedPuzzle(userId?: string): Promise<ApiResponse<Puzzle>> {
-  const params = userId ? `?userId=${encodeURIComponent(userId)}` : '';
+export async function fetchPersonalizedPuzzle(
+  userId?: string,
+  category?: string,
+  difficulty: 'all' | 'easy' | 'medium' | 'hard' = 'all'
+): Promise<ApiResponse<Puzzle>> {
+  const searchParams = new URLSearchParams();
+  if (userId) {
+    searchParams.set('userId', userId);
+  }
+  if (category && category !== 'all' && category !== 'random') {
+    searchParams.set('category', category);
+  }
+  if (difficulty !== 'all') {
+    searchParams.set('difficulty', difficulty);
+  }
+
+  const params = searchParams.toString() ? `?${searchParams.toString()}` : '';
   return fetchApi<Puzzle>(`/puzzle/practice${params}`);
 }
 

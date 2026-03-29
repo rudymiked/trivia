@@ -71,7 +71,7 @@ export async function initializeTables(): Promise<void> {
 export interface Location {
   id: string;
   clue: string;
-  category: 'places' | 'questions';
+  category: 'places' | 'questions' | 'geography';
   type: string;
   difficulty: 'easy' | 'medium' | 'hard';
   target: { lat: number; lng: number };
@@ -236,7 +236,9 @@ export async function getSeenLocationIds(userId: string): Promise<Set<string>> {
 // Generate personalized puzzle excluding seen locations
 export async function generatePersonalizedPuzzleForDate(
   date: string,
-  userId?: string
+  userId?: string,
+  category?: 'places' | 'questions' | 'geography',
+  difficulty?: 'easy' | 'medium' | 'hard'
 ): Promise<{
   id: string;
   date: string;
@@ -254,6 +256,14 @@ export async function generatePersonalizedPuzzleForDate(
   }>;
 }> {
   let locations = await getLocations();
+
+  if (category) {
+    locations = locations.filter((loc) => loc.category === category);
+  }
+
+  if (difficulty) {
+    locations = locations.filter((loc) => loc.difficulty === difficulty);
+  }
 
   // If userId provided, exclude locations they've seen
   if (userId) {

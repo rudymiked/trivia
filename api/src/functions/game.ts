@@ -3,11 +3,11 @@ import { randomUUID } from 'crypto';
 import { getTelemetryClient } from '../appInsights.js';
 import { extractBearerToken, verifyGoogleToken } from '../auth.js';
 import {
-    generatePersonalizedPuzzleForDate,
-    generatePuzzleForDate,
-    getTableClient,
-    initializeTables,
-    trackSeenLocations,
+  generatePersonalizedPuzzleForDate,
+  generatePuzzleForDate,
+  getTableClient,
+  initializeTables,
+  trackSeenLocations,
 } from '../storage.js';
 
 interface ScoreSubmission {
@@ -147,6 +147,7 @@ app.http('getPersonalizedPuzzle', {
   handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
     const userId = request.query.get('userId');
     const category = request.query.get('category'); // Optional: filter by category
+    const difficulty = request.query.get('difficulty'); // Optional: filter by difficulty
 
     // Validate userId if provided
     if (userId && !isValidUserId(userId)) {
@@ -156,13 +157,32 @@ app.http('getPersonalizedPuzzle', {
       };
     }
 
+    if (category && category !== 'places' && category !== 'questions' && category !== 'geography') {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid category. Use places, questions, or geography.' },
+      };
+    }
+
+    if (difficulty && difficulty !== 'easy' && difficulty !== 'medium' && difficulty !== 'hard') {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid difficulty. Use easy, medium, or hard.' },
+      };
+    }
+
     try {
       // Generate a unique date-like seed for this practice puzzle
       const now = new Date();
       const seed = `${now.toISOString()}-${Math.random().toString(36).substring(7)}`;
 
       // Generate personalized puzzle excluding seen locations
-      const puzzle = await generatePersonalizedPuzzleForDate(seed, userId || undefined);
+      const puzzle = await generatePersonalizedPuzzleForDate(
+        seed,
+        userId || undefined,
+        (category as 'places' | 'questions' | 'geography' | null) || undefined,
+        (difficulty as 'easy' | 'medium' | 'hard' | null) || undefined
+      );
 
       return {
         jsonBody: puzzle,

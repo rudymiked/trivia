@@ -145,7 +145,10 @@ export function getCategories(): string[] {
 }
 
 // Generate a puzzle filtered by category
-export function generatePuzzleByCategory(category: string | 'all' | 'random'): Puzzle {
+export function generatePuzzleByCategory(
+  category: string | 'all' | 'random',
+  difficulty: 'all' | Round['difficulty'] = 'all'
+): Puzzle {
   const locations = locationsData.locations as Array<Omit<Round, 'id'> & { answer?: string }>;
   const random = () => Math.random();
 
@@ -159,6 +162,14 @@ export function generatePuzzleByCategory(category: string | 'all' | 'random'): P
   } else if (category !== 'all') {
     // Filter by specific category
     filteredLocations = locations.filter((loc) => loc.category === category);
+  }
+
+  if (difficulty !== 'all') {
+    filteredLocations = filteredLocations.filter((loc) => loc.difficulty === difficulty);
+  }
+
+  if (filteredLocations.length < 5) {
+    throw new Error('Not enough locations for selected mode and difficulty');
   }
 
   const shuffled = shuffleArray(filteredLocations, random);

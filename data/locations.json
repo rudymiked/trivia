@@ -515,7 +515,17 @@
         "lng": -5.7089
       },
       "country": "Saint Helena",
-      "answer": "Saint Helena"
+      "answer": "Saint Helena",
+      "bounds": {
+        "nw": {
+          "lat": -15.9,
+          "lng": -5.9
+        },
+        "se": {
+          "lat": -16.1,
+          "lng": -5.6
+        }
+      }
     },
     {
       "clue": "Which city hosts the annual Running of the Bulls festival?",
@@ -757,11 +767,11 @@
       "bounds": {
         "nw": {
           "lat": 5.5,
-          "lng": -73.0
+          "lng": -73
         },
         "se": {
-          "lat": -11.0,
-          "lng": -49.0
+          "lat": -11,
+          "lng": -49
         }
       },
       "country": "Brazil"
@@ -778,11 +788,11 @@
       "bounds": {
         "nw": {
           "lat": 31.6,
-          "lng": 23.0
+          "lng": 23
         },
         "se": {
-          "lat": -2.0,
-          "lng": 35.0
+          "lat": -2,
+          "lng": 35
         }
       },
       "country": "Egypt"
@@ -820,7 +830,7 @@
       "bounds": {
         "nw": {
           "lat": 48.8,
-          "lng": 8.0
+          "lng": 8
         },
         "se": {
           "lat": 43.2,
@@ -841,11 +851,11 @@
       "bounds": {
         "nw": {
           "lat": 34.5,
-          "lng": 100.0
+          "lng": 100
         },
         "se": {
-          "lat": 29.0,
-          "lng": 122.0
+          "lat": 29,
+          "lng": 122
         }
       },
       "country": "China"
@@ -948,7 +958,7 @@
       },
       "bounds": {
         "nw": {
-          "lat": -15.0,
+          "lat": -15,
           "lng": -70.3
         },
         "se": {
@@ -970,7 +980,7 @@
       "bounds": {
         "nw": {
           "lat": 48.8,
-          "lng": -90.0
+          "lng": -90
         },
         "se": {
           "lat": 46.2,
@@ -994,7 +1004,7 @@
           "lng": 35.2
         },
         "se": {
-          "lat": 31.0,
+          "lat": 31,
           "lng": 35.6
         }
       },
@@ -1022,12 +1032,12 @@
       },
       "bounds": {
         "nw": {
-          "lat": 48.0,
-          "lng": 97.0
+          "lat": 48,
+          "lng": 97
         },
         "se": {
-          "lat": 37.0,
-          "lng": 113.0
+          "lat": 37,
+          "lng": 113
         }
       },
       "country": "Mongolia"
@@ -1043,12 +1053,12 @@
       },
       "bounds": {
         "nw": {
-          "lat": -18.0,
+          "lat": -18,
           "lng": -73.5
         },
         "se": {
-          "lat": -27.0,
-          "lng": -68.0
+          "lat": -27,
+          "lng": -68
         }
       },
       "country": "Chile"
@@ -1064,7 +1074,7 @@
       },
       "bounds": {
         "nw": {
-          "lat": 37.0,
+          "lat": 37,
           "lng": -117.5
         },
         "se": {
@@ -1107,7 +1117,7 @@
       "bounds": {
         "nw": {
           "lat": 1.5,
-          "lng": -92.0
+          "lng": -92
         },
         "se": {
           "lat": -2.2,
@@ -1131,7 +1141,7 @@
           "lng": -156.2
         },
         "se": {
-          "lat": 19.0,
+          "lat": 19,
           "lng": -154.8
         }
       },
@@ -1418,11 +1428,11 @@
       "bounds": {
         "nw": {
           "lat": 3.5,
-          "lng": 11.0
+          "lng": 11
         },
         "se": {
-          "lat": -13.0,
-          "lng": 25.0
+          "lat": -13,
+          "lng": 25
         }
       },
       "country": "Democratic Republic of the Congo"
@@ -1439,11 +1449,11 @@
       "bounds": {
         "nw": {
           "lat": 33.7,
-          "lng": 100.0
+          "lng": 100
         },
         "se": {
           "lat": 8.5,
-          "lng": 107.0
+          "lng": 107
         }
       },
       "country": "Vietnam"
@@ -1482,11 +1492,11 @@
       "bounds": {
         "nw": {
           "lat": -3.5,
-          "lng": 29.0
+          "lng": 29
         },
         "se": {
           "lat": -9.4,
-          "lng": 31.0
+          "lng": 31
         }
       },
       "country": "Tanzania"
@@ -1502,12 +1512,12 @@
       },
       "bounds": {
         "nw": {
-          "lat": 47.0,
-          "lng": 47.0
+          "lat": 47,
+          "lng": 47
         },
         "se": {
-          "lat": 37.0,
-          "lng": 54.0
+          "lat": 37,
+          "lng": 54
         }
       },
       "country": "Azerbaijan"
@@ -1523,12 +1533,12 @@
       },
       "bounds": {
         "nw": {
-          "lat": -18.0,
-          "lng": 16.0
+          "lat": -18,
+          "lng": 16
         },
         "se": {
-          "lat": -28.0,
-          "lng": 28.0
+          "lat": -28,
+          "lng": 28
         }
       },
       "country": "Botswana"
@@ -1545,11 +1555,11 @@
       "bounds": {
         "nw": {
           "lat": -16.5,
-          "lng": 12.0
+          "lng": 12
         },
         "se": {
-          "lat": -28.0,
-          "lng": 18.0
+          "lat": -28,
+          "lng": 18
         }
       },
       "country": "Namibia"
@@ -1566,7 +1576,7 @@
       "bounds": {
         "nw": {
           "lat": 38.3,
-          "lng": 12.0
+          "lng": 12
         },
         "se": {
           "lat": 36.6,
@@ -1618,12 +1628,12 @@
       },
       "bounds": {
         "nw": {
-          "lat": 23.0,
-          "lng": 80.0
+          "lat": 23,
+          "lng": 80
         },
         "se": {
-          "lat": 5.0,
-          "lng": 100.0
+          "lat": 5,
+          "lng": 100
         }
       },
       "country": "India"
@@ -1649,7 +1659,17 @@
         "lng": 2.2945
       },
       "country": "France",
-      "answer": "France"
+      "answer": "France",
+      "bounds": {
+        "nw": {
+          "lat": 51.2,
+          "lng": -5.2
+        },
+        "se": {
+          "lat": 41.3,
+          "lng": 9.7
+        }
+      }
     },
     {
       "clue": "Regional Focus: Eiffel Tower",
@@ -1683,7 +1703,17 @@
         "lng": -74.0445
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Statue of Liberty",
@@ -1717,7 +1747,17 @@
         "lng": -0.1246
       },
       "country": "United Kingdom",
-      "answer": "United Kingdom"
+      "answer": "United Kingdom",
+      "bounds": {
+        "nw": {
+          "lat": 60.9,
+          "lng": -8.7
+        },
+        "se": {
+          "lat": 49.9,
+          "lng": 1.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Big Ben",
@@ -1751,7 +1791,17 @@
         "lng": 12.4922
       },
       "country": "Italy",
-      "answer": "Italy"
+      "answer": "Italy",
+      "bounds": {
+        "nw": {
+          "lat": 47.1,
+          "lng": 6.6
+        },
+        "se": {
+          "lat": 36.6,
+          "lng": 18.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Colosseum",
@@ -1785,7 +1835,17 @@
         "lng": 151.2153
       },
       "country": "Australia",
-      "answer": "Australia"
+      "answer": "Australia",
+      "bounds": {
+        "nw": {
+          "lat": -10,
+          "lng": 113
+        },
+        "se": {
+          "lat": -44,
+          "lng": 154
+        }
+      }
     },
     {
       "clue": "Regional Focus: Sydney Opera House",
@@ -1819,7 +1879,17 @@
         "lng": -72.545
       },
       "country": "Peru",
-      "answer": "Peru"
+      "answer": "Peru",
+      "bounds": {
+        "nw": {
+          "lat": 0.1,
+          "lng": -81.3
+        },
+        "se": {
+          "lat": -18.4,
+          "lng": -68.7
+        }
+      }
     },
     {
       "clue": "Regional Focus: Machu Picchu",
@@ -1853,7 +1923,17 @@
         "lng": 78.0421
       },
       "country": "India",
-      "answer": "India"
+      "answer": "India",
+      "bounds": {
+        "nw": {
+          "lat": 35.5,
+          "lng": 68.1
+        },
+        "se": {
+          "lat": 6.5,
+          "lng": 97.4
+        }
+      }
     },
     {
       "clue": "Regional Focus: Taj Mahal",
@@ -1887,7 +1967,17 @@
         "lng": -43.2105
       },
       "country": "Brazil",
-      "answer": "Brazil"
+      "answer": "Brazil",
+      "bounds": {
+        "nw": {
+          "lat": 5.3,
+          "lng": -74
+        },
+        "se": {
+          "lat": -33.8,
+          "lng": -34.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Christ the Redeemer",
@@ -1921,7 +2011,17 @@
         "lng": 31.1342
       },
       "country": "Egypt",
-      "answer": "Egypt"
+      "answer": "Egypt",
+      "bounds": {
+        "nw": {
+          "lat": 31.7,
+          "lng": 24.7
+        },
+        "se": {
+          "lat": 22,
+          "lng": 36.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Pyramids of Giza",
@@ -1955,7 +2055,17 @@
         "lng": 138.7274
       },
       "country": "Japan",
-      "answer": "Japan"
+      "answer": "Japan",
+      "bounds": {
+        "nw": {
+          "lat": 45.6,
+          "lng": 122.9
+        },
+        "se": {
+          "lat": 24,
+          "lng": 154
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mount Fuji",
@@ -1989,7 +2099,17 @@
         "lng": 103.867
       },
       "country": "Cambodia",
-      "answer": "Cambodia"
+      "answer": "Cambodia",
+      "bounds": {
+        "nw": {
+          "lat": 14.7,
+          "lng": 102.3
+        },
+        "se": {
+          "lat": 10.3,
+          "lng": 107.6
+        }
+      }
     },
     {
       "clue": "Regional Focus: Angkor Wat",
@@ -2023,7 +2143,17 @@
         "lng": 2.1744
       },
       "country": "Spain",
-      "answer": "Spain"
+      "answer": "Spain",
+      "bounds": {
+        "nw": {
+          "lat": 43.8,
+          "lng": -9.4
+        },
+        "se": {
+          "lat": 36,
+          "lng": 3.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Sagrada Familia",
@@ -2057,7 +2187,17 @@
         "lng": 35.4444
       },
       "country": "Jordan",
-      "answer": "Jordan"
+      "answer": "Jordan",
+      "bounds": {
+        "nw": {
+          "lat": 33.4,
+          "lng": 34.9
+        },
+        "se": {
+          "lat": 29.2,
+          "lng": 39.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Petra",
@@ -2091,7 +2231,17 @@
         "lng": -1.8262
       },
       "country": "United Kingdom",
-      "answer": "United Kingdom"
+      "answer": "United Kingdom",
+      "bounds": {
+        "nw": {
+          "lat": 60.9,
+          "lng": -8.7
+        },
+        "se": {
+          "lat": 49.9,
+          "lng": 1.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Stonehenge",
@@ -2125,7 +2275,17 @@
         "lng": 55.2744
       },
       "country": "United Arab Emirates",
-      "answer": "United Arab Emirates"
+      "answer": "United Arab Emirates",
+      "bounds": {
+        "nw": {
+          "lat": 26.1,
+          "lng": 51.5
+        },
+        "se": {
+          "lat": 22.6,
+          "lng": 56.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Burj Khalifa",
@@ -2159,7 +2319,17 @@
         "lng": 25.4615
       },
       "country": "Greece",
-      "answer": "Greece"
+      "answer": "Greece",
+      "bounds": {
+        "nw": {
+          "lat": 41.8,
+          "lng": 19.3
+        },
+        "se": {
+          "lat": 34.8,
+          "lng": 28.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Santorini",
@@ -2193,7 +2363,17 @@
         "lng": 25.8572
       },
       "country": "Zimbabwe",
-      "answer": "Zimbabwe"
+      "answer": "Zimbabwe",
+      "bounds": {
+        "nw": {
+          "lat": -15.6,
+          "lng": 25.2
+        },
+        "se": {
+          "lat": -22.4,
+          "lng": 33.1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Victoria Falls",
@@ -2227,7 +2407,17 @@
         "lng": -122.4783
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Golden Gate Bridge",
@@ -2261,7 +2451,17 @@
         "lng": -79.0377
       },
       "country": "Canada",
-      "answer": "Canada"
+      "answer": "Canada",
+      "bounds": {
+        "nw": {
+          "lat": 83.1,
+          "lng": -141
+        },
+        "se": {
+          "lat": 41.7,
+          "lng": -52.6
+        }
+      }
     },
     {
       "clue": "Regional Focus: Niagara Falls",
@@ -2295,7 +2495,17 @@
         "lng": 23.7267
       },
       "country": "Greece",
-      "answer": "Greece"
+      "answer": "Greece",
+      "bounds": {
+        "nw": {
+          "lat": 41.8,
+          "lng": 19.3
+        },
+        "se": {
+          "lat": 34.8,
+          "lng": 28.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Acropolis",
@@ -2329,7 +2539,17 @@
         "lng": -88.5678
       },
       "country": "Mexico",
-      "answer": "Mexico"
+      "answer": "Mexico",
+      "bounds": {
+        "nw": {
+          "lat": 32.8,
+          "lng": -117.1
+        },
+        "se": {
+          "lat": 14.5,
+          "lng": -86.7
+        }
+      }
     },
     {
       "clue": "Regional Focus: Chichen Itza",
@@ -2363,7 +2583,17 @@
         "lng": 139.7454
       },
       "country": "Japan",
-      "answer": "Japan"
+      "answer": "Japan",
+      "bounds": {
+        "nw": {
+          "lat": 45.6,
+          "lng": 122.9
+        },
+        "se": {
+          "lat": 24,
+          "lng": 154
+        }
+      }
     },
     {
       "clue": "Regional Focus: Tokyo Tower",
@@ -2397,7 +2627,17 @@
         "lng": 13.3777
       },
       "country": "Germany",
-      "answer": "Germany"
+      "answer": "Germany",
+      "bounds": {
+        "nw": {
+          "lat": 55.1,
+          "lng": 5.9
+        },
+        "se": {
+          "lat": 47.2,
+          "lng": 15.1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Brandenburg Gate",
@@ -2431,7 +2671,17 @@
         "lng": 37.6175
       },
       "country": "Russia",
-      "answer": "Russia"
+      "answer": "Russia",
+      "bounds": {
+        "nw": {
+          "lat": 81.9,
+          "lng": 19.6
+        },
+        "se": {
+          "lat": 41.2,
+          "lng": 180
+        }
+      }
     },
     {
       "clue": "Regional Focus: Kremlin",
@@ -2465,7 +2715,17 @@
         "lng": 18.4098
       },
       "country": "South Africa",
-      "answer": "South Africa"
+      "answer": "South Africa",
+      "bounds": {
+        "nw": {
+          "lat": -22.1,
+          "lng": 16.3
+        },
+        "se": {
+          "lat": -34.9,
+          "lng": 33
+        }
+      }
     },
     {
       "clue": "Regional Focus: Table Mountain",
@@ -2499,7 +2759,17 @@
         "lng": 131.0369
       },
       "country": "Australia",
-      "answer": "Australia"
+      "answer": "Australia",
+      "bounds": {
+        "nw": {
+          "lat": -10,
+          "lng": 113
+        },
+        "se": {
+          "lat": -44,
+          "lng": 154
+        }
+      }
     },
     {
       "clue": "Regional Focus: Uluru (Ayers Rock)",
@@ -2533,7 +2803,17 @@
         "lng": 10.7498
       },
       "country": "Germany",
-      "answer": "Germany"
+      "answer": "Germany",
+      "bounds": {
+        "nw": {
+          "lat": 55.1,
+          "lng": 5.9
+        },
+        "se": {
+          "lat": 47.2,
+          "lng": 15.1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Neuschwanstein Castle",
@@ -2567,7 +2847,17 @@
         "lng": -73.9855
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Times Square",
@@ -2601,7 +2891,17 @@
         "lng": 2.3376
       },
       "country": "France",
-      "answer": "France"
+      "answer": "France",
+      "bounds": {
+        "nw": {
+          "lat": 51.2,
+          "lng": -5.2
+        },
+        "se": {
+          "lat": 41.3,
+          "lng": 9.7
+        }
+      }
     },
     {
       "clue": "Regional Focus: Louvre Museum",
@@ -2635,7 +2935,17 @@
         "lng": 28.9802
       },
       "country": "Turkey",
-      "answer": "Turkey"
+      "answer": "Turkey",
+      "bounds": {
+        "nw": {
+          "lat": 42.2,
+          "lng": 25.7
+        },
+        "se": {
+          "lat": 35.8,
+          "lng": 44.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Hagia Sophia",
@@ -2669,7 +2979,17 @@
         "lng": 103.8545
       },
       "country": "Singapore",
-      "answer": "Singapore"
+      "answer": "Singapore",
+      "bounds": {
+        "nw": {
+          "lat": 1.47,
+          "lng": 103.6
+        },
+        "se": {
+          "lat": 1.16,
+          "lng": 104.1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Merlion",
@@ -2703,7 +3023,17 @@
         "lng": -79.3871
       },
       "country": "Canada",
-      "answer": "Canada"
+      "answer": "Canada",
+      "bounds": {
+        "nw": {
+          "lat": 83.1,
+          "lng": -141
+        },
+        "se": {
+          "lat": 41.7,
+          "lng": -52.6
+        }
+      }
     },
     {
       "clue": "Regional Focus: CN Tower",
@@ -2737,7 +3067,17 @@
         "lng": 10.3966
       },
       "country": "Italy",
-      "answer": "Italy"
+      "answer": "Italy",
+      "bounds": {
+        "nw": {
+          "lat": 47.1,
+          "lng": 6.6
+        },
+        "se": {
+          "lat": 36.6,
+          "lng": 18.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Leaning Tower of Pisa",
@@ -2771,7 +3111,17 @@
         "lng": -112.1401
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Grand Canyon",
@@ -2805,7 +3155,17 @@
         "lng": 116.5704
       },
       "country": "China",
-      "answer": "China"
+      "answer": "China",
+      "bounds": {
+        "nw": {
+          "lat": 53.6,
+          "lng": 73.5
+        },
+        "se": {
+          "lat": 18.1,
+          "lng": 134.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Great Wall of China",
@@ -2839,7 +3199,17 @@
         "lng": -1.4044
       },
       "country": "United Kingdom",
-      "answer": "United Kingdom"
+      "answer": "United Kingdom",
+      "bounds": {
+        "nw": {
+          "lat": 60.9,
+          "lng": -8.7
+        },
+        "se": {
+          "lat": 49.9,
+          "lng": 1.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where did the Titanic depart from on its maiden voyage",
@@ -2873,7 +3243,17 @@
         "lng": 132.4553
       },
       "country": "Japan",
-      "answer": "Japan"
+      "answer": "Japan",
+      "bounds": {
+        "nw": {
+          "lat": 45.6,
+          "lng": 122.9
+        },
+        "se": {
+          "lat": 24,
+          "lng": 154
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city was the first atomic bomb dropped during WWII",
@@ -2907,7 +3287,17 @@
         "lng": -73.968
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where is the headquarters of the United Nations located",
@@ -2941,7 +3331,17 @@
         "lng": 23.7275
       },
       "country": "Greece",
-      "answer": "Greece"
+      "answer": "Greece",
+      "bounds": {
+        "nw": {
+          "lat": 41.8,
+          "lng": 19.3
+        },
+        "se": {
+          "lat": 34.8,
+          "lng": 28.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Which city hosted the first modern Olympic Games in 1896",
@@ -2975,7 +3375,17 @@
         "lng": 10.9167
       },
       "country": "Italy",
-      "answer": "Italy"
+      "answer": "Italy",
+      "bounds": {
+        "nw": {
+          "lat": 47.1,
+          "lng": 6.6
+        },
+        "se": {
+          "lat": 36.6,
+          "lng": 18.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where was Leonardo da Vinci born",
@@ -3009,7 +3419,17 @@
         "lng": -71.0589
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city did the Boston Tea Party take place",
@@ -3043,7 +3463,17 @@
         "lng": -0.127
       },
       "country": "United Kingdom",
-      "answer": "United Kingdom"
+      "answer": "United Kingdom",
+      "bounds": {
+        "nw": {
+          "lat": 60.9,
+          "lng": -8.7
+        },
+        "se": {
+          "lat": 49.9,
+          "lng": 1.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where is the Rosetta Stone currently displayed",
@@ -3077,7 +3507,17 @@
         "lng": -4.9785
       },
       "country": "Morocco",
-      "answer": "Morocco"
+      "answer": "Morocco",
+      "bounds": {
+        "nw": {
+          "lat": 35.9,
+          "lng": -13.2
+        },
+        "se": {
+          "lat": 27.6,
+          "lng": -1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Which city is home to the world's oldest university still in operation (founded 859 AD)",
@@ -3111,7 +3551,17 @@
         "lng": -0.8731
       },
       "country": "France",
-      "answer": "France"
+      "answer": "France",
+      "bounds": {
+        "nw": {
+          "lat": 51.2,
+          "lng": -5.2
+        },
+        "se": {
+          "lat": 41.3,
+          "lng": 9.7
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where did the D-Day landings begin on June 6, 1944",
@@ -3145,7 +3595,17 @@
         "lng": -75.1652
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city was the Declaration of Independence signed",
@@ -3179,7 +3639,17 @@
         "lng": -5.7089
       },
       "country": "Saint Helena",
-      "answer": "Saint Helena"
+      "answer": "Saint Helena",
+      "bounds": {
+        "nw": {
+          "lat": -15.9,
+          "lng": -5.9
+        },
+        "se": {
+          "lat": -16.1,
+          "lng": -5.6
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat",
@@ -3213,7 +3683,17 @@
         "lng": -1.6458
       },
       "country": "Spain",
-      "answer": "Spain"
+      "answer": "Spain",
+      "bounds": {
+        "nw": {
+          "lat": 43.8,
+          "lng": -9.4
+        },
+        "se": {
+          "lat": 36,
+          "lng": 3.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Which city hosts the annual Running of the Bulls festival",
@@ -3247,7 +3727,17 @@
         "lng": -56.1522
       },
       "country": "Uruguay",
-      "answer": "Uruguay"
+      "answer": "Uruguay",
+      "bounds": {
+        "nw": {
+          "lat": -30.1,
+          "lng": -58.5
+        },
+        "se": {
+          "lat": -35,
+          "lng": -53.1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where was the first FIFA World Cup held in 1930",
@@ -3281,7 +3771,17 @@
         "lng": 4.884
       },
       "country": "Netherlands",
-      "answer": "Netherlands"
+      "answer": "Netherlands",
+      "bounds": {
+        "nw": {
+          "lat": 53.7,
+          "lng": 3.3
+        },
+        "se": {
+          "lat": 50.8,
+          "lng": 7.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city is the Anne Frank House museum located",
@@ -3315,7 +3815,17 @@
         "lng": 30.0979
       },
       "country": "Ukraine",
-      "answer": "Ukraine"
+      "answer": "Ukraine",
+      "bounds": {
+        "nw": {
+          "lat": 52.4,
+          "lng": 22.1
+        },
+        "se": {
+          "lat": 44.3,
+          "lng": 40.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986",
@@ -3349,7 +3859,17 @@
         "lng": 86.925
       },
       "country": "Nepal",
-      "answer": "Nepal"
+      "answer": "Nepal",
+      "bounds": {
+        "nw": {
+          "lat": 30.5,
+          "lng": 80
+        },
+        "se": {
+          "lat": 26.3,
+          "lng": 88.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953",
@@ -3383,7 +3903,17 @@
         "lng": -0.5632
       },
       "country": "United Kingdom",
-      "answer": "United Kingdom"
+      "answer": "United Kingdom",
+      "bounds": {
+        "nw": {
+          "lat": 60.9,
+          "lng": -8.7
+        },
+        "se": {
+          "lat": 49.9,
+          "lng": 1.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where was the Magna Carta signed in 1215",
@@ -3417,7 +3947,17 @@
         "lng": -77.0502
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city did Martin Luther King Jr. deliver his 'I Have a Dream' speech",
@@ -3451,7 +3991,17 @@
         "lng": 119.95
       },
       "country": "Indonesia",
-      "answer": "Indonesia"
+      "answer": "Indonesia",
+      "bounds": {
+        "nw": {
+          "lat": 6.2,
+          "lng": 94.8
+        },
+        "se": {
+          "lat": -11.2,
+          "lng": 141
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where is the oldest known cave painting located (over 45,000 years old)",
@@ -3485,7 +4035,17 @@
         "lng": 11.2558
       },
       "country": "Italy",
-      "answer": "Italy"
+      "answer": "Italy",
+      "bounds": {
+        "nw": {
+          "lat": 47.1,
+          "lng": 6.6
+        },
+        "se": {
+          "lat": 36.6,
+          "lng": 18.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Which city is the birthplace of the Renaissance",
@@ -3519,7 +4079,17 @@
         "lng": 13.405
       },
       "country": "Germany",
-      "answer": "Germany"
+      "answer": "Germany",
+      "bounds": {
+        "nw": {
+          "lat": 55.1,
+          "lng": 5.9
+        },
+        "se": {
+          "lat": 47.2,
+          "lng": 15.1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where was the Berlin Wall located",
@@ -3553,7 +4123,17 @@
         "lng": -122.3425
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city was the first Starbucks opened in 1971",
@@ -3587,7 +4167,17 @@
         "lng": -75.6674
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where did the Wright Brothers make their first powered flight",
@@ -3621,7 +4211,17 @@
         "lng": 28.9784
       },
       "country": "Turkey",
-      "answer": "Turkey"
+      "answer": "Turkey",
+      "bounds": {
+        "nw": {
+          "lat": 42.2,
+          "lng": 25.7
+        },
+        "se": {
+          "lat": 35.8,
+          "lng": 44.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Which city was the capital of the Byzantine Empire",
@@ -3655,7 +4255,17 @@
         "lng": 4.3146
       },
       "country": "Netherlands",
-      "answer": "Netherlands"
+      "answer": "Netherlands",
+      "bounds": {
+        "nw": {
+          "lat": 53.7,
+          "lng": 3.3
+        },
+        "se": {
+          "lat": 50.8,
+          "lng": 7.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where is the headquarters of the International Court of Justice",
@@ -3689,7 +4299,17 @@
         "lng": -122.4094
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city was the first iPhone unveiled in 2007",
@@ -3723,7 +4343,17 @@
         "lng": 29.9187
       },
       "country": "Egypt",
-      "answer": "Egypt"
+      "answer": "Egypt",
+      "bounds": {
+        "nw": {
+          "lat": 31.7,
+          "lng": 24.7
+        },
+        "se": {
+          "lat": 22,
+          "lng": 36.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where was cleopatra's palace located before it sank into the sea",
@@ -3757,7 +4387,17 @@
         "lng": 14.426
       },
       "country": "Italy",
-      "answer": "Italy"
+      "answer": "Italy",
+      "bounds": {
+        "nw": {
+          "lat": 47.1,
+          "lng": 6.6
+        },
+        "se": {
+          "lat": 36.6,
+          "lng": 18.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Which volcano destroyed Pompeii in 79 AD",
@@ -3791,7 +4431,17 @@
         "lng": -0.1278
       },
       "country": "United Kingdom",
-      "answer": "United Kingdom"
+      "answer": "United Kingdom",
+      "bounds": {
+        "nw": {
+          "lat": 60.9,
+          "lng": -8.7
+        },
+        "se": {
+          "lat": 49.9,
+          "lng": 1.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Where was the world's first underground railway opened in 1863",
@@ -3825,7 +4475,17 @@
         "lng": 10.7522
       },
       "country": "Norway",
-      "answer": "Norway"
+      "answer": "Norway",
+      "bounds": {
+        "nw": {
+          "lat": 71.2,
+          "lng": 4.5
+        },
+        "se": {
+          "lat": 57.9,
+          "lng": 31.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: In which city is the Nobel Peace Prize ceremony held",
@@ -3859,7 +4519,17 @@
         "lng": -60.0217
       },
       "country": "Brazil",
-      "answer": "Brazil"
+      "answer": "Brazil",
+      "bounds": {
+        "nw": {
+          "lat": 5.3,
+          "lng": -74
+        },
+        "se": {
+          "lat": -33.8,
+          "lng": -34.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Amazon River",
@@ -3893,7 +4563,17 @@
         "lng": 31.2357
       },
       "country": "Egypt",
-      "answer": "Egypt"
+      "answer": "Egypt",
+      "bounds": {
+        "nw": {
+          "lat": 31.7,
+          "lng": 24.7
+        },
+        "se": {
+          "lat": 22,
+          "lng": 36.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Nile River",
@@ -3927,7 +4607,17 @@
         "lng": -89.2495
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mississippi River",
@@ -3961,7 +4651,17 @@
         "lng": 16.3738
       },
       "country": "Austria",
-      "answer": "Austria"
+      "answer": "Austria",
+      "bounds": {
+        "nw": {
+          "lat": 49.1,
+          "lng": 9.5
+        },
+        "se": {
+          "lat": 46.3,
+          "lng": 17.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: Danube River",
@@ -3995,7 +4695,17 @@
         "lng": 117.27
       },
       "country": "China",
-      "answer": "China"
+      "answer": "China",
+      "bounds": {
+        "nw": {
+          "lat": 53.6,
+          "lng": 73.5
+        },
+        "se": {
+          "lat": 18.1,
+          "lng": 134.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: Yangtze River",
@@ -4029,7 +4739,17 @@
         "lng": 37.3556
       },
       "country": "Tanzania",
-      "answer": "Tanzania"
+      "answer": "Tanzania",
+      "bounds": {
+        "nw": {
+          "lat": -0.9,
+          "lng": 29.3
+        },
+        "se": {
+          "lat": -11.8,
+          "lng": 40.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mount Kilimanjaro",
@@ -4063,7 +4783,17 @@
         "lng": 86.925
       },
       "country": "Nepal",
-      "answer": "Nepal"
+      "answer": "Nepal",
+      "bounds": {
+        "nw": {
+          "lat": 30.5,
+          "lng": 80
+        },
+        "se": {
+          "lat": 26.3,
+          "lng": 88.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mount Everest",
@@ -4097,7 +4827,17 @@
         "lng": 7.6586
       },
       "country": "Switzerland",
-      "answer": "Switzerland"
+      "answer": "Switzerland",
+      "bounds": {
+        "nw": {
+          "lat": 47.8,
+          "lng": 5.9
+        },
+        "se": {
+          "lat": 45.8,
+          "lng": 10.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Matterhorn",
@@ -4131,7 +4871,17 @@
         "lng": -151.0074
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mount McKinley (Denali)",
@@ -4165,7 +4915,17 @@
         "lng": 76.5155
       },
       "country": "Pakistan",
-      "answer": "Pakistan"
+      "answer": "Pakistan",
+      "bounds": {
+        "nw": {
+          "lat": 37.1,
+          "lng": 60.9
+        },
+        "se": {
+          "lat": 23.7,
+          "lng": 77.8
+        }
+      }
     },
     {
       "clue": "Regional Focus: K2",
@@ -4199,7 +4959,17 @@
         "lng": 108.165
       },
       "country": "Russia",
-      "answer": "Russia"
+      "answer": "Russia",
+      "bounds": {
+        "nw": {
+          "lat": 81.9,
+          "lng": 19.6
+        },
+        "se": {
+          "lat": 41.2,
+          "lng": 180
+        }
+      }
     },
     {
       "clue": "Regional Focus: Lake Baikal",
@@ -4233,7 +5003,17 @@
         "lng": 32.8561
       },
       "country": "Uganda",
-      "answer": "Uganda"
+      "answer": "Uganda",
+      "bounds": {
+        "nw": {
+          "lat": 4.3,
+          "lng": 29.6
+        },
+        "se": {
+          "lat": -1.5,
+          "lng": 35
+        }
+      }
     },
     {
       "clue": "Regional Focus: Lake Victoria",
@@ -4267,7 +5047,17 @@
         "lng": -69.3354
       },
       "country": "Peru",
-      "answer": "Peru"
+      "answer": "Peru",
+      "bounds": {
+        "nw": {
+          "lat": 0.1,
+          "lng": -81.3
+        },
+        "se": {
+          "lat": -18.4,
+          "lng": -68.7
+        }
+      }
     },
     {
       "clue": "Regional Focus: Lake Titicaca",
@@ -4301,7 +5091,17 @@
         "lng": -87.5
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Great Lakes - Lake Superior",
@@ -4335,7 +5135,17 @@
         "lng": 35.5
       },
       "country": "Israel",
-      "answer": "Israel"
+      "answer": "Israel",
+      "bounds": {
+        "nw": {
+          "lat": 33.3,
+          "lng": 34.2
+        },
+        "se": {
+          "lat": 29.5,
+          "lng": 35.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Dead Sea",
@@ -4369,7 +5179,17 @@
         "lng": 25.6628
       },
       "country": "Egypt",
-      "answer": "Egypt"
+      "answer": "Egypt",
+      "bounds": {
+        "nw": {
+          "lat": 31.7,
+          "lng": 24.7
+        },
+        "se": {
+          "lat": 22,
+          "lng": 36.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Sahara Desert",
@@ -4403,7 +5223,17 @@
         "lng": 103.4314
       },
       "country": "Mongolia",
-      "answer": "Mongolia"
+      "answer": "Mongolia",
+      "bounds": {
+        "nw": {
+          "lat": 52.1,
+          "lng": 87.7
+        },
+        "se": {
+          "lat": 41.6,
+          "lng": 119.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Gobi Desert",
@@ -4437,7 +5267,17 @@
         "lng": -69.25
       },
       "country": "Chile",
-      "answer": "Chile"
+      "answer": "Chile",
+      "bounds": {
+        "nw": {
+          "lat": -17.5,
+          "lng": -75.7
+        },
+        "se": {
+          "lat": -56,
+          "lng": -66
+        }
+      }
     },
     {
       "clue": "Regional Focus: Atacama Desert",
@@ -4471,7 +5311,17 @@
         "lng": -115.4734
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mojave Desert",
@@ -4505,7 +5355,17 @@
         "lng": 46.8691
       },
       "country": "Madagascar",
-      "answer": "Madagascar"
+      "answer": "Madagascar",
+      "bounds": {
+        "nw": {
+          "lat": -11.9,
+          "lng": 43.2
+        },
+        "se": {
+          "lat": -25.6,
+          "lng": 50.5
+        }
+      }
     },
     {
       "clue": "Regional Focus: Madagascar",
@@ -4539,7 +5399,17 @@
         "lng": -90.9656
       },
       "country": "Ecuador",
-      "answer": "Ecuador"
+      "answer": "Ecuador",
+      "bounds": {
+        "nw": {
+          "lat": 1.5,
+          "lng": -81.1
+        },
+        "se": {
+          "lat": -5.1,
+          "lng": -75.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: Galápagos Islands",
@@ -4573,7 +5443,17 @@
         "lng": -155.5828
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Hawaii (Big Island)",
@@ -4607,7 +5487,17 @@
         "lng": -42.6043
       },
       "country": "Greenland",
-      "answer": "Greenland"
+      "answer": "Greenland",
+      "bounds": {
+        "nw": {
+          "lat": 83.7,
+          "lng": -73
+        },
+        "se": {
+          "lat": 59.7,
+          "lng": -11
+        }
+      }
     },
     {
       "clue": "Regional Focus: Greenland",
@@ -4641,7 +5531,17 @@
         "lng": -151.7415
       },
       "country": "French Polynesia",
-      "answer": "French Polynesia"
+      "answer": "French Polynesia",
+      "bounds": {
+        "nw": {
+          "lat": -7,
+          "lng": -155
+        },
+        "se": {
+          "lat": -28,
+          "lng": -134
+        }
+      }
     },
     {
       "clue": "Regional Focus: Bora Bora",
@@ -4675,7 +5575,17 @@
         "lng": 147.6992
       },
       "country": "Australia",
-      "answer": "Australia"
+      "answer": "Australia",
+      "bounds": {
+        "nw": {
+          "lat": -10,
+          "lng": 113
+        },
+        "se": {
+          "lat": -44,
+          "lng": 154
+        }
+      }
     },
     {
       "clue": "Regional Focus: Great Barrier Reef",
@@ -4709,7 +5619,17 @@
         "lng": 142.1996
       },
       "country": "Pacific Ocean",
-      "answer": "Pacific Ocean"
+      "answer": "Pacific Ocean",
+      "bounds": {
+        "nw": {
+          "lat": 66,
+          "lng": -180
+        },
+        "se": {
+          "lat": -60,
+          "lng": 180
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mariana Trench",
@@ -4743,7 +5663,17 @@
         "lng": -5.5
       },
       "country": "Spain",
-      "answer": "Spain"
+      "answer": "Spain",
+      "bounds": {
+        "nw": {
+          "lat": 43.8,
+          "lng": -9.4
+        },
+        "se": {
+          "lat": 36,
+          "lng": 3.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Strait of Gibraltar",
@@ -4777,7 +5707,17 @@
         "lng": -79.68
       },
       "country": "Panama",
-      "answer": "Panama"
+      "answer": "Panama",
+      "bounds": {
+        "nw": {
+          "lat": 9.7,
+          "lng": -83.1
+        },
+        "se": {
+          "lat": 7.2,
+          "lng": -77.1
+        }
+      }
     },
     {
       "clue": "Regional Focus: Panama Canal",
@@ -4811,7 +5751,17 @@
         "lng": 32.35
       },
       "country": "Egypt",
-      "answer": "Egypt"
+      "answer": "Egypt",
+      "bounds": {
+        "nw": {
+          "lat": 31.7,
+          "lng": 24.7
+        },
+        "se": {
+          "lat": 22,
+          "lng": 36.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Suez Canal",
@@ -4845,7 +5795,17 @@
         "lng": -1.5115
       },
       "country": "France",
-      "answer": "France"
+      "answer": "France",
+      "bounds": {
+        "nw": {
+          "lat": 51.2,
+          "lng": -5.2
+        },
+        "se": {
+          "lat": 41.3,
+          "lng": 9.7
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mont Saint-Michel",
@@ -4879,7 +5839,17 @@
         "lng": -3.5881
       },
       "country": "Spain",
-      "answer": "Spain"
+      "answer": "Spain",
+      "bounds": {
+        "nw": {
+          "lat": 43.8,
+          "lng": -9.4
+        },
+        "se": {
+          "lat": 36,
+          "lng": 3.3
+        }
+      }
     },
     {
       "clue": "Regional Focus: Alhambra",
@@ -4913,7 +5883,17 @@
         "lng": -103.4591
       },
       "country": "United States",
-      "answer": "United States"
+      "answer": "United States",
+      "bounds": {
+        "nw": {
+          "lat": 49.4,
+          "lng": -124.8
+        },
+        "se": {
+          "lat": 24.5,
+          "lng": -66.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Mount Rushmore",
@@ -4947,7 +5927,17 @@
         "lng": -109.3664
       },
       "country": "Chile",
-      "answer": "Chile"
+      "answer": "Chile",
+      "bounds": {
+        "nw": {
+          "lat": -17.5,
+          "lng": -75.7
+        },
+        "se": {
+          "lat": -56,
+          "lng": -66
+        }
+      }
     },
     {
       "clue": "Regional Focus: Moai of Easter Island",
@@ -4981,7 +5971,17 @@
         "lng": 96.1496
       },
       "country": "Myanmar",
-      "answer": "Myanmar"
+      "answer": "Myanmar",
+      "bounds": {
+        "nw": {
+          "lat": 28.5,
+          "lng": 92.1
+        },
+        "se": {
+          "lat": 9.8,
+          "lng": 101.2
+        }
+      }
     },
     {
       "clue": "Regional Focus: Shwedagon Pagoda",
@@ -5015,7 +6015,17 @@
         "lng": 19.0399
       },
       "country": "Hungary",
-      "answer": "Hungary"
+      "answer": "Hungary",
+      "bounds": {
+        "nw": {
+          "lat": 48.6,
+          "lng": 16.1
+        },
+        "se": {
+          "lat": 45.7,
+          "lng": 22.9
+        }
+      }
     },
     {
       "clue": "Regional Focus: Buda Castle",
@@ -5055,17 +6065,17 @@
       "type": "river",
       "difficulty": "hard",
       "target": {
-        "lat": -3.0,
-        "lng": -60.0
+        "lat": -3,
+        "lng": -60
       },
       "bounds": {
         "nw": {
           "lat": 5.5,
-          "lng": -73.0
+          "lng": -73
         },
         "se": {
-          "lat": -11.0,
-          "lng": -49.0
+          "lat": -11,
+          "lng": -49
         }
       },
       "country": "Brazil"
@@ -5076,17 +6086,17 @@
       "type": "desert",
       "difficulty": "medium",
       "target": {
-        "lat": 23.0,
-        "lng": 3.0
+        "lat": 23,
+        "lng": 3
       },
       "bounds": {
         "nw": {
-          "lat": 31.0,
-          "lng": -15.0
+          "lat": 31,
+          "lng": -15
         },
         "se": {
-          "lat": 15.0,
-          "lng": 51.0
+          "lat": 15,
+          "lng": 51
         }
       },
       "country": "Various"
@@ -5233,7 +6243,17 @@
         "lng": -3.0026
       },
       "country": "Mali",
-      "answer": "Mali"
+      "answer": "Mali",
+      "bounds": {
+        "nw": {
+          "lat": 25,
+          "lng": -12.3
+        },
+        "se": {
+          "lat": 10.2,
+          "lng": 4.3
+        }
+      }
     },
     {
       "clue": "Which city hosted the 2016 Summer Olympics?",
@@ -5257,7 +6277,17 @@
         "lng": 42.4453
       },
       "country": "Russia",
-      "answer": "Russia"
+      "answer": "Russia",
+      "bounds": {
+        "nw": {
+          "lat": 81.9,
+          "lng": 19.6
+        },
+        "se": {
+          "lat": 41.2,
+          "lng": 180
+        }
+      }
     },
     {
       "clue": "What is the southernmost capital city in the world?",
@@ -5298,8 +6328,8 @@
       "type": "ocean",
       "difficulty": "easy",
       "target": {
-        "lat": -40.0,
-        "lng": 160.0
+        "lat": -40,
+        "lng": 160
       },
       "country": "Australia"
     },
@@ -5314,12 +6344,12 @@
       },
       "bounds": {
         "nw": {
-          "lat": 37.0,
-          "lng": -10.0
+          "lat": 37,
+          "lng": -10
         },
         "se": {
-          "lat": 28.0,
-          "lng": 8.0
+          "lat": 28,
+          "lng": 8
         }
       },
       "country": "Morocco"
@@ -5373,16 +6403,16 @@
       "difficulty": "hard",
       "target": {
         "lat": -46.5,
-        "lng": -71.0
+        "lng": -71
       },
       "bounds": {
         "nw": {
-          "lat": -39.0,
-          "lng": -76.0
+          "lat": -39,
+          "lng": -76
         },
         "se": {
-          "lat": -55.0,
-          "lng": -63.0
+          "lat": -55,
+          "lng": -63
         }
       },
       "country": "Argentina"
@@ -5499,7 +6529,17 @@
         "lng": 106.9057
       },
       "country": "Mongolia",
-      "answer": "Mongolia"
+      "answer": "Mongolia",
+      "bounds": {
+        "nw": {
+          "lat": 52.1,
+          "lng": 87.7
+        },
+        "se": {
+          "lat": 41.6,
+          "lng": 119.9
+        }
+      }
     },
     {
       "clue": "What is the highest capital city in Europe by elevation?",
@@ -5564,7 +6604,7 @@
       "difficulty": "medium",
       "target": {
         "lat": 20.6,
-        "lng": -89.0
+        "lng": -89
       },
       "bounds": {
         "nw": {
@@ -5585,7 +6625,7 @@
       "difficulty": "medium",
       "target": {
         "lat": 38.5,
-        "lng": 25.0
+        "lng": 25
       },
       "country": "Greece"
     },
@@ -5596,15 +6636,15 @@
       "difficulty": "hard",
       "target": {
         "lat": 56.2,
-        "lng": 160.0
+        "lng": 160
       },
       "bounds": {
         "nw": {
-          "lat": 62.0,
-          "lng": 155.0
+          "lat": 62,
+          "lng": 155
         },
         "se": {
-          "lat": 51.0,
+          "lat": 51,
           "lng": 164.5
         }
       },
@@ -5616,13 +6656,13 @@
       "type": "desert",
       "difficulty": "hard",
       "target": {
-        "lat": 39.0,
+        "lat": 39,
         "lng": 59.5
       },
       "bounds": {
         "nw": {
           "lat": 42.6,
-          "lng": 54.0
+          "lng": 54
         },
         "se": {
           "lat": 36.2,

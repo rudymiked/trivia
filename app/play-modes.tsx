@@ -24,12 +24,22 @@ const CATEGORY_ICONS: Record<string, string> = {
   geography: '🌍',
 };
 
+type PracticeDifficulty = 'all' | 'easy' | 'medium' | 'hard';
+
+const DIFFICULTY_OPTIONS: Array<{ value: PracticeDifficulty; label: string }> = [
+  { value: 'all', label: 'Default' },
+  { value: 'easy', label: 'Easy' },
+  { value: 'medium', label: 'Medium' },
+  { value: 'hard', label: 'Hard' },
+];
+
 export default function PlayModesScreen() {
   const router = useRouter();
   const { user, signIn } = useAuth();
   const { startGame } = useGameStore();
   const categories = getCategories();
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<PracticeDifficulty>('all');
 
   const handleSelectMode = async (category: string) => {
     // Require login for all play modes
@@ -49,8 +59,8 @@ export default function PlayModesScreen() {
 
     try {
       // For logged-in users with "all" or "random", use server personalization
-      if (user && (category === 'all' || category === 'random')) {
-        const response = await fetchPersonalizedPuzzle(user.id);
+      if (user) {
+        const response = await fetchPersonalizedPuzzle(user.id, category, selectedDifficulty);
         if (response.data) {
           startGame(response.data);
           router.push(`/game/${response.data.id}` as Href);
@@ -60,13 +70,13 @@ export default function PlayModesScreen() {
       }
 
       // Local generation for anonymous users or category-specific modes
-      const puzzle = generatePuzzleByCategory(category);
+      const puzzle = generatePuzzleByCategory(category, selectedDifficulty);
       startGame(puzzle);
       router.push(`/game/${puzzle.id}` as Href);
     } catch (error) {
       console.error('Error generating puzzle:', error);
       // Fallback to local generation
-      const puzzle = generatePuzzleByCategory(category);
+      const puzzle = generatePuzzleByCategory(category, selectedDifficulty);
       startGame(puzzle);
       router.push(`/game/${puzzle.id}` as Href);
     } finally {
@@ -93,6 +103,46 @@ export default function PlayModesScreen() {
       </View>
 
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.content}>
+        <Text style={styles.sectionTitle}>Difficulty</Text>
+        <View style={styles.difficultyRow}>
+          {DIFFICULTY_OPTIONS.map((option) => {
+            const isSelected = selectedDifficulty === option.value;
+            const selectedStyle =
+              option.value === 'easy'
+                ? styles.difficultyChipEasySelected
+                : option.value === 'medium'
+                  ? styles.difficultyChipMediumSelected
+                  : option.value === 'hard'
+                    ? styles.difficultyChipHardSelected
+                    : styles.difficultyChipSelected;
+
+            const selectedTextStyle =
+              option.value === 'medium'
+                ? styles.difficultyChipTextSelectedDark
+                : styles.difficultyChipTextSelected;
+
+            return (
+              <Pressable
+                key={option.value}
+                style={[styles.difficultyChip, isSelected && selectedStyle]}
+                onPress={() => setSelectedDifficulty(option.value)}
+              >
+                <Text
+                  style={[
+                    styles.difficultyChipText,
+                    isSelected && selectedTextStyle,
+                  ]}
+                >
+                  {option.label}
+                </Text>
+              </Pressable>
+            );
+          })}
+        </View>
+        <Text style={styles.difficultyHelpText}>
+          Default includes easy, medium, and hard questions.
+        </Text>
+
         {/* Special modes */}
         <View style={styles.specialModes}>
           <Pressable
@@ -188,6 +238,52 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 12,
     marginBottom: 24,
+  },
+  difficultyRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 10,
+    marginBottom: 20,
+  },
+  difficultyChip: {
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    backgroundColor: 'rgba(255, 255, 255, 0.04)',
+  },
+  difficultyChipSelected: {
+    borderColor: '#4ECDC4',
+    backgroundColor: 'rgba(78, 205, 196, 0.2)',
+  },
+  difficultyChipEasySelected: {
+    borderColor: '#2F855A',
+    backgroundColor: 'rgba(72, 187, 120, 0.28)',
+  },
+  difficultyChipMediumSelected: {
+    borderColor: '#D69E2E',
+    backgroundColor: 'rgba(246, 224, 94, 0.9)',
+  },
+  difficultyChipHardSelected: {
+    borderColor: '#E53E3E',
+    backgroundColor: 'rgba(245, 101, 101, 0.28)',
+  },
+  difficultyChipText: {
+    color: '#A0AEC0',
+    fontSize: 13,
+    fontWeight: '600',
+  },
+  difficultyChipTextSelected: {
+    color: '#FFFFFF',
+  },
+  difficultyChipTextSelectedDark: {
+    color: '#1A202C',
+  },
+  difficultyHelpText: {
+    color: '#718096',
+    fontSize: 12,
+    marginBottom: 20,
   },
   sectionTitle: {
     color: '#A0AEC0',

@@ -153,6 +153,8 @@ export default function GameScreen() {
 
         // Only fetch from API for date-based puzzles
         if (isDateBasedPuzzle) {
+          let shouldUseLocalCompletionFallback = true;
+
           // Server-side check for logged-in users
           if (user) {
             const token = getValidIdToken();
@@ -164,6 +166,10 @@ export default function GameScreen() {
                   setIsLoading(false);
                   return;
                 }
+
+                if (response.data && response.data.completed === false) {
+                  shouldUseLocalCompletionFallback = false;
+                }
               } catch (error) {
                 console.error('Failed to check server game status:', error);
                 // Fall through to local check
@@ -171,16 +177,18 @@ export default function GameScreen() {
             }
           }
 
-          // Local check for all users (fallback for logged-in, primary for anonymous)
-          try {
-            const previousResult = await getDailyResult(puzzleId);
-            if (previousResult) {
-              setAlreadyCompleted(previousResult);
-              setIsLoading(false);
-              return;
+          // Local check for anonymous users, or as a fallback if the server check was unavailable.
+          if (shouldUseLocalCompletionFallback) {
+            try {
+              const previousResult = await getDailyResult(puzzleId);
+              if (previousResult) {
+                setAlreadyCompleted(previousResult);
+                setIsLoading(false);
+                return;
+              }
+            } catch (error) {
+              console.error('Failed to get daily result:', error);
             }
-          } catch (error) {
-            console.error('Failed to get daily result:', error);
           }
 
           // Generate daily puzzle - works for all users (anonymous or logged in)

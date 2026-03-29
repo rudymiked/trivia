@@ -1,23 +1,43 @@
 import { useAuth } from '@/hooks/useAuth';
+import { checkUserGame } from '@/services/api';
 import { getTimeUntilNextPuzzle, getTodayDate, hasPlayedToday } from '@/services/puzzle';
 import { getUserProgress, type UserProgress } from '@/services/storage';
 import { trackTelemetryEvent } from '@/services/telemetry';
-import { Href, useRouter } from 'expo-router';
-import React, { useEffect, useRef, useState } from 'react';
+import { Href, useFocusEffect, useRouter } from 'expo-router';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, getValidIdToken } = useAuth();
   const [progress, setProgress] = useState<UserProgress | null>(null);
+  const [serverPlayedToday, setServerPlayedToday] = useState<boolean | null>(null);
   const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const [isLoading, setIsLoading] = useState(true);
   const trackedDauRef = useRef(false);
 
-  useEffect(() => {
-    const loadProgress = async () => {
+  const loadProgress = useCallback(async () => {
+      setIsLoading(true);
       const userProgress = await getUserProgress();
+      let resolvedServerPlayedToday: boolean | null = null;
+
+      if (user) {
+        const validToken = getValidIdToken();
+        if (validToken) {
+          try {
+            const today = getTodayDate();
+            const response = await checkUserGame(user.id, today, validToken);
+            if (response.data && typeof response.data.completed === 'boolean') {
+              resolvedServerPlayedToday = response.data.completed;
+            }
+          } catch (error) {
+            console.error('Failed to check server game status on home screen:', error);
+          }
+        }
+      }
+
       setProgress(userProgress);
+      setServerPlayedToday(resolvedServerPlayedToday);
       setIsLoading(false);
 
       if (!trackedDauRef.current) {
@@ -26,13 +46,16 @@ export default function HomeScreen() {
         void trackTelemetryEvent('daily_active_user', {
           date: today,
           isAuthenticated: !!user,
-          hasPlayedToday: hasPlayedToday(userProgress.lastPlayedDate),
+          hasPlayedToday: resolvedServerPlayedToday ?? hasPlayedToday(userProgress.lastPlayedDate),
         });
       }
-    };
+  }, [getValidIdToken, user]);
 
-    loadProgress();
-  }, [user]);
+  useFocusEffect(
+    useCallback(() => {
+      void loadProgress();
+    }, [loadProgress])
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -65,7 +88,9 @@ export default function HomeScreen() {
     </Pressable>
   );
 
-  const alreadyPlayed = progress && hasPlayedToday(progress.lastPlayedDate);
+  const alreadyPlayed = user && serverPlayedToday !== null
+    ? serverPlayedToday
+    : progress && hasPlayedToday(progress.lastPlayedDate);
 
   if (isLoading) {
     return (

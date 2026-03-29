@@ -235,6 +235,7 @@ export interface ClueFeedbackSubmission {
 
 export interface LowRatedClueSummary {
   locationId: string;
+  locationIds?: string[];
   clue: string;
   country: string;
   answer?: string;

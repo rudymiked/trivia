@@ -353,8 +353,9 @@ app.http('getLowRatedClues', {
       const minCount = Math.min(Math.max(parseInt(request.query.get('minCount') || '1', 10) || 1, 0), 1000);
 
       const client = getTableClient('clueFeedbackSummary');
-      const clues: Array<{
+      const groupedByClue = new Map<string, {
         locationId: string;
+        locationIds: string[];
         clue: string;
         country: string;
         answer?: string;
@@ -364,27 +365,63 @@ app.http('getLowRatedClues', {
         lowRatingCount: number;
         lastPuzzleDate?: string;
         lastSubmittedAt?: string;
-      }> = [];
+      }>();
 
       const entities = client.listEntities({
         queryOptions: { filter: `PartitionKey eq 'location' and lowRatingCount ge ${minCount}` },
       });
 
       for await (const entity of entities) {
-        clues.push({
-          locationId: entity.rowKey as string,
-          clue: (entity.clue as string) || '',
-          country: (entity.country as string) || '',
-          answer: entity.answer as string | undefined,
-          easyCount: Number(entity.easyCount || 0),
-          hardCount: Number(entity.hardCount || 0),
-          unclearCount: Number(entity.unclearCount || 0),
-          lowRatingCount: Number(entity.lowRatingCount || 0),
-          lastPuzzleDate: entity.lastPuzzleDate as string | undefined,
-          lastSubmittedAt: entity.lastSubmittedAt as string | undefined,
-        });
+        const locationId = entity.rowKey as string;
+        const clue = ((entity.clue as string) || '').trim();
+        const normalizedKey = clue ? clue.toLowerCase() : locationId;
+        const easyCount = Number(entity.easyCount || 0);
+        const hardCount = Number(entity.hardCount || 0);
+        const unclearCount = Number(entity.unclearCount || 0);
+        const lowRatingCount = Number(entity.lowRatingCount || 0);
+        const lastSubmittedAt = entity.lastSubmittedAt as string | undefined;
+        const lastPuzzleDate = entity.lastPuzzleDate as string | undefined;
+
+        const existing = groupedByClue.get(normalizedKey);
+        if (existing) {
+          existing.easyCount += easyCount;
+          existing.hardCount += hardCount;
+          existing.unclearCount += unclearCount;
+          existing.lowRatingCount += lowRatingCount;
+
+          if (!existing.locationIds.includes(locationId)) {
+            existing.locationIds.push(locationId);
+          }
+
+          if ((!existing.lastSubmittedAt || (lastSubmittedAt && lastSubmittedAt > existing.lastSubmittedAt))) {
+            existing.lastSubmittedAt = lastSubmittedAt;
+            existing.lastPuzzleDate = lastPuzzleDate;
+          }
+
+          if (!existing.answer && entity.answer) {
+            existing.answer = entity.answer as string;
+          }
+          if (!existing.country && entity.country) {
+            existing.country = entity.country as string;
+          }
+        } else {
+          groupedByClue.set(normalizedKey, {
+            locationId,
+            locationIds: [locationId],
+            clue,
+            country: (entity.country as string) || '',
+            answer: entity.answer as string | undefined,
+            easyCount,
+            hardCount,
+            unclearCount,
+            lowRatingCount,
+            lastPuzzleDate,
+            lastSubmittedAt,
+          });
+        }
       }
 
+      const clues = Array.from(groupedByClue.values());
       clues.sort((left, right) => {
         if (right.lowRatingCount !== left.lowRatingCount) {
           return right.lowRatingCount - left.lowRatingCount;

@@ -470,6 +470,15 @@ app.http('submitClueFeedback', {
     try {
       await initializeTables();
 
+      const authHeader = request.headers.get('authorization');
+      const token = extractBearerToken(authHeader);
+      if (token) {
+        const verifiedUser = await verifyGoogleToken(token);
+        if (verifiedUser?.userId === SMOKE_TEST_USER_ID) {
+          return { status: 201, jsonBody: { success: true } };
+        }
+      }
+
       const body = (await request.json()) as ClueFeedbackSubmission;
       const puzzleDate = sanitizeMetadata(body.puzzleDate);
       const locationId = sanitizeMetadata(body.locationId);

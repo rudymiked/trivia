@@ -4,13 +4,13 @@ import { fetchLowRatedClues, LowRatedClueSummary } from '@/services/api';
 import { Href, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
-    ActivityIndicator,
-    Pressable,
-    RefreshControl,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  ActivityIndicator,
+  Pressable,
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 
 const DEFAULT_LIMIT = 50;
@@ -190,7 +190,11 @@ export default function ClueFeedbackAdminScreen() {
           <Text style={styles.metaText}>
             {clue.answer ? `${clue.answer} • ${clue.country}` : clue.country}
           </Text>
-          <Text style={styles.locationIdText}>Location ID: {clue.locationId}</Text>
+          <Text style={styles.locationIdText}>
+            {clue.locationIds && clue.locationIds.length > 1
+              ? `Combined ${clue.locationIds.length} locations`
+              : `Location ID: ${clue.locationId}`}
+          </Text>
 
           <View style={styles.metricsRow}>
             <View style={styles.metricPill}>

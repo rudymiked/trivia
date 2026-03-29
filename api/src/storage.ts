@@ -7,12 +7,16 @@ const tableClients: Record<string, TableClient> = {};
 // Storage account name for Managed Identity auth
 const STORAGE_ACCOUNT_NAME = process.env.AZURE_STORAGE_ACCOUNT_NAME || 'geotapstorage';
 
+function getConnectionString(): string | undefined {
+  return process.env.AZURE_STORAGE_CONNECTION_STRING || process.env.AzureWebJobsStorage;
+}
+
 export function getTableServiceClient(): TableServiceClient {
   if (!serviceClient) {
-    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+    const connectionString = getConnectionString();
 
     if (connectionString) {
-      // Use connection string (local development)
+      // Use connection string (local development / CI)
       serviceClient = TableServiceClient.fromConnectionString(connectionString);
     } else {
       // Use Managed Identity (production)
@@ -26,10 +30,10 @@ export function getTableServiceClient(): TableServiceClient {
 
 export function getTableClient(tableName: string): TableClient {
   if (!tableClients[tableName]) {
-    const connectionString = process.env.AZURE_STORAGE_CONNECTION_STRING;
+    const connectionString = getConnectionString();
 
     if (connectionString) {
-      // Use connection string (local development)
+      // Use connection string (local development / CI)
       tableClients[tableName] = TableClient.fromConnectionString(connectionString, tableName);
     } else {
       // Use Managed Identity (production)

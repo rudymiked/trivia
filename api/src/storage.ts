@@ -53,6 +53,7 @@ export async function initializeTables(): Promise<void> {
     'users',
     'locations',
     'games',
+    'achievements',
     'seenLocations',
     'clueFeedback',
     'clueFeedbackSummary',

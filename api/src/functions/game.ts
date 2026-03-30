@@ -30,6 +30,30 @@ interface ClueFeedbackSubmission {
   answer?: string;
 }
 
+interface AchievementDefinition {
+  id: string;
+  title: string;
+  icon: string;
+  description: string;
+}
+
+interface AchievementRecord {
+  id: string;
+  title: string;
+  icon: string;
+  description: string;
+  unlocked: boolean;
+  unlockedAt?: string;
+  source: 'catalog' | 'custom';
+}
+
+interface AchievementMutationPayload {
+  achievementId: string;
+  title?: string;
+  icon?: string;
+  description?: string;
+}
+
 // Validation helpers
 const DATE_REGEX = /^\d{4}-\d{2}-\d{2}$/;
 const MAX_DISPLAY_NAME_LENGTH = 50;
@@ -40,6 +64,23 @@ const MAX_METADATA_LENGTH = 500;
 // Allow alphanumeric, hyphens, underscores, and periods (covers Google IDs and other OAuth providers)
 const SAFE_USERID_REGEX = /^[a-zA-Z0-9._-]+$/;
 const SMOKE_TEST_USER_ID = 'smoke-test-user';
+const MAX_ACHIEVEMENT_TEXT_LENGTH = 80;
+
+const ACHIEVEMENT_CATALOG: AchievementDefinition[] = [
+  { id: 'first_game', title: 'First Game', icon: '🎯', description: 'Complete your first daily game.' },
+  { id: 'streak_3', title: '3-Day Streak', icon: '🔥', description: 'Keep your streak alive for 3 days.' },
+  { id: 'streak_7', title: '7-Day Streak', icon: '⚡', description: 'Maintain a 7-day run.' },
+  { id: 'games_10', title: '10 Games', icon: '🌍', description: 'Finish 10 total games.' },
+  { id: 'games_25', title: '25 Games', icon: '🧭', description: 'Finish 25 total games.' },
+  { id: 'score_400', title: 'Score 400+', icon: '⭐', description: 'Reach 400+ points in a single game.' },
+  { id: 'score_450', title: 'Score 450+', icon: '🏅', description: 'Reach 450+ points in a single game.' },
+  { id: 'total_5000', title: '5K Club', icon: '💎', description: 'Accumulate 5,000 total points.' },
+  { id: 'total_20000', title: '20K Club', icon: '👑', description: 'Accumulate 20,000 total points.' },
+];
+
+const ACHIEVEMENT_BY_ID = new Map<string, AchievementDefinition>(
+  ACHIEVEMENT_CATALOG.map((achievement) => [achievement.id, achievement])
+);
 
 function isValidDate(date: string): boolean {
   if (!DATE_REGEX.test(date)) return false;
@@ -84,6 +125,151 @@ function isValidFeedbackRating(value: unknown): value is ClueFeedbackRating {
 
 function sanitizeMetadata(value: string | undefined): string {
   return typeof value === 'string' ? value.trim().slice(0, MAX_METADATA_LENGTH) : '';
+}
+
+function sanitizeAchievementText(value: string | undefined): string {
+  return typeof value === 'string' ? value.trim().slice(0, MAX_ACHIEVEMENT_TEXT_LENGTH) : '';
+}
+
+async function authorizeUserRequest(request: HttpRequest, expectedUserId: string): Promise<{ status: number; error: string } | null> {
+  const authHeader = request.headers.get('authorization');
+  const token = extractBearerToken(authHeader);
+  if (!token) {
+    return { status: 401, error: 'Authentication required' };
+  }
+
+  const verifiedUser = await verifyGoogleToken(token);
+  if (!verifiedUser) {
+    return { status: 401, error: 'Invalid authentication token' };
+  }
+
+  if (verifiedUser.userId !== expectedUserId) {
+    return { status: 403, error: 'Access denied' };
+  }
+
+  return null;
+}
+
+async function upsertAchievementUnlock(
+  userId: string,
+  achievementId: string,
+  title: string,
+  icon: string,
+  description: string,
+  source: 'catalog' | 'custom' = 'catalog'
+): Promise<void> {
+  const achievementsClient = getTableClient('achievements');
+  await achievementsClient.upsertEntity({
+    partitionKey: userId,
+    rowKey: achievementId,
+    title,
+    icon,
+    description,
+    source,
+    unlockedAt: new Date().toISOString(),
+  });
+}
+
+async function syncAchievementsForUser(userId: string): Promise<AchievementRecord[]> {
+  const usersClient = getTableClient('users');
+  const achievementsClient = getTableClient('achievements');
+
+  let gamesPlayed = 0;
+  let totalScore = 0;
+  let highScore = 0;
+  let streak = 0;
+
+  try {
+    const user = await usersClient.getEntity('user', userId);
+    gamesPlayed = Number(user.gamesPlayed || 0);
+    totalScore = Number(user.totalScore || 0);
+    highScore = Number(user.highScore || 0);
+    streak = Number(user.streak || 0);
+  } catch (error: any) {
+    if (error.statusCode !== 404) {
+      throw error;
+    }
+  }
+
+  const unlockableIds = new Set<string>();
+  if (gamesPlayed >= 1) unlockableIds.add('first_game');
+  if (streak >= 3) unlockableIds.add('streak_3');
+  if (streak >= 7) unlockableIds.add('streak_7');
+  if (gamesPlayed >= 10) unlockableIds.add('games_10');
+  if (gamesPlayed >= 25) unlockableIds.add('games_25');
+  if (highScore >= 400) unlockableIds.add('score_400');
+  if (highScore >= 450) unlockableIds.add('score_450');
+  if (totalScore >= 5000) unlockableIds.add('total_5000');
+  if (totalScore >= 20000) unlockableIds.add('total_20000');
+
+  for (const achievementId of unlockableIds) {
+    const achievement = ACHIEVEMENT_BY_ID.get(achievementId);
+    if (!achievement) continue;
+
+    try {
+      await achievementsClient.getEntity(userId, achievementId);
+    } catch (error: any) {
+      if (error.statusCode === 404) {
+        await upsertAchievementUnlock(
+          userId,
+          achievement.id,
+          achievement.title,
+          achievement.icon,
+          achievement.description,
+          'catalog'
+        );
+      } else {
+        throw error;
+      }
+    }
+  }
+
+  const unlocked = new Map<string, { unlockedAt?: string; title: string; icon: string; description: string; source: 'catalog' | 'custom' }>();
+  const entities = achievementsClient.listEntities({
+    queryOptions: { filter: `PartitionKey eq '${escapeODataString(userId)}'` },
+  });
+
+  for await (const entity of entities) {
+    const id = String(entity.rowKey || '');
+    unlocked.set(id, {
+      unlockedAt: entity.unlockedAt as string | undefined,
+      title: (entity.title as string) || '',
+      icon: (entity.icon as string) || '🏆',
+      description: (entity.description as string) || '',
+      source: (entity.source as 'catalog' | 'custom') || 'catalog',
+    });
+  }
+
+  const records: AchievementRecord[] = ACHIEVEMENT_CATALOG.map((achievement) => {
+    const unlockedRecord = unlocked.get(achievement.id);
+    return {
+      id: achievement.id,
+      title: achievement.title,
+      icon: achievement.icon,
+      description: achievement.description,
+      unlocked: !!unlockedRecord,
+      unlockedAt: unlockedRecord?.unlockedAt,
+      source: 'catalog',
+    };
+  });
+
+  for (const [id, value] of unlocked.entries()) {
+    if (ACHIEVEMENT_BY_ID.has(id)) {
+      continue;
+    }
+
+    records.push({
+      id,
+      title: value.title || id,
+      icon: value.icon || '🏆',
+      description: value.description || 'Custom achievement',
+      unlocked: true,
+      unlockedAt: value.unlockedAt,
+      source: value.source || 'custom',
+    });
+  }
+
+  return records;
 }
 
 // Get daily puzzle - dynamically generated from locations
@@ -930,6 +1116,203 @@ app.http('getUserStats', {
       return {
         status: 500,
         jsonBody: { error: 'Failed to fetch user stats' },
+      };
+    }
+  },
+});
+
+app.http('syncUserAchievements', {
+  methods: ['POST'],
+  authLevel: 'anonymous',
+  route: 'users/{userId}/achievements/sync',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.params.userId;
+
+    if (!isValidUserId(userId)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    const authError = await authorizeUserRequest(request, userId);
+    if (authError) {
+      return {
+        status: authError.status,
+        jsonBody: { error: authError.error },
+      };
+    }
+
+    try {
+      await initializeTables();
+      const achievements = await syncAchievementsForUser(userId);
+      return {
+        jsonBody: { userId, achievements },
+      };
+    } catch (error) {
+      context.error('Error syncing achievements:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to sync achievements' },
+      };
+    }
+  },
+});
+
+app.http('getUserAchievements', {
+  methods: ['GET'],
+  authLevel: 'anonymous',
+  route: 'users/{userId}/achievements',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.params.userId;
+
+    if (!isValidUserId(userId)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    const authError = await authorizeUserRequest(request, userId);
+    if (authError) {
+      return {
+        status: authError.status,
+        jsonBody: { error: authError.error },
+      };
+    }
+
+    try {
+      await initializeTables();
+      const achievements = await syncAchievementsForUser(userId);
+      return {
+        jsonBody: { userId, achievements },
+      };
+    } catch (error) {
+      context.error('Error fetching achievements:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to fetch achievements' },
+      };
+    }
+  },
+});
+
+app.http('addUserAchievement', {
+  methods: ['POST'],
+  authLevel: 'anonymous',
+  route: 'users/{userId}/achievements',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.params.userId;
+
+    if (!isValidUserId(userId)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    const authError = await authorizeUserRequest(request, userId);
+    if (authError) {
+      return {
+        status: authError.status,
+        jsonBody: { error: authError.error },
+      };
+    }
+
+    try {
+      await initializeTables();
+
+      const body = (await request.json()) as AchievementMutationPayload;
+      const achievementId = sanitizeMetadata(body.achievementId);
+      if (!achievementId) {
+        return {
+          status: 400,
+          jsonBody: { error: 'achievementId is required' },
+        };
+      }
+
+      const catalogAchievement = ACHIEVEMENT_BY_ID.get(achievementId);
+      const title = sanitizeAchievementText(body.title) || catalogAchievement?.title || achievementId;
+      const icon = sanitizeAchievementText(body.icon) || catalogAchievement?.icon || '🏆';
+      const description = sanitizeAchievementText(body.description)
+        || catalogAchievement?.description
+        || 'Custom achievement';
+
+      await upsertAchievementUnlock(
+        userId,
+        achievementId,
+        title,
+        icon,
+        description,
+        catalogAchievement ? 'catalog' : 'custom'
+      );
+
+      const achievements = await syncAchievementsForUser(userId);
+      return {
+        status: 201,
+        jsonBody: { userId, achievements },
+      };
+    } catch (error) {
+      context.error('Error adding achievement:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to add achievement' },
+      };
+    }
+  },
+});
+
+app.http('deleteUserAchievement', {
+  methods: ['DELETE'],
+  authLevel: 'anonymous',
+  route: 'users/{userId}/achievements/{achievementId}',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    const userId = request.params.userId;
+    const achievementId = sanitizeMetadata(request.params.achievementId);
+
+    if (!isValidUserId(userId)) {
+      return {
+        status: 400,
+        jsonBody: { error: 'Invalid userId' },
+      };
+    }
+
+    if (!achievementId) {
+      return {
+        status: 400,
+        jsonBody: { error: 'achievementId is required' },
+      };
+    }
+
+    const authError = await authorizeUserRequest(request, userId);
+    if (authError) {
+      return {
+        status: authError.status,
+        jsonBody: { error: authError.error },
+      };
+    }
+
+    try {
+      await initializeTables();
+
+      const achievementsClient = getTableClient('achievements');
+      try {
+        await achievementsClient.deleteEntity(userId, achievementId);
+      } catch (error: any) {
+        if (error.statusCode !== 404) {
+          throw error;
+        }
+      }
+
+      const achievements = await syncAchievementsForUser(userId);
+      return {
+        jsonBody: { userId, achievements },
+      };
+    } catch (error) {
+      context.error('Error deleting achievement:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to delete achievement' },
       };
     }
   },

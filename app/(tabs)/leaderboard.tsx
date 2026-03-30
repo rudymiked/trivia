@@ -1,3 +1,4 @@
+import { Brand } from '@/constants/Colors';
 import { useAuth } from '@/hooks/useAuth';
 import { fetchAllTimeLeaderboard, fetchLeaderboard } from '@/services/api';
 import { getTodayDate } from '@/services/puzzle';
@@ -94,7 +95,7 @@ export default function LeaderboardScreen() {
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#4ECDC4" />
+        <ActivityIndicator size="large" color={Brand.aqua} />
       </View>
     );
   }
@@ -199,30 +200,30 @@ export default function LeaderboardScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1A202C',
+    backgroundColor: Brand.midnight,
   },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1A202C',
+    backgroundColor: Brand.midnight,
   },
   recoveryCard: {
     width: '88%',
     padding: 18,
     borderRadius: 16,
-    backgroundColor: 'rgba(245, 101, 101, 0.12)',
+    backgroundColor: 'rgba(242, 139, 91, 0.12)',
     borderWidth: 1,
-    borderColor: 'rgba(245, 101, 101, 0.4)',
+    borderColor: 'rgba(242, 139, 91, 0.3)',
   },
   recoveryTitle: {
-    color: '#FFFFFF',
-    fontSize: 18,
+    color: Brand.white,
+    fontSize: 16,
     fontWeight: '700',
     marginBottom: 8,
   },
   recoveryBody: {
-    color: '#FEB2B2',
+    color: Brand.mist,
     fontSize: 14,
     lineHeight: 20,
     marginBottom: 14,
@@ -233,13 +234,13 @@ const styles = StyleSheet.create({
   },
   primaryRecoveryButton: {
     flex: 1,
-    backgroundColor: '#4ECDC4',
+    backgroundColor: Brand.aqua,
     paddingVertical: 12,
     borderRadius: 12,
     alignItems: 'center',
   },
   primaryRecoveryButtonText: {
-    color: '#1A202C',
+    color: Brand.midnight,
     fontSize: 14,
     fontWeight: '700',
   },
@@ -248,11 +249,11 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderColor: 'rgba(180, 199, 206, 0.3)',
     alignItems: 'center',
   },
   secondaryRecoveryButtonText: {
-    color: '#FFFFFF',
+    color: Brand.white,
     fontSize: 14,
     fontWeight: '600',
   },
@@ -263,12 +264,12 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   emptyText: {
-    color: '#FFFFFF',
+    color: Brand.white,
     fontSize: 18,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   emptySubtext: {
-    color: '#718096',
+    color: Brand.slate,
     fontSize: 14,
     marginTop: 8,
   },
@@ -276,23 +277,25 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: '#2D3748',
+    borderBottomColor: 'rgba(180, 199, 206, 0.15)',
   },
   title: {
-    color: '#FFFFFF',
-    fontSize: 24,
-    fontWeight: '700',
+    color: Brand.white,
+    fontSize: 26,
+    fontWeight: '800',
+    fontFamily: 'SpaceMono',
+    letterSpacing: 0.5,
   },
   date: {
-    color: '#718096',
-    fontSize: 14,
-    marginTop: 4,
+    color: Brand.slate,
+    fontSize: 13,
+    marginTop: 6,
   },
   tabs: {
     flexDirection: 'row',
     borderBottomWidth: 1,
-    borderBottomColor: '#2D3748',
-    backgroundColor: '#0F1419',
+    borderBottomColor: 'rgba(180, 199, 206, 0.15)',
+    backgroundColor: Brand.midnight,
   },
   tab: {
     flex: 1,
@@ -302,43 +305,49 @@ const styles = StyleSheet.create({
     borderBottomColor: 'transparent',
   },
   activeTab: {
-    borderBottomColor: '#4ECDC4',
+    borderBottomColor: Brand.aqua,
   },
   tabText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#718096',
+    fontSize: 13,
+    fontWeight: '700',
+    color: Brand.slate,
     textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   activeTabText: {
-    color: '#4ECDC4',
+    color: Brand.aqua,
   },
   tableHeader: {
     flexDirection: 'row',
     paddingHorizontal: 20,
-    paddingVertical: 12,
-    backgroundColor: '#2D3748',
+    paddingVertical: 14,
+    backgroundColor: 'rgba(87, 211, 203, 0.06)',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(87, 211, 203, 0.15)',
   },
   headerRank: {
     width: 50,
-    color: '#A0AEC0',
-    fontSize: 12,
-    fontWeight: '600',
+    color: Brand.slate,
+    fontSize: 11,
+    fontWeight: '700',
     textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   headerName: {
     flex: 1,
-    color: '#A0AEC0',
-    fontSize: 12,
-    fontWeight: '600',
+    color: Brand.slate,
+    fontSize: 11,
+    fontWeight: '700',
     textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   headerScore: {
     width: 60,
-    color: '#A0AEC0',
-    fontSize: 12,
-    fontWeight: '600',
+    color: Brand.slate,
+    fontSize: 11,
+    fontWeight: '700',
     textTransform: 'uppercase',
+    letterSpacing: 0.5,
     textAlign: 'right',
   },
   list: {
@@ -350,50 +359,52 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 16,
     borderBottomWidth: 1,
-    borderBottomColor: '#2D3748',
+    borderBottomColor: 'rgba(180, 199, 206, 0.1)',
   },
   topThreeRow: {
-    backgroundColor: 'rgba(78, 205, 196, 0.05)',
+    backgroundColor: 'rgba(242, 193, 78, 0.08)',
   },
   currentUserRow: {
-    backgroundColor: 'rgba(78, 205, 196, 0.15)',
+    backgroundColor: 'rgba(87, 211, 203, 0.12)',
   },
   rankContainer: {
     width: 50,
     alignItems: 'flex-start',
   },
   rank: {
-    color: '#718096',
+    color: Brand.slate,
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   medal: {
     fontSize: 24,
   },
   name: {
     flex: 1,
-    color: '#FFFFFF',
-    fontSize: 16,
+    color: Brand.white,
+    fontSize: 15,
+    fontWeight: '600',
   },
   currentUserName: {
-    fontWeight: '700',
-    color: '#4ECDC4',
+    fontWeight: '800',
+    color: Brand.aqua,
   },
   score: {
     width: 60,
-    color: '#4ECDC4',
+    color: Brand.gold,
     fontSize: 18,
-    fontWeight: '700',
+    fontWeight: '800',
     textAlign: 'right',
   },
   footer: {
     padding: 20,
     alignItems: 'center',
     borderTopWidth: 1,
-    borderTopColor: '#2D3748',
+    borderTopColor: 'rgba(180, 199, 206, 0.15)',
   },
   footerText: {
-    color: '#718096',
-    fontSize: 14,
+    color: Brand.slate,
+    fontSize: 13,
+    fontWeight: '500',
   },
 });

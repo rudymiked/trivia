@@ -180,6 +180,16 @@ export interface UserGameCheck {
   completedAt?: string;
 }
 
+export interface UserAchievement {
+  id: string;
+  title: string;
+  icon: string;
+  description: string;
+  unlocked: boolean;
+  unlockedAt?: string;
+  source: 'catalog' | 'custom';
+}
+
 // Get user's game history
 export async function fetchUserGames(
   userId: string,
@@ -212,6 +222,56 @@ export async function fetchUserStats(
   authToken: string
 ): Promise<ApiResponse<UserStats>> {
   return fetchApi(`/users/${encodeURIComponent(userId)}/stats`, {
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
+}
+
+export async function fetchUserAchievements(
+  userId: string,
+  authToken: string
+): Promise<ApiResponse<{ userId: string; achievements: UserAchievement[] }>> {
+  return fetchApi(`/users/${encodeURIComponent(userId)}/achievements`, {
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
+}
+
+export async function syncUserAchievements(
+  userId: string,
+  authToken: string
+): Promise<ApiResponse<{ userId: string; achievements: UserAchievement[] }>> {
+  return fetchApi(`/users/${encodeURIComponent(userId)}/achievements/sync`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+  });
+}
+
+export async function addUserAchievement(
+  userId: string,
+  authToken: string,
+  payload: { achievementId: string; title?: string; icon?: string; description?: string }
+): Promise<ApiResponse<{ userId: string; achievements: UserAchievement[] }>> {
+  return fetchApi(`/users/${encodeURIComponent(userId)}/achievements`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
+export async function deleteUserAchievement(
+  userId: string,
+  achievementId: string,
+  authToken: string
+): Promise<ApiResponse<{ userId: string; achievements: UserAchievement[] }>> {
+  return fetchApi(`/users/${encodeURIComponent(userId)}/achievements/${encodeURIComponent(achievementId)}`, {
+    method: 'DELETE',
     headers: {
       Authorization: `Bearer ${authToken}`,
     },

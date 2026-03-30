@@ -6144,50 +6144,6 @@
       "country": "Russia"
     },
     {
-      "clue": "Petra",
-      "category": "places",
-      "type": "landmark",
-      "difficulty": "easy",
-      "target": {
-        "lat": 30.3285,
-        "lng": 35.4444
-      },
-      "country": "Jordan"
-    },
-    {
-      "clue": "Burj Khalifa",
-      "category": "places",
-      "type": "landmark",
-      "difficulty": "easy",
-      "target": {
-        "lat": 25.1972,
-        "lng": 55.2744
-      },
-      "country": "United Arab Emirates"
-    },
-    {
-      "clue": "Angkor Wat",
-      "category": "places",
-      "type": "landmark",
-      "difficulty": "medium",
-      "target": {
-        "lat": 13.4125,
-        "lng": 103.867
-      },
-      "country": "Cambodia"
-    },
-    {
-      "clue": "Alhambra",
-      "category": "places",
-      "type": "landmark",
-      "difficulty": "medium",
-      "target": {
-        "lat": 37.1761,
-        "lng": -3.5881
-      },
-      "country": "Spain"
-    },
-    {
       "clue": "Moai Statues",
       "category": "places",
       "type": "landmark",
@@ -6376,27 +6332,6 @@
       "country": "Indonesia"
     },
     {
-      "clue": "Atacama Desert",
-      "category": "geography",
-      "type": "desert",
-      "difficulty": "hard",
-      "target": {
-        "lat": -24.5,
-        "lng": -69.25
-      },
-      "bounds": {
-        "nw": {
-          "lat": -18.2,
-          "lng": -70.6
-        },
-        "se": {
-          "lat": -29.2,
-          "lng": -67.2
-        }
-      },
-      "country": "Chile"
-    },
-    {
       "clue": "Patagonia",
       "category": "geography",
       "type": "region",
@@ -6416,17 +6351,6 @@
         }
       },
       "country": "Argentina"
-    },
-    {
-      "clue": "Golden Gate Bridge",
-      "category": "places",
-      "type": "landmark",
-      "difficulty": "easy",
-      "target": {
-        "lat": 37.8199,
-        "lng": -122.4783
-      },
-      "country": "United States"
     },
     {
       "clue": "Acropolis of Athens",

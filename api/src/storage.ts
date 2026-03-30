@@ -124,6 +124,126 @@ function seededRandom(seed: number): () => number {
   };
 }
 
+const DAILY_ROUND_COUNT = 5;
+const DAILY_REPEAT_LOOKBACK_DAYS = 2;
+
+function buildSeedFromDate(date: string): number {
+  const dateParts = date.split('-').map(Number);
+  return dateParts[0] * 10000 + dateParts[1] * 100 + dateParts[2];
+}
+
+function hashString(value: string): number {
+  let hash = 0;
+  for (let index = 0; index < value.length; index += 1) {
+    hash = (hash * 31 + value.charCodeAt(index)) & 0x7fffffff;
+  }
+  return hash;
+}
+
+function getOffsetDate(date: string, offsetDays: number): string {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + offsetDays);
+  return value.toISOString().split('T')[0];
+}
+
+function shuffleLocations(locations: Location[], seed: number): Location[] {
+  const random = seededRandom(seed);
+  const shuffled = [...locations];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+
+  return shuffled;
+}
+
+function selectLocationsWithVariety(locations: Location[], count: number): Location[] {
+  const selected: Location[] = [];
+  const usedCountries = new Set<string>();
+  const usedCategories = new Set<string>();
+
+  for (const loc of locations) {
+    if (selected.length >= count) break;
+
+    const countryAlreadyUsed = usedCountries.has(loc.country);
+    const categoryAlreadyUsed = usedCategories.has(loc.category);
+
+    if ((countryAlreadyUsed || categoryAlreadyUsed) && selected.length < count - 1) {
+      continue;
+    }
+
+    selected.push(loc);
+    usedCountries.add(loc.country);
+    usedCategories.add(loc.category);
+  }
+
+  if (selected.length < count) {
+    for (const loc of locations) {
+      if (selected.length >= count) break;
+      if (!selected.some((selectedLoc) => selectedLoc.id === loc.id)) {
+        selected.push(loc);
+      }
+    }
+  }
+
+  return selected;
+}
+
+function buildPuzzleRounds(locations: Location[]) {
+  const difficultyMultiplier: Record<string, number> = {
+    easy: 1,
+    medium: 1.5,
+    hard: 2,
+  };
+
+  return locations.map((loc, index) => ({
+    id: index + 1,
+    locationId: loc.id,
+    clue: loc.clue,
+    category: loc.category,
+    type: loc.type,
+    difficulty: loc.difficulty,
+    target: loc.target,
+    ...(loc.bounds && { bounds: loc.bounds }),
+    country: loc.country,
+    answer: loc.answer,
+    multiplier: difficultyMultiplier[loc.difficulty] || 1,
+  }));
+}
+
+function selectDailyLocations(
+  date: string,
+  locations: Location[],
+  historyDepth = DAILY_REPEAT_LOOKBACK_DAYS,
+  memo = new Map<string, Location[]>()
+): Location[] {
+  const memoKey = `${date}:${historyDepth}`;
+  const cached = memo.get(memoKey);
+  if (cached) {
+    return cached;
+  }
+
+  const excludedIds = new Set<string>();
+  if (historyDepth > 0) {
+    for (let dayOffset = 1; dayOffset <= historyDepth; dayOffset += 1) {
+      const previousDate = getOffsetDate(date, -dayOffset);
+      const previousSelection = selectDailyLocations(previousDate, locations, historyDepth - dayOffset, memo);
+      for (const previousLocation of previousSelection) {
+        excludedIds.add(previousLocation.id);
+      }
+    }
+  }
+
+  const preferredPool = locations.filter((location) => !excludedIds.has(location.id));
+  const candidatePool = preferredPool.length >= DAILY_ROUND_COUNT ? preferredPool : locations;
+  const shuffled = shuffleLocations(candidatePool, buildSeedFromDate(date));
+  const selection = selectLocationsWithVariety(shuffled, DAILY_ROUND_COUNT);
+
+  memo.set(memoKey, selection);
+  return selection;
+}
+
 // Generate puzzle from locations for a specific date
 export async function generatePuzzleForDate(date: string): Promise<{
   id: string;
@@ -141,58 +261,13 @@ export async function generatePuzzleForDate(date: string): Promise<{
     multiplier: number;
   }>;
 }> {
-  const locations = (await getLocations()).filter((l) => l.difficulty === 'easy');
+  const locations = await getLocations();
 
-  if (locations.length < 5) {
+  if (locations.length < DAILY_ROUND_COUNT) {
     throw new Error('Not enough locations to generate puzzle');
   }
-
-  // Create seed from date
-  const dateParts = date.split('-').map(Number);
-  const seed = dateParts[0] * 10000 + dateParts[1] * 100 + dateParts[2];
-  const random = seededRandom(seed);
-
-  // Shuffle locations
-  const shuffled = [...locations].sort(() => random() - 0.5);
-
-  // Pick 5 locations with variety
-  const selected: Location[] = [];
-  const usedCountries = new Set<string>();
-
-  for (const loc of shuffled) {
-    if (selected.length >= 5) break;
-    // Try to avoid repeating countries
-    if (usedCountries.has(loc.country) && selected.length < 4) continue;
-    selected.push(loc);
-    usedCountries.add(loc.country);
-  }
-
-  // Fill remaining if needed
-  while (selected.length < 5) {
-    const remaining = shuffled.find((l) => !selected.includes(l));
-    if (remaining) selected.push(remaining);
-    else break;
-  }
-
-  const difficultyMultiplier: Record<string, number> = {
-    easy: 1,
-    medium: 1.5,
-    hard: 2,
-  };
-
-  const rounds = selected.map((loc, index) => ({
-    id: index + 1,
-    locationId: loc.id, // Include actual location ID
-    clue: loc.clue,
-    category: loc.category,
-    type: loc.type,
-    difficulty: loc.difficulty,
-    target: loc.target,
-    ...(loc.bounds && { bounds: loc.bounds }), // Include bounds if present
-    country: loc.country,
-    answer: loc.answer,
-    multiplier: difficultyMultiplier[loc.difficulty] || 1,
-  }));
+  const selected = selectDailyLocations(date, locations);
+  const rounds = buildPuzzleRounds(selected);
 
   return { id: date, date, rounds };
 }
@@ -283,66 +358,20 @@ export async function generatePersonalizedPuzzleForDate(
     }
   }
 
-  if (locations.length < 5) {
+  if (locations.length < DAILY_ROUND_COUNT) {
     throw new Error('Not enough locations to generate puzzle');
   }
 
-  // Create seed from date (and optionally userId for variety)
-  const dateParts = date.split('-').map(Number);
-  let seed = dateParts[0] * 10000 + dateParts[1] * 100 + dateParts[2];
+  let seed = buildSeedFromDate(date);
 
   // Add userId hash to seed for personalized randomization
   if (userId) {
-    let userHash = 0;
-    for (let i = 0; i < userId.length; i++) {
-      userHash = (userHash * 31 + userId.charCodeAt(i)) & 0x7fffffff;
-    }
-    seed = (seed + userHash) & 0x7fffffff;
+    seed = (seed + hashString(userId)) & 0x7fffffff;
   }
 
-  const random = seededRandom(seed);
-
-  // Shuffle locations
-  const shuffled = [...locations].sort(() => random() - 0.5);
-
-  // Pick 5 locations with variety
-  const selected: Location[] = [];
-  const usedCountries = new Set<string>();
-
-  for (const loc of shuffled) {
-    if (selected.length >= 5) break;
-    // Try to avoid repeating countries
-    if (usedCountries.has(loc.country) && selected.length < 4) continue;
-    selected.push(loc);
-    usedCountries.add(loc.country);
-  }
-
-  // Fill remaining if needed
-  while (selected.length < 5) {
-    const remaining = shuffled.find((l) => !selected.includes(l));
-    if (remaining) selected.push(remaining);
-    else break;
-  }
-
-  const difficultyMultiplier: Record<string, number> = {
-    easy: 1,
-    medium: 1.5,
-    hard: 2,
-  };
-
-  const rounds = selected.map((loc, index) => ({
-    id: index + 1,
-    locationId: loc.id, // Include actual location ID
-    clue: loc.clue,
-    category: loc.category,
-    type: loc.type,
-    difficulty: loc.difficulty,
-    target: loc.target,
-    ...(loc.bounds && { bounds: loc.bounds }), // Include bounds if present
-    country: loc.country,
-    answer: loc.answer,
-    multiplier: difficultyMultiplier[loc.difficulty] || 1,
-  }));
+  const shuffled = shuffleLocations(locations, seed);
+  const selected = selectLocationsWithVariety(shuffled, DAILY_ROUND_COUNT);
+  const rounds = buildPuzzleRounds(selected);
 
   // Generate a unique puzzle ID for personalized puzzles
   const puzzleId = userId ? `${date}-${userId.substring(0, 8)}` : date;

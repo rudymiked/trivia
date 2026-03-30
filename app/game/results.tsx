@@ -8,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
-import { Modal, Platform, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
+import { Animated, Modal, Platform, Pressable, ScrollView, Share, StyleSheet, Text, View } from 'react-native';
 
 // Parse a YYYY-MM-DD date string as local time to avoid UTC offset shifting the day
 function parsePuzzleDate(dateStr: string): Date {
@@ -31,6 +31,9 @@ export default function ResultsScreen() {
   const [selectedFeedbackRoundIndex, setSelectedFeedbackRoundIndex] = useState<number | null>(null);
   const trackedCompletionRef = useRef(false);
   const trackedSignInPromptRef = useRef(false);
+  const [animatedScore, setAnimatedScore] = useState(0);
+  const scoreFadeAnim = useRef(new Animated.Value(0)).current;
+  const scoreScaleAnim = useRef(new Animated.Value(0.5)).current;
 
   // Check if this is a daily puzzle (date-based ID)
   const isDailyPuzzle = puzzle && /^\d{4}-\d{2}-\d{2}$/.test(puzzle.id);
@@ -40,6 +43,32 @@ export default function ResultsScreen() {
         .filter(({ round }) => round.locationId && round.category === 'questions')
     : [];
   const displayTotalScore = Number.isFinite(totalScore) ? Math.round(totalScore) : 0;
+
+  // Score count-up animation on mount
+  useEffect(() => {
+    Animated.parallel([
+      Animated.spring(scoreScaleAnim, { toValue: 1, tension: 70, friction: 8, useNativeDriver: true }),
+      Animated.timing(scoreFadeAnim, { toValue: 1, duration: 400, useNativeDriver: true }),
+    ]).start();
+
+    const target = displayTotalScore;
+    if (target === 0) return;
+    const duration = 900;
+    const steps = 40;
+    const interval = duration / steps;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = step / steps;
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setAnimatedScore(Math.round(eased * target));
+      if (step >= steps) {
+        clearInterval(timer);
+        setAnimatedScore(target);
+      }
+    }, interval);
+    return () => clearInterval(timer);
+  }, [displayTotalScore]);
   const maxPossibleScore =
     results.length > 0
       ? Math.round(
@@ -312,7 +341,14 @@ export default function ResultsScreen() {
             })}
           </Text>
 
-          <Text style={styles.totalScore}>{displayTotalScore}</Text>
+          <Animated.Text
+            style={[
+              styles.totalScore,
+              { opacity: scoreFadeAnim, transform: [{ scale: scoreScaleAnim }] },
+            ]}
+          >
+            {animatedScore}
+          </Animated.Text>
           <Text style={styles.maxScore}>out of {maxPossibleScore}</Text>
 
           {/* Emoji strip preview */}

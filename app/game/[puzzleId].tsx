@@ -15,7 +15,7 @@ import { Coordinates, RoundResult } from '@/types/game';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Alert, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Alert, Animated, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 
 type GamePhase = 'playing' | 'result' | 'complete';
 
@@ -79,6 +79,14 @@ export default function GameScreen() {
   const [walkthroughStartMs, setWalkthroughStartMs] = useState<number | null>(null);
   const [walkthroughChecked, setWalkthroughChecked] = useState(false);
   const firstGuessTrackedRef = useRef(false);
+
+  // Animation refs
+  const clueSlideAnim = useRef(new Animated.Value(120)).current;
+  const clueOpacityAnim = useRef(new Animated.Value(0)).current;
+  const resultSlideAnim = useRef(new Animated.Value(180)).current;
+  const resultOpacityAnim = useRef(new Animated.Value(0)).current;
+  const confirmPulseAnim = useRef(new Animated.Value(0)).current;
+  const confirmPulseLoop = useRef<Animated.CompositeAnimation | null>(null);
 
   // Check if puzzleId looks like a date (YYYY-MM-DD)
   const isDateBasedPuzzle = /^\d{4}-\d{2}-\d{2}$/.test(puzzleId || '');
@@ -261,6 +269,50 @@ export default function GameScreen() {
     serverCompleted,
     walkthroughChecked,
   ]);
+
+  // Animate clue card in whenever phase becomes 'playing'
+  useEffect(() => {
+    if (phase === 'playing') {
+      clueSlideAnim.setValue(120);
+      clueOpacityAnim.setValue(0);
+      Animated.parallel([
+        Animated.spring(clueSlideAnim, { toValue: 0, tension: 80, friction: 10, useNativeDriver: true }),
+        Animated.timing(clueOpacityAnim, { toValue: 1, duration: 220, useNativeDriver: true }),
+      ]).start();
+    }
+  }, [phase, currentRound]);
+
+  // Animate result panel in whenever phase becomes 'result'
+  useEffect(() => {
+    if (phase === 'result') {
+      resultSlideAnim.setValue(180);
+      resultOpacityAnim.setValue(0);
+      Animated.parallel([
+        Animated.spring(resultSlideAnim, { toValue: 0, tension: 70, friction: 10, useNativeDriver: true }),
+        Animated.timing(resultOpacityAnim, { toValue: 1, duration: 200, useNativeDriver: true }),
+      ]).start();
+    }
+  }, [phase]);
+
+  // Pulse the confirm button when a guess is first placed
+  useEffect(() => {
+    if (currentGuess) {
+      confirmPulseAnim.setValue(0);
+      confirmPulseLoop.current = Animated.loop(
+        Animated.sequence([
+          Animated.timing(confirmPulseAnim, { toValue: 1, duration: 700, useNativeDriver: true }),
+          Animated.timing(confirmPulseAnim, { toValue: 0, duration: 700, useNativeDriver: true }),
+        ])
+      );
+      confirmPulseLoop.current.start();
+    } else {
+      confirmPulseLoop.current?.stop();
+      confirmPulseAnim.setValue(0);
+    }
+    return () => {
+      confirmPulseLoop.current?.stop();
+    };
+  }, [!!currentGuess]);
 
   const retryOnlinePuzzle = useCallback(async () => {
     if (!puzzleId || !isDateBasedPuzzle) return;
@@ -600,9 +652,10 @@ export default function GameScreen() {
 
       {/* Clue card */}
       {phase === 'playing' && currentRoundData && (
-        <View style={[
+        <Animated.View style={[
           styles.clueContainer,
           walkthroughActive && !highlightClue && !highlightConfirm && styles.dimmedSurface,
+          { transform: [{ translateY: clueSlideAnim }], opacity: clueOpacityAnim },
         ]}>
           <View style={[
             styles.clueCardFrame,
@@ -617,15 +670,26 @@ export default function GameScreen() {
           </View>
 
           {currentGuess && (
-            <Pressable
-              style={[
-                styles.confirmButton,
-                highlightConfirm && styles.highlightSurface,
-              ]}
-              onPress={handleConfirmGuess}
-            >
-              <Text style={styles.confirmButtonText}>Confirm Guess</Text>
-            </Pressable>
+            <Animated.View style={{
+              marginHorizontal: 16,
+              marginBottom: 32,
+              borderRadius: 12,
+              shadowColor: '#4ECDC4',
+              shadowOffset: { width: 0, height: 0 },
+              shadowRadius: 14,
+              shadowOpacity: confirmPulseAnim,
+              elevation: 8,
+            }}>
+              <Pressable
+                style={[
+                  styles.confirmButton,
+                  highlightConfirm && styles.highlightSurface,
+                ]}
+                onPress={handleConfirmGuess}
+              >
+                <Text style={styles.confirmButtonText}>Confirm Guess</Text>
+              </Pressable>
+            </Animated.View>
           )}
 
           {highlightConfirm && !currentGuess && (
@@ -635,12 +699,15 @@ export default function GameScreen() {
               </Text>
             </View>
           )}
-        </View>
+        </Animated.View>
       )}
 
       {/* Score display */}
       {phase === 'result' && currentResult && currentRoundData && (
-        <View style={styles.resultContainer}>
+        <Animated.View style={[
+          styles.resultContainer,
+          { transform: [{ translateY: resultSlideAnim }], opacity: resultOpacityAnim },
+        ]}>
           {currentRoundData.category === 'questions' && currentRoundData.answer && (
             <View style={styles.answerReveal}>
               <Text style={styles.answerLabel}>The answer was:</Text>
@@ -654,7 +721,7 @@ export default function GameScreen() {
               {isComplete ? 'See Results' : 'Next Round'}
             </Text>
           </Pressable>
-        </View>
+        </Animated.View>
       )}
     </View>
   );
@@ -875,8 +942,6 @@ const styles = StyleSheet.create({
   },
   confirmButton: {
     backgroundColor: '#4ECDC4',
-    marginHorizontal: 16,
-    marginBottom: 32,
     padding: 16,
     borderRadius: 12,
     alignItems: 'center',

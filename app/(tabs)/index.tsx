@@ -5,7 +5,7 @@ import { getTimeUntilNextPuzzle, getTodayDate, hasPlayedToday } from '@/services
 import { getUserProgress, type UserProgress } from '@/services/storage';
 import { trackTelemetryEvent } from '@/services/telemetry';
 import { Ionicons } from '@expo/vector-icons';
-import { Href, useFocusEffect, useRouter } from 'expo-router';
+import { Href, Link, useFocusEffect, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -236,6 +236,19 @@ export default function HomeScreen() {
           </Text>
           {!user && renderGuestLoginCta()}
         </View>
+      </View>
+
+      <View style={styles.homeLegalContainer}>
+        <View style={styles.homeLegalLinksRow}>
+          <Link href="/privacy-policy" asChild>
+            <Text style={styles.homeLegalLink}>Privacy Policy</Text>
+          </Link>
+          <Text style={styles.homeLegalDivider}>•</Text>
+          <Link href="/terms" asChild>
+            <Text style={styles.homeLegalLink}>Terms of Use</Text>
+          </Link>
+        </View>
+        <Text style={styles.homeLegalMeta}>© {new Date().getFullYear()} PinPoint</Text>
       </View>
     </ScrollView>
   );
@@ -545,6 +558,32 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: 1120,
     gap: 18,
+  },
+  homeLegalContainer: {
+    width: '100%',
+    maxWidth: 1120,
+    alignItems: 'center',
+    paddingTop: 6,
+    paddingBottom: 10,
+    gap: 6,
+  },
+  homeLegalLinksRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  homeLegalLink: {
+    color: Brand.slate,
+    fontSize: 12,
+    textDecorationLine: 'underline',
+  },
+  homeLegalDivider: {
+    color: Brand.slate,
+    fontSize: 12,
+  },
+  homeLegalMeta: {
+    color: Brand.slate,
+    fontSize: 11,
   },
   instructionsContainer: {
     backgroundColor: '#0A2131',

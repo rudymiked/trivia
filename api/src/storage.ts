@@ -158,13 +158,28 @@ function shuffleLocations(locations: Location[], seed: number): Location[] {
   return shuffled;
 }
 
+function normalizePromptToken(value?: string): string {
+  return (value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function buildPromptKey(location: Location): string {
+  // Use clue text as the uniqueness guard to prevent repeated prompt wording in one puzzle.
+  return normalizePromptToken(location.clue);
+}
+
 function selectLocationsWithVariety(locations: Location[], count: number): Location[] {
   const selected: Location[] = [];
   const usedCountries = new Set<string>();
   const usedCategories = new Set<string>();
+  const usedPromptKeys = new Set<string>();
 
   for (const loc of locations) {
     if (selected.length >= count) break;
+
+    const promptKey = buildPromptKey(loc);
+    if (usedPromptKeys.has(promptKey)) {
+      continue;
+    }
 
     const countryAlreadyUsed = usedCountries.has(loc.country);
     const categoryAlreadyUsed = usedCategories.has(loc.category);
@@ -176,13 +191,19 @@ function selectLocationsWithVariety(locations: Location[], count: number): Locat
     selected.push(loc);
     usedCountries.add(loc.country);
     usedCategories.add(loc.category);
+    usedPromptKeys.add(promptKey);
   }
 
   if (selected.length < count) {
     for (const loc of locations) {
       if (selected.length >= count) break;
-      if (!selected.some((selectedLoc) => selectedLoc.id === loc.id)) {
+      const promptKey = buildPromptKey(loc);
+      if (
+        !selected.some((selectedLoc) => selectedLoc.id === loc.id) &&
+        !usedPromptKeys.has(promptKey)
+      ) {
         selected.push(loc);
+        usedPromptKeys.add(promptKey);
       }
     }
   }

@@ -63,6 +63,38 @@ function shuffleArray<T>(array: T[], random: () => number): T[] {
   return shuffled;
 }
 
+function normalizePromptToken(value?: string): string {
+  return (value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function buildPromptKey(location: {
+  clue?: string;
+  country?: string;
+  answer?: string;
+}): string {
+  return normalizePromptToken(location.clue);
+}
+
+function selectUniquePrompts<T extends { clue?: string; country?: string; answer?: string }>(
+  locations: T[],
+  count: number
+): T[] {
+  const selected: T[] = [];
+  const usedKeys = new Set<string>();
+
+  for (const location of locations) {
+    if (selected.length >= count) break;
+
+    const promptKey = buildPromptKey(location);
+    if (usedKeys.has(promptKey)) continue;
+
+    selected.push(location);
+    usedKeys.add(promptKey);
+  }
+
+  return selected;
+}
+
 // Generate puzzle locally from bundled data (fallback)
 function generateLocalPuzzle(date: string = getTodayDate()): Puzzle {
   const seed = dateToSeed(date);
@@ -72,8 +104,12 @@ function generateLocalPuzzle(date: string = getTodayDate()): Puzzle {
   const locations = allLocations.filter((l) => l.difficulty === 'easy');
   const shuffled = shuffleArray(locations, random);
 
-  // Select 5 locations for today's puzzle
-  const selectedLocations = shuffled.slice(0, 5);
+  // Select 5 unique prompts for today's puzzle
+  const selectedLocations = selectUniquePrompts(shuffled, 5);
+
+  if (selectedLocations.length < 5) {
+    throw new Error('Not enough unique locations to generate puzzle');
+  }
 
   const difficultyMultiplier: Record<string, number> = {
     easy: 1,
@@ -173,7 +209,11 @@ export function generatePuzzleByCategory(
   }
 
   const shuffled = shuffleArray(filteredLocations, random);
-  const selectedLocations = shuffled.slice(0, 5);
+  const selectedLocations = selectUniquePrompts(shuffled, 5);
+
+  if (selectedLocations.length < 5) {
+    throw new Error('Not enough unique locations for selected mode and difficulty');
+  }
 
   const difficultyMultiplier: Record<string, number> = {
     easy: 1,

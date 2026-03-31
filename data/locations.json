@@ -13246,6 +13246,2826 @@
       },
       "country": "Bulgaria",
       "answer": "Rila Monastery"
+    },
+    {
+      "clue": "Tower of London",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5055,
+        "lng": -0.0754
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Arc de Triomphe",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 48.8738,
+        "lng": 2.295
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Empire State Building",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.7484,
+        "lng": -73.9857
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Buckingham Palace",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5014,
+        "lng": -0.1419
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Chrysler Building",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.7518,
+        "lng": -73.9755
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Washington Monument",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 38.8895,
+        "lng": -77.0369
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "White House",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 38.8975,
+        "lng": -77.0369
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Venice",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.4408,
+        "lng": 12.3155
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Barcelona",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.3851,
+        "lng": 2.1734
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Sagrada Familia is located here",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.4036,
+        "lng": 2.1744
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Prague",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 50.0755,
+        "lng": 14.4378
+      },
+      "country": "Czech Republic"
+    },
+    {
+      "clue": "Vienna",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
+      "country": "Austria"
+    },
+    {
+      "clue": "Budapest",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 47.4979,
+        "lng": 19.0402
+      },
+      "country": "Hungary"
+    },
+    {
+      "clue": "Madrid",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.4168,
+        "lng": -3.7038
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Lisbon",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 38.7223,
+        "lng": -9.1393
+      },
+      "country": "Portugal"
+    },
+    {
+      "clue": "Rome",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.9028,
+        "lng": 12.4964
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Dublin",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 53.3498,
+        "lng": -6.2603
+      },
+      "country": "Ireland"
+    },
+    {
+      "clue": "Copenhagen",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 55.6761,
+        "lng": 12.5683
+      },
+      "country": "Denmark"
+    },
+    {
+      "clue": "Stockholm",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 59.3293,
+        "lng": 18.0686
+      },
+      "country": "Sweden"
+    },
+    {
+      "clue": "Where is Melbourne in Australia?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -37.8136,
+        "lng": 144.9631
+      },
+      "country": "Australia",
+      "answer": "Melbourne"
+    },
+    {
+      "clue": "Where is Bangkok in Thailand?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 13.7563,
+        "lng": 100.5018
+      },
+      "country": "Thailand",
+      "answer": "Bangkok"
+    },
+    {
+      "clue": "Where is Cairo in Egypt?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
+      "country": "Egypt",
+      "answer": "Cairo"
+    },
+    {
+      "clue": "Where is Dubai in United Arab Emirates?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 25.2048,
+        "lng": 55.2708
+      },
+      "country": "United Arab Emirates",
+      "answer": "Dubai"
+    },
+    {
+      "clue": "Where is Toronto in Canada?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.6532,
+        "lng": -79.3832
+      },
+      "country": "Canada",
+      "answer": "Toronto"
+    },
+    {
+      "clue": "Where is Venice in Italy?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.4408,
+        "lng": 12.3155
+      },
+      "country": "Italy",
+      "answer": "Venice"
+    },
+    {
+      "clue": "Where is Venice (City of Canals) in Italy?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.4408,
+        "lng": 12.3155
+      },
+      "country": "Italy",
+      "answer": "Venice"
+    },
+    {
+      "clue": "Where is Istanbul in Turkey?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.0082,
+        "lng": 28.978
+      },
+      "country": "Turkey",
+      "answer": "Istanbul"
+    },
+    {
+      "clue": "Where is Tokyo in Japan?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 35.6762,
+        "lng": 139.6503
+      },
+      "country": "Japan",
+      "answer": "Tokyo"
+    },
+    {
+      "clue": "Where is Paris in France?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "country": "France",
+      "answer": "Paris"
+    },
+    {
+      "clue": "Where is Rome in Italy?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.9028,
+        "lng": 12.4964
+      },
+      "country": "Italy",
+      "answer": "Rome"
+    },
+    {
+      "clue": "Where is Sydney in Australia?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -33.8688,
+        "lng": 151.209
+      },
+      "country": "Australia",
+      "answer": "Sydney"
+    },
+    {
+      "clue": "Where is Cairo (The Great Pyramids) in Egypt?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 30.0444,
+        "lng": 31.2357
+      },
+      "country": "Egypt",
+      "answer": "Cairo"
+    },
+    {
+      "clue": "Rocky Mountains",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "easy",
+      "target": {
+        "lat": 53.1163,
+        "lng": -117.2723
+      },
+      "country": "Canada"
+    },
+    {
+      "clue": "Alps",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "easy",
+      "target": {
+        "lat": 45.5,
+        "lng": 10.5
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Appalachian Mountains",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.5,
+        "lng": -82.5
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Atlantic Ocean",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "easy",
+      "target": {
+        "lat": 25,
+        "lng": -30
+      },
+      "country": "Atlantic Ocean"
+    },
+    {
+      "clue": "Indian Ocean",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "easy",
+      "target": {
+        "lat": -20,
+        "lng": 70
+      },
+      "country": "Indian Ocean"
+    },
+    {
+      "clue": "Arctic Ocean",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "easy",
+      "target": {
+        "lat": 75,
+        "lng": 0
+      },
+      "country": "Arctic Ocean"
+    },
+    {
+      "clue": "Yellowstone",
+      "category": "geography",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 44.4279,
+        "lng": -110.8298
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Yosemite Valley",
+      "category": "geography",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 37.7694,
+        "lng": -119.5631
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Lake Michigan",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "easy",
+      "target": {
+        "lat": 44,
+        "lng": -87
+      },
+      "bounds": {
+        "nw": {
+          "lat": 48.3,
+          "lng": -88
+        },
+        "se": {
+          "lat": 41.7,
+          "lng": -84.8
+        }
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Lake Ontario",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "easy",
+      "target": {
+        "lat": 43.8,
+        "lng": -79
+      },
+      "bounds": {
+        "nw": {
+          "lat": 43.95,
+          "lng": -79.8
+        },
+        "se": {
+          "lat": 43.65,
+          "lng": -78.2
+        }
+      },
+      "country": "Canada"
+    },
+    {
+      "clue": "Crater Lake",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "easy",
+      "target": {
+        "lat": 42.9453,
+        "lng": -122.1102
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Thames River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "bounds": {
+        "nw": {
+          "lat": 51.6,
+          "lng": -0.5
+        },
+        "se": {
+          "lat": 51.4,
+          "lng": 0.1
+        }
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Delaware River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.226,
+        "lng": -74.7597
+      },
+      "bounds": {
+        "nw": {
+          "lat": 41.5,
+          "lng": -76
+        },
+        "se": {
+          "lat": 38.8,
+          "lng": -73.5
+        }
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Thames",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "bounds": {
+        "nw": {
+          "lat": 51.6,
+          "lng": -0.5
+        },
+        "se": {
+          "lat": 51.4,
+          "lng": 0.1
+        }
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Rhine River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.9664,
+        "lng": 6.1537
+      },
+      "bounds": {
+        "nw": {
+          "lat": 52.5,
+          "lng": 5
+        },
+        "se": {
+          "lat": 47,
+          "lng": 8.5
+        }
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Hudson River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.7614,
+        "lng": -73.9776
+      },
+      "bounds": {
+        "nw": {
+          "lat": 43.5,
+          "lng": -74.5
+        },
+        "se": {
+          "lat": 40.6,
+          "lng": -73.5
+        }
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Thames River (England)",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "easy",
+      "target": {
+        "lat": 51.5074,
+        "lng": -0.1278
+      },
+      "bounds": {
+        "nw": {
+          "lat": 51.6,
+          "lng": -0.5
+        },
+        "se": {
+          "lat": 51.4,
+          "lng": 0.1
+        }
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Statue of Liberty is on this island in New York",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "easy",
+      "target": {
+        "lat": 40.6892,
+        "lng": -74.0445
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Porto",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 41.1579,
+        "lng": -8.6291
+      },
+      "country": "Portugal"
+    },
+    {
+      "clue": "Brussels",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 50.8503,
+        "lng": 4.3517
+      },
+      "country": "Belgium"
+    },
+    {
+      "clue": "Amsterdam",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 52.3676,
+        "lng": 4.9041
+      },
+      "country": "Netherlands"
+    },
+    {
+      "clue": "Zurich",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 47.3769,
+        "lng": 8.5472
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Geneva",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 46.2044,
+        "lng": 6.1432
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Krakow",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 50.0647,
+        "lng": 19.945
+      },
+      "country": "Poland"
+    },
+    {
+      "clue": "Warsaw",
+      "category": "places",
+      "type": "city",
+      "difficulty": "easy",
+      "target": {
+        "lat": 52.2297,
+        "lng": 21.0122
+      },
+      "country": "Poland"
+    },
+    {
+      "clue": "Where is Rio de Janeiro in Brazil?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": -22.9068,
+        "lng": -43.1729
+      },
+      "country": "Brazil",
+      "answer": "Rio de Janeiro"
+    },
+    {
+      "clue": "Where is Moscow in Russia?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 55.7558,
+        "lng": 37.6173
+      },
+      "country": "Russia",
+      "answer": "Moscow"
+    },
+    {
+      "clue": "Where is Bangkok (Thailand's capital) in Thailand?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "easy",
+      "target": {
+        "lat": 13.7563,
+        "lng": 100.5018
+      },
+      "country": "Thailand",
+      "answer": "Bangkok"
+    },
+    {
+      "clue": "Kailua Beach",
+      "category": "geography",
+      "type": "beach",
+      "difficulty": "easy",
+      "target": {
+        "lat": 21.3099,
+        "lng": -157.7381
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Copacabana Beach",
+      "category": "geography",
+      "type": "beach",
+      "difficulty": "easy",
+      "target": {
+        "lat": -22.9868,
+        "lng": -43.1825
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Plitvice Lakes",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 46.8118,
+        "lng": 15.582
+      },
+      "country": "Croatia"
+    },
+    {
+      "clue": "Dubrovnik Old Town",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 42.6418,
+        "lng": 18.1084
+      },
+      "country": "Croatia"
+    },
+    {
+      "clue": "Meteora",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 39.3483,
+        "lng": 21.6295
+      },
+      "country": "Greece"
+    },
+    {
+      "clue": "Rila Monastery",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 42.1339,
+        "lng": 23.3405
+      },
+      "country": "Bulgaria"
+    },
+    {
+      "clue": "Hallstatt",
+      "category": "places",
+      "type": "city",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.5339,
+        "lng": 13.6496
+      },
+      "country": "Austria"
+    },
+    {
+      "clue": "Interlaken",
+      "category": "places",
+      "type": "city",
+      "difficulty": "medium",
+      "target": {
+        "lat": 46.6863,
+        "lng": 8.6389
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Bryce Canyon",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.5765,
+        "lng": -112.1871
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Zion Canyon",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 37.2982,
+        "lng": -112.7837
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Space Needle",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.6205,
+        "lng": -122.3493
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Hollywood Sign",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 34.1344,
+        "lng": -118.3223
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Griffith Observatory",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 34.1188,
+        "lng": -118.3037
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Statue of Christ the Redeemer",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Christ the Redeemer",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -22.9519,
+        "lng": -43.2105
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Incan ruins",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
+      "country": "Peru"
+    },
+    {
+      "clue": "Forbidden City",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 39.9167,
+        "lng": 116.3972
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Great Wall checkpoint",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 40.4319,
+        "lng": 116.5704
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Temple of Heaven",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 39.8814,
+        "lng": 116.4074
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Bagan Temple Complex",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": 21.1717,
+        "lng": 94.8589
+      },
+      "country": "Myanmar"
+    },
+    {
+      "clue": "Borobudur",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "medium",
+      "target": {
+        "lat": -7.6079,
+        "lng": 110.2038
+      },
+      "country": "Indonesia"
+    },
+    {
+      "clue": "Where is Barcelona (Park Güell) in Spain?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 41.3851,
+        "lng": 2.1734
+      },
+      "country": "Spain",
+      "answer": "Barcelona"
+    },
+    {
+      "clue": "Find Venice (Grand Canal) in Italy.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 45.4408,
+        "lng": 12.3155
+      },
+      "country": "Italy",
+      "answer": "Venice"
+    },
+    {
+      "clue": "Where is Prague (Charles Bridge) in Czech Republic?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 50.0755,
+        "lng": 14.4378
+      },
+      "country": "Czech Republic",
+      "answer": "Prague"
+    },
+    {
+      "clue": "Find Budapest (Thermal Baths) in Hungary.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.4979,
+        "lng": 19.0402
+      },
+      "country": "Hungary",
+      "answer": "Budapest"
+    },
+    {
+      "clue": "Where is Vienna (St. Stephen's Cathedral) in Austria?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
+      "country": "Austria",
+      "answer": "Vienna"
+    },
+    {
+      "clue": "Find Amsterdam (Anne Frank House) in Netherlands.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 52.3752,
+        "lng": 4.884
+      },
+      "country": "Netherlands",
+      "answer": "Amsterdam"
+    },
+    {
+      "clue": "Where is Lisbon (Cristo Rei) in Portugal?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 38.7223,
+        "lng": -9.1393
+      },
+      "country": "Portugal",
+      "answer": "Lisbon"
+    },
+    {
+      "clue": "Find Barcelona in Spain.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 41.3851,
+        "lng": 2.1734
+      },
+      "country": "Spain",
+      "answer": "Barcelona"
+    },
+    {
+      "clue": "Where is Madrid (Royal Palace) in Spain?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 40.4168,
+        "lng": -3.7038
+      },
+      "country": "Spain",
+      "answer": "Madrid"
+    },
+    {
+      "clue": "Find Stockholm (Vasa Museum) in Sweden.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 59.3293,
+        "lng": 18.0686
+      },
+      "country": "Sweden",
+      "answer": "Stockholm"
+    },
+    {
+      "clue": "Where is Copenhagen (Tivoli Gardens) in Denmark?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 55.6761,
+        "lng": 12.5683
+      },
+      "country": "Denmark",
+      "answer": "Copenhagen"
+    },
+    {
+      "clue": "Find Dublin (Guinness Storehouse) in Ireland.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 53.3498,
+        "lng": -6.2603
+      },
+      "country": "Ireland",
+      "answer": "Dublin"
+    },
+    {
+      "clue": "Where is Edinburgh in Scotland?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 55.9533,
+        "lng": -3.1883
+      },
+      "country": "United Kingdom",
+      "answer": "Edinburgh"
+    },
+    {
+      "clue": "Find Bangkok (Grand Palace) in Thailand.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 13.7563,
+        "lng": 100.5018
+      },
+      "country": "Thailand",
+      "answer": "Bangkok"
+    },
+    {
+      "clue": "Where is Singapore (Marina Bay Sands) in Singapore?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 1.2855,
+        "lng": 103.8565
+      },
+      "country": "Singapore",
+      "answer": "Singapore"
+    },
+    {
+      "clue": "Find Hong Kong (Victoria Peak) in China.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 22.3193,
+        "lng": 114.1694
+      },
+      "country": "China",
+      "answer": "Hong Kong"
+    },
+    {
+      "clue": "Where is Auckland (Sky Tower) in New Zealand?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": -37.0082,
+        "lng": 174.7849
+      },
+      "country": "New Zealand",
+      "answer": "Auckland"
+    },
+    {
+      "clue": "Find Santiago (Andes Mountains) in Chile.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": -33.4489,
+        "lng": -70.6693
+      },
+      "country": "Chile",
+      "answer": "Santiago"
+    },
+    {
+      "clue": "Where is Buenos Aires (La Boca) in Argentina?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": -34.6037,
+        "lng": -58.3816
+      },
+      "country": "Argentina",
+      "answer": "Buenos Aires"
+    },
+    {
+      "clue": "Find Mexico City (Zócalo) in Mexico.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 19.4326,
+        "lng": -99.1332
+      },
+      "country": "Mexico",
+      "answer": "Mexico City"
+    },
+    {
+      "clue": "Where is Vancouver (Stanley Park) in Canada?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 49.2827,
+        "lng": -123.1207
+      },
+      "country": "Canada",
+      "answer": "Vancouver"
+    },
+    {
+      "clue": "Find Los Angeles (Hollywood) in United States.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 34.0522,
+        "lng": -118.2437
+      },
+      "country": "United States",
+      "answer": "Los Angeles"
+    },
+    {
+      "clue": "Where is Las Vegas (The Strip) in United States?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 36.1699,
+        "lng": -115.1398
+      },
+      "country": "United States",
+      "answer": "Las Vegas"
+    },
+    {
+      "clue": "Find New Orleans (French Quarter) in United States.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 29.9511,
+        "lng": -90.2623
+      },
+      "country": "United States",
+      "answer": "New Orleans"
+    },
+    {
+      "clue": "Where is Denver (Rocky Mountains) in United States?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "medium",
+      "target": {
+        "lat": 39.7392,
+        "lng": -104.9903
+      },
+      "country": "United States",
+      "answer": "Denver"
+    },
+    {
+      "clue": "Ural Mountains",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": {
+        "lat": 61,
+        "lng": 60
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Caucasus Mountains",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": {
+        "lat": 43.5,
+        "lng": 44.5
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Himalayas",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": {
+        "lat": 27.5,
+        "lng": 86.5
+      },
+      "country": "Nepal"
+    },
+    {
+      "clue": "Andes Mountains",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": {
+        "lat": -23.5,
+        "lng": -65.5
+      },
+      "country": "Argentina"
+    },
+    {
+      "clue": "Pyrenees",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "medium",
+      "target": {
+        "lat": 42.8,
+        "lng": 0.5
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Lake Constance",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.6,
+        "lng": 9.2
+      },
+      "bounds": {
+        "nw": {
+          "lat": 47.8,
+          "lng": 8.7
+        },
+        "se": {
+          "lat": 47.3,
+          "lng": 9.8
+        }
+      },
+      "country": "Germany"
+    },
+    {
+      "clue": "Lake Como",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "medium",
+      "target": {
+        "lat": 46.0095,
+        "lng": 9.1449
+      },
+      "bounds": {
+        "nw": {
+          "lat": 46.3,
+          "lng": 9
+        },
+        "se": {
+          "lat": 45.8,
+          "lng": 9.4
+        }
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Lake Zurrich",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "medium",
+      "target": {
+        "lat": 47.2,
+        "lng": 8.6
+      },
+      "bounds": {
+        "nw": {
+          "lat": 47.5,
+          "lng": 8.4
+        },
+        "se": {
+          "lat": 46.9,
+          "lng": 8.8
+        }
+      },
+      "country": "Switzerland"
+    },
+    {
+      "clue": "Loch Ness",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "medium",
+      "target": {
+        "lat": 57.3,
+        "lng": -4.4
+      },
+      "bounds": {
+        "nw": {
+          "lat": 57.5,
+          "lng": -4.8
+        },
+        "se": {
+          "lat": 57.15,
+          "lng": -4
+        }
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Seine River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "bounds": {
+        "nw": {
+          "lat": 49,
+          "lng": 1.5
+        },
+        "se": {
+          "lat": 48.5,
+          "lng": 3
+        }
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Tigris River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": {
+        "lat": 33.5,
+        "lng": 43.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": 37,
+          "lng": 42
+        },
+        "se": {
+          "lat": 30,
+          "lng": 49
+        }
+      },
+      "country": "Iraq"
+    },
+    {
+      "clue": "Euphrates River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": {
+        "lat": 33.3,
+        "lng": 44.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": 37.5,
+          "lng": 39.5
+        },
+        "se": {
+          "lat": 29,
+          "lng": 48
+        }
+      },
+      "country": "Iraq"
+    },
+    {
+      "clue": "Volga River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": {
+        "lat": 52,
+        "lng": 38
+      },
+      "bounds": {
+        "nw": {
+          "lat": 57,
+          "lng": 35
+        },
+        "se": {
+          "lat": 45,
+          "lng": 48
+        }
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Ganges River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": {
+        "lat": 25.3,
+        "lng": 87
+      },
+      "bounds": {
+        "nw": {
+          "lat": 30,
+          "lng": 78
+        },
+        "se": {
+          "lat": 21,
+          "lng": 90
+        }
+      },
+      "country": "India"
+    },
+    {
+      "clue": "Mekong Delta",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "medium",
+      "target": {
+        "lat": 9.5,
+        "lng": 105.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": 12,
+          "lng": 104
+        },
+        "se": {
+          "lat": 8,
+          "lng": 108
+        }
+      },
+      "country": "Vietnam"
+    },
+    {
+      "clue": "Kalahari Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "medium",
+      "target": {
+        "lat": -22.5,
+        "lng": 21.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": -17,
+          "lng": 18
+        },
+        "se": {
+          "lat": -28,
+          "lng": 26
+        }
+      },
+      "country": "Botswana"
+    },
+    {
+      "clue": "Great Basin Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "medium",
+      "target": {
+        "lat": 39,
+        "lng": -114
+      },
+      "bounds": {
+        "nw": {
+          "lat": 43,
+          "lng": -120
+        },
+        "se": {
+          "lat": 35,
+          "lng": -108
+        }
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Thar Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "medium",
+      "target": {
+        "lat": 28,
+        "lng": 72
+      },
+      "bounds": {
+        "nw": {
+          "lat": 32,
+          "lng": 68
+        },
+        "se": {
+          "lat": 26,
+          "lng": 76
+        }
+      },
+      "country": "India"
+    },
+    {
+      "clue": "Java",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "medium",
+      "target": {
+        "lat": -7.5489,
+        "lng": 110.3592
+      },
+      "bounds": {
+        "nw": {
+          "lat": -5.8,
+          "lng": 105
+        },
+        "se": {
+          "lat": -8.8,
+          "lng": 115
+        }
+      },
+      "country": "Indonesia"
+    },
+    {
+      "clue": "Sumatra",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "medium",
+      "target": {
+        "lat": 0.5,
+        "lng": 101.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": 5.8,
+          "lng": 95
+        },
+        "se": {
+          "lat": -5,
+          "lng": 106
+        }
+      },
+      "country": "Indonesia"
+    },
+    {
+      "clue": "Borneo",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "medium",
+      "target": {
+        "lat": 0,
+        "lng": 112
+      },
+      "bounds": {
+        "nw": {
+          "lat": 5,
+          "lng": 108
+        },
+        "se": {
+          "lat": -5,
+          "lng": 119
+        }
+      },
+      "country": "Indonesia"
+    },
+    {
+      "clue": "New Zealand",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "medium",
+      "target": {
+        "lat": -41,
+        "lng": 172
+      },
+      "bounds": {
+        "nw": {
+          "lat": -34,
+          "lng": 166
+        },
+        "se": {
+          "lat": -47,
+          "lng": 179
+        }
+      },
+      "country": "New Zealand"
+    },
+    {
+      "clue": "Iceland",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "medium",
+      "target": {
+        "lat": 64.9631,
+        "lng": -19.0208
+      },
+      "bounds": {
+        "nw": {
+          "lat": 66.5,
+          "lng": -24
+        },
+        "se": {
+          "lat": 63.4,
+          "lng": -13
+        }
+      },
+      "country": "Iceland"
+    },
+    {
+      "clue": "Caribbean Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": {
+        "lat": 15,
+        "lng": -75
+      },
+      "country": "Caribbean"
+    },
+    {
+      "clue": "Mediterranean Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": {
+        "lat": 35,
+        "lng": 15
+      },
+      "country": "Mediterranean"
+    },
+    {
+      "clue": "North Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": {
+        "lat": 56,
+        "lng": 3
+      },
+      "country": "Europe"
+    },
+    {
+      "clue": "Baltic Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": {
+        "lat": 59,
+        "lng": 20
+      },
+      "country": "Europe"
+    },
+    {
+      "clue": "Dead Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "medium",
+      "target": {
+        "lat": 31.5,
+        "lng": 35.5
+      },
+      "country": "Israel"
+    },
+    {
+      "clue": "Cahokia Mounds",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 38.6562,
+        "lng": -90.0656
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Carnac Stones",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 47.5911,
+        "lng": -3.3604
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Skellig Michael",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.7763,
+        "lng": -10.5395
+      },
+      "country": "Ireland"
+    },
+    {
+      "clue": "Ronda",
+      "category": "places",
+      "type": "city",
+      "difficulty": "hard",
+      "target": {
+        "lat": 36.7465,
+        "lng": -5.3122
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Civita di Bagnoregio",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.4114,
+        "lng": 12.1139
+      },
+      "country": "Italy"
+    },
+    {
+      "clue": "Cappadocia",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 38.7469,
+        "lng": 34.5506
+      },
+      "country": "Turkey"
+    },
+    {
+      "clue": "Zhangjiajie",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 29.3226,
+        "lng": 110.4899
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Socotra Island",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 12.5243,
+        "lng": 53.9228
+      },
+      "country": "Yemen"
+    },
+    {
+      "clue": "Faroe Islands",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 61.8926,
+        "lng": -6.9118
+      },
+      "country": "Faroe Islands"
+    },
+    {
+      "clue": "Svalbard",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 77.546,
+        "lng": 23.6652
+      },
+      "country": "Norway"
+    },
+    {
+      "clue": "Lençóis Maranhenses",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -2.5844,
+        "lng": -43.0254
+      },
+      "country": "Brazil"
+    },
+    {
+      "clue": "Antelope Canyon",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 36.8615,
+        "lng": -111.3738
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Wave Rock",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -32.3795,
+        "lng": 118.0864
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Zhangye Danxia",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 38.7642,
+        "lng": 100.8955
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Tunnel Beach",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -45.4295,
+        "lng": 170.5286
+      },
+      "country": "New Zealand"
+    },
+    {
+      "clue": "Painted Hills",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 44.8347,
+        "lng": -119.8088
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Konark Sun Temple",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 19.8808,
+        "lng": 86.0906
+      },
+      "country": "India"
+    },
+    {
+      "clue": "Batu Caves",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": 3.2426,
+        "lng": 101.6964
+      },
+      "country": "Malaysia"
+    },
+    {
+      "clue": "Waitomo Caves",
+      "category": "places",
+      "type": "landmark",
+      "difficulty": "hard",
+      "target": {
+        "lat": -37.8873,
+        "lng": 175.1029
+      },
+      "country": "New Zealand"
+    },
+    {
+      "clue": "Where is Dubrovnik (Old Town) in Croatia?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.6418,
+        "lng": 18.1084
+      },
+      "country": "Croatia",
+      "answer": "Dubrovnik"
+    },
+    {
+      "clue": "Pinpoint Krakow (Wawel Castle) in Poland.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 50.0647,
+        "lng": 19.945
+      },
+      "country": "Poland",
+      "answer": "Krakow"
+    },
+    {
+      "clue": "Find Edinburgh (Edinburgh Castle) in Scotland.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 55.9533,
+        "lng": -3.1883
+      },
+      "country": "United Kingdom",
+      "answer": "Edinburgh"
+    },
+    {
+      "clue": "Where is Geneva (Lake Geneva, United Nations) in Switzerland?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 46.2044,
+        "lng": 6.1432
+      },
+      "country": "Switzerland",
+      "answer": "Geneva"
+    },
+    {
+      "clue": "Pinpoint Bruges in Belgium.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 51.2093,
+        "lng": 3.2247
+      },
+      "country": "Belgium",
+      "answer": "Bruges"
+    },
+    {
+      "clue": "Find Krakow in Poland.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 50.0647,
+        "lng": 19.945
+      },
+      "country": "Poland",
+      "answer": "Krakow"
+    },
+    {
+      "clue": "Where is Bali (Tanah Lot Temple) in Indonesia?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -8.6268,
+        "lng": 115.2338
+      },
+      "country": "Indonesia",
+      "answer": "Bali"
+    },
+    {
+      "clue": "Pinpoint Kyoto (Golden Pavilion) in Japan.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 35.0116,
+        "lng": 135.7681
+      },
+      "country": "Japan",
+      "answer": "Kyoto"
+    },
+    {
+      "clue": "Find Chiang Mai (Golden Triangle) in Thailand.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 18.788,
+        "lng": 98.9853
+      },
+      "country": "Thailand",
+      "answer": "Chiang Mai"
+    },
+    {
+      "clue": "Where is Hanoi (Hoan Kiem Lake) in Vietnam?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 21.0285,
+        "lng": 105.8542
+      },
+      "country": "Vietnam",
+      "answer": "Hanoi"
+    },
+    {
+      "clue": "Pinpoint Da Nang (Marble Mountains) in Vietnam.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 16.0678,
+        "lng": 108.2212
+      },
+      "country": "Vietnam",
+      "answer": "Da Nang"
+    },
+    {
+      "clue": "Find Sapa (Fansipan Mountain) in Vietnam.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 22.3402,
+        "lng": 103.8343
+      },
+      "country": "Vietnam",
+      "answer": "Sapa"
+    },
+    {
+      "clue": "Where is Luang Prabang in Laos?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 19.8845,
+        "lng": 102.1348
+      },
+      "country": "Laos",
+      "answer": "Luang Prabang"
+    },
+    {
+      "clue": "Pinpoint Angkor in Cambodia.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 13.3667,
+        "lng": 103.8333
+      },
+      "country": "Cambodia",
+      "answer": "Angkor"
+    },
+    {
+      "clue": "Find Siem Reap (Angkor Wat) in Cambodia.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 13.3667,
+        "lng": 103.8333
+      },
+      "country": "Cambodia",
+      "answer": "Siem Reap"
+    },
+    {
+      "clue": "Where is Yangon (Shwedagon Pagoda) in Myanmar?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 16.8661,
+        "lng": 96.1951
+      },
+      "country": "Myanmar",
+      "answer": "Yangon"
+    },
+    {
+      "clue": "Pinpoint Mandalay (Royal Palace) in Myanmar.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 21.9588,
+        "lng": 96.0891
+      },
+      "country": "Myanmar",
+      "answer": "Mandalay"
+    },
+    {
+      "clue": "Find Jaipur (Hawa Mahal) in India.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 26.9124,
+        "lng": 75.8262
+      },
+      "country": "India",
+      "answer": "Jaipur"
+    },
+    {
+      "clue": "Where is Varanasi (Ganges River) in India?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 25.2655,
+        "lng": 82.9776
+      },
+      "country": "India",
+      "answer": "Varanasi"
+    },
+    {
+      "clue": "Pinpoint Agra (Taj Mahal) in India.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 27.1751,
+        "lng": 78.0421
+      },
+      "country": "India",
+      "answer": "Agra"
+    },
+    {
+      "clue": "Find Amritsar (Golden Temple) in India.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 31.6200,
+        "lng": 74.8765
+      },
+      "country": "India",
+      "answer": "Amritsar"
+    },
+    {
+      "clue": "Where is Marrakech (Red Medina) in Morocco?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 31.6295,
+        "lng": -8.0088
+      },
+      "country": "Morocco",
+      "answer": "Marrakech"
+    },
+    {
+      "clue": "Pinpoint Chefchaouen (Blue City) in Morocco.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 35.1686,
+        "lng": -5.2698
+      },
+      "country": "Morocco",
+      "answer": "Chefchaouen"
+    },
+    {
+      "clue": "Find Casablanca (Hassan II Mosque) in Morocco.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 33.5731,
+        "lng": -7.5898
+      },
+      "country": "Morocco",
+      "answer": "Casablanca"
+    },
+    {
+      "clue": "Where is Cartagena (Walled City) in Colombia?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": 10.3897,
+        "lng": -75.5144
+      },
+      "country": "Colombia",
+      "answer": "Cartagena"
+    },
+    {
+      "clue": "Pinpoint Salvador (Pelourinho) in Brazil.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -12.9714,
+        "lng": -38.5014
+      },
+      "country": "Brazil",
+      "answer": "Salvador"
+    },
+    {
+      "clue": "Find Cusco (Sacred Valley) in Peru.",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -13.5316,
+        "lng": -71.9877
+      },
+      "country": "Peru",
+      "answer": "Cusco"
+    },
+    {
+      "clue": "Where is Arequipa (White City) in Peru?",
+      "category": "questions",
+      "type": "trivia",
+      "difficulty": "hard",
+      "target": {
+        "lat": -16.3890,
+        "lng": -71.5350
+      },
+      "country": "Peru",
+      "answer": "Arequipa"
+    },
+    {
+      "clue": "Denali (Mount McKinley)",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": 63.0695,
+        "lng": -151.0074
+      },
+      "country": "United States"
+    },
+    {
+      "clue": "Mont Blanc",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": 45.8326,
+        "lng": 6.8652
+      },
+      "country": "France"
+    },
+    {
+      "clue": "Kilimanjaro",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": -3.0674,
+        "lng": 37.3556
+      },
+      "country": "Tanzania"
+    },
+    {
+      "clue": "Aconcagua",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": -32.6532,
+        "lng": -70.0109
+      },
+      "country": "Argentina"
+    },
+    {
+      "clue": "Peaks of Europe",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": 43.1611,
+        "lng": -4.8952
+      },
+      "country": "Spain"
+    },
+    {
+      "clue": "Ben Nevis",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": 56.7975,
+        "lng": -5.0016
+      },
+      "country": "United Kingdom"
+    },
+    {
+      "clue": "Kilimanjaro",
+      "category": "geography",
+      "type": "mountain",
+      "difficulty": "hard",
+      "target": {
+        "lat": -3.0674,
+        "lng": 37.3556
+      },
+      "country": "Tanzania"
+    },
+    {
+      "clue": "Lake Tanganyika",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": {
+        "lat": -6,
+        "lng": 29
+      },
+      "bounds": {
+        "nw": {
+          "lat": -3,
+          "lng": 28
+        },
+        "se": {
+          "lat": -9,
+          "lng": 32
+        }
+      },
+      "country": "Tanzania"
+    },
+    {
+      "clue": "Lake Malawi",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": {
+        "lat": -11.5,
+        "lng": 34
+      },
+      "bounds": {
+        "nw": {
+          "lat": -9.2,
+          "lng": 33.9
+        },
+        "se": {
+          "lat": -13.7,
+          "lng": 34.9
+        }
+      },
+      "country": "Malawi"
+    },
+    {
+      "clue": "Lake Issyk-Kul",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.5,
+        "lng": 77
+      },
+      "bounds": {
+        "nw": {
+          "lat": 42.7,
+          "lng": 76
+        },
+        "se": {
+          "lat": 42.3,
+          "lng": 78
+        }
+      },
+      "country": "Kyrgyzstan"
+    },
+    {
+      "clue": "Lake Van",
+      "category": "geography",
+      "type": "lake",
+      "difficulty": "hard",
+      "target": {
+        "lat": 38.5,
+        "lng": 42.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": 39,
+          "lng": 41.9
+        },
+        "se": {
+          "lat": 38,
+          "lng": 43.5
+        }
+      },
+      "country": "Turkey"
+    },
+    {
+      "clue": "River Ob",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "hard",
+      "target": {
+        "lat": 66,
+        "lng": 66
+      },
+      "bounds": {
+        "nw": {
+          "lat": 71,
+          "lng": 60
+        },
+        "se": {
+          "lat": 51,
+          "lng": 85
+        }
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Lena River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "hard",
+      "target": {
+        "lat": 69,
+        "lng": 129
+      },
+      "bounds": {
+        "nw": {
+          "lat": 73,
+          "lng": 104
+        },
+        "se": {
+          "lat": 61,
+          "lng": 142
+        }
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Yenisei River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "hard",
+      "target": {
+        "lat": 68,
+        "lng": 86
+      },
+      "bounds": {
+        "nw": {
+          "lat": 72,
+          "lng": 75
+        },
+        "se": {
+          "lat": 51,
+          "lng": 101
+        }
+      },
+      "country": "Russia"
+    },
+    {
+      "clue": "Zambezi River",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "hard",
+      "target": {
+        "lat": -17.8,
+        "lng": 26
+      },
+      "bounds": {
+        "nw": {
+          "lat": -8,
+          "lng": 22
+        },
+        "se": {
+          "lat": -25,
+          "lng": 33
+        }
+      },
+      "country": "Zambia"
+    },
+    {
+      "clue": "Okavango Delta",
+      "category": "geography",
+      "type": "river",
+      "difficulty": "hard",
+      "target": {
+        "lat": -19.5,
+        "lng": 23
+      },
+      "bounds": {
+        "nw": {
+          "lat": -19,
+          "lng": 21
+        },
+        "se": {
+          "lat": -20,
+          "lng": 24
+        }
+      },
+      "country": "Botswana"
+    },
+    {
+      "clue": "Simpson Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": {
+        "lat": -23.5,
+        "lng": 138.5
+      },
+      "bounds": {
+        "nw": {
+          "lat": -22,
+          "lng": 136
+        },
+        "se": {
+          "lat": -25,
+          "lng": 142
+        }
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Great Victoria Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": {
+        "lat": -29,
+        "lng": 128
+      },
+      "bounds": {
+        "nw": {
+          "lat": -26,
+          "lng": 123
+        },
+        "se": {
+          "lat": -32,
+          "lng": 133
+        }
+      },
+      "country": "Australia"
+    },
+    {
+      "clue": "Taklamakan Desert",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": {
+        "lat": 39,
+        "lng": 82
+      },
+      "bounds": {
+        "nw": {
+          "lat": 42.5,
+          "lng": 74
+        },
+        "se": {
+          "lat": 35,
+          "lng": 90
+        }
+      },
+      "country": "China"
+    },
+    {
+      "clue": "Gobi",
+      "category": "geography",
+      "type": "desert",
+      "difficulty": "hard",
+      "target": {
+        "lat": 42.5944,
+        "lng": 103.4314
+      },
+      "bounds": {
+        "nw": {
+          "lat": 48,
+          "lng": 97
+        },
+        "se": {
+          "lat": 37,
+          "lng": 113
+        }
+      },
+      "country": "Mongolia"
+    },
+    {
+      "clue": "Palau",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "hard",
+      "target": {
+        "lat": 7.315,
+        "lng": 134.4824
+      },
+      "country": "Palau"
+    },
+    {
+      "clue": "Maldives",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "hard",
+      "target": {
+        "lat": 4.2105,
+        "lng": 73.5087
+      },
+      "bounds": {
+        "nw": {
+          "lat": 6.7,
+          "lng": 72.6
+        },
+        "se": {
+          "lat": 0,
+          "lng": 73.8
+        }
+      },
+      "country": "Maldives"
+    },
+    {
+      "clue": "Comoros",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "hard",
+      "target": {
+        "lat": -11.5,
+        "lng": 43.3
+      },
+      "bounds": {
+        "nw": {
+          "lat": -10.8,
+          "lng": 43
+        },
+        "se": {
+          "lat": -12.2,
+          "lng": 44.5
+        }
+      },
+      "country": "Comoros"
+    },
+    {
+      "clue": "Mauritius",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "hard",
+      "target": {
+        "lat": -20.3484,
+        "lng": 57.5522
+      },
+      "bounds": {
+        "nw": {
+          "lat": -19.8,
+          "lng": 56.5
+        },
+        "se": {
+          "lat": -20.8,
+          "lng": 58.5
+        }
+      },
+      "country": "Mauritius"
+    },
+    {
+      "clue": "Seychelles",
+      "category": "geography",
+      "type": "island",
+      "difficulty": "hard",
+      "target": {
+        "lat": -4.6796,
+        "lng": 55.4920
+      },
+      "bounds": {
+        "nw": {
+          "lat": -4,
+          "lng": 54.5
+        },
+        "se": {
+          "lat": -5.4,
+          "lng": 56.5
+        }
+      },
+      "country": "Seychelles"
+    },
+    {
+      "clue": "Andaman Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "hard",
+      "target": {
+        "lat": 8,
+        "lng": 96
+      },
+      "country": "South Asia"
+    },
+    {
+      "clue": "Coral Triangle",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "hard",
+      "target": {
+        "lat": 0,
+        "lng": 120
+      },
+      "country": "Southeast Asia"
+    },
+    {
+      "clue": "Bering Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "hard",
+      "target": {
+        "lat": 62,
+        "lng": -175
+      },
+      "country": "North Pacific"
+    },
+    {
+      "clue": "Ross Sea",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "hard",
+      "target": {
+        "lat": -75,
+        "lng": 175
+      },
+      "country": "Antarctica"
+    },
+    {
+      "clue": "Hudson Bay",
+      "category": "geography",
+      "type": "ocean",
+      "difficulty": "hard",
+      "target": {
+        "lat": 60,
+        "lng": -85
+      },
+      "country": "Canada"
     }
   ]
 }

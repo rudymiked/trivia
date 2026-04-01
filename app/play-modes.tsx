@@ -3,8 +3,8 @@ import { useGameStore } from '@/hooks/useGame';
 import { fetchPersonalizedPuzzle } from '@/services/api';
 import { generatePuzzleByCategory, getCategories } from '@/services/puzzle';
 import { Href, useRouter } from 'expo-router';
-import React, { useState } from 'react';
-import { ActivityIndicator, Alert, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React, { useMemo, useState } from 'react';
+import { ActivityIndicator, Alert, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const CATEGORY_DISPLAY_NAMES: Record<string, string> = {
   places: 'Famous Places',
@@ -24,7 +24,23 @@ const CATEGORY_ICONS: Record<string, string> = {
   geography: '🌍',
 };
 
+const CATEGORY_ACCENT: Record<string, 'teal' | 'gold' | 'violet' | 'green' | 'red' | 'blue'> = {
+  places: 'blue',
+  questions: 'violet',
+  geography: 'green',
+};
+
 type PracticeDifficulty = 'all' | 'easy' | 'medium' | 'hard';
+
+type QuickMode = {
+  id: string;
+  title: string;
+  description: string;
+  emoji: string;
+  category: 'all' | 'random' | 'places' | 'questions' | 'geography';
+  difficulty?: PracticeDifficulty;
+  accent: 'teal' | 'gold' | 'violet' | 'green' | 'red' | 'blue';
+};
 
 const DIFFICULTY_OPTIONS: Array<{ value: PracticeDifficulty; label: string }> = [
   { value: 'all', label: 'Default' },
@@ -33,16 +49,186 @@ const DIFFICULTY_OPTIONS: Array<{ value: PracticeDifficulty; label: string }> = 
   { value: 'hard', label: 'Hard' },
 ];
 
+const QUICK_MODES: QuickMode[] = [
+  {
+    id: 'all-categories',
+    title: 'All Categories',
+    description: 'Mix of everything',
+    emoji: '🎯',
+    category: 'all',
+    accent: 'teal',
+  },
+  {
+    id: 'random',
+    title: 'Random',
+    description: 'Surprise me!',
+    emoji: '🎲',
+    category: 'random',
+    accent: 'gold',
+  },
+  {
+    id: 'landmark-sprint',
+    title: 'Landmark Sprint',
+    description: 'Fast iconic places only',
+    emoji: '🏛️',
+    category: 'places',
+    difficulty: 'easy',
+    accent: 'blue',
+  },
+  {
+    id: 'trivia-rush',
+    title: 'Trivia Rush',
+    description: 'Culture and history clues',
+    emoji: '🧠',
+    category: 'questions',
+    difficulty: 'medium',
+    accent: 'violet',
+  },
+  {
+    id: 'geo-master',
+    title: 'Geo Master',
+    description: 'Hardcore physical geography',
+    emoji: '🗺️',
+    category: 'geography',
+    difficulty: 'hard',
+    accent: 'red',
+  },
+  {
+    id: 'mixed-medium',
+    title: 'Mixed Medium',
+    description: 'Balanced challenge across all categories',
+    emoji: '⚖️',
+    category: 'all',
+    difficulty: 'medium',
+    accent: 'gold',
+  },
+  {
+    id: 'roulette-hard',
+    title: 'Roulette Hard',
+    description: 'Random category, hard clues only',
+    emoji: '🎲',
+    category: 'random',
+    difficulty: 'hard',
+    accent: 'green',
+  },
+];
+
 export default function PlayModesScreen() {
   const router = useRouter();
   const { user, signIn } = useAuth();
   const { startGame } = useGameStore();
+  const isWeb = Platform.OS === 'web';
   const categories = getCategories();
   const [isLoading, setIsLoading] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<PracticeDifficulty>('all');
+  const [quickModesWidth, setQuickModesWidth] = useState(0);
+  const [categoryModesWidth, setCategoryModesWidth] = useState(0);
 
-  const handleSelectMode = async (category: string) => {
-    // Require login for all play modes
+  const quickModeLayout = useMemo(() => {
+    const gap = isWeb ? 10 : 12;
+    if (quickModesWidth <= 0) {
+      return { columns: isWeb ? 6 : 2, tileSize: isWeb ? 108 : 150, gap };
+    }
+
+    const columns = isWeb
+      ? quickModesWidth >= 1400
+        ? 8
+        : quickModesWidth >= 1180
+          ? 7
+          : quickModesWidth >= 980
+            ? 6
+            : quickModesWidth >= 760
+              ? 5
+              : 4
+      : quickModesWidth >= 780
+        ? 4
+        : quickModesWidth >= 520
+          ? 3
+          : 2;
+    const tileSize = Math.floor((quickModesWidth - gap * (columns - 1)) / columns);
+
+    return {
+      columns,
+      tileSize: isWeb ? Math.max(92, Math.min(128, tileSize)) : Math.max(120, tileSize),
+      gap,
+    };
+  }, [isWeb, quickModesWidth]);
+
+  const categoryModeLayout = useMemo(() => {
+    const gap = isWeb ? 10 : 12;
+    if (categoryModesWidth <= 0) {
+      return { columns: isWeb ? 6 : 2, tileSize: isWeb ? 108 : 150, gap };
+    }
+
+    const columns = isWeb
+      ? categoryModesWidth >= 1400
+        ? 8
+        : categoryModesWidth >= 1180
+          ? 7
+          : categoryModesWidth >= 980
+            ? 6
+            : categoryModesWidth >= 760
+              ? 5
+              : 4
+      : categoryModesWidth >= 780
+        ? 4
+        : categoryModesWidth >= 520
+          ? 3
+          : 2;
+    const tileSize = Math.floor((categoryModesWidth - gap * (columns - 1)) / columns);
+
+    return {
+      columns,
+      tileSize: isWeb ? Math.max(92, Math.min(128, tileSize)) : Math.max(120, tileSize),
+      gap,
+    };
+  }, [categoryModesWidth, isWeb]);
+
+  const getQuickModeAccentStyle = (accent: QuickMode['accent']) => {
+    switch (accent) {
+      case 'gold':
+        return styles.quickModeGold;
+      case 'violet':
+        return styles.quickModeViolet;
+      case 'green':
+        return styles.quickModeGreen;
+      case 'red':
+        return styles.quickModeRed;
+      case 'blue':
+        return styles.quickModeBlue;
+      default:
+        return styles.quickModeTeal;
+    }
+  };
+
+  const runMode = async (
+    category: 'all' | 'random' | 'places' | 'questions' | 'geography',
+    difficulty: PracticeDifficulty
+  ) => {
+    setIsLoading(true);
+
+    try {
+      const response = await fetchPersonalizedPuzzle(user!.id, category, difficulty);
+      if (response.data) {
+        startGame(response.data);
+        router.push(`/game/${response.data.id}` as Href);
+        return;
+      }
+
+      const puzzle = generatePuzzleByCategory(category, difficulty);
+      startGame(puzzle);
+      router.push(`/game/${puzzle.id}` as Href);
+    } catch (error) {
+      console.error('Error generating puzzle:', error);
+      const puzzle = generatePuzzleByCategory(category, difficulty);
+      startGame(puzzle);
+      router.push(`/game/${puzzle.id}` as Href);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const requireSignedIn = () => {
     if (!user) {
       Alert.alert(
         'Sign In Required',
@@ -52,36 +238,27 @@ export default function PlayModesScreen() {
           { text: 'Sign In', onPress: () => signIn() },
         ]
       );
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSelectQuickMode = async (mode: QuickMode) => {
+    if (!requireSignedIn()) {
       return;
     }
 
-    setIsLoading(true);
+    const modeDifficulty = mode.difficulty ?? selectedDifficulty;
+    await runMode(mode.category, modeDifficulty);
+  };
 
-    try {
-      // For logged-in users with "all" or "random", use server personalization
-      if (user) {
-        const response = await fetchPersonalizedPuzzle(user.id, category, selectedDifficulty);
-        if (response.data) {
-          startGame(response.data);
-          router.push(`/game/${response.data.id}` as Href);
-          return;
-        }
-        // Fall through to local generation if server fails
-      }
-
-      // Local generation for anonymous users or category-specific modes
-      const puzzle = generatePuzzleByCategory(category, selectedDifficulty);
-      startGame(puzzle);
-      router.push(`/game/${puzzle.id}` as Href);
-    } catch (error) {
-      console.error('Error generating puzzle:', error);
-      // Fallback to local generation
-      const puzzle = generatePuzzleByCategory(category, selectedDifficulty);
-      startGame(puzzle);
-      router.push(`/game/${puzzle.id}` as Href);
-    } finally {
-      setIsLoading(false);
+  const handleSelectCategoryMode = async (category: string) => {
+    if (!requireSignedIn()) {
+      return;
     }
+
+    await runMode(category as QuickMode['category'], selectedDifficulty);
   };
 
   if (isLoading) {
@@ -103,7 +280,36 @@ export default function PlayModesScreen() {
       </View>
 
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.content}>
-        <Text style={styles.sectionTitle}>Difficulty</Text>
+        <Text style={styles.sectionTitle}>Quick Modes</Text>
+        <View
+          style={[styles.quickModesGrid, { gap: quickModeLayout.gap }]}
+          onLayout={(event) => setQuickModesWidth(event.nativeEvent.layout.width)}
+        >
+          {QUICK_MODES.map((mode) => (
+            <Pressable
+              key={mode.id}
+              style={[
+                styles.quickModeTile,
+                {
+                  width: quickModeLayout.tileSize + 12,
+                  height: quickModeLayout.tileSize,
+                  padding: isWeb ? 0 : 12,
+                },
+                getQuickModeAccentStyle(mode.accent),
+              ]}
+              onPress={() => handleSelectQuickMode(mode)}
+            >
+              <Text style={styles.quickModeIcon}>{mode.emoji}</Text>
+              <Text style={styles.quickModeTitle}>{mode.title}</Text>
+              <Text style={styles.quickModeDescription} numberOfLines={2}>
+                {mode.description}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
+        <Text style={styles.sectionTitle}>Categories</Text>
+
         <View style={styles.difficultyRow}>
           {DIFFICULTY_OPTIONS.map((option) => {
             const isSelected = selectedDifficulty === option.value;
@@ -143,52 +349,33 @@ export default function PlayModesScreen() {
           Default includes easy, medium, and hard questions.
         </Text>
 
-        {/* Special modes */}
-        <View style={styles.specialModes}>
-          <Pressable
-            style={[styles.modeButton, styles.allButton]}
-            onPress={() => handleSelectMode('all')}
-          >
-            <Text style={styles.modeIcon}>🎯</Text>
-            <View style={styles.modeTextContainer}>
-              <Text style={styles.modeTitle}>All Categories</Text>
-              <Text style={styles.modeDescription}>Mix of everything</Text>
-            </View>
-          </Pressable>
-
-          <Pressable
-            style={[styles.modeButton, styles.randomButton]}
-            onPress={() => handleSelectMode('random')}
-          >
-            <Text style={styles.modeIcon}>🎲</Text>
-            <View style={styles.modeTextContainer}>
-              <Text style={styles.modeTitle}>Random</Text>
-              <Text style={styles.modeDescription}>Surprise me!</Text>
-            </View>
-          </Pressable>
-        </View>
-
-        {/* Category modes */}
         <Text style={styles.sectionTitle}>Categories</Text>
-        {categories.map((category) => (
-          <Pressable
-            key={category}
-            style={styles.modeButton}
-            onPress={() => handleSelectMode(category)}
-          >
-            <Text style={styles.modeIcon}>
-              {CATEGORY_ICONS[category] || '📍'}
-            </Text>
-            <View style={styles.modeTextContainer}>
-              <Text style={styles.modeTitle}>
-                {CATEGORY_DISPLAY_NAMES[category] || category}
-              </Text>
-              <Text style={styles.modeDescription}>
+        <View
+          style={[styles.quickModesGrid, { gap: categoryModeLayout.gap }]}
+          onLayout={(event) => setCategoryModesWidth(event.nativeEvent.layout.width)}
+        >
+          {categories.map((category) => (
+            <Pressable
+              key={category}
+              style={[
+                styles.quickModeTile,
+                {
+                  width: categoryModeLayout.tileSize,
+                  height: categoryModeLayout.tileSize,
+                  padding: isWeb ? 5 : 12,
+                },
+                getQuickModeAccentStyle(CATEGORY_ACCENT[category] || 'teal'),
+              ]}
+              onPress={() => handleSelectCategoryMode(category)}
+            >
+              <Text style={styles.quickModeIcon}>{CATEGORY_ICONS[category] || '📍'}</Text>
+              <Text style={styles.quickModeTitle}>{CATEGORY_DISPLAY_NAMES[category] || category}</Text>
+              <Text style={styles.quickModeDescription} numberOfLines={2}>
                 {CATEGORY_DESCRIPTIONS[category] || `Practice ${category} questions`}
               </Text>
-            </View>
-          </Pressable>
-        ))}
+            </Pressable>
+          ))}
+        </View>
       </ScrollView>
 
       <Pressable style={styles.backButton} onPress={() => router.back()}>
@@ -234,10 +421,65 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 0,
   },
-  specialModes: {
+  quickModesGrid: {
     flexDirection: 'row',
-    gap: 12,
+    flexWrap: 'wrap',
     marginBottom: 24,
+    width: '100%',
+  },
+  quickModeTile: {
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 12,
+    borderWidth: 1,
+  },
+  quickModeTeal: {
+    backgroundColor: 'rgba(78, 205, 196, 0.12)',
+    borderColor: 'rgba(78, 205, 196, 0.3)',
+  },
+  quickModeGold: {
+    backgroundColor: 'rgba(255, 193, 7, 0.12)',
+    borderColor: 'rgba(255, 193, 7, 0.34)',
+  },
+  quickModeViolet: {
+    backgroundColor: 'rgba(159, 122, 234, 0.16)',
+    borderColor: 'rgba(159, 122, 234, 0.34)',
+  },
+  quickModeGreen: {
+    backgroundColor: 'rgba(72, 187, 120, 0.16)',
+    borderColor: 'rgba(72, 187, 120, 0.34)',
+  },
+  quickModeRed: {
+    backgroundColor: 'rgba(245, 101, 101, 0.16)',
+    borderColor: 'rgba(245, 101, 101, 0.34)',
+  },
+  quickModeBlue: {
+    backgroundColor: 'rgba(66, 153, 225, 0.16)',
+    borderColor: 'rgba(66, 153, 225, 0.34)',
+  },
+  quickModeIcon: {
+    fontSize: 28,
+    marginBottom: 8,
+  },
+  quickModeTitle: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginBottom: 4,
+  },
+  quickModeDescription: {
+    color: '#CBD5E0',
+    fontSize: 12,
+    lineHeight: 16,
+    textAlign: 'center',
+  },
+  quickModeMeta: {
+    color: '#A0AEC0',
+    fontSize: 11,
+    marginTop: 6,
+    textAlign: 'center',
   },
   difficultyRow: {
     flexDirection: 'row',
@@ -300,18 +542,6 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 16,
     marginBottom: 12,
-  },
-  allButton: {
-    flex: 1,
-    backgroundColor: 'rgba(78, 205, 196, 0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(78, 205, 196, 0.3)',
-  },
-  randomButton: {
-    flex: 1,
-    backgroundColor: 'rgba(255, 193, 7, 0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(255, 193, 7, 0.3)',
   },
   modeIcon: {
     fontSize: 32,

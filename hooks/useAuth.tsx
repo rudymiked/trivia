@@ -61,6 +61,7 @@ function isTokenExpired(token: string): boolean {
 }
 
 // You'll need to create these in Google Cloud Console
+const GOOGLE_CLIENT_ID_EXPO = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_EXPO || '';
 const GOOGLE_CLIENT_ID_WEB = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_WEB || '';
 const GOOGLE_CLIENT_ID_IOS = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_IOS || '';
 const GOOGLE_CLIENT_ID_ANDROID = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_ANDROID || '';
@@ -72,6 +73,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [authError, setAuthError] = useState<string | null>(null);
 
   const [, response, promptAsync] = Google.useIdTokenAuthRequest({
+    clientId: GOOGLE_CLIENT_ID_EXPO || GOOGLE_CLIENT_ID_WEB,
     webClientId: GOOGLE_CLIENT_ID_WEB,
     iosClientId: GOOGLE_CLIENT_ID_IOS,
     androidClientId: GOOGLE_CLIENT_ID_ANDROID,
@@ -189,6 +191,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signIn = async () => {
     try {
       setAuthError(null);
+
+      const hasAnyClientId = Boolean(
+        GOOGLE_CLIENT_ID_EXPO || GOOGLE_CLIENT_ID_WEB || GOOGLE_CLIENT_ID_IOS || GOOGLE_CLIENT_ID_ANDROID
+      );
+      if (!hasAnyClientId) {
+        setAuthError('Google sign-in is not configured. Set EXPO_PUBLIC_GOOGLE_CLIENT_ID_* values and restart Expo.');
+        void trackTelemetryEvent('sign_in_failed', { reason: 'missing_google_client_id' });
+        return;
+      }
+
       void trackTelemetryEvent('sign_in_started');
       const result = await promptAsync();
       if (result.type === 'success') {

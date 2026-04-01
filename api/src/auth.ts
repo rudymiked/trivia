@@ -1,8 +1,15 @@
 import { OAuth2Client } from 'google-auth-library';
 
-const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID_WEB || process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_WEB || '';
+const GOOGLE_CLIENT_IDS = [
+  process.env.GOOGLE_CLIENT_ID_WEB,
+  process.env.GOOGLE_CLIENT_ID_ANDROID,
+  process.env.GOOGLE_CLIENT_ID_IOS,
+  process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_WEB,
+  process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_ANDROID,
+  process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID_IOS,
+].filter((value): value is string => Boolean(value && value.trim()));
 
-const client = new OAuth2Client(GOOGLE_CLIENT_ID);
+const client = new OAuth2Client();
 
 export interface VerifiedUser {
   userId: string;
@@ -30,15 +37,15 @@ export async function verifyGoogleToken(token: string): Promise<VerifiedUser | n
     };
   }
 
-  if (!GOOGLE_CLIENT_ID) {
-    console.warn('GOOGLE_CLIENT_ID_WEB not configured, skipping token validation');
+  if (GOOGLE_CLIENT_IDS.length === 0) {
+    console.warn('Google OAuth client IDs not configured, skipping token validation');
     return null;
   }
 
   try {
     const ticket = await client.verifyIdToken({
       idToken: token,
-      audience: GOOGLE_CLIENT_ID,
+      audience: GOOGLE_CLIENT_IDS,
     });
 
     const payload = ticket.getPayload();

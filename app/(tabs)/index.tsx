@@ -7,7 +7,7 @@ import { trackTelemetryEvent } from '@/services/telemetry';
 import { Ionicons } from '@expo/vector-icons';
 import { Href, Link, useFocusEffect, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Image, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const featurePoints = [
   'Five rounds, one daily route around the globe.',
@@ -30,6 +30,7 @@ export default function HomeScreen() {
   const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const [isLoading, setIsLoading] = useState(true);
   const trackedDauRef = useRef(false);
+  const isWeb = Platform.OS === 'web';
 
   const loadProgress = useCallback(async () => {
     setIsLoading(true);
@@ -124,6 +125,114 @@ export default function HomeScreen() {
     month: 'long',
     day: 'numeric',
   });
+
+  if (!isWeb) {
+    return (
+      <ScrollView
+        style={styles.mobileContainer}
+        contentContainerStyle={styles.mobileContentContainer}
+        showsVerticalScrollIndicator={false}
+        scrollEnabled
+        nestedScrollEnabled
+        bounces
+      >
+        <View style={styles.mobileTopBar}>
+          <View>
+            <Text style={styles.mobileDateLabel}>{todayLabel}</Text>
+            <Text style={styles.mobileGreeting}>Ready to pin?</Text>
+          </View>
+          <Pressable style={({ pressed }) => [styles.mobileIconButton, pressed && styles.cardPressed]} onPress={handleGoToProfile}>
+            <Ionicons name="person-circle-outline" size={26} color={Brand.white} />
+          </Pressable>
+        </View>
+
+        <View style={styles.mobileHeroCard}>
+          <View style={styles.mobileHeroGlow} />
+          <View style={styles.mobileBrandRow}>
+            <Image source={require('../../assets/images/logo.png')} style={styles.mobileBrandLogo} resizeMode="contain" />
+            <View>
+              <Text style={styles.mobileBrandTitle}>PinPoint</Text>
+              <Text style={styles.mobileBrandTagline}>Daily world challenge</Text>
+            </View>
+          </View>
+
+          <Text style={styles.mobileHeroTitle}>Five rounds. One route. Zero fluff.</Text>
+          <Text style={styles.mobileHeroBody}>Read the clue, drop your pin, and beat your own instincts.</Text>
+
+          {!alreadyPlayed ? (
+            <Pressable style={({ pressed }) => [styles.mobilePrimaryButton, pressed && styles.buttonPressed]} onPress={handlePlay}>
+              <Text style={styles.mobilePrimaryButtonText}>Start today&apos;s run</Text>
+              <Ionicons name="play" size={18} color={Brand.midnight} />
+            </Pressable>
+          ) : (
+            <View style={styles.mobileTimerCard}>
+              <Text style={styles.mobileTimerLabel}>Next daily drop</Text>
+              <Text style={styles.mobileTimerValue}>
+                {String(countdown.hours).padStart(2, '0')}:
+                {String(countdown.minutes).padStart(2, '0')}:
+                {String(countdown.seconds).padStart(2, '0')}
+              </Text>
+            </View>
+          )}
+        </View>
+
+        <View style={styles.mobileStatsRow}>
+          <View style={styles.mobileMiniCard}>
+            <Text style={styles.mobileMiniLabel}>Streak</Text>
+            <Text style={styles.mobileMiniValue}>{progress?.streak ?? 0}</Text>
+          </View>
+          <View style={styles.mobileMiniCard}>
+            <Text style={styles.mobileMiniLabel}>Played</Text>
+            <Text style={styles.mobileMiniValue}>{progress?.gamesPlayed ?? 0}</Text>
+          </View>
+          <View style={styles.mobileMiniCard}>
+            <Text style={styles.mobileMiniLabel}>Best</Text>
+            <Text style={styles.mobileMiniValue}>{progress?.highScore ?? 0}</Text>
+          </View>
+        </View>
+
+        <View style={styles.mobileSectionCard}>
+          <Text style={styles.mobileSectionTitle}>How to win this round</Text>
+          {howToPlaySteps.slice(0, 3).map((step, index) => (
+            <View key={step} style={styles.mobileStepRow}>
+              <View style={styles.mobileStepBadge}>
+                <Text style={styles.mobileStepNumber}>{index + 1}</Text>
+              </View>
+              <Text style={styles.mobileStepText}>{step}</Text>
+            </View>
+          ))}
+        </View>
+
+        <View style={styles.mobileSectionCard}>
+          <Text style={styles.mobileSectionTitle}>Your mode</Text>
+          <Text style={styles.mobileModeBody}>
+            Jump into quick daily play or explore extra modes when signed in.
+          </Text>
+          {user ? (
+            <Pressable style={({ pressed }) => [styles.mobileSecondaryButton, pressed && styles.buttonPressed]} onPress={handlePlayModes}>
+              <Text style={styles.mobileSecondaryButtonText}>Explore play modes</Text>
+              <Ionicons name="grid-outline" size={18} color={Brand.aqua} />
+            </Pressable>
+          ) : (
+            renderGuestLoginCta()
+          )}
+        </View>
+
+        <View style={styles.homeLegalContainer}>
+          <View style={styles.homeLegalLinksRow}>
+            <Link href="/privacy-policy" asChild>
+              <Text style={styles.homeLegalLink}>Privacy Policy</Text>
+            </Link>
+            <Text style={styles.homeLegalDivider}>•</Text>
+            <Link href="/terms" asChild>
+              <Text style={styles.homeLegalLink}>Terms of Use</Text>
+            </Link>
+          </View>
+          <Text style={styles.homeLegalMeta}>© {new Date().getFullYear()} PinPoint</Text>
+        </View>
+      </ScrollView>
+    );
+  }
 
   return (
     <ScrollView
@@ -255,6 +364,215 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  mobileContainer: {
+    flex: 1,
+    backgroundColor: '#06121B',
+  },
+  mobileContentContainer: {
+    flexGrow: 1,
+    paddingHorizontal: 16,
+    paddingTop: 14,
+    paddingBottom: 120,
+    gap: 14,
+  },
+  mobileTopBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  mobileDateLabel: {
+    color: Brand.slate,
+    fontSize: 12,
+    textTransform: 'uppercase',
+    letterSpacing: 0.9,
+  },
+  mobileGreeting: {
+    color: Brand.white,
+    fontSize: 24,
+    fontWeight: '800',
+    marginTop: 2,
+  },
+  mobileIconButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.14)',
+  },
+  mobileHeroCard: {
+    backgroundColor: '#0A2436',
+    borderRadius: 22,
+    padding: 18,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: 'rgba(242, 193, 78, 0.18)',
+  },
+  mobileHeroGlow: {
+    position: 'absolute',
+    right: -40,
+    top: -50,
+    width: 140,
+    height: 140,
+    borderRadius: 70,
+    backgroundColor: 'rgba(87, 211, 203, 0.16)',
+  },
+  mobileBrandRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 10,
+  },
+  mobileBrandLogo: {
+    width: 44,
+    height: 44,
+  },
+  mobileBrandTitle: {
+    color: Brand.white,
+    fontSize: 22,
+    fontFamily: 'SpaceMono',
+  },
+  mobileBrandTagline: {
+    color: Brand.mist,
+    fontSize: 12,
+  },
+  mobileHeroTitle: {
+    color: Brand.white,
+    fontSize: 26,
+    lineHeight: 31,
+    fontWeight: '800',
+    marginBottom: 8,
+    maxWidth: 300,
+  },
+  mobileHeroBody: {
+    color: Brand.parchment,
+    fontSize: 14,
+    lineHeight: 21,
+    marginBottom: 14,
+  },
+  mobilePrimaryButton: {
+    minHeight: 52,
+    borderRadius: 14,
+    backgroundColor: Brand.gold,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 8,
+  },
+  mobilePrimaryButtonText: {
+    color: Brand.midnight,
+    fontSize: 15,
+    fontWeight: '800',
+  },
+  mobileTimerCard: {
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: 'rgba(87, 211, 203, 0.24)',
+    backgroundColor: 'rgba(7, 26, 38, 0.42)',
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+  },
+  mobileTimerLabel: {
+    color: Brand.slate,
+    fontSize: 11,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginBottom: 6,
+  },
+  mobileTimerValue: {
+    color: Brand.white,
+    fontSize: 24,
+    fontWeight: '800',
+    fontVariant: ['tabular-nums'],
+  },
+  mobileStatsRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  mobileMiniCard: {
+    flex: 1,
+    borderRadius: 16,
+    backgroundColor: '#0A2131',
+    paddingVertical: 14,
+    paddingHorizontal: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(180, 199, 206, 0.14)',
+  },
+  mobileMiniLabel: {
+    color: Brand.slate,
+    fontSize: 11,
+    textTransform: 'uppercase',
+    letterSpacing: 0.8,
+    marginBottom: 8,
+  },
+  mobileMiniValue: {
+    color: Brand.white,
+    fontSize: 24,
+    fontWeight: '800',
+  },
+  mobileSectionCard: {
+    borderRadius: 20,
+    backgroundColor: '#0A2131',
+    borderWidth: 1,
+    borderColor: 'rgba(180, 199, 206, 0.12)',
+    padding: 16,
+  },
+  mobileSectionTitle: {
+    color: Brand.white,
+    fontSize: 18,
+    fontWeight: '800',
+    marginBottom: 12,
+  },
+  mobileStepRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 10,
+    marginBottom: 10,
+  },
+  mobileStepBadge: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    backgroundColor: Brand.aqua,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 1,
+  },
+  mobileStepNumber: {
+    color: Brand.midnight,
+    fontSize: 12,
+    fontWeight: '800',
+  },
+  mobileStepText: {
+    color: Brand.mist,
+    fontSize: 13,
+    lineHeight: 19,
+    flex: 1,
+  },
+  mobileModeBody: {
+    color: Brand.parchment,
+    fontSize: 14,
+    lineHeight: 20,
+    marginBottom: 12,
+  },
+  mobileSecondaryButton: {
+    minHeight: 48,
+    borderRadius: 14,
+    backgroundColor: 'rgba(7, 26, 38, 0.48)',
+    borderWidth: 1,
+    borderColor: 'rgba(87, 211, 203, 0.22)',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  mobileSecondaryButtonText: {
+    color: Brand.aqua,
+    fontSize: 14,
+    fontWeight: '800',
+  },
   container: {
     flex: 1,
     backgroundColor: Brand.midnight,

@@ -719,43 +719,10 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Mount McKinley (Denali)",
-            "category": "places",
-            "type": "landmark",
-            "difficulty": "medium",
-            "target": {
-                "lat": 63.0695,
-                "lng": -151.0074
-            },
-            "country": "United States"
-        },
-        {
-            "clue": "Regional Focus: Mount McKinley (Denali)",
-            "category": "geography",
-            "type": "region",
-            "difficulty": "easy",
-            "target": {
-                "lat": 63.0695,
-                "lng": -151.0074
-            },
-            "country": "United States"
-        },
-        {
             "clue": "Explorer Spot: Great Lakes - Lake Superior",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
-            "target": {
-                "lat": 47.7,
-                "lng": -87.5
-            },
-            "country": "United States"
-        },
-        {
-            "clue": "Regional Focus: Great Lakes - Lake Superior",
-            "category": "geography",
-            "type": "region",
-            "difficulty": "hard",
             "target": {
                 "lat": 47.7,
                 "lng": -87.5
@@ -1408,7 +1375,7 @@
             "country": "United States"
         },
         {
-            "clue": "Statue of Liberty is on this island in New York",
+            "clue": "Statue of Liberty",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1485,7 +1452,7 @@
             "country": "United States"
         },
         {
-            "clue": "Find Mexico City (ZÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³calo) in Mexico.",
+            "clue": "Mexico City",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1497,7 +1464,7 @@
             "answer": "Mexico City"
         },
         {
-            "clue": "Where is Vancouver (Stanley Park) in Canada?",
+            "clue": "Stanley Park (Canada)?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1509,7 +1476,7 @@
             "answer": "Vancouver"
         },
         {
-            "clue": "Find Los Angeles (Hollywood) in United States.",
+            "clue": "Hollywood",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1521,7 +1488,7 @@
             "answer": "Los Angeles"
         },
         {
-            "clue": "Where is Las Vegas (The Strip) in United States?",
+            "clue": "Las Vegas Strip",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1533,7 +1500,7 @@
             "answer": "Las Vegas"
         },
         {
-            "clue": "Find New Orleans (French Quarter) in United States.",
+            "clue": "French Quarter.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1545,7 +1512,7 @@
             "answer": "New Orleans"
         },
         {
-            "clue": "Where is Denver (Rocky Mountains) in United States?",
+            "clue": "Where is Denver in United States?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",

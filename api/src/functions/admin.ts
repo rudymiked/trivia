@@ -31,7 +31,7 @@ async function requireAdminUser(request: HttpRequest): Promise<HttpResponseInit 
   return null;
 }
 
-// Seed locations from JSON data
+// Seed locations from JSON data — replaces all existing locations
 app.http('seedLocations', {
   methods: ['POST'],
   authLevel: 'function',
@@ -48,9 +48,28 @@ app.http('seedLocations', {
         };
       }
 
-      const client = getTableClient('locations');
-      let added = 0;
+      if (body.locations.length === 0) {
+        return {
+          status: 400,
+          jsonBody: { error: 'Locations array must not be empty — aborting to avoid wiping existing data' },
+        };
+      }
 
+      const client = getTableClient('locations');
+
+      // Delete all existing locations
+      const existing = client.listEntities({
+        queryOptions: { filter: `PartitionKey eq 'location'` },
+      });
+      let deleted = 0;
+      for await (const entity of existing) {
+        await client.deleteEntity('location', entity.rowKey as string);
+        deleted++;
+      }
+      context.log(`Deleted ${deleted} existing location(s)`);
+
+      // Insert new locations
+      let added = 0;
       for (const loc of body.locations) {
         const id = randomUUID();
         await client.upsertEntity({
@@ -69,7 +88,7 @@ app.http('seedLocations', {
       }
 
       return {
-        jsonBody: { success: true, added },
+        jsonBody: { success: true, deleted, added },
       };
     } catch (error) {
       context.error('Error seeding locations:', error);
@@ -124,6 +143,65 @@ app.http('getLocations', {
       return {
         status: 500,
         jsonBody: { error: 'Failed to fetch locations' },
+      };
+    }
+  },
+});
+
+// Add multiple locations without removing existing ones
+app.http('addLocations', {
+  methods: ['POST'],
+  authLevel: 'anonymous',
+  route: 'manage/locations/bulk',
+  handler: async (request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> => {
+    try {
+      const authFailure = await requireAdminUser(request);
+      if (authFailure) {
+        return authFailure;
+      }
+
+      await initializeTables();
+      const body = (await request.json()) as { locations: Array<Omit<Location, 'id' | 'enabled'>> };
+
+      if (!body.locations || !Array.isArray(body.locations) || body.locations.length === 0) {
+        return {
+          status: 400,
+          jsonBody: { error: 'Request body must contain a non-empty locations array' },
+        };
+      }
+
+      const client = getTableClient('locations');
+      let added = 0;
+
+      for (const loc of body.locations) {
+        if (!loc.clue || !loc.category || !loc.target) {
+          continue;
+        }
+        const id = randomUUID();
+        await client.upsertEntity({
+          partitionKey: 'location',
+          rowKey: id,
+          clue: loc.clue,
+          category: loc.category,
+          type: loc.type || 'landmark',
+          difficulty: loc.difficulty || 'medium',
+          target: JSON.stringify(loc.target),
+          country: loc.country || 'Unknown',
+          answer: loc.answer || '',
+          enabled: true,
+        });
+        added++;
+      }
+
+      return {
+        status: 201,
+        jsonBody: { success: true, added },
+      };
+    } catch (error) {
+      context.error('Error adding locations:', error);
+      return {
+        status: 500,
+        jsonBody: { error: 'Failed to add locations' },
       };
     }
   },

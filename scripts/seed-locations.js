@@ -9,16 +9,20 @@
  *   API_URL=https://your-api.azurewebsites.net/api FUNCTION_KEY=your-key npm run seed
  *
  * Or via API:
- *   POST /api/manage/seed with the locations JSON and x-functions-key header
+ *   POST /api/manage/seed with the locations data and x-functions-key header
  */
 
 const fs = require('fs');
 const path = require('path');
 
 async function seedLocations() {
-  // Read locations from JSON file
-  const locationsPath = path.join(__dirname, '..', 'data', 'locations.json');
-  const data = JSON.parse(fs.readFileSync(locationsPath, 'utf8'));
+  // Read locations from all continent JSON files and merge
+  const continents = ['north-america', 'south-america', 'europe', 'middle-east', 'asia', 'oceania', 'africa'];
+  const allLocations = continents.flatMap(continent => {
+    const filePath = path.join(__dirname, '..', 'data', `locations-${continent}.json`);
+    return JSON.parse(fs.readFileSync(filePath, 'utf8')).locations;
+  });
+  const data = { locations: allLocations };
 
   // API URL - use environment variable or default to localhost
   const apiUrl = process.env.API_URL || 'http://localhost:7071/api';

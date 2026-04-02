@@ -1,6 +1,24 @@
-import locationsData from '@/data/locations.json';
+import locationsAfrica from '@/data/locations-africa.json';
+import locationsAsia from '@/data/locations-asia.json';
+import locationsEurope from '@/data/locations-europe.json';
+import locationsMiddleEast from '@/data/locations-middle-east.json';
+import locationsNorthAmerica from '@/data/locations-north-america.json';
+import locationsOceania from '@/data/locations-oceania.json';
+import locationseSouthAmerica from '@/data/locations-south-america.json';
 import { Puzzle, Round } from '@/types/game';
 import { fetchPuzzle } from './api';
+
+const locationsData = {
+  locations: [
+    ...locationsNorthAmerica.locations,
+    ...locationseSouthAmerica.locations,
+    ...locationsEurope.locations,
+    ...locationsMiddleEast.locations,
+    ...locationsAsia.locations,
+    ...locationsOceania.locations,
+    ...locationsAfrica.locations,
+  ],
+};
 
 export type DailyPuzzleSource = 'api' | 'local';
 

@@ -1,0 +1,1052 @@
+{
+    "locations": [
+        {
+            "clue": "Machu Picchu",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -13.1631,
+                "lng": -72.545
+            },
+            "country": "Peru"
+        },
+        {
+            "clue": "Christ the Redeemer",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Pinpoint Saint Helena.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -15.965,
+                "lng": -5.7089
+            },
+            "country": "Saint Helena",
+            "answer": "Saint Helena",
+            "bounds": {
+                "nw": {
+                    "lat": -15.9,
+                    "lng": -5.9
+                },
+                "se": {
+                    "lat": -16.1,
+                    "lng": -5.6
+                }
+            }
+        },
+        {
+            "clue": "Pinpoint Montevideo in Uruguay.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -34.8941,
+                "lng": -56.1522
+            },
+            "country": "Uruguay",
+            "answer": "Montevideo"
+        },
+        {
+            "clue": "Amazon River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": -3.119,
+                "lng": -60.0217
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 5.5,
+                    "lng": -73
+                },
+                "se": {
+                    "lat": -11,
+                    "lng": -49
+                }
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Lake Titicaca",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "medium",
+            "target": {
+                "lat": -15.9254,
+                "lng": -69.3354
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -15,
+                    "lng": -70.3
+                },
+                "se": {
+                    "lat": -16.7,
+                    "lng": -68.6
+                }
+            },
+            "country": "Peru"
+        },
+        {
+            "clue": "Atacama Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "hard",
+            "target": {
+                "lat": -24.5,
+                "lng": -69.25
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -18,
+                    "lng": -73.5
+                },
+                "se": {
+                    "lat": -27,
+                    "lng": -68
+                }
+            },
+            "country": "Chile"
+        },
+        {
+            "clue": "GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "medium",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 1.5,
+                    "lng": -92
+                },
+                "se": {
+                    "lat": -2.2,
+                    "lng": -88.9
+                }
+            },
+            "country": "Ecuador"
+        },
+        {
+            "clue": "Moai of Easter Island",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -27.1212,
+                "lng": -109.3664
+            },
+            "country": "Chile"
+        },
+        {
+            "clue": "Where is Rio de Janeiro in Brazil?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -22.9068,
+                "lng": -43.1729
+            },
+            "country": "Brazil",
+            "answer": "Rio de Janeiro"
+        },
+        {
+            "clue": "Pinpoint Cusco in Peru.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -13.5319,
+                "lng": -71.9675
+            },
+            "country": "Peru",
+            "answer": "Cusco"
+        },
+        {
+            "clue": "Aconcagua",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "medium",
+            "target": {
+                "lat": -32.6532,
+                "lng": -70.0109
+            },
+            "country": "Argentina"
+        },
+        {
+            "clue": "Explorer Spot: Machu Picchu",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -13.1631,
+                "lng": -72.545
+            },
+            "country": "Peru"
+        },
+        {
+            "clue": "Where is Peru?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -13.1631,
+                "lng": -72.545
+            },
+            "country": "Peru",
+            "answer": "Peru",
+            "bounds": {
+                "nw": {
+                    "lat": 0.1,
+                    "lng": -81.3
+                },
+                "se": {
+                    "lat": -18.4,
+                    "lng": -68.7
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Machu Picchu",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": -13.1631,
+                "lng": -72.545
+            },
+            "country": "Peru"
+        },
+        {
+            "clue": "Explorer Spot: Christ the Redeemer",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Pinpoint Brazil.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil",
+            "answer": "Brazil",
+            "bounds": {
+                "nw": {
+                    "lat": 5.3,
+                    "lng": -74
+                },
+                "se": {
+                    "lat": -33.8,
+                    "lng": -34.8
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Christ the Redeemer",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Explorer Spot: Where was Napoleon Bonaparte exiled after his final defeat",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": -15.965,
+                "lng": -5.7089
+            },
+            "country": "Saint Helena"
+        },
+        {
+            "clue": "Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": -15.965,
+                "lng": -5.7089
+            },
+            "country": "Saint Helena"
+        },
+        {
+            "clue": "Explorer Spot: Where was the first FIFA World Cup held in 1930",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -34.8941,
+                "lng": -56.1522
+            },
+            "country": "Uruguay"
+        },
+        {
+            "clue": "Where is Uruguay?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -34.8941,
+                "lng": -56.1522
+            },
+            "country": "Uruguay",
+            "answer": "Uruguay",
+            "bounds": {
+                "nw": {
+                    "lat": -30.1,
+                    "lng": -58.5
+                },
+                "se": {
+                    "lat": -35,
+                    "lng": -53.1
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Where was the first FIFA World Cup held in 1930",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": -34.8941,
+                "lng": -56.1522
+            },
+            "country": "Uruguay"
+        },
+        {
+            "clue": "Explorer Spot: Amazon River",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -3.119,
+                "lng": -60.0217
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Regional Focus: Amazon River",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": -3.119,
+                "lng": -60.0217
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Explorer Spot: Lake Titicaca",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -15.9254,
+                "lng": -69.3354
+            },
+            "country": "Peru"
+        },
+        {
+            "clue": "Regional Focus: Lake Titicaca",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": -15.9254,
+                "lng": -69.3354
+            },
+            "country": "Peru"
+        },
+        {
+            "clue": "Explorer Spot: Atacama Desert",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -24.5,
+                "lng": -69.25
+            },
+            "country": "Chile"
+        },
+        {
+            "clue": "Pinpoint Chile.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -24.5,
+                "lng": -69.25
+            },
+            "country": "Chile",
+            "answer": "Chile",
+            "bounds": {
+                "nw": {
+                    "lat": -17.5,
+                    "lng": -75.7
+                },
+                "se": {
+                    "lat": -56,
+                    "lng": -66
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Atacama Desert",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": -24.5,
+                "lng": -69.25
+            },
+            "country": "Chile"
+        },
+        {
+            "clue": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "country": "Ecuador"
+        },
+        {
+            "clue": "Pinpoint Ecuador.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "country": "Ecuador",
+            "answer": "Ecuador",
+            "bounds": {
+                "nw": {
+                    "lat": 1.5,
+                    "lng": -81.1
+                },
+                "se": {
+                    "lat": -5.1,
+                    "lng": -75.2
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "country": "Ecuador"
+        },
+        {
+            "clue": "Explorer Spot: Moai of Easter Island",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -27.1212,
+                "lng": -109.3664
+            },
+            "country": "Chile"
+        },
+        {
+            "clue": "Regional Focus: Moai of Easter Island",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": -27.1212,
+                "lng": -109.3664
+            },
+            "country": "Chile"
+        },
+        {
+            "clue": "Amazon River",
+            "category": "places",
+            "type": "river",
+            "difficulty": "hard",
+            "target": {
+                "lat": -3,
+                "lng": -60
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 5.5,
+                    "lng": -73
+                },
+                "se": {
+                    "lat": -11,
+                    "lng": -49
+                }
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Moai Statues",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -27.1212,
+                "lng": -109.3664
+            },
+            "country": "Chile"
+        },
+        {
+            "clue": "Patagonia",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": -46.5,
+                "lng": -71
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -39,
+                    "lng": -76
+                },
+                "se": {
+                    "lat": -55,
+                    "lng": -63
+                }
+            },
+            "country": "Argentina"
+        },
+        {
+            "clue": "Where is Buenos Aires in Argentina?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -34.6037,
+                "lng": -58.3816
+            },
+            "country": "Argentina",
+            "answer": "Buenos Aires"
+        },
+        {
+            "clue": "Orinoco River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 8.1,
+                "lng": -63.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 8.9,
+                    "lng": -67.8
+                },
+                "se": {
+                    "lat": 7,
+                    "lng": -60
+                }
+            },
+            "country": "Venezuela"
+        },
+        {
+            "clue": "Altiplano",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": -16.5,
+                "lng": -68.2
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -14,
+                    "lng": -71.5
+                },
+                "se": {
+                    "lat": -22.5,
+                    "lng": -65
+                }
+            },
+            "country": "Bolivia"
+        },
+        {
+            "clue": "Where is Santiago in Chile?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -33.4489,
+                "lng": -70.6693
+            },
+            "country": "Chile",
+            "answer": "Santiago"
+        },
+        {
+            "clue": "Find Galapagos Islands in Ecuador.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "country": "Ecuador",
+            "answer": "Galapagos Islands"
+        },
+        {
+            "clue": "Where is Machu Picchu in Peru?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -13.1631,
+                "lng": -72.545
+            },
+            "country": "Peru",
+            "answer": "Machu Picchu"
+        },
+        {
+            "clue": "Where is Christ the Redeemer in Brazil?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil",
+            "answer": "Christ the Redeemer"
+        },
+        {
+            "clue": "Where is Amazon River in Brazil?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -3.119,
+                "lng": -60.0217
+            },
+            "country": "Brazil",
+            "answer": "Amazon River",
+            "bounds": {
+                "nw": {
+                    "lat": 5.5,
+                    "lng": -73
+                },
+                "se": {
+                    "lat": -11,
+                    "lng": -49
+                }
+            }
+        },
+        {
+            "clue": "Where is Lake Titicaca in Peru?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -15.9254,
+                "lng": -69.3354
+            },
+            "country": "Peru",
+            "answer": "Lake Titicaca",
+            "bounds": {
+                "nw": {
+                    "lat": -15,
+                    "lng": -70.3
+                },
+                "se": {
+                    "lat": -16.7,
+                    "lng": -68.6
+                }
+            }
+        },
+        {
+            "clue": "Where is Atacama Desert in Chile?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -24.5,
+                "lng": -69.25
+            },
+            "country": "Chile",
+            "answer": "Atacama Desert",
+            "bounds": {
+                "nw": {
+                    "lat": -18,
+                    "lng": -73.5
+                },
+                "se": {
+                    "lat": -27,
+                    "lng": -68
+                }
+            }
+        },
+        {
+            "clue": "Where is GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "country": "Ecuador",
+            "answer": "GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "bounds": {
+                "nw": {
+                    "lat": 1.5,
+                    "lng": -92
+                },
+                "se": {
+                    "lat": -2.2,
+                    "lng": -88.9
+                }
+            }
+        },
+        {
+            "clue": "Where is Moai of Easter Island in Chile?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -27.1212,
+                "lng": -109.3664
+            },
+            "country": "Chile",
+            "answer": "Moai of Easter Island"
+        },
+        {
+            "clue": "Where is Aconcagua in Argentina?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -32.6532,
+                "lng": -70.0109
+            },
+            "country": "Argentina",
+            "answer": "Aconcagua"
+        },
+        {
+            "clue": "Where is Regional Focus: Machu Picchu in Peru?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -13.1631,
+                "lng": -72.545
+            },
+            "country": "Peru",
+            "answer": "Regional Focus: Machu Picchu"
+        },
+        {
+            "clue": "Where is Regional Focus: Christ the Redeemer in Brazil?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil",
+            "answer": "Regional Focus: Christ the Redeemer"
+        },
+        {
+            "clue": "Where is Explorer Spot: Where was Napoleon Bonaparte exiled after his final defeat in Saint Helena?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -15.965,
+                "lng": -5.7089
+            },
+            "country": "Saint Helena",
+            "answer": "Explorer Spot: Where was Napoleon Bonaparte exiled after his final defeat"
+        },
+        {
+            "clue": "Where is Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat in Saint Helena?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -15.965,
+                "lng": -5.7089
+            },
+            "country": "Saint Helena",
+            "answer": "Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat"
+        },
+        {
+            "clue": "Where is Explorer Spot: Where was the first FIFA World Cup held in 1930 in Uruguay?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -34.8941,
+                "lng": -56.1522
+            },
+            "country": "Uruguay",
+            "answer": "Explorer Spot: Where was the first FIFA World Cup held in 1930"
+        },
+        {
+            "clue": "Where is Regional Focus: Where was the first FIFA World Cup held in 1930 in Uruguay?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -34.8941,
+                "lng": -56.1522
+            },
+            "country": "Uruguay",
+            "answer": "Regional Focus: Where was the first FIFA World Cup held in 1930"
+        },
+        {
+            "clue": "Where is Regional Focus: Atacama Desert in Chile?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -24.5,
+                "lng": -69.25
+            },
+            "country": "Chile",
+            "answer": "Regional Focus: Atacama Desert"
+        },
+        {
+            "clue": "Where is Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "country": "Ecuador",
+            "answer": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands"
+        },
+        {
+            "clue": "Where is Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -0.9538,
+                "lng": -90.9656
+            },
+            "country": "Ecuador",
+            "answer": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands"
+        },
+        {
+            "clue": "Where is Patagonia in Argentina?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -46.5,
+                "lng": -71
+            },
+            "country": "Argentina",
+            "answer": "Patagonia",
+            "bounds": {
+                "nw": {
+                    "lat": -39,
+                    "lng": -76
+                },
+                "se": {
+                    "lat": -55,
+                    "lng": -63
+                }
+            }
+        },
+        {
+            "clue": "Where is Orinoco River in Venezuela?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 8.1,
+                "lng": -63.5
+            },
+            "country": "Venezuela",
+            "answer": "Orinoco River",
+            "bounds": {
+                "nw": {
+                    "lat": 8.9,
+                    "lng": -67.8
+                },
+                "se": {
+                    "lat": 7,
+                    "lng": -60
+                }
+            }
+        },
+        {
+            "clue": "Where is Altiplano in Bolivia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -16.5,
+                "lng": -68.2
+            },
+            "country": "Bolivia",
+            "answer": "Altiplano",
+            "bounds": {
+                "nw": {
+                    "lat": -14,
+                    "lng": -71.5
+                },
+                "se": {
+                    "lat": -22.5,
+                    "lng": -65
+                }
+            }
+        },
+        {
+            "clue": "Copacabana Beach",
+            "category": "geography",
+            "type": "beach",
+            "difficulty": "easy",
+            "target": {
+                "lat": -22.9868,
+                "lng": -43.1825
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Statue of Christ the Redeemer",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Christ the Redeemer",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -22.9519,
+                "lng": -43.2105
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Incan ruins",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -13.1631,
+                "lng": -72.545
+            },
+            "country": "Peru"
+        },
+        {
+            "clue": "Andes Mountains",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "medium",
+            "target": {
+                "lat": -23.5,
+                "lng": -65.5
+            },
+            "country": "Argentina"
+        },
+        {
+            "clue": "LenÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³is Maranhenses",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -2.5844,
+                "lng": -43.0254
+            },
+            "country": "Brazil"
+        },
+        {
+            "clue": "Where is Cartagena (Walled City) in Colombia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 10.3897,
+                "lng": -75.5144
+            },
+            "country": "Colombia",
+            "answer": "Cartagena"
+        },
+        {
+            "clue": "Pinpoint Salvador (Pelourinho) in Brazil.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -12.9714,
+                "lng": -38.5014
+            },
+            "country": "Brazil",
+            "answer": "Salvador"
+        },
+        {
+            "clue": "Where is Arequipa (White City) in Peru?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -16.3890,
+                "lng": -71.5350
+            },
+            "country": "Peru",
+            "answer": "Arequipa"
+        },
+        {
+            "clue": "Aconcagua",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": -32.6532,
+                "lng": -70.0109
+            },
+            "country": "Argentina"
+        }
+    ]
+}

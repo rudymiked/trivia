@@ -1,0 +1,1973 @@
+{
+    "locations": [
+        {
+            "clue": "Taj Mahal",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.1751,
+                "lng": 78.0421
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Mount Fuji",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.3606,
+                "lng": 138.7274
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Angkor Wat",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 13.4125,
+                "lng": 103.867
+            },
+            "country": "Cambodia"
+        },
+        {
+            "clue": "Tokyo Tower",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.6586,
+                "lng": 139.7454
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Merlion",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 1.2868,
+                "lng": 103.8545
+            },
+            "country": "Singapore"
+        },
+        {
+            "clue": "Great Wall of China",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.4319,
+                "lng": 116.5704
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Where is Hiroshima in Japan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 34.3853,
+                "lng": 132.4553
+            },
+            "country": "Japan",
+            "answer": "Hiroshima"
+        },
+        {
+            "clue": "Where is Mount Everest in Nepal?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal",
+            "answer": "Mount Everest"
+        },
+        {
+            "clue": "Pinpoint Sulawesi in Indonesia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -4.9833,
+                "lng": 119.95
+            },
+            "country": "Indonesia",
+            "answer": "Sulawesi"
+        },
+        {
+            "clue": "Yangtze River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "hard",
+            "target": {
+                "lat": 30.5728,
+                "lng": 117.27
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 34.5,
+                    "lng": 100
+                },
+                "se": {
+                    "lat": 29,
+                    "lng": 122
+                }
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Mount Everest",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal"
+        },
+        {
+            "clue": "K2",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.8808,
+                "lng": 76.5155
+            },
+            "country": "Pakistan"
+        },
+        {
+            "clue": "Gobi Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 48,
+                    "lng": 97
+                },
+                "se": {
+                    "lat": 37,
+                    "lng": 113
+                }
+            },
+            "country": "Mongolia"
+        },
+        {
+            "clue": "Shwedagon Pagoda",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 16.7983,
+                "lng": 96.1496
+            },
+            "country": "Myanmar"
+        },
+        {
+            "clue": "Where is Beijing in China?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 39.9163,
+                "lng": 116.3972
+            },
+            "country": "China",
+            "answer": "Beijing"
+        },
+        {
+            "clue": "Mekong River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "hard",
+            "target": {
+                "lat": 10.0452,
+                "lng": 105.7469
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 33.7,
+                    "lng": 100
+                },
+                "se": {
+                    "lat": 8.5,
+                    "lng": 107
+                }
+            },
+            "country": "Vietnam"
+        },
+        {
+            "clue": "Bay of Bengal",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 15.5,
+                "lng": 88
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 23,
+                    "lng": 80
+                },
+                "se": {
+                    "lat": 5,
+                    "lng": 100
+                }
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Explorer Spot: Taj Mahal",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.1751,
+                "lng": 78.0421
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Find India.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 27.1751,
+                "lng": 78.0421
+            },
+            "country": "India",
+            "answer": "India",
+            "bounds": {
+                "nw": {
+                    "lat": 35.5,
+                    "lng": 68.1
+                },
+                "se": {
+                    "lat": 6.5,
+                    "lng": 97.4
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Taj Mahal",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 27.1751,
+                "lng": 78.0421
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Explorer Spot: Mount Fuji",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.3606,
+                "lng": 138.7274
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Find Japan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.3606,
+                "lng": 138.7274
+            },
+            "country": "Japan",
+            "answer": "Japan",
+            "bounds": {
+                "nw": {
+                    "lat": 45.6,
+                    "lng": 122.9
+                },
+                "se": {
+                    "lat": 24,
+                    "lng": 154
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Mount Fuji",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.3606,
+                "lng": 138.7274
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Explorer Spot: Angkor Wat",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 13.4125,
+                "lng": 103.867
+            },
+            "country": "Cambodia"
+        },
+        {
+            "clue": "Pinpoint Cambodia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 13.4125,
+                "lng": 103.867
+            },
+            "country": "Cambodia",
+            "answer": "Cambodia",
+            "bounds": {
+                "nw": {
+                    "lat": 14.7,
+                    "lng": 102.3
+                },
+                "se": {
+                    "lat": 10.3,
+                    "lng": 107.6
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Angkor Wat",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 13.4125,
+                "lng": 103.867
+            },
+            "country": "Cambodia"
+        },
+        {
+            "clue": "Explorer Spot: Tokyo Tower",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.6586,
+                "lng": 139.7454
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Regional Focus: Tokyo Tower",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.6586,
+                "lng": 139.7454
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Explorer Spot: Merlion",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 1.2868,
+                "lng": 103.8545
+            },
+            "country": "Singapore"
+        },
+        {
+            "clue": "Find Singapore.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 1.2868,
+                "lng": 103.8545
+            },
+            "country": "Singapore",
+            "answer": "Singapore",
+            "bounds": {
+                "nw": {
+                    "lat": 1.47,
+                    "lng": 103.6
+                },
+                "se": {
+                    "lat": 1.16,
+                    "lng": 104.1
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Merlion",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 1.2868,
+                "lng": 103.8545
+            },
+            "country": "Singapore"
+        },
+        {
+            "clue": "Explorer Spot: Great Wall of China",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.4319,
+                "lng": 116.5704
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Pinpoint China.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 40.4319,
+                "lng": 116.5704
+            },
+            "country": "China",
+            "answer": "China",
+            "bounds": {
+                "nw": {
+                    "lat": 53.6,
+                    "lng": 73.5
+                },
+                "se": {
+                    "lat": 18.1,
+                    "lng": 134.8
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Great Wall of China",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.4319,
+                "lng": 116.5704
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Explorer Spot: In which city was the first atomic bomb dropped during WWII",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 34.3853,
+                "lng": 132.4553
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Regional Focus: In which city was the first atomic bomb dropped during WWII",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 34.3853,
+                "lng": 132.4553
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Explorer Spot: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal"
+        },
+        {
+            "clue": "Where is Nepal?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal",
+            "answer": "Nepal",
+            "bounds": {
+                "nw": {
+                    "lat": 30.5,
+                    "lng": 80
+                },
+                "se": {
+                    "lat": 26.3,
+                    "lng": 88.2
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal"
+        },
+        {
+            "clue": "Explorer Spot: Where is the oldest known cave painting located (over 45,000 years old)",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -4.9833,
+                "lng": 119.95
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Where is Indonesia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -4.9833,
+                "lng": 119.95
+            },
+            "country": "Indonesia",
+            "answer": "Indonesia",
+            "bounds": {
+                "nw": {
+                    "lat": 6.2,
+                    "lng": 94.8
+                },
+                "se": {
+                    "lat": -11.2,
+                    "lng": 141
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Where is the oldest known cave painting located (over 45,000 years old)",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": -4.9833,
+                "lng": 119.95
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Explorer Spot: Yangtze River",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 30.5728,
+                "lng": 117.27
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Regional Focus: Yangtze River",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 30.5728,
+                "lng": 117.27
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Explorer Spot: Mount Everest",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal"
+        },
+        {
+            "clue": "Regional Focus: Mount Everest",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal"
+        },
+        {
+            "clue": "Explorer Spot: K2",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.8808,
+                "lng": 76.5155
+            },
+            "country": "Pakistan"
+        },
+        {
+            "clue": "Where is Pakistan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.8808,
+                "lng": 76.5155
+            },
+            "country": "Pakistan",
+            "answer": "Pakistan",
+            "bounds": {
+                "nw": {
+                    "lat": 37.1,
+                    "lng": 60.9
+                },
+                "se": {
+                    "lat": 23.7,
+                    "lng": 77.8
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: K2",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.8808,
+                "lng": 76.5155
+            },
+            "country": "Pakistan"
+        },
+        {
+            "clue": "Explorer Spot: Gobi Desert",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "country": "Mongolia"
+        },
+        {
+            "clue": "Find Mongolia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "country": "Mongolia",
+            "answer": "Mongolia",
+            "bounds": {
+                "nw": {
+                    "lat": 52.1,
+                    "lng": 87.7
+                },
+                "se": {
+                    "lat": 41.6,
+                    "lng": 119.9
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Gobi Desert",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "country": "Mongolia"
+        },
+        {
+            "clue": "Explorer Spot: Shwedagon Pagoda",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 16.7983,
+                "lng": 96.1496
+            },
+            "country": "Myanmar"
+        },
+        {
+            "clue": "Where is Myanmar?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 16.7983,
+                "lng": 96.1496
+            },
+            "country": "Myanmar",
+            "answer": "Myanmar",
+            "bounds": {
+                "nw": {
+                    "lat": 28.5,
+                    "lng": 92.1
+                },
+                "se": {
+                    "lat": 9.8,
+                    "lng": 101.2
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Shwedagon Pagoda",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 16.7983,
+                "lng": 96.1496
+            },
+            "country": "Myanmar"
+        },
+        {
+            "clue": "Sigiriya",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 7.957,
+                "lng": 80.7603
+            },
+            "country": "Sri Lanka"
+        },
+        {
+            "clue": "Borneo",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "medium",
+            "target": {
+                "lat": 0.9619,
+                "lng": 114.5548
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 7.3,
+                    "lng": 108.8
+                },
+                "se": {
+                    "lat": -4.5,
+                    "lng": 119.3
+                }
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Forbidden City",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.9163,
+                "lng": 116.3972
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Karakum Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "hard",
+            "target": {
+                "lat": 39,
+                "lng": 59.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 42.6,
+                    "lng": 54
+                },
+                "se": {
+                    "lat": 36.2,
+                    "lng": 63.5
+                }
+            },
+            "country": "Turkmenistan"
+        },
+        {
+            "clue": "Himeji Castle",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 34.8394,
+                "lng": 134.6939
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Potala Palace",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 29.6578,
+                "lng": 91.1175
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Bagan",
+            "category": "places",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 21.1717,
+                "lng": 94.8585
+            },
+            "country": "Myanmar"
+        },
+        {
+            "clue": "Find Astana in Kazakhstan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.1694,
+                "lng": 71.4491
+            },
+            "country": "Kazakhstan",
+            "answer": "Astana"
+        },
+        {
+            "clue": "Where is Kuala Lumpur in Malaysia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 3.1579,
+                "lng": 101.7116
+            },
+            "country": "Malaysia",
+            "answer": "Kuala Lumpur"
+        },
+        {
+            "clue": "Find Kathmandu in Nepal.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 27.7172,
+                "lng": 85.324
+            },
+            "country": "Nepal",
+            "answer": "Kathmandu"
+        },
+        {
+            "clue": "Find Ho Chi Minh City in Vietnam.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 10.8231,
+                "lng": 106.6297
+            },
+            "country": "Vietnam",
+            "answer": "Ho Chi Minh City"
+        },
+        {
+            "clue": "Lotus Temple",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 28.5535,
+                "lng": 77.2588
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Wat Arun",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 13.7437,
+                "lng": 100.4888
+            },
+            "country": "Thailand"
+        },
+        {
+            "clue": "Prambanan",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -7.752,
+                "lng": 110.4915
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Fushimi Inari Taisha",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 34.9671,
+                "lng": 135.7727
+            },
+            "country": "Japan"
+        },
+        {
+            "clue": "Temple of Heaven",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.8822,
+                "lng": 116.4065
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Borobudur",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -7.6079,
+                "lng": 110.2038
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Jokhang Temple",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 29.652,
+                "lng": 91.1328
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Where is Taj Mahal in India?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.1751,
+                "lng": 78.0421
+            },
+            "country": "India",
+            "answer": "Taj Mahal"
+        },
+        {
+            "clue": "Where is Mount Fuji in Japan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.3606,
+                "lng": 138.7274
+            },
+            "country": "Japan",
+            "answer": "Mount Fuji"
+        },
+        {
+            "clue": "Where is Angkor Wat in Cambodia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 13.4125,
+                "lng": 103.867
+            },
+            "country": "Cambodia",
+            "answer": "Angkor Wat"
+        },
+        {
+            "clue": "Where is Merlion in Singapore?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 1.2868,
+                "lng": 103.8545
+            },
+            "country": "Singapore",
+            "answer": "Merlion"
+        },
+        {
+            "clue": "Where is Great Wall of China in China?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.4319,
+                "lng": 116.5704
+            },
+            "country": "China",
+            "answer": "Great Wall of China"
+        },
+        {
+            "clue": "Where is Yangtze River in China?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 30.5728,
+                "lng": 117.27
+            },
+            "country": "China",
+            "answer": "Yangtze River",
+            "bounds": {
+                "nw": {
+                    "lat": 34.5,
+                    "lng": 100
+                },
+                "se": {
+                    "lat": 29,
+                    "lng": 122
+                }
+            }
+        },
+        {
+            "clue": "Where is K2 in Pakistan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.8808,
+                "lng": 76.5155
+            },
+            "country": "Pakistan",
+            "answer": "K2"
+        },
+        {
+            "clue": "Where is Gobi Desert in Mongolia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "country": "Mongolia",
+            "answer": "Gobi Desert",
+            "bounds": {
+                "nw": {
+                    "lat": 48,
+                    "lng": 97
+                },
+                "se": {
+                    "lat": 37,
+                    "lng": 113
+                }
+            }
+        },
+        {
+            "clue": "Where is Shwedagon Pagoda in Myanmar?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 16.7983,
+                "lng": 96.1496
+            },
+            "country": "Myanmar",
+            "answer": "Shwedagon Pagoda"
+        },
+        {
+            "clue": "Where is Mekong River in Vietnam?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 10.0452,
+                "lng": 105.7469
+            },
+            "country": "Vietnam",
+            "answer": "Mekong River",
+            "bounds": {
+                "nw": {
+                    "lat": 33.7,
+                    "lng": 100
+                },
+                "se": {
+                    "lat": 8.5,
+                    "lng": 107
+                }
+            }
+        },
+        {
+            "clue": "Where is Bay of Bengal in India?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 15.5,
+                "lng": 88
+            },
+            "country": "India",
+            "answer": "Bay of Bengal",
+            "bounds": {
+                "nw": {
+                    "lat": 23,
+                    "lng": 80
+                },
+                "se": {
+                    "lat": 5,
+                    "lng": 100
+                }
+            }
+        },
+        {
+            "clue": "Where is Regional Focus: Taj Mahal in India?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.1751,
+                "lng": 78.0421
+            },
+            "country": "India",
+            "answer": "Regional Focus: Taj Mahal"
+        },
+        {
+            "clue": "Where is Regional Focus: Mount Fuji in Japan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.3606,
+                "lng": 138.7274
+            },
+            "country": "Japan",
+            "answer": "Regional Focus: Mount Fuji"
+        },
+        {
+            "clue": "Where is Regional Focus: Angkor Wat in Cambodia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 13.4125,
+                "lng": 103.867
+            },
+            "country": "Cambodia",
+            "answer": "Regional Focus: Angkor Wat"
+        },
+        {
+            "clue": "Where is Regional Focus: Merlion in Singapore?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 1.2868,
+                "lng": 103.8545
+            },
+            "country": "Singapore",
+            "answer": "Regional Focus: Merlion"
+        },
+        {
+            "clue": "Where is Regional Focus: Great Wall of China in China?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.4319,
+                "lng": 116.5704
+            },
+            "country": "China",
+            "answer": "Regional Focus: Great Wall of China"
+        },
+        {
+            "clue": "Where is Explorer Spot: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953 in Nepal?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal",
+            "answer": "Explorer Spot: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953"
+        },
+        {
+            "clue": "Where is Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953 in Nepal?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 27.9881,
+                "lng": 86.925
+            },
+            "country": "Nepal",
+            "answer": "Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953"
+        },
+        {
+            "clue": "Where is Explorer Spot: Where is the oldest known cave painting located (over 45,000 years old) in Indonesia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -4.9833,
+                "lng": 119.95
+            },
+            "country": "Indonesia",
+            "answer": "Explorer Spot: Where is the oldest known cave painting located (over 45,000 years old)"
+        },
+        {
+            "clue": "Where is Regional Focus: Where is the oldest known cave painting located (over 45,000 years old) in Indonesia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -4.9833,
+                "lng": 119.95
+            },
+            "country": "Indonesia",
+            "answer": "Regional Focus: Where is the oldest known cave painting located (over 45,000 years old)"
+        },
+        {
+            "clue": "Where is Explorer Spot: K2 in Pakistan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.8808,
+                "lng": 76.5155
+            },
+            "country": "Pakistan",
+            "answer": "Explorer Spot: K2"
+        },
+        {
+            "clue": "Where is Regional Focus: K2 in Pakistan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.8808,
+                "lng": 76.5155
+            },
+            "country": "Pakistan",
+            "answer": "Regional Focus: K2"
+        },
+        {
+            "clue": "Where is Explorer Spot: Gobi Desert in Mongolia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "country": "Mongolia",
+            "answer": "Explorer Spot: Gobi Desert"
+        },
+        {
+            "clue": "Where is Regional Focus: Gobi Desert in Mongolia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "country": "Mongolia",
+            "answer": "Regional Focus: Gobi Desert"
+        },
+        {
+            "clue": "Where is Regional Focus: Shwedagon Pagoda in Myanmar?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 16.7983,
+                "lng": 96.1496
+            },
+            "country": "Myanmar",
+            "answer": "Regional Focus: Shwedagon Pagoda"
+        },
+        {
+            "clue": "Where is Sigiriya in Sri Lanka?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 7.957,
+                "lng": 80.7603
+            },
+            "country": "Sri Lanka",
+            "answer": "Sigiriya"
+        },
+        {
+            "clue": "Where is Borneo in Indonesia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 0.9619,
+                "lng": 114.5548
+            },
+            "country": "Indonesia",
+            "answer": "Borneo",
+            "bounds": {
+                "nw": {
+                    "lat": 7.3,
+                    "lng": 108.8
+                },
+                "se": {
+                    "lat": -4.5,
+                    "lng": 119.3
+                }
+            }
+        },
+        {
+            "clue": "Where is Karakum Desert in Turkmenistan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 39,
+                "lng": 59.5
+            },
+            "country": "Turkmenistan",
+            "answer": "Karakum Desert",
+            "bounds": {
+                "nw": {
+                    "lat": 42.6,
+                    "lng": 54
+                },
+                "se": {
+                    "lat": 36.2,
+                    "lng": 63.5
+                }
+            }
+        },
+        {
+            "clue": "Where is Wat Arun in Thailand?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 13.7437,
+                "lng": 100.4888
+            },
+            "country": "Thailand",
+            "answer": "Wat Arun"
+        },
+        {
+            "clue": "Where is Bangkok in Thailand?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 13.7563,
+                "lng": 100.5018
+            },
+            "country": "Thailand",
+            "answer": "Bangkok"
+        },
+        {
+            "clue": "Where is Tokyo in Japan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.6762,
+                "lng": 139.6503
+            },
+            "country": "Japan",
+            "answer": "Tokyo"
+        },
+        {
+            "clue": "Indian Ocean",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "easy",
+            "target": {
+                "lat": -20,
+                "lng": 70
+            },
+            "country": "Indian Ocean"
+        },
+        {
+            "clue": "Forbidden City",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.9167,
+                "lng": 116.3972
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Great Wall checkpoint",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.4319,
+                "lng": 116.5704
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Temple of Heaven",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.8814,
+                "lng": 116.4074
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Bagan Temple Complex",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 21.1717,
+                "lng": 94.8589
+            },
+            "country": "Myanmar"
+        },
+        {
+            "clue": "Borobudur",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -7.6079,
+                "lng": 110.2038
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Find Hong Kong (Victoria Peak) in China.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 22.3193,
+                "lng": 114.1694
+            },
+            "country": "China",
+            "answer": "Hong Kong"
+        },
+        {
+            "clue": "Himalayas",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "medium",
+            "target": {
+                "lat": 27.5,
+                "lng": 86.5
+            },
+            "country": "Nepal"
+        },
+        {
+            "clue": "Ganges River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 25.3,
+                "lng": 87
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 30,
+                    "lng": 78
+                },
+                "se": {
+                    "lat": 21,
+                    "lng": 90
+                }
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Mekong Delta",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 9.5,
+                "lng": 105.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 12,
+                    "lng": 104
+                },
+                "se": {
+                    "lat": 8,
+                    "lng": 108
+                }
+            },
+            "country": "Vietnam"
+        },
+        {
+            "clue": "Thar Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "medium",
+            "target": {
+                "lat": 28,
+                "lng": 72
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 32,
+                    "lng": 68
+                },
+                "se": {
+                    "lat": 26,
+                    "lng": 76
+                }
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Java",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "medium",
+            "target": {
+                "lat": -7.5489,
+                "lng": 110.3592
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -5.8,
+                    "lng": 105
+                },
+                "se": {
+                    "lat": -8.8,
+                    "lng": 115
+                }
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Sumatra",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "medium",
+            "target": {
+                "lat": 0.5,
+                "lng": 101.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 5.8,
+                    "lng": 95
+                },
+                "se": {
+                    "lat": -5,
+                    "lng": 106
+                }
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Borneo",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "medium",
+            "target": {
+                "lat": 0,
+                "lng": 112
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 5,
+                    "lng": 108
+                },
+                "se": {
+                    "lat": -5,
+                    "lng": 119
+                }
+            },
+            "country": "Indonesia"
+        },
+        {
+            "clue": "Zhangjiajie",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 29.3226,
+                "lng": 110.4899
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Zhangye Danxia",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 38.7642,
+                "lng": 100.8955
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Konark Sun Temple",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 19.8808,
+                "lng": 86.0906
+            },
+            "country": "India"
+        },
+        {
+            "clue": "Batu Caves",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 3.2426,
+                "lng": 101.6964
+            },
+            "country": "Malaysia"
+        },
+        {
+            "clue": "Where is Bali (Tanah Lot Temple) in Indonesia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -8.6268,
+                "lng": 115.2338
+            },
+            "country": "Indonesia",
+            "answer": "Bali"
+        },
+        {
+            "clue": "Pinpoint Kyoto (Golden Pavilion) in Japan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.0116,
+                "lng": 135.7681
+            },
+            "country": "Japan",
+            "answer": "Kyoto"
+        },
+        {
+            "clue": "Find Chiang Mai (Golden Triangle) in Thailand.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 18.788,
+                "lng": 98.9853
+            },
+            "country": "Thailand",
+            "answer": "Chiang Mai"
+        },
+        {
+            "clue": "Where is Hanoi (Hoan Kiem Lake) in Vietnam?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 21.0285,
+                "lng": 105.8542
+            },
+            "country": "Vietnam",
+            "answer": "Hanoi"
+        },
+        {
+            "clue": "Pinpoint Da Nang (Marble Mountains) in Vietnam.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 16.0678,
+                "lng": 108.2212
+            },
+            "country": "Vietnam",
+            "answer": "Da Nang"
+        },
+        {
+            "clue": "Find Sapa (Fansipan Mountain) in Vietnam.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 22.3402,
+                "lng": 103.8343
+            },
+            "country": "Vietnam",
+            "answer": "Sapa"
+        },
+        {
+            "clue": "Where is Luang Prabang in Laos?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 19.8845,
+                "lng": 102.1348
+            },
+            "country": "Laos",
+            "answer": "Luang Prabang"
+        },
+        {
+            "clue": "Pinpoint Angkor in Cambodia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 13.3667,
+                "lng": 103.8333
+            },
+            "country": "Cambodia",
+            "answer": "Angkor"
+        },
+        {
+            "clue": "Find Siem Reap (Angkor Wat) in Cambodia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 13.3667,
+                "lng": 103.8333
+            },
+            "country": "Cambodia",
+            "answer": "Siem Reap"
+        },
+        {
+            "clue": "Where is Yangon (Shwedagon Pagoda) in Myanmar?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 16.8661,
+                "lng": 96.1951
+            },
+            "country": "Myanmar",
+            "answer": "Yangon"
+        },
+        {
+            "clue": "Pinpoint Mandalay (Royal Palace) in Myanmar.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 21.9588,
+                "lng": 96.0891
+            },
+            "country": "Myanmar",
+            "answer": "Mandalay"
+        },
+        {
+            "clue": "Find Jaipur (Hawa Mahal) in India.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 26.9124,
+                "lng": 75.8262
+            },
+            "country": "India",
+            "answer": "Jaipur"
+        },
+        {
+            "clue": "Where is Varanasi (Ganges River) in India?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 25.2655,
+                "lng": 82.9776
+            },
+            "country": "India",
+            "answer": "Varanasi"
+        },
+        {
+            "clue": "Pinpoint Agra (Taj Mahal) in India.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 27.1751,
+                "lng": 78.0421
+            },
+            "country": "India",
+            "answer": "Agra"
+        },
+        {
+            "clue": "Find Amritsar (Golden Temple) in India.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 31.6200,
+                "lng": 74.8765
+            },
+            "country": "India",
+            "answer": "Amritsar"
+        },
+        {
+            "clue": "Lake Issyk-Kul",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.5,
+                "lng": 77
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 42.7,
+                    "lng": 76
+                },
+                "se": {
+                    "lat": 42.3,
+                    "lng": 78
+                }
+            },
+            "country": "Kyrgyzstan"
+        },
+        {
+            "clue": "Taklamakan Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "hard",
+            "target": {
+                "lat": 39,
+                "lng": 82
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 42.5,
+                    "lng": 74
+                },
+                "se": {
+                    "lat": 35,
+                    "lng": 90
+                }
+            },
+            "country": "China"
+        },
+        {
+            "clue": "Gobi",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.5944,
+                "lng": 103.4314
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 48,
+                    "lng": 97
+                },
+                "se": {
+                    "lat": 37,
+                    "lng": 113
+                }
+            },
+            "country": "Mongolia"
+        },
+        {
+            "clue": "Maldives",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "hard",
+            "target": {
+                "lat": 4.2105,
+                "lng": 73.5087
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 6.7,
+                    "lng": 72.6
+                },
+                "se": {
+                    "lat": 0,
+                    "lng": 73.8
+                }
+            },
+            "country": "Maldives"
+        },
+        {
+            "clue": "Andaman Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "hard",
+            "target": {
+                "lat": 8,
+                "lng": 96
+            },
+            "country": "South Asia"
+        },
+        {
+            "clue": "Coral Triangle",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "hard",
+            "target": {
+                "lat": 0,
+                "lng": 120
+            },
+            "country": "Southeast Asia"
+        },
+        {
+            "clue": "Bering Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "hard",
+            "target": {
+                "lat": 62,
+                "lng": -175
+            },
+            "country": "North Pacific"
+        }
+    ]
+}

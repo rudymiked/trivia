@@ -1,0 +1,580 @@
+{
+    "locations": [
+        {
+            "clue": "Sydney Opera House",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": -33.8568,
+                "lng": 151.2153
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Uluru (Ayers Rock)",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -25.3444,
+                "lng": 131.0369
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Bora Bora",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "hard",
+            "target": {
+                "lat": -16.5004,
+                "lng": -151.7415
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -16.3,
+                    "lng": -151.95
+                },
+                "se": {
+                    "lat": -16.7,
+                    "lng": -151.5
+                }
+            },
+            "country": "French Polynesia"
+        },
+        {
+            "clue": "Great Barrier Reef",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "easy",
+            "target": {
+                "lat": -18.2871,
+                "lng": 147.6992
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -9.4,
+                    "lng": 142.6
+                },
+                "se": {
+                    "lat": -24.8,
+                    "lng": 154.1
+                }
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Mariana Trench",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "hard",
+            "target": {
+                "lat": 11.3493,
+                "lng": 142.1996
+            },
+            "country": "Pacific Ocean"
+        },
+        {
+            "clue": "Explorer Spot: Sydney Opera House",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -33.8568,
+                "lng": 151.2153
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Pinpoint Australia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -33.8568,
+                "lng": 151.2153
+            },
+            "country": "Australia",
+            "answer": "Australia",
+            "bounds": {
+                "nw": {
+                    "lat": -10,
+                    "lng": 113
+                },
+                "se": {
+                    "lat": -44,
+                    "lng": 154
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Sydney Opera House",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": -33.8568,
+                "lng": 151.2153
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Explorer Spot: Uluru (Ayers Rock)",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -25.3444,
+                "lng": 131.0369
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Regional Focus: Uluru (Ayers Rock)",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": -25.3444,
+                "lng": 131.0369
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Explorer Spot: Bora Bora",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": -16.5004,
+                "lng": -151.7415
+            },
+            "country": "French Polynesia"
+        },
+        {
+            "clue": "Pinpoint French Polynesia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -16.5004,
+                "lng": -151.7415
+            },
+            "country": "French Polynesia",
+            "answer": "French Polynesia",
+            "bounds": {
+                "nw": {
+                    "lat": -7,
+                    "lng": -155
+                },
+                "se": {
+                    "lat": -28,
+                    "lng": -134
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Bora Bora",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": -16.5004,
+                "lng": -151.7415
+            },
+            "country": "French Polynesia"
+        },
+        {
+            "clue": "Explorer Spot: Great Barrier Reef",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -18.2871,
+                "lng": 147.6992
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Regional Focus: Great Barrier Reef",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": -18.2871,
+                "lng": 147.6992
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Explorer Spot: Mariana Trench",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 11.3493,
+                "lng": 142.1996
+            },
+            "country": "Pacific Ocean"
+        },
+        {
+            "clue": "Find Pacific Ocean.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 11.3493,
+                "lng": 142.1996
+            },
+            "country": "Pacific Ocean",
+            "answer": "Pacific Ocean",
+            "bounds": {
+                "nw": {
+                    "lat": 66,
+                    "lng": -180
+                },
+                "se": {
+                    "lat": -60,
+                    "lng": 180
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Mariana Trench",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 11.3493,
+                "lng": 142.1996
+            },
+            "country": "Pacific Ocean"
+        },
+        {
+            "clue": "Great Barrier Reef",
+            "category": "places",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": -18.2871,
+                "lng": 147.6992
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -9.4,
+                    "lng": 142.6
+                },
+                "se": {
+                    "lat": -24.8,
+                    "lng": 154.1
+                }
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Pinpoint Wellington in New Zealand.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -41.2865,
+                "lng": 174.7762
+            },
+            "country": "New Zealand",
+            "answer": "Wellington"
+        },
+        {
+            "clue": "Tasman Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "easy",
+            "target": {
+                "lat": -40,
+                "lng": 160
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Great Dividing Range",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "easy",
+            "target": {
+                "lat": -28.5,
+                "lng": 151.8
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Where is Sydney Opera House in Australia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -33.8568,
+                "lng": 151.2153
+            },
+            "country": "Australia",
+            "answer": "Sydney Opera House"
+        },
+        {
+            "clue": "Where is Bora Bora in French Polynesia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -16.5004,
+                "lng": -151.7415
+            },
+            "country": "French Polynesia",
+            "answer": "Bora Bora",
+            "bounds": {
+                "nw": {
+                    "lat": -16.3,
+                    "lng": -151.95
+                },
+                "se": {
+                    "lat": -16.7,
+                    "lng": -151.5
+                }
+            }
+        },
+        {
+            "clue": "Where is Great Barrier Reef in Australia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -18.2871,
+                "lng": 147.6992
+            },
+            "country": "Australia",
+            "answer": "Great Barrier Reef",
+            "bounds": {
+                "nw": {
+                    "lat": -9.4,
+                    "lng": 142.6
+                },
+                "se": {
+                    "lat": -24.8,
+                    "lng": 154.1
+                }
+            }
+        },
+        {
+            "clue": "Where is Mariana Trench in Pacific Ocean?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 11.3493,
+                "lng": 142.1996
+            },
+            "country": "Pacific Ocean",
+            "answer": "Mariana Trench"
+        },
+        {
+            "clue": "Where is Regional Focus: Sydney Opera House in Australia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -33.8568,
+                "lng": 151.2153
+            },
+            "country": "Australia",
+            "answer": "Regional Focus: Sydney Opera House"
+        },
+        {
+            "clue": "Where is Explorer Spot: Mariana Trench in Pacific Ocean?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 11.3493,
+                "lng": 142.1996
+            },
+            "country": "Pacific Ocean",
+            "answer": "Explorer Spot: Mariana Trench"
+        },
+        {
+            "clue": "Where is Regional Focus: Mariana Trench in Pacific Ocean?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 11.3493,
+                "lng": 142.1996
+            },
+            "country": "Pacific Ocean",
+            "answer": "Regional Focus: Mariana Trench"
+        },
+        {
+            "clue": "Where is Great Dividing Range in Australia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -28.5,
+                "lng": 151.8
+            },
+            "country": "Australia",
+            "answer": "Great Dividing Range"
+        },
+        {
+            "clue": "Where is Melbourne in Australia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -37.8136,
+                "lng": 144.9631
+            },
+            "country": "Australia",
+            "answer": "Melbourne"
+        },
+        {
+            "clue": "Where is Sydney in Australia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": -33.8688,
+                "lng": 151.209
+            },
+            "country": "Australia",
+            "answer": "Sydney"
+        },
+        {
+            "clue": "Where is Auckland (Sky Tower) in New Zealand?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": -37.0082,
+                "lng": 174.7849
+            },
+            "country": "New Zealand",
+            "answer": "Auckland"
+        },
+        {
+            "clue": "New Zealand",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "medium",
+            "target": {
+                "lat": -41,
+                "lng": 172
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -34,
+                    "lng": 166
+                },
+                "se": {
+                    "lat": -47,
+                    "lng": 179
+                }
+            },
+            "country": "New Zealand"
+        },
+        {
+            "clue": "Wave Rock",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -32.3795,
+                "lng": 118.0864
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Tunnel Beach",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -45.4295,
+                "lng": 170.5286
+            },
+            "country": "New Zealand"
+        },
+        {
+            "clue": "Waitomo Caves",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": -37.8873,
+                "lng": 175.1029
+            },
+            "country": "New Zealand"
+        },
+        {
+            "clue": "Simpson Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "hard",
+            "target": {
+                "lat": -23.5,
+                "lng": 138.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -22,
+                    "lng": 136
+                },
+                "se": {
+                    "lat": -25,
+                    "lng": 142
+                }
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Great Victoria Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "hard",
+            "target": {
+                "lat": -29,
+                "lng": 128
+            },
+            "bounds": {
+                "nw": {
+                    "lat": -26,
+                    "lng": 123
+                },
+                "se": {
+                    "lat": -32,
+                    "lng": 133
+                }
+            },
+            "country": "Australia"
+        },
+        {
+            "clue": "Palau",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "hard",
+            "target": {
+                "lat": 7.315,
+                "lng": 134.4824
+            },
+            "country": "Palau"
+        },
+        {
+            "clue": "Ross Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "hard",
+            "target": {
+                "lat": -75,
+                "lng": 175
+            },
+            "country": "Antarctica"
+        }
+    ]
+}

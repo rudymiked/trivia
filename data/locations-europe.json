@@ -1,0 +1,3418 @@
+{
+    "locations": [
+        {
+            "clue": "Eiffel Tower",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.8584,
+                "lng": 2.2945
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Big Ben",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5007,
+                "lng": -0.1246
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Colosseum",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.8902,
+                "lng": 12.4922
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Sagrada Familia",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Stonehenge",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.1789,
+                "lng": -1.8262
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Santorini",
+            "category": "places",
+            "type": "city",
+            "difficulty": "medium",
+            "target": {
+                "lat": 36.3932,
+                "lng": 25.4615
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Acropolis",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.9715,
+                "lng": 23.7267
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Brandenburg Gate",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 52.5163,
+                "lng": 13.3777
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Kremlin",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 55.752,
+                "lng": 37.6175
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Neuschwanstein Castle",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 47.5576,
+                "lng": 10.7498
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Louvre Museum",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.8606,
+                "lng": 2.3376
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Leaning Tower of Pisa",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.723,
+                "lng": 10.3966
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Find Southampton in United Kingdom.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 50.8998,
+                "lng": -1.4044
+            },
+            "country": "United Kingdom",
+            "answer": "Southampton"
+        },
+        {
+            "clue": "Find Athens in Greece.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.9838,
+                "lng": 23.7275
+            },
+            "country": "Greece",
+            "answer": "Athens"
+        },
+        {
+            "clue": "Pinpoint Vinci in Italy.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.7833,
+                "lng": 10.9167
+            },
+            "country": "Italy",
+            "answer": "Vinci"
+        },
+        {
+            "clue": "Find British Museum, London in United Kingdom.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.5194,
+                "lng": -0.127
+            },
+            "country": "United Kingdom",
+            "answer": "British Museum, London"
+        },
+        {
+            "clue": "Find Normandy in France.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 49.368,
+                "lng": -0.8731
+            },
+            "country": "France",
+            "answer": "Normandy"
+        },
+        {
+            "clue": "Find Pamplona in Spain.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.8125,
+                "lng": -1.6458
+            },
+            "country": "Spain",
+            "answer": "Pamplona"
+        },
+        {
+            "clue": "Where is Amsterdam in Netherlands?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.3752,
+                "lng": 4.884
+            },
+            "country": "Netherlands",
+            "answer": "Amsterdam"
+        },
+        {
+            "clue": "Find Pripyat/Chernobyl in Ukraine.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.389,
+                "lng": 30.0979
+            },
+            "country": "Ukraine",
+            "answer": "Pripyat/Chernobyl"
+        },
+        {
+            "clue": "Pinpoint Runnymede in United Kingdom.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.4316,
+                "lng": -0.5632
+            },
+            "country": "United Kingdom",
+            "answer": "Runnymede"
+        },
+        {
+            "clue": "Find Florence in Italy.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 43.7696,
+                "lng": 11.2558
+            },
+            "country": "Italy",
+            "answer": "Florence"
+        },
+        {
+            "clue": "Where is Berlin in Germany?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.52,
+                "lng": 13.405
+            },
+            "country": "Germany",
+            "answer": "Berlin"
+        },
+        {
+            "clue": "Pinpoint The Hague in Netherlands.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 52.0867,
+                "lng": 4.3146
+            },
+            "country": "Netherlands",
+            "answer": "The Hague"
+        },
+        {
+            "clue": "Find Mount Vesuvius in Italy.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.8218,
+                "lng": 14.426
+            },
+            "country": "Italy",
+            "answer": "Mount Vesuvius"
+        },
+        {
+            "clue": "Find London in United Kingdom.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            },
+            "country": "United Kingdom",
+            "answer": "London"
+        },
+        {
+            "clue": "Pinpoint Oslo in Norway.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 59.9139,
+                "lng": 10.7522
+            },
+            "country": "Norway",
+            "answer": "Oslo"
+        },
+        {
+            "clue": "Danube River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 48.8,
+                    "lng": 8
+                },
+                "se": {
+                    "lat": 43.2,
+                    "lng": 29.8
+                }
+            },
+            "country": "Austria"
+        },
+        {
+            "clue": "Matterhorn",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "medium",
+            "target": {
+                "lat": 45.9763,
+                "lng": 7.6586
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Lake Baikal",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "hard",
+            "target": {
+                "lat": 53.5587,
+                "lng": 108.165
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Strait of Gibraltar",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.9745,
+                "lng": -5.5
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Mont Saint-Michel",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 48.6361,
+                "lng": -1.5115
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Alhambra",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.1761,
+                "lng": -3.5881
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Buda Castle",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.4967,
+                "lng": 19.0399
+            },
+            "country": "Hungary"
+        },
+        {
+            "clue": "Find Chernobyl in Ukraine.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.2766,
+                "lng": 30.2219
+            },
+            "country": "Ukraine",
+            "answer": "Chernobyl"
+        },
+        {
+            "clue": "Mount Elbrus",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.3499,
+                "lng": 42.4453
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Sicily",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.5999,
+                "lng": 14.0154
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 38.3,
+                    "lng": 12
+                },
+                "se": {
+                    "lat": 36.6,
+                    "lng": 15.7
+                }
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Iceland",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "easy",
+            "target": {
+                "lat": 64.9631,
+                "lng": -19.0208
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 66.5,
+                    "lng": -24.5
+                },
+                "se": {
+                    "lat": 63.4,
+                    "lng": -13.5
+                }
+            },
+            "country": "Iceland"
+        },
+        {
+            "clue": "Explorer Spot: Eiffel Tower",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.8584,
+                "lng": 2.2945
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Find France.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.8584,
+                "lng": 2.2945
+            },
+            "country": "France",
+            "answer": "France",
+            "bounds": {
+                "nw": {
+                    "lat": 51.2,
+                    "lng": -5.2
+                },
+                "se": {
+                    "lat": 41.3,
+                    "lng": 9.7
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Eiffel Tower",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 48.8584,
+                "lng": 2.2945
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Explorer Spot: Big Ben",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.5007,
+                "lng": -0.1246
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Where is United Kingdom?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5007,
+                "lng": -0.1246
+            },
+            "country": "United Kingdom",
+            "answer": "United Kingdom",
+            "bounds": {
+                "nw": {
+                    "lat": 60.9,
+                    "lng": -8.7
+                },
+                "se": {
+                    "lat": 49.9,
+                    "lng": 1.8
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Big Ben",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.5007,
+                "lng": -0.1246
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Explorer Spot: Colosseum",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.8902,
+                "lng": 12.4922
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Find Italy.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.8902,
+                "lng": 12.4922
+            },
+            "country": "Italy",
+            "answer": "Italy",
+            "bounds": {
+                "nw": {
+                    "lat": 47.1,
+                    "lng": 6.6
+                },
+                "se": {
+                    "lat": 36.6,
+                    "lng": 18.5
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Colosseum",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.8902,
+                "lng": 12.4922
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Explorer Spot: Sagrada Familia",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Where is Spain?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            },
+            "country": "Spain",
+            "answer": "Spain",
+            "bounds": {
+                "nw": {
+                    "lat": 43.8,
+                    "lng": -9.4
+                },
+                "se": {
+                    "lat": 36,
+                    "lng": 3.3
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Sagrada Familia",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Explorer Spot: Stonehenge",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.1789,
+                "lng": -1.8262
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Regional Focus: Stonehenge",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.1789,
+                "lng": -1.8262
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Explorer Spot: Santorini",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 36.3932,
+                "lng": 25.4615
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Find Greece.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 36.3932,
+                "lng": 25.4615
+            },
+            "country": "Greece",
+            "answer": "Greece",
+            "bounds": {
+                "nw": {
+                    "lat": 41.8,
+                    "lng": 19.3
+                },
+                "se": {
+                    "lat": 34.8,
+                    "lng": 28.3
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Santorini",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 36.3932,
+                "lng": 25.4615
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Explorer Spot: Acropolis",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.9715,
+                "lng": 23.7267
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Regional Focus: Acropolis",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.9715,
+                "lng": 23.7267
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Explorer Spot: Brandenburg Gate",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 52.5163,
+                "lng": 13.3777
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Pinpoint Germany.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 52.5163,
+                "lng": 13.3777
+            },
+            "country": "Germany",
+            "answer": "Germany",
+            "bounds": {
+                "nw": {
+                    "lat": 55.1,
+                    "lng": 5.9
+                },
+                "se": {
+                    "lat": 47.2,
+                    "lng": 15.1
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Brandenburg Gate",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.5163,
+                "lng": 13.3777
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Explorer Spot: Kremlin",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 55.752,
+                "lng": 37.6175
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Where is Russia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 55.752,
+                "lng": 37.6175
+            },
+            "country": "Russia",
+            "answer": "Russia",
+            "bounds": {
+                "nw": {
+                    "lat": 81.9,
+                    "lng": 19.6
+                },
+                "se": {
+                    "lat": 41.2,
+                    "lng": 180
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Kremlin",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 55.752,
+                "lng": 37.6175
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Explorer Spot: Neuschwanstein Castle",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 47.5576,
+                "lng": 10.7498
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Regional Focus: Neuschwanstein Castle",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.5576,
+                "lng": 10.7498
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Explorer Spot: Louvre Museum",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.8606,
+                "lng": 2.3376
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Regional Focus: Louvre Museum",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.8606,
+                "lng": 2.3376
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Explorer Spot: Leaning Tower of Pisa",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.723,
+                "lng": 10.3966
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Regional Focus: Leaning Tower of Pisa",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 43.723,
+                "lng": 10.3966
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Explorer Spot: Where did the Titanic depart from on its maiden voyage",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 50.8998,
+                "lng": -1.4044
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Regional Focus: Where did the Titanic depart from on its maiden voyage",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 50.8998,
+                "lng": -1.4044
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Explorer Spot: Which city hosted the first modern Olympic Games in 1896",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 37.9838,
+                "lng": 23.7275
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Regional Focus: Which city hosted the first modern Olympic Games in 1896",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.9838,
+                "lng": 23.7275
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Explorer Spot: Where was Leonardo da Vinci born",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.7833,
+                "lng": 10.9167
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Regional Focus: Where was Leonardo da Vinci born",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.7833,
+                "lng": 10.9167
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Explorer Spot: Where is the Rosetta Stone currently displayed",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.5194,
+                "lng": -0.127
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Regional Focus: Where is the Rosetta Stone currently displayed",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.5194,
+                "lng": -0.127
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Explorer Spot: Where did the D-Day landings begin on June 6, 1944",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 49.368,
+                "lng": -0.8731
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Regional Focus: Where did the D-Day landings begin on June 6, 1944",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 49.368,
+                "lng": -0.8731
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Explorer Spot: Which city hosts the annual Running of the Bulls festival",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.8125,
+                "lng": -1.6458
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Regional Focus: Which city hosts the annual Running of the Bulls festival",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.8125,
+                "lng": -1.6458
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Explorer Spot: In which city is the Anne Frank House museum located",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.3752,
+                "lng": 4.884
+            },
+            "country": "Netherlands"
+        },
+        {
+            "clue": "Find Netherlands.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 52.3752,
+                "lng": 4.884
+            },
+            "country": "Netherlands",
+            "answer": "Netherlands",
+            "bounds": {
+                "nw": {
+                    "lat": 53.7,
+                    "lng": 3.3
+                },
+                "se": {
+                    "lat": 50.8,
+                    "lng": 7.2
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: In which city is the Anne Frank House museum located",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 52.3752,
+                "lng": 4.884
+            },
+            "country": "Netherlands"
+        },
+        {
+            "clue": "Explorer Spot: Where did the Chernobyl nuclear disaster occur in 1986",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.389,
+                "lng": 30.0979
+            },
+            "country": "Ukraine"
+        },
+        {
+            "clue": "Pinpoint Ukraine.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.389,
+                "lng": 30.0979
+            },
+            "country": "Ukraine",
+            "answer": "Ukraine",
+            "bounds": {
+                "nw": {
+                    "lat": 52.4,
+                    "lng": 22.1
+                },
+                "se": {
+                    "lat": 44.3,
+                    "lng": 40.2
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.389,
+                "lng": 30.0979
+            },
+            "country": "Ukraine"
+        },
+        {
+            "clue": "Explorer Spot: Where was the Magna Carta signed in 1215",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.4316,
+                "lng": -0.5632
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Regional Focus: Where was the Magna Carta signed in 1215",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.4316,
+                "lng": -0.5632
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Explorer Spot: Which city is the birthplace of the Renaissance",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.7696,
+                "lng": 11.2558
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Regional Focus: Which city is the birthplace of the Renaissance",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.7696,
+                "lng": 11.2558
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Explorer Spot: Where was the Berlin Wall located",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 52.52,
+                "lng": 13.405
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Regional Focus: Where was the Berlin Wall located",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.52,
+                "lng": 13.405
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Explorer Spot: Where is the headquarters of the International Court of Justice",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 52.0867,
+                "lng": 4.3146
+            },
+            "country": "Netherlands"
+        },
+        {
+            "clue": "Regional Focus: Where is the headquarters of the International Court of Justice",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 52.0867,
+                "lng": 4.3146
+            },
+            "country": "Netherlands"
+        },
+        {
+            "clue": "Explorer Spot: Which volcano destroyed Pompeii in 79 AD",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 40.8218,
+                "lng": 14.426
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Regional Focus: Which volcano destroyed Pompeii in 79 AD",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.8218,
+                "lng": 14.426
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Explorer Spot: Where was the world\u0027s first underground railway opened in 1863",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Regional Focus: Where was the world\u0027s first underground railway opened in 1863",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Explorer Spot: In which city is the Nobel Peace Prize ceremony held",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 59.9139,
+                "lng": 10.7522
+            },
+            "country": "Norway"
+        },
+        {
+            "clue": "Pinpoint Norway.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 59.9139,
+                "lng": 10.7522
+            },
+            "country": "Norway",
+            "answer": "Norway",
+            "bounds": {
+                "nw": {
+                    "lat": 71.2,
+                    "lng": 4.5
+                },
+                "se": {
+                    "lat": 57.9,
+                    "lng": 31.2
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: In which city is the Nobel Peace Prize ceremony held",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 59.9139,
+                "lng": 10.7522
+            },
+            "country": "Norway"
+        },
+        {
+            "clue": "Explorer Spot: Danube River",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria"
+        },
+        {
+            "clue": "Where is Austria?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria",
+            "answer": "Austria",
+            "bounds": {
+                "nw": {
+                    "lat": 49.1,
+                    "lng": 9.5
+                },
+                "se": {
+                    "lat": 46.3,
+                    "lng": 17.2
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Danube River",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria"
+        },
+        {
+            "clue": "Explorer Spot: Matterhorn",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.9763,
+                "lng": 7.6586
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Find Switzerland.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 45.9763,
+                "lng": 7.6586
+            },
+            "country": "Switzerland",
+            "answer": "Switzerland",
+            "bounds": {
+                "nw": {
+                    "lat": 47.8,
+                    "lng": 5.9
+                },
+                "se": {
+                    "lat": 45.8,
+                    "lng": 10.5
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Matterhorn",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 45.9763,
+                "lng": 7.6586
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Explorer Spot: Lake Baikal",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 53.5587,
+                "lng": 108.165
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Regional Focus: Lake Baikal",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 53.5587,
+                "lng": 108.165
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Explorer Spot: Strait of Gibraltar",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.9745,
+                "lng": -5.5
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Regional Focus: Strait of Gibraltar",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.9745,
+                "lng": -5.5
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Explorer Spot: Mont Saint-Michel",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.6361,
+                "lng": -1.5115
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Regional Focus: Mont Saint-Michel",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.6361,
+                "lng": -1.5115
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Explorer Spot: Alhambra",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 37.1761,
+                "lng": -3.5881
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Regional Focus: Alhambra",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.1761,
+                "lng": -3.5881
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Explorer Spot: Buda Castle",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.4967,
+                "lng": 19.0399
+            },
+            "country": "Hungary"
+        },
+        {
+            "clue": "Find Hungary.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.4967,
+                "lng": 19.0399
+            },
+            "country": "Hungary",
+            "answer": "Hungary",
+            "bounds": {
+                "nw": {
+                    "lat": 48.6,
+                    "lng": 16.1
+                },
+                "se": {
+                    "lat": 45.7,
+                    "lng": 22.9
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Buda Castle",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 47.4967,
+                "lng": 19.0399
+            },
+            "country": "Hungary"
+        },
+        {
+            "clue": "Lake Baikal",
+            "category": "places",
+            "type": "lake",
+            "difficulty": "hard",
+            "target": {
+                "lat": 54.86,
+                "lng": 104.12
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 55.96,
+                    "lng": 103.43
+                },
+                "se": {
+                    "lat": 51.46,
+                    "lng": 108.99
+                }
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Where is Venice in Italy?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.4408,
+                "lng": 12.3155
+            },
+            "country": "Italy",
+            "answer": "Venice"
+        },
+        {
+            "clue": "Danube River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.257,
+                "lng": 29.652
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 48.2,
+                    "lng": 8.2
+                },
+                "se": {
+                    "lat": 44.2,
+                    "lng": 29.9
+                }
+            },
+            "country": "Romania"
+        },
+        {
+            "clue": "Acropolis of Athens",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.9715,
+                "lng": 23.7257
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Svalbard",
+            "category": "places",
+            "type": "island",
+            "difficulty": "hard",
+            "target": {
+                "lat": 78.2232,
+                "lng": 15.6469
+            },
+            "country": "Norway"
+        },
+        {
+            "clue": "Where is Barcelona in Spain?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.3851,
+                "lng": 2.1734
+            },
+            "country": "Spain",
+            "answer": "Barcelona"
+        },
+        {
+            "clue": "Pinpoint Sofia in Bulgaria.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.6977,
+                "lng": 23.3219
+            },
+            "country": "Bulgaria",
+            "answer": "Sofia"
+        },
+        {
+            "clue": "Lake Geneva",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "easy",
+            "target": {
+                "lat": 46.454,
+                "lng": 6.548
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 46.58,
+                    "lng": 6.1
+                },
+                "se": {
+                    "lat": 46.2,
+                    "lng": 7.1
+                }
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Pyrenees",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.65,
+                "lng": 0.7
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Aegean Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 38.5,
+                "lng": 25
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Kamchatka Peninsula",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 56.2,
+                "lng": 160
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 62,
+                    "lng": 155
+                },
+                "se": {
+                    "lat": 51,
+                    "lng": 164.5
+                }
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Pena Palace",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.7874,
+                "lng": -9.3904
+            },
+            "country": "Portugal"
+        },
+        {
+            "clue": "Meteora",
+            "category": "places",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.7217,
+                "lng": 21.6309
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Where is Lisbon in Portugal?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.7223,
+                "lng": -9.1393
+            },
+            "country": "Portugal",
+            "answer": "Lisbon"
+        },
+        {
+            "clue": "Find Slovenia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 46.3625,
+                "lng": 14.1146
+            },
+            "country": "Slovenia",
+            "answer": "Slovenia",
+            "bounds": {
+                "nw": {
+                    "lat": 46.88,
+                    "lng": 13.38
+                },
+                "se": {
+                    "lat": 45.42,
+                    "lng": 16.61
+                }
+            }
+        },
+        {
+            "clue": "Pinpoint Prague in Czech Republic.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 50.0755,
+                "lng": 14.4378
+            },
+            "country": "Czech Republic",
+            "answer": "Prague"
+        },
+        {
+            "clue": "Adriatic Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.2,
+                "lng": 15.5
+            },
+            "country": "Croatia"
+        },
+        {
+            "clue": "Gulf of Bothnia",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 63.5,
+                "lng": 20.5
+            },
+            "country": "Sweden"
+        },
+        {
+            "clue": "Lena River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "hard",
+            "target": {
+                "lat": 68.5,
+                "lng": 127.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 72.5,
+                    "lng": 114
+                },
+                "se": {
+                    "lat": 53,
+                    "lng": 130.5
+                }
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Find Reykjavik in Iceland.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 64.1466,
+                "lng": -21.9426
+            },
+            "country": "Iceland",
+            "answer": "Reykjavik"
+        },
+        {
+            "clue": "Pinpoint Ljubljana in Slovenia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 46.0569,
+                "lng": 14.5058
+            },
+            "country": "Slovenia",
+            "answer": "Ljubljana"
+        },
+        {
+            "clue": "Pinpoint Tallinn in Estonia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 59.437,
+                "lng": 24.7536
+            },
+            "country": "Estonia",
+            "answer": "Tallinn"
+        },
+        {
+            "clue": "Where is Helsinki in Finland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 60.1699,
+                "lng": 24.9384
+            },
+            "country": "Finland",
+            "answer": "Helsinki"
+        },
+        {
+            "clue": "Where is Riga in Latvia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 56.9496,
+                "lng": 24.1052
+            },
+            "country": "Latvia",
+            "answer": "Riga"
+        },
+        {
+            "clue": "Pinpoint Tirana in Albania.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.3275,
+                "lng": 19.8187
+            },
+            "country": "Albania",
+            "answer": "Tirana"
+        },
+        {
+            "clue": "Find Canary Islands in Spain.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 28.2916,
+                "lng": -16.6291
+            },
+            "country": "Spain",
+            "answer": "Canary Islands"
+        },
+        {
+            "clue": "Where is Bucharest in Romania?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 44.4268,
+                "lng": 26.1025
+            },
+            "country": "Romania",
+            "answer": "Bucharest"
+        },
+        {
+            "clue": "Saint Basil\u0027s Cathedral",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 55.7525,
+                "lng": 37.6231
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Milan Cathedral",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.4642,
+                "lng": 9.1916
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Rila Monastery",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.1339,
+                "lng": 23.3405
+            },
+            "country": "Bulgaria"
+        },
+        {
+            "clue": "Where is Eiffel Tower in France?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.8584,
+                "lng": 2.2945
+            },
+            "country": "France",
+            "answer": "Eiffel Tower"
+        },
+        {
+            "clue": "Where is Big Ben in United Kingdom?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5007,
+                "lng": -0.1246
+            },
+            "country": "United Kingdom",
+            "answer": "Big Ben"
+        },
+        {
+            "clue": "Where is Colosseum in Italy?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.8902,
+                "lng": 12.4922
+            },
+            "country": "Italy",
+            "answer": "Colosseum"
+        },
+        {
+            "clue": "Where is Sagrada Familia in Spain?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            },
+            "country": "Spain",
+            "answer": "Sagrada Familia"
+        },
+        {
+            "clue": "Where is Santorini in Greece?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 36.3932,
+                "lng": 25.4615
+            },
+            "country": "Greece",
+            "answer": "Santorini"
+        },
+        {
+            "clue": "Where is Acropolis in Greece?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.9715,
+                "lng": 23.7267
+            },
+            "country": "Greece",
+            "answer": "Acropolis"
+        },
+        {
+            "clue": "Where is Brandenburg Gate in Germany?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.5163,
+                "lng": 13.3777
+            },
+            "country": "Germany",
+            "answer": "Brandenburg Gate"
+        },
+        {
+            "clue": "Where is Kremlin in Russia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 55.752,
+                "lng": 37.6175
+            },
+            "country": "Russia",
+            "answer": "Kremlin"
+        },
+        {
+            "clue": "Where is Danube River in Austria?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria",
+            "answer": "Danube River",
+            "bounds": {
+                "nw": {
+                    "lat": 48.8,
+                    "lng": 8
+                },
+                "se": {
+                    "lat": 43.2,
+                    "lng": 29.8
+                }
+            }
+        },
+        {
+            "clue": "Where is Matterhorn in Switzerland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.9763,
+                "lng": 7.6586
+            },
+            "country": "Switzerland",
+            "answer": "Matterhorn"
+        },
+        {
+            "clue": "Where is Lake Baikal in Russia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 53.5587,
+                "lng": 108.165
+            },
+            "country": "Russia",
+            "answer": "Lake Baikal"
+        },
+        {
+            "clue": "Where is Strait of Gibraltar in Spain?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.9745,
+                "lng": -5.5
+            },
+            "country": "Spain",
+            "answer": "Strait of Gibraltar"
+        },
+        {
+            "clue": "Where is Buda Castle in Hungary?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.4967,
+                "lng": 19.0399
+            },
+            "country": "Hungary",
+            "answer": "Buda Castle"
+        },
+        {
+            "clue": "Where is Mount Elbrus in Russia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.3499,
+                "lng": 42.4453
+            },
+            "country": "Russia",
+            "answer": "Mount Elbrus"
+        },
+        {
+            "clue": "Where is Sicily in Italy?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.5999,
+                "lng": 14.0154
+            },
+            "country": "Italy",
+            "answer": "Sicily",
+            "bounds": {
+                "nw": {
+                    "lat": 38.3,
+                    "lng": 12
+                },
+                "se": {
+                    "lat": 36.6,
+                    "lng": 15.7
+                }
+            }
+        },
+        {
+            "clue": "Where is Iceland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 64.9631,
+                "lng": -19.0208
+            },
+            "country": "Iceland",
+            "answer": "Iceland",
+            "bounds": {
+                "nw": {
+                    "lat": 66.5,
+                    "lng": -24.5
+                },
+                "se": {
+                    "lat": 63.4,
+                    "lng": -13.5
+                }
+            }
+        },
+        {
+            "clue": "Where is Regional Focus: Eiffel Tower in France?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.8584,
+                "lng": 2.2945
+            },
+            "country": "France",
+            "answer": "Regional Focus: Eiffel Tower"
+        },
+        {
+            "clue": "Where is Regional Focus: Big Ben in United Kingdom?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5007,
+                "lng": -0.1246
+            },
+            "country": "United Kingdom",
+            "answer": "Regional Focus: Big Ben"
+        },
+        {
+            "clue": "Where is Regional Focus: Colosseum in Italy?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.8902,
+                "lng": 12.4922
+            },
+            "country": "Italy",
+            "answer": "Regional Focus: Colosseum"
+        },
+        {
+            "clue": "Where is Regional Focus: Sagrada Familia in Spain?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            },
+            "country": "Spain",
+            "answer": "Regional Focus: Sagrada Familia"
+        },
+        {
+            "clue": "Where is Regional Focus: Santorini in Greece?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 36.3932,
+                "lng": 25.4615
+            },
+            "country": "Greece",
+            "answer": "Regional Focus: Santorini"
+        },
+        {
+            "clue": "Where is Regional Focus: Brandenburg Gate in Germany?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.5163,
+                "lng": 13.3777
+            },
+            "country": "Germany",
+            "answer": "Regional Focus: Brandenburg Gate"
+        },
+        {
+            "clue": "Where is Regional Focus: Kremlin in Russia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 55.752,
+                "lng": 37.6175
+            },
+            "country": "Russia",
+            "answer": "Regional Focus: Kremlin"
+        },
+        {
+            "clue": "Where is Explorer Spot: In which city is the Anne Frank House museum located in Netherlands?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.3752,
+                "lng": 4.884
+            },
+            "country": "Netherlands",
+            "answer": "Explorer Spot: In which city is the Anne Frank House museum located"
+        },
+        {
+            "clue": "Where is Regional Focus: In which city is the Anne Frank House museum located in Netherlands?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.3752,
+                "lng": 4.884
+            },
+            "country": "Netherlands",
+            "answer": "Regional Focus: In which city is the Anne Frank House museum located"
+        },
+        {
+            "clue": "Where is Explorer Spot: Where did the Chernobyl nuclear disaster occur in 1986 in Ukraine?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.389,
+                "lng": 30.0979
+            },
+            "country": "Ukraine",
+            "answer": "Explorer Spot: Where did the Chernobyl nuclear disaster occur in 1986"
+        },
+        {
+            "clue": "Where is Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986 in Ukraine?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.389,
+                "lng": 30.0979
+            },
+            "country": "Ukraine",
+            "answer": "Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986"
+        },
+        {
+            "clue": "Where is Explorer Spot: In which city is the Nobel Peace Prize ceremony held in Norway?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 59.9139,
+                "lng": 10.7522
+            },
+            "country": "Norway",
+            "answer": "Explorer Spot: In which city is the Nobel Peace Prize ceremony held"
+        },
+        {
+            "clue": "Where is Regional Focus: In which city is the Nobel Peace Prize ceremony held in Norway?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 59.9139,
+                "lng": 10.7522
+            },
+            "country": "Norway",
+            "answer": "Regional Focus: In which city is the Nobel Peace Prize ceremony held"
+        },
+        {
+            "clue": "Where is Explorer Spot: Danube River in Austria?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria",
+            "answer": "Explorer Spot: Danube River"
+        },
+        {
+            "clue": "Where is Regional Focus: Danube River in Austria?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria",
+            "answer": "Regional Focus: Danube River"
+        },
+        {
+            "clue": "Where is Explorer Spot: Matterhorn in Switzerland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.9763,
+                "lng": 7.6586
+            },
+            "country": "Switzerland",
+            "answer": "Explorer Spot: Matterhorn"
+        },
+        {
+            "clue": "Where is Regional Focus: Matterhorn in Switzerland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.9763,
+                "lng": 7.6586
+            },
+            "country": "Switzerland",
+            "answer": "Regional Focus: Matterhorn"
+        },
+        {
+            "clue": "Where is Regional Focus: Buda Castle in Hungary?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.4967,
+                "lng": 19.0399
+            },
+            "country": "Hungary",
+            "answer": "Regional Focus: Buda Castle"
+        },
+        {
+            "clue": "Where is Svalbard in Norway?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 78.2232,
+                "lng": 15.6469
+            },
+            "country": "Norway",
+            "answer": "Svalbard"
+        },
+        {
+            "clue": "Where is Lake Geneva in Switzerland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 46.454,
+                "lng": 6.548
+            },
+            "country": "Switzerland",
+            "answer": "Lake Geneva",
+            "bounds": {
+                "nw": {
+                    "lat": 46.58,
+                    "lng": 6.1
+                },
+                "se": {
+                    "lat": 46.2,
+                    "lng": 7.1
+                }
+            }
+        },
+        {
+            "clue": "Where is Pyrenees in Spain?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.65,
+                "lng": 0.7
+            },
+            "country": "Spain",
+            "answer": "Pyrenees"
+        },
+        {
+            "clue": "Where is Aegean Sea in Greece?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.5,
+                "lng": 25
+            },
+            "country": "Greece",
+            "answer": "Aegean Sea"
+        },
+        {
+            "clue": "Where is Pena Palace in Portugal?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.7874,
+                "lng": -9.3904
+            },
+            "country": "Portugal",
+            "answer": "Pena Palace"
+        },
+        {
+            "clue": "Where is Adriatic Sea in Croatia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.2,
+                "lng": 15.5
+            },
+            "country": "Croatia",
+            "answer": "Adriatic Sea"
+        },
+        {
+            "clue": "Where is Gulf of Bothnia in Sweden?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 63.5,
+                "lng": 20.5
+            },
+            "country": "Sweden",
+            "answer": "Gulf of Bothnia"
+        },
+        {
+            "clue": "Where is Lena River in Russia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 68.5,
+                "lng": 127.5
+            },
+            "country": "Russia",
+            "answer": "Lena River",
+            "bounds": {
+                "nw": {
+                    "lat": 72.5,
+                    "lng": 114
+                },
+                "se": {
+                    "lat": 53,
+                    "lng": 130.5
+                }
+            }
+        },
+        {
+            "clue": "Where is Rila Monastery in Bulgaria?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.1339,
+                "lng": 23.3405
+            },
+            "country": "Bulgaria",
+            "answer": "Rila Monastery"
+        },
+        {
+            "clue": "Tower of London",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5055,
+                "lng": -0.0754
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Arc de Triomphe",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.8738,
+                "lng": 2.295
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Buckingham Palace",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5014,
+                "lng": -0.1419
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Venice",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.4408,
+                "lng": 12.3155
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Barcelona",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.3851,
+                "lng": 2.1734
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Sagrada Familia is located here",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.4036,
+                "lng": 2.1744
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Prague",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 50.0755,
+                "lng": 14.4378
+            },
+            "country": "Czech Republic"
+        },
+        {
+            "clue": "Vienna",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria"
+        },
+        {
+            "clue": "Budapest",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.4979,
+                "lng": 19.0402
+            },
+            "country": "Hungary"
+        },
+        {
+            "clue": "Madrid",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.4168,
+                "lng": -3.7038
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Lisbon",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.7223,
+                "lng": -9.1393
+            },
+            "country": "Portugal"
+        },
+        {
+            "clue": "Rome",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.9028,
+                "lng": 12.4964
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Dublin",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 53.3498,
+                "lng": -6.2603
+            },
+            "country": "Ireland"
+        },
+        {
+            "clue": "Copenhagen",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 55.6761,
+                "lng": 12.5683
+            },
+            "country": "Denmark"
+        },
+        {
+            "clue": "Stockholm",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 59.3293,
+                "lng": 18.0686
+            },
+            "country": "Sweden"
+        },
+        {
+            "clue": "Where is Paris in France?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 48.8566,
+                "lng": 2.3522
+            },
+            "country": "France",
+            "answer": "Paris"
+        },
+        {
+            "clue": "Where is Rome in Italy?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.9028,
+                "lng": 12.4964
+            },
+            "country": "Italy",
+            "answer": "Rome"
+        },
+        {
+            "clue": "Alps",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.5,
+                "lng": 10.5
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Thames River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 51.6,
+                    "lng": -0.5
+                },
+                "se": {
+                    "lat": 51.4,
+                    "lng": 0.1
+                }
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Thames",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 51.6,
+                    "lng": -0.5
+                },
+                "se": {
+                    "lat": 51.4,
+                    "lng": 0.1
+                }
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Rhine River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.9664,
+                "lng": 6.1537
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 52.5,
+                    "lng": 5
+                },
+                "se": {
+                    "lat": 47,
+                    "lng": 8.5
+                }
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Thames River (England)",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.5074,
+                "lng": -0.1278
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 51.6,
+                    "lng": -0.5
+                },
+                "se": {
+                    "lat": 51.4,
+                    "lng": 0.1
+                }
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Porto",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.1579,
+                "lng": -8.6291
+            },
+            "country": "Portugal"
+        },
+        {
+            "clue": "Brussels",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 50.8503,
+                "lng": 4.3517
+            },
+            "country": "Belgium"
+        },
+        {
+            "clue": "Amsterdam",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.3676,
+                "lng": 4.9041
+            },
+            "country": "Netherlands"
+        },
+        {
+            "clue": "Zurich",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.3769,
+                "lng": 8.5472
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Geneva",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 46.2044,
+                "lng": 6.1432
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Krakow",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 50.0647,
+                "lng": 19.945
+            },
+            "country": "Poland"
+        },
+        {
+            "clue": "Warsaw",
+            "category": "places",
+            "type": "city",
+            "difficulty": "easy",
+            "target": {
+                "lat": 52.2297,
+                "lng": 21.0122
+            },
+            "country": "Poland"
+        },
+        {
+            "clue": "Where is Moscow in Russia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 55.7558,
+                "lng": 37.6173
+            },
+            "country": "Russia",
+            "answer": "Moscow"
+        },
+        {
+            "clue": "Plitvice Lakes",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 46.8118,
+                "lng": 15.582
+            },
+            "country": "Croatia"
+        },
+        {
+            "clue": "Dubrovnik Old Town",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.6418,
+                "lng": 18.1084
+            },
+            "country": "Croatia"
+        },
+        {
+            "clue": "Meteora",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.3483,
+                "lng": 21.6295
+            },
+            "country": "Greece"
+        },
+        {
+            "clue": "Rila Monastery",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.1339,
+                "lng": 23.3405
+            },
+            "country": "Bulgaria"
+        },
+        {
+            "clue": "Hallstatt",
+            "category": "places",
+            "type": "city",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.5339,
+                "lng": 13.6496
+            },
+            "country": "Austria"
+        },
+        {
+            "clue": "Interlaken",
+            "category": "places",
+            "type": "city",
+            "difficulty": "medium",
+            "target": {
+                "lat": 46.6863,
+                "lng": 8.6389
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Find Budapest (Thermal Baths) in Hungary.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.4979,
+                "lng": 19.0402
+            },
+            "country": "Hungary",
+            "answer": "Budapest"
+        },
+        {
+            "clue": "Where is Vienna (St. Stephen\u0027s Cathedral) in Austria?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.2082,
+                "lng": 16.3738
+            },
+            "country": "Austria",
+            "answer": "Vienna"
+        },
+        {
+            "clue": "Where is Madrid (Royal Palace) in Spain?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.4168,
+                "lng": -3.7038
+            },
+            "country": "Spain",
+            "answer": "Madrid"
+        },
+        {
+            "clue": "Find Stockholm (Vasa Museum) in Sweden.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 59.3293,
+                "lng": 18.0686
+            },
+            "country": "Sweden",
+            "answer": "Stockholm"
+        },
+        {
+            "clue": "Where is Copenhagen (Tivoli Gardens) in Denmark?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 55.6761,
+                "lng": 12.5683
+            },
+            "country": "Denmark",
+            "answer": "Copenhagen"
+        },
+        {
+            "clue": "Find Dublin (Guinness Storehouse) in Ireland.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 53.3498,
+                "lng": -6.2603
+            },
+            "country": "Ireland",
+            "answer": "Dublin"
+        },
+        {
+            "clue": "Where is Edinburgh in Scotland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 55.9533,
+                "lng": -3.1883
+            },
+            "country": "United Kingdom",
+            "answer": "Edinburgh"
+        },
+        {
+            "clue": "Ural Mountains",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "medium",
+            "target": {
+                "lat": 61,
+                "lng": 60
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Caucasus Mountains",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "medium",
+            "target": {
+                "lat": 43.5,
+                "lng": 44.5
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Pyrenees",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.8,
+                "lng": 0.5
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Lake Constance",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.6,
+                "lng": 9.2
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 47.8,
+                    "lng": 8.7
+                },
+                "se": {
+                    "lat": 47.3,
+                    "lng": 9.8
+                }
+            },
+            "country": "Germany"
+        },
+        {
+            "clue": "Lake Como",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "medium",
+            "target": {
+                "lat": 46.0095,
+                "lng": 9.1449
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 46.3,
+                    "lng": 9
+                },
+                "se": {
+                    "lat": 45.8,
+                    "lng": 9.4
+                }
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Lake Zurrich",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.2,
+                "lng": 8.6
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 47.5,
+                    "lng": 8.4
+                },
+                "se": {
+                    "lat": 46.9,
+                    "lng": 8.8
+                }
+            },
+            "country": "Switzerland"
+        },
+        {
+            "clue": "Loch Ness",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "medium",
+            "target": {
+                "lat": 57.3,
+                "lng": -4.4
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 57.5,
+                    "lng": -4.8
+                },
+                "se": {
+                    "lat": 57.15,
+                    "lng": -4
+                }
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "Seine River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 48.8566,
+                "lng": 2.3522
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 49,
+                    "lng": 1.5
+                },
+                "se": {
+                    "lat": 48.5,
+                    "lng": 3
+                }
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Volga River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 52,
+                "lng": 38
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 57,
+                    "lng": 35
+                },
+                "se": {
+                    "lat": 45,
+                    "lng": 48
+                }
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Iceland",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "medium",
+            "target": {
+                "lat": 64.9631,
+                "lng": -19.0208
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 66.5,
+                    "lng": -24
+                },
+                "se": {
+                    "lat": 63.4,
+                    "lng": -13
+                }
+            },
+            "country": "Iceland"
+        },
+        {
+            "clue": "Mediterranean Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35,
+                "lng": 15
+            },
+            "country": "Mediterranean"
+        },
+        {
+            "clue": "North Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 56,
+                "lng": 3
+            },
+            "country": "Europe"
+        },
+        {
+            "clue": "Baltic Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 59,
+                "lng": 20
+            },
+            "country": "Europe"
+        },
+        {
+            "clue": "Carnac Stones",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 47.5911,
+                "lng": -3.3604
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Skellig Michael",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.7763,
+                "lng": -10.5395
+            },
+            "country": "Ireland"
+        },
+        {
+            "clue": "Ronda",
+            "category": "places",
+            "type": "city",
+            "difficulty": "hard",
+            "target": {
+                "lat": 36.7465,
+                "lng": -5.3122
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Civita di Bagnoregio",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.4114,
+                "lng": 12.1139
+            },
+            "country": "Italy"
+        },
+        {
+            "clue": "Faroe Islands",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 61.8926,
+                "lng": -6.9118
+            },
+            "country": "Faroe Islands"
+        },
+        {
+            "clue": "Svalbard",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 77.546,
+                "lng": 23.6652
+            },
+            "country": "Norway"
+        },
+        {
+            "clue": "Where is Dubrovnik (Old Town) in Croatia?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.6418,
+                "lng": 18.1084
+            },
+            "country": "Croatia",
+            "answer": "Dubrovnik"
+        },
+        {
+            "clue": "Pinpoint Krakow (Wawel Castle) in Poland.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 50.0647,
+                "lng": 19.945
+            },
+            "country": "Poland",
+            "answer": "Krakow"
+        },
+        {
+            "clue": "Where is Geneva (Lake Geneva, United Nations) in Switzerland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 46.2044,
+                "lng": 6.1432
+            },
+            "country": "Switzerland",
+            "answer": "Geneva"
+        },
+        {
+            "clue": "Pinpoint Bruges in Belgium.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 51.2093,
+                "lng": 3.2247
+            },
+            "country": "Belgium",
+            "answer": "Bruges"
+        },
+        {
+            "clue": "Mont Blanc",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": 45.8326,
+                "lng": 6.8652
+            },
+            "country": "France"
+        },
+        {
+            "clue": "Peaks of Europe",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.1611,
+                "lng": -4.8952
+            },
+            "country": "Spain"
+        },
+        {
+            "clue": "Ben Nevis",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": 56.7975,
+                "lng": -5.0016
+            },
+            "country": "United Kingdom"
+        },
+        {
+            "clue": "River Ob",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "hard",
+            "target": {
+                "lat": 66,
+                "lng": 66
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 71,
+                    "lng": 60
+                },
+                "se": {
+                    "lat": 51,
+                    "lng": 85
+                }
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Lena River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "hard",
+            "target": {
+                "lat": 69,
+                "lng": 129
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 73,
+                    "lng": 104
+                },
+                "se": {
+                    "lat": 61,
+                    "lng": 142
+                }
+            },
+            "country": "Russia"
+        },
+        {
+            "clue": "Yenisei River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "hard",
+            "target": {
+                "lat": 68,
+                "lng": 86
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 72,
+                    "lng": 75
+                },
+                "se": {
+                    "lat": 51,
+                    "lng": 101
+                }
+            },
+            "country": "Russia"
+        }
+    ]
+}

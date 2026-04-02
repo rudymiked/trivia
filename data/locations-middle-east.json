@@ -1,0 +1,595 @@
+{
+    "locations": [
+        {
+            "clue": "Petra",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 30.3285,
+                "lng": 35.4444
+            },
+            "country": "Jordan"
+        },
+        {
+            "clue": "Burj Khalifa",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 25.1972,
+                "lng": 55.2744
+            },
+            "country": "United Arab Emirates"
+        },
+        {
+            "clue": "Hagia Sophia",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.0086,
+                "lng": 28.9802
+            },
+            "country": "Turkey"
+        },
+        {
+            "clue": "Find Constantinople (Istanbul) in Turkey.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.0082,
+                "lng": 28.9784
+            },
+            "country": "Turkey",
+            "answer": "Constantinople (Istanbul)"
+        },
+        {
+            "clue": "Dead Sea",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "easy",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 32.4,
+                    "lng": 35.2
+                },
+                "se": {
+                    "lat": 31,
+                    "lng": 35.6
+                }
+            },
+            "country": "Israel"
+        },
+        {
+            "clue": "Where is Dubai in United Arab Emirates?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 25.1412,
+                "lng": 55.1852
+            },
+            "country": "United Arab Emirates",
+            "answer": "Dubai"
+        },
+        {
+            "clue": "Caspian Sea",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.92,
+                "lng": 50.53
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 47,
+                    "lng": 47
+                },
+                "se": {
+                    "lat": 37,
+                    "lng": 54
+                }
+            },
+            "country": "Azerbaijan"
+        },
+        {
+            "clue": "Explorer Spot: Petra",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 30.3285,
+                "lng": 35.4444
+            },
+            "country": "Jordan"
+        },
+        {
+            "clue": "Find Jordan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 30.3285,
+                "lng": 35.4444
+            },
+            "country": "Jordan",
+            "answer": "Jordan",
+            "bounds": {
+                "nw": {
+                    "lat": 33.4,
+                    "lng": 34.9
+                },
+                "se": {
+                    "lat": 29.2,
+                    "lng": 39.3
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Petra",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 30.3285,
+                "lng": 35.4444
+            },
+            "country": "Jordan"
+        },
+        {
+            "clue": "Explorer Spot: Burj Khalifa",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 25.1972,
+                "lng": 55.2744
+            },
+            "country": "United Arab Emirates"
+        },
+        {
+            "clue": "Where is United Arab Emirates?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 25.1972,
+                "lng": 55.2744
+            },
+            "country": "United Arab Emirates",
+            "answer": "United Arab Emirates",
+            "bounds": {
+                "nw": {
+                    "lat": 26.1,
+                    "lng": 51.5
+                },
+                "se": {
+                    "lat": 22.6,
+                    "lng": 56.5
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Burj Khalifa",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 25.1972,
+                "lng": 55.2744
+            },
+            "country": "United Arab Emirates"
+        },
+        {
+            "clue": "Explorer Spot: Hagia Sophia",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.0086,
+                "lng": 28.9802
+            },
+            "country": "Turkey"
+        },
+        {
+            "clue": "Where is Turkey?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.0086,
+                "lng": 28.9802
+            },
+            "country": "Turkey",
+            "answer": "Turkey",
+            "bounds": {
+                "nw": {
+                    "lat": 42.2,
+                    "lng": 25.7
+                },
+                "se": {
+                    "lat": 35.8,
+                    "lng": 44.8
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Hagia Sophia",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.0086,
+                "lng": 28.9802
+            },
+            "country": "Turkey"
+        },
+        {
+            "clue": "Explorer Spot: Which city was the capital of the Byzantine Empire",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.0082,
+                "lng": 28.9784
+            },
+            "country": "Turkey"
+        },
+        {
+            "clue": "Regional Focus: Which city was the capital of the Byzantine Empire",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.0082,
+                "lng": 28.9784
+            },
+            "country": "Turkey"
+        },
+        {
+            "clue": "Explorer Spot: Dead Sea",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "country": "Israel"
+        },
+        {
+            "clue": "Pinpoint Israel.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "country": "Israel",
+            "answer": "Israel",
+            "bounds": {
+                "nw": {
+                    "lat": 33.3,
+                    "lng": 34.2
+                },
+                "se": {
+                    "lat": 29.5,
+                    "lng": 35.9
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Dead Sea",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "country": "Israel"
+        },
+        {
+            "clue": "Old City of Jerusalem",
+            "category": "places",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 31.778,
+                "lng": 35.235
+            },
+            "country": "Israel"
+        },
+        {
+            "clue": "Find Istanbul in Turkey.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.0082,
+                "lng": 28.9784
+            },
+            "country": "Turkey",
+            "answer": "Istanbul"
+        },
+        {
+            "clue": "Pinpoint Bosporus in Turkey.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.1467,
+                "lng": 29.0433
+            },
+            "country": "Turkey",
+            "answer": "Bosporus"
+        },
+        {
+            "clue": "Pinpoint Tbilisi in Georgia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 41.7151,
+                "lng": 44.8271
+            },
+            "country": "Georgia",
+            "answer": "Tbilisi"
+        },
+        {
+            "clue": "Sheikh Zayed Grand Mosque",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 24.4128,
+                "lng": 54.4749
+            },
+            "country": "United Arab Emirates"
+        },
+        {
+            "clue": "Where is Petra in Jordan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 30.3285,
+                "lng": 35.4444
+            },
+            "country": "Jordan",
+            "answer": "Petra"
+        },
+        {
+            "clue": "Where is Burj Khalifa in United Arab Emirates?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 25.1972,
+                "lng": 55.2744
+            },
+            "country": "United Arab Emirates",
+            "answer": "Burj Khalifa"
+        },
+        {
+            "clue": "Where is Hagia Sophia in Turkey?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.0086,
+                "lng": 28.9802
+            },
+            "country": "Turkey",
+            "answer": "Hagia Sophia"
+        },
+        {
+            "clue": "Where is Dead Sea in Israel?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "country": "Israel",
+            "answer": "Dead Sea",
+            "bounds": {
+                "nw": {
+                    "lat": 32.4,
+                    "lng": 35.2
+                },
+                "se": {
+                    "lat": 31,
+                    "lng": 35.6
+                }
+            }
+        },
+        {
+            "clue": "Where is Caspian Sea in Azerbaijan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.92,
+                "lng": 50.53
+            },
+            "country": "Azerbaijan",
+            "answer": "Caspian Sea",
+            "bounds": {
+                "nw": {
+                    "lat": 47,
+                    "lng": 47
+                },
+                "se": {
+                    "lat": 37,
+                    "lng": 54
+                }
+            }
+        },
+        {
+            "clue": "Where is Regional Focus: Petra in Jordan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 30.3285,
+                "lng": 35.4444
+            },
+            "country": "Jordan",
+            "answer": "Regional Focus: Petra"
+        },
+        {
+            "clue": "Where is Regional Focus: Burj Khalifa in United Arab Emirates?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 25.1972,
+                "lng": 55.2744
+            },
+            "country": "United Arab Emirates",
+            "answer": "Regional Focus: Burj Khalifa"
+        },
+        {
+            "clue": "Where is Regional Focus: Hagia Sophia in Turkey?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.0086,
+                "lng": 28.9802
+            },
+            "country": "Turkey",
+            "answer": "Regional Focus: Hagia Sophia"
+        },
+        {
+            "clue": "Where is Explorer Spot: Dead Sea in Israel?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "country": "Israel",
+            "answer": "Explorer Spot: Dead Sea"
+        },
+        {
+            "clue": "Where is Regional Focus: Dead Sea in Israel?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "country": "Israel",
+            "answer": "Regional Focus: Dead Sea"
+        },
+        {
+            "clue": "Tigris River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 33.5,
+                "lng": 43.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 37,
+                    "lng": 42
+                },
+                "se": {
+                    "lat": 30,
+                    "lng": 49
+                }
+            },
+            "country": "Iraq"
+        },
+        {
+            "clue": "Euphrates River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "medium",
+            "target": {
+                "lat": 33.3,
+                "lng": 44.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 37.5,
+                    "lng": 39.5
+                },
+                "se": {
+                    "lat": 29,
+                    "lng": 48
+                }
+            },
+            "country": "Iraq"
+        },
+        {
+            "clue": "Dead Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 31.5,
+                "lng": 35.5
+            },
+            "country": "Israel"
+        },
+        {
+            "clue": "Cappadocia",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 38.7469,
+                "lng": 34.5506
+            },
+            "country": "Turkey"
+        },
+        {
+            "clue": "Socotra Island",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 12.5243,
+                "lng": 53.9228
+            },
+            "country": "Yemen"
+        },
+        {
+            "clue": "Lake Van",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "hard",
+            "target": {
+                "lat": 38.5,
+                "lng": 42.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 39,
+                    "lng": 41.9
+                },
+                "se": {
+                    "lat": 38,
+                    "lng": 43.5
+                }
+            },
+            "country": "Turkey"
+        }
+    ]
+}

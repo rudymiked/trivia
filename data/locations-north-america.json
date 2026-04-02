@@ -1,0 +1,1647 @@
+{
+    "locations": [
+        {
+            "clue": "Statue of Liberty",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.6892,
+                "lng": -74.0445
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Golden Gate Bridge",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.8199,
+                "lng": -122.4783
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Niagara Falls",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.0962,
+                "lng": -79.0377
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Chichen Itza",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 20.6843,
+                "lng": -88.5678
+            },
+            "country": "Mexico"
+        },
+        {
+            "clue": "Times Square",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.758,
+                "lng": -73.9855
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "CN Tower",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.6426,
+                "lng": -79.3871
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Grand Canyon",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 36.0544,
+                "lng": -112.1401
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Where is New York City in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.7489,
+                "lng": -73.968
+            },
+            "country": "United States",
+            "answer": "New York City"
+        },
+        {
+            "clue": "Where is Boston in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.3601,
+                "lng": -71.0589
+            },
+            "country": "United States",
+            "answer": "Boston"
+        },
+        {
+            "clue": "Where is Philadelphia in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 39.9526,
+                "lng": -75.1652
+            },
+            "country": "United States",
+            "answer": "Philadelphia"
+        },
+        {
+            "clue": "Where is Washington D.C. (Lincoln Memorial) in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.8893,
+                "lng": -77.0502
+            },
+            "country": "United States",
+            "answer": "Washington D.C. (Lincoln Memorial)"
+        },
+        {
+            "clue": "Where is Seattle in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.6097,
+                "lng": -122.3425
+            },
+            "country": "United States",
+            "answer": "Seattle"
+        },
+        {
+            "clue": "Pinpoint Kitty Hawk, North Carolina in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 36.0176,
+                "lng": -75.6674
+            },
+            "country": "United States",
+            "answer": "Kitty Hawk, North Carolina"
+        },
+        {
+            "clue": "Where is San Francisco in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.7849,
+                "lng": -122.4094
+            },
+            "country": "United States",
+            "answer": "San Francisco"
+        },
+        {
+            "clue": "Mississippi River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 29.1511,
+                "lng": -89.2495
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 49.5,
+                    "lng": -96.5
+                },
+                "se": {
+                    "lat": 28.9,
+                    "lng": -88.8
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Mount McKinley (Denali)",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": 63.0695,
+                "lng": -151.0074
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Great Lakes - Lake Superior",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.7,
+                "lng": -87.5
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 48.8,
+                    "lng": -90
+                },
+                "se": {
+                    "lat": 46.2,
+                    "lng": -83.7
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Mojave Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.011,
+                "lng": -115.4734
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 37,
+                    "lng": -117.5
+                },
+                "se": {
+                    "lat": 33.5,
+                    "lng": -114.2
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Hawaii (Big Island)",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "easy",
+            "target": {
+                "lat": 19.8968,
+                "lng": -155.5828
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 20.3,
+                    "lng": -156.2
+                },
+                "se": {
+                    "lat": 19,
+                    "lng": -154.8
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Greenland",
+            "category": "geography",
+            "type": "island",
+            "difficulty": "easy",
+            "target": {
+                "lat": 71.7069,
+                "lng": -42.6043
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 83.6,
+                    "lng": -73.3
+                },
+                "se": {
+                    "lat": 59.7,
+                    "lng": -11.3
+                }
+            },
+            "country": "Greenland"
+        },
+        {
+            "clue": "Panama Canal",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "easy",
+            "target": {
+                "lat": 9.08,
+                "lng": -79.68
+            },
+            "country": "Panama"
+        },
+        {
+            "clue": "Mount Rushmore",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.8791,
+                "lng": -103.4591
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Find Cape Canaveral (Kennedy Space Center) in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 28.5729,
+                "lng": -80.649
+            },
+            "country": "United States",
+            "answer": "Cape Canaveral (Kennedy Space Center)"
+        },
+        {
+            "clue": "Bering Strait",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "hard",
+            "target": {
+                "lat": 65.9,
+                "lng": -168.9
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Statue of Liberty",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.6892,
+                "lng": -74.0445
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Pinpoint United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 40.6892,
+                "lng": -74.0445
+            },
+            "country": "United States",
+            "answer": "United States",
+            "bounds": {
+                "nw": {
+                    "lat": 49.4,
+                    "lng": -124.8
+                },
+                "se": {
+                    "lat": 24.5,
+                    "lng": -66.9
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Statue of Liberty",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.6892,
+                "lng": -74.0445
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Golden Gate Bridge",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 37.8199,
+                "lng": -122.4783
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Golden Gate Bridge",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.8199,
+                "lng": -122.4783
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Niagara Falls",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.0962,
+                "lng": -79.0377
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Find Canada.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 43.0962,
+                "lng": -79.0377
+            },
+            "country": "Canada",
+            "answer": "Canada",
+            "bounds": {
+                "nw": {
+                    "lat": 83.1,
+                    "lng": -141
+                },
+                "se": {
+                    "lat": 41.7,
+                    "lng": -52.6
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Niagara Falls",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.0962,
+                "lng": -79.0377
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Explorer Spot: Chichen Itza",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 20.6843,
+                "lng": -88.5678
+            },
+            "country": "Mexico"
+        },
+        {
+            "clue": "Where is Mexico?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 20.6843,
+                "lng": -88.5678
+            },
+            "country": "Mexico",
+            "answer": "Mexico",
+            "bounds": {
+                "nw": {
+                    "lat": 32.8,
+                    "lng": -117.1
+                },
+                "se": {
+                    "lat": 14.5,
+                    "lng": -86.7
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Chichen Itza",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 20.6843,
+                "lng": -88.5678
+            },
+            "country": "Mexico"
+        },
+        {
+            "clue": "Explorer Spot: Times Square",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.758,
+                "lng": -73.9855
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Times Square",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 40.758,
+                "lng": -73.9855
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: CN Tower",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 43.6426,
+                "lng": -79.3871
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Regional Focus: CN Tower",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.6426,
+                "lng": -79.3871
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Explorer Spot: Grand Canyon",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 36.0544,
+                "lng": -112.1401
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Grand Canyon",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 36.0544,
+                "lng": -112.1401
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Where is the headquarters of the United Nations located",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.7489,
+                "lng": -73.968
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Where is the headquarters of the United Nations located",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.7489,
+                "lng": -73.968
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: In which city did the Boston Tea Party take place",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 42.3601,
+                "lng": -71.0589
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: In which city did the Boston Tea Party take place",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.3601,
+                "lng": -71.0589
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: In which city was the Declaration of Independence signed",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 39.9526,
+                "lng": -75.1652
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: In which city was the Declaration of Independence signed",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.9526,
+                "lng": -75.1652
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: In which city did Martin Luther King Jr. deliver his \u0027I Have a Dream\u0027 speech",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 38.8893,
+                "lng": -77.0502
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: In which city did Martin Luther King Jr. deliver his \u0027I Have a Dream\u0027 speech",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.8893,
+                "lng": -77.0502
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: In which city was the first Starbucks opened in 1971",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 47.6097,
+                "lng": -122.3425
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: In which city was the first Starbucks opened in 1971",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.6097,
+                "lng": -122.3425
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Where did the Wright Brothers make their first powered flight",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 36.0176,
+                "lng": -75.6674
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Where did the Wright Brothers make their first powered flight",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 36.0176,
+                "lng": -75.6674
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: In which city was the first iPhone unveiled in 2007",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.7849,
+                "lng": -122.4094
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: In which city was the first iPhone unveiled in 2007",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 37.7849,
+                "lng": -122.4094
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Mississippi River",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 29.1511,
+                "lng": -89.2495
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Mississippi River",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 29.1511,
+                "lng": -89.2495
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Mount McKinley (Denali)",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 63.0695,
+                "lng": -151.0074
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Mount McKinley (Denali)",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "easy",
+            "target": {
+                "lat": 63.0695,
+                "lng": -151.0074
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Great Lakes - Lake Superior",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.7,
+                "lng": -87.5
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Great Lakes - Lake Superior",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 47.7,
+                "lng": -87.5
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Mojave Desert",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.011,
+                "lng": -115.4734
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Mojave Desert",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.011,
+                "lng": -115.4734
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Hawaii (Big Island)",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 19.8968,
+                "lng": -155.5828
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Hawaii (Big Island)",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 19.8968,
+                "lng": -155.5828
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Explorer Spot: Greenland",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 71.7069,
+                "lng": -42.6043
+            },
+            "country": "Greenland"
+        },
+        {
+            "clue": "Find Greenland.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 71.7069,
+                "lng": -42.6043
+            },
+            "country": "Greenland",
+            "answer": "Greenland",
+            "bounds": {
+                "nw": {
+                    "lat": 83.7,
+                    "lng": -73
+                },
+                "se": {
+                    "lat": 59.7,
+                    "lng": -11
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Greenland",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 71.7069,
+                "lng": -42.6043
+            },
+            "country": "Greenland"
+        },
+        {
+            "clue": "Explorer Spot: Panama Canal",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 9.08,
+                "lng": -79.68
+            },
+            "country": "Panama"
+        },
+        {
+            "clue": "Where is Panama?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 9.08,
+                "lng": -79.68
+            },
+            "country": "Panama",
+            "answer": "Panama",
+            "bounds": {
+                "nw": {
+                    "lat": 9.7,
+                    "lng": -83.1
+                },
+                "se": {
+                    "lat": 7.2,
+                    "lng": -77.1
+                }
+            }
+        },
+        {
+            "clue": "Regional Focus: Panama Canal",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 9.08,
+                "lng": -79.68
+            },
+            "country": "Panama"
+        },
+        {
+            "clue": "Explorer Spot: Mount Rushmore",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.8791,
+                "lng": -103.4591
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Regional Focus: Mount Rushmore",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "hard",
+            "target": {
+                "lat": 43.8791,
+                "lng": -103.4591
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Grand Canyon",
+            "category": "places",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 36.2288,
+                "lng": -112.4695
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 36.5,
+                    "lng": -113.7
+                },
+                "se": {
+                    "lat": 35.9,
+                    "lng": -111.3
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Where is Ottawa in Canada?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.4215,
+                "lng": -75.6972
+            },
+            "country": "Canada",
+            "answer": "Ottawa"
+        },
+        {
+            "clue": "Yucatan Peninsula",
+            "category": "geography",
+            "type": "region",
+            "difficulty": "medium",
+            "target": {
+                "lat": 20.6,
+                "lng": -89
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 22.8,
+                    "lng": -91.8
+                },
+                "se": {
+                    "lat": 17.8,
+                    "lng": -86.7
+                }
+            },
+            "country": "Mexico"
+        },
+        {
+            "clue": "Where is Statue of Liberty in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.6892,
+                "lng": -74.0445
+            },
+            "country": "United States",
+            "answer": "Statue of Liberty"
+        },
+        {
+            "clue": "Where is Niagara Falls in Canada?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.0962,
+                "lng": -79.0377
+            },
+            "country": "Canada",
+            "answer": "Niagara Falls"
+        },
+        {
+            "clue": "Where is Chichen Itza in Mexico?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 20.6843,
+                "lng": -88.5678
+            },
+            "country": "Mexico",
+            "answer": "Chichen Itza"
+        },
+        {
+            "clue": "Where is Mississippi River in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 29.1511,
+                "lng": -89.2495
+            },
+            "country": "United States",
+            "answer": "Mississippi River",
+            "bounds": {
+                "nw": {
+                    "lat": 49.5,
+                    "lng": -96.5
+                },
+                "se": {
+                    "lat": 28.9,
+                    "lng": -88.8
+                }
+            }
+        },
+        {
+            "clue": "Where is Mount McKinley (Denali) in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 63.0695,
+                "lng": -151.0074
+            },
+            "country": "United States",
+            "answer": "Mount McKinley (Denali)"
+        },
+        {
+            "clue": "Where is Great Lakes - Lake Superior in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.7,
+                "lng": -87.5
+            },
+            "country": "United States",
+            "answer": "Great Lakes - Lake Superior",
+            "bounds": {
+                "nw": {
+                    "lat": 48.8,
+                    "lng": -90
+                },
+                "se": {
+                    "lat": 46.2,
+                    "lng": -83.7
+                }
+            }
+        },
+        {
+            "clue": "Where is Mojave Desert in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 35.011,
+                "lng": -115.4734
+            },
+            "country": "United States",
+            "answer": "Mojave Desert",
+            "bounds": {
+                "nw": {
+                    "lat": 37,
+                    "lng": -117.5
+                },
+                "se": {
+                    "lat": 33.5,
+                    "lng": -114.2
+                }
+            }
+        },
+        {
+            "clue": "Where is Hawaii (Big Island) in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 19.8968,
+                "lng": -155.5828
+            },
+            "country": "United States",
+            "answer": "Hawaii (Big Island)",
+            "bounds": {
+                "nw": {
+                    "lat": 20.3,
+                    "lng": -156.2
+                },
+                "se": {
+                    "lat": 19,
+                    "lng": -154.8
+                }
+            }
+        },
+        {
+            "clue": "Where is Panama Canal in Panama?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 9.08,
+                "lng": -79.68
+            },
+            "country": "Panama",
+            "answer": "Panama Canal"
+        },
+        {
+            "clue": "Where is Bering Strait in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 65.9,
+                "lng": -168.9
+            },
+            "country": "United States",
+            "answer": "Bering Strait"
+        },
+        {
+            "clue": "Where is Regional Focus: Statue of Liberty in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.6892,
+                "lng": -74.0445
+            },
+            "country": "United States",
+            "answer": "Regional Focus: Statue of Liberty"
+        },
+        {
+            "clue": "Where is Regional Focus: Niagara Falls in Canada?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.0962,
+                "lng": -79.0377
+            },
+            "country": "Canada",
+            "answer": "Regional Focus: Niagara Falls"
+        },
+        {
+            "clue": "Where is Regional Focus: Chichen Itza in Mexico?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 20.6843,
+                "lng": -88.5678
+            },
+            "country": "Mexico",
+            "answer": "Regional Focus: Chichen Itza"
+        },
+        {
+            "clue": "Where is Explorer Spot: Panama Canal in Panama?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 9.08,
+                "lng": -79.68
+            },
+            "country": "Panama",
+            "answer": "Explorer Spot: Panama Canal"
+        },
+        {
+            "clue": "Where is Regional Focus: Panama Canal in Panama?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 9.08,
+                "lng": -79.68
+            },
+            "country": "Panama",
+            "answer": "Regional Focus: Panama Canal"
+        },
+        {
+            "clue": "Empire State Building",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.7484,
+                "lng": -73.9857
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Chrysler Building",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.7518,
+                "lng": -73.9755
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Washington Monument",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.8895,
+                "lng": -77.0369
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "White House",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 38.8975,
+                "lng": -77.0369
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Where is Toronto in Canada?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.6532,
+                "lng": -79.3832
+            },
+            "country": "Canada",
+            "answer": "Toronto"
+        },
+        {
+            "clue": "Rocky Mountains",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "easy",
+            "target": {
+                "lat": 53.1163,
+                "lng": -117.2723
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Appalachian Mountains",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.5,
+                "lng": -82.5
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Atlantic Ocean",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "easy",
+            "target": {
+                "lat": 25,
+                "lng": -30
+            },
+            "country": "Atlantic Ocean"
+        },
+        {
+            "clue": "Arctic Ocean",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "easy",
+            "target": {
+                "lat": 75,
+                "lng": 0
+            },
+            "country": "Arctic Ocean"
+        },
+        {
+            "clue": "Yellowstone",
+            "category": "geography",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 44.4279,
+                "lng": -110.8298
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Yosemite Valley",
+            "category": "geography",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.7694,
+                "lng": -119.5631
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Lake Michigan",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "easy",
+            "target": {
+                "lat": 44,
+                "lng": -87
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 48.3,
+                    "lng": -88
+                },
+                "se": {
+                    "lat": 41.7,
+                    "lng": -84.8
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Lake Ontario",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "easy",
+            "target": {
+                "lat": 43.8,
+                "lng": -79
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 43.95,
+                    "lng": -79.8
+                },
+                "se": {
+                    "lat": 43.65,
+                    "lng": -78.2
+                }
+            },
+            "country": "Canada"
+        },
+        {
+            "clue": "Crater Lake",
+            "category": "geography",
+            "type": "lake",
+            "difficulty": "easy",
+            "target": {
+                "lat": 42.9453,
+                "lng": -122.1102
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Delaware River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.226,
+                "lng": -74.7597
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 41.5,
+                    "lng": -76
+                },
+                "se": {
+                    "lat": 38.8,
+                    "lng": -73.5
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Hudson River",
+            "category": "geography",
+            "type": "river",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.7614,
+                "lng": -73.9776
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 43.5,
+                    "lng": -74.5
+                },
+                "se": {
+                    "lat": 40.6,
+                    "lng": -73.5
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Statue of Liberty is on this island in New York",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "easy",
+            "target": {
+                "lat": 40.6892,
+                "lng": -74.0445
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Kailua Beach",
+            "category": "geography",
+            "type": "beach",
+            "difficulty": "easy",
+            "target": {
+                "lat": 21.3099,
+                "lng": -157.7381
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Bryce Canyon",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.5765,
+                "lng": -112.1871
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Zion Canyon",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.2982,
+                "lng": -112.7837
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Space Needle",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.6205,
+                "lng": -122.3493
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Hollywood Sign",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 34.1344,
+                "lng": -118.3223
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Griffith Observatory",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "medium",
+            "target": {
+                "lat": 34.1188,
+                "lng": -118.3037
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Find Mexico City (ZÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³calo) in Mexico.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 19.4326,
+                "lng": -99.1332
+            },
+            "country": "Mexico",
+            "answer": "Mexico City"
+        },
+        {
+            "clue": "Where is Vancouver (Stanley Park) in Canada?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 49.2827,
+                "lng": -123.1207
+            },
+            "country": "Canada",
+            "answer": "Vancouver"
+        },
+        {
+            "clue": "Find Los Angeles (Hollywood) in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 34.0522,
+                "lng": -118.2437
+            },
+            "country": "United States",
+            "answer": "Los Angeles"
+        },
+        {
+            "clue": "Where is Las Vegas (The Strip) in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 36.1699,
+                "lng": -115.1398
+            },
+            "country": "United States",
+            "answer": "Las Vegas"
+        },
+        {
+            "clue": "Find New Orleans (French Quarter) in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 29.9511,
+                "lng": -90.2623
+            },
+            "country": "United States",
+            "answer": "New Orleans"
+        },
+        {
+            "clue": "Where is Denver (Rocky Mountains) in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.7392,
+                "lng": -104.9903
+            },
+            "country": "United States",
+            "answer": "Denver"
+        },
+        {
+            "clue": "Great Basin Desert",
+            "category": "geography",
+            "type": "desert",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39,
+                "lng": -114
+            },
+            "bounds": {
+                "nw": {
+                    "lat": 43,
+                    "lng": -120
+                },
+                "se": {
+                    "lat": 35,
+                    "lng": -108
+                }
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Caribbean Sea",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "medium",
+            "target": {
+                "lat": 15,
+                "lng": -75
+            },
+            "country": "Caribbean"
+        },
+        {
+            "clue": "Cahokia Mounds",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 38.6562,
+                "lng": -90.0656
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Antelope Canyon",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 36.8615,
+                "lng": -111.3738
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Painted Hills",
+            "category": "places",
+            "type": "landmark",
+            "difficulty": "hard",
+            "target": {
+                "lat": 44.8347,
+                "lng": -119.8088
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Denali (Mount McKinley)",
+            "category": "geography",
+            "type": "mountain",
+            "difficulty": "hard",
+            "target": {
+                "lat": 63.0695,
+                "lng": -151.0074
+            },
+            "country": "United States"
+        },
+        {
+            "clue": "Hudson Bay",
+            "category": "geography",
+            "type": "ocean",
+            "difficulty": "hard",
+            "target": {
+                "lat": 60,
+                "lng": -85
+            },
+            "country": "Canada"
+        }
+    ]
+}

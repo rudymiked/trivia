@@ -3,7 +3,7 @@ name: Seed Database
 on:
   push:
     paths:
-      - 'data/locations.json'
+      - 'data/locations-*.json'
   workflow_dispatch:
     inputs:
       environment:
@@ -36,12 +36,12 @@ jobs:
       - name: Verify locations data
         run: |
           node -e "
-            const data = require('./data/locations.json');
-            console.log('Total locations:', data.locations.length);
+            const fs = require('fs');
+            const continents = ['north-america','south-america','europe','middle-east','asia','oceania','africa'];
+            const locations = continents.flatMap(c => require('./data/locations-' + c + '.json').locations);
+            console.log('Total locations:', locations.length);
             const byCat = {};
-            data.locations.forEach(l => {
-              byCat[l.category] = (byCat[l.category] || 0) + 1;
-            });
+            locations.forEach(l => { byCat[l.category] = (byCat[l.category] || 0) + 1; });
             console.log('By category:', byCat);
           "
 

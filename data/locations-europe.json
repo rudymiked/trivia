@@ -3473,6 +3473,186 @@
             },
             "country": "Ukraine",
             "answer": "Kyiv"
+        },
+        {
+            "clue": "Where is Zurich in Switzerland?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 47.3769,
+                "lng": 8.5417
+            },
+            "country": "Switzerland",
+            "answer": "Zurich"
+        },
+        {
+            "clue": "Find Naples in Italy.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.8518,
+                "lng": 14.2681
+            },
+            "country": "Italy",
+            "answer": "Naples"
+        },
+        {
+            "clue": "Where is Manchester in United Kingdom?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 53.4808,
+                "lng": "-2.2426"
+            },
+            "country": "United Kingdom",
+            "answer": "Manchester"
+        },
+        {
+            "clue": "Find Porto in Portugal.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 41.1579,
+                "lng": "-8.6291"
+            },
+            "country": "Portugal",
+            "answer": "Porto"
+        },
+        {
+            "clue": "Where is Lyon in France?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 45.764,
+                "lng": 4.8357
+            },
+            "country": "France",
+            "answer": "Lyon"
+        },
+        {
+            "clue": "Find Seville in Spain.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 37.3891,
+                "lng": "-5.9845"
+            },
+            "country": "Spain",
+            "answer": "Seville"
+        },
+        {
+            "clue": "Pinpoint Valletta in Malta.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.8997,
+                "lng": 14.5147
+            },
+            "country": "Italy",
+            "answer": "Valletta"
+        },
+        {
+            "clue": "Where is Glasgow in United Kingdom?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 55.8642,
+                "lng": "-4.2518"
+            },
+            "country": "United Kingdom",
+            "answer": "Glasgow"
+        },
+        {
+            "clue": "Find Thessaloniki in Greece.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.6401,
+                "lng": 22.9444
+            },
+            "country": "Greece",
+            "answer": "Thessaloniki"
+        },
+        {
+            "clue": "Pinpoint Vilnius in Lithuania.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 54.6872,
+                "lng": 25.2797
+            },
+            "country": "Europe",
+            "answer": "Vilnius"
+        },
+        {
+            "clue": "Find Salzburg in Austria.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 47.8095,
+                "lng": 13.055
+            },
+            "country": "Austria",
+            "answer": "Salzburg"
+        },
+        {
+            "clue": "Where is Lake Como in Italy?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 45.98,
+                "lng": 9.26
+            },
+            "country": "Italy",
+            "answer": "Lake Como"
+        },
+        {
+            "clue": "Pinpoint Minsk in Belarus.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 53.9045,
+                "lng": 27.5615
+            },
+            "country": "Europe",
+            "answer": "Minsk"
+        },
+        {
+            "clue": "Find Nicosia in Cyprus.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.1856,
+                "lng": 33.3823
+            },
+            "country": "Europe",
+            "answer": "Nicosia"
+        },
+        {
+            "clue": "Where is Rhine River in Germany?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 51.2,
+                "lng": 6.7
+            },
+            "country": "Germany",
+            "answer": "Rhine River"
         }
     ]
 }

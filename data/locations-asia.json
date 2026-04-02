@@ -2100,6 +2100,150 @@
             },
             "country": "Turkmenistan",
             "answer": "Ashgabat"
+        },
+        {
+            "clue": "Where is Shanghai in China?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 31.2304,
+                "lng": 121.4737
+            },
+            "country": "China",
+            "answer": "Shanghai"
+        },
+        {
+            "clue": "Find Osaka in Japan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 34.6937,
+                "lng": 135.5023
+            },
+            "country": "Japan",
+            "answer": "Osaka"
+        },
+        {
+            "clue": "Where is Mumbai in India?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 19.076,
+                "lng": 72.8777
+            },
+            "country": "India",
+            "answer": "Mumbai"
+        },
+        {
+            "clue": "Find Seoul in South Korea.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 37.5665,
+                "lng": 126.978
+            },
+            "country": "China",
+            "answer": "Seoul"
+        },
+        {
+            "clue": "Where is Taipei in Taiwan?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 25.033,
+                "lng": 121.5654
+            },
+            "country": "China",
+            "answer": "Taipei"
+        },
+        {
+            "clue": "Find Dhaka in Bangladesh.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 23.8103,
+                "lng": 90.4125
+            },
+            "country": "India",
+            "answer": "Dhaka"
+        },
+        {
+            "clue": "Pinpoint Kabul in Afghanistan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 34.5553,
+                "lng": 69.2075
+            },
+            "country": "Pakistan",
+            "answer": "Kabul"
+        },
+        {
+            "clue": "Find Karachi in Pakistan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 24.8607,
+                "lng": 67.0011
+            },
+            "country": "Pakistan",
+            "answer": "Karachi"
+        },
+        {
+            "clue": "Where is Phuket in Thailand?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 7.8804,
+                "lng": 98.3923
+            },
+            "country": "Thailand",
+            "answer": "Phuket"
+        },
+        {
+            "clue": "Find Lhasa in China.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 29.652,
+                "lng": 91.1175
+            },
+            "country": "China",
+            "answer": "Lhasa"
+        },
+        {
+            "clue": "Where is Yellow River in China?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35,
+                "lng": 107
+            },
+            "country": "China",
+            "answer": "Yellow River"
+        },
+        {
+            "clue": "Pinpoint Pyongyang in North Korea.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 39.0392,
+                "lng": 125.7625
+            },
+            "country": "China",
+            "answer": "Pyongyang"
         }
     ]
 }

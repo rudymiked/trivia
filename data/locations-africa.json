@@ -1588,6 +1588,162 @@
             },
             "country": "Zimbabwe",
             "answer": "Harare"
+        },
+        {
+            "clue": "Where is Cape Town in South Africa?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": "-33.9249",
+                "lng": 18.4241
+            },
+            "country": "South Africa",
+            "answer": "Cape Town"
+        },
+        {
+            "clue": "Where is Zanzibar in Tanzania?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-6.1630",
+                "lng": 39.2026
+            },
+            "country": "Tanzania",
+            "answer": "Zanzibar"
+        },
+        {
+            "clue": "Where is Luxor in Egypt?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 25.6872,
+                "lng": 32.6396
+            },
+            "country": "Egypt",
+            "answer": "Luxor"
+        },
+        {
+            "clue": "Find Accra in Ghana.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 5.6037,
+                "lng": "-0.1870"
+            },
+            "country": "Various",
+            "answer": "Accra"
+        },
+        {
+            "clue": "Where is Lagos in Nigeria?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 6.5244,
+                "lng": 3.3792
+            },
+            "country": "Various",
+            "answer": "Lagos"
+        },
+        {
+            "clue": "Pinpoint Abuja in Nigeria.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 9.0765,
+                "lng": 7.3986
+            },
+            "country": "Various",
+            "answer": "Abuja"
+        },
+        {
+            "clue": "Find Dakar in Senegal.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 14.7167,
+                "lng": "-17.4677"
+            },
+            "country": "Various",
+            "answer": "Dakar"
+        },
+        {
+            "clue": "Where is Kilimanjaro National Park in Tanzania?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-3.0674",
+                "lng": 37.3556
+            },
+            "country": "Tanzania",
+            "answer": "Kilimanjaro National Park"
+        },
+        {
+            "clue": "Pinpoint Timbuktu in Mali.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 16.7735,
+                "lng": "-3.0074"
+            },
+            "country": "Mali",
+            "answer": "Timbuktu"
+        },
+        {
+            "clue": "Find Serengeti National Park in Tanzania.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-2.3332",
+                "lng": 34.8333
+            },
+            "country": "Tanzania",
+            "answer": "Serengeti National Park"
+        },
+        {
+            "clue": "Where is Aswan in Egypt?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 24.0889,
+                "lng": 32.8998
+            },
+            "country": "Egypt",
+            "answer": "Aswan"
+        },
+        {
+            "clue": "Find Nairobi National Park in Kenya.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-1.3617",
+                "lng": 36.8488
+            },
+            "country": "Kenya",
+            "answer": "Nairobi National Park"
+        },
+        {
+            "clue": "Pinpoint Mogadishu in Somalia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 2.0469,
+                "lng": 45.3418
+            },
+            "country": "Various",
+            "answer": "Mogadishu"
         }
     ]
 }

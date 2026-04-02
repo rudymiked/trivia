@@ -1485,7 +1485,7 @@
             "country": "United States"
         },
         {
-            "clue": "Find Mexico City (ZÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³calo) in Mexico.",
+            "clue": "Find Mexico City (ZÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³calo) in Mexico.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1654,6 +1654,186 @@
             },
             "country": "Panama",
             "answer": "Panama City"
+        },
+        {
+            "clue": "Where is Chicago in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 41.8781,
+                "lng": "-87.6298"
+            },
+            "country": "United States",
+            "answer": "Chicago"
+        },
+        {
+            "clue": "Find Miami in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 25.7617,
+                "lng": "-80.1918"
+            },
+            "country": "United States",
+            "answer": "Miami"
+        },
+        {
+            "clue": "Where is Houston in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 29.7604,
+                "lng": "-95.3698"
+            },
+            "country": "United States",
+            "answer": "Houston"
+        },
+        {
+            "clue": "Find Phoenix in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 33.4484,
+                "lng": "-112.0740"
+            },
+            "country": "United States",
+            "answer": "Phoenix"
+        },
+        {
+            "clue": "Pinpoint Nashville in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 36.1627,
+                "lng": "-86.7816"
+            },
+            "country": "United States",
+            "answer": "Nashville"
+        },
+        {
+            "clue": "Pinpoint Portland in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 45.5051,
+                "lng": "-122.6750"
+            },
+            "country": "United States",
+            "answer": "Portland"
+        },
+        {
+            "clue": "Where is Yellowstone National Park in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 44.428,
+                "lng": "-110.5885"
+            },
+            "country": "United States",
+            "answer": "Yellowstone National Park"
+        },
+        {
+            "clue": "Pinpoint Havana in Cuba.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 23.1136,
+                "lng": "-82.3666"
+            },
+            "country": "Caribbean",
+            "answer": "Havana"
+        },
+        {
+            "clue": "Find Guatemala City in Guatemala.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 14.6349,
+                "lng": "-90.5069"
+            },
+            "country": "Caribbean",
+            "answer": "Guatemala City"
+        },
+        {
+            "clue": "Where is Montreal in Canada?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 45.5017,
+                "lng": "-73.5673"
+            },
+            "country": "Canada",
+            "answer": "Montreal"
+        },
+        {
+            "clue": "Find Calgary in Canada.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 51.0447,
+                "lng": "-114.0719"
+            },
+            "country": "Canada",
+            "answer": "Calgary"
+        },
+        {
+            "clue": "Pinpoint Quebec City in Canada.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 46.8139,
+                "lng": "-71.2080"
+            },
+            "country": "Canada",
+            "answer": "Quebec City"
+        },
+        {
+            "clue": "Where is Guadalajara in Mexico?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 20.6597,
+                "lng": "-103.3496"
+            },
+            "country": "Mexico",
+            "answer": "Guadalajara"
+        },
+        {
+            "clue": "Find Grand Canyon in United States.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "easy",
+            "target": {
+                "lat": 36.0544,
+                "lng": "-112.1401"
+            },
+            "country": "United States",
+            "answer": "Grand Canyon"
+        },
+        {
+            "clue": "Where is Everglades National Park in United States?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 25.2866,
+                "lng": "-80.8987"
+            },
+            "country": "United States",
+            "answer": "Everglades National Park"
         }
     ]
 }

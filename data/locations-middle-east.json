@@ -662,6 +662,126 @@
             },
             "country": "Turkey",
             "answer": "Ankara"
+        },
+        {
+            "clue": "Find Jerusalem in Israel.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 31.7683,
+                "lng": 35.2137
+            },
+            "country": "Israel",
+            "answer": "Jerusalem"
+        },
+        {
+            "clue": "Where is Beirut in Lebanon?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 33.8938,
+                "lng": 35.5018
+            },
+            "country": "Israel",
+            "answer": "Beirut"
+        },
+        {
+            "clue": "Find Tehran in Iran.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 35.6892,
+                "lng": 51.389
+            },
+            "country": "Middle East",
+            "answer": "Tehran"
+        },
+        {
+            "clue": "Pinpoint Muscat in Oman.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 23.588,
+                "lng": 58.3829
+            },
+            "country": "United Arab Emirates",
+            "answer": "Muscat"
+        },
+        {
+            "clue": "Find Kuwait City in Kuwait.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 29.3759,
+                "lng": 47.9774
+            },
+            "country": "United Arab Emirates",
+            "answer": "Kuwait City"
+        },
+        {
+            "clue": "Pinpoint Doha in Qatar.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 25.2854,
+                "lng": 51.531
+            },
+            "country": "United Arab Emirates",
+            "answer": "Doha"
+        },
+        {
+            "clue": "Find Manama in Bahrain.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 26.2285,
+                "lng": 50.586
+            },
+            "country": "United Arab Emirates",
+            "answer": "Manama"
+        },
+        {
+            "clue": "Find Riyadh in Saudi Arabia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 24.7136,
+                "lng": 46.6753
+            },
+            "country": "United Arab Emirates",
+            "answer": "Riyadh"
+        },
+        {
+            "clue": "Pinpoint Nicosia in Cyprus.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 35.1856,
+                "lng": 33.3823
+            },
+            "country": "Israel",
+            "answer": "Cyprus (Nicosia)"
+        },
+        {
+            "clue": "Where is Euphrates River in Iraq?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 34,
+                "lng": 43
+            },
+            "country": "Iraq",
+            "answer": "Euphrates River"
         }
     ]
 }

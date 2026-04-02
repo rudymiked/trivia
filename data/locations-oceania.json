@@ -599,6 +599,114 @@
             },
             "country": "French Polynesia",
             "answer": "Papeete"
+        },
+        {
+            "clue": "Find Queenstown in New Zealand.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-45.0312",
+                "lng": 168.6626
+            },
+            "country": "New Zealand",
+            "answer": "Queenstown"
+        },
+        {
+            "clue": "Where is Fiji?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-17.7134",
+                "lng": 178.065
+            },
+            "country": "Pacific Ocean",
+            "answer": "Fiji"
+        },
+        {
+            "clue": "Pinpoint Christchurch in New Zealand.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": "-43.5321",
+                "lng": 172.6362
+            },
+            "country": "New Zealand",
+            "answer": "Christchurch"
+        },
+        {
+            "clue": "Find Uluru in Australia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-25.3444",
+                "lng": 131.0369
+            },
+            "country": "Australia",
+            "answer": "Uluru"
+        },
+        {
+            "clue": "Where is Vanuatu?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": "-15.3767",
+                "lng": 166.9592
+            },
+            "country": "Pacific Ocean",
+            "answer": "Vanuatu"
+        },
+        {
+            "clue": "Find Noumea in New Caledonia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": "-22.2758",
+                "lng": 166.458
+            },
+            "country": "Pacific Ocean",
+            "answer": "Noumea"
+        },
+        {
+            "clue": "Pinpoint Tonga.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": "-21.1790",
+                "lng": "-175.1982"
+            },
+            "country": "Pacific Ocean",
+            "answer": "Tonga"
+        },
+        {
+            "clue": "Where is Samoa?",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-13.7590",
+                "lng": "-172.1046"
+            },
+            "country": "Pacific Ocean",
+            "answer": "Samoa"
+        },
+        {
+            "clue": "Find Hobart in Australia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": "-42.8821",
+                "lng": 147.3272
+            },
+            "country": "Australia",
+            "answer": "Hobart"
         }
     ]
 }

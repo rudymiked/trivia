@@ -429,7 +429,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands",
+            "clue": "Explorer Spot: Galapagos Islands",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -462,7 +462,7 @@
             }
         },
         {
-            "clue": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands",
+            "clue": "Regional Focus: Galapagos Islands",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",

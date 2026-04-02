@@ -107,6 +107,7 @@ export async function getLocations(category?: string): Promise<Location[]> {
       type: entity.type as string,
       difficulty: entity.difficulty as 'easy' | 'medium' | 'hard',
       target: JSON.parse(entity.target as string),
+      ...(entity.bounds ? { bounds: JSON.parse(entity.bounds as string) } : {}),
       country: entity.country as string,
       answer: entity.answer as string | undefined,
       enabled: entity.enabled as boolean,

@@ -1968,6 +1968,138 @@
                 "lng": -175
             },
             "country": "North Pacific"
+        },
+        {
+            "clue": "Find New Delhi in India.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 28.6139,
+                "lng": 77.209
+            },
+            "country": "India",
+            "answer": "New Delhi"
+        },
+        {
+            "clue": "Find Jakarta in Indonesia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-6.2088",
+                "lng": 106.8456
+            },
+            "country": "Indonesia",
+            "answer": "Jakarta"
+        },
+        {
+            "clue": "Pinpoint Naypyidaw in Myanmar.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 19.7633,
+                "lng": 96.0785
+            },
+            "country": "Myanmar",
+            "answer": "Naypyidaw"
+        },
+        {
+            "clue": "Find Phnom Penh in Cambodia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 11.5564,
+                "lng": 104.9282
+            },
+            "country": "Cambodia",
+            "answer": "Phnom Penh"
+        },
+        {
+            "clue": "Pinpoint Ulaanbaatar in Mongolia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 47.8864,
+                "lng": 106.9057
+            },
+            "country": "Mongolia",
+            "answer": "Ulaanbaatar"
+        },
+        {
+            "clue": "Find Islamabad in Pakistan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 33.6844,
+                "lng": 73.0479
+            },
+            "country": "Pakistan",
+            "answer": "Islamabad"
+        },
+        {
+            "clue": "Pinpoint Colombo in Sri Lanka.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 6.9271,
+                "lng": 79.8612
+            },
+            "country": "Sri Lanka",
+            "answer": "Colombo"
+        },
+        {
+            "clue": "Pinpoint Bishkek in Kyrgyzstan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 42.8746,
+                "lng": 74.5698
+            },
+            "country": "Kyrgyzstan",
+            "answer": "Bishkek"
+        },
+        {
+            "clue": "Pinpoint Vientiane in Laos.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 17.9757,
+                "lng": 102.6331
+            },
+            "country": "Laos",
+            "answer": "Vientiane"
+        },
+        {
+            "clue": "Pinpoint Male in Maldives.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 4.1755,
+                "lng": 73.5093
+            },
+            "country": "Maldives",
+            "answer": "Male"
+        },
+        {
+            "clue": "Pinpoint Ashgabat in Turkmenistan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 37.9601,
+                "lng": 58.3261
+            },
+            "country": "Turkmenistan",
+            "answer": "Ashgabat"
         }
     ]
 }

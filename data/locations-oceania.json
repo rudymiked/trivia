@@ -575,6 +575,30 @@
                 "lng": 175
             },
             "country": "Antarctica"
+        },
+        {
+            "clue": "Find Canberra in Australia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-35.2809",
+                "lng": 149.13
+            },
+            "country": "Australia",
+            "answer": "Canberra"
+        },
+        {
+            "clue": "Pinpoint Papeete in French Polynesia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": "-17.5334",
+                "lng": "-149.5667"
+            },
+            "country": "French Polynesia",
+            "answer": "Papeete"
         }
     ]
 }

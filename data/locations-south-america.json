@@ -120,7 +120,7 @@
             "country": "Chile"
         },
         {
-            "clue": "GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "clue": "GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands",
             "category": "geography",
             "type": "island",
             "difficulty": "medium",
@@ -429,7 +429,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "clue": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -462,7 +462,7 @@
             }
         },
         {
-            "clue": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "clue": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -716,7 +716,7 @@
             }
         },
         {
-            "clue": "Where is GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "clue": "Where is GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -725,7 +725,7 @@
                 "lng": -90.9656
             },
             "country": "Ecuador",
-            "answer": "GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands",
+            "answer": "GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands",
             "bounds": {
                 "nw": {
                     "lat": 1.5,
@@ -846,7 +846,7 @@
             "answer": "Regional Focus: Atacama Desert"
         },
         {
-            "clue": "Where is Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "clue": "Where is Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -855,10 +855,10 @@
                 "lng": -90.9656
             },
             "country": "Ecuador",
-            "answer": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands"
+            "answer": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands"
         },
         {
-            "clue": "Where is Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "clue": "Where is Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -867,7 +867,7 @@
                 "lng": -90.9656
             },
             "country": "Ecuador",
-            "answer": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡pagos Islands"
+            "answer": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands"
         },
         {
             "clue": "Where is Patagonia in Argentina?",
@@ -991,7 +991,7 @@
             "country": "Argentina"
         },
         {
-            "clue": "LenÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³is Maranhenses",
+            "clue": "LenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³is Maranhenses",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1047,6 +1047,78 @@
                 "lng": -70.0109
             },
             "country": "Argentina"
+        },
+        {
+            "clue": "Find Brasilia in Brazil.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-15.7801",
+                "lng": "-47.9292"
+            },
+            "country": "Brazil",
+            "answer": "Brasilia"
+        },
+        {
+            "clue": "Find Lima in Peru.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-12.0464",
+                "lng": "-77.0428"
+            },
+            "country": "Peru",
+            "answer": "Lima"
+        },
+        {
+            "clue": "Find Bogota in Colombia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 4.711,
+                "lng": "-74.0721"
+            },
+            "country": "Colombia",
+            "answer": "Bogota"
+        },
+        {
+            "clue": "Find La Paz in Bolivia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-16.5000",
+                "lng": "-68.1193"
+            },
+            "country": "Bolivia",
+            "answer": "La Paz"
+        },
+        {
+            "clue": "Pinpoint Caracas in Venezuela.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 10.4806,
+                "lng": "-66.9036"
+            },
+            "country": "Venezuela",
+            "answer": "Caracas"
+        },
+        {
+            "clue": "Find Quito in Ecuador.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": "-0.1807",
+                "lng": "-78.4678"
+            },
+            "country": "Ecuador",
+            "answer": "Quito"
         }
     ]
 }

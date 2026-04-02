@@ -1485,7 +1485,7 @@
             "country": "United States"
         },
         {
-            "clue": "Find Mexico City (ZÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³calo) in Mexico.",
+            "clue": "Find Mexico City (ZÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³calo) in Mexico.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1642,6 +1642,18 @@
                 "lng": -85
             },
             "country": "Canada"
+        },
+        {
+            "clue": "Pinpoint Panama City in Panama.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 8.9936,
+                "lng": "-79.5197"
+            },
+            "country": "Panama",
+            "answer": "Panama City"
         }
     ]
 }

@@ -1408,6 +1408,186 @@
                 }
             },
             "country": "Seychelles"
+        },
+        {
+            "clue": "Pinpoint Moroni in Comoros.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -11.7022,
+                "lng": 43.2551
+            },
+            "country": "Comoros",
+            "answer": "Moroni"
+        },
+        {
+            "clue": "Find Kinshasa in Democratic Republic of the Congo.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": -4.3217,
+                "lng": 15.3126
+            },
+            "country": "Democratic Republic of the Congo",
+            "answer": "Kinshasa"
+        },
+        {
+            "clue": "Find Addis Ababa in Ethiopia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 9.032,
+                "lng": 38.7469
+            },
+            "country": "Ethiopia",
+            "answer": "Addis Ababa"
+        },
+        {
+            "clue": "Pinpoint Antananarivo in Madagascar.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -18.8792,
+                "lng": 47.5079
+            },
+            "country": "Madagascar",
+            "answer": "Antananarivo"
+        },
+        {
+            "clue": "Pinpoint Lilongwe in Malawi.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -13.9626,
+                "lng": 33.7741
+            },
+            "country": "Malawi",
+            "answer": "Lilongwe"
+        },
+        {
+            "clue": "Find Bamako in Mali.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 12.6392,
+                "lng": -8.0029
+            },
+            "country": "Mali",
+            "answer": "Bamako"
+        },
+        {
+            "clue": "Pinpoint Port Louis in Mauritius.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -20.1654,
+                "lng": 57.4896
+            },
+            "country": "Mauritius",
+            "answer": "Port Louis"
+        },
+        {
+            "clue": "Find Rabat in Morocco.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 34.0209,
+                "lng": -6.8416
+            },
+            "country": "Morocco",
+            "answer": "Rabat"
+        },
+        {
+            "clue": "Pinpoint Windhoek in Namibia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -22.5597,
+                "lng": 17.0832
+            },
+            "country": "Namibia",
+            "answer": "Windhoek"
+        },
+        {
+            "clue": "Pinpoint Victoria in Seychelles.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -4.6191,
+                "lng": 55.4513
+            },
+            "country": "Seychelles",
+            "answer": "Victoria"
+        },
+        {
+            "clue": "Find Pretoria in South Africa.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": -25.7461,
+                "lng": 28.1881
+            },
+            "country": "South Africa",
+            "answer": "Pretoria"
+        },
+        {
+            "clue": "Pinpoint Dodoma in Tanzania.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": -6.163,
+                "lng": 35.7516
+            },
+            "country": "Tanzania",
+            "answer": "Dodoma"
+        },
+        {
+            "clue": "Find Kampala in Uganda.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 0.3163,
+                "lng": 32.5822
+            },
+            "country": "Uganda",
+            "answer": "Kampala"
+        },
+        {
+            "clue": "Find Lusaka in Zambia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": -15.4166,
+                "lng": 28.2833
+            },
+            "country": "Zambia",
+            "answer": "Lusaka"
+        },
+        {
+            "clue": "Find Harare in Zimbabwe.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": -17.8252,
+                "lng": 31.0335
+            },
+            "country": "Zimbabwe",
+            "answer": "Harare"
         }
     ]
 }

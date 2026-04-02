@@ -590,6 +590,78 @@
                 }
             },
             "country": "Turkey"
+        },
+        {
+            "clue": "Find Amman in Jordan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 31.9539,
+                "lng": 35.9106
+            },
+            "country": "Jordan",
+            "answer": "Amman"
+        },
+        {
+            "clue": "Pinpoint Baghdad in Iraq.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 33.3152,
+                "lng": 44.3661
+            },
+            "country": "Iraq",
+            "answer": "Baghdad"
+        },
+        {
+            "clue": "Find Abu Dhabi in United Arab Emirates.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 24.4539,
+                "lng": 54.3773
+            },
+            "country": "United Arab Emirates",
+            "answer": "Abu Dhabi"
+        },
+        {
+            "clue": "Pinpoint Sanaa in Yemen.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 15.3694,
+                "lng": 44.191
+            },
+            "country": "Yemen",
+            "answer": "Sanaa"
+        },
+        {
+            "clue": "Find Baku in Azerbaijan.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 40.4093,
+                "lng": 49.8671
+            },
+            "country": "Azerbaijan",
+            "answer": "Baku"
+        },
+        {
+            "clue": "Find Ankara in Turkey.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 39.9334,
+                "lng": 32.8597
+            },
+            "country": "Turkey",
+            "answer": "Ankara"
         }
     ]
 }

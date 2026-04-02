@@ -3413,6 +3413,66 @@
                 }
             },
             "country": "Russia"
+        },
+        {
+            "clue": "Find Brussels in Belgium.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 50.8503,
+                "lng": 4.3517
+            },
+            "country": "Belgium",
+            "answer": "Brussels"
+        },
+        {
+            "clue": "Find Warsaw in Poland.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 52.2297,
+                "lng": 21.0122
+            },
+            "country": "Poland",
+            "answer": "Warsaw"
+        },
+        {
+            "clue": "Pinpoint Bern in Switzerland.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 46.948,
+                "lng": 7.4474
+            },
+            "country": "Switzerland",
+            "answer": "Bern"
+        },
+        {
+            "clue": "Pinpoint Zagreb in Croatia.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "hard",
+            "target": {
+                "lat": 45.815,
+                "lng": 15.9819
+            },
+            "country": "Croatia",
+            "answer": "Zagreb"
+        },
+        {
+            "clue": "Find Kyiv in Ukraine.",
+            "category": "questions",
+            "type": "trivia",
+            "difficulty": "medium",
+            "target": {
+                "lat": 50.4501,
+                "lng": 30.5234
+            },
+            "country": "Ukraine",
+            "answer": "Kyiv"
         }
     ]
 }

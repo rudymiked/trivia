@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "clue": "Petra",
+            "clue": "This red-rose rose city carved into sandstone cliffs by the Nabataeans was unknown to the West until 1812 — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -12,7 +12,7 @@
             "country": "Jordan"
         },
         {
-            "clue": "Burj Khalifa",
+            "clue": "At 828 m, this is the world's tallest building and the centerpiece of downtown Dubai — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -23,7 +23,7 @@
             "country": "United Arab Emirates"
         },
         {
-            "clue": "Hagia Sophia",
+            "clue": "Built as a cathedral in 537 AD, it became a mosque and is now a mosque again — this architectural wonder stands in Istanbul — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -34,7 +34,7 @@
             "country": "Turkey"
         },
         {
-            "clue": "Find Constantinople (Istanbul) in Turkey.",
+            "clue": "Which Turkish city straddles the Bosphorus between Europe and Asia and was once the capital of the Roman Empire?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -46,7 +46,7 @@
             "answer": "Constantinople (Istanbul)"
         },
         {
-            "clue": "Dead Sea",
+            "clue": "At 430 m below sea level, this hypersaline lake is the lowest point on Earth's surface — where is it?",
             "category": "geography",
             "type": "lake",
             "difficulty": "easy",
@@ -67,7 +67,7 @@
             "country": "Israel"
         },
         {
-            "clue": "Where is Dubai in United Arab Emirates?",
+            "clue": "Which UAE city built on the desert coast is famous for the Burj Khalifa and artificial islands shaped like a palm tree?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -79,7 +79,7 @@
             "answer": "Dubai"
         },
         {
-            "clue": "Caspian Sea",
+            "clue": "The world's largest inland body of water, technically a lake, sits between Europe and Asia — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "hard",
@@ -100,7 +100,7 @@
             "country": "Azerbaijan"
         },
         {
-            "clue": "Explorer Spot: Petra",
+            "clue": "Find the Siq canyon entrance leading to Al-Khazneh (the Treasury) in Jordan's Petra.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -111,7 +111,7 @@
             "country": "Jordan"
         },
         {
-            "clue": "Find Jordan.",
+            "clue": "This Middle Eastern kingdom is home to Petra, the Dead Sea, and Wadi Rum desert — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -133,7 +133,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Petra",
+            "clue": "Petra is the ancient capital of the Nabataean kingdom — in which country is it located?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -144,7 +144,7 @@
             "country": "Jordan"
         },
         {
-            "clue": "Explorer Spot: Burj Khalifa",
+            "clue": "Drop a pin on the pinnacle of the world's tallest building in downtown Dubai.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -155,7 +155,7 @@
             "country": "United Arab Emirates"
         },
         {
-            "clue": "Where is United Arab Emirates?",
+            "clue": "This federation of seven emirates on the southeastern Arabian Peninsula is home to Dubai and Abu Dhabi — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -177,7 +177,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Burj Khalifa",
+            "clue": "The Burj Khalifa is in downtown Dubai — in which Middle Eastern country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -188,7 +188,7 @@
             "country": "United Arab Emirates"
         },
         {
-            "clue": "Explorer Spot: Hagia Sophia",
+            "clue": "Find the Hagia Sophia in Istanbul's Sultanahmet district, between the Blue Mosque and Topkapi Palace.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -199,7 +199,7 @@
             "country": "Turkey"
         },
         {
-            "clue": "Where is Turkey?",
+            "clue": "This transcontinental country bridges Europe and Asia, home to Istanbul, Cappadocia, and Mount Ararat — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -221,7 +221,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Hagia Sophia",
+            "clue": "Hagia Sophia stands in the Sultanahmet district — in which city straddling Europe and Asia?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -232,7 +232,7 @@
             "country": "Turkey"
         },
         {
-            "clue": "Explorer Spot: Which city was the capital of the Byzantine Empire",
+            "clue": "Find the Sultanahmet district of Istanbul, the heart of the ancient Byzantine capital Constantinople.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -243,7 +243,7 @@
             "country": "Turkey"
         },
         {
-            "clue": "Regional Focus: Which city was the capital of the Byzantine Empire",
+            "clue": "Constantinople, capital of the Byzantine Empire, is now the modern-day city of Istanbul — in which country?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -254,7 +254,7 @@
             "country": "Turkey"
         },
         {
-            "clue": "Explorer Spot: Dead Sea",
+            "clue": "Drop a pin on the Dead Sea's lowest shoreline, the lowest accessible point on Earth.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -265,7 +265,7 @@
             "country": "Israel"
         },
         {
-            "clue": "Pinpoint Israel.",
+            "clue": "This small but historically significant Middle Eastern country on the eastern Mediterranean coast — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -287,7 +287,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Dead Sea",
+            "clue": "The Dead Sea is shared by Israel, Jordan, and which other territory? Pinpoint the western shore.",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -298,7 +298,7 @@
             "country": "Israel"
         },
         {
-            "clue": "Old City of Jerusalem",
+            "clue": "One of the world's oldest cities, sacred to Jews, Christians, and Muslims, sits on the Judean Hills — find it.",
             "category": "places",
             "type": "region",
             "difficulty": "medium",
@@ -309,7 +309,7 @@
             "country": "Israel"
         },
         {
-            "clue": "Find Istanbul in Turkey.",
+            "clue": "Which Turkish city straddles two continents across the Bosphorus and was once called Constantinople?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -321,7 +321,7 @@
             "answer": "Istanbul"
         },
         {
-            "clue": "Pinpoint Bosporus in Turkey.",
+            "clue": "This narrow strait connects the Black Sea to the Sea of Marmara, splitting a major Turkish city — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -333,7 +333,7 @@
             "answer": "Bosporus"
         },
         {
-            "clue": "Pinpoint Tbilisi in Georgia.",
+            "clue": "The capital of the country of Georgia, known for its medieval old town and warm sulfur baths, sits in the Caucasus — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -345,7 +345,7 @@
             "answer": "Tbilisi"
         },
         {
-            "clue": "Sheikh Zayed Grand Mosque",
+            "clue": "One of the world's largest mosques, with its 82 domes and 57 fountains, dominates the skyline of Abu Dhabi — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -356,7 +356,7 @@
             "country": "United Arab Emirates"
         },
         {
-            "clue": "Where is Petra in Jordan?",
+            "clue": "In which Jordanian desert did the Nabataeans carve their rose-red city into sandstone cliffs?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -368,7 +368,7 @@
             "answer": "Petra"
         },
         {
-            "clue": "Where is Burj Khalifa in United Arab Emirates?",
+            "clue": "The world's tallest building rises in which UAE emirate on the Persian Gulf coast?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -380,7 +380,7 @@
             "answer": "Burj Khalifa"
         },
         {
-            "clue": "Where is Hagia Sophia in Turkey?",
+            "clue": "In which Istanbul district does the ancient Hagia Sophia stand beside the Blue Mosque?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -392,7 +392,7 @@
             "answer": "Hagia Sophia"
         },
         {
-            "clue": "Where is Dead Sea in Israel?",
+            "clue": "On which shore of the Dead Sea does the Israeli beach resort Ein Bokek sit?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -414,7 +414,7 @@
             }
         },
         {
-            "clue": "Where is Caspian Sea in Azerbaijan?",
+            "clue": "Azerbaijan's capital Baku sits on which large inland sea's western shore?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -436,7 +436,7 @@
             }
         },
         {
-            "clue": "Where is Regional Focus: Petra in Jordan?",
+            "clue": "Find the ancient Nabataean city of Petra carved into the rose-red sandstone in southern Jordan.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -448,7 +448,7 @@
             "answer": "Regional Focus: Petra"
         },
         {
-            "clue": "Where is Regional Focus: Burj Khalifa in United Arab Emirates?",
+            "clue": "Find the Burj Khalifa in the Downtown Dubai district of the UAE.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -460,7 +460,7 @@
             "answer": "Regional Focus: Burj Khalifa"
         },
         {
-            "clue": "Where is Regional Focus: Hagia Sophia in Turkey?",
+            "clue": "Find the Hagia Sophia in Istanbul's historic Sultanahmet quarter.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -472,7 +472,7 @@
             "answer": "Regional Focus: Hagia Sophia"
         },
         {
-            "clue": "Where is Explorer Spot: Dead Sea in Israel?",
+            "clue": "Find the Israeli shore of the Dead Sea at the lowest point on Earth.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -484,7 +484,7 @@
             "answer": "Explorer Spot: Dead Sea"
         },
         {
-            "clue": "Where is Regional Focus: Dead Sea in Israel?",
+            "clue": "Find the Dead Sea's Israeli shoreline in the desert south of Jerusalem.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -496,7 +496,7 @@
             "answer": "Regional Focus: Dead Sea"
         },
         {
-            "clue": "Tigris River",
+            "clue": "One of the two great rivers of Mesopotamia, the cradle of civilization, flows through Turkey and Iraq — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -517,7 +517,7 @@
             "country": "Iraq"
         },
         {
-            "clue": "Euphrates River",
+            "clue": "The longest river in Western Asia flowed past ancient Babylon and Ur before reaching the Persian Gulf — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -538,7 +538,7 @@
             "country": "Iraq"
         },
         {
-            "clue": "Dead Sea",
+            "clue": "At 430 m below sea level, this hypersaline lake is the lowest point on Earth's surface — where is it?",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -549,7 +549,7 @@
             "country": "Israel"
         },
         {
-            "clue": "Cappadocia",
+            "clue": "This Turkish region is famous for its fairy chimneys, cave dwellings, and hot-air balloon flights over volcanic valleys — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -560,7 +560,7 @@
             "country": "Turkey"
         },
         {
-            "clue": "Socotra Island",
+            "clue": "This remote Yemeni island, called the 'Galapagos of the Indian Ocean', is home to the otherworldly Dragon Blood Tree — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -571,7 +571,7 @@
             "country": "Yemen"
         },
         {
-            "clue": "Lake Van",
+            "clue": "The largest lake in Turkey sits in the eastern Anatolian highlands near the Armenian border — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "hard",
@@ -592,7 +592,7 @@
             "country": "Turkey"
         },
         {
-            "clue": "Find Amman in Jordan.",
+            "clue": "The capital of Jordan is a city built on seven hills — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -604,7 +604,7 @@
             "answer": "Amman"
         },
         {
-            "clue": "Pinpoint Baghdad in Iraq.",
+            "clue": "The capital of Iraq sits on the Tigris River and was once the center of the Islamic Golden Age — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -616,7 +616,7 @@
             "answer": "Baghdad"
         },
         {
-            "clue": "Find Abu Dhabi in United Arab Emirates.",
+            "clue": "The capital of the UAE and home of the Sheikh Zayed Grand Mosque — find this city on the Persian Gulf.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -628,7 +628,7 @@
             "answer": "Abu Dhabi"
         },
         {
-            "clue": "Pinpoint Sanaa in Yemen.",
+            "clue": "The ancient capital of Yemen, one of the oldest inhabited cities in the world, sits at 2,300 m altitude — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -640,7 +640,7 @@
             "answer": "Sanaa"
         },
         {
-            "clue": "Find Baku in Azerbaijan.",
+            "clue": "The capital of Azerbaijan on the Caspian Sea was transformed from oil revenues into a modern city — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -652,7 +652,7 @@
             "answer": "Baku"
         },
         {
-            "clue": "Find Ankara in Turkey.",
+            "clue": "Turkey's capital, chosen over Istanbul when the republic was founded in 1923, sits in central Anatolia — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -664,7 +664,7 @@
             "answer": "Ankara"
         },
         {
-            "clue": "Find Jerusalem in Israel.",
+            "clue": "The holy city sacred to Jews, Christians, and Muslims sits on the Judean Hills between the Mediterranean and Dead Sea — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -676,7 +676,7 @@
             "answer": "Jerusalem"
         },
         {
-            "clue": "Where is Beirut in Lebanon?",
+            "clue": "The 'Paris of the Middle East,' this Lebanese capital on the Mediterranean was rebuilt after a devastating civil war — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -688,7 +688,7 @@
             "answer": "Beirut"
         },
         {
-            "clue": "Find Tehran in Iran.",
+            "clue": "The capital of Iran at the foot of the Alborz Mountains is the largest city in Western Asia — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -700,7 +700,7 @@
             "answer": "Tehran"
         },
         {
-            "clue": "Pinpoint Muscat in Oman.",
+            "clue": "Nestled between the Al Hajar Mountains and the Arabian Sea, Muscat is the capital of which Gulf country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -712,7 +712,7 @@
             "answer": "Muscat"
         },
         {
-            "clue": "Find Kuwait City in Kuwait.",
+            "clue": "The capital of one of the world's wealthiest countries per capita sits at the head of the Persian Gulf — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -724,7 +724,7 @@
             "answer": "Kuwait City"
         },
         {
-            "clue": "Pinpoint Doha in Qatar.",
+            "clue": "The capital of Qatar, host of the 2022 FIFA World Cup, sits on a peninsula in the Persian Gulf — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -736,7 +736,7 @@
             "answer": "Doha"
         },
         {
-            "clue": "Find Manama in Bahrain.",
+            "clue": "The capital of the small island kingdom of Bahrain in the Persian Gulf — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -748,7 +748,7 @@
             "answer": "Manama"
         },
         {
-            "clue": "Find Riyadh in Saudi Arabia.",
+            "clue": "The capital of Saudi Arabia sits in the heart of the Arabian Peninsula on the Najd plateau — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -760,7 +760,7 @@
             "answer": "Riyadh"
         },
         {
-            "clue": "Pinpoint Nicosia in Cyprus.",
+            "clue": "The only divided capital in the world is split between Greek and Turkish communities on which Mediterranean island?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -772,7 +772,7 @@
             "answer": "Cyprus (Nicosia)"
         },
         {
-            "clue": "Where is Euphrates River in Iraq?",
+            "clue": "Where does the Euphrates River flow through southern Iraq before joining the Tigris to form the Shatt al-Arab?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",

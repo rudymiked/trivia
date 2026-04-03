@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "clue": "Statue of Liberty",
+            "clue": "This copper giant guards New York Harbor and was a gift from France — where is she?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -12,7 +12,7 @@
             "country": "United States"
         },
         {
-            "clue": "Golden Gate Bridge",
+            "clue": "This iconic red suspension bridge spans the entrance to San Francisco Bay — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -23,7 +23,7 @@
             "country": "United States"
         },
         {
-            "clue": "Niagara Falls",
+            "clue": "These thundering waterfalls straddle the US–Canada border in Ontario — pinpoint them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -34,7 +34,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Chichen Itza",
+            "clue": "This ancient Mayan pyramid hosts a famous 'serpent shadow' on the spring equinox — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -45,7 +45,7 @@
             "country": "Mexico"
         },
         {
-            "clue": "Times Square",
+            "clue": "This dazzling crossroads in Midtown Manhattan hosts the world-famous New Year's Eve ball drop — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -56,7 +56,7 @@
             "country": "United States"
         },
         {
-            "clue": "CN Tower",
+            "clue": "For 32 years this was the world's tallest free-standing structure — where does it stand in Toronto?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -67,7 +67,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Grand Canyon",
+            "clue": "Carved by the Colorado River over millions of years, this mile-deep gorge sits in Arizona — pinpoint it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -78,7 +78,7 @@
             "country": "United States"
         },
         {
-            "clue": "Where is New York City in United States?",
+            "clue": "Which sprawling metropolis sits at the mouth of the Hudson River on the US East Coast?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -90,7 +90,7 @@
             "answer": "New York City"
         },
         {
-            "clue": "Where is Boston in United States?",
+            "clue": "Home of the Red Sox, the Freedom Trail, and Harvard — which Massachusetts city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -102,7 +102,7 @@
             "answer": "Boston"
         },
         {
-            "clue": "Where is Philadelphia in United States?",
+            "clue": "In which Pennsylvania city did the Founding Fathers sign the US Constitution in 1787?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -114,7 +114,7 @@
             "answer": "Philadelphia"
         },
         {
-            "clue": "Where is Washington D.C. (Lincoln Memorial) in United States?",
+            "clue": "The US capital sits between Virginia and Maryland — find the Lincoln Memorial.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -126,7 +126,7 @@
             "answer": "Washington D.C. (Lincoln Memorial)"
         },
         {
-            "clue": "Where is Seattle in United States?",
+            "clue": "Which rainy Pacific Northwest city is home to the Space Needle and the original Starbucks?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -138,7 +138,7 @@
             "answer": "Seattle"
         },
         {
-            "clue": "Pinpoint Kitty Hawk, North Carolina in United States.",
+            "clue": "Near which North Carolina barrier island did the Wright Brothers make history with the first powered flight in 1903?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -150,7 +150,7 @@
             "answer": "Kitty Hawk, North Carolina"
         },
         {
-            "clue": "Where is San Francisco in United States?",
+            "clue": "The Golden Gate Bridge and Alcatraz both sit near which fog-covered California city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -162,7 +162,7 @@
             "answer": "San Francisco"
         },
         {
-            "clue": "Mississippi River",
+            "clue": "The longest river in North America drains 31 US states before emptying into the Gulf of Mexico — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -183,7 +183,7 @@
             "country": "United States"
         },
         {
-            "clue": "Mount McKinley (Denali)",
+            "clue": "At 6,190 m, this is the highest peak in North America — where does it rise in Alaska?",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -194,7 +194,7 @@
             "country": "United States"
         },
         {
-            "clue": "Great Lakes - Lake Superior",
+            "clue": "The world's largest freshwater lake by surface area borders Minnesota, Wisconsin, and Michigan — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "medium",
@@ -215,7 +215,7 @@
             "country": "United States"
         },
         {
-            "clue": "Mojave Desert",
+            "clue": "The hottest desert in North America, home to Death Valley and Joshua Tree, sits in southern California — where is it?",
             "category": "geography",
             "type": "desert",
             "difficulty": "medium",
@@ -236,7 +236,7 @@
             "country": "United States"
         },
         {
-            "clue": "Hawaii (Big Island)",
+            "clue": "The youngest and largest of the Hawaiian islands still has active lava flows reaching the ocean — pinpoint it.",
             "category": "geography",
             "type": "island",
             "difficulty": "easy",
@@ -257,7 +257,7 @@
             "country": "United States"
         },
         {
-            "clue": "Greenland",
+            "clue": "Covered in ice three times the size of Texas, the world's largest island is an autonomous Danish territory — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "easy",
@@ -278,7 +278,7 @@
             "country": "Greenland"
         },
         {
-            "clue": "Panama Canal",
+            "clue": "This 80-km waterway connects the Atlantic and Pacific oceans, cutting through Central America — where is it?",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -289,7 +289,7 @@
             "country": "Panama"
         },
         {
-            "clue": "Mount Rushmore",
+            "clue": "Four US presidents are carved into this South Dakota granite face — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -300,7 +300,7 @@
             "country": "United States"
         },
         {
-            "clue": "Find Cape Canaveral (Kennedy Space Center) in United States.",
+            "clue": "Every crewed NASA launch from US soil has lifted off from this Florida Space Coast facility — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -312,7 +312,7 @@
             "answer": "Cape Canaveral (Kennedy Space Center)"
         },
         {
-            "clue": "Bering Strait",
+            "clue": "Which narrow strait separates Alaska from Russia at the top of the Pacific, and once served as a land bridge for early humans?",
             "category": "geography",
             "type": "ocean",
             "difficulty": "hard",
@@ -323,18 +323,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Statue of Liberty",
-            "category": "places",
-            "type": "landmark",
-            "difficulty": "medium",
-            "target": {
-                "lat": 40.6892,
-                "lng": -74.0445
-            },
-            "country": "United States"
-        },
-        {
-            "clue": "Pinpoint United States.",
+            "clue": "The world's third-largest country by area stretches from the Atlantic to the Pacific — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -356,7 +345,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Statue of Liberty",
+            "clue": "In which Harbor does the Statue of Liberty stand?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -367,7 +356,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Golden Gate Bridge",
+            "clue": "Find the exact span of this famous orange bridge at the entrance to San Francisco Bay.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -378,7 +367,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Golden Gate Bridge",
+            "clue": "The Golden Gate Bridge marks the entrance to which major California bay? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -389,7 +378,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Niagara Falls",
+            "clue": "Zoom in and drop a pin right on the horseshoe falls between Ontario and New York.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -400,7 +389,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Find Canada.",
+            "clue": "The world's second-largest country by area stretches from the Atlantic to the Pacific — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -422,7 +411,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Niagara Falls",
+            "clue": "Niagara Falls straddles the border between the US and which Canadian province? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -433,7 +422,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Explorer Spot: Chichen Itza",
+            "clue": "Find the precise spot of the El Castillo pyramid on Mexico's Yucatan Peninsula.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -444,7 +433,7 @@
             "country": "Mexico"
         },
         {
-            "clue": "Where is Mexico?",
+            "clue": "This country shares a 3,145-km border with the United States to the north — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -466,7 +455,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Chichen Itza",
+            "clue": "Chichen Itza lies on which Mexican peninsula? Pinpoint the correct region.",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -477,7 +466,7 @@
             "country": "Mexico"
         },
         {
-            "clue": "Explorer Spot: Times Square",
+            "clue": "Can you zero in on the heart of Times Square in Midtown Manhattan?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -488,7 +477,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Times Square",
+            "clue": "Times Square is the heart of which Manhattan neighborhood? Pinpoint the district.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -499,7 +488,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: CN Tower",
+            "clue": "Drop a pin on Canada's most famous tower in downtown Toronto.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -510,7 +499,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Regional Focus: CN Tower",
+            "clue": "The CN Tower stands in the waterfront district of which Canadian city? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -521,7 +510,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Explorer Spot: Grand Canyon",
+            "clue": "Put a pin on the South Rim viewpoint — the most visited overlook in Arizona.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -532,7 +521,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Grand Canyon",
+            "clue": "The Grand Canyon was carved by which river through the Colorado Plateau? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -543,7 +532,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Where is the headquarters of the United Nations located",
+            "clue": "Find the UN Secretariat building overlooking the East River in New York City.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -554,7 +543,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Where is the headquarters of the United Nations located",
+            "clue": "In which Manhattan neighborhood along the East River is the UN headquarters located?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -565,7 +554,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: In which city did the Boston Tea Party take place",
+            "clue": "Find Griffin's Wharf in Boston, where colonists dumped British tea into the harbor in 1773.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -576,7 +565,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: In which city did the Boston Tea Party take place",
+            "clue": "The Boston Tea Party took place in which US state? Pinpoint Boston's harbor district.",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -587,7 +576,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: In which city was the Declaration of Independence signed",
+            "clue": "Find Independence Hall in Philadelphia, where the Declaration of Independence was signed in 1776.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -598,7 +587,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: In which city was the Declaration of Independence signed",
+            "clue": "Philadelphia lies in which mid-Atlantic US state? Pinpoint the city region.",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -609,7 +598,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: In which city did Martin Luther King Jr. deliver his \u0027I Have a Dream\u0027 speech",
+            "clue": "Find the Lincoln Memorial steps where MLK delivered his 'I Have a Dream' speech in 1963.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -620,7 +609,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: In which city did Martin Luther King Jr. deliver his \u0027I Have a Dream\u0027 speech",
+            "clue": "The Lincoln Memorial is on the west end of the National Mall — in which US capital city?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -631,7 +620,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: In which city was the first Starbucks opened in 1971",
+            "clue": "Find the original Starbucks at Pike Place Market in Seattle.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -642,7 +631,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: In which city was the first Starbucks opened in 1971",
+            "clue": "The original Starbucks is at Pike Place Market — in which Pacific Northwest city?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -653,7 +642,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Where did the Wright Brothers make their first powered flight",
+            "clue": "Find Kill Devil Hills, the exact dune near Kitty Hawk where the first airplane flew in 1903.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -664,7 +653,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Where did the Wright Brothers make their first powered flight",
+            "clue": "Kitty Hawk sits on the Outer Banks of which southeastern US state? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -675,7 +664,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: In which city was the first iPhone unveiled in 2007",
+            "clue": "Find the Moscone Center in San Francisco where Steve Jobs unveiled the first iPhone in 2007.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -686,7 +675,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: In which city was the first iPhone unveiled in 2007",
+            "clue": "The first iPhone was unveiled in San Francisco — in which US state does this city sit?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -697,7 +686,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Mississippi River",
+            "clue": "Find the Mississippi River's mouth where it meets the Gulf of Mexico.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -708,18 +697,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Mississippi River",
-            "category": "geography",
-            "type": "region",
-            "difficulty": "easy",
-            "target": {
-                "lat": 29.1511,
-                "lng": -89.2495
-            },
-            "country": "United States"
-        },
-        {
-            "clue": "Explorer Spot: Great Lakes - Lake Superior",
+            "clue": "Drop a pin anywhere on the world's largest freshwater lake by surface area.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -730,18 +708,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Mojave Desert",
-            "category": "places",
-            "type": "landmark",
-            "difficulty": "hard",
-            "target": {
-                "lat": 35.011,
-                "lng": -115.4734
-            },
-            "country": "United States"
-        },
-        {
-            "clue": "Regional Focus: Mojave Desert",
+            "clue": "The Mojave Desert sits at the intersection of which southwestern US states? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -749,10 +716,20 @@
                 "lat": 35.011,
                 "lng": -115.4734
             },
+            "bounds": {
+                "nw": {
+                    "lat": 36.5,
+                    "lng": -116.5
+                },
+                "se": {
+                    "lat": 34.5,
+                    "lng": -114.5
+                }
+            },
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Hawaii (Big Island)",
+            "clue": "Find the Big Island's active lava coastline on the southeast shore.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -763,7 +740,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Hawaii (Big Island)",
+            "clue": "The Big Island is the youngest of a volcanic chain in which US state? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -774,7 +751,7 @@
             "country": "United States"
         },
         {
-            "clue": "Explorer Spot: Greenland",
+            "clue": "Drop a pin on the ice-covered interior of the world's largest island.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -785,7 +762,7 @@
             "country": "Greenland"
         },
         {
-            "clue": "Find Greenland.",
+            "clue": "The world's largest island is mostly covered in ice — where is this autonomous Danish territory?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -807,7 +784,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Greenland",
+            "clue": "Greenland is an autonomous territory belonging to which European nation? Pinpoint the island.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -818,7 +795,7 @@
             "country": "Greenland"
         },
         {
-            "clue": "Explorer Spot: Panama Canal",
+            "clue": "Find the Miraflores Locks, the most-visited section of the Panama Canal.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -829,7 +806,7 @@
             "country": "Panama"
         },
         {
-            "clue": "Where is Panama?",
+            "clue": "Which Central American country is the narrowest land bridge between North and South America?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -851,7 +828,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Panama Canal",
+            "clue": "The Panama Canal connects the Pacific to which ocean on the east? Pinpoint the canal region.",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -862,7 +839,7 @@
             "country": "Panama"
         },
         {
-            "clue": "Explorer Spot: Mount Rushmore",
+            "clue": "Find the carved granite faces of four US presidents in the Black Hills of South Dakota.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -873,7 +850,7 @@
             "country": "United States"
         },
         {
-            "clue": "Regional Focus: Mount Rushmore",
+            "clue": "Mount Rushmore sits in the Black Hills of which US state? Pinpoint the region.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -884,7 +861,7 @@
             "country": "United States"
         },
         {
-            "clue": "Grand Canyon",
+            "clue": "Carved by the Colorado River over millions of years, this mile-deep gorge sits in Arizona — pinpoint it.",
             "category": "places",
             "type": "region",
             "difficulty": "medium",
@@ -905,7 +882,7 @@
             "country": "United States"
         },
         {
-            "clue": "Where is Ottawa in Canada?",
+            "clue": "Which city on the Ottawa River serves as the capital of Canada?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -917,7 +894,7 @@
             "answer": "Ottawa"
         },
         {
-            "clue": "Yucatan Peninsula",
+            "clue": "The ancient Maya built Chichen Itza and Tulum on this limestone peninsula jutting into the Gulf of Mexico — find it.",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -938,7 +915,7 @@
             "country": "Mexico"
         },
         {
-            "clue": "Where is Statue of Liberty in United States?",
+            "clue": "On which New York Harbor island does the famous gift from France stand watch?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -950,7 +927,7 @@
             "answer": "Statue of Liberty"
         },
         {
-            "clue": "Where is Niagara Falls in Canada?",
+            "clue": "Which Ontario city overlooks North America's most powerful waterfall?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -962,7 +939,7 @@
             "answer": "Niagara Falls"
         },
         {
-            "clue": "Where is Chichen Itza in Mexico?",
+            "clue": "The Kukulkan pyramid stands at this ancient Maya site — in which Mexican state?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -974,7 +951,7 @@
             "answer": "Chichen Itza"
         },
         {
-            "clue": "Where is Mississippi River in United States?",
+            "clue": "Where does the Mississippi River empty into the Gulf of Mexico?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -996,7 +973,7 @@
             }
         },
         {
-            "clue": "Where is Mount McKinley (Denali) in United States?",
+            "clue": "North America's tallest peak towers over which Alaskan range?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1008,7 +985,7 @@
             "answer": "Mount McKinley (Denali)"
         },
         {
-            "clue": "Where is Great Lakes - Lake Superior in United States?",
+            "clue": "Lake Superior borders Minnesota, Wisconsin, Michigan, and which Canadian province?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1030,7 +1007,7 @@
             }
         },
         {
-            "clue": "Where is Mojave Desert in United States?",
+            "clue": "Death Valley, the hottest place on Earth, lies within which North American desert? Find its heart.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1052,7 +1029,7 @@
             }
         },
         {
-            "clue": "Where is Hawaii (Big Island) in United States?",
+            "clue": "The youngest Hawaiian island still has active lava flows — which island is it and where?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1074,7 +1051,7 @@
             }
         },
         {
-            "clue": "Where is Panama Canal in Panama?",
+            "clue": "Where does the Panama Canal link the Atlantic and Pacific oceans?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1086,7 +1063,7 @@
             "answer": "Panama Canal"
         },
         {
-            "clue": "Where is Bering Strait in United States?",
+            "clue": "Which narrow strait separates Alaska from Russia at the top of the Pacific?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1098,7 +1075,7 @@
             "answer": "Bering Strait"
         },
         {
-            "clue": "Where is Regional Focus: Statue of Liberty in United States?",
+            "clue": "Can you pinpoint the specific island in New York Harbor where the Statue of Liberty stands?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1110,7 +1087,7 @@
             "answer": "Regional Focus: Statue of Liberty"
         },
         {
-            "clue": "Where is Regional Focus: Niagara Falls in Canada?",
+            "clue": "Pinpoint the Canadian side of Niagara Falls — in which Ontario city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1122,7 +1099,7 @@
             "answer": "Regional Focus: Niagara Falls"
         },
         {
-            "clue": "Where is Regional Focus: Chichen Itza in Mexico?",
+            "clue": "Chichen Itza's El Castillo pyramid sits in which Yucatan state of Mexico?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1134,7 +1111,7 @@
             "answer": "Regional Focus: Chichen Itza"
         },
         {
-            "clue": "Where is Explorer Spot: Panama Canal in Panama?",
+            "clue": "Drop a pin on the Pacific entrance to the Panama Canal, near Panama City.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1146,7 +1123,7 @@
             "answer": "Explorer Spot: Panama Canal"
         },
         {
-            "clue": "Where is Regional Focus: Panama Canal in Panama?",
+            "clue": "The Panama Canal's Pacific end opens near which Central American capital city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1158,7 +1135,7 @@
             "answer": "Regional Focus: Panama Canal"
         },
         {
-            "clue": "Empire State Building",
+            "clue": "This Art Deco skyscraper was the world's tallest building for 40 years after opening in 1931 — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1169,7 +1146,7 @@
             "country": "United States"
         },
         {
-            "clue": "Chrysler Building",
+            "clue": "With its stainless-steel eagle gargoyles, this Art Deco tower briefly held the world-height record in 1930 — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1180,7 +1157,7 @@
             "country": "United States"
         },
         {
-            "clue": "Washington Monument",
+            "clue": "This 555-foot Egyptian obelisk is the world's tallest stone structure and honors the first US president — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1191,7 +1168,7 @@
             "country": "United States"
         },
         {
-            "clue": "White House",
+            "clue": "Home and office of every US president since 1800, this colonnaded mansion sits at 1600 Pennsylvania Ave — pinpoint it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1202,7 +1179,7 @@
             "country": "United States"
         },
         {
-            "clue": "Where is Toronto in Canada?",
+            "clue": "Which Canadian city on Lake Ontario is also the country's most populous?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1214,7 +1191,7 @@
             "answer": "Toronto"
         },
         {
-            "clue": "Rocky Mountains",
+            "clue": "This massive mountain range stretches from British Columbia all the way to New Mexico — pick any point along its spine.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "easy",
@@ -1225,7 +1202,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Appalachian Mountains",
+            "clue": "One of the oldest mountain ranges on Earth, this chain runs from Alabama to Newfoundland — pinpoint any section.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "easy",
@@ -1236,7 +1213,7 @@
             "country": "United States"
         },
         {
-            "clue": "Atlantic Ocean",
+            "clue": "The world's second-largest ocean separates the Americas from Europe and Africa — drop a pin in it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -1247,7 +1224,7 @@
             "country": "Atlantic Ocean"
         },
         {
-            "clue": "Arctic Ocean",
+            "clue": "The world's smallest and shallowest ocean sits at the top of the globe — place your pin there.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -1258,7 +1235,7 @@
             "country": "Arctic Ocean"
         },
         {
-            "clue": "Yellowstone",
+            "clue": "Home to Old Faithful and thousands of geysers, the world's first national park sits atop a Wyoming supervolcano — find it.",
             "category": "geography",
             "type": "landmark",
             "difficulty": "easy",
@@ -1269,7 +1246,7 @@
             "country": "United States"
         },
         {
-            "clue": "Yosemite Valley",
+            "clue": "El Capitan and Half Dome tower over this glacier-carved California valley — where is it?",
             "category": "geography",
             "type": "landmark",
             "difficulty": "easy",
@@ -1280,7 +1257,7 @@
             "country": "United States"
         },
         {
-            "clue": "Lake Michigan",
+            "clue": "The only one of the five Great Lakes located entirely within the United States — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "easy",
@@ -1301,7 +1278,7 @@
             "country": "United States"
         },
         {
-            "clue": "Lake Ontario",
+            "clue": "The smallest of the Great Lakes by surface area, it borders New York State and Ontario — where is it?",
             "category": "geography",
             "type": "lake",
             "difficulty": "easy",
@@ -1322,7 +1299,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Crater Lake",
+            "clue": "Fed entirely by snow and rain, this Oregon lake sits inside a collapsed volcano and is the deepest in the US — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "easy",
@@ -1333,7 +1310,7 @@
             "country": "United States"
         },
         {
-            "clue": "Delaware River",
+            "clue": "Washington famously crossed this river on Christmas 1776 — it forms the border between Pennsylvania and New Jersey.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -1354,7 +1331,7 @@
             "country": "United States"
         },
         {
-            "clue": "Hudson River",
+            "clue": "Henry Hudson sailed this river in 1609 searching for a passage to Asia — it flows past Manhattan heading south.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -1375,7 +1352,7 @@
             "country": "United States"
         },
         {
-            "clue": "Statue of Liberty",
+            "clue": "This copper giant guards New York Harbor and was a gift from France — where is she?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1386,7 +1363,7 @@
             "country": "United States"
         },
         {
-            "clue": "Kailua Beach",
+            "clue": "Often rated Hawaii's finest white-sand beach, this spot faces Kailua Bay on Oahu's windward coast — find it.",
             "category": "geography",
             "type": "beach",
             "difficulty": "easy",
@@ -1397,7 +1374,7 @@
             "country": "United States"
         },
         {
-            "clue": "Bryce Canyon",
+            "clue": "Its famous red and orange hoodoos make this Utah national park look like another planet — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1408,7 +1385,7 @@
             "country": "United States"
         },
         {
-            "clue": "Zion Canyon",
+            "clue": "This Utah canyon filled with sheer red sandstone walls attracts millions of hikers each year — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1419,7 +1396,7 @@
             "country": "United States"
         },
         {
-            "clue": "Space Needle",
+            "clue": "Built for the 1962 World's Fair, this flying-saucer tower defines the Seattle skyline — pinpoint it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1430,7 +1407,7 @@
             "country": "United States"
         },
         {
-            "clue": "Hollywood Sign",
+            "clue": "Nine white letters stretch across the Santa Monica Mountains overlooking Los Angeles — put a pin on them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1441,7 +1418,7 @@
             "country": "United States"
         },
         {
-            "clue": "Griffith Observatory",
+            "clue": "Perched on the slopes of Mount Hollywood, this Art Deco observatory offers sweeping views of LA — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1452,7 +1429,7 @@
             "country": "United States"
         },
         {
-            "clue": "Mexico City",
+            "clue": "The capital of Mexico is one of the largest cities in the Western Hemisphere — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1464,7 +1441,7 @@
             "answer": "Mexico City"
         },
         {
-            "clue": "Stanley Park (Canada)?",
+            "clue": "Stanley Park is one of the largest urban parks in North America — in which British Columbia city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1476,7 +1453,7 @@
             "answer": "Vancouver"
         },
         {
-            "clue": "Hollywood",
+            "clue": "The world's most famous film industry is centered in a district of which California city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1488,7 +1465,7 @@
             "answer": "Los Angeles"
         },
         {
-            "clue": "Las Vegas Strip",
+            "clue": "The brightest stretch of neon on Earth runs through which Nevada desert city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1500,7 +1477,7 @@
             "answer": "Las Vegas"
         },
         {
-            "clue": "French Quarter.",
+            "clue": "Bourbon Street and the best jazz in the US are found in the French Quarter of which city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1512,7 +1489,7 @@
             "answer": "New Orleans"
         },
         {
-            "clue": "Where is Denver in United States?",
+            "clue": "The Mile High City sits at exactly 5,280 ft elevation at the foot of the Rockies — in which state?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1524,7 +1501,7 @@
             "answer": "Denver"
         },
         {
-            "clue": "Great Basin Desert",
+            "clue": "The largest desert system in North America spreads across Nevada, Utah, and parts of five other states — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "medium",
@@ -1545,7 +1522,7 @@
             "country": "United States"
         },
         {
-            "clue": "Caribbean Sea",
+            "clue": "Bounded by the West Indies, Central America, and South America, this turquoise sea is known for its reefs — pinpoint it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -1556,7 +1533,7 @@
             "country": "Caribbean"
         },
         {
-            "clue": "Cahokia Mounds",
+            "clue": "This pre-Columbian Native American city near St. Louis once housed up to 20,000 people — where are its mounds?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1567,7 +1544,7 @@
             "country": "United States"
         },
         {
-            "clue": "Antelope Canyon",
+            "clue": "Light beams pour through narrow slot-canyon walls in this Navajo Nation site near Page, Arizona — pinpoint it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1578,7 +1555,7 @@
             "country": "United States"
         },
         {
-            "clue": "Painted Hills",
+            "clue": "These richly striped Oregon hills were formed from volcanic ash laid down 33 million years ago — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1589,7 +1566,7 @@
             "country": "United States"
         },
         {
-            "clue": "Denali (Mount McKinley)",
+            "clue": "At over 20,000 ft, this is the crown of North America — pinpoint this Alaskan giant.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -1600,7 +1577,7 @@
             "country": "United States"
         },
         {
-            "clue": "Hudson Bay",
+            "clue": "This enormous inland sea in northern Canada freezes every winter and was central to the fur trade — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "hard",
@@ -1611,7 +1588,7 @@
             "country": "Canada"
         },
         {
-            "clue": "Pinpoint Panama City in Panama.",
+            "clue": "The capital and largest city of Panama sits near the Pacific end of the canal — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1623,7 +1600,7 @@
             "answer": "Panama City"
         },
         {
-            "clue": "Where is Chicago in United States?",
+            "clue": "The Windy City on the southern shore of Lake Michigan is the third-largest US city — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1635,7 +1612,7 @@
             "answer": "Chicago"
         },
         {
-            "clue": "Find Miami in United States.",
+            "clue": "Florida's southernmost major city is a gateway to the Caribbean — where is Miami?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1647,7 +1624,7 @@
             "answer": "Miami"
         },
         {
-            "clue": "Where is Houston in United States?",
+            "clue": "Home of NASA Mission Control and the largest city in Texas — where is Houston?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1659,7 +1636,7 @@
             "answer": "Houston"
         },
         {
-            "clue": "Find Phoenix in United States.",
+            "clue": "The driest major city in the US sprawls across the Sonoran Desert in Arizona — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1671,7 +1648,7 @@
             "answer": "Phoenix"
         },
         {
-            "clue": "Pinpoint Nashville in United States.",
+            "clue": "The home of country music and the Grand Ole Opry sits on the Cumberland River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1683,7 +1660,7 @@
             "answer": "Nashville"
         },
         {
-            "clue": "Pinpoint Portland in United States.",
+            "clue": "This Pacific Northwest city sits where the Willamette meets the Columbia River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1695,7 +1672,7 @@
             "answer": "Portland"
         },
         {
-            "clue": "Where is Yellowstone National Park in United States?",
+            "clue": "The world's first national park sits atop a supervolcano — in which US state?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1707,7 +1684,7 @@
             "answer": "Yellowstone National Park"
         },
         {
-            "clue": "Pinpoint Havana in Cuba.",
+            "clue": "The capital of Cuba is famous for its classic cars and the Malecon seafront promenade — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1719,7 +1696,7 @@
             "answer": "Havana"
         },
         {
-            "clue": "Find Guatemala City in Guatemala.",
+            "clue": "The largest city in Central America is the capital of which country that borders Mexico to the south?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1731,7 +1708,7 @@
             "answer": "Guatemala City"
         },
         {
-            "clue": "Where is Montreal in Canada?",
+            "clue": "The second-largest French-speaking city in the world sits in which Canadian province?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1743,7 +1720,7 @@
             "answer": "Montreal"
         },
         {
-            "clue": "Find Calgary in Canada.",
+            "clue": "This Alberta city at the base of the Canadian Rockies hosts the famous Stampede rodeo every July — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1755,7 +1732,7 @@
             "answer": "Calgary"
         },
         {
-            "clue": "Pinpoint Quebec City in Canada.",
+            "clue": "The only walled city north of Mexico is the capital of which Canadian province?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1767,7 +1744,7 @@
             "answer": "Quebec City"
         },
         {
-            "clue": "Where is Guadalajara in Mexico?",
+            "clue": "Mexico's second-largest city is considered the birthplace of mariachi music and tequila — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1779,7 +1756,7 @@
             "answer": "Guadalajara"
         },
         {
-            "clue": "Find Grand Canyon in United States.",
+            "clue": "Which mile-deep Arizona gorge was carved by the Colorado River over 5 million years?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1791,7 +1768,7 @@
             "answer": "Grand Canyon"
         },
         {
-            "clue": "Where is Everglades National Park in United States?",
+            "clue": "This 'River of Grass' is the largest subtropical wilderness in the US — in which state?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",

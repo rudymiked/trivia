@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "clue": "Machu Picchu",
+            "clue": "This 15th-century Incan citadel perches on a ridge above the Sacred Valley in Peru, rediscovered by the West in 1911 — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -12,7 +12,7 @@
             "country": "Peru"
         },
         {
-            "clue": "Christ the Redeemer",
+            "clue": "This 38-m Art Deco statue of Jesus with outstretched arms overlooks Rio de Janeiro from Corcovado mountain — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -23,7 +23,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Pinpoint Saint Helena.",
+            "clue": "This remote South Atlantic island is famous as the place where Napoleon Bonaparte spent his final years in exile — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -45,7 +45,7 @@
             }
         },
         {
-            "clue": "Pinpoint Montevideo in Uruguay.",
+            "clue": "The capital of Uruguay sits on the Rio de la Plata estuary opposite Buenos Aires — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -57,7 +57,7 @@
             "answer": "Montevideo"
         },
         {
-            "clue": "Amazon River",
+            "clue": "The world's largest river by discharge is the lifeblood of the Amazon rainforest, the world's largest tropical forest — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -78,7 +78,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Lake Titicaca",
+            "clue": "The world's highest navigable lake, at 3,812 m, straddles the Peru-Bolivia border and is home to the Uros floating islands — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "medium",
@@ -99,7 +99,7 @@
             "country": "Peru"
         },
         {
-            "clue": "Atacama Desert",
+            "clue": "The driest non-polar desert on Earth lies in northern Chile — some parts have never recorded rainfall — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "hard",
@@ -141,7 +141,7 @@
             "country": "Ecuador"
         },
         {
-            "clue": "Moai of Easter Island",
+            "clue": "These giant stone heads, carved by the Rapa Nui people, stand on a remote Pacific island 3,500 km from Chile — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -152,7 +152,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Where is Rio de Janeiro in Brazil?",
+            "clue": "The former capital of Brazil, home to Christ the Redeemer and Carnival, sits on Guanabara Bay — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -164,7 +164,7 @@
             "answer": "Rio de Janeiro"
         },
         {
-            "clue": "Pinpoint Cusco in Peru.",
+            "clue": "Once the capital of the Inca Empire, this Andean city at 3,400 m is the gateway to Machu Picchu — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -176,7 +176,7 @@
             "answer": "Cusco"
         },
         {
-            "clue": "Aconcagua",
+            "clue": "At 6,961 m, this extinct Andean volcano in Argentina is the highest peak in both the Western and Southern hemispheres — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -187,7 +187,7 @@
             "country": "Argentina"
         },
         {
-            "clue": "Explorer Spot: Machu Picchu",
+            "clue": "Find the exact spot of Machu Picchu's Intihuatana stone, the sacred astronomical clock of the Incas.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -198,7 +198,7 @@
             "country": "Peru"
         },
         {
-            "clue": "Where is Peru?",
+            "clue": "This South American country is home to Machu Picchu, Lake Titicaca, and the Amazon headwaters — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -220,7 +220,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Machu Picchu",
+            "clue": "Machu Picchu sits above the Urubamba River valley in which South American country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -231,7 +231,7 @@
             "country": "Peru"
         },
         {
-            "clue": "Explorer Spot: Christ the Redeemer",
+            "clue": "Drop a pin on the outstretched arms of Christ the Redeemer on Corcovado Mountain above Rio.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -242,7 +242,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Pinpoint Brazil.",
+            "clue": "The world's fifth-largest country covers nearly half of South America and is home to the Amazon rainforest — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -264,7 +264,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Christ the Redeemer",
+            "clue": "Christ the Redeemer stands on Corcovado Mountain above which Brazilian city?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -275,7 +275,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Explorer Spot: Where was Napoleon Bonaparte exiled after his final defeat",
+            "clue": "Find the island of Saint Helena in the South Atlantic, where Napoleon spent his final years in exile.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -286,7 +286,7 @@
             "country": "Saint Helena"
         },
         {
-            "clue": "Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat",
+            "clue": "Napoleon's final exile on Saint Helena was to an island in which ocean?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -297,7 +297,7 @@
             "country": "Saint Helena"
         },
         {
-            "clue": "Explorer Spot: Where was the first FIFA World Cup held in 1930",
+            "clue": "Find the Estadio Centenario in Montevideo, Uruguay, where the first FIFA World Cup final was played.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -308,7 +308,7 @@
             "country": "Uruguay"
         },
         {
-            "clue": "Where is Uruguay?",
+            "clue": "South America's second-smallest country sits between Brazil and Argentina on the River Plate — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -330,7 +330,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Where was the first FIFA World Cup held in 1930",
+            "clue": "The first FIFA World Cup was held in which South American country in 1930?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -341,7 +341,7 @@
             "country": "Uruguay"
         },
         {
-            "clue": "Explorer Spot: Amazon River",
+            "clue": "Find the Amazon River's mouth where it fans into the Atlantic Ocean in northern Brazil.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -352,7 +352,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Regional Focus: Amazon River",
+            "clue": "The Amazon River drains most of which country, flowing east from Peru through the world's largest rainforest?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -363,7 +363,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Explorer Spot: Lake Titicaca",
+            "clue": "Drop a pin on the Uros floating reed islands on Lake Titicaca near Puno, Peru.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -374,7 +374,7 @@
             "country": "Peru"
         },
         {
-            "clue": "Regional Focus: Lake Titicaca",
+            "clue": "Lake Titicaca straddles the border between Peru and which landlocked South American country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -385,7 +385,7 @@
             "country": "Peru"
         },
         {
-            "clue": "Explorer Spot: Atacama Desert",
+            "clue": "Find the Valle de la Luna (Valley of the Moon) in the heart of the Atacama Desert in Chile.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -396,7 +396,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Pinpoint Chile.",
+            "clue": "This narrow ribbon of a country stretches 4,300 km along South America's Pacific coast — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -418,7 +418,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Atacama Desert",
+            "clue": "The driest desert on Earth runs along the Pacific coast of which South American nation?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -429,7 +429,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Explorer Spot: Galapagos Islands",
+            "clue": "Find Wolf Island in the northern Galapagos, the most remote and biodiverse island in the archipelago.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -440,7 +440,7 @@
             "country": "Ecuador"
         },
         {
-            "clue": "Pinpoint Ecuador.",
+            "clue": "Named for the equator that runs through it, this South American country is also home to the Galapagos Islands — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -462,7 +462,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Galapagos Islands",
+            "clue": "The Galapagos Islands are a protected archipelago belonging to which South American country?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -473,7 +473,7 @@
             "country": "Ecuador"
         },
         {
-            "clue": "Explorer Spot: Moai of Easter Island",
+            "clue": "Find the Ahu Tongariki, the largest ceremonial platform holding 15 moai statues on Easter Island.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -484,7 +484,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Regional Focus: Moai of Easter Island",
+            "clue": "Easter Island is a territory of which South American country, despite being in the middle of the Pacific?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -495,7 +495,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Amazon River",
+            "clue": "The world's largest river by discharge is the lifeblood of the Amazon rainforest, the world's largest tropical forest — trace it.",
             "category": "places",
             "type": "river",
             "difficulty": "hard",
@@ -516,7 +516,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Moai Statues",
+            "clue": "Hundreds of enormous stone heads carved by the ancient Rapa Nui civilization stand watch on a remote Pacific island — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -527,7 +527,7 @@
             "country": "Chile"
         },
         {
-            "clue": "Patagonia",
+            "clue": "This vast wilderness region at the southern tip of South America, shared by Argentina and Chile, is one of the wildest landscapes on Earth — find it.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -548,7 +548,7 @@
             "country": "Argentina"
         },
         {
-            "clue": "Where is Buenos Aires in Argentina?",
+            "clue": "Argentina's capital on the Rio de la Plata is the birthplace of tango and one of the largest cities in South America — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -560,7 +560,7 @@
             "answer": "Buenos Aires"
         },
         {
-            "clue": "Orinoco River",
+            "clue": "The fourth-longest river in South America flows through Venezuela and forms most of the Venezuela-Colombia border — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -581,7 +581,7 @@
             "country": "Venezuela"
         },
         {
-            "clue": "Altiplano",
+            "clue": "This high-altitude plateau in the Andes, averaging 3,750 m, spans Bolivia and Peru and contains Lake Titicaca — find it.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -602,7 +602,7 @@
             "country": "Bolivia"
         },
         {
-            "clue": "Where is Santiago in Chile?",
+            "clue": "The capital of Chile sits in a basin surrounded by the Andes and Coastal Range — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -614,7 +614,7 @@
             "answer": "Santiago"
         },
         {
-            "clue": "Find Galapagos Islands in Ecuador.",
+            "clue": "Charles Darwin studied finches and tortoises on which Pacific archipelago that inspired his theory of evolution?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -626,7 +626,7 @@
             "answer": "Galapagos Islands"
         },
         {
-            "clue": "Where is Machu Picchu in Peru?",
+            "clue": "In which Peruvian Andean region does the Incan citadel of Machu Picchu sit above the Sacred Valley?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -638,7 +638,7 @@
             "answer": "Machu Picchu"
         },
         {
-            "clue": "Where is Christ the Redeemer in Brazil?",
+            "clue": "On which Rio de Janeiro mountain does the outstretched Christ statue overlook the city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -650,7 +650,7 @@
             "answer": "Christ the Redeemer"
         },
         {
-            "clue": "Where is Amazon River in Brazil?",
+            "clue": "Where does the Amazon River empty into the Atlantic Ocean near Belem in northern Brazil?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -672,7 +672,7 @@
             }
         },
         {
-            "clue": "Where is Lake Titicaca in Peru?",
+            "clue": "Where does the Peruvian shore of Lake Titicaca meet the famous port of Puno?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -694,7 +694,7 @@
             }
         },
         {
-            "clue": "Where is Atacama Desert in Chile?",
+            "clue": "Where in northern Chile does the Atacama Desert's Valley of the Moon lie?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -716,7 +716,7 @@
             }
         },
         {
-            "clue": "Where is GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "clue": "Where in the Pacific Ocean do the Galapagos Islands sit, 1,000 km off the coast of Ecuador?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -738,7 +738,7 @@
             }
         },
         {
-            "clue": "Where is Moai of Easter Island in Chile?",
+            "clue": "Easter Island, a Chilean territory, lies 3,500 km off the coast of Chile in which ocean?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -750,7 +750,7 @@
             "answer": "Moai of Easter Island"
         },
         {
-            "clue": "Where is Aconcagua in Argentina?",
+            "clue": "The highest peak in the Western Hemisphere rises in which Argentine Andean province?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -762,7 +762,7 @@
             "answer": "Aconcagua"
         },
         {
-            "clue": "Where is Regional Focus: Machu Picchu in Peru?",
+            "clue": "Find the Machu Picchu Archaeological Park above the Urubamba River in the Cusco region of Peru.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -774,7 +774,7 @@
             "answer": "Regional Focus: Machu Picchu"
         },
         {
-            "clue": "Where is Regional Focus: Christ the Redeemer in Brazil?",
+            "clue": "Find Corcovado Mountain in the Tijuca Forest above Rio de Janeiro.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -786,7 +786,7 @@
             "answer": "Regional Focus: Christ the Redeemer"
         },
         {
-            "clue": "Where is Explorer Spot: Where was Napoleon Bonaparte exiled after his final defeat in Saint Helena?",
+            "clue": "Find Longwood House on Saint Helena, where Napoleon Bonaparte lived his final years.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -798,7 +798,7 @@
             "answer": "Explorer Spot: Where was Napoleon Bonaparte exiled after his final defeat"
         },
         {
-            "clue": "Where is Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat in Saint Helena?",
+            "clue": "Saint Helena is a British Territory in which ocean, where Napoleon ended his days?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -810,7 +810,7 @@
             "answer": "Regional Focus: Where was Napoleon Bonaparte exiled after his final defeat"
         },
         {
-            "clue": "Where is Explorer Spot: Where was the first FIFA World Cup held in 1930 in Uruguay?",
+            "clue": "Find the Estadio Centenario in Montevideo, Uruguay, where the first World Cup was held.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -822,7 +822,7 @@
             "answer": "Explorer Spot: Where was the first FIFA World Cup held in 1930"
         },
         {
-            "clue": "Where is Regional Focus: Where was the first FIFA World Cup held in 1930 in Uruguay?",
+            "clue": "Find Montevideo, the capital of Uruguay, where the first FIFA World Cup final took place.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -834,7 +834,7 @@
             "answer": "Regional Focus: Where was the first FIFA World Cup held in 1930"
         },
         {
-            "clue": "Where is Regional Focus: Atacama Desert in Chile?",
+            "clue": "Find the Atacama Desert's highest altitude salt flat, the Salar de Atacama, in northern Chile.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -846,7 +846,7 @@
             "answer": "Regional Focus: Atacama Desert"
         },
         {
-            "clue": "Where is Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "clue": "Find Wolf Island in the Galapagos, the most northerly and biodiverse island in Ecuador's famous archipelago.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -858,7 +858,7 @@
             "answer": "Explorer Spot: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands"
         },
         {
-            "clue": "Where is Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands in Ecuador?",
+            "clue": "The Galapagos Islands sit in which ocean, how far off the Ecuadorian coast?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -870,7 +870,7 @@
             "answer": "Regional Focus: GalÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡pagos Islands"
         },
         {
-            "clue": "Where is Patagonia in Argentina?",
+            "clue": "Where does Patagonia's famous Torres del Paine national park sit in Chile near the Argentine border?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -892,7 +892,7 @@
             }
         },
         {
-            "clue": "Where is Orinoco River in Venezuela?",
+            "clue": "Where does the Orinoco River delta fan into the Atlantic in northeastern Venezuela?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -914,7 +914,7 @@
             }
         },
         {
-            "clue": "Where is Altiplano in Bolivia?",
+            "clue": "Where does the Bolivian altiplano reach its highest elevation near the city of La Paz?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -936,7 +936,7 @@
             }
         },
         {
-            "clue": "Copacabana Beach",
+            "clue": "This 4-km stretch of sand in Rio de Janeiro is one of the world's most famous urban beaches — find it.",
             "category": "geography",
             "type": "beach",
             "difficulty": "easy",
@@ -947,7 +947,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Statue of Christ the Redeemer",
+            "clue": "Standing 38 m tall on Corcovado Mountain, this Art Deco Christ statue overlooks which Brazilian city?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -958,7 +958,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Christ the Redeemer",
+            "clue": "This 38-m Art Deco statue of Jesus with outstretched arms overlooks Rio de Janeiro from Corcovado mountain — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -969,7 +969,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Incan ruins",
+            "clue": "The most iconic Incan citadel, Machu Picchu, sits on a ridge above the Sacred Valley in which South American country?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -980,7 +980,7 @@
             "country": "Peru"
         },
         {
-            "clue": "Andes Mountains",
+            "clue": "The world's longest continental mountain range stretches 7,000 km down the west coast of South America — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -991,7 +991,7 @@
             "country": "Argentina"
         },
         {
-            "clue": "LenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³is Maranhenses",
+            "clue": "This Brazilian national park in Maranhao state features white sand dunes filled with crystal-clear blue lagoons — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1002,7 +1002,7 @@
             "country": "Brazil"
         },
         {
-            "clue": "Where is Cartagena (Walled City) in Colombia?",
+            "clue": "Colombia's premier tourist city, with a UNESCO-protected walled old town, sits on the Caribbean coast — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1014,7 +1014,7 @@
             "answer": "Cartagena"
         },
         {
-            "clue": "Pinpoint Salvador (Pelourinho) in Brazil.",
+            "clue": "The Pelourinho district of which Brazilian city is a UNESCO World Heritage centre of Afro-Brazilian culture?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1026,19 +1026,19 @@
             "answer": "Salvador"
         },
         {
-            "clue": "Where is Arequipa (White City) in Peru?",
+            "clue": "Which Peruvian city, named for its white sillar-stone buildings, sits below the Misti volcano?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
             "target": {
-                "lat": -16.3890,
-                "lng": -71.5350
+                "lat": -16.389,
+                "lng": -71.535
             },
             "country": "Peru",
             "answer": "Arequipa"
         },
         {
-            "clue": "Aconcagua",
+            "clue": "At 6,961 m, this extinct Andean volcano in Argentina is the highest peak in both the Western and Southern hemispheres — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -1049,7 +1049,7 @@
             "country": "Argentina"
         },
         {
-            "clue": "Find Brasilia in Brazil.",
+            "clue": "Brazil's modernist planned capital, designed by Oscar Niemeyer and Lucio Costa, sits in the central plateau — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1061,7 +1061,7 @@
             "answer": "Brasilia"
         },
         {
-            "clue": "Find Lima in Peru.",
+            "clue": "The sprawling Pacific-coast capital of Peru is home to over 10 million people and world-class ceviche — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1073,7 +1073,7 @@
             "answer": "Lima"
         },
         {
-            "clue": "Find Bogota in Colombia.",
+            "clue": "The capital of Colombia sits at 2,600 m in the Andes and is famous for its Gold Museum and street art — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1085,7 +1085,7 @@
             "answer": "Bogota"
         },
         {
-            "clue": "Find La Paz in Bolivia.",
+            "clue": "The world's highest national capital at 3,640 m sits in a dramatic canyon in the Bolivian Andes — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1097,7 +1097,7 @@
             "answer": "La Paz"
         },
         {
-            "clue": "Pinpoint Caracas in Venezuela.",
+            "clue": "The capital of Venezuela, flanked by El Avila mountain, sits in a valley near the Caribbean coast — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1109,7 +1109,7 @@
             "answer": "Caracas"
         },
         {
-            "clue": "Find Quito in Ecuador.",
+            "clue": "Ecuador's capital is the world's second-highest official capital at 2,850 m — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1121,7 +1121,7 @@
             "answer": "Quito"
         },
         {
-            "clue": "Find Medellin in Colombia.",
+            "clue": "Once Colombia's most dangerous city, Medellin transformed into a model of urban innovation with its cable cars and escalators — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1133,7 +1133,7 @@
             "answer": "Medellin"
         },
         {
-            "clue": "Where is Sao Paulo in Brazil?",
+            "clue": "The largest city in the Southern Hemisphere, home to over 22 million people, is Brazil's economic capital — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1145,7 +1145,7 @@
             "answer": "Sao Paulo"
         },
         {
-            "clue": "Find Manaus in Brazil.",
+            "clue": "This Amazon city at the confluence of the Rio Negro and the Amazon is famous for its incongruous opera house — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1157,7 +1157,7 @@
             "answer": "Manaus"
         },
         {
-            "clue": "Pinpoint Ushuaia in Argentina.",
+            "clue": "The southernmost city in the world sits at the tip of Tierra del Fuego — where is the 'End of the World'?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1169,7 +1169,7 @@
             "answer": "Ushuaia"
         },
         {
-            "clue": "Find Asuncion in Paraguay.",
+            "clue": "One of the oldest cities in South America, the capital of landlocked Paraguay sits on the Paraguay River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1181,7 +1181,7 @@
             "answer": "Asuncion"
         },
         {
-            "clue": "Pinpoint Georgetown in Guyana.",
+            "clue": "The capital of Guyana, the only English-speaking country in South America, sits on the Demerara River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1193,7 +1193,7 @@
             "answer": "Georgetown"
         },
         {
-            "clue": "Find Mendoza in Argentina.",
+            "clue": "At the foot of the Andes, this Argentine wine capital is the gateway to Aconcagua and Malbec country — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1205,7 +1205,7 @@
             "answer": "Mendoza"
         },
         {
-            "clue": "Where is Angel Falls in Venezuela?",
+            "clue": "The world's highest uninterrupted waterfall, at 979 m, drops off the Auyán-tepui in which country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1217,7 +1217,7 @@
             "answer": "Angel Falls"
         },
         {
-            "clue": "Pinpoint Recife in Brazil.",
+            "clue": "The Venice of Brazil, built on islands and peninsulas in the northeast, is famous for its Carnival — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1229,7 +1229,7 @@
             "answer": "Recife"
         },
         {
-            "clue": "Find Falkland Islands.",
+            "clue": "These remote British Overseas Territory islands in the South Atlantic were at the center of a 1982 war — find them.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1241,7 +1241,7 @@
             "answer": "Falkland Islands"
         },
         {
-            "clue": "Where is Lake Maracaibo in Venezuela?",
+            "clue": "The largest lake in South America is connected to the Gulf of Venezuela — in which country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1253,7 +1253,7 @@
             "answer": "Lake Maracaibo"
         },
         {
-            "clue": "Find Potosi in Bolivia.",
+            "clue": "This Bolivian mining city at 4,090 m was once one of the largest cities on Earth due to its silver mines — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1265,7 +1265,7 @@
             "answer": "Potosi"
         },
         {
-            "clue": "Pinpoint Cape Horn in Chile.",
+            "clue": "The southernmost tip of South America, one of the most feared capes for sailors, sits at the tip of which island?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",

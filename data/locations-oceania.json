@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "clue": "Sydney Opera House",
+            "clue": "This UNESCO World Heritage building with its iconic shell-shaped roofs opened in 1973 and hosts over 2,000 performances a year — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -12,7 +12,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Uluru (Ayers Rock)",
+            "clue": "This massive 348-m sandstone monolith rises from the Australian desert and is sacred to the Anangu people — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -23,7 +23,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Bora Bora",
+            "clue": "Known as the 'Pearl of the Pacific', this volcanic island ringed by a lagoon and barrier reef sits in French Polynesia — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "hard",
@@ -44,7 +44,7 @@
             "country": "French Polynesia"
         },
         {
-            "clue": "Great Barrier Reef",
+            "clue": "The world's largest coral reef system stretches 2,300 km along the northeast coast of Australia — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -65,7 +65,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Mariana Trench",
+            "clue": "At 10,935 m below sea level, the Challenger Deep in this Pacific trench is the deepest point on Earth — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "hard",
@@ -76,7 +76,7 @@
             "country": "Pacific Ocean"
         },
         {
-            "clue": "Explorer Spot: Sydney Opera House",
+            "clue": "Drop a pin on the Sydney Opera House on Bennelong Point in Sydney Harbour.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -87,7 +87,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Pinpoint Australia.",
+            "clue": "The world's sixth-largest country by area, home to kangaroos, the Great Barrier Reef, and Uluru — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -109,7 +109,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Sydney Opera House",
+            "clue": "The Sydney Opera House sits on Bennelong Point in which Australian harbor?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -120,7 +120,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Explorer Spot: Uluru (Ayers Rock)",
+            "clue": "Find the exact base of Uluru, the sacred sandstone monolith in Australia's Red Centre.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -131,7 +131,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Regional Focus: Uluru (Ayers Rock)",
+            "clue": "Uluru rises from the flat desert of which Australian territory in the Red Centre?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -142,7 +142,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Explorer Spot: Bora Bora",
+            "clue": "Drop a pin on Bora Bora's central volcanic peak, Mount Otemanu, above the turquoise lagoon.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -153,7 +153,7 @@
             "country": "French Polynesia"
         },
         {
-            "clue": "Pinpoint French Polynesia.",
+            "clue": "This French overseas collectivity in the South Pacific includes Tahiti, Bora Bora, and over 100 other islands — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -175,7 +175,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Bora Bora",
+            "clue": "Bora Bora is the most famous island of which French overseas territory in the South Pacific?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -186,7 +186,7 @@
             "country": "French Polynesia"
         },
         {
-            "clue": "Explorer Spot: Great Barrier Reef",
+            "clue": "Find the Ribbon Reefs section of the Great Barrier Reef off the Queensland coast.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -197,7 +197,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Regional Focus: Great Barrier Reef",
+            "clue": "The Great Barrier Reef runs along the coastline of which Australian state?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -208,7 +208,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Explorer Spot: Mariana Trench",
+            "clue": "Drop a pin as close as possible to the Challenger Deep, the deepest known point on Earth.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -219,7 +219,7 @@
             "country": "Pacific Ocean"
         },
         {
-            "clue": "Find Pacific Ocean.",
+            "clue": "The world's largest ocean covers more area than all Earth's landmasses combined — drop a pin in it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -241,7 +241,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Mariana Trench",
+            "clue": "The Mariana Trench is located in which ocean, east of the Philippine Sea?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -252,7 +252,7 @@
             "country": "Pacific Ocean"
         },
         {
-            "clue": "Great Barrier Reef",
+            "clue": "The world's largest coral reef system stretches 2,300 km along the northeast coast of Australia — find it.",
             "category": "places",
             "type": "region",
             "difficulty": "medium",
@@ -273,7 +273,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Pinpoint Wellington in New Zealand.",
+            "clue": "New Zealand's capital sits on a deep natural harbor at the southern tip of the North Island — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -285,7 +285,7 @@
             "answer": "Wellington"
         },
         {
-            "clue": "Tasman Sea",
+            "clue": "This body of water separates Australia from New Zealand and is named after the Dutch explorer Abel Tasman — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -296,7 +296,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Great Dividing Range",
+            "clue": "Australia's longest mountain range stretches 3,500 km along the east coast from Queensland to Victoria — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "easy",
@@ -307,7 +307,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Where is Sydney Opera House in Australia?",
+            "clue": "On which harbor headland in Australia's largest city does the Opera House stand?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -319,7 +319,7 @@
             "answer": "Sydney Opera House"
         },
         {
-            "clue": "Where is Bora Bora in French Polynesia?",
+            "clue": "Bora Bora is the most glamorous island in which French overseas territory in the South Pacific?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -341,7 +341,7 @@
             }
         },
         {
-            "clue": "Where is Great Barrier Reef in Australia?",
+            "clue": "The world's largest coral system runs along the coast of which Australian state?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -363,7 +363,7 @@
             }
         },
         {
-            "clue": "Where is Mariana Trench in Pacific Ocean?",
+            "clue": "In which part of the western Pacific does the Mariana Trench plunge to 11 km below sea level?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -375,7 +375,7 @@
             "answer": "Mariana Trench"
         },
         {
-            "clue": "Where is Regional Focus: Sydney Opera House in Australia?",
+            "clue": "Find Bennelong Point in Sydney Harbour where the Opera House shell roofs emerge from the water.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -387,7 +387,7 @@
             "answer": "Regional Focus: Sydney Opera House"
         },
         {
-            "clue": "Where is Explorer Spot: Mariana Trench in Pacific Ocean?",
+            "clue": "Find the Challenger Deep at the southern end of the Mariana Trench.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -399,7 +399,7 @@
             "answer": "Explorer Spot: Mariana Trench"
         },
         {
-            "clue": "Where is Regional Focus: Mariana Trench in Pacific Ocean?",
+            "clue": "In which part of the Pacific does the Mariana Trench mark the deepest point on Earth?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -411,7 +411,7 @@
             "answer": "Regional Focus: Mariana Trench"
         },
         {
-            "clue": "Where is Great Dividing Range in Australia?",
+            "clue": "Where does the Great Dividing Range reach its highest point at Mount Kosciuszko in New South Wales?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -423,7 +423,7 @@
             "answer": "Great Dividing Range"
         },
         {
-            "clue": "Where is Melbourne in Australia?",
+            "clue": "Australia's second-largest city, famous for its coffee culture and street art, sits on Port Phillip Bay — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -435,7 +435,7 @@
             "answer": "Melbourne"
         },
         {
-            "clue": "Where is Sydney in Australia?",
+            "clue": "Located on one of the world's finest natural harbors with its famous bridge and opera house — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -447,7 +447,7 @@
             "answer": "Sydney"
         },
         {
-            "clue": "Where is Auckland (Sky Tower) in New Zealand?",
+            "clue": "The Sky Tower dominates the skyline of which New Zealand city, the country's largest?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -459,7 +459,7 @@
             "answer": "Auckland"
         },
         {
-            "clue": "New Zealand",
+            "clue": "This island nation in the southwest Pacific, home to the Maori people and used as the set of Lord of the Rings — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "medium",
@@ -480,7 +480,7 @@
             "country": "New Zealand"
         },
         {
-            "clue": "Wave Rock",
+            "clue": "This natural rock formation in Western Australia looks exactly like a giant ocean wave frozen in stone — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -491,7 +491,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Tunnel Beach",
+            "clue": "On New Zealand's South Island, a hand-dug tunnel leads to this isolated beach below towering limestone cliffs — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -502,7 +502,7 @@
             "country": "New Zealand"
         },
         {
-            "clue": "Waitomo Caves",
+            "clue": "These New Zealand limestone caves are illuminated by thousands of glowing bioluminescent worms — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -513,7 +513,7 @@
             "country": "New Zealand"
         },
         {
-            "clue": "Simpson Desert",
+            "clue": "Australia's largest sand dune desert, with over 1,000 parallel red dunes, sits in the center of the continent — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "hard",
@@ -534,7 +534,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Great Victoria Desert",
+            "clue": "Australia's largest desert by area spans across South and Western Australia — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "hard",
@@ -555,7 +555,7 @@
             "country": "Australia"
         },
         {
-            "clue": "Palau",
+            "clue": "This Micronesian archipelago in the western Pacific is world-famous for its Jellyfish Lake and pristine dive sites — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "hard",
@@ -566,7 +566,7 @@
             "country": "Palau"
         },
         {
-            "clue": "Ross Sea",
+            "clue": "This remote Antarctic sea off the coast of Victoria Land is one of the least-altered ocean ecosystems on Earth — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "hard",
@@ -577,7 +577,7 @@
             "country": "Antarctica"
         },
         {
-            "clue": "Find Canberra in Australia.",
+            "clue": "Australia's planned capital, chosen as a compromise between Sydney and Melbourne, sits in the ACT — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -589,7 +589,7 @@
             "answer": "Canberra"
         },
         {
-            "clue": "Pinpoint Papeete in French Polynesia.",
+            "clue": "The capital of French Polynesia on the island of Tahiti is the gateway to paradise in the South Pacific — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -601,7 +601,7 @@
             "answer": "Papeete"
         },
         {
-            "clue": "Find Queenstown in New Zealand.",
+            "clue": "New Zealand's adventure capital on the shores of Lake Wakatipu is the bungee-jumping capital of the world — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -613,7 +613,7 @@
             "answer": "Queenstown"
         },
         {
-            "clue": "Where is Fiji?",
+            "clue": "This Melanesian archipelago of 330 islands in the South Pacific is a gateway to the rest of the Pacific — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -625,7 +625,7 @@
             "answer": "Fiji"
         },
         {
-            "clue": "Pinpoint Christchurch in New Zealand.",
+            "clue": "New Zealand's South Island gateway city sits on the Canterbury Plains by the Banks Peninsula — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -637,7 +637,7 @@
             "answer": "Christchurch"
         },
         {
-            "clue": "Find Uluru in Australia.",
+            "clue": "This sacred Anangu sandstone monolith rises 348 m from the flat red desert of central Australia — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -649,7 +649,7 @@
             "answer": "Uluru"
         },
         {
-            "clue": "Where is Vanuatu?",
+            "clue": "This Melanesian archipelago in the Pacific is home to active volcanoes you can peer into, including Mount Yasur — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -661,7 +661,7 @@
             "answer": "Vanuatu"
         },
         {
-            "clue": "Find Noumea in New Caledonia.",
+            "clue": "The capital of France's Pacific territory of New Caledonia sits in the world's largest lagoon — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -673,7 +673,7 @@
             "answer": "Noumea"
         },
         {
-            "clue": "Pinpoint Tonga.",
+            "clue": "This Polynesian kingdom in the South Pacific is the only remaining monarchy in the Pacific islands — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -685,7 +685,7 @@
             "answer": "Tonga"
         },
         {
-            "clue": "Where is Samoa?",
+            "clue": "This Polynesian island nation in the South Pacific claimed the world's first sunset each day until changing time zones — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -697,7 +697,7 @@
             "answer": "Samoa"
         },
         {
-            "clue": "Find Hobart in Australia.",
+            "clue": "The capital of Tasmania, Australia's island state, sits on the Derwent River below kunanyi/Mount Wellington — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",

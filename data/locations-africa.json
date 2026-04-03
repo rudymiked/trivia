@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "clue": "Pyramids of Giza",
+            "clue": "These ancient royal tombs on the Giza plateau are the last surviving wonder of the ancient world — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -12,7 +12,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Victoria Falls",
+            "clue": "Known locally as 'the smoke that thunders', this waterfall on the Zambia-Zimbabwe border is one of the world's largest — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -23,7 +23,7 @@
             "country": "Zimbabwe"
         },
         {
-            "clue": "Table Mountain",
+            "clue": "This flat-topped massif overlooking Cape Town is one of the world's oldest mountains — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -34,7 +34,7 @@
             "country": "South Africa"
         },
         {
-            "clue": "Pinpoint Fez (University of al-Qarawiyyin) in Morocco.",
+            "clue": "In which Moroccan city does the world's oldest continuously operating university, al-Qarawiyyin, still teach students?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -46,7 +46,7 @@
             "answer": "Fez (University of al-Qarawiyyin)"
         },
         {
-            "clue": "Pinpoint Alexandria in Egypt.",
+            "clue": "Which Egyptian coastal city, founded by Alexander the Great, was once home to a famous ancient lighthouse and library?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -58,7 +58,7 @@
             "answer": "Alexandria"
         },
         {
-            "clue": "Nile River",
+            "clue": "The world's longest river flows north through 11 countries before reaching the Mediterranean — trace it to its mouth.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -79,7 +79,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Mount Kilimanjaro",
+            "clue": "Africa's highest peak and the world's tallest free-standing volcano rises from the Tanzanian savanna — where is it?",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -90,7 +90,7 @@
             "country": "Tanzania"
         },
         {
-            "clue": "Lake Victoria",
+            "clue": "The world's largest tropical lake and primary source of the White Nile sits between Kenya, Uganda, and Tanzania — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "medium",
@@ -111,7 +111,7 @@
             "country": "Uganda"
         },
         {
-            "clue": "Sahara Desert",
+            "clue": "The world's largest hot desert, roughly the size of the United States, covers most of North Africa — pinpoint it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "easy",
@@ -122,7 +122,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Madagascar",
+            "clue": "The fourth-largest island in the world, it houses 90% of wildlife found nowhere else on Earth — where is it?",
             "category": "geography",
             "type": "island",
             "difficulty": "easy",
@@ -143,7 +143,7 @@
             "country": "Madagascar"
         },
         {
-            "clue": "Suez Canal",
+            "clue": "This 193-km waterway connects the Mediterranean Sea to the Red Sea, shortcutting the route around Africa — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -154,7 +154,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Congo River",
+            "clue": "The world's deepest river and second-longest in Africa powers the Congo Basin rainforest — where does it flow?",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -175,7 +175,7 @@
             "country": "Democratic Republic of the Congo"
         },
         {
-            "clue": "Lake Tanganyika",
+            "clue": "At 1,470 m deep, this is the world's second-deepest lake, running along four African countries — where is it?",
             "category": "geography",
             "type": "lake",
             "difficulty": "hard",
@@ -196,7 +196,7 @@
             "country": "Tanzania"
         },
         {
-            "clue": "Kalahari Desert",
+            "clue": "This semi-arid savanna spanning Botswana, Namibia and South Africa is home to meerkats and the San people — where is it?",
             "category": "geography",
             "type": "desert",
             "difficulty": "medium",
@@ -217,7 +217,7 @@
             "country": "Botswana"
         },
         {
-            "clue": "Namib Desert",
+            "clue": "One of the world's oldest deserts, its towering red dunes meet the Atlantic coast of Namibia — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "hard",
@@ -238,7 +238,7 @@
             "country": "Namibia"
         },
         {
-            "clue": "Explorer Spot: Pyramids of Giza",
+            "clue": "Find the precise spot of the Great Pyramid of Khufu on the Giza plateau.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -249,7 +249,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Where is Egypt?",
+            "clue": "Which North African country is home to the Pyramids of Giza and the Nile River delta?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -271,7 +271,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Pyramids of Giza",
+            "clue": "The Pyramids of Giza stand on a plateau just outside which African capital city?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -282,7 +282,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Explorer Spot: Victoria Falls",
+            "clue": "Drop a pin on the exact edge of the falls where the Zambezi River plunges into the gorge.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -293,7 +293,7 @@
             "country": "Zimbabwe"
         },
         {
-            "clue": "Pinpoint Zimbabwe.",
+            "clue": "Which landlocked southern African country is home to Victoria Falls and the ancient Great Zimbabwe ruins?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -315,7 +315,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Victoria Falls",
+            "clue": "Victoria Falls straddles the border between Zimbabwe and which neighboring country?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -326,7 +326,7 @@
             "country": "Zimbabwe"
         },
         {
-            "clue": "Explorer Spot: Table Mountain",
+            "clue": "Find the flat summit of Table Mountain towering over Cape Town's waterfront.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -337,7 +337,7 @@
             "country": "South Africa"
         },
         {
-            "clue": "Find South Africa.",
+            "clue": "The southernmost country on the African continent is known for its wine regions, savannas, and Cape of Good Hope — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -359,7 +359,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Table Mountain",
+            "clue": "Table Mountain overlooks which South African city at the tip of the continent?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -370,7 +370,7 @@
             "country": "South Africa"
         },
         {
-            "clue": "Explorer Spot: Which city is home to the world\u0027s oldest university still in operation (founded 859 AD)",
+            "clue": "Find the University of al-Qarawiyyin in the ancient medina of Fez, Morocco.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -381,7 +381,7 @@
             "country": "Morocco"
         },
         {
-            "clue": "Find Morocco.",
+            "clue": "Which North African country is home to Marrakesh, Fez, and the Atlas Mountains?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -403,7 +403,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Which city is home to the world\u0027s oldest university still in operation (founded 859 AD)",
+            "clue": "The University of al-Qarawiyyin sits in the ancient medina of which Moroccan imperial city?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -414,7 +414,7 @@
             "country": "Morocco"
         },
         {
-            "clue": "Explorer Spot: Where was cleopatra\u0027s palace located before it sank into the sea",
+            "clue": "Find the ancient royal harbor of Alexandria, Egypt, where Cleopatra's underwater palace can still be seen.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -425,7 +425,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Regional Focus: Where was cleopatra\u0027s palace located before it sank into the sea",
+            "clue": "Cleopatra's sunken palace lies in the harbor of which ancient Egyptian city founded by Alexander the Great?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -436,7 +436,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Explorer Spot: Nile River",
+            "clue": "Drop a pin at the Nile Delta where the world's longest river fans out into the Mediterranean.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -447,7 +447,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Regional Focus: Nile River",
+            "clue": "The Nile flows north through Egypt before reaching which sea? Pinpoint the delta region.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -458,7 +458,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Explorer Spot: Mount Kilimanjaro",
+            "clue": "Find the Uhuru Peak summit crater of Kilimanjaro in northern Tanzania.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -469,7 +469,7 @@
             "country": "Tanzania"
         },
         {
-            "clue": "Pinpoint Tanzania.",
+            "clue": "Which East African country is home to Kilimanjaro, the Serengeti, and Zanzibar?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -491,7 +491,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Mount Kilimanjaro",
+            "clue": "Kilimanjaro rises from the plains of which East African country?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -502,7 +502,7 @@
             "country": "Tanzania"
         },
         {
-            "clue": "Explorer Spot: Lake Victoria",
+            "clue": "Find the Ripon Falls site in Uganda where the Nile begins its journey north.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -513,7 +513,7 @@
             "country": "Uganda"
         },
         {
-            "clue": "Pinpoint Uganda.",
+            "clue": "Which landlocked East African country claims the source of the White Nile on Lake Victoria's shore?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -535,7 +535,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Lake Victoria",
+            "clue": "Lake Victoria's shores touch Kenya, Tanzania, and which third East African nation?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -546,7 +546,7 @@
             "country": "Uganda"
         },
         {
-            "clue": "Explorer Spot: Sahara Desert",
+            "clue": "Drop a pin in the heart of the world's largest hot desert, covering most of North Africa.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -557,7 +557,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Regional Focus: Sahara Desert",
+            "clue": "The Sahara Desert dominates the landscape of which North African country that contains the Pyramids?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -568,7 +568,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Explorer Spot: Madagascar",
+            "clue": "Find the Avenue of the Baobabs, one of Madagascar's most photographed landscapes.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -579,7 +579,7 @@
             "country": "Madagascar"
         },
         {
-            "clue": "Find Madagascar.",
+            "clue": "The world's fourth-largest island, 90% of its wildlife is found nowhere else on Earth — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -601,7 +601,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Madagascar",
+            "clue": "Madagascar lies off the coast of which African country to its west?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -612,7 +612,7 @@
             "country": "Madagascar"
         },
         {
-            "clue": "Explorer Spot: Suez Canal",
+            "clue": "Find the southern entrance of the Suez Canal at the Gulf of Suez.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -623,7 +623,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Regional Focus: Suez Canal",
+            "clue": "The Suez Canal connects the Mediterranean to the Red Sea — in which country is it located?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -634,7 +634,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Sahara Desert",
+            "clue": "The world's largest hot desert, roughly the size of the United States, covers most of North Africa — pinpoint it.",
             "category": "places",
             "type": "desert",
             "difficulty": "medium",
@@ -655,7 +655,7 @@
             "country": "Various"
         },
         {
-            "clue": "Find Mali.",
+            "clue": "Which landlocked West African country is home to Timbuktu and was once the heart of the Mali Empire?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -677,7 +677,7 @@
             }
         },
         {
-            "clue": "Atlas Mountains",
+            "clue": "This mountain range stretches across Morocco, Algeria, and Tunisia, separating the Sahara from the Mediterranean coast — pinpoint it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -698,7 +698,7 @@
             "country": "Morocco"
         },
         {
-            "clue": "Ait Benhaddou",
+            "clue": "This ancient fortified village on the former caravan route from the Sahara to Marrakesh has starred in Game of Thrones — find it.",
             "category": "places",
             "type": "region",
             "difficulty": "hard",
@@ -709,7 +709,7 @@
             "country": "Morocco"
         },
         {
-            "clue": "Pinpoint Khartoum in Sudan.",
+            "clue": "The capital of Sudan sits at the confluence of the Blue and White Nile — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -721,7 +721,7 @@
             "answer": "Khartoum"
         },
         {
-            "clue": "Hassan II Mosque",
+            "clue": "The world's second-largest mosque, rising 210 m above the Atlantic in Casablanca, was completed in 1993 — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -732,7 +732,7 @@
             "country": "Morocco"
         },
         {
-            "clue": "Pinpoint Ethiopia.",
+            "clue": "Which East African country, one of the oldest in the world and never colonized, is the birthplace of coffee?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -754,7 +754,7 @@
             }
         },
         {
-            "clue": "Find Nairobi in Kenya.",
+            "clue": "The capital of Kenya sits at 1,795 m elevation and is one of Africa's most visited cities — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -766,7 +766,7 @@
             "answer": "Nairobi"
         },
         {
-            "clue": "Pinpoint Serengeti in Tanzania.",
+            "clue": "Which vast Tanzanian plain hosts the world's largest terrestrial mammal migration each year?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -778,7 +778,7 @@
             "answer": "Serengeti"
         },
         {
-            "clue": "Where is Marrakesh in Morocco?",
+            "clue": "This 'Red City' at the foot of the Atlas Mountains is Morocco's most vibrant imperial city — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -790,7 +790,7 @@
             "answer": "Marrakesh"
         },
         {
-            "clue": "Find Zanzibar City in Tanzania.",
+            "clue": "The historic Stone Town of this Indian Ocean island was a major spice and slave trade hub — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -802,7 +802,7 @@
             "answer": "Zanzibar City"
         },
         {
-            "clue": "Pinpoint Gaborone in Botswana.",
+            "clue": "The capital and largest city of Botswana sits near the South African border — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -814,7 +814,7 @@
             "answer": "Gaborone"
         },
         {
-            "clue": "Karnak Temple",
+            "clue": "This massive ancient Egyptian temple complex on the east bank of the Nile near Luxor was built over 2,000 years — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -825,7 +825,7 @@
             "country": "Egypt"
         },
         {
-            "clue": "Where is Pyramids of Giza in Egypt?",
+            "clue": "On which plateau near Cairo do the three great pharaonic pyramids and the Sphinx stand?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -837,7 +837,7 @@
             "answer": "Pyramids of Giza"
         },
         {
-            "clue": "Where is Victoria Falls in Zimbabwe?",
+            "clue": "Which Zimbabwean border town overlooks the thundering Victoria Falls on the Zambezi River?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -849,7 +849,7 @@
             "answer": "Victoria Falls"
         },
         {
-            "clue": "Where is Table Mountain in South Africa?",
+            "clue": "Table Mountain is the iconic backdrop of which South African city on the Cape Peninsula?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -861,7 +861,7 @@
             "answer": "Table Mountain"
         },
         {
-            "clue": "Where is Nile River in Egypt?",
+            "clue": "Where does the Nile River flow into the Mediterranean Sea in northern Egypt?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -883,7 +883,7 @@
             }
         },
         {
-            "clue": "Where is Mount Kilimanjaro in Tanzania?",
+            "clue": "In which Tanzanian region near the Kenyan border does Africa's highest peak rise?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -895,7 +895,7 @@
             "answer": "Mount Kilimanjaro"
         },
         {
-            "clue": "Where is Lake Victoria in Uganda?",
+            "clue": "Where does Lake Victoria's northern shore meet Uganda near the source of the White Nile?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -917,7 +917,7 @@
             }
         },
         {
-            "clue": "Where is Sahara Desert in Egypt?",
+            "clue": "Where does the Sahara Desert cover the western desert region of Egypt?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -929,7 +929,7 @@
             "answer": "Sahara Desert"
         },
         {
-            "clue": "Where is Suez Canal in Egypt?",
+            "clue": "Where does the Suez Canal begin at the Mediterranean end in northeastern Egypt?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -941,7 +941,7 @@
             "answer": "Suez Canal"
         },
         {
-            "clue": "Where is Congo River in Democratic Republic of the Congo?",
+            "clue": "Where does the Congo River reach the Atlantic Ocean in the DRC?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -963,7 +963,7 @@
             }
         },
         {
-            "clue": "Where is Lake Tanganyika in Tanzania?",
+            "clue": "On which part of the East African Rift does Lake Tanganyika's Tanzanian shoreline sit?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -985,7 +985,7 @@
             }
         },
         {
-            "clue": "Where is Kalahari Desert in Botswana?",
+            "clue": "In which central part of Botswana does the Kalahari's red sand stretch?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1007,7 +1007,7 @@
             }
         },
         {
-            "clue": "Where is Namib Desert in Namibia?",
+            "clue": "Where do the world's tallest sand dunes in Sossusvlei rise in the Namib Desert?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1029,7 +1029,7 @@
             }
         },
         {
-            "clue": "Where is Regional Focus: Pyramids of Giza in Egypt?",
+            "clue": "Can you pinpoint the Giza Plateau outside Cairo where the pyramids stand?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1041,7 +1041,7 @@
             "answer": "Regional Focus: Pyramids of Giza"
         },
         {
-            "clue": "Where is Regional Focus: Victoria Falls in Zimbabwe?",
+            "clue": "Find the exact lip of Victoria Falls on the Zimbabwean side.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1053,7 +1053,7 @@
             "answer": "Regional Focus: Victoria Falls"
         },
         {
-            "clue": "Where is Regional Focus: Table Mountain in South Africa?",
+            "clue": "Find Table Mountain National Park overlooking the Cape Peninsula.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1065,7 +1065,7 @@
             "answer": "Regional Focus: Table Mountain"
         },
         {
-            "clue": "Where is Explorer Spot: Which city is home to the world\u0027s oldest university still in operation (founded 859 AD) in Morocco?",
+            "clue": "Find al-Qarawiyyin mosque and university in the old medina of Fez.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1074,10 +1074,10 @@
                 "lng": -4.9785
             },
             "country": "Morocco",
-            "answer": "Explorer Spot: Which city is home to the world\u0027s oldest university still in operation (founded 859 AD)"
+            "answer": "Explorer Spot: Which city is home to the world's oldest university still in operation (founded 859 AD)"
         },
         {
-            "clue": "Where is Regional Focus: Which city is home to the world\u0027s oldest university still in operation (founded 859 AD) in Morocco?",
+            "clue": "In which Moroccan city's ancient medina does the world's oldest university operate?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1086,10 +1086,10 @@
                 "lng": -4.9785
             },
             "country": "Morocco",
-            "answer": "Regional Focus: Which city is home to the world\u0027s oldest university still in operation (founded 859 AD)"
+            "answer": "Regional Focus: Which city is home to the world's oldest university still in operation (founded 859 AD)"
         },
         {
-            "clue": "Where is Explorer Spot: Mount Kilimanjaro in Tanzania?",
+            "clue": "Find the summit crater of Kilimanjaro, Africa's highest point.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1101,7 +1101,7 @@
             "answer": "Explorer Spot: Mount Kilimanjaro"
         },
         {
-            "clue": "Where is Regional Focus: Mount Kilimanjaro in Tanzania?",
+            "clue": "Kilimanjaro rises near which Tanzanian town at the foot of the mountain?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1113,7 +1113,7 @@
             "answer": "Regional Focus: Mount Kilimanjaro"
         },
         {
-            "clue": "Where is Explorer Spot: Lake Victoria in Uganda?",
+            "clue": "Find the point in Uganda where the White Nile exits Lake Victoria.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1125,7 +1125,7 @@
             "answer": "Explorer Spot: Lake Victoria"
         },
         {
-            "clue": "Where is Regional Focus: Lake Victoria in Uganda?",
+            "clue": "In which Ugandan district does Lake Victoria's northern shore lie?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1137,7 +1137,7 @@
             "answer": "Regional Focus: Lake Victoria"
         },
         {
-            "clue": "Where is Explorer Spot: Madagascar in Madagascar?",
+            "clue": "Find the Avenue of the Baobabs on the west coast of Madagascar.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1149,7 +1149,7 @@
             "answer": "Explorer Spot: Madagascar"
         },
         {
-            "clue": "Where is Regional Focus: Madagascar in Madagascar?",
+            "clue": "Drop a pin on Madagascar — the world's fourth-largest island off the east coast of Africa.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1161,7 +1161,7 @@
             "answer": "Regional Focus: Madagascar"
         },
         {
-            "clue": "Where is Atlas Mountains in Morocco?",
+            "clue": "Where do the Atlas Mountains reach their highest point at Jebel Toubkal in Morocco?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1183,7 +1183,7 @@
             }
         },
         {
-            "clue": "Where is Cairo in Egypt?",
+            "clue": "The largest city in Africa and the capital of Egypt sits at the head of the Nile Delta — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1195,7 +1195,7 @@
             "answer": "Cairo"
         },
         {
-            "clue": "Kalahari Desert",
+            "clue": "This semi-arid savanna spanning Botswana, Namibia and South Africa is home to meerkats and the San people — where is it?",
             "category": "geography",
             "type": "desert",
             "difficulty": "medium",
@@ -1216,7 +1216,7 @@
             "country": "Botswana"
         },
         {
-            "clue": "Where is Marrakech (Red Medina) in Morocco?",
+            "clue": "The medina of which Moroccan city is dyed red with its famous clay walls and towers?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1228,7 +1228,7 @@
             "answer": "Marrakech"
         },
         {
-            "clue": "Pinpoint Chefchaouen (Blue City) in Morocco.",
+            "clue": "Which Moroccan mountain town is painted entirely in shades of blue?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1240,7 +1240,7 @@
             "answer": "Chefchaouen"
         },
         {
-            "clue": "Find Casablanca (Hassan II Mosque) in Morocco.",
+            "clue": "Morocco's largest city and economic capital is also home to the world's tallest mosque — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1252,7 +1252,7 @@
             "answer": "Casablanca"
         },
         {
-            "clue": "Kilimanjaro",
+            "clue": "At 5,895 m, this dormant volcano in Tanzania is the roof of Africa — where does it stand?",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -1263,7 +1263,7 @@
             "country": "Tanzania"
         },
         {
-            "clue": "Lake Tanganyika",
+            "clue": "At 1,470 m deep, this is the world's second-deepest lake, running along four African countries — where is it?",
             "category": "geography",
             "type": "lake",
             "difficulty": "hard",
@@ -1284,7 +1284,7 @@
             "country": "Tanzania"
         },
         {
-            "clue": "Lake Malawi",
+            "clue": "This African Rift Valley lake contains more species of fish than any other lake on Earth — where is it?",
             "category": "geography",
             "type": "lake",
             "difficulty": "hard",
@@ -1305,7 +1305,7 @@
             "country": "Malawi"
         },
         {
-            "clue": "Zambezi River",
+            "clue": "Africa's fourth-longest river flows through six countries and plunges over Victoria Falls — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -1326,7 +1326,7 @@
             "country": "Zambia"
         },
         {
-            "clue": "Okavango Delta",
+            "clue": "This vast inland river delta in Botswana is one of Africa's greatest wildlife sanctuaries — find it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -1347,7 +1347,7 @@
             "country": "Botswana"
         },
         {
-            "clue": "Comoros",
+            "clue": "These volcanic islands in the Indian Ocean between Mozambique and Madagascar are known for their ylang-ylang perfume — find them.",
             "category": "geography",
             "type": "island",
             "difficulty": "hard",
@@ -1368,7 +1368,7 @@
             "country": "Comoros"
         },
         {
-            "clue": "Mauritius",
+            "clue": "This island nation east of Madagascar is famous for the now-extinct dodo bird — where is it?",
             "category": "geography",
             "type": "island",
             "difficulty": "hard",
@@ -1389,13 +1389,13 @@
             "country": "Mauritius"
         },
         {
-            "clue": "Seychelles",
+            "clue": "This archipelago of 115 islands in the Indian Ocean is home to the world's largest seed, the coco de mer — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "hard",
             "target": {
                 "lat": -4.6796,
-                "lng": 55.4920
+                "lng": 55.492
             },
             "bounds": {
                 "nw": {
@@ -1410,7 +1410,7 @@
             "country": "Seychelles"
         },
         {
-            "clue": "Pinpoint Moroni in Comoros.",
+            "clue": "The capital of the Comoros Islands sits on Grande Comore island in the Indian Ocean — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1422,7 +1422,7 @@
             "answer": "Moroni"
         },
         {
-            "clue": "Find Kinshasa in Democratic Republic of the Congo.",
+            "clue": "The capital of the DRC faces Brazzaville across the Congo River, making it one of the world's closest capital pairs — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1434,7 +1434,7 @@
             "answer": "Kinshasa"
         },
         {
-            "clue": "Find Addis Ababa in Ethiopia.",
+            "clue": "The capital of Ethiopia serves as the headquarters of the African Union — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1446,7 +1446,7 @@
             "answer": "Addis Ababa"
         },
         {
-            "clue": "Pinpoint Antananarivo in Madagascar.",
+            "clue": "The capital of Madagascar sits high on the central plateau of this island nation — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1458,7 +1458,7 @@
             "answer": "Antananarivo"
         },
         {
-            "clue": "Pinpoint Lilongwe in Malawi.",
+            "clue": "The capital of Malawi sits in the central region of this landlocked country — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1470,7 +1470,7 @@
             "answer": "Lilongwe"
         },
         {
-            "clue": "Find Bamako in Mali.",
+            "clue": "The capital of Mali sits on the Niger River in West Africa — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1482,7 +1482,7 @@
             "answer": "Bamako"
         },
         {
-            "clue": "Pinpoint Port Louis in Mauritius.",
+            "clue": "The capital and main port of the island nation of Mauritius — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1494,7 +1494,7 @@
             "answer": "Port Louis"
         },
         {
-            "clue": "Find Rabat in Morocco.",
+            "clue": "Morocco's capital is also home to the UNESCO-listed Chellah necropolis and Hassan Tower — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1506,7 +1506,7 @@
             "answer": "Rabat"
         },
         {
-            "clue": "Pinpoint Windhoek in Namibia.",
+            "clue": "The capital of Namibia sits in the center of this vast southern African country — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1518,7 +1518,7 @@
             "answer": "Windhoek"
         },
         {
-            "clue": "Pinpoint Victoria in Seychelles.",
+            "clue": "The smallest capital city in the world by population is the capital of which Indian Ocean archipelago?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1530,7 +1530,7 @@
             "answer": "Victoria"
         },
         {
-            "clue": "Find Pretoria in South Africa.",
+            "clue": "South Africa's administrative capital, known as the Jacaranda City for its purple-bloomed trees — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1542,7 +1542,7 @@
             "answer": "Pretoria"
         },
         {
-            "clue": "Pinpoint Dodoma in Tanzania.",
+            "clue": "Tanzania's official capital, though Dar es Salaam remains the largest city — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1554,7 +1554,7 @@
             "answer": "Dodoma"
         },
         {
-            "clue": "Find Kampala in Uganda.",
+            "clue": "The capital of Uganda is built across seven hills on the shores of Lake Victoria — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1566,7 +1566,7 @@
             "answer": "Kampala"
         },
         {
-            "clue": "Find Lusaka in Zambia.",
+            "clue": "The capital and largest city of Zambia sits on a railway junction in the African interior — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1578,7 +1578,7 @@
             "answer": "Lusaka"
         },
         {
-            "clue": "Find Harare in Zimbabwe.",
+            "clue": "The capital of Zimbabwe was called Salisbury until independence in 1982 — where is it today?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1590,7 +1590,7 @@
             "answer": "Harare"
         },
         {
-            "clue": "Where is Cape Town in South Africa?",
+            "clue": "Which South African city sits between Table Mountain and the Atlantic Ocean near the Cape of Good Hope?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1602,7 +1602,7 @@
             "answer": "Cape Town"
         },
         {
-            "clue": "Where is Zanzibar in Tanzania?",
+            "clue": "Which Tanzanian island off the East African coast is famous for its spice trade and Stone Town?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1614,7 +1614,7 @@
             "answer": "Zanzibar"
         },
         {
-            "clue": "Where is Luxor in Egypt?",
+            "clue": "Which Egyptian city on the east bank of the Nile sits amid the largest open-air museum in the world?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1626,7 +1626,7 @@
             "answer": "Luxor"
         },
         {
-            "clue": "Find Accra in Ghana.",
+            "clue": "The capital of Ghana on the Gulf of Guinea is the largest city in West Africa's Gold Coast — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1638,7 +1638,7 @@
             "answer": "Accra"
         },
         {
-            "clue": "Where is Lagos in Nigeria?",
+            "clue": "The largest city in Africa and Nigeria's economic capital sits on the Atlantic coast — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1650,7 +1650,7 @@
             "answer": "Lagos"
         },
         {
-            "clue": "Pinpoint Abuja in Nigeria.",
+            "clue": "Nigeria's purpose-built capital replaced Lagos in 1991 and sits in the country's geographic center — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1662,7 +1662,7 @@
             "answer": "Abuja"
         },
         {
-            "clue": "Find Dakar in Senegal.",
+            "clue": "The westernmost capital city on the African continent juts into the Atlantic from Senegal — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1674,7 +1674,7 @@
             "answer": "Dakar"
         },
         {
-            "clue": "Where is Kilimanjaro National Park in Tanzania?",
+            "clue": "In which Tanzanian national park does Africa's highest peak tower above the clouds?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1686,7 +1686,7 @@
             "answer": "Kilimanjaro National Park"
         },
         {
-            "clue": "Pinpoint Timbuktu in Mali.",
+            "clue": "This legendary city at the edge of the Sahara was once the wealthiest city in the world — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1698,7 +1698,7 @@
             "answer": "Timbuktu"
         },
         {
-            "clue": "Find Serengeti National Park in Tanzania.",
+            "clue": "Where in Tanzania does the Serengeti, home to the Great Migration, stretch across the plains?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1710,7 +1710,7 @@
             "answer": "Serengeti National Park"
         },
         {
-            "clue": "Where is Aswan in Egypt?",
+            "clue": "Which Egyptian city sits near the High Dam that created Lake Nasser on the Nile?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1722,7 +1722,7 @@
             "answer": "Aswan"
         },
         {
-            "clue": "Find Nairobi National Park in Kenya.",
+            "clue": "Which African capital city has a national park right on its outskirts where lions roam?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1734,7 +1734,7 @@
             "answer": "Nairobi National Park"
         },
         {
-            "clue": "Pinpoint Mogadishu in Somalia.",
+            "clue": "The capital of Somalia on the Indian Ocean coast was once known as the 'White Pearl of the Indian Ocean' — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",

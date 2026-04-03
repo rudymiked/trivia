@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "clue": "Eiffel Tower",
+            "clue": "Built as a temporary exhibit for the 1889 World's Fair, this 330-m iron lattice tower now defines Paris — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -12,7 +12,7 @@
             "country": "France"
         },
         {
-            "clue": "Big Ben",
+            "clue": "This iconic clock tower at the north end of the Palace of Westminster has chimed over London since 1859 — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -23,7 +23,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Colosseum",
+            "clue": "This 50,000-seat amphitheater hosted gladiatorial combat and public spectacles for nearly 400 years in ancient Rome — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -34,7 +34,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Sagrada Familia",
+            "clue": "Antoni Gaudi's unfinished basilica has been under construction since 1882 and is still not complete — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -45,7 +45,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Stonehenge",
+            "clue": "These mysterious 5,000-year-old standing stones assembled from Wales still align with the summer solstice — where are they?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -56,7 +56,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Santorini",
+            "clue": "This crescent-shaped volcanic island in the Aegean, with its iconic blue-domed churches, may have inspired the Atlantis myth — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "medium",
@@ -67,7 +67,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Acropolis",
+            "clue": "This ancient citadel and the Parthenon temple atop it have overlooked Athens for 2,500 years — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -78,7 +78,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Brandenburg Gate",
+            "clue": "Built in 1791 and once stranded in no-man's land between East and West Berlin, this neoclassical gate is now Germany's symbol of unity — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -89,7 +89,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Kremlin",
+            "clue": "This red-walled fortress in Moscow serves as the official residence of the Russian president — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -100,7 +100,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Neuschwanstein Castle",
+            "clue": "This 19th-century Bavarian fairy-tale castle, commissioned by King Ludwig II, inspired Disney's Sleeping Beauty castle — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -111,7 +111,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Louvre Museum",
+            "clue": "The world's most visited art museum, home to the Mona Lisa, occupies a former royal palace in Paris — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -122,7 +122,7 @@
             "country": "France"
         },
         {
-            "clue": "Leaning Tower of Pisa",
+            "clue": "This Romanesque bell tower has been leaning since construction began in 1173 due to unstable soil — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -133,7 +133,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Find Southampton in United Kingdom.",
+            "clue": "The RMS Titanic departed from which English port city on the English Channel in 1912?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -145,7 +145,7 @@
             "answer": "Southampton"
         },
         {
-            "clue": "Find Athens in Greece.",
+            "clue": "The world's oldest continuously inhabited city and birthplace of Western democracy — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -157,7 +157,7 @@
             "answer": "Athens"
         },
         {
-            "clue": "Pinpoint Vinci in Italy.",
+            "clue": "Which small Tuscan hill town gave its name to Leonardo, the Renaissance genius born there in 1452?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -169,7 +169,7 @@
             "answer": "Vinci"
         },
         {
-            "clue": "Find British Museum, London in United Kingdom.",
+            "clue": "Find the world's first national public museum, housing the Rosetta Stone and Elgin Marbles, in the heart of London.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -181,7 +181,7 @@
             "answer": "British Museum, London"
         },
         {
-            "clue": "Find Normandy in France.",
+            "clue": "On June 6, 1944, Allied forces landed on the beaches of which northern French region?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -193,7 +193,7 @@
             "answer": "Normandy"
         },
         {
-            "clue": "Find Pamplona in Spain.",
+            "clue": "The Running of the Bulls happens each July in which walled city in the Navarre region of northern Spain?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -205,7 +205,7 @@
             "answer": "Pamplona"
         },
         {
-            "clue": "Where is Amsterdam in Netherlands?",
+            "clue": "Which Dutch city threaded by 165 canals is home to the Anne Frank House and the Rijksmuseum?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -217,7 +217,7 @@
             "answer": "Amsterdam"
         },
         {
-            "clue": "Find Pripyat/Chernobyl in Ukraine.",
+            "clue": "The abandoned ghost city nearest the 1986 nuclear disaster site sits in which country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -229,7 +229,7 @@
             "answer": "Pripyat/Chernobyl"
         },
         {
-            "clue": "Pinpoint Runnymede in United Kingdom.",
+            "clue": "At which Thames meadow in Surrey did King John put his seal on the Magna Carta in 1215?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -241,7 +241,7 @@
             "answer": "Runnymede"
         },
         {
-            "clue": "Find Florence in Italy.",
+            "clue": "The birthplace of the Renaissance, home to Michelangelo's David and the Uffizi Gallery — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -253,7 +253,7 @@
             "answer": "Florence"
         },
         {
-            "clue": "Where is Berlin in Germany?",
+            "clue": "Germany's capital, once divided by a famous wall, is home to the Brandenburg Gate and the Reichstag — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -265,7 +265,7 @@
             "answer": "Berlin"
         },
         {
-            "clue": "Pinpoint The Hague in Netherlands.",
+            "clue": "Which Dutch city is the seat of government and home to the International Court of Justice?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -277,7 +277,7 @@
             "answer": "The Hague"
         },
         {
-            "clue": "Find Mount Vesuvius in Italy.",
+            "clue": "Which Italian volcano's eruption in 79 AD buried the Roman cities of Pompeii and Herculaneum?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -289,7 +289,7 @@
             "answer": "Mount Vesuvius"
         },
         {
-            "clue": "Find London in United Kingdom.",
+            "clue": "The largest city in Europe, home to Big Ben, the Tower of London, and the Thames — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -301,7 +301,7 @@
             "answer": "London"
         },
         {
-            "clue": "Pinpoint Oslo in Norway.",
+            "clue": "The capital of Norway on the Oslofjord is the venue for the annual Nobel Peace Prize ceremony — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -313,7 +313,7 @@
             "answer": "Oslo"
         },
         {
-            "clue": "Danube River",
+            "clue": "Europe's second-longest river passes through Budapest, Vienna, and Belgrade on its way to the Black Sea — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -334,7 +334,7 @@
             "country": "Austria"
         },
         {
-            "clue": "Matterhorn",
+            "clue": "This pyramid-shaped peak on the Swiss-Italian border was one of the last major Alps summits to be climbed in 1865 — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -345,7 +345,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Lake Baikal",
+            "clue": "The world's deepest lake contains 20% of the world's unfrozen surface fresh water and sits in Siberia — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "hard",
@@ -356,7 +356,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Strait of Gibraltar",
+            "clue": "Only 14 km wide, this passage between Spain and Morocco connects the Atlantic Ocean to the Mediterranean Sea — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -367,7 +367,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Mont Saint-Michel",
+            "clue": "This tidal island monastery connected to France by a causeway was inaccessible twice daily before 1879 — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -378,7 +378,7 @@
             "country": "France"
         },
         {
-            "clue": "Alhambra",
+            "clue": "This stunning Nasrid palace and fortress complex overlooking Granada was the last stronghold of Moorish Spain — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -389,7 +389,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Buda Castle",
+            "clue": "Overlooking the Danube from Castle Hill, this royal palace complex has stood over Budapest since the 13th century — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -400,7 +400,7 @@
             "country": "Hungary"
         },
         {
-            "clue": "Find Chernobyl in Ukraine.",
+            "clue": "The site of the world's worst nuclear disaster in 1986 is in which Ukrainian city near the Belarusian border?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -412,7 +412,7 @@
             "answer": "Chernobyl"
         },
         {
-            "clue": "Mount Elbrus",
+            "clue": "At 5,642 m, this dormant volcano in the Caucasus is the highest peak in Europe — where does it rise?",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -423,7 +423,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Sicily",
+            "clue": "The largest island in the Mediterranean Sea, it sits at the toe of Italy's boot and holds Mount Etna, Europe's tallest active volcano — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "easy",
@@ -444,7 +444,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Iceland",
+            "clue": "This Nordic island nation sitting on the Mid-Atlantic Ridge features geysers, volcanoes, and the Northern Lights — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "easy",
@@ -465,7 +465,7 @@
             "country": "Iceland"
         },
         {
-            "clue": "Explorer Spot: Eiffel Tower",
+            "clue": "Find the iron lattice legs of the Eiffel Tower on the Champ de Mars in Paris.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -476,7 +476,7 @@
             "country": "France"
         },
         {
-            "clue": "Find France.",
+            "clue": "The world's most-visited country stretches from the Rhine to the Pyrenees and the Alps to the Atlantic — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -498,7 +498,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Eiffel Tower",
+            "clue": "The Eiffel Tower stands at the edge of the Champ de Mars — in which arrondissement of Paris?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -509,7 +509,7 @@
             "country": "France"
         },
         {
-            "clue": "Explorer Spot: Big Ben",
+            "clue": "Drop a pin on the Elizabeth Tower clock at the north end of the Palace of Westminster.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -520,7 +520,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Where is United Kingdom?",
+            "clue": "This island nation off the northwest coast of Europe includes England, Scotland, Wales, and Northern Ireland — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -542,7 +542,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Big Ben",
+            "clue": "Big Ben is part of the Palace of Westminster — on which bank of the Thames in central London?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -553,7 +553,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Explorer Spot: Colosseum",
+            "clue": "Find the precise spot of the Colosseum's main entrance in central Rome.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -564,7 +564,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Find Italy.",
+            "clue": "This boot-shaped Mediterranean peninsula is home to the Roman Empire's legacy, Renaissance art, and the best pizza — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -586,7 +586,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Colosseum",
+            "clue": "The Colosseum sits in the heart of ancient Rome — near which of Rome's famous hills?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -597,7 +597,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Explorer Spot: Sagrada Familia",
+            "clue": "Find Gaudi's unfinished masterpiece in the Eixample district of Barcelona.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -608,7 +608,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Where is Spain?",
+            "clue": "The second-largest country in the EU occupies most of the Iberian Peninsula — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -630,7 +630,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Sagrada Familia",
+            "clue": "The Sagrada Familia is in the Eixample district — in which Spanish city?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -641,7 +641,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Explorer Spot: Stonehenge",
+            "clue": "Find the stone circle of Stonehenge on Salisbury Plain in Wiltshire, England.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -652,7 +652,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Regional Focus: Stonehenge",
+            "clue": "Stonehenge stands on Salisbury Plain — in which English county?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -663,7 +663,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Explorer Spot: Santorini",
+            "clue": "Drop a pin on the famous blue-domed church of Oia on the western rim of Santorini.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -674,7 +674,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Find Greece.",
+            "clue": "This southeastern European peninsula, birthplace of democracy and the Olympics, is dotted with thousands of islands — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -696,7 +696,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Santorini",
+            "clue": "Santorini is a volcanic caldera island in which Greek island group?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -707,7 +707,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Explorer Spot: Acropolis",
+            "clue": "Find the Parthenon on top of the Acropolis hill in central Athens.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -718,7 +718,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Regional Focus: Acropolis",
+            "clue": "The Acropolis overlooks which southeastern European capital city?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -729,7 +729,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Explorer Spot: Brandenburg Gate",
+            "clue": "Find the Brandenburg Gate at the end of Unter den Linden boulevard in central Berlin.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -740,7 +740,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Pinpoint Germany.",
+            "clue": "Europe's largest economy sits at the heart of the continent, from the Alps to the Baltic Sea — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -762,7 +762,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Brandenburg Gate",
+            "clue": "The Brandenburg Gate marks the western end of Unter den Linden in which German capital?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -773,7 +773,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Explorer Spot: Kremlin",
+            "clue": "Find the Kremlin's Spasskaya Tower on Red Square in Moscow.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -784,7 +784,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Where is Russia?",
+            "clue": "The world's largest country by area spans 11 time zones from Eastern Europe to the Pacific — find the European part.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -806,7 +806,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Kremlin",
+            "clue": "The Kremlin fortress overlooks Red Square in which Russian capital?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -817,7 +817,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Explorer Spot: Neuschwanstein Castle",
+            "clue": "Find Neuschwanstein Castle perched above the village of Hohenschwangau in Bavaria.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -828,7 +828,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Regional Focus: Neuschwanstein Castle",
+            "clue": "Neuschwanstein Castle stands above the Hohenschwangau valley — in which German state?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -839,7 +839,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Explorer Spot: Louvre Museum",
+            "clue": "Find the glass pyramid entrance of the Louvre in central Paris.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -850,7 +850,7 @@
             "country": "France"
         },
         {
-            "clue": "Regional Focus: Louvre Museum",
+            "clue": "The Louvre sits on the Right Bank of the Seine in which French city?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -861,7 +861,7 @@
             "country": "France"
         },
         {
-            "clue": "Explorer Spot: Leaning Tower of Pisa",
+            "clue": "Find the Leaning Tower in the Piazza dei Miracoli complex in Pisa, Italy.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -872,7 +872,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Regional Focus: Leaning Tower of Pisa",
+            "clue": "The Leaning Tower is in the Piazza dei Miracoli in which northern Italian city?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -883,7 +883,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Explorer Spot: Where did the Titanic depart from on its maiden voyage",
+            "clue": "Find Southampton Docks where the RMS Titanic departed from on April 10, 1912.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -894,7 +894,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Regional Focus: Where did the Titanic depart from on its maiden voyage",
+            "clue": "The RMS Titanic departed from Southampton — in which part of England?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -905,7 +905,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Explorer Spot: Which city hosted the first modern Olympic Games in 1896",
+            "clue": "Find the Panathenaic Stadium in Athens, the venue for the first modern Olympic Games.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -916,7 +916,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Regional Focus: Which city hosted the first modern Olympic Games in 1896",
+            "clue": "The first modern Olympics were held in which European capital in 1896?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -927,7 +927,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Explorer Spot: Where was Leonardo da Vinci born",
+            "clue": "Find the village of Vinci in Tuscany, Italy, birthplace of the Renaissance master.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -938,7 +938,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Regional Focus: Where was Leonardo da Vinci born",
+            "clue": "Leonardo da Vinci was born in the Tuscan hills of which European country?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -949,7 +949,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Explorer Spot: Where is the Rosetta Stone currently displayed",
+            "clue": "Find the British Museum's room 4 in London, where the Rosetta Stone is on permanent display.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -960,7 +960,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Regional Focus: Where is the Rosetta Stone currently displayed",
+            "clue": "The Rosetta Stone is on display in which London museum?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -971,7 +971,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Explorer Spot: Where did the D-Day landings begin on June 6, 1944",
+            "clue": "Find Omaha Beach in Normandy, France, the bloodiest of the D-Day landing beaches.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -982,7 +982,7 @@
             "country": "France"
         },
         {
-            "clue": "Regional Focus: Where did the D-Day landings begin on June 6, 1944",
+            "clue": "The D-Day landings took place on the beaches of which French region?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -993,7 +993,7 @@
             "country": "France"
         },
         {
-            "clue": "Explorer Spot: Which city hosts the annual Running of the Bulls festival",
+            "clue": "Find the narrow streets of Pamplona, Spain, where the famous bull run takes place each July.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1004,7 +1004,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Regional Focus: Which city hosts the annual Running of the Bulls festival",
+            "clue": "The Running of the Bulls is held each July in which city in the Navarre region of Spain?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -1015,7 +1015,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Explorer Spot: In which city is the Anne Frank House museum located",
+            "clue": "Find the Anne Frank House on the Prinsengracht canal in Amsterdam.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1026,7 +1026,7 @@
             "country": "Netherlands"
         },
         {
-            "clue": "Find Netherlands.",
+            "clue": "This low-lying country famous for tulips, windmills, and Amsterdam is mostly below sea level — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1048,7 +1048,7 @@
             }
         },
         {
-            "clue": "Regional Focus: In which city is the Anne Frank House museum located",
+            "clue": "The Anne Frank House is on a canal in which Dutch capital city?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1059,7 +1059,7 @@
             "country": "Netherlands"
         },
         {
-            "clue": "Explorer Spot: Where did the Chernobyl nuclear disaster occur in 1986",
+            "clue": "Find the Chernobyl Nuclear Power Plant near the abandoned city of Pripyat in northern Ukraine.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1070,7 +1070,7 @@
             "country": "Ukraine"
         },
         {
-            "clue": "Pinpoint Ukraine.",
+            "clue": "Europe's second-largest country by area, known for its fertile black-earth farmlands, sits east of Poland — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1092,7 +1092,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986",
+            "clue": "The Chernobyl disaster happened near the abandoned city of Pripyat — in which country?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -1103,7 +1103,7 @@
             "country": "Ukraine"
         },
         {
-            "clue": "Explorer Spot: Where was the Magna Carta signed in 1215",
+            "clue": "Find Runnymede meadow on the Thames in Surrey, England, where King John sealed the Magna Carta.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1114,7 +1114,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Regional Focus: Where was the Magna Carta signed in 1215",
+            "clue": "King John signed the Magna Carta on the banks of the Thames — in which English county?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1125,7 +1125,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Explorer Spot: Which city is the birthplace of the Renaissance",
+            "clue": "Find the Uffizi Gallery in Florence, Italy, the treasure house of Renaissance art.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1136,7 +1136,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Regional Focus: Which city is the birthplace of the Renaissance",
+            "clue": "The Renaissance began in which Italian city famed for its Uffizi Gallery and the Medici family?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1147,7 +1147,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Explorer Spot: Where was the Berlin Wall located",
+            "clue": "Find Checkpoint Charlie, the most famous crossing point in the former Berlin Wall.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1158,7 +1158,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Regional Focus: Where was the Berlin Wall located",
+            "clue": "The Berlin Wall divided the capital of which reunified European country?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -1169,7 +1169,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Explorer Spot: Where is the headquarters of the International Court of Justice",
+            "clue": "Find the Peace Palace in The Hague, Netherlands, seat of the International Court of Justice.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1180,7 +1180,7 @@
             "country": "Netherlands"
         },
         {
-            "clue": "Regional Focus: Where is the headquarters of the International Court of Justice",
+            "clue": "The International Court of Justice is in the Peace Palace in which Dutch city?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -1191,7 +1191,7 @@
             "country": "Netherlands"
         },
         {
-            "clue": "Explorer Spot: Which volcano destroyed Pompeii in 79 AD",
+            "clue": "Find Mount Vesuvius, the volcano whose eruption buried Pompeii under meters of ash.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1202,7 +1202,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Regional Focus: Which volcano destroyed Pompeii in 79 AD",
+            "clue": "Mount Vesuvius overlooks the Bay of Naples in which European country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -1213,7 +1213,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Explorer Spot: Where was the world\u0027s first underground railway opened in 1863",
+            "clue": "Find Paddington Station in London, near the western terminus of the world's first underground railway.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1224,7 +1224,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Regional Focus: Where was the world\u0027s first underground railway opened in 1863",
+            "clue": "The world's first underground railway opened in which European capital city?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1235,7 +1235,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Explorer Spot: In which city is the Nobel Peace Prize ceremony held",
+            "clue": "Find Oslo City Hall in Norway, where the Nobel Peace Prize is awarded each December.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1246,7 +1246,7 @@
             "country": "Norway"
         },
         {
-            "clue": "Pinpoint Norway.",
+            "clue": "This long narrow Scandinavian country with dramatic fjords and offshore oil reserves — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1268,7 +1268,7 @@
             }
         },
         {
-            "clue": "Regional Focus: In which city is the Nobel Peace Prize ceremony held",
+            "clue": "The Nobel Peace Prize ceremony is held in which Scandinavian capital?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -1279,7 +1279,7 @@
             "country": "Norway"
         },
         {
-            "clue": "Explorer Spot: Danube River",
+            "clue": "Find the Iron Gates gorge, the most dramatic section of the Danube on the Serbia-Romania border.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1290,7 +1290,7 @@
             "country": "Austria"
         },
         {
-            "clue": "Where is Austria?",
+            "clue": "This landlocked alpine country in central Europe was once the heart of the Habsburg Empire — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1312,7 +1312,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Danube River",
+            "clue": "The Danube flows through Vienna, Bratislava, and Budapest — entering the Black Sea in which country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -1323,7 +1323,7 @@
             "country": "Austria"
         },
         {
-            "clue": "Explorer Spot: Matterhorn",
+            "clue": "Drop a pin on the Matterhorn's summit ridge on the Swiss-Italian border.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1334,7 +1334,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Find Switzerland.",
+            "clue": "This neutral alpine nation is home to the Alps, four languages, and the headquarters of the UN in Geneva — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1356,7 +1356,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Matterhorn",
+            "clue": "The Matterhorn sits on the Swiss-Italian border near which Swiss ski resort town?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1367,7 +1367,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Explorer Spot: Lake Baikal",
+            "clue": "Find Lake Baikal's deepest point in the rift valley of southern Siberia.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1378,7 +1378,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Regional Focus: Lake Baikal",
+            "clue": "Lake Baikal sits in the Rift Valley of which Asian region of Russia?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1389,7 +1389,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Explorer Spot: Strait of Gibraltar",
+            "clue": "Find the narrowest point of the Strait of Gibraltar between Spain and Morocco.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1400,7 +1400,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Regional Focus: Strait of Gibraltar",
+            "clue": "The Strait of Gibraltar separates Spain from which African country?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -1411,7 +1411,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Explorer Spot: Mont Saint-Michel",
+            "clue": "Find the tidal island of Mont Saint-Michel off the coast of Normandy, France.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1422,7 +1422,7 @@
             "country": "France"
         },
         {
-            "clue": "Regional Focus: Mont Saint-Michel",
+            "clue": "Mont Saint-Michel sits in the bay of which French region near the Normandy coast?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -1433,7 +1433,7 @@
             "country": "France"
         },
         {
-            "clue": "Explorer Spot: Alhambra",
+            "clue": "Find the Alhambra fortress and palace complex on the hill above Granada, Spain.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1444,7 +1444,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Regional Focus: Alhambra",
+            "clue": "The Alhambra overlooks which Andalusian city at the foot of the Sierra Nevada?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -1455,7 +1455,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Explorer Spot: Buda Castle",
+            "clue": "Find Buda Castle perched on Castle Hill on the west bank of the Danube in Budapest.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1466,7 +1466,7 @@
             "country": "Hungary"
         },
         {
-            "clue": "Find Hungary.",
+            "clue": "This landlocked Central European nation along the Danube is famous for its spas, paprika, and Tokaj wine — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1488,7 +1488,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Buda Castle",
+            "clue": "Buda Castle stands on Castle Hill on the western bank of the Danube — in which European capital?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1499,7 +1499,7 @@
             "country": "Hungary"
         },
         {
-            "clue": "Lake Baikal",
+            "clue": "The world's deepest lake contains 20% of the world's unfrozen surface fresh water and sits in Siberia — find it.",
             "category": "places",
             "type": "lake",
             "difficulty": "hard",
@@ -1520,7 +1520,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Where is Venice in Italy?",
+            "clue": "Which Italian city built on 118 islands connected by canals has no cars, only gondolas?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1532,7 +1532,7 @@
             "answer": "Venice"
         },
         {
-            "clue": "Danube River",
+            "clue": "Europe's second-longest river passes through Budapest, Vienna, and Belgrade on its way to the Black Sea — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -1553,7 +1553,7 @@
             "country": "Romania"
         },
         {
-            "clue": "Acropolis of Athens",
+            "clue": "Which 5th-century BCE fortified hilltop features the Parthenon temple still visible above modern Athens?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1564,7 +1564,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Svalbard",
+            "clue": "This Norwegian Arctic archipelago, located halfway between Norway and the North Pole, has more polar bears than people — find it.",
             "category": "places",
             "type": "island",
             "difficulty": "hard",
@@ -1575,7 +1575,7 @@
             "country": "Norway"
         },
         {
-            "clue": "Where is Barcelona in Spain?",
+            "clue": "Gaudi's Sagrada Familia and the Camp Nou stadium are both in which Mediterranean Spanish city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1587,7 +1587,7 @@
             "answer": "Barcelona"
         },
         {
-            "clue": "Pinpoint Sofia in Bulgaria.",
+            "clue": "The capital of Bulgaria sits near the Vitosha mountain — the oldest capital in Europe — which city is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1599,7 +1599,7 @@
             "answer": "Sofia"
         },
         {
-            "clue": "Lake Geneva",
+            "clue": "The largest Alpine lake is shared between Switzerland and France, with Geneva on its western tip — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "easy",
@@ -1620,7 +1620,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Pyrenees",
+            "clue": "The mountain range that forms the natural border between France and Spain — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "easy",
@@ -1631,7 +1631,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Aegean Sea",
+            "clue": "This arm of the Mediterranean between Greece and Turkey is dotted with thousands of islands — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -1642,7 +1642,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Kamchatka Peninsula",
+            "clue": "This volcanic Russian peninsula in the far east, accessible only by air or sea, has 160 volcanoes — find it.",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -1663,7 +1663,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Pena Palace",
+            "clue": "This 19th-century Romanticist palace painted in yellow and red towers above the hills of Sintra, Portugal — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1674,7 +1674,7 @@
             "country": "Portugal"
         },
         {
-            "clue": "Meteora",
+            "clue": "Orthodox Christian monasteries perch atop near-vertical rock pillars rising from the Thessaly plain in central Greece — find them.",
             "category": "places",
             "type": "region",
             "difficulty": "medium",
@@ -1685,7 +1685,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Where is Lisbon in Portugal?",
+            "clue": "Europe's westernmost capital, spread across seven hills above the Tagus estuary — which city is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1697,7 +1697,7 @@
             "answer": "Lisbon"
         },
         {
-            "clue": "Find Slovenia.",
+            "clue": "This small alpine country between Austria, Italy, Croatia, and Hungary is one of Europe's greenest nations — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1719,7 +1719,7 @@
             }
         },
         {
-            "clue": "Pinpoint Prague in Czech Republic.",
+            "clue": "The 'City of a Hundred Spires' straddles the Vltava River — which Central European capital is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1731,7 +1731,7 @@
             "answer": "Prague"
         },
         {
-            "clue": "Adriatic Sea",
+            "clue": "This arm of the Mediterranean lies between the Italian Peninsula and the Balkans — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -1742,7 +1742,7 @@
             "country": "Croatia"
         },
         {
-            "clue": "Gulf of Bothnia",
+            "clue": "The shallow northern arm of the Baltic Sea separates Sweden from Finland — where is it?",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -1753,7 +1753,7 @@
             "country": "Sweden"
         },
         {
-            "clue": "Lena River",
+            "clue": "The eleventh-longest river in the world flows north through eastern Siberia to empty into the Arctic Ocean — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -1774,7 +1774,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Find Reykjavik in Iceland.",
+            "clue": "The world's northernmost capital city sits on the southwestern tip of Iceland — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1786,7 +1786,7 @@
             "answer": "Reykjavik"
         },
         {
-            "clue": "Pinpoint Ljubljana in Slovenia.",
+            "clue": "The capital of Slovenia is one of the smallest and greenest capitals in Europe — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1798,7 +1798,7 @@
             "answer": "Ljubljana"
         },
         {
-            "clue": "Pinpoint Tallinn in Estonia.",
+            "clue": "The medieval old town of this Baltic capital is the best-preserved in Northern Europe — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1810,7 +1810,7 @@
             "answer": "Tallinn"
         },
         {
-            "clue": "Where is Helsinki in Finland?",
+            "clue": "The capital of Finland sits on a peninsula in the Baltic Sea — which city is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1822,7 +1822,7 @@
             "answer": "Helsinki"
         },
         {
-            "clue": "Where is Riga in Latvia?",
+            "clue": "The largest city in the Baltic states, with a UNESCO Art Nouveau old town — which capital is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1834,7 +1834,7 @@
             "answer": "Riga"
         },
         {
-            "clue": "Pinpoint Tirana in Albania.",
+            "clue": "The capital of Albania recently transformed into a vibrant colorful city — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1846,7 +1846,7 @@
             "answer": "Tirana"
         },
         {
-            "clue": "Find Canary Islands in Spain.",
+            "clue": "These Spanish islands off the coast of North Africa belong to which European country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1858,7 +1858,7 @@
             "answer": "Canary Islands"
         },
         {
-            "clue": "Where is Bucharest in Romania?",
+            "clue": "Known as the 'Little Paris of the East' with wide boulevards and French-style architecture — which Romanian capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1870,7 +1870,7 @@
             "answer": "Bucharest"
         },
         {
-            "clue": "Saint Basil\u0027s Cathedral",
+            "clue": "Built by Ivan the Terrible in 1561, this candy-striped domed cathedral icons Red Square in Moscow — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1881,7 +1881,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Milan Cathedral",
+            "clue": "The largest Gothic cathedral in the world, with 135 spires, took nearly 600 years to build in northern Italy — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -1892,7 +1892,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Rila Monastery",
+            "clue": "Bulgaria's most famous monastery, nestled in a forested mountain valley south of Sofia — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1903,7 +1903,7 @@
             "country": "Bulgaria"
         },
         {
-            "clue": "Where is Eiffel Tower in France?",
+            "clue": "On which Paris riverbank does the Eiffel Tower stand on the Champ de Mars?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1915,7 +1915,7 @@
             "answer": "Eiffel Tower"
         },
         {
-            "clue": "Where is Big Ben in United Kingdom?",
+            "clue": "Big Ben is part of the Palace of Westminster — in which London borough?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1927,7 +1927,7 @@
             "answer": "Big Ben"
         },
         {
-            "clue": "Where is Colosseum in Italy?",
+            "clue": "The Colosseum stands in the historic center of which Italian capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1939,7 +1939,7 @@
             "answer": "Colosseum"
         },
         {
-            "clue": "Where is Sagrada Familia in Spain?",
+            "clue": "The Sagrada Familia is in the Eixample district of which Spanish Mediterranean city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1951,7 +1951,7 @@
             "answer": "Sagrada Familia"
         },
         {
-            "clue": "Where is Santorini in Greece?",
+            "clue": "Santorini is the southernmost island of which Greek island group?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1963,7 +1963,7 @@
             "answer": "Santorini"
         },
         {
-            "clue": "Where is Acropolis in Greece?",
+            "clue": "The Acropolis dominates the skyline of which European capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1975,7 +1975,7 @@
             "answer": "Acropolis"
         },
         {
-            "clue": "Where is Brandenburg Gate in Germany?",
+            "clue": "The Brandenburg Gate marks the historic center of which German capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1987,7 +1987,7 @@
             "answer": "Brandenburg Gate"
         },
         {
-            "clue": "Where is Kremlin in Russia?",
+            "clue": "The Kremlin fortress is at the heart of which Russian capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1999,7 +1999,7 @@
             "answer": "Kremlin"
         },
         {
-            "clue": "Where is Danube River in Austria?",
+            "clue": "Where does the Danube flow through Austria's capital before continuing east?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2021,7 +2021,7 @@
             }
         },
         {
-            "clue": "Where is Matterhorn in Switzerland?",
+            "clue": "Near which iconic Swiss ski resort does the Matterhorn rise on the Italian border?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2033,7 +2033,7 @@
             "answer": "Matterhorn"
         },
         {
-            "clue": "Where is Lake Baikal in Russia?",
+            "clue": "In which Siberian region of Russia does the world's deepest lake sit?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2045,7 +2045,7 @@
             "answer": "Lake Baikal"
         },
         {
-            "clue": "Where is Strait of Gibraltar in Spain?",
+            "clue": "Where does the Strait of Gibraltar narrow to just 14 km at the southern tip of Spain?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2057,7 +2057,7 @@
             "answer": "Strait of Gibraltar"
         },
         {
-            "clue": "Where is Buda Castle in Hungary?",
+            "clue": "Buda Castle crowns Castle Hill on which bank of the Danube in Budapest?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2069,7 +2069,7 @@
             "answer": "Buda Castle"
         },
         {
-            "clue": "Where is Mount Elbrus in Russia?",
+            "clue": "Mount Elbrus, Europe's highest peak, rises in which Russian republic in the Caucasus?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2081,7 +2081,7 @@
             "answer": "Mount Elbrus"
         },
         {
-            "clue": "Where is Sicily in Italy?",
+            "clue": "Sicily sits at the tip of Italy's boot — which sea separates it from the mainland?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2103,7 +2103,7 @@
             }
         },
         {
-            "clue": "Where is Iceland?",
+            "clue": "This island nation in the North Atlantic sits just below the Arctic Circle between Greenland and Norway — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2125,7 +2125,7 @@
             }
         },
         {
-            "clue": "Where is Regional Focus: Eiffel Tower in France?",
+            "clue": "Find the 7th arrondissement of Paris where the Eiffel Tower stands beside the Seine.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2137,7 +2137,7 @@
             "answer": "Regional Focus: Eiffel Tower"
         },
         {
-            "clue": "Where is Regional Focus: Big Ben in United Kingdom?",
+            "clue": "Find the Palace of Westminster district on the north bank of the Thames in London.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2149,7 +2149,7 @@
             "answer": "Regional Focus: Big Ben"
         },
         {
-            "clue": "Where is Regional Focus: Colosseum in Italy?",
+            "clue": "Find the ancient Roman Forum area surrounding the Colosseum in the heart of Rome.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2161,7 +2161,7 @@
             "answer": "Regional Focus: Colosseum"
         },
         {
-            "clue": "Where is Regional Focus: Sagrada Familia in Spain?",
+            "clue": "Find the Eixample district of Barcelona where Gaudi's basilica has been under construction since 1882.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2173,7 +2173,7 @@
             "answer": "Regional Focus: Sagrada Familia"
         },
         {
-            "clue": "Where is Regional Focus: Santorini in Greece?",
+            "clue": "Find the volcanic caldera ring of Santorini in the southern Aegean Sea.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2185,7 +2185,7 @@
             "answer": "Regional Focus: Santorini"
         },
         {
-            "clue": "Where is Regional Focus: Brandenburg Gate in Germany?",
+            "clue": "Find the Pariser Platz in central Berlin where the Brandenburg Gate stands.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2197,7 +2197,7 @@
             "answer": "Regional Focus: Brandenburg Gate"
         },
         {
-            "clue": "Where is Regional Focus: Kremlin in Russia?",
+            "clue": "Find Red Square in central Moscow, adjacent to the Kremlin and St. Basil's Cathedral.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2209,7 +2209,7 @@
             "answer": "Regional Focus: Kremlin"
         },
         {
-            "clue": "Where is Explorer Spot: In which city is the Anne Frank House museum located in Netherlands?",
+            "clue": "Find the Anne Frank House on the Prinsengracht canal in Amsterdam.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2221,7 +2221,7 @@
             "answer": "Explorer Spot: In which city is the Anne Frank House museum located"
         },
         {
-            "clue": "Where is Regional Focus: In which city is the Anne Frank House museum located in Netherlands?",
+            "clue": "In which Dutch city is the Anne Frank House museum found on a canal?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2233,7 +2233,7 @@
             "answer": "Regional Focus: In which city is the Anne Frank House museum located"
         },
         {
-            "clue": "Where is Explorer Spot: Where did the Chernobyl nuclear disaster occur in 1986 in Ukraine?",
+            "clue": "Find the Chernobyl Exclusion Zone in northern Ukraine near the Belarusian border.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2245,7 +2245,7 @@
             "answer": "Explorer Spot: Where did the Chernobyl nuclear disaster occur in 1986"
         },
         {
-            "clue": "Where is Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986 in Ukraine?",
+            "clue": "In which country did the world's worst nuclear disaster occur, near the city of Pripyat?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2257,7 +2257,7 @@
             "answer": "Regional Focus: Where did the Chernobyl nuclear disaster occur in 1986"
         },
         {
-            "clue": "Where is Explorer Spot: In which city is the Nobel Peace Prize ceremony held in Norway?",
+            "clue": "Find Oslo City Hall in Norway where the Nobel Peace Prize ceremony takes place each December.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2269,7 +2269,7 @@
             "answer": "Explorer Spot: In which city is the Nobel Peace Prize ceremony held"
         },
         {
-            "clue": "Where is Regional Focus: In which city is the Nobel Peace Prize ceremony held in Norway?",
+            "clue": "In which Norwegian capital is the Nobel Peace Prize ceremony held?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2281,7 +2281,7 @@
             "answer": "Regional Focus: In which city is the Nobel Peace Prize ceremony held"
         },
         {
-            "clue": "Where is Explorer Spot: Danube River in Austria?",
+            "clue": "Find the Danube as it winds through the Wachau Valley, a UNESCO World Heritage wine region in Austria.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2293,7 +2293,7 @@
             "answer": "Explorer Spot: Danube River"
         },
         {
-            "clue": "Where is Regional Focus: Danube River in Austria?",
+            "clue": "Where does the Danube pass through Vienna before flowing east into Hungary?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2305,7 +2305,7 @@
             "answer": "Regional Focus: Danube River"
         },
         {
-            "clue": "Where is Explorer Spot: Matterhorn in Switzerland?",
+            "clue": "Find the Matterhorn summit that hovers above Zermatt on the Swiss-Italian border.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2317,7 +2317,7 @@
             "answer": "Explorer Spot: Matterhorn"
         },
         {
-            "clue": "Where is Regional Focus: Matterhorn in Switzerland?",
+            "clue": "Near which Swiss ski resort town does the pyramid-shaped Matterhorn rise?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2329,7 +2329,7 @@
             "answer": "Regional Focus: Matterhorn"
         },
         {
-            "clue": "Where is Regional Focus: Buda Castle in Hungary?",
+            "clue": "Find Castle Hill on the Buda side of the Danube in Budapest.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2341,7 +2341,7 @@
             "answer": "Regional Focus: Buda Castle"
         },
         {
-            "clue": "Where is Svalbard in Norway?",
+            "clue": "This Norwegian Arctic archipelago sits halfway between mainland Norway and the North Pole — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2353,7 +2353,7 @@
             "answer": "Svalbard"
         },
         {
-            "clue": "Where is Lake Geneva in Switzerland?",
+            "clue": "Lake Geneva straddles the border between Switzerland and which neighboring country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2375,7 +2375,7 @@
             }
         },
         {
-            "clue": "Where is Pyrenees in Spain?",
+            "clue": "Where do the Pyrenees begin their run along the French-Spanish border at the Atlantic coast?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2387,7 +2387,7 @@
             "answer": "Pyrenees"
         },
         {
-            "clue": "Where is Aegean Sea in Greece?",
+            "clue": "The Aegean Sea lies between mainland Greece and which country to the east?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2399,7 +2399,7 @@
             "answer": "Aegean Sea"
         },
         {
-            "clue": "Where is Pena Palace in Portugal?",
+            "clue": "Pena Palace sits atop the hills of which Portuguese town, a UNESCO World Heritage Site near Lisbon?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2411,7 +2411,7 @@
             "answer": "Pena Palace"
         },
         {
-            "clue": "Where is Adriatic Sea in Croatia?",
+            "clue": "The Adriatic Sea's eastern shore forms most of which Balkan country's coastline?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2423,7 +2423,7 @@
             "answer": "Adriatic Sea"
         },
         {
-            "clue": "Where is Gulf of Bothnia in Sweden?",
+            "clue": "The Gulf of Bothnia separates Sweden from which neighboring Scandinavian country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2435,7 +2435,7 @@
             "answer": "Gulf of Bothnia"
         },
         {
-            "clue": "Where is Lena River in Russia?",
+            "clue": "The Lena River flows north through which vast Siberian republic before emptying into the Arctic?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2457,7 +2457,7 @@
             }
         },
         {
-            "clue": "Where is Rila Monastery in Bulgaria?",
+            "clue": "Bulgaria's most revered monastery sits in the Rila Mountains south of which Balkan capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2469,7 +2469,7 @@
             "answer": "Rila Monastery"
         },
         {
-            "clue": "Tower of London",
+            "clue": "This 1,000-year-old fortress served as a royal palace, prison, and home of the Crown Jewels on the Thames — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -2480,7 +2480,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Arc de Triomphe",
+            "clue": "This neoclassical arch at the top of the Champs-Elysees honors those who fought for France — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -2491,7 +2491,7 @@
             "country": "France"
         },
         {
-            "clue": "Buckingham Palace",
+            "clue": "The London residence and administrative headquarters of the British royal family since 1837 — pinpoint it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -2502,7 +2502,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Venice",
+            "clue": "This Italian city built on 118 small islands connected by canals has no roads, only waterways — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2513,7 +2513,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Barcelona",
+            "clue": "Which Spanish city on the Mediterranean coast is famous for Gaudi's architecture and the Sagrada Familia?",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2524,7 +2524,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Sagrada Familia is located here",
+            "clue": "This unfinished Gaudi basilica in Barcelona has been under construction for over 140 years — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2535,7 +2535,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Prague",
+            "clue": "Which Central European capital, known as the 'City of a Hundred Spires', sits on the Vltava River?",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2546,7 +2546,7 @@
             "country": "Czech Republic"
         },
         {
-            "clue": "Vienna",
+            "clue": "The former capital of the Habsburg Empire, home to Mozart and Beethoven, sits on the Danube River — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2557,7 +2557,7 @@
             "country": "Austria"
         },
         {
-            "clue": "Budapest",
+            "clue": "This Hungarian capital straddles the Danube with Buda (hills) on the west and Pest (plains) on the east — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2568,7 +2568,7 @@
             "country": "Hungary"
         },
         {
-            "clue": "Madrid",
+            "clue": "The highest-altitude capital in the EU, home to the Prado Museum and the Royal Palace — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2579,7 +2579,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Lisbon",
+            "clue": "Built across seven hills overlooking the Tagus estuary, this is Europe's westernmost capital — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2590,7 +2590,7 @@
             "country": "Portugal"
         },
         {
-            "clue": "Rome",
+            "clue": "The Eternal City, home to the Vatican, Colosseum, and thousands of years of history — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2601,7 +2601,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Dublin",
+            "clue": "Ireland's capital on the south shore of Dublin Bay was founded by Vikings in the 9th century — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2612,7 +2612,7 @@
             "country": "Ireland"
         },
         {
-            "clue": "Copenhagen",
+            "clue": "The capital of Denmark is famous for the Little Mermaid statue, Nyhavn harbor, and Tivoli Gardens — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2623,7 +2623,7 @@
             "country": "Denmark"
         },
         {
-            "clue": "Stockholm",
+            "clue": "Built on 14 islands where Lake Mälaren meets the Baltic Sea, this is the capital of Sweden — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2634,7 +2634,7 @@
             "country": "Sweden"
         },
         {
-            "clue": "Where is Paris in France?",
+            "clue": "The 'City of Light,' home to the Eiffel Tower and the Louvre, sits on the Seine River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2646,7 +2646,7 @@
             "answer": "Paris"
         },
         {
-            "clue": "Where is Rome in Italy?",
+            "clue": "The Eternal City, built on seven hills along the Tiber River, is the capital of which Mediterranean country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2658,7 +2658,7 @@
             "answer": "Rome"
         },
         {
-            "clue": "Alps",
+            "clue": "Europe's highest mountain range stretches across eight countries from France to Austria — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "easy",
@@ -2669,7 +2669,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Thames River",
+            "clue": "This 346-km river flows through Oxford and London before emptying into the North Sea — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -2690,7 +2690,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Thames",
+            "clue": "London's iconic river, where the Tower Bridge spans its banks, flows eastward through the English capital — find it.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -2711,7 +2711,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Rhine River",
+            "clue": "This major European river flows from the Swiss Alps northwest through Germany and the Netherlands to the North Sea — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -2732,7 +2732,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Thames River (England)",
+            "clue": "Which English river flows through London under Tower Bridge before reaching the sea?",
             "category": "geography",
             "type": "river",
             "difficulty": "easy",
@@ -2753,7 +2753,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Porto",
+            "clue": "This Portuguese city at the mouth of the Douro River gives its name to the famous fortified wine — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2764,7 +2764,7 @@
             "country": "Portugal"
         },
         {
-            "clue": "Brussels",
+            "clue": "The de facto capital of the European Union and home of NATO headquarters sits in the heart of Belgium — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2775,7 +2775,7 @@
             "country": "Belgium"
         },
         {
-            "clue": "Amsterdam",
+            "clue": "This Dutch capital is threaded by 165 canals and home to the Anne Frank House and the Rijksmuseum — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2786,7 +2786,7 @@
             "country": "Netherlands"
         },
         {
-            "clue": "Zurich",
+            "clue": "Switzerland's largest city sits on Lake Zurich and is consistently ranked the world's most livable city — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2797,7 +2797,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Geneva",
+            "clue": "The headquarters of the UN and the Red Cross sits on the western tip of Lake Geneva — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2808,7 +2808,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Krakow",
+            "clue": "Poland's former royal capital and cultural heart has one of the best-preserved medieval old towns in Europe — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2819,7 +2819,7 @@
             "country": "Poland"
         },
         {
-            "clue": "Warsaw",
+            "clue": "The capital of Poland, almost entirely rebuilt after being razed in World War II — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "easy",
@@ -2830,7 +2830,7 @@
             "country": "Poland"
         },
         {
-            "clue": "Where is Moscow in Russia?",
+            "clue": "Russia's capital, founded in 1147 and home to the Kremlin, the Bolshoi Theatre, and Red Square — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2842,7 +2842,7 @@
             "answer": "Moscow"
         },
         {
-            "clue": "Plitvice Lakes",
+            "clue": "Sixteen stepped terraced lakes of impossible turquoise form this UNESCO World Heritage park in Croatia — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -2853,7 +2853,7 @@
             "country": "Croatia"
         },
         {
-            "clue": "Dubrovnik Old Town",
+            "clue": "This walled medieval city on Croatia's Adriatic coast is a UNESCO World Heritage Site often called the 'Pearl of the Adriatic' — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -2864,7 +2864,7 @@
             "country": "Croatia"
         },
         {
-            "clue": "Meteora",
+            "clue": "Orthodox Christian monasteries perch atop near-vertical rock pillars rising from the Thessaly plain in central Greece — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -2875,7 +2875,7 @@
             "country": "Greece"
         },
         {
-            "clue": "Rila Monastery",
+            "clue": "Bulgaria's most famous monastery, nestled in a forested mountain valley south of Sofia — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -2886,7 +2886,7 @@
             "country": "Bulgaria"
         },
         {
-            "clue": "Hallstatt",
+            "clue": "This tiny Austrian village clinging to a cliff above a mountain lake is one of the world's most photographed — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "medium",
@@ -2897,7 +2897,7 @@
             "country": "Austria"
         },
         {
-            "clue": "Interlaken",
+            "clue": "Nestled between Lake Thun and Lake Brienz in the Swiss Alps, this town is the adventure capital of Europe — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "medium",
@@ -2908,7 +2908,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Find Budapest (Thermal Baths) in Hungary.",
+            "clue": "Which Hungarian capital, split by the Danube into Buda and Pest, is famous for its thermal bath culture?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2920,7 +2920,7 @@
             "answer": "Budapest"
         },
         {
-            "clue": "Where is Vienna (St. Stephen\u0027s Cathedral) in Austria?",
+            "clue": "St. Stephen's Cathedral anchors the historic center of which Central European capital on the Danube?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2932,7 +2932,7 @@
             "answer": "Vienna"
         },
         {
-            "clue": "Where is Madrid (Royal Palace) in Spain?",
+            "clue": "The Royal Palace of Madrid is the official residence of Spain's king — in which Iberian capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2944,7 +2944,7 @@
             "answer": "Madrid"
         },
         {
-            "clue": "Find Stockholm (Vasa Museum) in Sweden.",
+            "clue": "The Vasa Museum houses a spectacular 17th-century warship — in which Scandinavian capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2956,7 +2956,7 @@
             "answer": "Stockholm"
         },
         {
-            "clue": "Where is Copenhagen (Tivoli Gardens) in Denmark?",
+            "clue": "Tivoli Gardens, one of the world's oldest amusement parks, sits in the center of which Danish capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2968,7 +2968,7 @@
             "answer": "Copenhagen"
         },
         {
-            "clue": "Find Dublin (Guinness Storehouse) in Ireland.",
+            "clue": "The Guinness Storehouse is the most visited tourist attraction in which Irish capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2980,7 +2980,7 @@
             "answer": "Dublin"
         },
         {
-            "clue": "Where is Edinburgh in Scotland?",
+            "clue": "Which Scottish capital, dominated by its medieval castle on a volcanic rock, sits on the Firth of Forth?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2992,7 +2992,7 @@
             "answer": "Edinburgh"
         },
         {
-            "clue": "Ural Mountains",
+            "clue": "This mountain range marks the conventional boundary between Europe and Asia, running 2,500 km through Russia — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -3003,7 +3003,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Caucasus Mountains",
+            "clue": "This mountain range between the Black and Caspian Seas forms the boundary between Europe and Asia — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -3014,7 +3014,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Pyrenees",
+            "clue": "The mountain range that forms the natural border between France and Spain — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -3025,7 +3025,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Lake Constance",
+            "clue": "This large freshwater lake at the junction of Germany, Austria, and Switzerland is known as the Bodensee — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "medium",
@@ -3046,7 +3046,7 @@
             "country": "Germany"
         },
         {
-            "clue": "Lake Como",
+            "clue": "George Clooney's favorite Italian lake, ringed by villas and Alps, sits in the Lombardy region — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "medium",
@@ -3067,7 +3067,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Lake Zurrich",
+            "clue": "The long, narrow lake at the heart of Switzerland that gave Zurich its identity — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "medium",
@@ -3088,7 +3088,7 @@
             "country": "Switzerland"
         },
         {
-            "clue": "Loch Ness",
+            "clue": "This deep Scottish Highland lake is world-famous for alleged sightings of a legendary monster — find it.",
             "category": "geography",
             "type": "lake",
             "difficulty": "medium",
@@ -3109,7 +3109,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "Seine River",
+            "clue": "The river that flows through Paris, passing beneath the Eiffel Tower and Notre-Dame Cathedral — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -3130,7 +3130,7 @@
             "country": "France"
         },
         {
-            "clue": "Volga River",
+            "clue": "Europe's longest river flows 3,531 km through Russia from the Valdai Hills to the Caspian Sea — find it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -3151,7 +3151,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Iceland",
+            "clue": "This Nordic island nation sitting on the Mid-Atlantic Ridge features geysers, volcanoes, and the Northern Lights — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "medium",
@@ -3172,7 +3172,7 @@
             "country": "Iceland"
         },
         {
-            "clue": "Mediterranean Sea",
+            "clue": "This inland sea, cradle of Western civilization, is surrounded by Europe, Africa, and the Middle East — pinpoint it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -3183,7 +3183,7 @@
             "country": "Mediterranean"
         },
         {
-            "clue": "North Sea",
+            "clue": "This relatively shallow sea between the UK, Norway, Denmark, Germany, Netherlands, and Belgium — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -3194,7 +3194,7 @@
             "country": "Europe"
         },
         {
-            "clue": "Baltic Sea",
+            "clue": "This almost-landlocked sea in Northern Europe is connected to the North Sea through narrow straits — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -3205,7 +3205,7 @@
             "country": "Europe"
         },
         {
-            "clue": "Carnac Stones",
+            "clue": "Over 3,000 prehistoric standing stones aligned in rows stretch for kilometers across a field in Brittany, France — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -3216,7 +3216,7 @@
             "country": "France"
         },
         {
-            "clue": "Skellig Michael",
+            "clue": "This jagged rock 12 km off Ireland's southwest coast holds a 6th-century monastic settlement and starred as a Star Wars setting — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -3227,7 +3227,7 @@
             "country": "Ireland"
         },
         {
-            "clue": "Ronda",
+            "clue": "This Spanish city sits dramatically on top of a gorge split by a deep ravine in Andalusia — find it.",
             "category": "places",
             "type": "city",
             "difficulty": "hard",
@@ -3238,7 +3238,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Civita di Bagnoregio",
+            "clue": "This medieval Italian 'dying city' sits atop a crumbling tuff plateau connected to the world only by a footbridge — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -3249,7 +3249,7 @@
             "country": "Italy"
         },
         {
-            "clue": "Faroe Islands",
+            "clue": "This self-governing archipelago between Norway and Iceland, part of the Danish realm, is famous for dramatic cliffs and puffins — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -3260,7 +3260,7 @@
             "country": "Faroe Islands"
         },
         {
-            "clue": "Svalbard",
+            "clue": "This Norwegian Arctic archipelago, located halfway between Norway and the North Pole, has more polar bears than people — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -3271,7 +3271,7 @@
             "country": "Norway"
         },
         {
-            "clue": "Where is Dubrovnik (Old Town) in Croatia?",
+            "clue": "The 'Pearl of the Adriatic' with its limestone walls and orange rooftops — in which Croatian coastal city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3283,7 +3283,7 @@
             "answer": "Dubrovnik"
         },
         {
-            "clue": "Pinpoint Krakow (Wawel Castle) in Poland.",
+            "clue": "Wawel Castle perches above which Polish city, Poland's former royal capital and cultural heart?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3295,7 +3295,7 @@
             "answer": "Krakow"
         },
         {
-            "clue": "Where is Geneva (Lake Geneva, United Nations) in Switzerland?",
+            "clue": "The UN European headquarters and the Red Cross birthplace sit in which Swiss city at the foot of the Alps?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3307,7 +3307,7 @@
             "answer": "Geneva"
         },
         {
-            "clue": "Pinpoint Bruges in Belgium.",
+            "clue": "Which perfectly preserved medieval Belgian city, threaded by canals, is called the 'Venice of the North'?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3319,7 +3319,7 @@
             "answer": "Bruges"
         },
         {
-            "clue": "Mont Blanc",
+            "clue": "The highest peak in the Alps and in all of Western Europe sits on the French-Italian border — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -3330,7 +3330,7 @@
             "country": "France"
         },
         {
-            "clue": "Peaks of Europe",
+            "clue": "This dramatic limestone massif in the Cantabrian Mountains of northern Spain is one of Europe's most popular hiking areas — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -3341,7 +3341,7 @@
             "country": "Spain"
         },
         {
-            "clue": "Ben Nevis",
+            "clue": "The highest mountain in the British Isles rises 1,345 m near Fort William in the Scottish Highlands — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -3352,7 +3352,7 @@
             "country": "United Kingdom"
         },
         {
-            "clue": "River Ob",
+            "clue": "One of the great rivers of Siberia, it flows north from the Altai mountains to the Arctic Ocean — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -3373,7 +3373,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Lena River",
+            "clue": "The eleventh-longest river in the world flows north through eastern Siberia to empty into the Arctic Ocean — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -3394,7 +3394,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Yenisei River",
+            "clue": "The fifth-longest river in the world flows north from the mountains of southern Siberia to the Arctic Ocean — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -3415,7 +3415,7 @@
             "country": "Russia"
         },
         {
-            "clue": "Find Brussels in Belgium.",
+            "clue": "The capital of Belgium and de facto capital of the EU is famous for chocolate, waffles, and Manneken Pis — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3427,7 +3427,7 @@
             "answer": "Brussels"
         },
         {
-            "clue": "Find Warsaw in Poland.",
+            "clue": "Poland's capital was almost completely destroyed in WWII and rebuilt from scratch — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3439,7 +3439,7 @@
             "answer": "Warsaw"
         },
         {
-            "clue": "Pinpoint Bern in Switzerland.",
+            "clue": "The Swiss capital is built on a peninsula in the Aare River — find this arcaded medieval city.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3451,7 +3451,7 @@
             "answer": "Bern"
         },
         {
-            "clue": "Pinpoint Zagreb in Croatia.",
+            "clue": "The capital of Croatia sits in the continental north, far from the Adriatic coast — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3463,7 +3463,7 @@
             "answer": "Zagreb"
         },
         {
-            "clue": "Find Kyiv in Ukraine.",
+            "clue": "The capital of Ukraine, one of the oldest cities in Eastern Europe, sits on the Dnieper River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3475,7 +3475,7 @@
             "answer": "Kyiv"
         },
         {
-            "clue": "Where is Zurich in Switzerland?",
+            "clue": "Switzerland's financial capital and most populous city sits at the northern tip of Lake Zurich — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -3487,7 +3487,7 @@
             "answer": "Zurich"
         },
         {
-            "clue": "Find Naples in Italy.",
+            "clue": "This Italian city on the Bay of Naples in the shadow of Vesuvius is the birthplace of pizza — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3499,7 +3499,7 @@
             "answer": "Naples"
         },
         {
-            "clue": "Where is Manchester in United Kingdom?",
+            "clue": "This northern English city gave the world the Industrial Revolution, the Hallé Orchestra, and two famous football clubs — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -3511,7 +3511,7 @@
             "answer": "Manchester"
         },
         {
-            "clue": "Find Porto in Portugal.",
+            "clue": "This Portuguese city at the mouth of the Douro River lends its name to the famous fortified wine — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3523,7 +3523,7 @@
             "answer": "Porto"
         },
         {
-            "clue": "Where is Lyon in France?",
+            "clue": "France's gastronomic capital at the confluence of the Rhone and Saone rivers — which city is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3535,7 +3535,7 @@
             "answer": "Lyon"
         },
         {
-            "clue": "Find Seville in Spain.",
+            "clue": "The Moorish Alcazar fortress and the world's largest Gothic cathedral are both in which southern Spanish city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3547,7 +3547,7 @@
             "answer": "Seville"
         },
         {
-            "clue": "Pinpoint Valletta in Malta.",
+            "clue": "The world's smallest national capital by area is the capital of which Mediterranean island nation?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3559,7 +3559,7 @@
             "answer": "Valletta"
         },
         {
-            "clue": "Where is Glasgow in United Kingdom?",
+            "clue": "Scotland's largest city, once the 'Second City of the Empire,' sits on the River Clyde — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3571,7 +3571,7 @@
             "answer": "Glasgow"
         },
         {
-            "clue": "Find Thessaloniki in Greece.",
+            "clue": "Greece's second-largest city on the Thermaic Gulf was once the co-capital of the Byzantine Empire — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3583,7 +3583,7 @@
             "answer": "Thessaloniki"
         },
         {
-            "clue": "Pinpoint Vilnius in Lithuania.",
+            "clue": "The capital of Lithuania has one of the largest medieval old towns in Northern Europe — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3595,7 +3595,7 @@
             "answer": "Vilnius"
         },
         {
-            "clue": "Find Salzburg in Austria.",
+            "clue": "The birthplace of Mozart in the shadow of the Alps is the setting for 'The Sound of Music' — which Austrian city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3607,7 +3607,7 @@
             "answer": "Salzburg"
         },
         {
-            "clue": "Where is Lake Como in Italy?",
+            "clue": "George Clooney's lakeside retreat and one of Europe's most glamorous lake districts sits in northern Italy — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -3619,7 +3619,7 @@
             "answer": "Lake Como"
         },
         {
-            "clue": "Pinpoint Minsk in Belarus.",
+            "clue": "The capital of Belarus, largely rebuilt after WWII in Soviet style, sits on the Svislach River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3631,7 +3631,7 @@
             "answer": "Minsk"
         },
         {
-            "clue": "Find Nicosia in Cyprus.",
+            "clue": "The world's last divided capital city is split between Greek and Turkish communities — which city on which island?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -3643,7 +3643,7 @@
             "answer": "Nicosia"
         },
         {
-            "clue": "Where is Rhine River in Germany?",
+            "clue": "Where does the Rhine River form the border between Germany and France before flowing north through the Netherlands?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",

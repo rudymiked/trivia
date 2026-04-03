@@ -1,7 +1,7 @@
 {
     "locations": [
         {
-            "clue": "Taj Mahal",
+            "clue": "Built by Emperor Shah Jahan as a mausoleum for his wife, this white marble monument is India's most iconic landmark — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -12,7 +12,7 @@
             "country": "India"
         },
         {
-            "clue": "Mount Fuji",
+            "clue": "Japan's highest peak and most sacred mountain is a near-perfect symmetrical volcano visible from Tokyo — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -23,7 +23,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Angkor Wat",
+            "clue": "The world's largest religious monument was built in the 12th century in the Khmer Empire — where does it stand?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -34,7 +34,7 @@
             "country": "Cambodia"
         },
         {
-            "clue": "Tokyo Tower",
+            "clue": "Modeled on the Eiffel Tower but painted red and white for aviation safety, this 333-m structure defines the Tokyo skyline — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -45,7 +45,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Merlion",
+            "clue": "Singapore's national symbol is a mythical creature with a lion's head and a fish's body — where does it spray water?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -56,7 +56,7 @@
             "country": "Singapore"
         },
         {
-            "clue": "Great Wall of China",
+            "clue": "Stretching over 21,000 km, this ancient series of fortifications was built to protect China's northern border — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -67,7 +67,7 @@
             "country": "China"
         },
         {
-            "clue": "Where is Hiroshima in Japan?",
+            "clue": "Which Japanese city was the target of the world's first nuclear bomb attack on August 6, 1945?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -79,7 +79,7 @@
             "answer": "Hiroshima"
         },
         {
-            "clue": "Where is Mount Everest in Nepal?",
+            "clue": "Which Himalayan peak, the world's highest, straddles the Nepal-Tibet border?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -91,7 +91,7 @@
             "answer": "Mount Everest"
         },
         {
-            "clue": "Pinpoint Sulawesi in Indonesia.",
+            "clue": "Which orchid-shaped Indonesian island is home to the world's oldest known cave paintings?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -103,7 +103,7 @@
             "answer": "Sulawesi"
         },
         {
-            "clue": "Yangtze River",
+            "clue": "The longest river in Asia and third-longest in the world flows through the Three Gorges before reaching the East China Sea — find it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -124,7 +124,7 @@
             "country": "China"
         },
         {
-            "clue": "Mount Everest",
+            "clue": "At 8,849 m, this is the highest point on Earth, straddling the border of Nepal and Tibet — where is its summit?",
             "category": "geography",
             "type": "mountain",
             "difficulty": "easy",
@@ -135,7 +135,7 @@
             "country": "Nepal"
         },
         {
-            "clue": "K2",
+            "clue": "The world's second-highest mountain and considered more technically challenging than Everest sits on the Pakistan-China border — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "hard",
@@ -146,7 +146,7 @@
             "country": "Pakistan"
         },
         {
-            "clue": "Gobi Desert",
+            "clue": "The largest desert in Asia stretches across northern China and southern Mongolia — where is it?",
             "category": "geography",
             "type": "desert",
             "difficulty": "medium",
@@ -167,7 +167,7 @@
             "country": "Mongolia"
         },
         {
-            "clue": "Shwedagon Pagoda",
+            "clue": "This 98-m golden pagoda in Myanmar's largest city is said to contain relics of four Buddhas — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -178,7 +178,7 @@
             "country": "Myanmar"
         },
         {
-            "clue": "Where is Beijing in China?",
+            "clue": "China's capital, home to the Forbidden City and Tiananmen Square, sits in northeastern China — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -190,7 +190,7 @@
             "answer": "Beijing"
         },
         {
-            "clue": "Mekong River",
+            "clue": "The tenth-longest river in the world flows through six countries from the Tibetan Plateau to the South China Sea — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "hard",
@@ -211,7 +211,7 @@
             "country": "Vietnam"
         },
         {
-            "clue": "Bay of Bengal",
+            "clue": "The world's largest bay is bounded by India, Bangladesh, Myanmar, and the Andaman Islands — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "medium",
@@ -232,7 +232,7 @@
             "country": "India"
         },
         {
-            "clue": "Explorer Spot: Taj Mahal",
+            "clue": "Find the exact spot of the Taj Mahal's central dome in Agra, India.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -243,7 +243,7 @@
             "country": "India"
         },
         {
-            "clue": "Find India.",
+            "clue": "The world's most populous country occupies most of the Indian subcontinent in South Asia — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -265,7 +265,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Taj Mahal",
+            "clue": "The Taj Mahal stands on the banks of the Yamuna River in which Indian city?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -276,7 +276,7 @@
             "country": "India"
         },
         {
-            "clue": "Explorer Spot: Mount Fuji",
+            "clue": "Drop a pin on the summit crater of Japan's most sacred volcano.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -287,7 +287,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Find Japan.",
+            "clue": "This archipelago of nearly 7,000 islands off the coast of East Asia is the world's third-largest economy — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -309,7 +309,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Mount Fuji",
+            "clue": "Mount Fuji stands between which two Japanese prefectures, visible on clear days from Tokyo?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -320,7 +320,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Explorer Spot: Angkor Wat",
+            "clue": "Find the central tower of Angkor Wat temple in northern Cambodia.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -331,7 +331,7 @@
             "country": "Cambodia"
         },
         {
-            "clue": "Pinpoint Cambodia.",
+            "clue": "Which Southeast Asian country is home to the ancient Khmer empire and Angkor Wat?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -353,7 +353,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Angkor Wat",
+            "clue": "The Angkor Wat temple complex is near which Cambodian city that grew up to serve the ancient Khmer capital?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -364,7 +364,7 @@
             "country": "Cambodia"
         },
         {
-            "clue": "Explorer Spot: Tokyo Tower",
+            "clue": "Find Tokyo Tower, the red-and-white landmark rising above the Minato neighborhood.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -375,7 +375,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Regional Focus: Tokyo Tower",
+            "clue": "Tokyo Tower stands in the Minato district of which world city famous for its neon and tech culture?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -386,7 +386,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Explorer Spot: Merlion",
+            "clue": "Find the Merlion statue at the mouth of the Singapore River near Marina Bay.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -397,7 +397,7 @@
             "country": "Singapore"
         },
         {
-            "clue": "Find Singapore.",
+            "clue": "The world's second-most densely populated country is a city-state at the southern tip of the Malay Peninsula — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -419,7 +419,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Merlion",
+            "clue": "The Merlion watches over which city-state at the southern tip of the Malay Peninsula?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -430,7 +430,7 @@
             "country": "Singapore"
         },
         {
-            "clue": "Explorer Spot: Great Wall of China",
+            "clue": "Find the most-photographed section of the Great Wall at Jinshanling.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -441,7 +441,7 @@
             "country": "China"
         },
         {
-            "clue": "Pinpoint China.",
+            "clue": "The most populous country in the world until 2023, it covers most of East Asia — pinpoint it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -463,7 +463,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Great Wall of China",
+            "clue": "The Great Wall's most-visited sections are closest to which Chinese capital city?",
             "category": "geography",
             "type": "region",
             "difficulty": "easy",
@@ -474,7 +474,7 @@
             "country": "China"
         },
         {
-            "clue": "Explorer Spot: In which city was the first atomic bomb dropped during WWII",
+            "clue": "Find the Hiroshima Peace Memorial, the only structure left standing near the atomic bomb hypocenter in 1945.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -485,7 +485,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Regional Focus: In which city was the first atomic bomb dropped during WWII",
+            "clue": "The first atomic bomb was dropped on August 6, 1945 — on which Japanese city?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -496,7 +496,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Explorer Spot: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953",
+            "clue": "Find the summit of Mount Everest, first reached by Hillary and Norgay on May 29, 1953.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -507,7 +507,7 @@
             "country": "Nepal"
         },
         {
-            "clue": "Where is Nepal?",
+            "clue": "Which landlocked Himalayan country is home to eight of the world's ten highest mountains?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -529,7 +529,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953",
+            "clue": "Everest sits on the border between Nepal and which Chinese-administered region?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -540,7 +540,7 @@
             "country": "Nepal"
         },
         {
-            "clue": "Explorer Spot: Where is the oldest known cave painting located (over 45,000 years old)",
+            "clue": "Find the Leang Tedongnge cave in Sulawesi, Indonesia, where the world's oldest known figurative cave art was discovered.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -551,7 +551,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Where is Indonesia?",
+            "clue": "The world's largest archipelago nation, stretching 5,000 km across Southeast Asia — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -573,7 +573,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Where is the oldest known cave painting located (over 45,000 years old)",
+            "clue": "The oldest known cave paintings are on the island of Sulawesi — in which Southeast Asian country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -584,7 +584,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Explorer Spot: Yangtze River",
+            "clue": "Find the Three Gorges section of the Yangtze River, the most dramatic stretch of Asia's longest river.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -595,7 +595,7 @@
             "country": "China"
         },
         {
-            "clue": "Regional Focus: Yangtze River",
+            "clue": "The Yangtze River flows into the East China Sea near which major Chinese port city?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -606,7 +606,7 @@
             "country": "China"
         },
         {
-            "clue": "Explorer Spot: Mount Everest",
+            "clue": "Drop a pin as close as possible to the summit of the world's highest mountain.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -617,7 +617,7 @@
             "country": "Nepal"
         },
         {
-            "clue": "Regional Focus: Mount Everest",
+            "clue": "Mount Everest sits on the border of Nepal and which other country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -628,7 +628,7 @@
             "country": "Nepal"
         },
         {
-            "clue": "Explorer Spot: K2",
+            "clue": "Find the base camp on the Pakistani side of K2, the world's second-highest mountain.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -639,7 +639,7 @@
             "country": "Pakistan"
         },
         {
-            "clue": "Where is Pakistan?",
+            "clue": "Which South Asian country is home to K2, the Indus Valley civilization, and the Karakoram Highway?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -661,7 +661,7 @@
             }
         },
         {
-            "clue": "Regional Focus: K2",
+            "clue": "K2 sits in the Karakoram range on the border of Pakistan and which neighboring country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -672,7 +672,7 @@
             "country": "Pakistan"
         },
         {
-            "clue": "Explorer Spot: Gobi Desert",
+            "clue": "Drop a pin in the heart of the Gobi, the largest cold-winter desert in the world.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -683,7 +683,7 @@
             "country": "Mongolia"
         },
         {
-            "clue": "Find Mongolia.",
+            "clue": "This landlocked country between China and Russia is the world's most sparsely populated sovereign state — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -705,7 +705,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Gobi Desert",
+            "clue": "The Gobi Desert spans across portions of China and which landlocked country to the north?",
             "category": "geography",
             "type": "region",
             "difficulty": "hard",
@@ -716,7 +716,7 @@
             "country": "Mongolia"
         },
         {
-            "clue": "Explorer Spot: Shwedagon Pagoda",
+            "clue": "Find the Shwedagon Pagoda's central stupa, the most sacred Buddhist site in Myanmar.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -727,7 +727,7 @@
             "country": "Myanmar"
         },
         {
-            "clue": "Where is Myanmar?",
+            "clue": "Which Southeast Asian country, bordered by India, China, and Thailand, is home to the Shwedagon Pagoda?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -749,7 +749,7 @@
             }
         },
         {
-            "clue": "Regional Focus: Shwedagon Pagoda",
+            "clue": "The Shwedagon Pagoda dominates the skyline of Yangon — the largest city of which Southeast Asian country?",
             "category": "geography",
             "type": "region",
             "difficulty": "medium",
@@ -760,7 +760,7 @@
             "country": "Myanmar"
         },
         {
-            "clue": "Sigiriya",
+            "clue": "This ancient rock fortress in Sri Lanka rises 200 m above the surrounding jungle and once housed a 5th-century palace — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -771,7 +771,7 @@
             "country": "Sri Lanka"
         },
         {
-            "clue": "Borneo",
+            "clue": "The world's third-largest island, shared by Malaysia, Indonesia, and Brunei, is one of the last homes of wild orangutans — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "medium",
@@ -792,7 +792,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Forbidden City",
+            "clue": "This vast imperial palace complex, home to 24 Chinese emperors of the Ming and Qing dynasties, sits at the heart of Beijing — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -803,7 +803,7 @@
             "country": "China"
         },
         {
-            "clue": "Karakum Desert",
+            "clue": "This vast sand desert covers 70% of Turkmenistan and is home to the famous 'Door to Hell' burning crater — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "hard",
@@ -824,7 +824,7 @@
             "country": "Turkmenistan"
         },
         {
-            "clue": "Himeji Castle",
+            "clue": "Known as the 'White Heron Castle' for its brilliant white exterior, this is Japan's most visited castle — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -835,7 +835,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Potala Palace",
+            "clue": "Once the winter residence of the Dalai Lama, this 13-story palace rises above Lhasa, Tibet — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -846,7 +846,7 @@
             "country": "China"
         },
         {
-            "clue": "Bagan",
+            "clue": "Over 2,000 ancient Buddhist temples and pagodas spread across this Myanmar plain — where is this archaeological treasure?",
             "category": "places",
             "type": "region",
             "difficulty": "hard",
@@ -857,7 +857,7 @@
             "country": "Myanmar"
         },
         {
-            "clue": "Find Astana in Kazakhstan.",
+            "clue": "The futuristic capital of Kazakhstan, renamed from Nur-Sultan in 2022 — where is this steppe city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -869,7 +869,7 @@
             "answer": "Astana"
         },
         {
-            "clue": "Where is Kuala Lumpur in Malaysia?",
+            "clue": "The Petronas Twin Towers once dominated the skyline of which Southeast Asian capital?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -881,7 +881,7 @@
             "answer": "Kuala Lumpur"
         },
         {
-            "clue": "Find Kathmandu in Nepal.",
+            "clue": "The capital of Nepal sits in a Himalayan valley and is the gateway to Everest expeditions — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -893,7 +893,7 @@
             "answer": "Kathmandu"
         },
         {
-            "clue": "Find Ho Chi Minh City in Vietnam.",
+            "clue": "Formerly called Saigon, this southern Vietnamese city is the country's largest and economic hub — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -905,7 +905,7 @@
             "answer": "Ho Chi Minh City"
         },
         {
-            "clue": "Lotus Temple",
+            "clue": "Shaped like an unfolding lotus flower, this Bahai House of Worship in New Delhi is one of the most visited buildings in the world — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -916,7 +916,7 @@
             "country": "India"
         },
         {
-            "clue": "Wat Arun",
+            "clue": "Named after the Hindu god of dawn, this riverside temple with its distinctive spire defines the Bangkok skyline — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "easy",
@@ -927,7 +927,7 @@
             "country": "Thailand"
         },
         {
-            "clue": "Prambanan",
+            "clue": "This 9th-century Hindu temple compound in Java, dedicated to the Trimurti, is a UNESCO World Heritage Site — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -938,7 +938,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Fushimi Inari Taisha",
+            "clue": "Thousands of vermilion torii gates form a winding mountain trail at this Shinto shrine south of Kyoto — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -949,7 +949,7 @@
             "country": "Japan"
         },
         {
-            "clue": "Temple of Heaven",
+            "clue": "Chinese emperors offered prayers for good harvests at this circular ceremonial hall in southern Beijing — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -960,7 +960,7 @@
             "country": "China"
         },
         {
-            "clue": "Borobudur",
+            "clue": "The world's largest Buddhist temple, built in the 9th century, rises from a hilltop in central Java — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -971,7 +971,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Jokhang Temple",
+            "clue": "The most sacred site in Tibetan Buddhism sits in the heart of the old Barkhor district of Lhasa — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -982,7 +982,7 @@
             "country": "China"
         },
         {
-            "clue": "Where is Taj Mahal in India?",
+            "clue": "The Taj Mahal was built in which riverside city in the Indian state of Uttar Pradesh?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -994,7 +994,7 @@
             "answer": "Taj Mahal"
         },
         {
-            "clue": "Where is Mount Fuji in Japan?",
+            "clue": "Mount Fuji is visible from Tokyo on clear days — in which direction from the capital does it rise?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1006,7 +1006,7 @@
             "answer": "Mount Fuji"
         },
         {
-            "clue": "Where is Angkor Wat in Cambodia?",
+            "clue": "Angkor Wat is near which Cambodian city north of the Tonle Sap lake?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1018,7 +1018,7 @@
             "answer": "Angkor Wat"
         },
         {
-            "clue": "Where is Merlion in Singapore?",
+            "clue": "The Merlion stands at the waterfront in which district of Singapore?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1030,7 +1030,7 @@
             "answer": "Merlion"
         },
         {
-            "clue": "Where is Great Wall of China in China?",
+            "clue": "The Great Wall's Jinshanling section lies how far northeast of Beijing?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1042,7 +1042,7 @@
             "answer": "Great Wall of China"
         },
         {
-            "clue": "Where is Yangtze River in China?",
+            "clue": "Where does the Yangtze River meet the East China Sea near Shanghai?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1064,7 +1064,7 @@
             }
         },
         {
-            "clue": "Where is K2 in Pakistan?",
+            "clue": "K2 sits in which remote mountain range on Pakistan's border with China?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1076,7 +1076,7 @@
             "answer": "K2"
         },
         {
-            "clue": "Where is Gobi Desert in Mongolia?",
+            "clue": "The Gobi Desert covers the south of which East Asian country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1098,7 +1098,7 @@
             }
         },
         {
-            "clue": "Where is Shwedagon Pagoda in Myanmar?",
+            "clue": "In which Myanmar city does the golden Shwedagon Pagoda stand?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1110,7 +1110,7 @@
             "answer": "Shwedagon Pagoda"
         },
         {
-            "clue": "Where is Mekong River in Vietnam?",
+            "clue": "Where does the Mekong River empty into the South China Sea through its vast delta in Vietnam?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1132,7 +1132,7 @@
             }
         },
         {
-            "clue": "Where is Bay of Bengal in India?",
+            "clue": "Which eastern Indian city sits on the Bay of Bengal's coast?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1154,7 +1154,7 @@
             }
         },
         {
-            "clue": "Where is Regional Focus: Taj Mahal in India?",
+            "clue": "Pinpoint the Taj Mahal's city of Agra on the banks of the Yamuna River.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1166,7 +1166,7 @@
             "answer": "Regional Focus: Taj Mahal"
         },
         {
-            "clue": "Where is Regional Focus: Mount Fuji in Japan?",
+            "clue": "Find the summit of Mount Fuji on the border of Shizuoka and Yamanashi prefectures.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1178,7 +1178,7 @@
             "answer": "Regional Focus: Mount Fuji"
         },
         {
-            "clue": "Where is Regional Focus: Angkor Wat in Cambodia?",
+            "clue": "Find Angkor Wat temple in the Siem Reap province of Cambodia.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1190,7 +1190,7 @@
             "answer": "Regional Focus: Angkor Wat"
         },
         {
-            "clue": "Where is Regional Focus: Merlion in Singapore?",
+            "clue": "Find Merlion Park at the mouth of the Singapore River.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1202,7 +1202,7 @@
             "answer": "Regional Focus: Merlion"
         },
         {
-            "clue": "Where is Regional Focus: Great Wall of China in China?",
+            "clue": "Find the Badaling section of the Great Wall closest to Beijing.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1214,7 +1214,7 @@
             "answer": "Regional Focus: Great Wall of China"
         },
         {
-            "clue": "Where is Explorer Spot: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953 in Nepal?",
+            "clue": "Find the summit ridge of Mount Everest on the Nepal-Tibet border.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1226,7 +1226,7 @@
             "answer": "Explorer Spot: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953"
         },
         {
-            "clue": "Where is Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953 in Nepal?",
+            "clue": "Everest Base Camp on the Nepalese side is the starting point of nearly all summit attempts — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1238,7 +1238,7 @@
             "answer": "Regional Focus: Which mountain did Edmund Hillary and Tenzing Norgay first summit in 1953"
         },
         {
-            "clue": "Where is Explorer Spot: Where is the oldest known cave painting located (over 45,000 years old) in Indonesia?",
+            "clue": "Find the Leang Tedongnge cave on the Indonesian island of Sulawesi.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1250,7 +1250,7 @@
             "answer": "Explorer Spot: Where is the oldest known cave painting located (over 45,000 years old)"
         },
         {
-            "clue": "Where is Regional Focus: Where is the oldest known cave painting located (over 45,000 years old) in Indonesia?",
+            "clue": "The world's oldest known cave painting is on which Indonesian island?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1262,7 +1262,7 @@
             "answer": "Regional Focus: Where is the oldest known cave painting located (over 45,000 years old)"
         },
         {
-            "clue": "Where is Explorer Spot: K2 in Pakistan?",
+            "clue": "Find K2 base camp in the Baltoro Glacier region of Pakistan's Karakoram.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1274,7 +1274,7 @@
             "answer": "Explorer Spot: K2"
         },
         {
-            "clue": "Where is Regional Focus: K2 in Pakistan?",
+            "clue": "K2 sits in the Gilgit-Baltistan region of which South Asian country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1286,7 +1286,7 @@
             "answer": "Regional Focus: K2"
         },
         {
-            "clue": "Where is Explorer Spot: Gobi Desert in Mongolia?",
+            "clue": "Drop a pin in the Khongoryn Els sand dunes in the heart of the Mongolian Gobi.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1298,7 +1298,7 @@
             "answer": "Explorer Spot: Gobi Desert"
         },
         {
-            "clue": "Where is Regional Focus: Gobi Desert in Mongolia?",
+            "clue": "The Gobi Desert covers the southern quarter of which country north of China?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1310,7 +1310,7 @@
             "answer": "Regional Focus: Gobi Desert"
         },
         {
-            "clue": "Where is Regional Focus: Shwedagon Pagoda in Myanmar?",
+            "clue": "The Shwedagon Pagoda's golden dome towers above Yangon — in which Southeast Asian country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1322,7 +1322,7 @@
             "answer": "Regional Focus: Shwedagon Pagoda"
         },
         {
-            "clue": "Where is Sigiriya in Sri Lanka?",
+            "clue": "This ancient rock fortress known as 'Lion Rock' rises from the jungles of which island nation off India's southeast coast?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1334,7 +1334,7 @@
             "answer": "Sigiriya"
         },
         {
-            "clue": "Where is Borneo in Indonesia?",
+            "clue": "The Indonesian portion of Borneo, called Kalimantan, covers most of which third-largest island in the world?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1356,7 +1356,7 @@
             }
         },
         {
-            "clue": "Where is Karakum Desert in Turkmenistan?",
+            "clue": "The Karakum covers most of which Central Asian country that was once part of the Soviet Union?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1378,7 +1378,7 @@
             }
         },
         {
-            "clue": "Where is Wat Arun in Thailand?",
+            "clue": "Wat Arun, the Temple of Dawn, stands on the western bank of the Chao Phraya River in which city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1390,7 +1390,7 @@
             "answer": "Wat Arun"
         },
         {
-            "clue": "Where is Bangkok in Thailand?",
+            "clue": "The capital of Thailand, with the world's longest official city name, sits on the Chao Phraya River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1402,7 +1402,7 @@
             "answer": "Bangkok"
         },
         {
-            "clue": "Where is Tokyo in Japan?",
+            "clue": "Japan's capital, the world's most populous metropolitan area, sits on the eastern Honshu coast — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -1414,7 +1414,7 @@
             "answer": "Tokyo"
         },
         {
-            "clue": "Indian Ocean",
+            "clue": "The world's third-largest ocean is bounded by Africa, Asia, and Australia — drop a pin in it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "easy",
@@ -1425,7 +1425,7 @@
             "country": "Indian Ocean"
         },
         {
-            "clue": "Forbidden City",
+            "clue": "This vast imperial palace complex, home to 24 Chinese emperors of the Ming and Qing dynasties, sits at the heart of Beijing — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1436,7 +1436,7 @@
             "country": "China"
         },
         {
-            "clue": "Great Wall checkpoint",
+            "clue": "Find the Juyong Pass checkpoint of the Great Wall, the most fortified section near Beijing.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1447,7 +1447,7 @@
             "country": "China"
         },
         {
-            "clue": "Temple of Heaven",
+            "clue": "Chinese emperors offered prayers for good harvests at this circular ceremonial hall in southern Beijing — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1458,7 +1458,7 @@
             "country": "China"
         },
         {
-            "clue": "Bagan Temple Complex",
+            "clue": "Over 2,000 Buddhist pagodas dot this ancient plain along the Ayeyarwady River in Myanmar — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1469,7 +1469,7 @@
             "country": "Myanmar"
         },
         {
-            "clue": "Borobudur",
+            "clue": "The world's largest Buddhist temple, built in the 9th century, rises from a hilltop in central Java — where is it?",
             "category": "places",
             "type": "landmark",
             "difficulty": "medium",
@@ -1480,7 +1480,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Find Hong Kong (Victoria Peak) in China.",
+            "clue": "Victoria Peak overlooks which former British colony and now Special Administrative Region of China?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1492,7 +1492,7 @@
             "answer": "Hong Kong"
         },
         {
-            "clue": "Himalayas",
+            "clue": "The world's highest mountain range formed when India collided with Asia and stretches across five countries — find it.",
             "category": "geography",
             "type": "mountain",
             "difficulty": "medium",
@@ -1503,7 +1503,7 @@
             "country": "Nepal"
         },
         {
-            "clue": "Ganges River",
+            "clue": "Hinduism's holiest river flows from the Himalayas across the north Indian plain to the Bay of Bengal — trace it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -1524,7 +1524,7 @@
             "country": "India"
         },
         {
-            "clue": "Mekong Delta",
+            "clue": "This vast river delta in Vietnam, where the Mekong fans into many branches before meeting the sea, is known as the 'rice bowl' — find it.",
             "category": "geography",
             "type": "river",
             "difficulty": "medium",
@@ -1545,7 +1545,7 @@
             "country": "Vietnam"
         },
         {
-            "clue": "Thar Desert",
+            "clue": "The Great Indian Desert stretches across northwestern India and Pakistan and is one of the most densely populated deserts — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "medium",
@@ -1566,7 +1566,7 @@
             "country": "India"
         },
         {
-            "clue": "Java",
+            "clue": "The world's most populous island is home to Jakarta, Borobudur, and over 140 million people — where is it?",
             "category": "geography",
             "type": "island",
             "difficulty": "medium",
@@ -1587,7 +1587,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Sumatra",
+            "clue": "The sixth-largest island in the world sits west of the Malay Peninsula and is home to the only wild Sumatran tigers — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "medium",
@@ -1608,7 +1608,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Borneo",
+            "clue": "The world's third-largest island, shared by Malaysia, Indonesia, and Brunei, is one of the last homes of wild orangutans — find it.",
             "category": "geography",
             "type": "island",
             "difficulty": "medium",
@@ -1629,7 +1629,7 @@
             "country": "Indonesia"
         },
         {
-            "clue": "Zhangjiajie",
+            "clue": "The towering sandstone pillars in this Chinese national park inspired the floating mountains in the film Avatar — where are they?",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1640,7 +1640,7 @@
             "country": "China"
         },
         {
-            "clue": "Zhangye Danxia",
+            "clue": "These rainbow-striped Painted Mountains in Gansu Province, China were formed by layers of colorful sandstone — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1651,7 +1651,7 @@
             "country": "China"
         },
         {
-            "clue": "Konark Sun Temple",
+            "clue": "Shaped as the chariot of the sun god, this 13th-century temple on India's eastern coast is a UNESCO site — find it.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1662,7 +1662,7 @@
             "country": "India"
         },
         {
-            "clue": "Batu Caves",
+            "clue": "Hindu shrines and temples fill these limestone caves just north of Kuala Lumpur, guarded by a giant gold deity — find them.",
             "category": "places",
             "type": "landmark",
             "difficulty": "hard",
@@ -1673,7 +1673,7 @@
             "country": "Malaysia"
         },
         {
-            "clue": "Where is Bali (Tanah Lot Temple) in Indonesia?",
+            "clue": "Tanah Lot temple sits on a rock in the sea off which Indonesian island famous for its rice terraces and surf?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1685,7 +1685,7 @@
             "answer": "Bali"
         },
         {
-            "clue": "Pinpoint Kyoto (Golden Pavilion) in Japan.",
+            "clue": "Kinkaku-ji, the Golden Pavilion, sits in which Japanese city that was the imperial capital for over 1,000 years?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1697,7 +1697,7 @@
             "answer": "Kyoto"
         },
         {
-            "clue": "Find Chiang Mai (Golden Triangle) in Thailand.",
+            "clue": "Thailand's second-largest city sits in the mountainous north near the Golden Triangle borders with Myanmar and Laos — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1709,7 +1709,7 @@
             "answer": "Chiang Mai"
         },
         {
-            "clue": "Where is Hanoi (Hoan Kiem Lake) in Vietnam?",
+            "clue": "Hoan Kiem Lake sits in the heart of the capital of which Southeast Asian country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1721,7 +1721,7 @@
             "answer": "Hanoi"
         },
         {
-            "clue": "Pinpoint Da Nang (Marble Mountains) in Vietnam.",
+            "clue": "The Marble Mountains are five limestone peaks near which central Vietnamese coastal city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1733,7 +1733,7 @@
             "answer": "Da Nang"
         },
         {
-            "clue": "Find Sapa (Fansipan Mountain) in Vietnam.",
+            "clue": "Vietnam's highest peak, Fansipan, rises in the mountains near which terraced-rice-paddy town?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1745,7 +1745,7 @@
             "answer": "Sapa"
         },
         {
-            "clue": "Where is Luang Prabang in Laos?",
+            "clue": "This UNESCO World Heritage city at the confluence of the Mekong and Nam Khan rivers is the cultural capital of which country?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1757,7 +1757,7 @@
             "answer": "Luang Prabang"
         },
         {
-            "clue": "Pinpoint Angkor in Cambodia.",
+            "clue": "The ancient Khmer capital of Angkor sits near which Cambodian provincial city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1769,7 +1769,7 @@
             "answer": "Angkor"
         },
         {
-            "clue": "Find Siem Reap (Angkor Wat) in Cambodia.",
+            "clue": "Which Cambodian city is the gateway to Angkor Wat, the world's largest religious monument?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1781,7 +1781,7 @@
             "answer": "Siem Reap"
         },
         {
-            "clue": "Where is Yangon (Shwedagon Pagoda) in Myanmar?",
+            "clue": "Myanmar's largest city and former capital, home to the golden Shwedagon Pagoda — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1793,7 +1793,7 @@
             "answer": "Yangon"
         },
         {
-            "clue": "Pinpoint Mandalay (Royal Palace) in Myanmar.",
+            "clue": "Myanmar's second-largest city sits on the Irrawaddy River and houses the last royal palace of the Konbaung dynasty — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1805,7 +1805,7 @@
             "answer": "Mandalay"
         },
         {
-            "clue": "Find Jaipur (Hawa Mahal) in India.",
+            "clue": "The 'Pink City' of Rajasthan is famous for the Hawa Mahal's honeycomb facade — which Indian city is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1817,7 +1817,7 @@
             "answer": "Jaipur"
         },
         {
-            "clue": "Where is Varanasi (Ganges River) in India?",
+            "clue": "Which holy city on the banks of the Ganges is considered one of the oldest continuously inhabited cities on Earth?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1829,7 +1829,7 @@
             "answer": "Varanasi"
         },
         {
-            "clue": "Pinpoint Agra (Taj Mahal) in India.",
+            "clue": "The Taj Mahal stands in which Indian city once capital of the Mughal Empire, on the banks of the Yamuna?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -1841,19 +1841,19 @@
             "answer": "Agra"
         },
         {
-            "clue": "Find Amritsar (Golden Temple) in India.",
+            "clue": "The holiest shrine of Sikhism, covered in gold leaf, sits in which Indian city near the Pakistan border?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
             "target": {
-                "lat": 31.6200,
+                "lat": 31.62,
                 "lng": 74.8765
             },
             "country": "India",
             "answer": "Amritsar"
         },
         {
-            "clue": "Lake Issyk-Kul",
+            "clue": "The world's second-largest alpine lake sits in the Tian Shan mountains of Kyrgyzstan — where is it?",
             "category": "geography",
             "type": "lake",
             "difficulty": "hard",
@@ -1874,7 +1874,7 @@
             "country": "Kyrgyzstan"
         },
         {
-            "clue": "Taklamakan Desert",
+            "clue": "The largest desert in China, its name means 'you go in, you don't come out' in Uyghur — find it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "hard",
@@ -1895,7 +1895,7 @@
             "country": "China"
         },
         {
-            "clue": "Gobi",
+            "clue": "The Gobi Desert spans across northern and northwestern China and southern Mongolia — drop a pin in it.",
             "category": "geography",
             "type": "desert",
             "difficulty": "hard",
@@ -1916,7 +1916,7 @@
             "country": "Mongolia"
         },
         {
-            "clue": "Maldives",
+            "clue": "This island nation in the Indian Ocean is the world's lowest-lying country and most threatened by rising sea levels — where is it?",
             "category": "geography",
             "type": "island",
             "difficulty": "hard",
@@ -1937,7 +1937,7 @@
             "country": "Maldives"
         },
         {
-            "clue": "Andaman Sea",
+            "clue": "This body of water between the Andaman and Nicobar Islands and the Malay Peninsula — where is it?",
             "category": "geography",
             "type": "ocean",
             "difficulty": "hard",
@@ -1948,7 +1948,7 @@
             "country": "South Asia"
         },
         {
-            "clue": "Coral Triangle",
+            "clue": "This 6-million sq km sea area between the Philippines, Malaysia, and Indonesia contains 76% of all coral species — find it.",
             "category": "geography",
             "type": "ocean",
             "difficulty": "hard",
@@ -1959,7 +1959,7 @@
             "country": "Southeast Asia"
         },
         {
-            "clue": "Bering Sea",
+            "clue": "This cold northern Pacific sea separates Alaska from Siberia and is one of the world's richest fishing grounds — where is it?",
             "category": "geography",
             "type": "ocean",
             "difficulty": "hard",
@@ -1970,7 +1970,7 @@
             "country": "North Pacific"
         },
         {
-            "clue": "Find New Delhi in India.",
+            "clue": "India's capital city, home to the Red Fort, India Gate, and Lotus Temple — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1982,7 +1982,7 @@
             "answer": "New Delhi"
         },
         {
-            "clue": "Find Jakarta in Indonesia.",
+            "clue": "The sprawling capital of Indonesia on the island of Java, being replaced by the new capital Nusantara — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -1994,7 +1994,7 @@
             "answer": "Jakarta"
         },
         {
-            "clue": "Pinpoint Naypyidaw in Myanmar.",
+            "clue": "Myanmar's purpose-built capital was moved here from Yangon in 2006 — where is this rarely-visited city?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2006,7 +2006,7 @@
             "answer": "Naypyidaw"
         },
         {
-            "clue": "Find Phnom Penh in Cambodia.",
+            "clue": "The capital of Cambodia sits at the confluence of the Mekong and Tonle Sap rivers — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2018,7 +2018,7 @@
             "answer": "Phnom Penh"
         },
         {
-            "clue": "Pinpoint Ulaanbaatar in Mongolia.",
+            "clue": "The world's coldest capital city, home to nearly half of Mongolia's population, sits on the Tuul River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2030,7 +2030,7 @@
             "answer": "Ulaanbaatar"
         },
         {
-            "clue": "Find Islamabad in Pakistan.",
+            "clue": "Pakistan's planned capital city sits in the foothills of the Margalla Hills — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2042,7 +2042,7 @@
             "answer": "Islamabad"
         },
         {
-            "clue": "Pinpoint Colombo in Sri Lanka.",
+            "clue": "The commercial capital of Sri Lanka on the Indian Ocean coast — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2054,7 +2054,7 @@
             "answer": "Colombo"
         },
         {
-            "clue": "Pinpoint Bishkek in Kyrgyzstan.",
+            "clue": "The capital of Kyrgyzstan sits in the Chuy Valley near the border with Kazakhstan — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2066,7 +2066,7 @@
             "answer": "Bishkek"
         },
         {
-            "clue": "Pinpoint Vientiane in Laos.",
+            "clue": "The capital of Laos is one of the smallest and least-visited capitals in Southeast Asia, sitting on the Mekong — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2078,7 +2078,7 @@
             "answer": "Vientiane"
         },
         {
-            "clue": "Pinpoint Male in Maldives.",
+            "clue": "The capital of the Maldives is one of the most densely populated cities in the world, built on a coral island — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2090,7 +2090,7 @@
             "answer": "Male"
         },
         {
-            "clue": "Pinpoint Ashgabat in Turkmenistan.",
+            "clue": "The capital of Turkmenistan is famous for its white marble buildings and holds multiple Guinness World Records — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2102,7 +2102,7 @@
             "answer": "Ashgabat"
         },
         {
-            "clue": "Where is Shanghai in China?",
+            "clue": "China's most populous city and financial capital sits at the mouth of the Yangtze River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2114,7 +2114,7 @@
             "answer": "Shanghai"
         },
         {
-            "clue": "Find Osaka in Japan.",
+            "clue": "Japan's second city, known for its street food and comedy culture, sits on the eastern shore of Osaka Bay — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2126,7 +2126,7 @@
             "answer": "Osaka"
         },
         {
-            "clue": "Where is Mumbai in India?",
+            "clue": "India's financial capital and home of Bollywood sits on a peninsula on the western coast — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2138,7 +2138,7 @@
             "answer": "Mumbai"
         },
         {
-            "clue": "Find Seoul in South Korea.",
+            "clue": "The capital of South Korea, one of the world's most technologically advanced cities, sits on the Han River — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "easy",
@@ -2150,7 +2150,7 @@
             "answer": "Seoul"
         },
         {
-            "clue": "Where is Taipei in Taiwan?",
+            "clue": "The capital of Taiwan sits in the northern part of the island and is home to the Taipei 101 skyscraper — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2162,7 +2162,7 @@
             "answer": "Taipei"
         },
         {
-            "clue": "Find Dhaka in Bangladesh.",
+            "clue": "One of the world's most densely populated cities is the capital of which South Asian country at the head of the Bay of Bengal?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2174,7 +2174,7 @@
             "answer": "Dhaka"
         },
         {
-            "clue": "Pinpoint Kabul in Afghanistan.",
+            "clue": "The capital of Afghanistan, set in a narrow valley between the Hindu Kush mountains, has been inhabited for 3,500 years — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2186,7 +2186,7 @@
             "answer": "Kabul"
         },
         {
-            "clue": "Find Karachi in Pakistan.",
+            "clue": "Pakistan's largest city and main seaport on the Arabian Sea was the country's first capital — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2198,7 +2198,7 @@
             "answer": "Karachi"
         },
         {
-            "clue": "Where is Phuket in Thailand?",
+            "clue": "Thailand's largest island is connected to the mainland by a bridge and is famous for its beaches — where is it?",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2210,7 +2210,7 @@
             "answer": "Phuket"
         },
         {
-            "clue": "Find Lhasa in China.",
+            "clue": "At 3,650 m above sea level, the 'Roof of the World' city is the historic capital of Tibet — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",
@@ -2222,7 +2222,7 @@
             "answer": "Lhasa"
         },
         {
-            "clue": "Where is Yellow River in China?",
+            "clue": "China's 'Mother River' and second-longest river flows through the North China Plain to the Yellow Sea — trace it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "medium",
@@ -2234,7 +2234,7 @@
             "answer": "Yellow River"
         },
         {
-            "clue": "Pinpoint Pyongyang in North Korea.",
+            "clue": "The secretive capital of North Korea sits on the Taedong River and is home to 3 million people — find it.",
             "category": "questions",
             "type": "trivia",
             "difficulty": "hard",

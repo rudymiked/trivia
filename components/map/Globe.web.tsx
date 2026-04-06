@@ -180,6 +180,7 @@ export default function Globe({
         guessMarkerRef.current = new google.maps.Marker({
           map: mapRef.current,
           position: { lat: guessMarker.lat, lng: guessMarker.lng },
+          clickable: false,
           icon: {
             url: 'data:image/svg+xml,' + encodeURIComponent(`
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">

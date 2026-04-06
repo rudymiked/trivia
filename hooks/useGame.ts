@@ -97,6 +97,8 @@ interface GameStore extends GameState {
   getCurrentRoundData: () => Puzzle['rounds'][0] | null;
 }
 
+const DATE_PUZZLE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
 export const useGameStore = create<GameStore>()(
   persist(
     (set, get) => ({
@@ -105,6 +107,7 @@ export const useGameStore = create<GameStore>()(
       results: [],
       isComplete: false,
       totalScore: 0,
+      lastCompletedDate: null,
 
       startGame: (puzzle: Puzzle) => {
         set({
@@ -141,11 +144,14 @@ export const useGameStore = create<GameStore>()(
         const newResults = [...state.results, result];
         const isComplete = newResults.length >= (state.puzzle?.rounds.length || 5);
         const totalScore = newResults.reduce((sum, r) => sum + r.score, 0);
+        const puzzleDate = state.puzzle?.date ?? null;
+        const isDatePuzzle = puzzleDate !== null && DATE_PUZZLE_RE.test(puzzleDate);
 
         set({
           results: newResults,
           isComplete,
           totalScore,
+          ...(isComplete && isDatePuzzle ? { lastCompletedDate: puzzleDate } : {}),
         });
 
         return result;

@@ -124,7 +124,7 @@ export default function ResultsScreen() {
               if (submitResponse.error) {
                 if (submitResponse.errorCode === 'DUPLICATE_SUBMISSION') {
                   setSynced(true);
-                  setSyncError(null);
+                  setSyncError('DUPLICATE_SUBMISSION');
                 } else if (
                   submitResponse.errorCode === 'AUTH_REQUIRED' ||
                   submitResponse.errorCode === 'INVALID_AUTH_TOKEN'
@@ -451,8 +451,11 @@ export default function ResultsScreen() {
 
         {/* Actions */}
         <View style={styles.actionsContainer}>
-          {user && isDailyPuzzle && synced && (
+          {user && isDailyPuzzle && synced && syncError !== 'DUPLICATE_SUBMISSION' && (
             <Text style={styles.syncSuccessText}>Score synced to leaderboard ✓</Text>
+          )}
+          {user && isDailyPuzzle && syncError === 'DUPLICATE_SUBMISSION' && (
+            <Text style={styles.syncSuccessText}>Your score from your first run is saved ✓</Text>
           )}
           {user && isDailyPuzzle && syncError === 'SESSION_EXPIRED' && (
             <View style={styles.syncErrorCard}>

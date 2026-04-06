@@ -48,6 +48,9 @@ export interface GameState {
   results: RoundResult[];
   isComplete: boolean;
   totalScore: number;
+  // Set synchronously when the last daily-puzzle round is submitted, so the
+  // home screen can check it instantly without waiting on async storage writes.
+  lastCompletedDate: string | null;
 }
 
 export interface UserStats {

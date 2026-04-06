@@ -1,8 +1,9 @@
 import { Brand } from '@/constants/Colors';
 import { useAuth } from '@/hooks/useAuth';
+import { useGameStore } from '@/hooks/useGame';
 import { checkUserGame } from '@/services/api';
 import { getTimeUntilNextPuzzle, getTodayDate, hasPlayedToday } from '@/services/puzzle';
-import { getUserProgress, type UserProgress } from '@/services/storage';
+import { getDailyResult, getUserProgress, type UserProgress } from '@/services/storage';
 import { trackTelemetryEvent } from '@/services/telemetry';
 import { Ionicons } from '@expo/vector-icons';
 import { Href, Link, useFocusEffect, useRouter } from 'expo-router';
@@ -24,24 +25,35 @@ const howToPlaySteps = [
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { user, getValidIdToken } = useAuth();
+  const { user, getValidIdToken, isLoading: authLoading } = useAuth();
+  const lastCompletedDate = useGameStore((s) => s.lastCompletedDate);
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [serverPlayedToday, setServerPlayedToday] = useState<boolean | null>(null);
+  const [localPlayedToday, setLocalPlayedToday] = useState(false);
   const [countdown, setCountdown] = useState({ hours: 0, minutes: 0, seconds: 0 });
   const [isLoading, setIsLoading] = useState(true);
+  // Tracks which userId we last completed a full loadProgress() for.
+  // undefined = never run, null = ran with no user (guest), 'abc' = ran for user 'abc'.
+  // Keeps the spinner up when user loads but the server-check hasn't finished yet.
+  const [checkedForUserId, setCheckedForUserId] = useState<string | null | undefined>(undefined);
   const trackedDauRef = useRef(false);
   const isWeb = Platform.OS === 'web';
 
   const loadProgress = useCallback(async () => {
     setIsLoading(true);
-    const userProgress = await getUserProgress();
+    const today = getTodayDate();
+    const [userProgress, todayResult] = await Promise.all([
+      getUserProgress(),
+      getDailyResult(today),
+    ]);
+    const resolvedLocalPlayed = hasPlayedToday(userProgress.lastPlayedDate) || todayResult !== null;
+    setLocalPlayedToday(resolvedLocalPlayed);
     let resolvedServerPlayedToday: boolean | null = null;
 
     if (user) {
       const validToken = getValidIdToken();
       if (validToken) {
         try {
-          const today = getTodayDate();
           const response = await checkUserGame(user.id, today, validToken);
           if (response.data && typeof response.data.completed === 'boolean') {
             resolvedServerPlayedToday = response.data.completed;
@@ -54,11 +66,11 @@ export default function HomeScreen() {
 
     setProgress(userProgress);
     setServerPlayedToday(resolvedServerPlayedToday);
+    setCheckedForUserId(user?.id ?? null);
     setIsLoading(false);
 
     if (!trackedDauRef.current) {
       trackedDauRef.current = true;
-      const today = getTodayDate();
       void trackTelemetryEvent('daily_active_user', {
         date: today,
         isAuthenticated: !!user,
@@ -72,6 +84,18 @@ export default function HomeScreen() {
       void loadProgress();
     }, [loadProgress])
   );
+
+  // useFocusEffect only fires on navigation focus, not when auth state resolves while the
+  // screen is already mounted. This effect catches the cold-load race where loadProgress()
+  // ran before the user was loaded from storage.
+  // Dep array intentionally excludes loadProgress to avoid re-firing when the expired-token
+  // path inside loadProgress calls setIdToken(null) and changes the callback's identity.
+  useEffect(() => {
+    if (!authLoading) {
+      void loadProgress();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [authLoading]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -108,11 +132,23 @@ export default function HomeScreen() {
     </Pressable>
   );
 
-  const alreadyPlayed = user && serverPlayedToday !== null
-    ? serverPlayedToday
-    : progress && hasPlayedToday(progress.lastPlayedDate);
+  // Three independent signals — any one being true means the user has played today:
+  // 1. lastCompletedDate: set synchronously in Zustand when the final guess is submitted
+  //    (survives navigation, no async lag, persisted across refreshes)
+  // 2. localPlayedToday: from localStorage last-played-date + daily results store
+  // 3. serverPlayedToday: from the API (requires a valid token)
+  const alreadyPlayed =
+    lastCompletedDate === getTodayDate() ||
+    localPlayedToday ||
+    serverPlayedToday === true;
 
-  if (isLoading) {
+  // Spinner while:
+  // - data is loading, OR
+  // - auth is still resolving from storage, OR
+  // - user is logged in but we haven't yet run a loadProgress() with their ID
+  //   (prevents a paint window between authLoading:false and the useEffect firing)
+  const needsUserCheck = !!user && checkedForUserId !== user.id;
+  if (isLoading || authLoading || needsUserCheck) {
     return (
       <View style={styles.container}>
         <ActivityIndicator size="large" color={Brand.aqua} />

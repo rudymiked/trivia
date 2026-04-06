@@ -146,6 +146,7 @@ export default function Globe({
             }}
             pinColor="#FF6B6B"
             title="Your Guess"
+            tappable={false}
           />
         )}
 

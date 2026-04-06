@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 import { sendTelemetryEvent } from './api';
+import { trackAppInsightsEvent } from './appInsights';
 
 type TelemetryValue = string | number | boolean | null;
 
@@ -76,6 +77,9 @@ export async function trackTelemetryEvent(
 
   // Keep console logs for immediate visibility in dev/runtime logs.
   console.log(`[telemetry] ${name}`, event.payload);
+
+  // Forward to App Insights (web only, no-op on native or if not configured).
+  trackAppInsightsEvent(name, enrichedPayload as Record<string, string | number | boolean | null>);
 
   try {
     const existing = await storage.getItem(STORAGE_KEY);

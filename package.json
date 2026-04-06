@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "~14.0.4",
+    "@microsoft/applicationinsights-web": "^3.3.11",
     "@react-native-async-storage/async-storage": "1.23.1",
     "@react-navigation/native": "^6.1.9",
     "expo": "~52.0.0",

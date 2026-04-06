@@ -1,5 +1,6 @@
 import { Brand } from '@/constants/Colors';
 import { AuthProvider } from '@/hooks/useAuth';
+import { initAppInsights } from '@/services/appInsights';
 import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack, useRouter, useSegments } from 'expo-router';
@@ -9,8 +10,8 @@ import { StyleSheet, View } from 'react-native';
 import 'react-native-reanimated';
 
 export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary
+    // Catch any errors thrown by the Layout component.
+    ErrorBoundary
 } from 'expo-router';
 
 export const unstable_settings = {
@@ -34,6 +35,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
+      initAppInsights();
     }
   }, [loaded]);
 

@@ -47,6 +47,7 @@ jobs:
           EXPO_PUBLIC_GOOGLE_CLIENT_ID_WEB: ${{ secrets.GOOGLE_CLIENT_ID_WEB }}
           EXPO_PUBLIC_APP_URL: ${{ secrets.APP_URL }}
           EXPO_PUBLIC_ADMIN_EMAILS: ${{ secrets.ADMIN_EMAILS }}
+          EXPO_PUBLIC_APPINSIGHTS_CONNECTION_STRING: ${{ secrets.APPINSIGHTS_CONNECTION_STRING }}
 
       - name: Copy Static Web Apps config
         run: cp staticwebapp.config.json dist/staticwebapp.config.json

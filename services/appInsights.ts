@@ -31,7 +31,10 @@ export function trackAppInsightsEvent(
   client.trackEvent({ name }, properties ?? undefined);
 }
 
-export function trackAppInsightsException(error: Error): void {
+export function trackAppInsightsException(
+  error: Error,
+  properties?: Record<string, string | number | boolean | null>
+): void {
   if (!client) return;
-  client.trackException({ exception: error });
+  client.trackException({ exception: error, properties: properties ?? undefined });
 }

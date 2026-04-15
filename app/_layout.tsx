@@ -1,18 +1,50 @@
 import { Brand } from '@/constants/Colors';
 import { AuthProvider } from '@/hooks/useAuth';
-import { initAppInsights } from '@/services/appInsights';
+import { initAppInsights, trackAppInsightsException } from '@/services/appInsights';
 import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import 'react-native-reanimated';
 
-export {
-    // Catch any errors thrown by the Layout component.
-    ErrorBoundary
-} from 'expo-router';
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+export class ErrorBoundary extends React.Component<{ children: React.ReactNode }, ErrorBoundaryState> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, info: React.ErrorInfo): void {
+    initAppInsights();
+    trackAppInsightsException(error, {
+      componentStack: info.componentStack ?? '',
+      source: 'ErrorBoundary',
+    });
+    console.error('[ErrorBoundary]', error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <View style={{ flex: 1, backgroundColor: '#06121B', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: '700', marginBottom: 8 }}>Something went wrong</Text>
+          <Text style={{ color: '#A0AEC0', fontSize: 13, textAlign: 'center' }}>Please refresh the page. If the problem persists, try clearing your browser cache.</Text>
+        </View>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
@@ -29,7 +61,11 @@ export default function RootLayout() {
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
-    if (error) throw error;
+    if (error) {
+      initAppInsights();
+      trackAppInsightsException(error, { source: 'useFonts' });
+      throw error;
+    }
   }, [error]);
 
   useEffect(() => {
